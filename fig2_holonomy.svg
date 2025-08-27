@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .title { font: 600 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+      .heading { font: 500 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+      .body { font: 400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #4a4a4a; }
+      .math { font: 400 14px 'Times New Roman', serif; fill: #1a1a1a; font-style: italic; }
+      .surface { fill: #f0f4f8; stroke: #cbd5e1; stroke-width: 1; }
+      .loop { fill: none; stroke: #2563eb; stroke-width: 2; }
+      .arrow { stroke: #2563eb; stroke-width: 1.5; fill: none; }
+      .arrow-head { fill: #2563eb; }
+      .annotation { stroke: #6b7280; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Clean background -->
+  <rect width="900" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="450" y="50" class="title" text-anchor="middle">Synchronization Holonomy</text>
+  
+  <!-- Spacelike surface -->
+  <ellipse cx="450" cy="300" rx="380" ry="180" class="surface"/>
+  
+  <!-- Loop C -->
+  <ellipse cx="450" cy="300" rx="280" ry="120" class="loop"/>
+  <text x="450" y="300" class="heading" text-anchor="middle">Loop C</text>
+  
+  <!-- Direction arrows -->
+  <g transform="rotate(0 450 300)">
+    <path d="M 730 300 A 280 120 0 0 1 720 330" class="arrow"/>
+    <polygon points="718,328 720,336 726,330" class="arrow-head"/>
+  </g>
+  
+  <g transform="rotate(90 450 300)">
+    <path d="M 730 300 A 280 120 0 0 1 720 330" class="arrow"/>
+    <polygon points="718,328 720,336 726,330" class="arrow-head"/>
+  </g>
+  
+  <g transform="rotate(180 450 300)">
+    <path d="M 730 300 A 280 120 0 0 1 720 330" class="arrow"/>
+    <polygon points="718,328 720,336 726,330" class="arrow-head"/>
+  </g>
+  
+  <g transform="rotate(270 450 300)">
+    <path d="M 730 300 A 280 120 0 0 1 720 330" class="arrow"/>
+    <polygon points="718,328 720,336 726,330" class="arrow-head"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="780" y="300" class="body">Σ (ĝ-frame)</text>
+  <text x="450" y="160" class="body" text-anchor="middle">σ̃ circulation</text>
+  
+  <!-- Annotation -->
+  <line x1="650" y1="200" x2="750" y2="120" class="annotation"/>
+  <text x="760" y="120" class="body">Subtract GR terms</text>
+  <text x="760" y="135" class="body">(Sagnac, gravitomagnetic)</text>
+  
+  <!-- Formula -->
+  <rect x="150" y="480" width="600" height="60" rx="4" fill="#f8f9fa" stroke="#e0e0e0"/>
+  <text x="450" y="505" class="heading" text-anchor="middle">Residual Holonomy</text>
+  <text x="450" y="525" class="math" text-anchor="middle">H<tspan baseline-shift="sub" font-size="10">resid</tspan> = ∮<tspan baseline-shift="sub" font-size="10">C</tspan> σ̃ − ∮<tspan baseline-shift="sub" font-size="10">C</tspan> σ|<tspan baseline-shift="sub" font-size="10">GR</tspan></text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <style>
+      .title { font: 600 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+      .heading { font: 500 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+      .body { font: 400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #4a4a4a; }
+      .math { font: 400 14px 'Times New Roman', serif; fill: #1a1a1a; font-style: italic; }
+      .box { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1; }
+      .primary-box { fill: #f8f9fa; stroke: #2563eb; stroke-width: 1.5; }
+      .arrow { stroke: #6b7280; stroke-width: 1.5; fill: none; }
+      .arrow-head { fill: #6b7280; }
+    </style>
+  </defs>
+
+  <!-- Clean background -->
+  <rect width="900" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="450" y="50" class="title" text-anchor="middle">Temporal Equivalence Principle Architecture</text>
+  
+  <!-- Left box: Gravitational metric -->
+  <rect x="80" y="120" width="280" height="120" rx="4" class="box"/>
+  <text x="220" y="155" class="heading" text-anchor="middle">Gravitational Metric</text>
+  <text x="220" y="180" class="math" text-anchor="middle">g<tspan baseline-shift="sub" font-size="10">μν</tspan></text>
+  <text x="220" y="205" class="body" text-anchor="middle">Spacetime geometry</text>
+  <text x="220" y="220" class="body" text-anchor="middle">Einstein equations</text>
+  
+  <!-- Right box: Matter metric -->
+  <rect x="540" y="120" width="280" height="140" rx="4" class="primary-box"/>
+  <text x="680" y="155" class="heading" text-anchor="middle">Matter Metric</text>
+  <text x="680" y="180" class="math" text-anchor="middle">ĝ<tspan baseline-shift="sub" font-size="10">μν</tspan></text>
+  <text x="680" y="205" class="body" text-anchor="middle">Universal matter coupling</text>
+  <text x="680" y="220" class="body" text-anchor="middle">Local Lorentz invariance</text>
+  <text x="680" y="235" class="body" text-anchor="middle">Path-dependent observables</text>
+  
+  <!-- Center transformation -->
+  <rect x="300" y="320" width="300" height="80" rx="4" class="box"/>
+  <text x="450" y="345" class="heading" text-anchor="middle">Conformal-Disformal Map</text>
+  <text x="450" y="370" class="math" text-anchor="middle">ĝ<tspan baseline-shift="sub" font-size="10">μν</tspan> = A(φ)² g<tspan baseline-shift="sub" font-size="10">μν</tspan> + B(φ) ∇<tspan baseline-shift="sub" font-size="10">μ</tspan>φ ∇<tspan baseline-shift="sub" font-size="10">ν</tspan>φ</text>
+  
+  <!-- Bottom box: Time field -->
+  <rect x="340" y="460" width="220" height="80" rx="4" class="primary-box"/>
+  <text x="450" y="485" class="heading" text-anchor="middle">Scalar Time Field</text>
+  <text x="450" y="510" class="math" text-anchor="middle">φ(x)</text>
+  <text x="450" y="525" class="body" text-anchor="middle">Dynamical rate of time</text>
+  
+  <!-- Arrows -->
+  <path d="M 360 180 L 540 180" class="arrow"/>
+  <polygon points="538,176 546,180 538,184" class="arrow-head"/>
+  
+  <path d="M 220 240 L 450 320" class="arrow"/>
+  <polygon points="448,316 456,320 448,324" class="arrow-head"/>
+  
+  <path d="M 680 260 L 450 320" class="arrow"/>
+  <polygon points="452,316 444,320 452,324" class="arrow-head"/>
+  
+  <path d="M 450 400 L 450 460" class="arrow"/>
+  <polygon points="446,458 450,466 454,458" class="arrow-head"/>
+</svg>
