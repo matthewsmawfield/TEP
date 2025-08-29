@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="650" viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: 'Times New Roman', serif; font-size: 16px; font-weight: 500; text-anchor: middle; fill: #1a1a1a; }
+      .stage-title { font-family: 'Times New Roman', serif; font-size: 14px; font-weight: 600; text-anchor: middle; fill: #2d3748; }
+      .content-text { font-family: 'Times New Roman', serif; font-size: 12px; text-anchor: start; fill: #4a5568; line-height: 1.4; }
+      .math-text { font-family: 'Times New Roman', serif; font-size: 11px; font-style: italic; fill: #2b6cb0; }
+      .key-text { font-family: 'Times New Roman', serif; font-size: 13px; font-weight: 500; text-anchor: middle; fill: #c53030; }
+      .flow-line { stroke: #4a5568; stroke-width: 1.5; fill: none; }
+      .emphasis-line { stroke: #c53030; stroke-width: 2; fill: none; }
+    </style>
+    
+    <!-- Subtle arrow marker -->
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a5568"/>
+    </marker>
+    
+    <!-- Emphasis arrow marker -->
+    <marker id="emphasis-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#c53030"/>
+    </marker>
+  </defs>
+  
+  <!-- Clean title with minimal styling -->
+  <text x="450" y="35" class="title-text">Temporal Equivalence Principle: From Axioms to Testable Predictions</text>
+  
+  <!-- Stage 1: Foundational Axioms - minimal box, maximum content -->
+  <g transform="translate(50, 60)">
+    <text x="200" y="0" class="stage-title">1. Four Axioms</text>
+    <line x1="0" y1="10" x2="400" y2="10" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <text x="0" y="35" class="content-text">A1. Two-metric structure: g<tspan class="math-text">μν</tspan>, g̃<tspan class="math-text">μν</tspan> = A(φ)g<tspan class="math-text">μν</tspan> + B(φ)∇<tspan class="math-text">μ</tspan>φ∇<tspan class="math-text">ν</tspan>φ</text>
+    <text x="0" y="55" class="content-text">A2. Temporal Equivalence Principle: matter couples to g̃<tspan class="math-text">μν</tspan></text>
+    <text x="0" y="75" class="content-text">A3. Causal safety: |c<tspan class="math-text">g</tspan> − c<tspan class="math-text">γ</tspan>|/c ≲ 10<tspan class="math-text">−15</tspan></text>
+    <text x="0" y="95" class="content-text">A4. Screening and universality: V(φ) screens in dense regions</text>
+  </g>
+  
+  <!-- Flow line 1 -->
+  <line x1="250" y1="170" x2="250" y2="200" class="flow-line" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 2 & 3: Side by side for better flow -->
+  <g transform="translate(50, 210)">
+    <text x="100" y="0" class="stage-title">2. Theory</text>
+    <line x1="0" y1="10" x2="200" y2="10" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <text x="0" y="35" class="content-text">Action: S[g, φ, ψ]</text>
+    <text x="0" y="55" class="content-text">Field equations</text>
+    <text x="0" y="75" class="content-text">Screening solutions</text>
+  </g>
+  
+  <!-- Horizontal flow arrow -->
+  <line x1="260" y1="250" x2="320" y2="250" class="flow-line" marker-end="url(#arrow)"/>
+  
+  <g transform="translate(330, 210)">
+    <text x="150" y="0" class="stage-title">3. Key Prediction</text>
+    <line x1="0" y1="10" x2="300" y2="10" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <text x="0" y="35" class="content-text">Path-dependent time transport</text>
+    <text x="0" y="55" class="content-text">Non-integrable synchronization</text>
+    <text x="0" y="75" class="math-text">H ≡ ∮<tspan style="font-size: 9px;">C</tspan> dτ<tspan style="font-size: 9px;">prop</tspan> ≠ 0 (requires B(φ) ≠ 0)</text>
+  </g>
+  
+  <!-- Emphasis flow to key prediction -->
+  <line x1="480" y1="290" x2="480" y2="340" class="emphasis-line" marker-end="url(#emphasis-arrow)"/>
+  
+  <!-- Central insight box - Tufte style: minimal ink, maximum insight -->
+  <g transform="translate(200, 350)">
+    <rect x="0" y="0" width="400" height="45" fill="none" stroke="#c53030" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="200" y="25" class="key-text">Synchronization Holonomy</text>
+    <text x="200" y="40" class="content-text" style="text-anchor: middle; font-size: 11px;">Invariant signature of non-integrable temporal geometry</text>
+  </g>
+  
+  <!-- Flow to experiments -->
+  <line x1="400" y1="405" x2="400" y2="430" class="flow-line" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 4: Experimental Tests - clean list -->
+  <g transform="translate(50, 440)">
+    <text x="350" y="0" class="stage-title">4. Experimental Program</text>
+    <line x1="0" y1="10" x2="700" y2="10" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Two columns for better space usage -->
+    <g transform="translate(0, 30)">
+      <text x="0" y="0" class="content-text">1. Triangle synchronization holonomy</text>
+      <text x="0" y="18" class="math-text">   → Direct measurement of H at 10<tspan style="font-size: 9px;">−19</tspan> level</text>
+      
+      <text x="0" y="45" class="content-text">2. Interplanetary one-way asymmetry</text>
+      <text x="0" y="63" class="math-text">   → Ξ<tspan style="font-size: 9px;">AB</tspan> at 10<tspan style="font-size: 9px;">−16</tspan>–10<tspan style="font-size: 9px;">−14</tspan> over AU</text>
+      
+      <text x="0" y="90" class="content-text">3. Altitude-dependent screening maps</text>
+      <text x="0" y="108" class="math-text">   → Map A(φ) via optical clocks</text>
+    </g>
+    
+    <g transform="translate(350, 30)">
+      <text x="0" y="0" class="content-text">4. Matter-wave interferometry</text>
+      <text x="0" y="18" class="math-text">   → Measure ∇∇ ln A(φ)</text>
+      
+      <text x="0" y="45" class="content-text">5. Fifth-force and EP tests</text>
+      <text x="0" y="63" class="math-text">   → Environment-dependent screening</text>
+      
+      <text x="0" y="90" class="content-text">6. Multi-messenger GW–EM delays</text>
+      <text x="0" y="108" class="math-text">   → Distance-correlated propagation</text>
+    </g>
+  </g>
+  
+  <!-- Subtle grid lines for structure (very light) -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#f7fafc" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="650" fill="url(#grid)" opacity="0.3"/>
+  
+</svg>

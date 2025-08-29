@@ -1,9 +1,9 @@
-# robots.txt for The Temporal Variability Principle (TVP)
+# robots.txt for The Temporal Equivalence Principle (TEP)
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://matthewsmawfield.github.io/TVP/sitemap.xml
+Sitemap: https://matthewsmawfield.github.io/TEP/sitemap.xml
 
 # Disallow access to hidden directories and files
 Disallow: /.*

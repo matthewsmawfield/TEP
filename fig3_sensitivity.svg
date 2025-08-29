@@ -1,77 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
-  <defs>
-    <style>
-      .title { font: 600 22px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
-      .heading { font: 500 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
-      .body { font: 400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #4a4a4a; }
-      .station { fill: #ffffff; stroke: #2563eb; stroke-width: 2; }
-      .ground { fill: #f8f9fa; }
-      .satellite { fill: #e0e7ff; }
-      .link { stroke: #6b7280; stroke-width: 1.5; fill: none; }
-      .one-way { stroke: #2563eb; stroke-width: 2; fill: none; }
-      .arrow-head { fill: #2563eb; }
-      .calibration { stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
-    </style>
-  </defs>
-
-  <!-- Clean background -->
-  <rect width="900" height="600" fill="#ffffff"/>
-  
-  <!-- Title -->
-  <text x="450" y="50" class="title" text-anchor="middle">Triangle Synchronization Experiment</text>
-  
-  <!-- Ground level indicator -->
-  <rect x="0" y="420" width="900" height="180" class="ground"/>
-  <line x1="0" y1="420" x2="900" y2="420" stroke="#cbd5e1" stroke-width="1"/>
-  
-  <!-- Station A (ground) -->
-  <circle cx="200" cy="420" r="35" class="station"/>
-  <text x="200" y="425" class="heading" text-anchor="middle">A</text>
-  <text x="200" y="470" class="body" text-anchor="middle">Ground station</text>
-  <text x="200" y="485" class="body" text-anchor="middle">(sea level)</text>
-  
-  <!-- Station B (ground) -->
-  <circle cx="700" cy="420" r="35" class="station"/>
-  <text x="700" y="425" class="heading" text-anchor="middle">B</text>
-  <text x="700" y="470" class="body" text-anchor="middle">Ground station</text>
-  <text x="700" y="485" class="body" text-anchor="middle">(mountain)</text>
-  
-  <!-- Station C (satellite) -->
-  <circle cx="450" cy="180" r="35" class="station satellite"/>
-  <text x="450" y="185" class="heading" text-anchor="middle">C</text>
-  <text x="450" y="130" class="body" text-anchor="middle">Satellite</text>
-  <text x="450" y="145" class="body" text-anchor="middle">(MEO)</text>
-  
-  <!-- TWTT calibration links -->
-  <line x1="235" y1="420" x2="665" y2="420" class="calibration"/>
-  <line x1="220" y1="390" x2="430" y2="210" class="calibration"/>
-  <line x1="470" y1="210" x2="680" y2="390" class="calibration"/>
-  
-  <!-- One-way links with arrows -->
-  <path d="M 235 410 L 425 205" class="one-way"/>
-  <polygon points="423,203 428,208 429,200" class="arrow-head"/>
-  
-  <path d="M 475 205 L 665 410" class="one-way"/>
-  <polygon points="663,408 668,413 669,405" class="arrow-head"/>
-  
-  <path d="M 665 430 L 235 430" class="one-way"/>
-  <polygon points="237,426 229,430 237,434" class="arrow-head"/>
-  
-  <!-- Labels -->
-  <text x="325" y="300" class="body" text-anchor="middle">One-way</text>
-  <text x="575" y="300" class="body" text-anchor="middle">One-way</text>
-  <text x="450" y="445" class="body" text-anchor="middle">Loop closure</text>
-  
-  <!-- Legend box -->
-  <rect x="60" y="520" width="200" height="60" rx="4" fill="#f8f9fa" stroke="#e0e0e0"/>
-  <line x1="80" y1="540" x2="120" y2="540" class="calibration"/>
-  <text x="130" y="545" class="body">TWTT calibration</text>
-  <line x1="80" y1="560" x2="120" y2="560" class="one-way"/>
-  <text x="130" y="565" class="body">One-way transfer</text>
-  
-  <!-- Info box -->
-  <rect x="640" y="520" width="200" height="60" rx="4" fill="#f8f9fa" stroke="#e0e0e0"/>
-  <text x="740" y="540" class="body" text-anchor="middle">~3000 km baselines</text>
-  <text x="740" y="555" class="body" text-anchor="middle">10⁻¹⁸ precision target</text>
-  <text x="740" y="570" class="body" text-anchor="middle">GR subtraction required</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="574px" viewBox="0 0 900 574" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>fig3_sensitivity</title>
+    <g id="fig3_sensitivity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="900" height="574"></rect>
+        <g transform="translate(0, -26)">
+            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="900" height="600"></rect>
+            <text id="Triangle-Synchronization-Experiment" fill="#1A1A1A" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold">
+                <tspan x="337" y="66">Triangle Synchronization Experiment</tspan>
+            </text>
+            <rect id="Rectangle" fill="#F8F9FA" fill-rule="nonzero" x="0" y="429" width="900" height="171"></rect>
+            <line x1="0" y1="428" x2="900" y2="428" id="Path" stroke="#CBD5E1" fill="#000000" fill-rule="nonzero"></line>
+            <circle id="Oval" stroke="#2563EB" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" cx="200" cy="420" r="35"></circle>
+            <text id="A" fill="#1A1A1A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="195.5" y="425">A</tspan>
+            </text>
+            <text id="Ground-station" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="157" y="470">Ground station</tspan>
+            </text>
+            <text id="(sea-level)" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="170" y="485">(sea level)</tspan>
+            </text>
+            <circle id="Oval" stroke="#2563EB" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" cx="700" cy="420" r="35"></circle>
+            <text id="B" fill="#1A1A1A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="695.5" y="425">B</tspan>
+            </text>
+            <text id="Ground-station" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="657" y="470">Ground station</tspan>
+            </text>
+            <text id="(mountain)" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="668.5" y="485">(mountain)</tspan>
+            </text>
+            <circle id="Oval" stroke="#2563EB" stroke-width="2" fill="#E0E7FF" fill-rule="nonzero" cx="450" cy="180" r="35"></circle>
+            <text id="C" fill="#1A1A1A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="445" y="185">C</tspan>
+            </text>
+            <text id="Satellite" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="426.5" y="120">Satellite</tspan>
+            </text>
+            <text id="(MEO)" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="430.5" y="135">(MEO)</tspan>
+            </text>
+            <line x1="235" y1="414" x2="665" y2="414" id="Path" stroke="#94A3B8" stroke-dasharray="4"></line>
+            <line x1="220" y1="390" x2="415.5" y2="188.5" id="Path" stroke="#94A3B8" stroke-dasharray="4"></line>
+            <line x1="487.5" y1="188.5" x2="675.5" y2="390.5" id="Path" stroke="#94A3B8" stroke-dasharray="4"></line>
+            <line x1="232" y1="406" x2="423" y2="208" id="Path" stroke="#2563EB" stroke-width="2"></line>
+            <polygon id="Path" fill="#2563EB" fill-rule="nonzero" points="419 208 424 213 425 205"></polygon>
+            <line x1="475" y1="205" x2="665" y2="405" id="Path" stroke="#2563EB" stroke-width="2"></line>
+            <polygon id="Path" fill="#2563EB" fill-rule="nonzero" transform="translate(663, 404) rotate(-15) translate(-663, -404)" points="660 403 665 408 666 400"></polygon>
+            <line x1="665" y1="429" x2="238" y2="429" id="Path" stroke="#2563EB" stroke-width="2"></line>
+            <polygon id="Path" fill="#2563EB" fill-rule="nonzero" points="241 425 233 429 241 433"></polygon>
+            <text id="One-way" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica-Oblique, Helvetica" font-size="13" font-style="italic" font-weight="normal">
+                <tspan x="240" y="297">One-way</tspan>
+            </text>
+            <text id="One-way" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica-Oblique, Helvetica" font-size="13" font-style="italic" font-weight="normal">
+                <tspan x="609" y="297">One-way</tspan>
+            </text>
+            <text id="Loop-closure" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica-Oblique, Helvetica" font-size="13" font-style="italic" font-weight="normal">
+                <tspan x="412.5" y="452">Loop closure</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#E0E0E0" fill="#F8F9FA" fill-rule="nonzero" x="60" y="520" width="200" height="60" rx="4"></rect>
+            <line x1="80" y1="540" x2="120" y2="540" id="Path" stroke="#94A3B8" stroke-dasharray="4"></line>
+            <text id="TWTT-calibration" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="130" y="545">TWTT calibration</tspan>
+            </text>
+            <line x1="80" y1="560" x2="120" y2="560" id="Path" stroke="#2563EB" stroke-width="2"></line>
+            <text id="One-way-transfer" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="130" y="565">One-way transfer</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#E0E0E0" fill="#F8F9FA" fill-rule="nonzero" x="640" y="520" width="200" height="60" rx="4"></rect>
+            <text id="~3000-km-baselines" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="682" y="540">~3000 km baselines</tspan>
+            </text>
+            <text id="10⁻¹⁸-precision-target" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="681" y="555">10⁻¹⁸ precision target</tspan>
+            </text>
+            <text id="GR-subtraction-required" fill="#4A4A4A" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="670.5" y="570">GR subtraction required</tspan>
+            </text>
+        </g>
+    </g>
 </svg>
