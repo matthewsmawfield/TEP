@@ -32,8 +32,8 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="The Temporal Equivalence Principle">
     <meta property="article:author" content="Matthew Lukin Smawfield">
-    <meta property="article:published_time" content="2025-08-29T00:00:00Z">
-    <meta property="article:modified_time" content="2025-08-29T00:00:00Z">
+    <meta property="article:published_time" content="2025-09-01T00:00:00Z">
+    <meta property="article:modified_time" content="2025-09-01T00:00:00Z">
     <meta property="article:section" content="Physics">
     <meta property="article:tag" content="Quantum Gravity">
     <meta property="article:tag" content="Theoretical Physics">
@@ -65,8 +65,8 @@
     <meta name="citation_author" content="Smawfield, Matthew Lukin">
     <meta name="citation_author_institution" content="Independent Researcher">
     <meta name="citation_author_email" content="matthewsmawfield@gmail.com">
-    <meta name="citation_publication_date" content="2025/08/29">
-    <meta name="citation_online_date" content="2025/08/29">
+    <meta name="citation_publication_date" content="2025/09/01">
+    <meta name="citation_online_date" content="2025/09/01">
     <meta name="citation_journal_title" content="Preprint">
     <meta name="citation_doi" content="10.5281/zenodo.16921911">
     <meta name="citation_abstract_html_url" content="https://matthewsmawfield.github.io/TEP/">
@@ -80,7 +80,7 @@
     <meta name="dc.subject" content="Physics; Theoretical Physics; Quantum Gravity; Cosmology; General Relativity; Time; Light Speed; Synchronization">
     <meta name="dc.description" content="A covariant, testable reformulation of relativity in which proper time is a dynamical field and the speed of light is an emergent, strictly local invariant rather than a global constant.">
     <meta name="dc.publisher" content="Independent Research">
-    <meta name="dc.date" content="2025-08-29">
+    <meta name="dc.date" content="2025-09-01">
     <meta name="dc.type" content="Text.Article">
     <meta name="dc.format" content="text/html">
     <meta name="dc.identifier" content="https://matthewsmawfield.github.io/TEP/">
@@ -138,9 +138,9 @@
           "https://orcid.org/0009-0003-8219-3159"
         ]
       },
-      "datePublished": "2025-08-29",
-      "dateModified": "2025-08-29",
-      "version": "Monte Carlo v0.2",
+      "datePublished": "2025-09-01",
+      "dateModified": "2025-09-01",
+      "version": "Florence v0.3",
       "publisher": {
         "@type": "Organization",
         "name": "Independent Research",
@@ -286,7 +286,7 @@
             margin: 0 auto;
             padding: 40px 20px;
             background-color: #ffffff;
-            color: #333333;
+            color: #2a2f35;
             overflow-x: hidden;
             word-wrap: break-word;
         }
@@ -294,7 +294,7 @@
         .header {
             text-align: center;
             margin-bottom: 40px;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #2a2f35;
             padding-bottom: 20px;
         }
         
@@ -304,7 +304,7 @@
             height: auto;
             margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(42, 47, 53, 0.1);
         }
         
         .title {
@@ -321,21 +321,36 @@
         
         .author .email-icon { 
             display: inline-block; 
-            margin-left: 10px; 
+            margin-left: 2px; 
             font-size: 18px; 
-            color: #666; 
+            color: #4a5568; 
             text-decoration: none; 
         }
         
         .author .email-icon:hover { 
-            color: #007acc; 
+            color: #2d6a8a; 
+        }
+        
+        /* Link styling */
+        a {
+            color: #2d6a8a;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: #4a5568;
+        }
+        
+        a:hover {
+            color: #1e4a5f;
+            text-decoration: underline;
         }
         
         .contact-section { 
             margin-top: 40px; 
             padding: 20px; 
-            background-color: #f8f9fa; 
-            border-left: 4px solid #007acc; 
+            background-color: #f7fafc; 
+            border-left: 4px solid #2d6a8a; 
             font-style: italic; 
         }
         
@@ -344,20 +359,20 @@
             font-size: 18px; 
             font-weight: bold; 
             font-style: normal; 
-            color: #2c3e50; 
+            color: #1e4a5f; 
         }
         
         .version, .date, .status, .doi {
             font-size: 14px;
-            color: #666;
+            color: #4a5568;
             margin-bottom: 5px;
         }
         
         .abstract {
-            background-color: #f8f9fa;
+            background-color: #f7fafc;
             padding: 20px;
             margin: 30px 0;
-            border-left: 4px solid #007acc;
+            border-left: 4px solid #2d6a8a;
             font-style: italic;
         }
         
@@ -373,8 +388,8 @@
             font-weight: bold;
             margin-top: 40px;
             margin-bottom: 20px;
-            color: #2c3e50;
-            border-bottom: 1px solid #bdc3c7;
+            color: #1e4a5f;
+            border-bottom: 1px solid #e2e8f0;
             padding-bottom: 5px;
         }
         
@@ -383,7 +398,7 @@
             font-weight: bold;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: #34495e;
+            color: #2a2f35;
         }
         
         h3 {
@@ -391,7 +406,7 @@
             font-weight: bold;
             margin-top: 25px;
             margin-bottom: 10px;
-            color: #34495e;
+            color: #2a2f35;
         }
         
         p {
@@ -406,8 +421,8 @@
         }
         
         .theorem, .principle {
-            background-color: #f0f8ff;
-            border: 1px solid #b0d4f1;
+            background-color: #f7fafc;
+            border: 1px solid #4a8fb0;
             border-radius: 5px;
             padding: 15px;
             margin: 20px 0;
@@ -415,7 +430,7 @@
         
         .theorem h3, .principle h3 {
             margin-top: 0;
-            color: #1e3a8a;
+            color: #2d6a8a;
         }
 
         .axiom-list {
@@ -430,12 +445,12 @@
         .proof {
             font-style: italic;
             margin-left: 20px;
-            color: #555;
+            color: #4a5568;
         }
         
         .experimental-section {
-            background-color: #fff8dc;
-            border: 1px solid #ddd;
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 5px;
             padding: 15px;
             margin: 20px 0;
@@ -443,7 +458,7 @@
         
         .error-budget {
             font-family: 'Courier New', monospace;
-            background-color: #f5f5f5;
+            background-color: #e2e8f0;
             padding: 10px;
             border-radius: 3px;
             margin: 10px 0;
@@ -469,16 +484,56 @@
         .appendix {
             margin-top: 40px;
             page-break-before: always;
-            border-top: 2px solid #666;
+            border-top: 2px solid #4a5568;
             padding-top: 20px;
         }
         
         .significance {
-            background-color: #e8f5e9;
-            border: 1px solid #a5d6a7;
+            background-color: #f0fdf4;
+            border: 1px solid #38a169;
             border-radius: 5px;
             padding: 20px;
             margin: 30px 0;
+        }
+        
+        .critical-analysis {
+            background-color: #fef7ed;
+            border: 2px solid #d47341;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .critical-analysis h2 {
+            margin-top: 0;
+            color: #d47341;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #d47341;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .critical-analysis h3 {
+            color: #d47341;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .critical-analysis ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .critical-analysis li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .critical-analysis strong {
+            color: #e8985e;
         }
         
         /* Math styling */
@@ -603,9 +658,9 @@
     <div class="header">
         <img src="og-image.jpg" alt="The Temporal Equivalence Principle - Diagram showing the relationship between gravitational metric g and matter metric g-tilde through conformal-disformal coupling" class="header-image" loading="eager">
         <div class="title">The Temporal Equivalence Principle: Dynamic Time, Emergent Light Speed, and a Two-Metric Geometry of Measurement</div>
-        <div class="author">Matthew Lukin Smawfield <a href="mailto:matthewsmawfield@gmail.com" class="email-icon" title="Contact">✉</a></div>
-        <div class="version">Version: Monte Carlo v0.2</div>
-        <div class="date">Date: 29 Aug 2025</div>
+        <div class="author">Matthew Lukin Smawfield</div>
+        <div class="version">Version: Florence v0.3</div>
+        <div class="date">Date: 1 Sep 2025</div>
         <div class="status">Status: Preprint</div>
         <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.16921911">10.5281/zenodo.16921911</a></div>
         
@@ -619,17 +674,17 @@
     </div>
 
     <h1>1. Introduction: From a Universal Speed to a Universal Principle of Time</h1>
-    <p>Relativity and quantum theory disagree about time. General relativity (GR) makes proper time geometric—$d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu / c^2$—dynamical, and observer-dependent. Quantum mechanics (QM) treats time as an external parameter t in the Schrödinger equation, $i\hbar \partial_t|\psi\rangle = H|\psi\rangle$. The clash has haunted quantization programs for a century and manifested operationally as subtle ambiguities in defining one-way light speeds and simultaneity across extended regions. Precision clocks and time-transfer links now measure gravitational redshifts and velocity-dependent dilations at $10^{-18}$ fractional levels, while cosmology exhibits persistent $H_0$ and $S_8$ tensions. In this context, Einstein's postulate of a universal speed c must be sharpened: it is exact for any local freely falling laboratory, but it cannot be a global property if the flow of time itself is dynamical.</p>
+    <p>Relativity and quantum theory disagree about time. General relativity (GR) makes proper time geometric—$d\tau^2 = -g_{\mu\nu} dx^\mu dx^\nu / c^2$—dynamical, and observer-dependent. Quantum mechanics (QM) treats time as an external parameter t in the Schrödinger equation, $i\hbar \partial_t|\psi\rangle = \hat{H}|\psi\rangle$. The clash has haunted quantization programs for a century and manifested operationally as subtle ambiguities in defining one-way light speeds and simultaneity across extended regions. Precision clocks and time-transfer links now measure gravitational redshifts and velocity-dependent dilations at $10^{-18}$ fractional levels, while cosmology exhibits persistent $H_0$ and $S_8$ tensions. In this context, Einstein's postulate of a universal speed c must be sharpened: it is exact for any local freely falling laboratory, but it cannot be a global property if the flow of time itself is dynamical.</p>
     <p>We propose the Temporal Equivalence Principle (TEP): all non-gravitational dynamics, signals, and quantum phases evolve according to the proper time defined by a single causal metric $\tilde{g}_{\mu\nu}$ that couples universally to matter. The rate at which proper time accrues is a field. This elevates "when" to the status "where" acquired in 1915: as space was geometrized, now time's rate is dynamized. The unavoidable consequence is that synchronization conventions are no longer globally integrable: even after removing known GR effects (Sagnac, Shapiro), closed-loop time transport does not necessarily return a clock to its initial epoch, and one-way times differ in opposite directions. The measured "speed of light" between distant clocks is revealed as an emergent ratio of distance to accrued proper time, not a fundamental constant comparable across regions without a theory of time's flow. Locally, c remains exactly invariant; globally, dynamical time imprints tiny, path-dependent asymmetries that we can detect or bound.</p>
     
     <figure style="text-align:center; margin: 20px 0;">
-        <img src="fig1_architecture.svg" alt="TEP architecture: g vs ĝ with φ and conformal–disformal map" style="max-width:100%; height:auto;" loading="lazy">
-        <figcaption style="font-style:italic; font-size:14px; color:#555;">Figure 1. Temporal Equivalence Principle (TEP) architecture. Matter couples to $\hat{g}_{\mu\nu}$ via a conformal–disformal map controlled by the scalar time field $\phi$, preserving local Lorentz invariance while enabling new global invariants.</figcaption>
+        <img src="fig1_architecture.svg" alt="TEP architecture: g vs g̃ with φ and conformal–disformal map" style="max-width:100%; height:auto;" loading="lazy">
+        <figcaption style="font-style:italic; font-size:14px; color:#4a5568;">Figure 1. Temporal Equivalence Principle (TEP) architecture. Matter couples to $\tilde{g}_{\mu\nu}$ via a conformal–disformal map controlled by the scalar time field $\phi$, preserving local Lorentz invariance while enabling new global invariants.</figcaption>
     </figure>
 
     <!-- <figure style="text-align:center; margin: 20px 0;">
         <img src="fig0_conceptual_flowchart.svg" alt="TEP Conceptual Flowchart showing four stages from axioms to experimental tests" style="max-width:100%; height:auto;" loading="lazy">
-        <figcaption style="font-style:italic; font-size:14px; color:#555;"><strong>Figure 0: Conceptual Flowchart of the Temporal Equivalence Principle Framework.</strong> A flowchart diagram showing the logical progression from foundational axioms through theoretical dynamics and key observable predictions to experimental tests. The central prediction is the synchronization holonomy, an invariant signature of non-integrable temporal geometry.</figcaption>
+        <figcaption style="font-style:italic; font-size:14px; color:#4a5568;"><strong>Figure 0: Conceptual Flowchart of the Temporal Equivalence Principle Framework.</strong> A flowchart diagram showing the logical progression from foundational axioms through theoretical dynamics and key observable predictions to experimental tests. The central prediction is the synchronization holonomy, an invariant signature of non-integrable temporal geometry.</figcaption>
     </figure> -->
 
     <h1>2. Axioms and the Temporal Equivalence Principle</h1>
@@ -637,10 +692,10 @@
     <div class="principle">
         <ul class="axiom-list">
             <li><strong>A1. Two-metric structure on a single manifold.</strong> Gravity is described by a Lorentzian metric $g_{\mu\nu}$; matter fields, clocks, and rulers couple to a causal (matter) metric $\tilde{g}_{\mu\nu}$. The metrics are related by a disformal map
-                <div class="equation">$$g̃_{\mu\nu} = A(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi,$$</div>
+                <div class="equation">$$\tilde{g}_{\mu\nu} = A(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi,$$</div>
                 with a universal conformal factor $A(\phi) = \exp(2\beta \phi/M_{\text{Pl}})$ and a small disformal function $B(\phi)$ consistent with multi-messenger constraints today.
             </li>
-            <li><strong>A2. Temporal Equivalence Principle (TEP).</strong> All non-gravitational processes evolve according to proper time $d\tau$ defined by $\tilde{g}_{\mu\nu}$: $i\hbar d|\psi\rangle/d\tau = H_0|\psi\rangle$, nongravitational fields propagate on $\tilde{g}$-null cones, and ideal clocks tick $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In local freely falling frames for $\tilde{g}_{\mu\nu}$, physics reduces to special relativity with invariant c.</li>
+            <li><strong>A2. Temporal Equivalence Principle (TEP).</strong> All non-gravitational processes evolve according to proper time $d\tau$ defined by $\tilde{g}_{\mu\nu}$: $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$, nongravitational fields propagate on $\tilde{g}$-null cones, and ideal clocks tick $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In local freely falling frames for $\tilde{g}_{\mu\nu}$, physics reduces to special relativity with invariant c.</li>
             <li><strong>A3. Causal safety and locality.</strong> Today, $c_g = c_\gamma$ within current bounds ($|c_g - c_\gamma|/c \lesssim 10^{-15}$). We enforce this by requiring $B(\phi)(\partial\phi)^2$ to be tiny at late times and by choosing $A(\phi)$ universal, such that conformal transformations preserve null cones for photons and gravitons when $B = 0$. Hyperbolicity and energy conditions hold within the EFT domain.</li>
             <li><strong>A4. Screening and universality.</strong> The coupling $A(\phi)$ is universal at leading order; loop-induced composition dependence is tightly bounded. A chameleon-like potential $V(\phi)$ yields density-dependent effective mass $m_\phi(\rho)$ to screen fifth forces and preserve PPN constraints in dense environments while leaving cosmology accessible to dynamics.</li>
         </ul>
@@ -654,49 +709,49 @@
         <table style="border-collapse: collapse; width: 100%; font-size: 14px;">
             <caption style="font-weight: bold; margin-bottom: 10px;">Table 1: Comparison with Other Scalar-Tensor Frameworks</caption>
             <thead>
-                <tr style="background-color: #f0f8ff; border: 1px solid #ddd;">
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Theory/Framework</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Key Fields</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Matter Coupling</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">$c_g = c_γ$?</th>
-                    <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Key Observable Signature</th>
+                <tr style="background-color: #f7fafc; border: 1px solid #e2e8f0;">
+                    <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Theory/Framework</th>
+                    <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Key Fields</th>
+                    <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Matter Coupling</th>
+                    <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">$c_g = c_γ$?</th>
+                    <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Key Observable Signature</th>
                 </tr>
             </thead>
             <tbody>
-                <tr style="border: 1px solid #ddd;">
-                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>TEP (This work)</strong></td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">$g_{\mu\nu}$, $\phi$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Universal to $\tilde{g}_{\mu\nu} = A g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">No, if $B≠0$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Synchronization Holonomy $H$</td>
+                <tr style="border: 1px solid #e2e8f0;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>TEP (This work)</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$g_{\mu\nu}$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Universal to $\tilde{g}_{\mu\nu} = A g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">No, if $B≠0$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Synchronization Holonomy $H$</td>
                 </tr>
-                <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>Horndeski</strong></td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">$g_{\mu\nu}$, $\phi$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Minimal to $g_{\mu\nu}$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Yes, after GW170817 constraints</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Modified growth, ISW</td>
+                <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>Horndeski</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$g_{\mu\nu}$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Minimal to $g_{\mu\nu}$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Yes, after GW170817 constraints</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Modified growth, ISW</td>
                 </tr>
-                <tr style="border: 1px solid #ddd;">
-                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>DHOST</strong></td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">$g_{\mu\nu}$, $\phi$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Minimal to $g_{\mu\nu}$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Yes, for specific degenerate classes</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Modified growth, screening</td>
+                <tr style="border: 1px solid #e2e8f0;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>DHOST</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$g_{\mu\nu}$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Minimal to $g_{\mu\nu}$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Yes, for specific degenerate classes</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Modified growth, screening</td>
                 </tr>
-                <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>TeVeS</strong></td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">$g_{\mu\nu}$, $A_\mu$, $\phi$</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">To a combined metric</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">No</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">MOND phenomenology, lensing</td>
+                <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>TeVeS</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">$g_{\mu\nu}$, $A_\mu$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">To a combined metric</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">No</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">MOND phenomenology, lensing</td>
                 </tr>
-                <tr style="border: 1px solid #ddd;">
-                    <td style="padding: 8px; border: 1px solid #ddd;"><strong>SMEFT</strong></td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">SM fields</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Lorentz-violating operators</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Model-dependent</td>
-                    <td style="padding: 8px; border: 1px solid #ddd;">Anisotropic propagation, CPT violation</td>
+                <tr style="border: 1px solid #e2e8f0;">
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>SMEFT</strong></td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">SM fields</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Lorentz-violating operators</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Model-dependent</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Anisotropic propagation, CPT violation</td>
                 </tr>
             </tbody>
         </table>
@@ -724,15 +779,15 @@
 
     <figure style="text-align:center; margin: 20px 0;">
         <img src="fig2_holonomy.svg" alt="Synchronization holonomy on a spacelike slice" style="max-width:100%; height:auto;" loading="lazy">
-        <figcaption style="font-style:italic; font-size:14px; color:#555;">Figure 2. Synchronization holonomy on a spacelike slice in the matter frame. The residual invariant $H_{\text{resid}}$ subtracts GR Sagnac and gravitomagnetic contributions, isolating dynamical-time effects.</figcaption>
+        <figcaption style="font-style:italic; font-size:14px; color:#4a5568;">Figure 2. Synchronization holonomy on a spacelike slice in the matter frame. The residual invariant $H_{\text{resid}}$ subtracts GR Sagnac and gravitomagnetic contributions, isolating dynamical-time effects.</figcaption>
     </figure>
 
     <h1>4. Disformal Invertibility, Causality, and Hyperbolicity</h1>
     
     <h2>Invertibility and signature</h2>
-    <p>The inverse of $\hat{g}_{\mu\nu}$ exists for $A>0$ and $1 + (B/A^2)(\partial\phi)^2 \neq 0$:</p>
+    <p>The inverse of $\tilde{g}_{\mu\nu}$ exists for $A>0$ and $1 + (B/A^2)(\partial\phi)^2 \neq 0$:</p>
     <div class="equation">
-        $$\hat{g}^{\mu\nu} = A^{-2} \left[ g^{\mu\nu} - \frac{(B/A^2) \partial^\mu\phi \partial^\nu\phi}{1 + (B/A^2)(\partial\phi)^2} \right].$$
+        $$\tilde{g}^{\mu\nu} = A^{-2} \left[ g^{\mu\nu} - \frac{(B/A^2) \partial^\mu\phi \partial^\nu\phi}{1 + (B/A^2)(\partial\phi)^2} \right].$$
     </div>
     <p>For Lorentzian signature, require $A>0$ and $B(\partial\phi)^2 > -A^2$. We assume $B$ small and gradients bounded in all regimes of interest.</p>
     
@@ -745,7 +800,7 @@
     <h1>5. Local Lorentz Invariance, Proper Time, and the Emergence of c</h1>
     
     <h2>Proper time</h2>
-    <p>Clocks measure $d\tau^2 = -\hat{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In a local lab with small velocities and $\partial_0\phi \ll |\nabla\phi|$, $-\hat{g}_{00} \approx A(\phi)^2 (-g_{00}) - B(\partial_0\phi)^2$, so</p>
+    <p>Clocks measure $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In a local lab with small velocities and $\partial_0\phi \ll |\nabla\phi|$, $-\tilde{g}_{00} \approx A(\phi)^2 (-g_{00}) - B(\partial_0\phi)^2$, so</p>
     <div class="equation">
         $$\frac{d\tau}{dt} \approx A(\phi)^{1/2},$$
     </div>
@@ -766,7 +821,7 @@
     
     <div class="theorem">
         <h3>Theorem 1 (Conformal null-cone invariance)</h3>
-        <p>For $\hat{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$, null vectors of $g_{\mu\nu}$ are null for $\hat{g}_{\mu\nu}$. Maxwell's action is conformally invariant in 4D, so photon trajectories are null with respect to both metrics. Gravitational and electromagnetic waves share null cones when $B = 0$ at late times.</p>
+        <p>For $\tilde{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$, null vectors of $g_{\mu\nu}$ are null for $\tilde{g}_{\mu\nu}$. Maxwell's action is conformally invariant in 4D, so photon trajectories are null with respect to both metrics. Gravitational and electromagnetic waves share null cones when $B = 0$ at late times.</p>
     </div>
     
     <div class="theorem">
@@ -779,9 +834,9 @@
     </div>
     
     <h2>Synchronization one-form and holonomy</h2>
-    <p>Decompose $\hat{g}_{\mu\nu}$ in 3+1 form:</p>
+    <p>Decompose $\tilde{g}_{\mu\nu}$ in 3+1 form:</p>
     <div class="equation">
-        $$\hat{g}_{\mu\nu} dx^\mu dx^\nu = -\tilde{N}^2 dt^2 + \tilde{h}_{ij} (dx^i + \tilde{N}^i dt)(dx^j + \tilde{N}^j dt).$$
+        $$\tilde{g}_{\mu\nu} dx^\mu dx^\nu = -\tilde{N}^2 dt^2 + \tilde{h}_{ij} (dx^i + \tilde{N}^i dt)(dx^j + \tilde{N}^j dt).$$
     </div>
     <p>Define the synchronization one-form $\tilde{\sigma} = -\tilde{N}^{-1} \tilde{N}_i dx^i$. For a closed spatial loop $C$, the synchronization holonomy is</p>
     <div class="equation">
@@ -852,7 +907,7 @@
     <h1>9. Quantum Clocks, Interferometry, and Composition Dependence</h1>
     
     <h2>Quantum evolution</h2>
-    <p>Proper-time Schrödinger evolution $i\hbar d|\psi\rangle/d\tau = H_0|\psi\rangle$ becomes $i\hbar d|\psi\rangle/d\tilde{t} = A(\phi) H_0 |\psi\rangle$ in the matter frame. Transition frequencies scale as $\nu \propto A(\phi)$ with tiny sectoral corrections from dilaton-like couplings $d_e$, $d_\mu$, $d_q$:</p>
+    <p>Proper-time Schrödinger evolution $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$ becomes $i\hbar d|\psi\rangle/d\tilde{t} = A(\phi) \hat{H} |\psi\rangle$ in the matter frame. Transition frequencies scale as $\nu \propto A(\phi)$ with tiny sectoral corrections from dilaton-like couplings $d_e$, $d_\mu$, $d_q$:</p>
     <div class="equation">
         $$\delta \ln \nu = \delta \ln A + K_\alpha \delta \ln \alpha + K_\mu \delta \ln \mu + K_q \delta \ln X_q + \ldots$$
     </div>
@@ -866,13 +921,57 @@
     <h2>Decoherence</h2>
     <p>Rapid $\phi$ variations would induce dephasing at rates $O(\partial_t\phi)$, strongly bounded by clock stabilities. We assume adiabatic evolution in the lab, consistent with null drift bounds.</p>
 
+    <div class="critical-analysis">
+        <h2>Inset: What "no-variable-c" tests do—and don't—probe (TEP view)</h2>
+        
+        <p><strong>Observable (gauge/sync-invariant).</strong>
+        Define the synchronization holonomy (after GR subtraction), where $\sigma$ is the time-transport 1-form whose line integral equals calibrated proper-time increment along a leg:</p>
+        
+        <div class="equation">
+            $$H_{\rm resid}\;=\;\oint_{\partial\Sigma}\!(\tilde\sigma-\sigma_{\rm GR})
+            \;=\;\iint_{\Sigma}\!(\tilde F-F_{\rm GR}),$$
+        </div>
+        
+        <p>the loop non-closure of time transport built from measured proper times (in time units; right-hand rule on $\Sigma$). It is gauge/synchronization-invariant and <strong>vanishes in SR/GR and in the conformal-only limit</strong> of TEP. GR subtraction includes: Sagnac, Lense–Thirring/gravito-magnetic, Shapiro, gravitational redshift, with ITRF ephemerides and TT/TDB standards.</p>
+        
+        <p>How flagship constraints map to $H_{\rm resid}$:</p>
+        
+        <ul>
+            <li><strong>GW170817 (GW–EM coincidence).</strong> $|c_\gamma-c_g|/c\!\lesssim\!10^{-15}$ constrains global cone splits. In TEP, late-time conformal coupling preserves null cones, so EM and GW share causal structure; small disformal tilts today are allowed. This is a boundary condition, not a loop-holonomy test.</li>
+            
+            <li><strong>Cassini (PPN-$\gamma$).</strong> Two-way Doppler/Shapiro is reciprocity-even; it calibrates $\sigma_{\rm GR}$ to subtract but does not bound $H_{\rm resid}$.</li>
+            
+            <li><strong>Resonator MM/KT tests.</strong> Cavities bound closed-path, even-parity (two-way sums) anisotropy at $10^{-17}\!-\!10^{-18}$, yet are blind to odd-parity (direction-reversing one-way differences) non-reciprocity and loop non-closure—the ingredients of $H_{\rm resid}$.</li>
+            
+            <li><strong>"GPS works."</strong> Network self-consistency uses explicit GR+Sagnac modeling and largely two-way/common-view calibration. This verifies internal consistency under assumed GR model; not a direction-reversing one-way loop-closure null.</li>
+            
+            <li><strong>Clock redshift & pairwise A↔B tests.</strong> Exquisitely confirm GR locally; <strong>only closed loops</strong> (A→B→C→A with direction reversal) can reveal non-integrability captured by $H_{\rm resid}$.</li>
+        </ul>
+        
+        <p>Why classics can be null while $H_{\rm resid}\neq0$:</p>
+        
+        <ol>
+            <li>Conformal null-cone invariance ⇒ no large GW–EM kinematic delays (consistent with GW170817).</li>
+            <li><strong>$\partial_t\phi = 0$ over loop timescale; gradients conservative: no first-order one-way anisotropy.</strong> Along a fixed path, forward/back times cancel at $\mathcal O(B,\nabla\phi)$; leading effects are second order or require time dependence/kinematics. Thus two-way/closed-path nulls can hold while a loop-holonomy test remains sensitive.</li>
+        </ol>
+        
+        <p><strong>Experimental falsifier (primary endpoints).</strong>
+        Run a closed-loop, one-way time-transfer (and/or portable-clock) test and report:</p>
+        
+        <ul>
+            <li>Leg-wise antisymmetry: $\Delta t_{AB}=t_{AB}-t_{BA}$ (and optionally $\Xi_{AB}\!\equiv\!(t_{AB}-t_{BA})/(t_{AB}+t_{BA})$).</li>
+            <li>Loop holonomy $H_{\rm resid}$ after subtracting GR (Sagnac/gravito-magnetic/Shapiro).
+              Use triangle/quadrilateral geometries with direction reversal; extend with interplanetary one-way links and multi-species clock networks.</li>
+        </ul>
+    </div>
+
     <h1>10. Experimental Proposals and Falsifiability</h1>
     
     <p>We propose a suite of decisive, cross-checking experiments that collectively falsify or confirm the theory. All observables are dimensionless ratios or calibrated residuals; all designs include nulls, blinding, and open data.</p>
 
     <figure style="text-align:center; margin: 10px 0;">
         <img src="fig3_sensitivity.svg" alt="Sensitivity to TEP signals and constraints" style="max-width:100%; height:auto;">
-        <figcaption style="font-style:italic; font-size:14px; color:#555;">Figure 3. Sensitivity summary. Left: predicted triangle holonomy amplitude vs baseline with instrument noise floor. Right: portable‑clock anholonomy vs loop duration. Shaded bar indicates illustrative GW170817 disformal constraint region.</figcaption>
+        <figcaption style="font-style:italic; font-size:14px; color:#4a5568;">Figure 3. Sensitivity summary. Left: predicted triangle holonomy amplitude vs baseline with instrument noise floor. Right: portable‑clock anholonomy vs loop duration. Shaded bar indicates illustrative GW170817 disformal constraint region.</figcaption>
     </figure>
     
     <div class="experimental-section">
@@ -986,7 +1085,7 @@
         <h1>Appendix A: Proofs and Key Derivations</h1>
         
         <h2>A1. Conformal null-cone invariance</h2>
-    <p>Let $\hat{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$ with $A > 0$. A vector $k^\mu$ null with respect to $g_{\mu\nu}$, $g_{\mu\nu} k^\mu k^\nu = 0$, satisfies $\hat{g}_{\mu\nu} k^\mu k^\nu = A^2 g_{\mu\nu} k^\mu k^\nu = 0$. Maxwell's action $S = -(1/4) \int \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$ is conformally invariant in 4D: under $\hat{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, $\sqrt{-\hat{g}} F_{\mu\nu} F^{\mu\nu} = \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$. Hence photon geodesics are conformally invariant; null cones coincide.</p>
+    <p>Let $\tilde{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$ with $A > 0$. A vector $k^\mu$ null with respect to $g_{\mu\nu}$, $g_{\mu\nu} k^\mu k^\nu = 0$, satisfies $\tilde{g}_{\mu\nu} k^\mu k^\nu = A^2 g_{\mu\nu} k^\mu k^\nu = 0$. Maxwell's action $S = -(1/4) \int \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$ is conformally invariant in 4D: under $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, $\sqrt{-\tilde{g}} F_{\mu\nu} F^{\mu\nu} = \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$. Hence photon geodesics are conformally invariant; null cones coincide.</p>
     
     <h2>A2. No first-order one-way anisotropy in static φ</h2>
     <p>Consider a straight path $x(s)$ along $\nabla\phi$ with $s \in [0, L]$. Expand $A(\phi(s)) = 1 + \alpha \phi(s) + O(\alpha^2)$. Forward time:</p>
@@ -1003,16 +1102,16 @@
     <p>Define $\tilde{\sigma} = -\tilde{N}^{-1} \tilde{N}_i dx^i$ on a slice $\Sigma_t$ in the matter frame. Let the synchronization protocol change to $t' = f(t, x^i)$ with $f$ smooth and invertible; the induced change in $\tilde{\sigma}$ is $\tilde{\sigma} \to \tilde{\sigma} + d\chi$, with $\chi$ a well-defined scalar on the slice (the explicit form depends on $f$). For a closed loop $C = \partial\Sigma$, $\oint_C d\chi = 0$ (Stokes' theorem). Therefore $H = \oint_C \tilde{\sigma}$ is invariant under such protocol shifts; only the curvature two-form $d\tilde{\sigma}$ carries invariant content. Our observable $H_{\text{resid}} = \iint_\Sigma [d\tilde{\sigma} - d\sigma|_{\text{GR}}]$ extracts that content.</p>
         
         <h2>A4. Disformal inverse and causality condition</h2>
-    <p>Given $\hat{g}_{\mu\nu} = A^2 g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$, write $\partial_\mu\phi$ as a one-form $u_\mu$. The inverse satisfies $\hat{g}^{\mu\nu} \hat{g}_{\nu\sigma} = \delta^\mu_\sigma$. Ansätz: $\hat{g}^{\mu\nu} = A^{-2} (g^{\mu\nu} + C u^\mu u^\nu)$. Solve for $C$:</p>
+    <p>Given $\tilde{g}_{\mu\nu} = A^2 g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$, write $\partial_\mu\phi$ as a one-form $u_\mu$. The inverse satisfies $\tilde{g}^{\mu\nu} \tilde{g}_{\nu\sigma} = \delta^\mu_\sigma$. Ansätz: $\tilde{g}^{\mu\nu} = A^{-2} (g^{\mu\nu} + C u^\mu u^\nu)$. Solve for $C$:</p>
     <div class="equation">
         $$A^{-2} [g^{\mu\nu} + C u^\mu u^\nu] [A^2 g_{\nu\sigma} + B u_\nu u_\sigma] = \delta^\mu_\sigma$$
         $$\Rightarrow \delta^\mu_\sigma + A^{-2} (B + A^2 C + B C (u \cdot u)) u^\mu u_\sigma = \delta^\mu_\sigma$$
         $$\Rightarrow A^2 C + B + B C (u \cdot u) = 0 \Rightarrow C = - \frac{B}{A^2 + B (u \cdot u)}.$$
     </div>
-    <p>Thus $\hat{g}^{\mu\nu} = A^{-2} \left[ g^{\mu\nu} - \frac{(B/A^2) u^\mu u^\nu}{1 + (B/A^2) (u \cdot u)} \right]$. Lorentzian signature requires $1 + (B/A^2)(u \cdot u) > 0$.</p>
+    <p>Thus $\tilde{g}^{\mu\nu} = A^{-2} \left[ g^{\mu\nu} - \frac{(B/A^2) u^\mu u^\nu}{1 + (B/A^2) (u \cdot u)} \right]$. Lorentzian signature requires $1 + (B/A^2)(u \cdot u) > 0$.</p>
 
     <h1>Appendix B: Photon Phase Speed and GW–EM Constraints</h1>
-    <p>In a local inertial frame, the photon dispersion relation is ĝμν kμ kν = 0. For small disformal deformations and kμ aligned with n̂,</p>
+    <p>In a local inertial frame, the photon dispersion relation is $\tilde{g}^{\mu\nu} k_\mu k_\nu = 0$. For small disformal deformations and $k^\mu$ aligned with $\hat{n}$,</p>
     <div class="equation">$$c_{\gamma}^2/c^2 \approx 1 - (B/A) |\nabla_\perp\phi|^2$$</div>
     <p>The GW170817 bound requires (B/A) |∇⊥φ|2 ≲ few × 10−15 along typical lines of sight today, bounding B/M4.</p>
 
@@ -1020,145 +1119,146 @@
         <div style="overflow-x: auto; margin: 20px 0;">
             <table style="border-collapse: collapse; width: 100%; font-size: 14px;">
                 <thead>
-                    <tr style="background-color: #f0f8ff; border: 1px solid #ddd;">
-                        <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Symbol</th>
-                        <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Description</th>
-                        <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Section</th>
+                    <tr style="background-color: #f7fafc; border: 1px solid #e2e8f0;">
+                        <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Symbol</th>
+                        <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Description</th>
+                        <th style="padding: 8px; border: 1px solid #e2e8f0; text-align: left;">Section</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$g_{\mu\nu}$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Gravitational metric tensor</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$g_{\mu\nu}$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Gravitational metric tensor</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\tilde{g}_{\mu\nu}$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Matter/causal metric tensor</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\tilde{g}_{\mu\nu}$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Matter/causal metric tensor</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\phi$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">The scalar time field</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\phi$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">The scalar time field</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$A(\phi)$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Conformal coupling factor, $\exp(2\beta \phi/M_{\text{Pl}})$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$A(\phi)$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Conformal coupling factor, $\exp(2\beta \phi/M_{\text{Pl}})$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$B(\phi)$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Disformal coupling function</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$B(\phi)$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Disformal coupling function</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">TEP</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Temporal Equivalence Principle</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">1, 2</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">TEP</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Temporal Equivalence Principle</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">1, 2</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\tau$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Proper time defined by $\tilde{g}_{\mu\nu}$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\tau$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Proper time defined by $\tilde{g}_{\mu\nu}$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$H$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Synchronization holonomy (a time discrepancy)</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">3, 6</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$H$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Synchronization holonomy (a time discrepancy)</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">3, 6</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\Omega_\mu$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Time-transport connection one-form</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">6</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\Omega_\mu$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Time-transport connection one-form</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">6</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$F_{\mu\nu}$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Curvature of the time-transport connection</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">6</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$F_{\mu\nu}$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Curvature of the time-transport connection</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">6</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\Theta_\mu$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Disformal (non-exact) part of $\Omega_\mu$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">6</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\Theta_\mu$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Disformal (non-exact) part of $\Omega_\mu$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">6</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$c_g$, $c_\gamma$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Speed of gravity, speed of light (photons)</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">5</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$c_g$, $c_\gamma$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Speed of gravity, speed of light (photons)</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">5</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$V(\phi)$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Potential for the scalar field $\phi$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">4</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$V(\phi)$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Potential for the scalar field $\phi$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">4</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\alpha(\phi)$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Conformal coupling strength, $d(\ln A)/d\phi$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">4</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\alpha(\phi)$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Conformal coupling strength, $d(\ln A)/d\phi$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">4</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\beta$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Dimensionless conformal coupling parameter</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\beta$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Dimensionless conformal coupling parameter</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">2</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$M$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Suppression scale for disformal/EFT operators</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">4</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$M$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Suppression scale for disformal/EFT operators</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">4</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">PPN</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Parametrized Post-Newtonian formalism</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">7</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">PPN</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Parametrized Post-Newtonian formalism</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">7</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\gamma$, $\beta_{\text{PPN}}$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Eddington PPN parameters</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">7</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\gamma$, $\beta_{\text{PPN}}$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Eddington PPN parameters</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">7</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$H_0$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Hubble constant today</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">9</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$H_0$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Hubble constant today</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">9</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$S_8$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Cosmological parameter for structure growth</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">9</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$S_8$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Cosmological parameter for structure growth</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">9</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$r_s$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Sound horizon at recombination</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">9</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$r_s$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Sound horizon at recombination</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">9</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\Xi_{AB}$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">One-way time asymmetry between A and B</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">6.4</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\Xi_{AB}$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">One-way time asymmetry between A and B</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">6.4</td>
                     </tr>
-                    <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$\tilde{u}_\mu$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Four-velocity of an observer/clock</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">3.2</td>
+                    <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$\tilde{u}_\mu$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Four-velocity of an observer/clock</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">3.2</td>
                     </tr>
-                    <tr style="border: 1px solid #ddd;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">$k^\mu$</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Four-wavevector of a null signal</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">3.2</td>
+                    <tr style="border: 1px solid #e2e8f0;">
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">$k^\mu$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">Four-wavevector of a null signal</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0;">3.2</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <hr style="border: none; border-top: 2px solid #666; margin: 30px 0;">
+    <hr style="border: none; border-top: 2px solid #4a5568; margin: 30px 0;">
     
     <div class="references">
         <h1>References</h1>
         <div class="ref-item">Einstein, A. (1905). Zur Elektrodynamik bewegter Körper. Ann. Phys. 17, 891–921.</div>
         <div class="ref-item">Einstein, A. (1916). Die Grundlage der allgemeinen Relativitätstheorie. Ann. Phys. 49, 769–822.</div>
         <div class="ref-item">Will, C. M. (2014). The Confrontation between General Relativity and Experiment. Living Rev. Relativity 17, 4.</div>
+        <div class="ref-item">Bertotti, B., Iess, L. & Tortora, P. (2003). A test of general relativity using radio links with the Cassini spacecraft. Nature 425, 374–376.</div>
         <div class="ref-item">Bekenstein, J. D. (1993). The relation between physical and gravitational geometry. Phys. Rev. D 48, 3641.</div>
         <div class="ref-item">Damour, T. & Polyakov, A. M. (1994). The string dilaton and a least coupling principle. Nucl. Phys. B 423, 532.</div>
         <div class="ref-item">Khoury, J. & Weltman, A. (2004). Chameleon fields: Awaiting surprises for tests of gravity in space. Phys. Rev. Lett. 93, 171104.</div>
@@ -1174,21 +1274,26 @@
         <div class="ref-item">Koivisto, T. S. & Zumalacárregui, T. (2013). Disformal gravity. Phys. Rev. D 88, 084016.</div>
         <div class="ref-item">Ashby, N. (2003). Relativity in the Global Positioning System. Living Rev. Relativity 6, 1.</div>
         <div class="ref-item">Uzan, J.-P. (2011). Varying constants, gravitation and cosmology. Living Rev. Relativity 14, 2.</div>
+        <div class="ref-item">Michelson, A. A. & Morley, E. W. (1887). On the relative motion of the Earth and the luminiferous ether. Am. J. Sci. 34, 333–345.</div>
+        <div class="ref-item">Kennedy, R. J. & Thorndike, E. M. (1932). Experimental establishment of the relativity of time. Phys. Rev. 42, 400–418.</div>
+        <div class="ref-item">Müller, H. et al. (2003). Modern Michelson-Morley experiment using cryogenic optical resonators. Phys. Rev. Lett. 91, 020401.</div>
+        <div class="ref-item">Herrmann, S. et al. (2009). Test of the isotropy of the speed of light using a continuously rotating optical resonator. Phys. Rev. Lett. 95, 150401.</div>
+        <div class="ref-item">IERS Conventions (2010). Gérard Petit and Brian Luzum (eds.). IERS Technical Note No. 36, Frankfurt am Main: Verlag des Bundesamts für Kartographie und Geodäsie.</div>
     </div>
     
-    <hr style="border: none; border-top: 2px solid #666; margin: 30px 0;">
+    <hr style="border: none; border-top: 2px solid #4a5568; margin: 30px 0;">
 
     <div class="experimental-section">
         <h2>How to cite</h2>
         <p>Always cite the latest version: <a href="https://doi.org/10.5281/zenodo.16921911">10.5281/zenodo.16921911</a>.<br>
         To always resolve to the latest version, cite the concept DOI: <a href="https://doi.org/10.5281/zenodo.16921911">10.5281/zenodo.16921911</a>.</p>
-        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto;">
+        <div style="background-color: #e2e8f0; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto;">
             <strong>BibTeX (version-specific):</strong>
-<pre style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; font-size: 13px; margin: 10px 0; line-height: 1.4;">@misc{Smawfield_TEP_2025_v0_2,
+<pre style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; font-size: 13px; margin: 10px 0; line-height: 1.4;">@misc{Smawfield_TEP_2025_v0_3,
   author       = {Matthew Lukin Smawfield},
   title        = {The Temporal Equivalence Principle: Dynamic Time, 
                   Emergent Light Speed, and a Two-Metric Geometry 
-                  of Measurement (Monte Carlo v0.2)},
+                  of Measurement (Florence v0.3)},
   year         = {2025},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.16921911},
@@ -1197,7 +1302,7 @@
 }</pre>
         </div>
         
-        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto;">
+        <div style="background-color: #e2e8f0; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto;">
             <strong>BibTeX (concept DOI, latest):</strong>
 <pre style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', monospace; font-size: 13px; margin: 10px 0; line-height: 1.4;">@misc{Smawfield_TEP_2025_latest,
   author       = {Matthew Lukin Smawfield},
@@ -1217,7 +1322,7 @@
         <h2>Contact</h2>
         <p>For questions, comments, or collaboration opportunities regarding this work, please contact:</p>
         <p><strong>Matthew Lukin Smawfield</strong><br>
-        Email: <a href="mailto:matthewsmawfield@gmail.com">matthewsmawfield@gmail.com</a></p>
+        <a href="mailto:matthewsmawfield@gmail.com" class="email-icon"><svg width="14" height="10" viewBox="0 0 16 12" fill="currentColor" style="vertical-align: middle; margin-right: 5px;"><path d="M14.5 0h-13C.67 0 0 .67 0 1.5v9C0 11.33.67 12 1.5 12h13c.83 0 1.5-.67 1.5-1.5v-9C16 .67 15.33 0 14.5 0zM8 6.75L1.5 1.5h13L8 6.75zM5.25 6L1.5 9.75V2.25L5.25 6zm.5.75L8 8.25l2.25-1.5L14.5 10.5h-13L5.75 6.75zM10.75 6L14.5 2.25v7.5L10.75 6z"/></svg>matthewsmawfield@gmail.com</a></p>
       </div>
 
   </body>
