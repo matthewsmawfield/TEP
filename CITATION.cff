@@ -12,8 +12,8 @@ abstract: >
   the vacuum speed of light is an emergent, strictly local invariant.
   Current version is a preprint and has not been peer-reviewed.
 license: CC-BY-4.0
-version: "0.3"
-date-released: 2025-09-01
+version: "0.4"
+date-released: 2025-09-15
 keywords:
   - physics
   - relativity
@@ -27,15 +27,15 @@ doi: 10.5281/zenodo.16921911
 
 preferred-citation:
   type: article
-  title: "The Temporal Equivalence Principle: Dynamic Time, Emergent Light Speed, and a Two-Metric Geometry of Measurement (Florence v0.3)"
+  title: "The Temporal Equivalence Principle: Dynamic Time, Emergent Light Speed, and a Two-Metric Geometry of Measurement (Marseille v0.4)"
   authors:
     - family-names: Smawfield
       given-names: Matthew Lukin
       orcid: "https://orcid.org/0009-0003-8219-3159"
   year: 2025
   journal: Zenodo
-  doi: 10.5281/zenodo.16921911
-  url: "https://doi.org/10.5281/zenodo.16921911"
+  doi: 10.5281/zenodo.17121655
+  url: "https://doi.org/10.5281/zenodo.17121655"
   notes: "Preprint"
 
 
