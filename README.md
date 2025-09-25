@@ -5,7 +5,7 @@
 ![The Temporal Equivalence Principle](./og-image.jpg)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.4 (Marseille)  
+**Version:** v0.5 (Guyana)  
 **Date:** 15 Sep 2025  
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911)  
@@ -26,9 +26,9 @@ Einstein moved us from absolute time to relative simultaneity and dynamic geomet
 BibTeX (version-specific):
 
 ```bibtex
-@misc{Smawfield_TEP_2025_v0_4,
+@misc{Smawfield_TEP_2025_v0_5,
   author       = {Matthew Lukin Smawfield},
-  title        = {The Temporal Equivalence Principle: Dynamic Time, Emergent Light Speed, and a Two-Metric Geometry of Measurement (Marseille v0.4)},
+  title        = {Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (Guyana v0.5)},
   year         = {2025},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.17121655},
