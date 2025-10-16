@@ -1,4 +1,4 @@
-# The Temporal Equivalence Principle: Dynamic Time, Emergent Light Speed
+# The Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16921911.svg)](https://doi.org/10.5281/zenodo.16921911)
 
