@@ -24,31 +24,15 @@ Einstein moved physics from absolute time to relative simultaneity and dynamic g
 
 - **Main DOI (always latest version):** **10.5281/zenodo.16921911**
 
-BibTeX (version-specific):
-
 ```bibtex
-@misc{Smawfield_TEP_2025_v0_6,
-  author       = {Matthew Lukin Smawfield},
-  title        = {Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (v0.6 Jakarta)},
-  year         = {2025},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.17121655},
-  url          = {https://doi.org/10.5281/zenodo.17121655},
-  note         = {Preprint}
-}
-```
-
-BibTeX (concept DOI, latest version):
-
-```bibtex
-@misc{Smawfield_TEP_2025_latest,
+@misc{Smawfield_TEP_2025,
   author       = {Matthew Lukin Smawfield},
   title        = {The Temporal Equivalence Principle: Dynamic Time, Emergent Light Speed},
   year         = {2025},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.16921911},
   url          = {https://doi.org/10.5281/zenodo.16921911},
-  note         = {Cites the latest version}
+  note         = {Preprint}
 }
 ```
 
