@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="873px" height="572px" viewBox="0 0 873 572" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>fig1_architecture</title>
+    <g id="fig1_architecture" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#f7fafc" x="0" y="0" width="873" height="572"></rect>
+        <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" x="0.5" y="0.5" width="435.5" height="571"></rect>
+        <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" x="437" y="0.5" width="435.5" height="571"></rect>
+        <g transform="translate(-12, -17)">
+            <rect id="Rectangle" fill="#f7fafc" fill-rule="nonzero" x="0" y="0" width="900" height="600"></rect>
+            <text id="Temporal-Equivalence-Principle-Architecture" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold">
+                <tspan x="309" y="67">Temporal Equivalence Principle Architecture</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="80" y="120" width="280" height="120" rx="4"></rect>
+            <text id="Gravitational-Metric" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="164" y="155">Gravitational Metric</tspan>
+            </text>
+            <text id="g" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="18" font-style="italic" font-weight="normal">
+                <tspan x="216" y="179">g</tspan>
+            </text>
+            <text id="Spacetime-geometry" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="160" y="205">Spacetime geometry</tspan>
+            </text>
+            <text id="Einstein-equations" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="167" y="220">Einstein equations</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#2d6a8a" stroke-width="1.5" fill="#f7fafc" fill-rule="nonzero" x="540" y="120" width="280" height="140" rx="4"></rect>
+            <text id="Matter-Metric" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="642" y="154">Matter Metric</tspan>
+            </text>
+            <text id="g̃" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="18" font-style="italic" font-weight="normal">
+                <tspan x="676" y="178">g̃</tspan>
+            </text>
+            <text id="Universal-matter-coupling" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="607" y="204">Universal matter coupling</tspan>
+            </text>
+            <text id="Local-Lorentz-invariance" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="610" y="219">Local Lorentz invariance</tspan>
+            </text>
+            <text id="Path-dependent-observables" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="597" y="234">Path-dependent observables</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="295" y="320" width="300" height="80" rx="4"></rect>
+            <text id="Conformal-Disformal-Map" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="370.5" y="350">Conformal-Disformal Map</tspan>
+            </text>
+            <text id="g̃=-A(φ)²-g+-B(φ)-∇φ-∇φ" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="18" font-style="italic" font-weight="normal">
+                <tspan x="357" y="377">g̃= A(φ)² g+ B(φ) </tspan>
+                <tspan x="488.24707" y="377" font-family="AppleSymbols, Apple Symbols">∇</tspan>
+                <tspan x="499.382812" y="377">φ </tspan>
+                <tspan x="513.84082" y="377" font-family="AppleSymbols, Apple Symbols">∇</tspan>
+                <tspan x="524.976562" y="377">φ</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#2d6a8a" stroke-width="1.5" fill="#f7fafc" fill-rule="nonzero" x="340" y="461" width="220" height="80" rx="4"></rect>
+            <text id="Scalar-Time-Field" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="400" y="486">Scalar Time Field</tspan>
+            </text>
+            <text id="φ(x)" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-BoldItalicMT, Times New Roman" font-size="19" font-style="italic" font-weight="bold">
+                <tspan x="433" y="506">φ(x)</tspan>
+            </text>
+            <text id="Dynamical-rate-of-time" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="385" y="527">Dynamical rate of time</tspan>
+            </text>
+            <line x1="360" y1="180" x2="535" y2="180" id="Path" stroke="#4a5568" stroke-width="1.5"></line>
+            <polygon id="Path" fill="#4a5568" fill-rule="nonzero" points="533 176 541 180 533 184"></polygon>
+            <line x1="220" y1="240" x2="370.5" y2="316.5" id="Path" stroke="#4a5568" stroke-width="1.5"></line>
+            <polygon id="Path" fill="#4a5568" fill-rule="nonzero" transform="translate(372, 316) rotate(28) translate(-372, -316)" points="368 312 376 316 368 320"></polygon>
+            <line x1="680" y1="260" x2="524.5" y2="316.5" id="Path" stroke="#4a5568" stroke-width="1.5"></line>
+            <polygon id="Path" fill="#4a5568" fill-rule="nonzero" transform="translate(523, 316) rotate(-26) translate(-523, -316)" points="527 312 519 316 527 320"></polygon>
+            <line x1="449" y1="400" x2="449" y2="455" id="Path" stroke="#4a5568" stroke-width="1.5"></line>
+            <polygon id="Path" fill="#4a5568" fill-rule="nonzero" points="445 453 449 461 453 453"></polygon>
+        </g>
+    </g>
+</svg>
