@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="932px" height="577px" viewBox="0 0 932 577" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>fig2_holonomy</title>
+    <g id="fig2_holonomy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#f7fafc" x="0" y="0" width="932" height="577"></rect>
+        <g transform="translate(9, -23)">
+            <rect id="Rectangle" fill="#f7fafc" fill-rule="nonzero" x="0" y="0" width="900" height="600"></rect>
+            <text id="Synchronization-Holonomy" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold">
+                <tspan x="366.5" y="71">Synchronization Holonomy</tspan>
+            </text>
+            <ellipse id="Oval" stroke="#4a8fb0" fill="#e2e8f0" fill-rule="nonzero" cx="450" cy="300" rx="380" ry="180"></ellipse>
+            <ellipse id="Oval" stroke="#2d6a8a" stroke-width="2" cx="450" cy="300" rx="280" ry="120"></ellipse>
+            <text id="Loop-C" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="431" y="299">Loop C</tspan>
+            </text>
+            <text id="Σ-(g̃-frame)" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="790" y="300">Σ (g̃-frame)</tspan>
+            </text>
+            <text id="σ̃-circulation" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="414.5" y="160">σ̃ circulation</tspan>
+            </text>
+            <line x1="640" y1="190" x2="740" y2="110" id="Path" stroke="#4a5568" stroke-dasharray="4"></line>
+            <text id="Subtract-GR-terms" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="750" y="110">Subtract GR terms</tspan>
+            </text>
+            <text id="(Sagnac,-gravitomagnetic)" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="750" y="125">(Sagnac, gravitomagnetic)</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="170" y="506" width="560" height="60" rx="4"></rect>
+            <text id="Residual-Holonomy" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="393.5" y="531">Residual Holonomy</tspan>
+            </text>
+            <text id="H-=-∮σ̃-−-∮σ|" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="15" font-style="italic" font-weight="normal">
+                <tspan x="406.5" y="551">H = </tspan>
+                <tspan x="437.598633" y="551.952148" font-family="AppleSymbols, Apple Symbols">∮</tspan>
+                <tspan x="445.120605" y="551">σ̃ − </tspan>
+                <tspan x="472.78418" y="551.952148" font-family="AppleSymbols, Apple Symbols">∮</tspan>
+                <tspan x="480.306152" y="551">σ|</tspan>
+            </text>
+            <path id="Path-2" d="M428.322873,440.277902 L427.998,444.261 L428.366936,444.289651 C439.746636,445.146052 448.953749,445.57414 455.986099,445.57414 C464.757427,445.57414 476.911051,444.908188 492.443371,443.575969 L492.528828,444.572311 C476.970522,445.906759 464.790813,446.57414 455.986099,446.57414 C448.84835,446.57414 439.493242,446.135563 427.91853,445.258639 L427.593391,449.24829 L418.987744,444.033613 L428.322873,440.277902 Z" fill="#2d6a8a" fill-rule="nonzero"></path>
+            <path id="Path-2" d="M422.322873,131.277902 L421.998,135.261 L422.366936,135.289651 C433.746636,136.146052 442.953749,136.57414 449.986099,136.57414 C458.757427,136.57414 470.911051,135.908188 486.443371,134.575969 L486.528828,135.572311 C470.970522,136.906759 458.790813,137.57414 449.986099,137.57414 C442.84835,137.57414 433.493242,137.135563 421.91853,136.258639 L421.593391,140.24829 L412.987744,135.033613 L422.322873,131.277902 Z" transform="translate(449.9861, 136.0741) scale(-1, -1) translate(-449.9861, -136.0741)" fill="#2d6a8a" fill-rule="nonzero"></path>
+            <path id="Path-2" d="M137.520014,296.307467 L136.14,300.032 L136.15259,300.03692 C140.493539,301.396303 144.106905,302.07414 146.986099,302.07414 C151.482306,302.07414 157.758686,300.422461 165.795661,297.111827 L166.176538,298.036453 C158.029351,301.392486 151.639065,303.07414 146.986099,303.07414 C143.978878,303.07414 140.250015,302.372212 135.792828,300.972117 L134.393278,304.74687 L127.517244,297.400433 L137.520014,296.307467 Z" transform="translate(146.9861, 300.0741) scale(-1, -1) rotate(-90) translate(-146.9861, -300.0741)" fill="#2d6a8a" fill-rule="nonzero"></path>
+            <path id="Path-2" d="M738.520014,296.307467 L737.14,300.032 L737.15259,300.03692 C741.493539,301.396303 745.106905,302.07414 747.986099,302.07414 C752.482306,302.07414 758.758686,300.422461 766.795661,297.111827 L767.176538,298.036453 C759.029351,301.392486 752.639065,303.07414 747.986099,303.07414 C744.978878,303.07414 741.250015,302.372212 736.792828,300.972117 L735.393278,304.74687 L728.517244,297.400433 L738.520014,296.307467 Z" transform="translate(747.9861, 300.0741) rotate(-90) translate(-747.9861, -300.0741)" fill="#2d6a8a" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

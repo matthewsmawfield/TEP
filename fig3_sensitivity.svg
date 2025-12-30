@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="574px" viewBox="0 0 900 574" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>fig3_sensitivity</title>
+    <g id="fig3_sensitivity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#f7fafc" x="0" y="0" width="900" height="574"></rect>
+        <g transform="translate(0, -26)">
+            <rect id="Rectangle" fill="#f7fafc" fill-rule="nonzero" x="0" y="0" width="900" height="600"></rect>
+            <text id="Triangle-Synchronization-Experiment" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold">
+                <tspan x="337" y="66">Triangle Synchronization Experiment</tspan>
+            </text>
+            <rect id="Rectangle" fill="#f7fafc" fill-rule="nonzero" x="0" y="429" width="900" height="171"></rect>
+            <line x1="0" y1="428" x2="900" y2="428" id="Path" stroke="#e2e8f0" fill="#2a2f35" fill-rule="nonzero"></line>
+            <circle id="Oval" stroke="#2d6a8a" stroke-width="2" fill="#f7fafc" fill-rule="nonzero" cx="200" cy="420" r="35"></circle>
+            <text id="A" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="195.5" y="425">A</tspan>
+            </text>
+            <text id="Ground-station" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="157" y="470">Ground station</tspan>
+            </text>
+            <text id="(sea-level)" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="170" y="485">(sea level)</tspan>
+            </text>
+            <circle id="Oval" stroke="#2d6a8a" stroke-width="2" fill="#f7fafc" fill-rule="nonzero" cx="700" cy="420" r="35"></circle>
+            <text id="B" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="695.5" y="425">B</tspan>
+            </text>
+            <text id="Ground-station" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="657" y="470">Ground station</tspan>
+            </text>
+            <text id="(mountain)" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="668.5" y="485">(mountain)</tspan>
+            </text>
+            <circle id="Oval" stroke="#2d6a8a" stroke-width="2" fill="#e2e8f0" fill-rule="nonzero" cx="450" cy="180" r="35"></circle>
+            <text id="C" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="445" y="185">C</tspan>
+            </text>
+            <text id="Satellite" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="426.5" y="120">Satellite</tspan>
+            </text>
+            <text id="(MEO)" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="430.5" y="135">(MEO)</tspan>
+            </text>
+            <line x1="235" y1="414" x2="665" y2="414" id="Path" stroke="#4a8fb0" stroke-dasharray="4"></line>
+            <line x1="220" y1="390" x2="415.5" y2="188.5" id="Path" stroke="#4a8fb0" stroke-dasharray="4"></line>
+            <line x1="487.5" y1="188.5" x2="675.5" y2="390.5" id="Path" stroke="#4a8fb0" stroke-dasharray="4"></line>
+            <line x1="232" y1="406" x2="423" y2="208" id="Path" stroke="#2d6a8a" stroke-width="2"></line>
+            <polygon id="Path" fill="#2d6a8a" fill-rule="nonzero" points="419 208 424 213 425 205"></polygon>
+            <line x1="475" y1="205" x2="665" y2="405" id="Path" stroke="#2d6a8a" stroke-width="2"></line>
+            <polygon id="Path" fill="#2d6a8a" fill-rule="nonzero" transform="translate(663, 404) rotate(-15) translate(-663, -404)" points="660 403 665 408 666 400"></polygon>
+            <line x1="665" y1="429" x2="238" y2="429" id="Path" stroke="#2d6a8a" stroke-width="2"></line>
+            <polygon id="Path" fill="#2d6a8a" fill-rule="nonzero" points="241 425 233 429 241 433"></polygon>
+            <text id="One-way" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica-Oblique, Helvetica" font-size="13" font-style="italic" font-weight="normal">
+                <tspan x="240" y="297">One-way</tspan>
+            </text>
+            <text id="One-way" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica-Oblique, Helvetica" font-size="13" font-style="italic" font-weight="normal">
+                <tspan x="609" y="297">One-way</tspan>
+            </text>
+            <text id="Loop-closure" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica-Oblique, Helvetica" font-size="13" font-style="italic" font-weight="normal">
+                <tspan x="412.5" y="452">Loop closure</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="60" y="520" width="200" height="60" rx="4"></rect>
+            <line x1="80" y1="540" x2="120" y2="540" id="Path" stroke="#4a8fb0" stroke-dasharray="4"></line>
+            <text id="TWTT-calibration" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="130" y="545">TWTT calibration</tspan>
+            </text>
+            <line x1="80" y1="560" x2="120" y2="560" id="Path" stroke="#2d6a8a" stroke-width="2"></line>
+            <text id="One-way-transfer" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="130" y="565">One-way transfer</tspan>
+            </text>
+            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="640" y="520" width="200" height="60" rx="4"></rect>
+            <text id="~3000-km-baselines" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="682" y="540">~3000 km baselines</tspan>
+            </text>
+            <text id="10⁻¹⁸-precision-target" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="681" y="555">10⁻¹⁸ precision target</tspan>
+            </text>
+            <text id="GR-subtraction-required" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
+                <tspan x="670.5" y="570">GR subtraction required</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
