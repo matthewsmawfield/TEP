@@ -20,6 +20,12 @@ Long-standing confusions about "variable c" are resolved by replacing convention
 
 Einstein moved physics from absolute time to relative simultaneity and dynamic geometry. The next step is to recognize that the flow of time itself is dynamical, and that "the speed of light" is the local echo of a deeper temporal geometry. If the predicted holonomies are observed, physics will enter a new epoch in which dynamic time joins dynamic geometry as a foundation. If not, uniquely strong bounds will have been set and the operational bedrock of c and simultaneity clarified to unprecedented precision.
 
+## Key Findings
+
+This paper develops a covariant bi-metric framework where proper time is a dynamical scalar field φ coupled conformally to matter via A(φ) = exp(2βφ/M_Pl). The theory preserves local Lorentz invariance while generating path-dependent synchronization ("synchronization holonomy") that vanishes in GR but becomes nonzero when time is dynamical. Key predictions include: (1) distance-structured correlations in precision timing networks with λ ~ 1,000–10,000 km, (2) screened local physics via density-dependent effective potential, and (3) falsifiable holonomy signatures in next-generation metrology. The disformal sector is constrained by GW170817 (|c_γ − c_g|/c ≲ 10⁻¹⁵), while the conformal sector remains unconstrained—providing a window for TEP phenomenology.
+
+---
+
 ## The TEP Research Program
 
 | Paper | Repository | Title | DOI |
