@@ -55,4 +55,5 @@ Einstein moved physics from absolute time to relative simultaneity and dynamic g
 
 **Contact:** matthewsmawfield@gmail.com  
 **Website:** https://matthewsmawfield.github.io/TEP/  
-**Zenodo:** https://doi.org/10.5281/zenodo.16921911
+**Zenodo:** https://doi.org/10.5281/zenodo.16921911  
+**ORCID:** [0009-0003-8219-3159](https://orcid.org/0009-0003-8219-3159)
