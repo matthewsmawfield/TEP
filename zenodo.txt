@@ -1,0 +1,8 @@
+Description
+The Temporal Equivalence Principle (TEP) proposes a covariant, testable reformulation of relativity in which proper time is a dynamical field and the speed of light is an emergent, strictly local invariant rather than a global constant. The framework employs two metrics on a single spacetime manifold—a gravitational metric g and a causal (matter) metric g-tilde—related by a controlled disformal map g-tilde_{μν} = A(φ)g_{μν} + B(φ)∇_μφ ∇_νφ, where φ is the time field. All non-gravitational fields and clocks couple universally to g-tilde, guaranteeing exact local Lorentz invariance while admitting path-dependent synchronization holonomy absent in general relativity.
+
+Screening manifests as a continuous spatial profile (Temporal Topology) governed by non-linear superposition of field gradients (Temporal Shear), suppressing fifth forces in dense environments without discrete boundary approximations. The manuscript develops the full action, field equations, conservation laws, PPN mapping, and screening mechanisms, and outlines decisive experiments with quantitative error budgets: ground-satellite triangle time-transfer below 10^-18 fractional; portable-clock anholonomy at 10^-19; multi-species clock networks seeking annual modulations at 10^-19–10^-17; and interplanetary optical links at picosecond precision.
+
+This version (v0.7, Jakarta) revises geometric definitions with formalized Temporal Topology and Temporal Shear nomenclature.
+
+Website: https://mlsmawfield.com/tep/theory/

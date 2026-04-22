@@ -7,13 +7,10 @@ authors:
     given-names: Matthew Lukin
     orcid: "https://orcid.org/0009-0003-8219-3159"
 abstract: >
-  A working draft proposing the Temporal Equivalence Principle (TEP),
-  a covariant framework in which proper time is a dynamical field and
-  the vacuum speed of light is an emergent, strictly local invariant.
-  Current version is a preprint and has not been peer-reviewed.
+  This paper proposes a covariant, testable reformulation of relativity in which proper time is a dynamical field and the "speed of light" is an emergent, strictly local invariant rather than a global constant. The framework is built on a single spacetime manifold endowed with two metrics: a gravitational metric g_{μν} and a causal (matter) metric g̃_{μν} to which all non-gravitational fields and clocks couple. The metrics are related by a controlled disformal map, g̃_{μν} = A(φ) g_{μν} + B(φ) ∇_μφ ∇_νφ, where φ is the time field, A(φ) = exp(2β φ/M_Pl) is a universal conformal factor, and B(φ) encodes tiny, direction-dependent deformations of the light cone consistent with multi-messenger constraints (|c_γ − c_g|/c ≲ 10^{-15} today). Proper time is elevated to a field by postulating that all matter, electromagnetism, and quantum phases evolve with respect to g̃-proper time τ; in local freely falling frames, this guarantees exact local Lorentz invariance and a locally invariant c, while globally it implies that synchronization procedures and one-way light-time measurements become path-dependent in a dynamical-time background. The full action, field equations, conservation laws, Parametrized Post-Newtonian (PPN) mapping, and screening mechanisms (Temporal Topology and Temporal Shear) are developed to reconcile terrestrial tests with cosmological dynamics. The breakdown of global simultaneity is formalized using a synchronization-transport law, deriving a convention-independent "synchronization holonomy," an invariant measure of non-integrability of time transport around closed loops. In purely conformal theories this holonomy vanishes once general-relativistic Sagnac and Shapiro terms are removed; a nonzero holonomy at leading order requires non-exact structure provided either by (i) disformal photon coupling B(φ) ≠ 0 or (ii) more general non-metricity. Explicit small-B formulas are provided for the holonomy and the effective photon phase speed, showing how the measured one-way asymmetry is related to φ-gradients and disformal scales under current constraints. Long-standing confusions about "variable c" are resolved by replacing convention-dependent statements with invariant observables tied to measurement procedures. A synchronization one-form σ̃ is defined on spacelike slices of the matter metric; its curl dσ̃, after subtraction of general-relativistic (GR) Sagnac/gravito-magnetic terms, yields a residual "temporal holonomy" H that vanishes in GR and becomes nonzero only when time is dynamical in this sense. Two key theorems are proven: (i) conformal matter coupling preserves null cones, so photons and gravitons share the same causal structure at late times; (ii) a static φ-gradient generates no first-order one-way light-time anisotropy, placing effects in the femto-to-picosecond regime over astronomical baselines under current bounds. Disformal tilts (B ≠ 0) are tightly constrained by GW170817-class multi-messenger observations but can source holonomy at levels within reach of next-generation metrology. A covariant action is presented, field equations, conservation, and invertibility/causality conditions are derived, and a 3+1 decomposition is supplied that makes observables explicit. Screening via a density-dependent effective potential reconciles precision local tests with cosmological evolution, with mapping to Parametrized Post-Newtonian parameters and to the EFT-of-dark-energy α-functions with c_T = 1 enforced. Decisive experiments with quantitative error budgets are outlined: (1) a ground–ground–satellite triangle time-transfer experiment targeting holonomy at below 10^{-18} fractional after GR subtraction; (2) portable-clock "clock anholonomy" around closed paths at the 10^{-19} level over days; (3) multi-species clock networks seeking phase-locked annual modulations at 10^{-19}–10^{-17}; (4) interplanetary one-way optical links at picoseconds over AU; (5) altitude-dependent screening maps with optical clocks and atom interferometers; and (6) ensemble multi-messenger tests.
 license: CC-BY-4.0
-version: "0.6"
-date-released: 2025-10-16
+version: v0.7 (Jakarta)
+date-released: 2026-04-22
 keywords:
   - physics
   - relativity
@@ -22,20 +19,20 @@ keywords:
   - dynamic time
   - cosmology
 repository-code: "https://github.com/matthewsmawfield/TEP"
-url: "https://matthewsmawfield.github.io/TEP/"
+url: "https://mlsmawfield.com/tep/theory/"
 doi: 10.5281/zenodo.16921911
 
 preferred-citation:
   type: article
-  title: "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (v0.6 Jakarta)"
+  title: "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed (v0.7 Jakarta)"
   authors:
     - family-names: Smawfield
       given-names: Matthew Lukin
       orcid: "https://orcid.org/0009-0003-8219-3159"
   year: 2025
   journal: Zenodo
-  doi: 10.5281/zenodo.17121655
-  url: "https://doi.org/10.5281/zenodo.17121655"
+  doi: 10.5281/zenodo.16921911
+  url: "https://doi.org/10.5281/zenodo.16921911"
   notes: "Preprint"
 
 
