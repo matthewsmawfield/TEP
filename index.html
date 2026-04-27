@@ -20,7 +20,7 @@
     <link rel="canonical" href="https://mlsmawfield.com/tep/theory/">
     
     <!-- Alternate PDF Version (for Google Scholar) -->
-    <link rel="alternate" type="application/pdf" title="Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed" href="https://mlsmawfield.com/tep/theory/Smawfield_2025_TemporalEquivalencePrinciple_v0.7_Jakarta.pdf">
+    <link rel="alternate" type="application/pdf" title="Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed" href="https://mlsmawfield.com/tep/theory/0-TEP-v0.7-Jakarta.pdf">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
@@ -74,7 +74,7 @@
     <meta name="citation_journal_title" content="Preprint">
     <meta name="citation_doi" content="10.5281/zenodo.16921911">
     <meta name="citation_abstract_html_url" content="https://mlsmawfield.com/tep/theory/">
-    <meta name="citation_pdf_url" content="https://mlsmawfield.com/tep/theory/Smawfield_2025_TemporalEquivalencePrinciple_v0.7_Jakarta.pdf">
+    <meta name="citation_pdf_url" content="https://mlsmawfield.com/tep/theory/0-TEP-v0.7-Jakarta.pdf">
     <meta name="citation_language" content="en">
     <meta name="citation_keywords" content="temporal equivalence principle; dynamic time; emergent light speed; synchronization holonomy; conformal disformal coupling; theoretical physics; quantum gravity; cosmology; general relativity">
     
@@ -702,7 +702,7 @@
         <div class="author">Matthew Lukin Smawfield</div>
         <div class="version">Version: v0.7 (Jakarta)</div>
         <div class="date">First published: 18 August 2025 · Last updated: 22 April 2026</div>
-        <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.16921911">10.5281/zenodo.16921911</a><a class="pdf-link no-print" href="Smawfield_2025_TemporalEquivalencePrinciple_v0.7_Jakarta.pdf" aria-label="Download PDF (v0.7)" title="Download PDF (v0.7)">
+        <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.16921911">10.5281/zenodo.16921911</a><a class="pdf-link no-print" href="0-TEP-v0.7-Jakarta.pdf" aria-label="Download PDF (v0.7)" title="Download PDF (v0.7)">
             <svg width="11px" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
             </svg>
@@ -734,8 +734,8 @@
     <div class="principle">
         <ul class="axiom-list">
             <li><strong>A1. Two-metric structure on a single manifold.</strong> Gravity is described by a Lorentzian metric $g_{\mu\nu}$; matter fields, clocks, and rulers couple to a causal (matter) metric $\tilde{g}_{\mu\nu}$. The metrics are related by a disformal map
-                <div class="equation">$$\tilde{g}_{\mu\nu} = A(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi,$$</div>
-                with a universal conformal factor $A(\phi) = \exp(2\beta \phi/M_{\text{Pl}})$ and a small disformal function $B(\phi)$ consistent with multi-messenger constraints today.
+                <div class="equation">$$\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi,$$</div>
+                with a universal conformal factor $A(\phi) = \exp(\beta \phi/M_{\text{Pl}})$ and a small disformal function $B(\phi)$ consistent with multi-messenger constraints today.
             </li>
             <li><strong>A2. Temporal Equivalence Principle (TEP).</strong> All non-gravitational processes evolve according to proper time $d\tau$ defined by $\tilde{g}_{\mu\nu}$: $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$, nongravitational fields propagate on $\tilde{g}$-null cones, and ideal clocks tick $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In local freely falling frames for $\tilde{g}_{\mu\nu}$, physics reduces to special relativity with invariant c.</li>
             <li><strong>A3. Causal safety and locality.</strong> Today, $c_g = c_\gamma$ within current bounds ($|c_g - c_\gamma|/c \lesssim 10^{-15}$). This is enforced by requiring $B(\phi)(\partial\phi)^2$ to be tiny at late times and by choosing $A(\phi)$ universal, such that conformal transformations preserve null cones for photons and gravitons when $B = 0$. Hyperbolicity and energy conditions hold within the EFT domain.</li>
@@ -763,7 +763,7 @@
                 <tr style="border: 1px solid #e2e8f0;">
                     <td style="padding: 8px; border: 1px solid #e2e8f0;"><strong>TEP (This work)</strong></td>
                     <td style="padding: 8px; border: 1px solid #e2e8f0;">$g_{\mu\nu}$, $\phi$</td>
-                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Universal to $\tilde{g}_{\mu\nu} = A g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$</td>
+                    <td style="padding: 8px; border: 1px solid #e2e8f0;">Universal to $\tilde{g}_{\mu\nu} = A^2 g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$</td>
                     <td style="padding: 8px; border: 1px solid #e2e8f0;">No, if $B≠0$</td>
                     <td style="padding: 8px; border: 1px solid #e2e8f0;">Synchronization Holonomy $H$</td>
                 </tr>
@@ -809,15 +809,26 @@
     <h2>3.2 The synchronization problem in a dynamical-time background</h2>
     <p>Einstein synchronization assumes (i) reciprocity of propagation and (ii) homogeneity of time standards along the path. If the rate $d\tau/dt$ varies spatially or directionally, synchronization by light exchange over extended loops becomes path-dependent. The proper formalism invokes the congruence $\tilde{u}_\mu$ of observers (clocks) and the null geodesics $k^\mu$ of $\tilde{g}_{\mu\nu}$. Define simultaneity as orthogonality to $\tilde{u}_\mu$ (where Frobenius integrability allows it), and define time transport by mapping a proper-time interval at A to B using $\tilde{g}$-null signals. In GR, the non-closure of such transports arises from rotation of the congruence (vorticity) and spacetime curvature (Sagnac/Shapiro); both can be modeled and removed. In a dynamical-time geometry with disformal couplings, there is an additional, tiny non-exact contribution to time transport that cannot be removed by coordinate choices: a synchronization holonomy.</p>
     <h2>3.3 A convention-independent observable: synchronization holonomy</h2>
-    <p>Define the holonomy H as the total non-closure in proper time accumulated by transporting synchronization once around a closed, oriented loop C embedded in spacetime:</p>
-    <div class="equation">$$H \equiv \oint_C d\tau_{\text{prop}},$$</div>
-    <p>where $d\tau_{\text{prop}}$ is the infinitesimal proper-time transport inferred along each leg by $\tilde{g}$-null exchange. In SR and pure GR (after subtracting modeled Sagnac/Shapiro), H = 0 for loops small enough that curvature terms cancel to the relevant order. In a disformal time geometry H generically does not vanish. Crucially:</p>
-    <ul>
-        <li>H is an operational scalar: it depends only on measured proper times and the loop.</li>
-        <li>H vanishes in the conformal-only limit ($B = 0$) after GR effects are subtracted; any claim to the contrary confuses convention with physics.</li>
-        <li>H reflects the curvature of an effective time-transport connection that includes a disformal, non-exact component.</li>
-    </ul>
-    <p>This reframes "variable c" claims: the invariant diagnostic is not a raw one-way c, but H. A nonzero H means simultaneity is not integrable beyond GR; this is what dynamic time does to measurement.</p>
+    <p>The operational observable is not a raw one-way speed and not the integral of a scalar proper-time differential. It is the <strong>residual non-closure of synchronization transport</strong> around a closed loop after subtracting the GR prediction.</p>
+    
+    <p>Let $\tilde{\sigma}$ denote the matter-frame synchronization transport one-form induced by $\tilde{g}_{\mu\nu}$ and the chosen clock congruence, and let $\sigma_{\rm GR}$ denote the corresponding GR one-form including Sagnac, Lense–Thirring/gravito-magnetic, Shapiro, gravitational redshift, clock motion, and ephemeris terms. The <strong>residual holonomy</strong> is:</p>
+    
+    <div class="equation">$$H_{\rm resid}(C) \equiv \oint_C (\tilde{\sigma} - \sigma_{\rm GR}) = \iint_\Sigma (d\tilde{\sigma} - d\sigma_{\rm GR}), \qquad C = \partial\Sigma.$$</div>
+    
+    <p>Equivalently, defining $\tilde{F} = d\tilde{\sigma}$ and $F_{\rm GR} = d\sigma_{\rm GR}$:</p>
+    
+    <div class="equation">$$H_{\rm resid}(C) = \iint_\Sigma (\tilde{F} - F_{\rm GR}).$$</div>
+    
+    <p>This quantity is invariant under admissible synchronization-protocol shifts $\tilde{\sigma} \rightarrow \tilde{\sigma} + d\chi$ because $\oint_C d\chi = 0$.</p>
+    
+    <h3>Conformal exactness and vanishing loop holonomy</h3>
+    <p>In the conformal-only subclass ($B = 0$), the scalar contribution to local clock-rate transport is generated by the exact one-form $\omega^{(A)} = d\ln A$. For any closed loop $C$ in a simply connected region where $A(\phi)$ is smooth and single-valued:</p>
+    
+    <div class="equation">$$\oint_C \omega^{(A)} = \oint_C d\ln A = 0.$$</div>
+    
+    <p>Thus a conformal-only scalar may affect local rates and open-path redshift comparisons, but it <strong>cannot by itself generate a closed-loop residual synchronization holonomy</strong>. A leading-order nonzero $H_{\rm resid}$ requires residual synchronization curvature $d(\tilde{\sigma} - \sigma_{\rm GR}) \neq 0$, which in this framework arises from the disformal sector, non-metricity, or other explicitly non-exact transport structure.</p>
+    
+    <p>This reframes "variable c" claims: the invariant diagnostic is not a raw one-way c, but $H_{\rm resid}$. A nonzero $H_{\rm resid}$ means simultaneity is not integrable beyond GR; this is what dynamic time does to measurement.</p>
 
     <figure style="text-align:center; margin: 20px 0;">
         <img src="fig2_holonomy.svg" alt="Synchronization holonomy on a spacelike slice" style="max-width:100%; height:auto;" loading="lazy">
@@ -844,7 +855,7 @@
     <h2>Proper time</h2>
     <p>Clocks measure $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In a local lab with small velocities and $\partial_0\phi \ll |\nabla\phi|$, $-\tilde{g}_{00} \approx A(\phi)^2 (-g_{00}) - B(\partial_0\phi)^2$, so</p>
     <div class="equation">
-        $$\frac{d\tau}{dt} \approx A(\phi)^{1/2},$$
+        $$\frac{d\tilde{\tau}}{d\tau_g} = A(\phi),$$
     </div>
     <p>up to $O(B)$ corrections. This "dynamical time law" rescales all frequency standards locally.</p>
     
@@ -1199,7 +1210,7 @@
                     </tr>
                     <tr style="background-color: #e2e8f0; border: 1px solid #e2e8f0;">
                         <td style="padding: 8px; border: 1px solid #e2e8f0; word-wrap: break-word;">$A(\phi)$</td>
-                        <td style="padding: 8px; border: 1px solid #e2e8f0; word-wrap: break-word;">Conformal coupling factor, $\exp(2\beta \phi/M_{\text{Pl}})$</td>
+                        <td style="padding: 8px; border: 1px solid #e2e8f0; word-wrap: break-word;">Conformal coupling factor, $\exp(\beta \phi/M_{\text{Pl}})$</td>
                         <td style="padding: 8px; border: 1px solid #e2e8f0; word-wrap: break-word;">2</td>
                     </tr>
                     <tr style="border: 1px solid #e2e8f0;">
