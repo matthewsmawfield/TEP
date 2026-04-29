@@ -22,4 +22,3 @@ scripts
 *.njsproj
 *.sln
 *.sw?
-deploy.sh

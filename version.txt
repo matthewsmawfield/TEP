@@ -1,0 +1,9 @@
+v0.8 (Jakarta) - Terminology alignment and theory refinements
+
+- Canonical definitions: Temporal Topology (spatial/covariance structure of ln A), Temporal Shear (gradient sector Σ_μ)
+- Clarified screening: removed binary-threshold language, continuous suppression via observable shear sector
+- Axiom A4: removed chameleon-like potential references; mechanisms are completions not ontology
+- Synchronization Holonomy: clarified H vs H_resid distinction (raw vs GR-subtracted)
+- Response coefficients: replaced α_eff formula with channel-level observable structure
+- Glossary: added compact notation Θ ≡ ln A and C_Θ for covariance
+- Small editorial refinements throughout
