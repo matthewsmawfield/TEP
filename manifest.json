@@ -1,0 +1,21 @@
+{
+  "name": "Temporal Equivalence Principle",
+  "short_name": "TEP",
+  "description": "Dynamic Time & Emergent Light Speed - A covariant reformulation of relativity",
+  "start_url": "/TEP/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

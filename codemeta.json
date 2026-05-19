@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "ScholarlyArticle",
+    "SoftwareSourceCode"
+  ],
+  "url": "https://mlsmawfield.com/tep/theory/",
+  "title": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+  "author": {
+    "@type": "Person",
+    "name": "Matthew Lukin Smawfield",
+    "email": "matthew@mlsmawfield.com",
+    "orcid": "https://orcid.org/0009-0003-8219-3159"
+  },
+  "datePublished": "2025-08-18",
+  "dateModified": "2026-04-29",
+  "version": "v0.8 (Jakarta)",
+  "identifier": "https://doi.org/10.5281/zenodo.16921911",
+  "doi": "10.5281/zenodo.16921911",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Temporal Equivalence Principle Research"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "codeRepository": "https://github.com/matthewsmawfield/TEP",
+  "developmentStatus": "active",
+  "runtimePlatform": "Python",
+  "applicationCategory": "Scientific/Research"
+}
