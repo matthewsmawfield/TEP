@@ -33,7 +33,7 @@ MPC_TO_M = 3.08567758e22         # m
 # Conformal coupling strength.
 # phi is dimensionless (measured in reduced-Planck-mass units:
 # phi = phi_tilde / M_pl), so the conformal factor is:
-#     A(phi) = exp(beta * phi)
+#     A(phi) = exp(beta_A * phi)
 # with no further M_pl normalization in the code.
 BETA_A = -1.0                 # Dimensionless conformal coupling (locked lab-scale convention)
 
@@ -45,9 +45,9 @@ BETA_SPIN = 0.01                 # Dimensionless; Paper 24
 # Solar-system PPN bound on conformal coupling from Cassini time-delay test.
 BETA_CASSINI_MAX = 0.0034        # Bertotti et al. 2003
 
-# Phenomenological saturation density for Temporal Topology screening.
-# When local density approaches rho_c, the scalar field saturates and
-# A(phi) -> 1, suppressing TEP effects.
+# Phenomenological saturation proximity scale for Temporal Topology screening.
+# When local proximity approaches rho_c (observationally proxied by density),
+# the scalar field saturates and A(phi) -> 1, suppressing TEP effects.
 RHO_C = 20.0                     # g cm^-3
 
 # Coherence length for lab-scale scalar field
@@ -75,7 +75,7 @@ GNSS_LAMBDA_T_EXPONENTIAL_BY_CENTER = {
 
 # Lab-scale coupling constants (TEP-NIST Paper 21)
 # alpha_log sign is fixed by the TEP field equation in the (+,-,-,-) metric
-# signature: nabla_mu[K(phi) nabla^mu phi] = -alpha(phi) T with alpha = beta/M_Pl < 0.
+# signature: nabla_mu[K(phi) nabla^mu phi] = -alpha(phi) T with alpha = beta_A/M_Pl < 0.
 # For non-relativistic dust T = +rho, the static limit gives nabla^2 phi ~ +|alpha| rho,
 # so phi decreases with increasing density: dphi/drho < 0.  Since the
 # phenomenological ansatz is phi_rho = alpha_log * ln(rho/rho_c), this requires

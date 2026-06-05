@@ -15,7 +15,7 @@ where alpha_log is the lab-scale density coupling and
 beta_geom is the geometric coupling. Both are dimensionless.
 
 This formulation ensures phi remains O(10^-3) for laboratory
-conditions, keeping A(phi) = exp(beta*phi) numerically stable
+conditions, keeping A(phi) = exp(beta_A*phi) numerically stable
 while reproducing the observed metrology shifts.
 
 All TEP papers should import from this module to ensure consistent
@@ -257,9 +257,9 @@ def scalar_field_difference(density_1, density_2, mass_1, mass_2,
 
 def compute_temporal_shear_from_mass_gradient(phi, mass_kg, density_g_cm3,
                                               radius_m, height_m,
-                                              beta=tep_const.BETA_A):
+                                              beta_A=tep_const.BETA_A):
     """
-    Deprecated v0.1 scalar diagnostic: Σ ≈ β ∇φ with ∇φ ≈ φ / L_char.
+    Deprecated v0.1 scalar diagnostic: Σ ≈ β_A ∇φ with ∇φ ≈ φ / L_char.
 
     Retained for backwards comparison in NIST step 06. The 3D FEM gradient
     is the primary shear estimator.
@@ -268,5 +268,5 @@ def compute_temporal_shear_from_mass_gradient(phi, mass_kg, density_g_cm3,
         raise ValueError("radius_m must be strictly positive")
     l_char = float(radius_m)
     grad_phi = float(phi) / l_char
-    sigma = float(beta) * grad_phi
+    sigma = float(beta_A) * grad_phi
     return sigma, grad_phi, l_char
