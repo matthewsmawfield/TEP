@@ -1,3 +1,13 @@
+v0.9 (Jakarta) — 2026-06-05 — Screening Dictionary, PPN clarity, cosmology update, cross-paper consistency, and research program expansion
+
+- Screening Dictionary and Domain Mapping (§7): canonical universal definition, universal warning, and 8-row domain table mapping all TEP observational domains
+- PPN mapping: clarified that screening suppresses effective exterior charge via S_Σ(E), not bare d(ln A)/dφ
+- Cosmology: updated to CMB-preserving realization (Papers 18, 26) — early homogeneous temporal-shear mode frozen/suppressed, late-universe observables via environmental line-of-sight transport
+- Cross-paper consistency: fixed LHC "maximally coupled" inconsistency, softened density-scale connection claim
+- Research program expansion: added Papers 14–26 to the TEP Research Program table (README, index.html, citation metadata)
+- Metadata updates: CFF v1.2.0, codemeta.json, citation.json, and Zenodo description refreshed with expanded keyword taxonomy and canonical links
+- Cross-paper references: Papers 1–13 updated with forward-references to Paper 0 appendices and screening dictionary
+
 v0.8 (Jakarta) - Terminology alignment and theory refinements
 
 - Canonical definitions: Temporal Topology (spatial/covariance structure of ln A), Temporal Shear (gradient sector Σ_μ)
