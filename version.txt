@@ -1,16 +1,16 @@
-v0.9 (Jakarta) — 2026-06-05 — Screening Dictionary, PPN clarity, cosmology update, cross-paper consistency, and research program expansion
+v0.9 (Jakarta) — 2026-06-06 — Field equations, Screening Dictionary, PPN clarity, cosmology update, cross-paper consistency, and research program expansion
 
-- Screening Dictionary and Domain Mapping (§7): canonical universal definition, universal warning, and 8-row domain table mapping all TEP observational domains
-- PPN mapping: clarified that screening suppresses effective exterior charge via S_Σ(E), not bare d(ln A)/dφ
-- Cosmology: updated to CMB-preserving realization — early homogeneous temporal-shear mode frozen/suppressed, late-universe observables via environmental line-of-sight transport
-- Research program expansion: added Papers 14–26 drafts
+- Field equations: minimal covariant EFT action with conformal-disformal source and matter-frame conservation law
+- PPN and screening: clarified that screening suppresses effective exterior charge, not bare coupling; conformal coupling renamed β_A throughout
+- Cosmology: CMB-preserving realization with late-universe observables via environmental line-of-sight transport
+- Synchronization holonomy: added topological caveat and removed obsolete cross-references
+- Research program expansion: added Papers 14–26 drafts; 
 
-v0.8 (Jakarta) - Terminology alignment and theory refinements
+v0.8 (Jakarta) — 2025
 
-- Canonical definitions: Temporal Topology (spatial/covariance structure of ln A), Temporal Shear (gradient sector Σ_μ)
-- Clarified screening: removed binary-threshold language, continuous suppression via observable shear sector
-- Axiom A4: removed chameleon-like potential references; mechanisms are completions not ontology
-- Synchronization Holonomy: clarified H vs H_resid distinction (raw vs GR-subtracted)
-- Response coefficients: replaced α_eff formula with channel-level observable structure
-- Glossary: added compact notation Θ ≡ ln A and C_Θ for covariance
-- Small editorial refinements throughout
+- Canonical definitions: Temporal Topology and Temporal Shear
+- Screening: continuous suppression via observable shear sector; removed binary-threshold language
+- Synchronization holonomy: clarified raw vs GR-subtracted distinction
+- Axiom A4: removed chameleon-like potential references
+- Glossary: compact notation Θ ≡ ln A and C_Θ for covariance
+- Editorial refinements throughout

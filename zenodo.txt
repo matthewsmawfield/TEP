@@ -1,85 +1,19 @@
-================================================================================
-  The Temporal Equivalence Principle: A Covariant Reformulation of Relativity
-================================================================================
+Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed
 
-ABSTRACT
---------
+This paper proposes a covariant, testable reformulation of relativity in which proper time is a dynamical field and the "speed of light" is an emergent, strictly local invariant. The framework uses a single spacetime manifold with two metrics: a gravitational metric g_{μν} and a causal matter metric g̃_{μν}, related by a controlled disformal map g̃_{μν} = A²(φ) g_{μν} + B(φ) ∇_μφ ∇_νφ. Here φ is the time field, A(φ) = exp(β_A φ/M_{Pl}) is a universal conformal factor, and B(φ) encodes tiny direction-dependent light-cone deformations consistent with multi-messenger constraints (|c_γ - c_g|/c ≲ 10^{-15} today). All matter, electromagnetism, and quantum phases evolve with respect to g̃-proper time τ, guaranteeing exact local Lorentz invariance while making global synchronization path-dependent. The breakdown of global simultaneity is captured by a convention-independent "synchronization holonomy" — an invariant measure of non-integrability of time transport around closed loops. In the conformal subclass this holonomy vanishes after subtraction of the full GR, kinematic, clock-scale, and reference-frame synchronization model; nonzero holonomy at leading order requires disformal coupling B(φ) ≠ 0 or other non-exact transport structure. Two theorems are proven: (i) conformal matter coupling preserves null cones, so photons and gravitons share the same causal structure at late times; (ii) a static φ-gradient generates no first-order one-way light-time anisotropy. Screening via a continuous Temporal Topology governed by non-linear superposition of field gradients (Temporal Shear) reconciles terrestrial tests with cosmological evolution, with mapping to PPN parameters and EFT-of-dark-energy α-functions. Decisive experiments are outlined: ground-satellite triangle time-transfer below 10^{-18} fractional; portable-clock anholonomy at 10^{-19}; multi-species clock networks at 10^{-19}-10^{-17}; interplanetary optical links at picoseconds over AU; altitude-dependent screening maps; and ensemble multi-messenger tests.
 
-This paper proposes a covariant, testable reformulation of relativity in which
-proper time is a dynamical field and the "speed of light" is an emergent,
-strictly local invariant rather than a global constant.
+Einstein's postulate of universal c was a brilliant, operationally perfect approximation in regimes where time's flow is effectively uniform. In a universe where the rate of time is dynamical yet locally Lorentzian, "the speed of light" emerges as an invariant in every local lab but ceases to be globally universal. The new invariant content resides in path-dependent synchronization defects and holonomies of time transport, not in naive one-way "speeds." If detected, these invariants would inaugurate a post-Einsteinian era: from dynamic geometry to dynamic time.
 
-The framework is built on a single spacetime manifold endowed with two metrics:
-a gravitational metric g_{μν} and a causal (matter) metric g̃_{μν} to which all
-non-gravitational fields and clocks couple. The metrics are related by a
-controlled disformal map,
+Keywords: temporal equivalence principle; dynamic time; emergent light speed; synchronization holonomy; conformal disformal coupling; theoretical physics; quantum gravity; cosmology; general relativity
 
-    g̃_{μν} = A²(φ) g_{μν} + B(φ) ∇_μφ ∇_νφ,
+Website: https://mlsmawfield.com/tep/theory/
+Repository: https://github.com/matthewsmawfield/TEP
+DOI: 10.5281/zenodo.16921911
 
-where φ is the time field, A(φ) = exp(β_A φ/M_Pl) is a universal conformal
-factor, and B(φ) encodes tiny, direction-dependent deformations of the light
-cone consistent with multi-messenger constraints (|c_γ − c_g|/c ≲ 10^{-15}
-today).
 
-Proper time is elevated to a field by postulating that all matter,
-electromagnetism, and quantum phases evolve with respect to g̃-proper time τ.
-In local freely falling frames, this guarantees exact local Lorentz invariance
-and a locally invariant c, while globally it implies that synchronization
-procedures and one-way light-time measurements become path-dependent in a
-dynamical-time background.
-
-The full action, field equations, conservation laws, Parametrized Post-Newtonian
-(PPN) mapping, and screening mechanisms are developed to reconcile terrestrial
-tests with cosmological dynamics.
-
-The breakdown of global simultaneity is formalized using a synchronization-
-transport law, deriving a convention-independent "synchronization holonomy,"
-an invariant measure of non-integrability of time transport around closed
-loops. In the purely conformal subclass this vanishes once general-relativistic
-Sagnac and Shapiro terms are removed; nonzero holonomy at leading order requires
-residual non-exact synchronization structure, supplied in the minimal TEP model
-by disformal coupling B(φ) ≠ 0, and in more general extensions by non-metricity
-or other explicitly non-exact transport structure.
-
-Screening manifests as a continuous spatial profile (Temporal Topology) governed
-by non-linear superposition of field gradients (Temporal Shear), suppressing
-fifth forces in dense environments without discrete boundary approximations.
-
-The manuscript develops the full action, field equations, conservation laws,
-PPN mapping, and screening mechanisms, and outlines decisive experiments with
-quantitative error budgets:
-
-  - ground-satellite triangle time-transfer below 10^{-18} fractional;
-  - portable-clock anholonomy at 10^{-19};
-  - multi-species clock networks seeking annual modulations at 10^{-19}–10^{-17};
-  - interplanetary optical links at picosecond precision.
-
-VERSION NOTE
-------------
-
-This version (v0.9, Jakarta) adds the Screening Dictionary and Domain Mapping,
-clarifies PPN recovery via effective charge suppression, updates cosmology to
-the CMB-preserving realization, and resolves cross-paper screening
-inconsistencies.
-
-IDENTIFIERS & LINKS
--------------------
-
-  Website:         https://mlsmawfield.com/tep/theory/
-  Code Repository: https://github.com/matthewsmawfield/TEP
-  DOI:             10.5281/zenodo.16921911
-
-KEYWORDS
---------
-
-temporal equivalence principle; dynamic time; emergent light speed;
-synchronization holonomy; conformal disformal coupling; theoretical physics;
-quantum gravity; cosmology; general relativity
-
-OPEN SCIENCE STATEMENT
-----------------------
-
+Open Science Statement:
 This work is a preprint and is open to community review, ideas, and
 collaboration. All materials required for full reproducibility—including data
 downloads, analysis scripts, code, and manuscripts—are open-source. Feedback
 and contributions to further test these results are welcome.
+

@@ -1,19 +1,19 @@
 **Release Notes: Temporal Equivalence Principle v0.9 (Jakarta)**
-*Date: June 5, 2026*
+*Date: June 6, 2026*
 
-Version 0.9 (Jakarta) adds the Screening Dictionary and Domain Mapping, clarifies PPN recovery, updates cosmology to match tested implementations, and resolves cross-paper screening inconsistencies identified in the full theoretical consistency audit.
+Version 0.9 (Jakarta) cleans the screening ontology, clarifies PPN recovery, updates cosmology to match tested implementations, and resolves cross-paper screening inconsistencies identified in the full theoretical consistency audit.
 
-**1. Screening Dictionary and Domain Mapping (§7)**
-* **Universal definition:** $\Sigma_\mu^{\text{obs}} = \mathcal S_\Sigma(\mathcal E) \, \Sigma_\mu$ with $\mathcal E = \{\rho, \Phi/c^2, \text{source structure}, \text{ambient environment}, \text{boundary conditions}, z, \text{measurement channel}\}$
-* **Universal warning:** $\rho_T \approx 20$ g/cm$^3$ is not a binary on/off switch; it is the cross-scale saturation scale where the non-linear Temporal Topology response saturates
-* **Domain table:** 8-row canonical map linking each TEP observational domain (GNSS, Cepheids, pulsars, wide binaries, LLR, JWST, cosmology, LHC) to its screening variable, observable response, and paper number
-* **Explicit cross-scale statement:** $\rho_{\text{core}}$, $\rho_c$, and $\rho_{\text{half}}$ are different effective projections of the same non-linear response; the first-principles transfer relation remains an open derivation
+**1. Screening Ontology (§7) and Supplementary `program-note.md`**
+* **Universal definition retained in main text:** $\Sigma_\mu^{\text{obs}} = \mathcal S_\Sigma(\mathcal E) \, \Sigma_\mu$ with $\mathcal E = \{\rho, \Phi/c^2, \text{source structure}, \text{ambient environment}, \text{boundary conditions}, z, \text{measurement channel}\}$
+* **Universal warning retained in main text:** $\rho_T \approx 20$ g/cm$^3$ is not a binary on/off switch; it is the cross-scale saturation scale where the non-linear Temporal Topology response saturates
+* **Domain table and research-series bibliography demoted to `program-note.md`:** To avoid a series-hub appearance in Paper 0, the 8-row canonical domain map and full TEP Research Series bibliography were moved to a supplementary program note
+* **Explicit cross-scale statement retained:** $\rho_{\text{core}}$, $\rho_c$, and $\rho_{\text{half}}$ are different effective projections of the same non-linear response; the first-principles transfer relation remains an open derivation
 
 **2. PPN Mapping Clarification (§7)**
 * Removed incorrect claim that screening makes $d(\ln A)/d\phi \to 0$
 * For $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$, the bare derivative $\beta_A/M_{\rm Pl}$ is constant
 * Screening suppresses the effective exterior charge: $\alpha_{\rm eff} = \mathcal S_\Sigma(\mathcal E) \, \alpha_0$, with $\mathcal S_\Sigma \to 0$ in dense environments
-* PPN recovery to GR ($\gamma = \beta_{\text{PPN}} = 1$) follows from $\alpha_{\rm eff} \to 0$, not from a vanishing bare derivative
+* PPN recovery to GR ($\gamma = \beta_{\rm PPN} = 1$) follows from $\alpha_{\rm eff} \to 0$, not from a vanishing bare derivative
 
 **3. Cosmology Update (§8)**
 * Replaced "early dark energy shifts sound horizon by 1–2%" framing with CMB-preserving realization
@@ -25,6 +25,14 @@ Version 0.9 (Jakarta) adds the Screening Dictionary and Domain Mapping, clarifie
 **4. Cross-Paper Consistency**
 * Fixed LHC (Paper 20) "high-density = maximally coupled" inconsistency — now framed as channel-specific response $\kappa_{\text{LHC}}$, not bulk-density screening
 * SPIN (Paper 24) already correctly labels $\rho_c$ as many-body; no change needed
+
+**5. Field Equations and Conservation Laws (§2.2–2.3)**
+* Added minimal covariant EFT action, Einstein-frame field equations, scalar equation of motion with conformal-disformal source, and matter-frame conservation law
+
+**6. Abstract and Textual Refinements**
+* Abstract softened ("covariant action", "staged falsifiable"); parameter rename $\beta \to \beta_A$ throughout
+* Holonomy: topological caveat added, obsolete Appendix A3 reference removed
+* Hyperbolicity, cosmology, and Growth/$S_8$ language softened for accuracy; terminology cleaned up
 
 ---
 
