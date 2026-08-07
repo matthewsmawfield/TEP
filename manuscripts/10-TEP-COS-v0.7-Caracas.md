@@ -1,7 +1,7 @@
 # TEP: Suppressed Density Scaling in Globular Cluster Pulsars
 **Matthew Lukin Smawfield**
 Version: v0.7 (Caracas)
-First published: 9 January 2026 · Last updated: 3 July 2026
+First published: 9 January 2026 · Last updated: 7 August 2026
 DOI: 10.5281/zenodo.18165798
 
 ---
@@ -77,7 +77,7 @@ The pulsar signal satisfies three independent criteria consistent with TEP: (i) 
 
 ## 2. Theoretical Framework: The Screening Transition
 
-The Temporal Equivalence Principle predicts that gravitational time dilation is enhanced at intermediate astrophysical scales while remaining consistent with precision tests in the screened Solar System regime. This section establishes the theoretical basis for the time-domain probe examined in this work: pulsar spin-down in globular clusters, based on the continuous geometric screening framework established in TEP v0.9 Jakarta. This theoretical foundation is necessary to derive the specific quantitative predictions (Pulsar Ṗ drift) tested in the subsequent sections.
+The Temporal Equivalence Principle predicts that gravitational time dilation is enhanced at intermediate astrophysical scales while remaining consistent with precision tests in the screened Solar System regime. This section establishes the theoretical basis for the time-domain probe examined in this work: pulsar spin-down in globular clusters, based on the continuous geometric screening framework established in TEP v0.10 Jakarta. This theoretical foundation is necessary to derive the specific quantitative predictions (Pulsar Ṗ drift) tested in the subsequent sections.
 
 ## 2.1 The TEP Modification
 
@@ -132,7 +132,7 @@ where $\alpha(\phi) \equiv d \ln A/d\phi = \beta_A/M_{\rm Pl}$, $T \equiv \tilde
 
 #### Observable Response Coefficient
 
-*$\kappa_{\text{MSP}}$ is treated as an observable pulsar response coefficient.* It is not identified with the microscopic coupling β. The microscopic coupling β is constrained by MICROSCOPE and Solar System PPN tests in the screened regime; κ<sub>MSP</sub> represents the effective amplified response in the unscreened globular cluster environment, connected to β through the transfer function of the screening mechanism (Appendix C). The empirical phenomenology is:
+*$\kappa_{\text{MSP}}$ is treated as an observable pulsar response coefficient.* It is not identified with the microscopic coupling β. The microscopic coupling β is constrained by MICROSCOPE and Solar System PPN tests in the screened regime; κ<sub>MSP</sub> represents the effective amplified response in the active-shear globular cluster environment, connected to β through the transfer function of the screening mechanism (Appendix C). The empirical phenomenology is:
 
 \begin{equation} \label{eq:theory_4}
 \frac{d\tau}{dt} = 1 + \frac{\Phi}{c^2} + \kappa_{\text{MSP}}^{\text{emp}} \frac{\Phi}{c^2}
@@ -162,7 +162,7 @@ TEP requires intermediate-scale signals to coexist with strict Solar System boun
 
 Mechanistically, this operates via environment-responsive Temporal Shear suppression, acting on the Temporal Shear (field gradient). The observational consequence is a "flattening" behavior: clock-rate anomalies appear in diffuse potentials where gradients remain coherent, but vanish locally when the local topology is flattened. The absence of local anomalies constrains the environmental/source-screening function $S_\Sigma(E)$, not ρ<sub>T</sub> alone, rather than falsifying the underlying conformal coupling.
 
-The screening hierarchy is governed by the gradient coherence length. While the Temporal Topology saturation proximity scale $\rho_T \approx 20$ g/cm³ marks the asymptotic saturation of the screening effect (Solar System regime), the onset of modulation occurs at galactic-scale densities $\rho_{\rm half} \approx 10^{-23}$ g/cm³ (Paper 11). These two numbers are not in conflict; they describe different tiers of the screening cascade:
+The screening hierarchy is governed by the gradient coherence length. While the Temporal Topology saturation proximity scale $\rho_T \approx 20$ g/cm³ (an observational proxy for the density projection of the environmental operator $S_\Sigma(E)$) marks the asymptotic saturation of the screening effect (Solar System regime), the onset of modulation occurs at galactic-scale densities $\rho_{\rm half} \approx 10^{-23}$ g/cm³ (Paper 11). These two numbers are not in conflict; they describe different tiers of the screening cascade:
 
 - *Saturated regime ($\rho \gtrsim \rho_T$):* Temporal Shear is geometrically suppressed. The local topology is flattened, recovering standard GR (Solar System).
 
@@ -1616,7 +1616,7 @@ To aid critical evaluation, the primary limitations, parameter sensitivities, an
 
 ### 4.9.1 Parameter Sensitivity ($\rho_T$)
 
-The unification of terrestrial and cluster scales relies on the Temporal Topology saturation proximity scale $\rho_T \approx 20$ g/cm³. How sensitive is the result to this parameter?
+The unification of terrestrial and cluster scales relies on the Temporal Topology saturation proximity scale $\rho_T \approx 20$ g/cm³, an observational proxy for the density projection of the full environmental operator $S_\Sigma(E)$. How sensitive is the result to this parameter?
 
 - Scaling: The screening radius scales as $R_{\text{sol}} \propto \rho_T^{-1/3}$. A factor of 2 uncertainty in $\rho_T$ shifts $R_{\text{sol}}$ by only ~26%.
 
@@ -1828,7 +1828,7 @@ The repository includes a comprehensive reproduction guide (see `README.md`) to 
 
 ## TEP Series: Foundational Theory
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.8 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 

@@ -1,7 +1,7 @@
 # What Do Precision Tests of General Relativity Actually Measure?
 **Matthew Lukin Smawfield**
 Version: v0.4 (Istanbul)
-First published: 31 December 2025 · Last updated: 2 July 2026
+First published: 31 December 2025 · Last updated: 7 August 2026
 DOI: 10.5281/zenodo.18109760
 
 ---
@@ -10,7 +10,7 @@ DOI: 10.5281/zenodo.18109760
 
 Most high-precision tests of general relativity constrain reciprocity-even, largely local observables within single-metric frameworks. This leaves open a specific underdetermination between General Relativity (GR) and a class of two-metric disformal scalar-tensor modifications, exemplified here by the Temporal Equivalence Principle (TEP).
 
-This paper formalizes a measurement taxonomy distinguishing gauge-invariant from convention-dependent observables and identifies six recurring scope limitations in the experimental canon: (1) two-way measurement dominance; (2) local/global conflation; (3) model-dependent calibration; (4) single-path multi-messenger constraints on differential propagation that do not directly test common-mode conformal clock-sector structure; (5) theory-laden data reduction; and (6) the proximity-regime screening blind spot, whereby tests performed in deep potential wells probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the unscreened dilute regime unexplored. These characteristics do not diminish the experimental achievements but indicate that, in many cases, the tests primarily constrain parameter space within assumed frameworks rather than systematically discriminating between alternatives.
+This paper formalizes a measurement taxonomy distinguishing gauge-invariant from convention-dependent observables and identifies six recurring scope limitations in the experimental canon: (1) two-way measurement dominance; (2) local/global conflation; (3) model-dependent calibration; (4) single-path multi-messenger constraints on differential propagation that do not directly test common-mode conformal clock-sector structure; (5) theory-laden data reduction; and (6) the proximity-regime screening blind spot, whereby tests performed in deep potential wells probe only the screened regime where scalar-field gradients are continuously suppressed, leaving the active-shear dilute regime unexplored. These characteristics do not diminish the experimental achievements but indicate that, in many cases, the tests primarily constrain parameter space within assumed frameworks rather than systematically discriminating between alternatives.
 
 Discriminating observables—specifically loop asymmetries, spatial correlations, and proximity-regime screening transitions—are proposed, together with experimental configurations capable of resolving the underdetermination. These include large-area triangle holonomy tests (targeting residual synchronization holonomy $H_{\rm resid}$), interplanetary closed-loop timing, altitude-varying optical clock networks to map continuous geometric screening, and matter-wave interferometry.
 
@@ -790,7 +790,7 @@ The PPN framework parameterizes the post-Newtonian limit under the assumption th
 
 - Non-local statistical structure appears in clock residuals (spatial correlations) rather than in PPN light-bending parameters
 
-- Environment-dependent screening of the scalar field gradient (Temporal Shear) is not parameterized by PPN γ, leaving the continuous transition from screened to unscreened regimes unconstrained
+- Environment-dependent screening of the scalar field gradient (Temporal Shear) is not parameterized by PPN γ, leaving the continuous transition from screened to active-shear regimes unconstrained
 
 In TEP, the matter metric is related to the gravitational metric by a disformal map g̃<sub>μν</sub> = A(φ)g<sub>μν</sub> + B(φ)∇<sub>μ</sub>φ∇<sub>ν</sub>φ. The conformal factor A(φ) rescales the matter sector while preserving null cones; the disformal term B(φ) can tilt null cones and is strongly constrained by multi-messenger observations. Consequently, PPN light-propagation tests can leave room for clock-sector effects encoded in A(φ) and for loop/correlation observables that are not representable as a single γ parameter.
 
@@ -2072,7 +2072,7 @@ Zumalacárregui, M., & García-Bellido, J. (2014). Transforming gravity: From de
 
 ### TEP Research Program
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.8 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 

@@ -1,7 +1,7 @@
 # Temporal Equivalence Principle: Black Holes and the Temporal Horizon
 **Matthew Lukin Smawfield**
-Version: v0.1 (Bahrain)
-First published: 29 July 2026 - Last updated: 29 July 2026
+Version: v0.2 (Bahrain)
+First published: 29 July 2026 - Last updated: 7 August 2026
 DOI: 10.5281/zenodo.21677827
 
 ---
@@ -169,7 +169,7 @@ The theory is a defined modified-gravity theory, not a broad framework into whic
 
 **Strong-field EFT sector — the leading curvature operator and regularising coefficients.**
 
-- The leading curvature operator is the scalar–Gauss–Bonnet coupling $\alpha_{\rm GB}\,\phi\,\mathcal{G}$. This is the lowest-dimension higher-curvature term that couples the temporal field to the gravitational geometry and supplies real backreaction. It is the canonical strong-field extension of the TEP action, not one option among many.
+- The leading curvature operator is the scalar–Gauss–Bonnet coupling $\alpha_{\rm GB}\,\phi\,\mathcal{G}$. This is a native, pre-existing operator in the master TEP Effective Field Theory action which becomes active only in the extreme curvature of the strong-field regime, supplying real backreaction to resolve the Schwarzschild incompatibility. It is the canonical strong-field completion of the TEP action, not an arbitrary addition of new physics.
 
 - The regularising nonlinear coefficients — higher-order curvature couplings and potential terms that control the deep-region profile — are selected by the joint requirements of global regularity (finite curvature, bounded areal radius, Lorentzian signature) and observational consistency. These are EFT corrections to the leading operator, not alternative theories.
 
@@ -692,7 +692,7 @@ TEP treats proper time as a dynamical field. The strong-field consequence is the
 
 - Measured phantom-mass sign: the joint photon–orbit–timing forward model that fixes $\mathcal S_a^3 \mathcal D_{\rm dyn}$ relative to $\mathcal T_P^2$.
 
-The distinction between what is derived from the TEP principle and what requires explicit construction makes the framework more robust, not less: the conceptual claims cannot be dismissed by finding an issue in one calculation. Bahrain fixes the governing principle, action structure, and global solution conditions. The nonlinear field equations select the realised temporal-well geometry and its observable spectrum. The remaining nonlinear integration does not decide whether the paradigm exists; it selects the unique quantitative realisation of the paradigm already fixed by TEP. The strongest route forward is: one action, one exterior coupling, one global solution, one coupled characteristic system, one observational likelihood, one phantom mass posterior.
+The distinction between what is derived from the TEP principle and what requires explicit construction makes the framework more robust, not less: the conceptual claims cannot be dismissed by finding an issue in one calculation. Bahrain fixes the governing principle, action structure, and global solution conditions. The nonlinear field equations select the realised temporal-well geometry and its observable spectrum. The remaining nonlinear integration does not define the paradigm; it determines the unique quantitative strong-field realisation selected by the fixed TEP action and tests whether all global regularity conditions are simultaneously satisfied. The strongest route forward is: one action, one exterior coupling, one global solution, one coupled characteristic system, one observational likelihood, one phantom mass posterior.
 
 ## 9.2 Data as Examples
 
@@ -718,7 +718,7 @@ The object is a regular region in which the rate of proper time differs radicall
 
 ## 9.7 Scope
 
-The derived, demonstrated, and decisive-closure claims are collected in Section 9.1. Bahrain defines the nonlinear closure problem and the boundary conditions that uniquely identify the physical strong-field branch. The nonlinear integration selects the realised temporal-well geometry; it does not decide whether the paradigm exists.
+The derived, demonstrated, and decisive-closure claims are collected in Section 9.1. Bahrain defines the nonlinear closure problem and the boundary conditions that uniquely identify the physical strong-field branch. The nonlinear integration does not define the TEP paradigm; it selects the realised strong-field branch and tests whether the fixed TEP action admits a global solution satisfying all temporal-well regularity conditions.
 
 # 10. Conclusion
 
@@ -732,7 +732,7 @@ Four observational consequences follow from one temporal field: time transfer, m
 
 Weak-field data recover GR; horizon-scale images constrain the photon-region geometry but do not directly establish an event horizon; gravitational-wave ringdown provides the sharpest test. The decisive programme is the raw non-isochronous multi-messenger refit of the same data GR already uses.
 
-Black holes are not fundamental collapsed objects in TEP. They are the observational appearance of regular strong-field temporal wells reconstructed under exterior temporal standards. Bahrain derives the governing strong-field conditions, proves fixed Schwarzschild insufficient, identifies the required backreaction channel, constructs regular benchmarks, and defines the decisive observational tests. The remaining nonlinear integration does not decide whether the paradigm exists; it selects the unique quantitative realisation of the paradigm already fixed by TEP.
+Black holes are not fundamental collapsed objects in TEP. They are the observational appearance of regular strong-field temporal wells reconstructed under exterior temporal standards. Bahrain derives the governing strong-field conditions, proves fixed Schwarzschild insufficient, identifies the required backreaction channel, constructs regular benchmarks, and defines the decisive observational tests. The remaining nonlinear integration does not define the paradigm; it determines the unique quantitative strong-field realisation selected by the fixed TEP action and tests whether all global regularity conditions are simultaneously satisfied.
 
 *Cosmological expansion and black-hole collapse are dual misreadings of dynamical proper time.* The standard black-hole object was never what the telescopes measured. The event horizon, the singularity, and the ultradense core are GR reconstructions from observational data under an implicit isochronous transfer model. Under TEP, the same observations are produced by a temporal well — and the conventional reconstruction is no longer the unique reading.
 
@@ -745,7 +745,7 @@ This appendix fixes the sign, curvature and disformal conventions used throughou
 The metric signature $(-,+,+,+)$ is adopted. The Riemann tensor is defined via the Wald convention
 
 \begin{equation} \label{eq:appA_1}
-({\nabla_a\nabla_b - \nabla_b\nabla_a)\,V_c = R_{abc}{}^{d}\,V_d,
+(\nabla_a\nabla_b - \nabla_b\nabla_a) V_c = R_{abc}{}^{d}\,V_d,
 \end{equation}
 
 with Ricci tensor $R_{ab} = R_{acb}{}^{c}$ and Ricci scalar $R = g^{ab}R_{ab}$. The Einstein tensor is $G_{ab} = R_{ab} - \tfrac12 R\,g_{ab}$, and the Einstein equations read $G_{\mu\nu}[g] = 8\pi\,T_{\mu\nu}$ in geometrized units $G = c = 1$. With this convention the Schwarzschild Kretschmann scalar is
@@ -1743,9 +1743,11 @@ All numbers are computed at $\eta = -0.1$ in the perturbative regime. Note that 
 
 - Smawfield, M. L. (2026). Temporal Equivalence Principle: A Covariant Alternative to Cosmic Expansion. Paper 26 (Athens). DOI: 10.5281/zenodo.20370143.
 
-- Smawfield, M. L. (2026). Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation. Paper 18 (Cambridge).
+- Smawfield, M. L. (2026). Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation. Paper 18 (Cambridge). DOI: 10.5281/zenodo.20682752.
 
 - Smawfield, M. L. (2026). Temporal Equivalence Principle: Temporal Horizon Cosmology and the Absence of a Physical Big Bang Singularity. Paper 27 (Thika). DOI: 10.5281/zenodo.20723059.
+
+- Smawfield, M. L. (2026). Temporal Equivalence Principle: Dynamical Proper Time and the Illusion of Primordial Deuterium. Paper 29 (Dubai).
 
 - LIGO/Virgo Collaboration (2016). Observation of gravitational waves from a binary black hole merger. *Phys. Rev. Lett.*, 116, 241102. DOI: 10.1103/PhysRevLett.116.241102.
 

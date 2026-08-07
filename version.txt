@@ -1,10 +1,18 @@
+v0.10 (Jakarta) — 2026-08-07 — Cosmological architecture supersession: eternal-universe / temporal-horizon closure
+
+- Cosmology: replaced legacy "CMB-preserving realization" (epoch-screening S(z)) with temporal-horizon chemical equilibrium and proper-time reaction flow
+- Abstract: updated cosmological claim to reflect eternal-universe closure without phenomenological thermal screening
+- Section 7: environmental state vector updated (thermal epoch → asymptotic horizon proximity; C0/HC/TH projection updated)
+- Section 8: Background, Recombination, and EFT subsections rewritten for eternal-universe architecture
+- Cross-paper consistency: aligned with TEP-TH v0.3 (Paper 27), TEP-BBN (Paper 29), TEP-HC (Paper 18), TEP-C0 (Paper 26)
+
 v0.9 (Jakarta) — 2026-06-06 — Field equations, Screening Dictionary, PPN clarity, cosmology update, cross-paper consistency, and research program expansion
 
 - Field equations: minimal covariant EFT action with conformal-disformal source and matter-frame conservation law
 - PPN and screening: clarified that screening suppresses effective exterior charge, not bare coupling; conformal coupling renamed β_A throughout
 - Cosmology: CMB-preserving realization with late-universe observables via environmental line-of-sight transport
 - Synchronization holonomy: added topological caveat and removed obsolete cross-references
-- Research program expansion: added Papers 14–26 drafts; 
+- Research program expansion: added Papers 14–26 drafts;
 
 v0.8 (Jakarta) — 2025
 

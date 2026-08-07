@@ -159,23 +159,31 @@ phenomenology is new.
 
 A unified "Optical Theory" of dark matter is developed here, where the
 phenomenology arises from two distinct optical effects of the scalar field
-\(A(\phi)\): a static refractive index and a dynamic shutter.
+\(A(\phi)\): a static clock-transfer contribution and a dynamic shutter.
 
-#### 1. The Static Refractive Index (Geometric Lensing)
+#### 1. The Static Clock-Transfer Contribution (Geometric Lensing)
 
-The scalar field acts as a locally variable optical factor \(n_{eff} \approx
-A(\phi)\) in the travel-time functional governing image formation.
-The associated excess matter proper-time delay is:
+The conformal clock sector modifies the relation between accumulated
+matter-frame time and the geometry reconstructed under an isochronous
+model. The associated excess matter proper-time delay is:
 
 $\Delta \tilde{\tau}_{\rm static} = \frac{1}{c} \int (A(\phi) - 1)\,
 dl$
 
-This *Static Halo* contributes a source-independent term to the
-arrival-time (Fermat) surface. In multipath configurations, it is therefore
-operationally degenerate with the "bulk" convergence inferred in standard
-reconstructions (Einstein rings, major arcs), even though, as established in
-Axiom 1, the conformal limit preserves null cones and does not generate a
-differential photon–graviton speed.
+This contributes a source-independent term to the arrival-time (Fermat)
+surface. In multipath configurations, it is therefore operationally
+degenerate with the "bulk" convergence inferred in standard
+reconstructions (Einstein rings, major arcs). However, as established in
+Axiom 1, the conformal limit preserves null cones: pure multiplication by
+\(A^2(\phi)\) does not bend a photon onto a new null trajectory. Any
+genuinely new static null-trajectory bending beyond the conformally related
+geometry must arise through gravitational backreaction in \(g_{\mu\nu}\),
+a non-negligible disformal contribution from \(B(\phi)\), or another
+explicitly derived part of the coupled field solution. The observable
+lensing signal in the conformal sector is therefore a clock-transfer
+discrepancy — a difference between the matter-frame time accumulated along
+each path and the time inferred from an isochronous GR lens model — rather
+than a direct refraction of null geodesics.
 
 #### 2. The Dynamic Shutter (Temporal Lensing)
 
@@ -195,9 +203,15 @@ applies even to "static" sources (like elliptical galaxies) due to their
 proper motion \(\vec{v}_s\) across the delay gradient. (See Section 3 for
 the full derivation).
 
-Together, these two mechanisms constitute the TEP framework: the refractive
-index may contribute to the phenomenology conventionally attributed to the dark matter halo,
-and the dynamic shutter may account for part of the apparent "complexity" of substructure.
+Together, these two mechanisms constitute the TEP framework: the
+clock-transfer contribution may contribute to the phenomenology
+conventionally attributed to the dark matter halo, and the dynamic
+shutter may account for part of the apparent "complexity" of
+substructure. Any genuinely new null-trajectory bending beyond the
+conformally related geometry must arise through gravitational
+backreaction in \(g_{\mu\nu}\), a non-negligible disformal
+contribution, or another explicitly derived part of the coupled field
+solution.
 
 ### 2.3 Operational Axioms: The TEP Framework
 
@@ -223,28 +237,40 @@ quantities dependent on the metric model.
 This axiom establishes proper time as the irreducible physical
 observable; all other timing quantities are derived.
 
-**Axiom 3 (Open-path transport and closed-loop holonomy):**
-For any signal trajectory \(\gamma\) connecting an emission event to an
-observation event, define the time-transport functional
-\(\mathcal{T}[\gamma] \equiv \Delta\tilde{\tau}[\gamma]\).
-In strong lensing, two images correspond to two open paths
+**Axiom 3 (Non-local temporal transport):** TEP admits two
+distinct classes of non-local timing observable.
+
+**(a) Synchronization holonomy:** A genuinely closed,
+direction-reversing transport loop can exhibit residual non-closure only
+when the transport connection contains non-exact structure, such as the
+disformal \(B(\phi)\) sector. In the pure conformal limit, the
+\(A(\phi)\) contribution is exact and its residual closed-loop integral
+vanishes.
+
+**(b) Differential path transport:** Distinct open propagation
+paths may accumulate different temporal-transfer corrections. In
+gravitational lensing, two images correspond to two open paths
 \(\gamma_i, \gamma_j\), and the observable is the differential
 transport residual
 \[
 \Delta\mathcal{T}_{ij}^{\rm resid}
 = \left[\mathcal{T}[\gamma_i] - \mathcal{T}[\gamma_j]\right]
-- \left[\mathcal{T}_{\rm GR}[\gamma_i] - \mathcal{T}_{\rm GR}[\gamma_j]\right].
+- \left[\mathcal{T}_{\rm GR}[\gamma_i] - \mathcal{T}_{\rm GR}[\gamma_j]\right],
 \]
-This is an *open-path blind-prediction residual*, not a
-closed-loop synchronization holonomy. Because each image has a single
-observed arrival time, algebraic closure of measured pairwise delays
-around image triplets vanishes identically. True synchronization
-holonomy requires a direction-reversing closed loop or a non-exact
-transport structure such as disformal coupling, non-metricity, or an
-explicitly non-exact covariance term.
-This axiom distinguishes open-path differential residuals
-(the GL observable) from closed-loop holonomy (the domain of
-triangle time-transfer and direction-reversing experiments).
+where \(\mathcal{T}[\gamma] \equiv \Delta\tilde{\tau}[\gamma]\) is the
+time-transport functional. This is an open-path blind-prediction
+residual, not a closed-loop synchronization holonomy. Because each
+image has a single observed arrival time, algebraic closure of measured
+pairwise delays around image triplets vanishes identically. This does
+not cause the algebraic sum of observed image delays to fail to close;
+it alters the relation between lens geometry and observed arrival time
+without violating the algebraic identity among the observed arrival
+times.
+
+This axiom distinguishes open-path differential residuals (the GL
+observable) from closed-loop holonomy (the domain of triangle
+time-transfer and direction-reversing experiments), and is consistent
+with the refined strong-lensing formulation in TEP-LENS (Paper 19).
 
 **Measurement Protocol for the GL Observable.**
 The lensing-sector observable is not algebraic delay closure. It is a
@@ -450,10 +476,10 @@ integrated over halo scales (Mpc).
 
 **Primary observables:** The full phenomenology of
 "dark matter" in lensing—cluster arcs, cosmic shear (via Static
-Refraction).
+Clock-Transfer).
 
 **Dark matter status:** Dark matter is modeled as a
-refractive index artifact. The \(\phi\) field constitutes the
+clock-transfer artifact. The \(\phi\) field constitutes the
 underlying reality.
 
 **Falsification:** CMB-galaxy lensing agreement at <
@@ -528,7 +554,7 @@ This delay is
 However, it implies that the "Dynamic Shutter" effect (temporal smearing) is
 negligible for slowly evolving galaxies. The "Dark Matter" signal for
 galaxies is therefore dominated by the
-**Static Refractive Index** (Mechanism A), while the temporal
+**Static Clock-Transfer Contribution** (Mechanism A), while the temporal
 smearing (Mechanism B) becomes the dominant signal only for fast transients
 (FRBs).
 
@@ -781,12 +807,12 @@ gravity \(c_g\) and the speed of light \(c_{\gamma}\) to (e.g., Baker et al.
 Jain 2017):
 
 Screening in TEP is represented at the theory level by the environmental operator
-*S*&Sigma;(*&Epsilon;*).
+*S*<sub>&Sigma;</sub>(*&Epsilon;*).
 Quantities such as
-&rho;T,
-*R*T(*M*),
-*S*&oplus;(*r*),
-compactness &Phi;/*c*2,
+&rho;<sub>T</sub>,
+*R*<sub>T</sub>(*M*),
+*S*<sub>&oplus;</sub>(*r*),
+compactness &Phi;/*c*<sup>2</sup>,
 local stellar density,
 geometric coherence length,
 and channel-specific response coefficients
@@ -1608,6 +1634,22 @@ maintaining a conservative Reference Envelope baseline anchored to existing
 multi-messenger constraints, thereby offering a promising avenue for
 resolving the dark matter problem.
 
+**Principle:**
+
+#### Updated Operational Interpretation
+
+The later dedicated strong-lensing analysis (TEP-LENS, Paper 19) refines
+the observational implementation used here. In particular, ordinary
+image-arrival delays remain algebraically integrable; the strong-lensing
+test is formulated as an observed-versus-GR-predicted transport residual
+rather than a literal closure violation. The framework presented here is
+consistent with that refinement: Axiom 3 already distinguishes open-path
+differential residuals (the GL observable) from closed-loop holonomy,
+and the static clock-transfer contribution is identified as a
+clock-transfer discrepancy rather than a direct refraction of null
+geodesics. Readers should consult TEP-LENS for the current canonical
+strong-lensing time-delay formulation.
+
 ## References
 
 Abbott, B. P., et al. (LIGO/Virgo Collaboration) 2017,
@@ -1736,7 +1778,7 @@ J. 2012, *A&A*, 544, A62
 
 Smette, A., Surdej, J., et al. 1992, *ApJ*, 389, 39
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.8 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 
@@ -1877,7 +1919,7 @@ npm run build
 
 The TEP-GL framework derives from three foundational postulates:
 
-- **Two-Metric Postulate:** Clock metric *gμν(clock)* differs from light metric *gμν(light)*
+- **Two-Metric Postulate:** Clock metric *g<sub>μν</sub><sup>(clock)</sup>* differs from light metric *g<sub>μν</sub><sup>(light)</sup>*
 
 - **Isochrony Violation:** Synchronization becomes path-dependent under conformal coupling
 

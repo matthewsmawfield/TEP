@@ -1,3 +1,10 @@
+**Release Notes: Temporal Equivalence Principle v0.10 (Jakarta)**
+*Date: August 7, 2026*
+
+Version 0.10 (Jakarta) supersedes the legacy "CMB-preserving realization" (epoch-screening S(z)) with the eternal-universe temporal-horizon architecture. The hot Big Bang is rejected; early-universe closure is derived natively from the proper-time reaction flow and steady-state asymptotic attractors. The abstract, Section 7, Section 8, Section 12, and Appendix D glossary have been updated. Cross-paper consistency aligned with TEP-TH v0.3 (Paper 27), TEP-BBN (Paper 29), TEP-HC (Paper 18), TEP-C0 (Paper 26).
+
+---
+
 **Release Notes: Temporal Equivalence Principle v0.9 (Jakarta)**
 *Date: June 6, 2026*
 
