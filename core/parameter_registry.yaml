@@ -4,7 +4,7 @@
 # When updated in the main TEP repo, run scripts/bump_papers.py to propagate.
 
 schema_version: 1
-last_updated: "2026-06-06"
+last_updated: "2026-09-09"
 
 parameter_classes:
   fundamental: "Axiomatic or theoretically fixed parameter; changes would alter the framework itself."
@@ -96,13 +96,24 @@ parameters:
 
   - symbol: "kappa_MSP"
     latex: "\\kappa_{\\text{MSP}}"
-    meaning: "Pulsar observable response coefficient"
-    value: null
+    meaning: "Pulsar in-equation acceleration coupling (screened)"
+    value: 0.05
     units: "dimensionless"
     class: "observable_response"
     first_paper: 10
     used_in: [10, 17]
-    description: "Domain-level transfer coefficient for millisecond-pulsar timing residuals."
+    description: "In-equation coupling in the pulsar spin-down equation; bare ~1e6 suppressed by chameleon factor S~1e-8. The key observational signature is the suppressed density scaling (Gamma=0.39 vs Newtonian 0.75), reflecting the potential-based TEP clock response."
+
+  - symbol: "tilde_kappa_MSP"
+    latex: "\\tilde\\kappa_{\\text{MSP}}"
+    meaning: "Full empirical pulsar response coefficient (pipeline inversion)"
+    value: 29000.0
+    value_uncertainty: 45000.0
+    units: "dimensionless"
+    class: "observable_response"
+    first_paper: 10
+    used_in: [10, 11, 6]
+    description: "Full response coefficient from step_44_kappa_msp_prior.json, obtained by inverting the 0.63 dex raw excess with real cluster parameters. Suitable for cross-probe comparison with kappa_Cep. Effective screening factor S_MSP ~ 0.027 relative to bare ~1e6."
 
   - symbol: "epsilon_T"
     latex: "\\epsilon_T"
@@ -157,9 +168,9 @@ parameters:
   - symbol: "B"
     latex: "B(\\phi)"
     meaning: "Disformal coupling function"
-    value: 0
-    units: "dimensionless (leading order)"
+    value: null
+    units: "dimensionless"
     class: "fundamental"
     first_paper: 0
-    used_in: [0, 4, 9, 22]
-    description: "Vanishing at leading order in late-time astrophysical regimes. Constrained by GW170817 to |c_gamma - c_g|/c < 1e-15. Non-zero values explored in propagation and holonomy analyses."
+    used_in: [0, 4, 9, 22, 28]
+    description: "Disformal coupling function B(phi). GW170817 constrains the path-integral combination B(phi)(dphi)^2 along observed late-time astrophysical paths: |c_gamma - c_g|/c < few x 1e-15. This does NOT require B to vanish identically in all regimes. B(phi) = 0 in the conformal limit (holonomy vanishes). The nonzero form B(phi) = B0 * |phi|^2 / (1 + |phi|^2) * exp(-phi^4 / (2*sigma_B^4)) (quartic-Gaussian ultra-damped shear bump) is implemented in Paper 28 bh_common.py, with B0, n_B, sigma_B as shape parameters. B activates the disformal shear near strong-field regions while decaying super-polynomially in the deep core, ensuring global Lorentzian signature. The path-dependent GW constraint is satisfied because B(phi)(dphi)^2 is negligible along weak-field late-time astrophysical paths."

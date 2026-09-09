@@ -1,6 +1,6 @@
 # The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate
 **Matthew Lukin Smawfield**
-Version: v0.3 (Blantyre)
+Version: v0.4 (Blantyre)
 First published: 28 December 2025 · Last updated: 29 April 2026
 DOI: 10.5281/zenodo.18059250
 Paper: 7 (TEP Series)
@@ -345,7 +345,7 @@ Unlike traditional chameleon mechanisms that invoke discrete thin-shell boundari
 with sharp density cutoffs, TEP screening operates through continuous field gradient
 flattening. The Temporal Shear is gradually suppressed in deep potential wells,
 avoiding the fine-tuning problems of thin-shell approximations while maintaining
-fifth-force suppression in dense environments.
+Temporal Shear suppression in dense environments.
 \begin{equation} \label{eq:screening_factor} S = \frac{\beta_0}{\alpha_{\text{RBH,eff}}} \propto
 \left(\frac{\rho}{\rho_T}\right)^{1/3} \end{equation}
 For RBH-1 at the crossover mass (M ~ 10⁷ M_☉, ρ ~ ρ_T ~ 20 g/cm³), the
@@ -719,7 +719,7 @@ Schive, H.-Y., Chiueh, T., & Broadhurst, T. 2014, *Phys. Rev. Lett.*, 113, 26130
 
 Seidel, E., & Suen, W.-M. 1991, *Phys. Rev. Lett.*, 66, 1659 (DOI: 10.1103/PhysRevLett.66.1659)
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 
@@ -796,7 +796,7 @@ Email: [matthew@mlsmawfield.com](mailto:matthew@mlsmawfield.com)
 ORCID: [0009-0003-8219-3159](https://orcid.org/0009-0003-8219-3159)
 GitHub: [github.com/matthewsmawfield](https://github.com/matthewsmawfield)
 License: This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-Version: v0.3 (Blantyre) · Last updated: 29 April 2026
+Version: v0.4 (Blantyre) · Last updated: 8 August 2026
 
 ## Appendix A: Future Directions
 

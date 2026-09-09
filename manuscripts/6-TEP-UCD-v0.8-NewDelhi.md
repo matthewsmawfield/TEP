@@ -1,7 +1,7 @@
 # Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T
 Matthew Lukin Smawfield
-Version: v0.7 (New Delhi)
-First published: 28 December 2025 · Last updated: 3 July 2026
+Version: v0.8 (New Delhi)
+First published: 28 December 2025 · Last updated: 8 August 2026
 DOI: 10.5281/zenodo.18064365
 
 ---
@@ -114,7 +114,7 @@ The saturation scale parameter $\rho_T \approx 20$ g/cm³ serves as the bulk-mat
 
 where the environmental state is
 $\mathcal{E} = \{\rho, \Phi/c^2, \nabla\rho, \nabla\Phi, \text{compactness}, R_T(M), \text{proximity}, T, z, \text{boundary geometry}, \text{coherence volume}\}.$
-This single operator unifies density screening, compactness screening, proximity screening, thermal/epoch screening, lensing/cosmological covariance screening, and wide-binary environmental screening across the entire TEP corpus.
+This single operator unifies density screening, compactness screening, proximity screening, thermodynamic/environmental-state response, lensing/cosmological covariance screening, and wide-binary environmental screening across the entire TEP corpus.
 
 #### Box 1.1: Joint Constraint Architecture of \(\rho_T\) and \(S_\Sigma(\mathcal{E})\)
 
@@ -796,7 +796,7 @@ Topology screening. Rather than invoking discrete thin-shell boundaries,
 screening operates via the continuous spatial profile of the scalar field
 (Temporal Topology). The tight geometric packing in deep potential wells
 suppresses the local field gradient (Temporal Shear), ensuring short-range
-fifth-force suppression while leaving the field light cosmologically.
+Temporal Shear suppression while leaving the field light cosmologically.
 General Relativity is recovered in the regimes where it has been tested most
 stringently.
 
@@ -1770,7 +1770,8 @@ Paper 11 (TEP-H0) independently calibrates the weakly screened galactic-disk
 response via Cepheid period–luminosity residuals, yielding
 \(\kappa_{\rm Cep} \sim 10^6\) (dimensionless, in the appropriate
 observable basis). Paper 10 (TEP-COS) measures the globular-cluster
-pulsar response \(\kappa_{\rm MSP}^{\rm emp} \approx 3 \times 10^4\)
+pulsar response \(\tilde\kappa_{\rm MSP} \approx 3 \times 10^4\)
+(full response coefficient, step_44_kappa_msp_prior.json)
 after dense-cluster geometric suppression. The two values are consistent
 with the bare TEP geometric-factor estimate (\(\sim 10^6\)–\(10^7\)) only
 after environmental transfer factors are included; they do not assert a
@@ -1786,7 +1787,7 @@ bare scalar couplings. Each channel measures a different projection of
 | --- | --- | --- | --- |
 | **GNSS clocks** | \(L_c \approx 4200\) km | Planetary crust/mantle | Radial covariance scale |
 | **Cepheids (Paper 11)** | \(\kappa_{\rm Cep} \sim 10^6\) | Galactic disk (weakly screened) | Period–luminosity modulation |
-| **Pulsars (Paper 10)** | \(\kappa_{\rm MSP} \sim 10^4\) | Globular cluster (strongly screened) | Spin-down excess (suppressed) |
+| **Pulsars (Paper 10)** | \(\tilde\kappa_{\rm MSP} \sim 10^4\) | Globular cluster (strongly screened) | Spin-down excess (suppressed) |
 | **Wide binaries (Paper 13)** | \(\alpha_{\rm sat} \approx 0.37\) | Galactic halo (unscreened) | Velocity-profile saturation |
 
 The cross-paper comparison is therefore through a shared clock-response
@@ -1966,12 +1967,12 @@ the transfer functions that connect \(\rho_T\) to observables:
 density scaling of spin-down excess (\(\Gamma \approx 0.39\) dex/dex,
 vs. Newtonian \(0.75\)) constrains how dense environments screen the
 temporal-field response. The observable coefficient
-\(\kappa_{\rm MSP}\) is a downstream projection, not a direct
+\(\tilde\kappa_{\rm MSP}\) is a downstream projection, not a direct
 \(\rho_T\) measurement.
 
 **Cepheids (Paper 11):** The Cepheid clock-bias response
 \(\kappa_{\rm Cep} \sim 10^6\) in galactic disks bridges the
-weakly screened regime. It agrees with \(\kappa_{\rm MSP}\) only
+weakly screened regime. It agrees with \(\tilde\kappa_{\rm MSP}\) only
 after environmental transfer factors are applied, demonstrating that
 response coefficients are channel-specific projections.
 
@@ -2284,7 +2285,7 @@ Olausen, S. A., & Kaspi, V. M. 2014, *ApJS*, 212, 6 (DOI: 10.1088/0067-0049/212/
 
 ### TEP Research Series
 
-Smawfield, M. L. (2026). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
+Smawfield, M. L. (2026). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911) (Paper 0)
 
 Smawfield, M. L. (2025b). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.26 (Jaipur). Zenodo. DOI: [10.5281/zenodo.17127229](https://doi.org/10.5281/zenodo.17127229) (Paper 1)
 
@@ -2296,7 +2297,7 @@ Smawfield, M. L. (2025e). *Temporal-Spatial Coupling in Gravitational Lensing: A
 
 Smawfield, M. L. (2025f). *Global Time Echoes: Empirical Synthesis*. Preprint v0.5 (Singapore). Zenodo. DOI: [10.5281/zenodo.18004832](https://doi.org/10.5281/zenodo.18004832) (Paper 5)
 
-Smawfield, M. L. (2025g). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T*. Preprint v0.7 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6 — this work)
+Smawfield, M. L. (2025g). *Temporal Topology Saturation Scale: Cross-Scale Consistency of ρ_T*. Preprint v0.8 (New Delhi). Zenodo. DOI: [10.5281/zenodo.18064365](https://doi.org/10.5281/zenodo.18064365) (Paper 6 — this work)
 
 Smawfield, M. L. (2025h). *The Soliton Wake: Exploring RBH-1 as a Temporal Topology Candidate*. Preprint v0.3 (Blantyre). Zenodo. DOI: [10.5281/zenodo.18059250](https://doi.org/10.5281/zenodo.18059250) (Paper 7)
 
@@ -2328,9 +2329,9 @@ GitHub: [github.com/matthewsmawfield](https://github.com/matthewsmawfield)
 
 License: This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-Version: v0.7 (New Delhi) · Last updated: 3 July 2026
+Version: v0.8 (New Delhi) · Last updated: 8 August 2026
 
-Revision note (v0.7): version bump and consistency revision.
+Revision note (v0.8): consistency revision aligning screening terminology with Jakarta v0.10.
 
 ## Appendix A: GNSS Calibration — Summary of Evidence
 
@@ -2537,7 +2538,7 @@ notation has been ambiguous:
 | \(\alpha_{\rm sat}\) | \(0.366\) | WB (Paper 13) | Wide-binary saturation boost (phenomenological) |
 | \(\beta_{\rm scr}\) | \(0.334\) | UCD (this work) | Screening exponent from \(S(\rho)\) hierarchy |
 | \(\kappa_{\rm Cep}\) | \(\sim 10^6\) | H0 (Paper 11) | Cepheid clock-bias response coefficient |
-| \(\kappa_{\rm MSP}\) | \(\sim 10^4\) | COS (Paper 10) | Pulsar timing response coefficient (suppressed observed value after dense-cluster geometric screening; bare geometric-factor estimate is \(\sim 10^6\)–\(10^7\)) |
+| \(\tilde\kappa_{\rm MSP}\) | \(\sim 10^4\) | COS (Paper 10) | Pulsar timing full response coefficient (suppressed observed value after dense-cluster geometric screening; bare geometric-factor estimate is \(\sim 10^6\)–\(10^7\)) |
 
 These are not the same \(\alpha\). The notation purge across all
 manuscripts has disambiguated them, but the proliferation of
@@ -2771,7 +2772,7 @@ with effective mass parameter:
 
 The critical behavior is immediate. When $\rho > \rho_* \equiv \mu^2 M^2$,
 the effective mass squared is negative and the field sits at the symmetric
-minimum $\phi = 0$; the scalar is massive and screened, so fifth-force
+minimum $\phi = 0$; the scalar is massive and screened, so Temporal Shear
 effects are suppressed. When $\rho < \rho_*$, symmetry is spontaneously
 broken, the field rolls to $\phi_0 = \mu_{\rm eff}/\sqrt{\lambda}$, and the
 scalar becomes light—generating long-range forces. The saturation scale is:

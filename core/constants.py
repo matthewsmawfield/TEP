@@ -8,7 +8,7 @@ Principle (TEP) framework.  All TEP papers should import from this module to ens
 consistency across the corpus.  Human-readable registry: parameter_registry.yaml
 in this directory.  Do not duplicate these values in project scripts.
 
-Version: TEP v0.10 (Jakarta)
+Version: TEP v0.11 (Jakarta)
 """
 
 import numpy as np

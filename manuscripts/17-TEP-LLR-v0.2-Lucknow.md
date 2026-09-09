@@ -1,7 +1,7 @@
 # Temporal Equivalence Principle: Lunar Laser Ranging and the Nordtvedt Effect
 **Matthew Lukin Smawfield**
 Version: v0.2 (Lucknow)
-First published: 5 June 2026
+First published: 8 August 2026
 DOI: 10.5281/zenodo.19446029
 
 ---
@@ -90,7 +90,7 @@ Standard orbital periods are incommensurate with the synodic month. In the frequ
 
 ## 2. Theoretical Framework: TEP and the Nordtvedt Effect
 
-The Temporal Equivalence Principle (TEP) is a scalar-tensor theory in which proper time becomes a dynamical field $\phi$ that couples to the local mass density. In this framework, matter couples to a conformal metric $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu}$, where $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$ is the conformal factor. The rate at which proper time accumulates depends on the local value of $\phi$, which in turn depends on the ambient matter density through screening of Temporal Shear. This operates via the continuous spatial profile of the time field (Temporal Topology), in which high ambient density in deep potential wells suppresses the local field gradient (Temporal Shear), naturally attenuating fifth-force effects in dense environments while allowing the field to remain light and long-ranged in dilute regions.
+The Temporal Equivalence Principle (TEP) is a scalar-tensor theory in which proper time becomes a dynamical field $\phi$ that couples to the local mass density. In this framework, matter couples to a conformal metric $\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu}$, where $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$ is the conformal factor. The rate at which proper time accumulates depends on the local value of $\phi$, which in turn depends on the ambient matter density through screening of Temporal Shear. This operates via the continuous spatial profile of the time field (Temporal Topology), in which high ambient density in deep potential wells suppresses the local field gradient (Temporal Shear), naturally attenuating Temporal Shear effects in dense environments while allowing the field to remain light and long-ranged in dilute regions.
 
 **Screening projection notice.** Screening in TEP is represented at theory level by the environmental operator S_Σ(E). Quantities such as ρ_T, R_T(M), S_⊕(r), compactness Φ/c^2, local stellar density, thermal epoch, coherence length, proximity, and boundary geometry are domain-specific projections of E, not independent screening mechanisms and not interchangeable universal thresholds.
 
@@ -2837,7 +2837,7 @@ Planck Collaboration, Aghanim, N., et al. 2020, A&A, 641, A6. *Planck 2018 resul
 
 #### TEP Framework (This Series)
 
-Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.10 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
+Smawfield, M. L. (2025). *Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed*. Preprint v0.11 (Jakarta). Zenodo. DOI: 10.5281/zenodo.16921911 (Paper 0)
 
 Smawfield, M. L. (2025). *Global Time Echoes: Distance-Structured Correlations in GNSS Clocks*. Preprint v0.25 (Jaipur). Zenodo. DOI: 10.5281/zenodo.17127229 (Paper 1)
 
