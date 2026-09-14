@@ -1,43 +1,12 @@
-v0.11 (Jakarta) — 2026-09-09 — Frozen microscopic sector and transfer map
+v0.12 (Jakarta) — 2026-09-14 — Radial ODE closure, recovery operator, nested screening hierarchy
 
-- Section 2.2: unified action now displays the full frozen functional including K(φ), V(φ), B(φ), and the scalar-Gauss-Bonnet strong-curvature sector α_GB f(φ)𝒢
-- Section 2.2: explicit frozen microscopic functions added — A(φ) = exp(β_A φ/M_Pl) with β_A = −1.0; B(φ) quartic-Gaussian ultra-damped shear bump from Paper 28; V(φ) density-pinning saturation from Papers 6/15; S_Σ(ℰ) derived as solved-profile ratio from Paper 26
-- Section 7: universal transfer map (β_A → κ_X) added with per-channel status table
-- Section 10E: λ_T forecast amended to 1,000–10,000 km to match the screening-parameter space cited across Papers 1–14
-- GW170817 constraint clarified as path-dependent on B(φ)(∂φ)², not requiring B ≡ 0 globally
-- Dimensional consistency: conformal coupling α now expressed via dimensionless field φ = φ/M_Pl
-- Cepheid benchmark range updated to 0.326–0.452 × 10⁶
-- Cosmology: abstract cosmological sentence replaced with no-expansion ontology (1+z = A_0/A_em, static spatial manifold)
-- Cosmology: §8 renamed to "Static Spatial Geometry, Temporal Horizon, and EFT Mapping"
-- Cosmology: deleted unearned Growth/S_8 subsection (G_eff formula); growth/lensing now treated as independent tests of the realized solution, not a generic unscreened scalar–tensor law
-- Cosmology: Λ paragraph softened from "background expansion observables" to "distance–redshift observables"
-- Cosmology: EFT paragraph rewritten as phenomenological dictionary, not asserting parameter bound compliance
-- Disformal envelope: clarified weak-field reduction (exp damping unity, varphi^2/(1+varphi^2) ≈ varphi^2)
-- Hyperbolicity: deleted stale first sentence ("canonical kinetic term ensures hyperbolic evolution with well-posed Cauchy problem"); paragraph now starts with the honest perturbative statement
-- Hyperbolicity: replaced "mathematically protected" claim with honest perturbative treatment; strong hyperbolicity of nonlinear realization not claimed
-- Screening: replaced "single operator unifies" with "common environmental state organizes domain-specific projections"
-
-v0.10 (Jakarta) — 2026-08-07 — Cosmological architecture supersession: eternal-universe / temporal-horizon closure
-
-- Cosmology: replaced legacy "CMB-preserving realization" (epoch-screening S(z)) with temporal-horizon chemical equilibrium and proper-time reaction flow
-- Abstract: updated cosmological claim to reflect eternal-universe closure without phenomenological thermal screening
-- Section 7: environmental state vector updated (thermal epoch → asymptotic horizon proximity; C0/HC/TH projection updated)
-- Section 8: Background, Recombination, and EFT subsections rewritten for eternal-universe architecture
-- Cross-paper consistency: aligned with TEP-TH v0.3 (Paper 27), TEP-BBN (Paper 29), TEP-HC (Paper 18), TEP-C0 (Paper 26)
-
-v0.9 (Jakarta) — 2026-06-06 — Field equations, Screening Dictionary, PPN clarity, cosmology update, cross-paper consistency, and research program expansion
-
-- Field equations: minimal covariant EFT action with conformal-disformal source and matter-frame conservation law
-- PPN and screening: clarified that screening suppresses effective exterior charge, not bare coupling; conformal coupling renamed β_A throughout
-- Cosmology: CMB-preserving realization with late-universe observables via environmental line-of-sight transport
-- Synchronization holonomy: added topological caveat and removed obsolete cross-references
-- Research program expansion: added Papers 14–26 drafts;
-
-v0.8 (Jakarta) — 2025
-
-- Canonical definitions: Temporal Topology and Temporal Shear
-- Screening: continuous suppression via observable shear sector; removed binary-threshold language
-- Synchronization holonomy: clarified raw vs GR-subtracted distinction
-- Axiom A4: removed chameleon-like potential references
-- Glossary: compact notation Θ ≡ ln A and C_Θ for covariance
-- Editorial refinements throughout
+- Added scalar field definition paragraph: φ is present at every event; vacuum refers to T(m)=0 limit, not absence of φ
+- Added environmental screening clarification: S_Σ suppresses conformal gradient (Temporal Shear), not disformal sector B(φ)
+- Added radial ODE closure calculation testing three candidate potentials (V=0, quartic, quadratic/Yukawa) against Cassini bound
+- Added recovery operator with six defining constraints (F1–F6) fixing the local Temporal Shear recovery profile
+- Added nested hierarchy paragraph: local and cosmological screening responses are continuous, not two independent regimes
+- Softened V(φ) language 
+- Updated Solar-System safety wording
+- Added cross-paper notation table: L_c, L_macro, R_T, λ_TEP identified as projections of λ_T
+- Updated Γ_X description from "not yet computed" to "known function of channel geometry"
+- Reclassified four transfer-map channels from "Conditional" to "Predicted"

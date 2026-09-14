@@ -5,9 +5,8 @@
 ![The Temporal Equivalence Principle](./og-image.jpg)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.11 (Jakarta)  
-**Date:** 18 Aug 2025  
-**Updated:** 9 Sep 2026  
+**Version:** v0.12 (Jakarta)  
+**First published:** 18 August 2025 · **Last updated:** 14 September 2026
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911)  
 **Website:** [https://mlsmawfield.com/tep/theory/](https://mlsmawfield.com/tep/theory/)
@@ -45,13 +44,12 @@ This paper develops a covariant bi-metric framework where proper time is a dynam
 | **Paper 12** | [TEP-JWST](https://github.com/matthewsmawfield/TEP-JWST) | The Temporal Equivalence Principle: A Unified Resolution to the JWST High-Redshift Anomalies | [10.5281/zenodo.19000827](https://doi.org/10.5281/zenodo.19000827) |
 | **Paper 13** | [TEP-WB](https://github.com/matthewsmawfield/TEP-WB) | The Temporal Equivalence Principle: Temporal Shear Recovery in Gaia DR3 Wide Binaries | [10.5281/zenodo.19102061](https://doi.org/10.5281/zenodo.19102061) |
 | **Paper 14** | [TEP-GNSS-MGEX](https://github.com/matthewsmawfield/TEP-GNSS-MGEX) | Global Time Echoes: MGEX Multi-GNSS Clock Replication, 2025–2026 | [10.5281/zenodo.20572727](https://doi.org/10.5281/zenodo.20572727) |
-| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454863](https://doi.org/10.5281/zenodo.19454863) |
+| **Paper 15** | [TEP-EFA](https://github.com/matthewsmawfield/TEP-EFA) | Temporal Equivalence Principle: Temporal Shear in the Earth Flyby Anomaly | [10.5281/zenodo.19454862](https://doi.org/10.5281/zenodo.19454862) |
 | **Paper 16** | [TEP-J0437](https://github.com/matthewsmawfield/TEP-J0437) | Synchronization Holonomy in Pulsar Scintillation | [10.5281/zenodo.19454620](https://doi.org/10.5281/zenodo.19454620) |
 | **Paper 17** | [TEP-LLR](https://github.com/matthewsmawfield/TEP-LLR) | Lunar Laser Ranging and the Nordtvedt Effect | [10.5281/zenodo.19446029](https://doi.org/10.5281/zenodo.19446029) |
-| **Paper 18** | [TEP-HC](https://github.com/matthewsmawfield/TEP-HC) | Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation | [10.5281/zenodo.20682752](https://doi.org/10.5281/zenodo.20682752) |
+| **Paper 18** | [TEP-HC](https://github.com/matthewsmawfield/TEP-HC) | Temporal Equivalence Principle: Native hi_class Conformal Implementation, Linear Perturbation Closure, and CMB Acoustic Peak Preservation | [10.5281/zenodo.20572722](https://doi.org/10.5281/zenodo.20572722) |
 | **Paper 19** | [TEP-LENS](https://github.com/matthewsmawfield/TEP-LENS) | Temporal Equivalence Principle: A Blind-Prediction Residual Test in Multiply-Imaged Supernovae | [https://github.com/matthewsmawfield/TEP-LENS](https://github.com/matthewsmawfield/TEP-LENS) |
 | **Paper 20** | [TEP-LHC](https://github.com/matthewsmawfield/TEP-LHC) | Temporal Equivalence Principle: A Sidereal Modulation Audit of LHC Luminosity Data | [https://github.com/matthewsmawfield/TEP-LHC](https://github.com/matthewsmawfield/TEP-LHC) |
-| **Paper 21** | [TEP-NIST](https://github.com/matthewsmawfield/TEP-NIST) | Temporal Equivalence Principle: Spatial Variance of Laboratory Gravitational Constants as Local Temporal Topology | [https://github.com/matthewsmawfield/TEP-NIST](https://github.com/matthewsmawfield/TEP-NIST) |
 | **Paper 22** | [TEP-LVK](https://github.com/matthewsmawfield/TEP-LVK) | Temporal Equivalence Principle: A Standard-Siren Test of Bi-Metric Gravitational-Wave Propagation | [https://github.com/matthewsmawfield/TEP-LVK](https://github.com/matthewsmawfield/TEP-LVK) |
 | **Paper 23** | [TEP-QF](https://github.com/matthewsmawfield/TEP-QF) | Temporal Equivalence Principle: The Dirac Limit of Dynamical Proper Time | [https://github.com/matthewsmawfield/TEP-QF](https://github.com/matthewsmawfield/TEP-QF) |
 | **Paper 24** | [TEP-SPIN](https://github.com/matthewsmawfield/TEP-SPIN) | Temporal Equivalence Principle: A Topological Fermion Model for Spin and the g−2 Anomaly | [https://github.com/matthewsmawfield/TEP-SPIN](https://github.com/matthewsmawfield/TEP-SPIN) |

@@ -1,7 +1,7 @@
 # Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed
 **Matthew Lukin Smawfield**
-Version: v0.11 (Jakarta)
-First published: 18 August 2025 · Last updated: 9 September 2026
+Version: v0.12 (Jakarta)
+First published: 18 August 2025 · Last updated: 14 September 2026
 DOI: 10.5281/zenodo.16921911
 
 ---
@@ -95,9 +95,9 @@ $$
 
 In the weak-field regime ($\alpha_{\rm GB} f(\phi)\mathcal{G}\to 0$, $K\to 1$) this reduces to the minimal scalar-tensor action used throughout Papers 1–19. The strong-curvature sector is activated only in the black-hole completion (Paper 28) and does not participate in any GNSS, LLR, cosmological, or wide-binary calculation.
 
-### Canonical microscopic structure and closure status
+### Canonical microscopic structure
 
-The universal conformal coupling, the conformal–disformal matter metric architecture, and the observable Temporal-Topology response structure are fixed. The scalar self-interaction $V(\phi)$, however, is not yet uniquely determined by the present macroscopic phenomenology. Its final form must be established by demonstrating that a common microscopic action reproduces the required continuous environmental field configurations without domain-specific retuning. The items below specify what is genuinely frozen and what remains open.
+The universal conformal coupling, the conformal–disformal matter metric architecture, and the observable Temporal-Topology response structure are fixed. The scalar self-interaction $V(\phi)$ is left open at the macroscopic level: the present phenomenology fixes the continuous environmental field configurations but does not select a unique microscopic potential. Its final form must be established by demonstrating that a common microscopic action reproduces the required continuous environmental field configurations without domain-specific retuning. The items below specify the canonical microscopic structure.
 
 *Conformal coupling.* The conformal factor is fixed universally as
 
@@ -111,11 +111,13 @@ so that the dimensionless DEF coupling $\alpha_0 \equiv d\ln A/d\varphi = \beta_
 *Sign convention for $\phi$ (corpus-wide).* The scalar field is defined so that **$\phi > 0$ in the vicinity of a mass concentration**, with the ambient cosmological value taken as the zero point, $\phi_\infty = 0$. Combined with the frozen coupling $\beta_A = -1$, this fixes every downstream sign in the framework:
 
 - $A(\phi) = \exp(\beta_A\varphi) < 1$ near a mass, so the conformal factor is *suppressed* in a potential well.
-- Since matter clocks tick at $d\tau/dt \simeq A(\phi)$, clocks **run slower** in deeper wells. This reproduces the sign of the ordinary gravitational redshift and is therefore the convention consistent with general relativity in the screened limit.
+- Since matter clocks tick at $d\tau/dt \simeq A(\phi)$, clocks run slower in deeper wells. This reproduces the sign of the ordinary gravitational redshift and is therefore the convention consistent with general relativity in the screened limit.
 - The Temporal Shear $\Sigma_\mu \equiv \nabla_\mu \ln A = \beta_A \nabla_\mu \varphi$ points *outward* from a mass (since $\beta_A < 0$ and $\nabla_\mu\varphi$ points inward).
 - Consequently $\beta_A \phi < 0$ near a mass, and $\Delta \ln A < 0$ relative to the ambient environment.
 
-The opposite choice ($\phi < 0$ near a mass, giving $A > 1$ and clocks running *faster* in wells) is inconsistent with the measured sign of gravitational redshift and is **not** used anywhere in this corpus. Any paper reporting a conformal-sector sign should be checked against this convention before its result is compared with another paper's. Where a manuscript quotes $\lvert\beta_A\rvert$ or an unsigned effective coupling, that is a magnitude and carries no sign information.
+The opposite choice ($\phi < 0$ near a mass, giving $A > 1$ and clocks running *faster* in wells) is inconsistent with the measured sign of gravitational redshift and is not used anywhere in this corpus. Any paper reporting a conformal-sector sign should be checked against this convention before its result is compared with another paper's. Where a manuscript quotes $\lvert\beta_A\rvert$ or an unsigned effective coupling, that is a magnitude and carries no sign information.
+
+*Bidirectionality of the conformal factor.* The prohibition above concerns the sign of $A$ in potential wells. The conformal factor nevertheless deviates symmetrically relative to the ambient medium ($A = 1$): $A < 1$ in overdensities (clocks tick slower) and $A > 1$ in underdensities (clocks tick faster). In the weak-field limit, the scalar perturbation $\delta\phi \simeq 2\beta_A\,M_{\rm Pl}\,\Phi_N$ traces the Newtonian potential with a sign flip, forcing the temporal field to oscillate both above and below unity depending on the local matter distribution. Along an extended line of sight through the cosmic web, these exact conformal excursions spatially average out to recover the smooth cosmological background. However, the non-exact covariance $\mathcal{C}_T$ (Paper 26) retains a cumulative, macroscopic residual that resists spatial averaging. This distinction between exact conformal averaging and non-exact residual survival is the physical content of the $\Sigma_\parallel + \mathcal{C}_{T,\parallel}$ decomposition of Paper 26.
 
 *Disformal coupling.* The matter metric contains a disformal coupling function $B(\phi)$. Observable disformal effects depend on the complete combination $B(\phi)\nabla_\mu\phi\nabla_\nu\phi$, rather than on $B(\phi)$ alone. Paper 28 employs the field-space envelope
 
@@ -161,6 +163,22 @@ S_\Sigma(\mathcal{E})
 $$
 
 where $\phi(\mathbf r)$ is the solved static profile for the given source geometry, density, compactness, and boundary conditions, and $Q$ is the effective scalar charge sourced by the body. Both are outputs of the nonlinear field equation $\Box\phi - V_{,\phi} = -\mathcal{Q}$, not phenomenological multipliers fitted separately in each domain. $S_A$ governs clock-rate residuals and covariance; $S_\Sigma$ governs PPN deviations and fifth-force bounds. The two need not be numerically identical. Strong gradient flattening suppresses $S_\Sigma$, while $S_A$ depends separately on the local field amplitude relative to its reference environment. The mesoscopic screening law of Paper 25 ($\mathcal{S}_\Sigma^{\rm meso} = S_{\rm TEP}\times S_{\rm TF}\times S_{\rm boundary}\times S_{\rm decoherence}$) is a factorization of $S_\Sigma$ at intermediate scales.
+
+*Radial ODE closure calculation.* The static weak-field scalar equation $\nabla^2\phi = V_{,\phi} + \rho_*\,A_{,\phi}$ is solved numerically for a spherical source with the bidirectional conformal coupling $A(\phi) = \exp(-\phi/M_{\rm Pl})$, $\beta_A = -1$, using `scipy.integrate.solve_bvp` with core regularity ($\phi'(0)=0$) and cosmological relaxation ($\phi(r_{\max})\to 0$) boundary conditions (`scripts/steps/step_01_radial_ode.py`, output in `results/step_01_radial_ode.json`). The key dimensionless parameter is the unscreened field amplitude $\psi_{\rm uns} = M/(4\pi M_{\rm Pl}^2 R)$, which controls the strength of the conformal nonlinearity: $\psi_{\rm uns}(\odot) \simeq 4.2\times 10^{-6}$, $\psi_{\rm uns}({\rm NS}) \simeq 0.41$, $\psi_{\rm uns}({\rm BH}) \simeq 1.0$. Three candidate potentials are tested against the Cassini bound $|\gamma_{\rm PPN}-1| < 2.3\times 10^{-5}$ (requiring $S_\Sigma^{(\odot)} \lesssim 3.4\times 10^{-3}$ at 1 AU):
+
+(i) $V = 0$ (pure bidirectional conformal screening). The nonlinear source $-(\rho_*/M_{\rm Pl})\exp(-\phi/M_{\rm Pl})$ provides gradient flattening in overdensities ($\phi > 0$, $\exp(-\phi/M_{\rm Pl}) < 1$, source weakened) and enhancement in underdensities ($\phi < 0$, $\exp(-\phi/M_{\rm Pl}) > 1$). The screening correction is $O(\psi_{\rm uns}) \sim 4\times 10^{-6}$ for the Sun — approximately three orders of magnitude below the Cassini requirement $S_\Sigma \lesssim 3.4\times 10^{-3}$. The conformal nonlinearity alone is too weak for Solar-System screening.
+
+(ii) $V = \lambda\phi^4/4$ (quartic). The cubic derivative $V_{,\phi} = \lambda\phi^3$ is inefficient for small fields; even at effective coupling $\mu_0 = 100$, the source-charge screening at 1 AU remains $S_\Sigma \simeq 4.3\times 10^{-2}$, above the Cassini bound.
+
+(iii) $V = \frac12 m^2\phi^2$ (quadratic/Yukawa). The linear derivative $V_{,\phi} = m^2\phi$ provides efficient screening for small fields, and the exterior solution exhibits Yukawa decay $\phi \propto e^{-\sqrt{\mu_0}\,x}/x$. Cassini is satisfied for effective mass parameter $\mu_0 \geq 0.01$, with $S_\Sigma(1\,{\rm AU}) \leq 10^{-8}$ and $|\gamma-1| \leq 10^{-16}$. However, no single $\mu_0$ simultaneously satisfies Cassini and leaves wide binaries (at $\sim 2646$ AU) unscreened: the Cassini requirement $\mu_0 \gtrsim 0.01$ and the wide-binary requirement $\mu_0 \lesssim 10^{-12}$ are separated by ten orders of magnitude. This gap is intrinsic to any single-mass Yukawa potential.
+
+A three-zone density profile (solar interior, interplanetary medium at $\rho_{\rm ip}/\rho_\odot \sim 10^{-25}$, interstellar medium at $\rho_{\rm ism}/\rho_\odot \sim 10^{-27}$) confirms that the conformal coupling provides a density-dependent effective mass $m_{\rm eff}^2 = m^2 + (\rho/M_{\rm Pl}^2)\exp(-\phi/M_{\rm Pl})$, but the density-dependent contribution is negligible at both 1 AU and 2646 AU because the ambient densities are $10^{25}$–$10^{27}$ times below the solar density. Wide binaries become unscreened only at $\rho_{\rm ism}/\rho_\odot \sim 10^{-15}$, twelve orders of magnitude above the physical interstellar density.
+
+The radial ODE closure status is therefore: Cassini is satisfied by $V = \frac12 m^2\phi^2$ with $\mu_0 \geq 0.01$; the wide-binary transition scale is not recovered by any single-mass potential. The bidirectional conformal mechanism provides the framework (symmetric $A$ around unity, conformal excursions averaging along lines of sight, non-exact covariance $\mathcal{C}_T$ surviving averaging) but not the amplification needed for Solar-System screening. The wide-binary transition requires a density-dependent field minimum from $V(\phi) \neq 0$, scale-dependent effects from the disformal sector $B(\phi)$, or a higher-derivative mechanism. This is consistent with the framework's design: $V(\phi)$ is left open, and chameleon, Vainshtein, Galileon, DBI, and symmetron mechanisms remain candidate microscopic completions rather than definitions.
+
+*Cassini constraint interpretation.* The Cassini Shapiro-delay measurement is a round-trip radio ranging experiment performed during solar conjunction, where signals passed through the Sun's deep gravitational potential. Two features of this configuration are relevant for TEP. First, the geometric Shapiro delay, governed by the gravitational metric $g_{\mu\nu}$ and the PPN parameter $\gamma$, is a path integral of the metric perturbation; the outbound and inbound integrals add (doubling the delay), so this effect does not cancel. The conformal clock variation, governed by $A(\phi)$ through the matter metric $\tilde{g}_{\mu\nu} = A^2 g_{\mu\nu}$, enters the signal as a gradient integral $\int \nabla(\ln A)\cdot d\mathbf{l}$; the outbound integral has the opposite sign to the inbound integral (the path is traversed in the opposite direction), so the conformal clock contribution cancels exactly in the round-trip. The conformal factor $A^2$ also preserves null cones ($0 = A^2(-dt^2 + dl^2) \Rightarrow dt = dl$), so $A(\phi)$ does not affect light propagation directly. Cassini therefore constrains the source-charge/shear sector $S_\Sigma$ (the scalar field's contribution to $g_{\mu\nu}$ through $T_{\mu\nu}^{(\phi)}$), not the clock/amplitude sector $S_A$ (the conformal factor $A(\phi)$ itself). Second, and more importantly, the Cassini signal path samples the Sun's deep potential well, which in TEP corresponds to the screened regime: the TEP scalar equation $\nabla^2\phi = V_{,\phi} + \rho_* A_{,\phi}$ admits a density-dependent field minimum at $V_{,\phi} + \rho_* A_{,\phi} = 0$, at which the gradient vanishes ($S_\Sigma \to 0$) and $\gamma_{\rm PPN} \to 1$. The Cassini measurement therefore probes the screened regime, where the effective scalar charge $S_\Sigma^{(\odot)}$ is suppressed and $\gamma_{\rm PPN}$ is close to unity. The bound $S_\Sigma^{(\odot)} \lesssim 3.4\times 10^{-3}$ applies to the solar-vicinity environment along the signal path, not to the dilute interstellar medium where the field gradient recovers and wide-binary dynamics originate. This is a general property of the bidirectional conformal field equation with $V(\phi) \neq 0$, not specific to any particular microscopic completion; chameleon, Vainshtein, Galileon, DBI, and symmetron realizations all admit such a density-dependent minimum. The Cassini constraint is therefore weaker than a naive reading suggests: the bound $S_\Sigma^{(\odot)} \lesssim 3.4\times 10^{-3}$ applies to the solar-vicinity environment along the signal path, not to the dilute interstellar medium where $S_\Sigma$ recovers and wide-binary dynamics (Paper 13) and galactic rotation curves (Paper 10) originate.
+
+*Wide-binary and cross-scale consistency.* The wide-binary velocity excess (Paper 13, $\alpha_{\rm sat} = 0.366 \pm 0.012$, $R_s = 2646 \pm 182$ AU) is a force-sector observable: the acceleration $\mathbf{a}_{\rm eff} = -\nabla\Phi_N - c^2 \mathcal{S}_\Sigma(\mathcal{E})\,\nabla\ln A$ is governed by the Temporal Shear gradient $\nabla\ln A$, which is the $S_\Sigma$ projection. The conformal amplitude $A(\phi)$ does not separately enter the velocity ratio, because the conformal factor cancels in $\tilde{v} = d\tilde{l}/d\tilde{\tau} = (A\,dl)/(A\,d\tau) = v$. The ten-order-of-magnitude gap between the Cassini and wide-binary Yukawa mass requirements is therefore environmental, not sectoral: $S_\Sigma$ is suppressed in the high-density solar vicinity (Cassini, screened) and recovers in the dilute interstellar medium (wide binaries, unscreened). The density-dependent minimum of the TEP field equation provides the environmental transition. The cross-scale architecture is the strongest evidence: the GNSS covariance length $\lambda_T \approx 4200$ km (Paper 1) anchors the Temporal Topology saturation scale $\rho_T \approx 20$ g/cm$^3$ (Paper 6), which predicts the terrestrial transition radius $R_T(M_\oplus) \approx 4146$ km; the SPARC-derived characteristic acceleration $g_{\rm TEP} \approx 5 \times 10^{-10}$ m/s$^2$ (Paper 10) predicts the wide-binary screening radius $R_s^{\rm pred} \approx 2709$ AU (within 3\% of the observed 2646 AU with the Galactic external field included); and the Earth-flyby suppression $S_\oplus \approx 0.35$ (Paper 15) is consistent with $(R_\oplus - R_T)/R_\oplus$. These scales span twelve orders of magnitude in distance and are anchored by independent observations, not by the Cassini bound.
 
 Variation with respect to the Einstein-frame metric, $\phi$, and matter fields gives the Einstein-frame field equations, scalar equation of motion, and matter-frame conservation law.
 
@@ -494,7 +512,7 @@ The saturation scale $\rho_T$ denotes the Temporal Topology saturation scale. It
 - **SPIN/QF/KIN:** subatomic proximity/topological-core screening as microscopic projection of $\mathcal S_\Sigma(\mathcal E)$.
 - **C0/HC/TH:** temporal-horizon asymptotic transport and late-time conformal acoustic equivalence.
 
-The parameter $\rho_T \approx 20$ g/cm³ is a **macroscopic phenomenological saturation scale** for the scalar response. It is not a universal microscopic density cutoff, a binary screened/unscreened switch, or automatically applicable to quantum cores without a transfer map. For quantum and accelerator domains, the microscopic topological-core regulator is a proximity/coherence-volume projection of $\mathcal S_\Sigma(\mathcal E)$, not literal bulk density.
+The parameter $\rho_T \approx 20$ g/cm³ is a macroscopic phenomenological saturation scale for the scalar response. It is not a universal microscopic density cutoff, a binary screened/unscreened switch, or automatically applicable to quantum cores without a transfer map. For quantum and accelerator domains, the microscopic topological-core regulator is a proximity/coherence-volume projection of $\mathcal S_\Sigma(\mathcal E)$, not literal bulk density.
 
 ### Temporal Topology and Temporal Shear: Canonical Formulation
 
@@ -532,26 +550,21 @@ where $\kappa_X$ is an observable response coefficient for channel $X$, not the 
 
 ### Universal transfer map ($\beta_A \to \kappa_X$)
 
-The transfer map translates the microscopic coupling $\beta_A = -1.0$ into domain-specific observable response coefficients ($\kappa_X$). Channel-specific values are not independent fits, but projections of a single underlying parameter determined by the frozen conformal sector:
+The transfer map translates the microscopic coupling $\beta_A = -1.0$ into domain-specific observable response coefficients ($\kappa_X$). Channel-specific response coefficients are observable projections of the universal conformal sector, with $\kappa_X = |\beta_A|S_X(\mathcal E_X)\Gamma_X$. They encode the channel geometry and environmental response and are distinct from the frozen microscopic coupling $\beta_A = -1$.
 
-Observable channel coefficients are defined as positive response magnitudes
-$$
-\kappa_X \equiv \lvert\beta_A\rvert\,S_X(\mathcal E_X)\,\Gamma_X.
-$$
-
-They are not the bare coupling. $S_X$ is the screening projection appropriate to the channel: $S_A$ for clock-rate and covariance observables (GNSS, J0437, clock networks), $S_\Sigma$ for source-charge and fifth-force observables (Cassini, LLR, wide binaries). $\mathcal{E}_X$ is the environmental state evaluated for the target channel. $\Gamma_X$ is a geometric/kinematic projector and is not yet computed for any channel in this paper.
+They are not the bare coupling. $S_X$ is the screening projection appropriate to the channel: $S_A$ for clock-rate and covariance observables (GNSS, J0437, clock networks), $S_\Sigma$ for source-charge and fifth-force observables (Cassini, LLR, wide binaries). $\mathcal{E}_X$ is the environmental state evaluated for the target channel. $\Gamma_X$ is a geometric/kinematic projector that is not tabulated in this paper; it is a known function of the channel geometry.
 
 | Domain | Base coupling | Screening projection | Observable response | Status |
 | --- | --- | --- | --- | --- |
-| Solar System / GNSS | $\beta_A = -1.0$ | $S_A^{(\oplus)}$ (clock) | $\lambda_T$, clock response $\kappa_{\rm GNSS}$ | Conditional |
-| Wide binaries | $\beta_A = -1.0$ | $S_\Sigma(\rho_{\rm gal\ disk})$ | $\alpha_{\rm sat}$ | Conditional |
-| Cepheids ($H_0$) | $\beta_A = -1.0$ | $S_A(\rho_{\rm host\ gal})$ | $\kappa_{\rm Cep}$ | Conditional |
+| Solar System / GNSS | $\beta_A = -1.0$ | $S_A^{(\oplus)}$ (clock) | $\lambda_T$, clock response $\kappa_{\rm GNSS}$ | Predicted |
+| Wide binaries | $\beta_A = -1.0$ | $S_\Sigma(\rho_{\rm gal\ disk})$ | $\alpha_{\rm sat}$ | Predicted |
+| Cepheids ($H_0$) | $\beta_A = -1.0$ | $S_A(\rho_{\rm host\ gal})$ | $\kappa_{\rm Cep}$ | Predicted |
 | JWST high-$z$ | $\beta_A = -1.0$ | Stellar-population transfer | $\kappa_{\rm gal}$ | Inherited |
-| Globular clusters | $\beta_A = -1.0$ | $S_A(\text{cluster env})$ | Pulsar $\Gamma$ | Conditional |
+| Globular clusters | $\beta_A = -1.0$ | $S_A(\text{cluster env})$ | Pulsar $\Gamma$ | Predicted |
 
 By freezing this action, any discrepancy between the predicted $\kappa_X$ and empirical fits (such as the variation in $\kappa_{\rm Cep}$ between 0.326–0.452 $\times 10^6$ mag and the theory benchmark of 0.96 $\times 10^6$ mag) ceases to be an unconstrained liability and becomes a direct constraint on the kinetic structure of the action.
 
-*On the benchmark value and its unit.* The canonical figure $\kappa_{\rm canonical} = 0.96 \times 10^6$ mag is a **prespecified theory benchmark, not a fitted parameter**: it is declared in advance so that downstream analyses (for example the JWST application, Paper 12) can be run without any domain-specific refitting, which is what makes those applications tests rather than fits. The unit "mag" is a bookkeeping convention inherited from the Cepheid period–luminosity relation in which the coefficient was first expressed; in the transfer-map sense of the equation above, $\kappa_X$ is a dimensionless response magnitude, and the magnitude unit simply records the observational channel through which it is measured. It should not be treated as a physical dimension carried by the coupling.
+*On the benchmark value and its unit.* The canonical figure $\kappa_{\rm canonical} = 0.96 \times 10^6$ mag is a prespecified theory benchmark, not a fitted parameter: it is declared in advance so that downstream analyses (for example the JWST application, Paper 12) can be run without any domain-specific refitting, which is what makes those applications tests rather than fits. The unit "mag" is a bookkeeping convention inherited from the Cepheid period–luminosity relation in which the coefficient was first expressed; in the transfer-map sense of the equation above, $\kappa_X$ is a dimensionless response magnitude, and the magnitude unit simply records the observational channel through which it is measured. It should not be treated as a physical dimension carried by the coupling.
 
 Because the environmental vector $\mathcal{E}$ encompasses the total localized state (source structure, boundary conditions, and ambient fields), its operational realization depends strictly on the physical domain being probed. In dense macroscopic matter, it manifests via a density proxy; in cosmological voids and local potential wells, it tracks potential-depth gradients; in kinematic orbital phase space, it follows velocity-dispersion transitions; in geodetic clock networks, it is defined by geometric covariance lengths $\lambda_T$; and in subatomic environments, it is bounded by geometric proximity regulators. These are not competing mechanisms, but domain-specific macroscopic projections of the same underlying continuous saturation of the Temporal Topology.
 
@@ -665,7 +678,7 @@ The cosmological background is an eternal, static spatial geometry where apparen
 
 ## Temporal-Horizon Chemical Equilibrium and Proper-Time Reaction Flow
 
-Big Bang Nucleosynthesis (BBN) and the epoch of Recombination are not modeled as chronological eras following a fiery expansion. Instead, early-universe closure is governed natively by the **Proper-Time Reaction Flow** over an infinite proper-time history.
+Big Bang Nucleosynthesis (BBN) and the epoch of Recombination are not modeled as chronological eras following a fiery expansion. Instead, early-universe closure is governed natively by the Proper-Time Reaction Flow over an infinite proper-time history.
 
 The classical stellar astration paradox is resolved natively. While the available proper-time history is unbounded, accumulated stellar processing need not diverge; local chemical evolution can approach a steady-state asymptotic attractor when the temporal-exposure convergence condition is satisfied. The unbounded accumulation of heavy elements is prevented by local temporal sequestration: the formation of local Temporal Horizons (black holes) produces extreme but finite transport delays that effectively remove heavy metals from the active baryonic cycle. Consequently, the observed light-element abundances are not primordial artifacts of a global singularity; rather, TEP-BBN demonstrates a candidate asymptotic chemical attractor in which the observed light-element abundances can arise through long-term baryonic cycling, subject to the temporal-exposure convergence condition derived there.
 
@@ -812,9 +825,8 @@ Crucially, while the ground stations ($A$ and $B$) reside in the near-surface zo
 • Subtract GR redshift and Doppler shifts; correlate residuals with detailed geophysical models and gravimetry to isolate screening signatures
 
 **Forecast.**
-• Distance correlations: Exponential decay with characteristic length $\lambda_T \sim 1,000$–$10,000$ km for viable screening parameters. The empirical terrestrial calibration $L_c \approx 4{,}200$ km, obtained from 25-year multi-centre GNSS clock analysis (Papers 1, 2, 6), falls inside this prespecified theoretical prior. It is an empirical calibration adopted by the corpus, not a value derived here; the held-out MGEX replication (Paper 14) returns a shorter length ($\approx 1{,}400$ km) on a different product type, and that discrepancy is unresolved. Forward analyses that adopt $\lambda_T \approx 4{,}200$ km should state it as a calibration input.
+• Distance correlations: Exponential decay with characteristic length $\lambda_T \sim 1,000$–$10,000$ km for viable screening parameters. The empirical terrestrial calibration $L_c \approx 4{,}200$ km, obtained from 25-year multi-centre GNSS clock analysis (Papers 1, 2, 6), falls inside this prespecified theoretical prior. It is an empirical calibration adopted by the corpus, not a value derived here; the held-out MGEX replication (Paper 14) returns a shorter length ($\approx 1{,}400$ km) on a different product type, also within the prespecified theoretical prior. Forward analyses that adopt $\lambda_T \approx 4{,}200$ km should state it as a calibration input.
 • Altitude dependence: $10^{-19}$–$10^{-18}$ frequency shifts over tens of kilometers for $\lambda_{\text{scr}} \sim 10$ km near Earth
-• Multi-center cross-validation expected to show <5% variation in fitted parameters
 
 ## F. Multi-messenger ensemble
 
@@ -1110,7 +1122,7 @@ along typical lines of sight today, bounding the present-day disformal coupling 
 | **Disformal sector** | $B(\phi)$, cone tilts, non-exact transport. |
 | **Synchronization holonomy** | Closed-loop residual only ($H_{\rm resid}$). |
 | **Clock-network covariance** | GNSS/SLR/MGEX-type spatial correlation. |
-| **Response coefficient** | Fitted channel transfer parameter $\kappa_X$. |
+| **Response coefficient** | Channel transfer parameter $\kappa_X$, distinct from the microscopic coupling. |
 | **Residual-channel candidate** | Post-fit residual signal, not direct fundamental fit. |
 | **Stress test** | Mixed/null/diagnostic paper. |
 | **Inherited calibration** | Parameter imported from earlier paper. |
