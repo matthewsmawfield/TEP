@@ -1,12 +1,8 @@
-v0.12 (Jakarta) — 2026-09-14 — Radial ODE closure, recovery operator, nested screening hierarchy
+v0.13 (Jakarta) — 2026-09-15 — Density-dependent-mass screening, quantitative nested hierarchy
 
-- Added scalar field definition paragraph: φ is present at every event; vacuum refers to T(m)=0 limit, not absence of φ
-- Added environmental screening clarification: S_Σ suppresses conformal gradient (Temporal Shear), not disformal sector B(φ)
-- Added radial ODE closure calculation testing three candidate potentials (V=0, quartic, quadratic/Yukawa) against Cassini bound
-- Added recovery operator with six defining constraints (F1–F6) fixing the local Temporal Shear recovery profile
-- Added nested hierarchy paragraph: local and cosmological screening responses are continuous, not two independent regimes
-- Softened V(φ) language 
-- Updated Solar-System safety wording
-- Added cross-paper notation table: L_c, L_macro, R_T, λ_TEP identified as projections of λ_T
-- Updated Γ_X description from "not yet computed" to "known function of channel geometry"
-- Reclassified four transfer-map channels from "Conditional" to "Predicted"
+- Extended quartic-potential coupling scan: V = λφ⁴/4 with density-dependent mass now satisfies Cassini for μ₀ ≳ 3×10⁴, resolving the single-mass Cassini–wide-binary gap
+- Quantitative nested-hierarchy decomposition: galactic/solar/terrestrial field fractions (≈93%/6.5%/0.5% at Earth's surface); Cassini bound shown to be intrinsically local
+- Derived wide-binary screening radius: R_s ≈ 2709 AU predicted vs 2646 ± 182 AU observed
+- Corrected order-of-magnitude statements throughout screening section
+- Regenerated step_01_radial_ode results (extended scan, nested hierarchy outputs)
+- Pipeline scripts now tracked under scripts/; removed stale manuscripts/pdfs

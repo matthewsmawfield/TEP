@@ -4,7 +4,7 @@
 # When updated in the main TEP repo, run scripts/bump_papers.py to propagate.
 
 schema_version: 1
-last_updated: "2026-09-14"
+last_updated: "2026-09-15"
 
 parameter_classes:
   fundamental: "Axiomatic or theoretically fixed parameter; changes would alter the framework itself."

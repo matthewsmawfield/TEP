@@ -1,5 +1,7 @@
 {
   "metadata": {
+    "version": "v0.13 (Jakarta)",
+    "date": "2026-09-15",
     "case": "Case 1: F=A^2, K=1, beta_A=-1",
     "mechanism": "Bidirectional conformal screening (gradient flattening)",
     "solver": "scipy.integrate.solve_bvp",
@@ -1857,7 +1859,7 @@
         "s_sigma_surface": 0.9821787516273499,
         "s_sigma_cassini": 1.0002438845739192,
         "gamma_cassini": -1.0002438548340775,
-        "cassini_pass": "False",
+        "cassini_pass": false,
         "profile": {
           "x": [
             0.0001,
@@ -9150,55 +9152,143 @@
         "s_sigma_surface": 0.9821787516273499,
         "s_sigma_cassini": 1.0002438845739192,
         "gamma_cassini": -1.0002438548340775,
-        "cassini_pass": "False"
+        "cassini_pass": false
       },
       "mu0_0.001": {
         "mu0": 0.001,
-        "psi_center": 1.498109812315219,
-        "s_sigma_surface": 0.9815843150971955,
-        "s_sigma_cassini": 0.9943437891231056,
-        "gamma_cassini": -0.9943277930196988,
-        "cassini_pass": "False"
+        "psi_center": 1.498109840873298,
+        "s_sigma_surface": 0.9815843187187644,
+        "s_sigma_cassini": 0.9943441157909008,
+        "gamma_cassini": -0.9943281215350829,
+        "cassini_pass": false
       },
       "mu0_0.01": {
         "mu0": 0.01,
-        "psi_center": 1.4810529237915395,
-        "s_sigma_surface": 0.9764482676691959,
-        "s_sigma_cassini": 0.9467678593444009,
-        "gamma_cassini": -0.9453531460519454,
-        "cassini_pass": "False"
+        "psi_center": 1.4810529969880657,
+        "s_sigma_surface": 0.9764482727006571,
+        "s_sigma_cassini": 0.9467692793934864,
+        "gamma_cassini": -0.9453546414633743,
+        "cassini_pass": false
       },
       "mu0_0.1": {
         "mu0": 0.1,
-        "psi_center": 1.3640315441805966,
-        "s_sigma_surface": 0.9379944178719798,
-        "s_sigma_cassini": 0.7042529985469413,
-        "gamma_cassini": -0.6630768372066458,
-        "cassini_pass": "False"
+        "psi_center": 1.364031588068792,
+        "s_sigma_surface": 0.9379944166655135,
+        "s_sigma_cassini": 0.7042544792696945,
+        "gamma_cassini": -0.6630787010748562,
+        "cassini_pass": false
       },
       "mu0_1.0": {
         "mu0": 1.0,
-        "psi_center": 1.0193776416380576,
-        "s_sigma_surface": 0.8003126707919533,
-        "s_sigma_cassini": 0.3358210986022169,
-        "gamma_cassini": -0.20269277823248377,
-        "cassini_pass": "False"
+        "psi_center": 1.0193776446133138,
+        "s_sigma_surface": 0.8003126731380122,
+        "s_sigma_cassini": 0.3358216888885173,
+        "gamma_cassini": -0.20269341857973228,
+        "cassini_pass": false
+      },
+      "mu0_3.0": {
+        "mu0": 3.0,
+        "psi_center": 0.8121155597228655,
+        "s_sigma_surface": 0.7026745270383812,
+        "s_sigma_cassini": 0.21308315941393152,
+        "gamma_cassini": -0.08686481786401203,
+        "cassini_pass": false
       },
       "mu0_10.0": {
         "mu0": 10.0,
-        "psi_center": 0.60050144672843,
-        "s_sigma_surface": 0.5906194686632271,
-        "s_sigma_cassini": 0.12486056134625322,
-        "gamma_cassini": -0.03070167553234905,
-        "cassini_pass": "False"
+        "psi_center": 0.600501446744082,
+        "s_sigma_surface": 0.590619470462952,
+        "s_sigma_cassini": 0.12486074263262105,
+        "gamma_cassini": -0.030701763316022274,
+        "cassini_pass": false
+      },
+      "mu0_30.0": {
+        "mu0": 30.0,
+        "psi_center": 0.43964882828229,
+        "s_sigma_surface": 0.49436625126136796,
+        "s_sigma_cassini": 0.07520577850277503,
+        "gamma_cassini": -0.011248199446581078,
+        "cassini_pass": false
       },
       "mu0_100.0": {
         "mu0": 100.0,
-        "psi_center": 0.30396982439376935,
-        "s_sigma_surface": 0.4015094545580685,
-        "s_sigma_cassini": 0.0425957728306222,
-        "gamma_cassini": -0.003622227556892826,
-        "cassini_pass": "False"
+        "psi_center": 0.3039698245568725,
+        "s_sigma_surface": 0.40150945401152316,
+        "s_sigma_cassini": 0.04259595839346966,
+        "gamma_cassini": -0.0036222590593130988,
+        "cassini_pass": false
+      },
+      "mu0_300.0": {
+        "mu0": 300.0,
+        "psi_center": 0.21369093329289718,
+        "s_sigma_surface": 0.3296940159416671,
+        "s_sigma_cassini": 0.025160848415486364,
+        "gamma_cassini": -0.0012653355421624326,
+        "cassini_pass": false
+      },
+      "mu0_1000.0": {
+        "mu0": 1000.0,
+        "psi_center": 0.14390875337265205,
+        "s_sigma_surface": 0.2643590774442171,
+        "s_sigma_cassini": 0.014048159120830437,
+        "gamma_cassini": -0.0003946236700813435,
+        "cassini_pass": false
+      },
+      "mu0_3000.0": {
+        "mu0": 3000.0,
+        "psi_center": 0.0999490493475098,
+        "s_sigma_surface": 0.21542781237458922,
+        "s_sigma_cassini": 0.00822221555685316,
+        "gamma_cassini": -0.00013520051711892123,
+        "cassini_pass": false
+      },
+      "mu0_10000.0": {
+        "mu0": 10000.0,
+        "psi_center": 0.06693846498893867,
+        "s_sigma_surface": 0.17163800148732122,
+        "s_sigma_cassini": 0.004557043945443449,
+        "gamma_cassini": -4.153243655185199e-05,
+        "cassini_pass": false
+      },
+      "mu0_30000.0": {
+        "mu0": 30000.0,
+        "psi_center": 0.046415507959860866,
+        "s_sigma_surface": 0.13911684856421938,
+        "s_sigma_cassini": 0.002653758341250289,
+        "gamma_cassini": -1.4084767476474995e-05,
+        "cassini_pass": true
+      },
+      "mu0_100000.0": {
+        "mu0": 100000.0,
+        "psi_center": 0.031072310119148152,
+        "s_sigma_surface": 0.11013193321180353,
+        "s_sigma_cassini": 0.001464377460275994,
+        "gamma_cassini": -4.288793495434195e-06,
+        "cassini_pass": true
+      },
+      "mu0_300000.0": {
+        "mu0": 300000.0,
+        "psi_center": 0.021544345922588155,
+        "s_sigma_surface": 0.08865578201795078,
+        "s_sigma_cassini": 0.0008502807324869571,
+        "gamma_cassini": -1.4459536026854462e-06,
+        "cassini_pass": true
+      },
+      "mu0_1000000.0": {
+        "mu0": 1000000.0,
+        "psi_center": 0.014422495406227427,
+        "s_sigma_surface": 0.06955218577054748,
+        "s_sigma_cassini": 0.0004680286369638724,
+        "gamma_cassini": -4.381015140700312e-07,
+        "cassini_pass": true
+      },
+      "mu0_3000000.0": {
+        "mu0": 3000000.0,
+        "psi_center": 0.009999999877593225,
+        "s_sigma_surface": 0.055434673119975054,
+        "s_sigma_cassini": 0.00027120982025996326,
+        "gamma_cassini": -1.471095223902766e-07,
+        "cassini_pass": true
       }
     },
     "quadratic": {
@@ -9208,7 +9298,7 @@
         "s_sigma_surface": 0.9826358843852057,
         "s_sigma_cassini": 1.0002449341584445,
         "gamma_cassini": -1.0002449041620745,
-        "cassini_pass": "False",
+        "cassini_pass": false,
         "s_sigma_wb": 1.0002527201658014,
         "wb_unscreened": true
       },
@@ -9218,7 +9308,7 @@
         "s_sigma_surface": 0.982635488719352,
         "s_sigma_cassini": 0.9801961735784015,
         "gamma_cassini": -0.9800001170305508,
-        "cassini_pass": "False",
+        "cassini_pass": false,
         "s_sigma_wb": 4.0885268798255127e-50,
         "wb_unscreened": false
       },
@@ -9228,7 +9318,7 @@
         "s_sigma_surface": 0.9825962409466965,
         "s_sigma_cassini": 0.3671653662972688,
         "gamma_cassini": -0.23759106449976183,
-        "cassini_pass": "False",
+        "cassini_pass": false,
         "s_sigma_wb": 5.634677081717102e-50,
         "wb_unscreened": false
       },
@@ -9238,7 +9328,7 @@
         "s_sigma_surface": 0.9789516867493033,
         "s_sigma_cassini": 1.0620667945014624e-08,
         "gamma_cassini": -2.255971751965223e-16,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 4.9997774654463295e-48,
         "wb_unscreened": false
       },
@@ -9248,7 +9338,7 @@
         "s_sigma_surface": 0.9516450134045102,
         "s_sigma_cassini": 6.723421422543218e-27,
         "gamma_cassini": -9.040879125022613e-53,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.02523679370216e-47,
         "wb_unscreened": false
       },
@@ -9258,7 +9348,7 @@
         "s_sigma_surface": 0.7946240162225323,
         "s_sigma_cassini": 8.999966994615855e-45,
         "gamma_cassini": -1.6199881180834947e-88,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.485207001301886e-46,
         "wb_unscreened": false
       },
@@ -9268,7 +9358,7 @@
         "s_sigma_surface": 0.41118082148054774,
         "s_sigma_cassini": 4.4295622432282614e-49,
         "gamma_cassini": -3.9242043333266774e-97,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 1.208370599137738e-44,
         "wb_unscreened": false
       },
@@ -9278,7 +9368,7 @@
         "s_sigma_surface": 0.13223601115704864,
         "s_sigma_cassini": 1.7072453396101573e-47,
         "gamma_cassini": -5.829373299241202e-94,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 1.4747882469985996e-41,
         "wb_unscreened": false
       },
@@ -9288,7 +9378,7 @@
         "s_sigma_surface": 0.0336796172074428,
         "s_sigma_cassini": 1.7188529330573206e-38,
         "gamma_cassini": -5.908910810959507e-76,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 2.6866523823769936e-32,
         "wb_unscreened": false
       },
@@ -9298,7 +9388,7 @@
         "s_sigma_surface": 0.006093617397211181,
         "s_sigma_cassini": 7.912183285910554e-26,
         "gamma_cassini": -1.2520528869968465e-50,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 1.3226182092715405e-19,
         "wb_unscreened": false
       },
@@ -9308,7 +9398,7 @@
         "s_sigma_surface": 7.329068049049907e-05,
         "s_sigma_cassini": 1.3722377925042634e-29,
         "gamma_cassini": -3.7660731183539474e-58,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 1.0420589089900969e-22,
         "wb_unscreened": false
       }
@@ -9319,7 +9409,7 @@
         "psi_center": 1.4037455948328412,
         "s_sigma_cassini": 1.0488299338828803e-08,
         "gamma_cassini": -2.2000884604175343e-16,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 4.3672426398633417e-13,
         "wb_unscreened": false
       },
@@ -9328,7 +9418,7 @@
         "psi_center": 1.2183638560648162,
         "s_sigma_cassini": 2.7340164106169085e-28,
         "gamma_cassini": -1.4949691467045128e-55,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.276628326850978e-13,
         "wb_unscreened": false
       },
@@ -9337,7 +9427,7 @@
         "psi_center": 0.7927212272800059,
         "s_sigma_cassini": 1.7661876222462026e-38,
         "gamma_cassini": -6.238837433951389e-76,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.647446576910364e-13,
         "wb_unscreened": false
       },
@@ -9346,7 +9436,7 @@
         "psi_center": 0.24713269038178567,
         "s_sigma_cassini": 8.27619411852012e-35,
         "gamma_cassini": -1.3699077817485404e-68,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.807517408324302e-13,
         "wb_unscreened": false
       },
@@ -9355,59 +9445,361 @@
         "psi_center": 0.029984963674192004,
         "s_sigma_cassini": 1.2504411842916576e-26,
         "gamma_cassini": -3.1272063107454466e-52,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.853784516335146e-13,
         "wb_unscreened": false
       },
       "ism_-30": {
         "rho_ism_ratio": 1e-30,
         "s_sigma_cassini": 6.299420437957146e-36,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 4.475847458478548e-16,
         "wb_unscreened": false
       },
       "ism_-27": {
         "rho_ism_ratio": 1e-27,
         "s_sigma_cassini": 8.27619411852012e-35,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.807517408324302e-13,
         "wb_unscreened": false
       },
       "ism_-25": {
         "rho_ism_ratio": 1e-25,
         "s_sigma_cassini": 9.190787325549177e-33,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.8177081302643706e-11,
         "wb_unscreened": false
       },
       "ism_-22": {
         "rho_ism_ratio": 1e-22,
         "s_sigma_cassini": 9.198666896815503e-30,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.8178109639130436e-08,
         "wb_unscreened": false
       },
       "ism_-20": {
         "rho_ism_ratio": 1e-20,
         "s_sigma_cassini": 9.198673823424101e-28,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 5.81781106582026e-06,
         "wb_unscreened": false
       },
       "ism_-18": {
         "rho_ism_ratio": 1e-18,
         "s_sigma_cassini": 9.198673885817502e-26,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 0.0005817811066839332,
         "wb_unscreened": false
       },
       "ism_-15": {
         "rho_ism_ratio": 1e-15,
         "s_sigma_cassini": 9.19867388646461e-23,
-        "cassini_pass": "True",
+        "cassini_pass": true,
         "s_sigma_wb": 0.5817811066849617,
         "wb_unscreened": true
       }
+    },
+    "quartic_3zone": {
+      "mu0_100000": {
+        "mu0": 100000.0,
+        "lambda_physical": 7.525512851718822e-71,
+        "s_sigma_cassini": 0.0014675512579034548,
+        "gamma_cassini": -4.307404112262952e-06,
+        "cassini_pass": true,
+        "s_sigma_wb": 0.0014454051766816438,
+        "psi_min_sun": 0.031072325059538594,
+        "psi_min_ism": 3.107232505953863e-11,
+        "m_eff2_sun": 289.646815381689,
+        "m_eff2_ism": 2.8964681538168977e-16,
+        "compton_sun_au": 0.0002733652252126247,
+        "compton_ism_pc": 1.3251924073820025,
+        "compton_ism_au": 273365.22521262435
+      },
+      "mu0_300000": {
+        "mu0": 300000.0,
+        "lambda_physical": 2.2576538555156467e-70,
+        "s_sigma_cassini": 0.0008502529195081663,
+        "gamma_cassini": -1.4458590090094282e-06,
+        "cassini_pass": true,
+        "s_sigma_wb": 0.0004722747836949351,
+        "psi_min_sun": 0.021544346900318843,
+        "psi_min_ism": 2.1544346900318868e-11,
+        "m_eff2_sun": 417.7429950251503,
+        "m_eff2_ism": 4.177429950251513e-16,
+        "compton_sun_au": 0.00022762662439058828,
+        "compton_ism_pc": 1.1034654247839262,
+        "compton_ism_au": 227626.624390588
+      },
+      "mu0_1e+06": {
+        "mu0": 1000000.0,
+        "lambda_physical": 7.525512851718821e-70,
+        "s_sigma_cassini": 0.00046801126343452837,
+        "gamma_cassini": -4.3806898945092624e-07,
+        "cassini_pass": true,
+        "s_sigma_wb": 0.00020704420895802447,
+        "psi_min_sun": 0.014422495703074087,
+        "psi_min_ism": 1.4422495703074104e-11,
+        "m_eff2_sun": 624.0251469155716,
+        "m_eff2_ism": 6.24025146915573e-16,
+        "compton_sun_au": 0.00018624155989360465,
+        "compton_ism_pc": 0.9028430771251855,
+        "compton_ism_au": 186241.55989360443
+      }
+    },
+    "stellar_population_scan": {
+      "M dwarf": {
+        "M_msun": 0.15,
+        "R_msun": 0.2,
+        "psi_uns": 3.1832553487946104e-06,
+        "s_sigma_surface": 0.11390758888901405,
+        "s_sigma_1au": 0.0011927041159789718,
+        "s_sigma_wb": 0.0024124292499639074,
+        "rs_predicted_m13_au": 1288.167908045521,
+        "rs_predicted_tep_au": 943.1405539599217,
+        "gradient_screening_factor_analytic": 0.051087295492903556,
+        "ambient_to_star_ratio_wb": 21803176.52350991,
+        "failed": false
+      },
+      "K dwarf": {
+        "M_msun": 0.45,
+        "R_msun": 0.55,
+        "psi_uns": 3.47264219868503e-06,
+        "s_sigma_surface": 0.11216441241252881,
+        "s_sigma_1au": 0.0013464613619098642,
+        "s_sigma_wb": 0.0012277219110670358,
+        "rs_predicted_m13_au": 1857.8596118624455,
+        "rs_predicted_tep_au": 1633.5673581372407,
+        "gradient_screening_factor_analytic": 0.024560209990935916,
+        "ambient_to_star_ratio_wb": 16639423.798891889,
+        "failed": false
+      },
+      "G dwarf": {
+        "M_msun": 0.8,
+        "R_msun": 0.8,
+        "psi_uns": 4.24434046505948e-06,
+        "s_sigma_surface": 0.11144026462456456,
+        "s_sigma_1au": 0.0014174608974880554,
+        "s_sigma_wb": 0.0008741362283871764,
+        "rs_predicted_m13_au": 2250.636639537584,
+        "rs_predicted_tep_au": 2178.0898108496544,
+        "gradient_screening_factor_analytic": 0.016735823752054242,
+        "ambient_to_star_ratio_wb": 13107192.460265104,
+        "failed": false
+      },
+      "Sun": {
+        "M_msun": 1.0,
+        "R_msun": 1.0,
+        "psi_uns": 4.24434046505948e-06,
+        "s_sigma_surface": 0.10894462584515459,
+        "s_sigma_1au": 0.001464500940702602,
+        "s_sigma_wb": 0.0007202005635747044,
+        "rs_predicted_m13_au": 2424.4248254382774,
+        "rs_predicted_tep_au": 2435.178439079743,
+        "gradient_screening_factor_analytic": 0.014422495703074089,
+        "ambient_to_star_ratio_wb": 13137648.542480897,
+        "failed": false
+      },
+      "F dwarf": {
+        "M_msun": 1.25,
+        "R_msun": 1.15,
+        "psi_uns": 4.613413548977697e-06,
+        "s_sigma_surface": 0.11005213435661734,
+        "s_sigma_1au": 0.0014960436202803697,
+        "s_sigma_wb": 0.0006341924347209425,
+        "rs_predicted_m13_au": 2611.63247364936,
+        "rs_predicted_tep_au": 2722.612263562068,
+        "gradient_screening_factor_analytic": 0.012428930023815439,
+        "ambient_to_star_ratio_wb": 12321115.018364647,
+        "failed": false
+      },
+      "A dwarf": {
+        "M_msun": 2.0,
+        "R_msun": 1.7,
+        "psi_uns": 4.993341723599389e-06,
+        "s_sigma_surface": 0.11059826576445778,
+        "s_sigma_1au": 0.0015941750806564975,
+        "s_sigma_wb": 0.0006388426862653835,
+        "rs_predicted_m13_au": 3054.5838714573893,
+        "rs_predicted_tep_au": 3443.8623753451166,
+        "gradient_screening_factor_analytic": 0.0090856029641607,
+        "ambient_to_star_ratio_wb": 10620447.036751956,
+        "failed": false
+      },
+      "Subgiant": {
+        "M_msun": 1.5,
+        "R_msun": 3.5,
+        "psi_uns": 1.819003056454063e-06,
+        "s_sigma_surface": 0.11023440175153361,
+        "s_sigma_1au": 0.0018264360200356557,
+        "s_sigma_wb": 0.0007372543631155716,
+        "rs_predicted_m13_au": 2775.2736276790715,
+        "rs_predicted_tep_au": 2982.4723041862903,
+        "gradient_screening_factor_analytic": 0.011006424162982094,
+        "ambient_to_star_ratio_wb": 21283837.59163965,
+        "failed": false
+      },
+      "Red giant": {
+        "M_msun": 1.2,
+        "R_msun": 12.0,
+        "psi_uns": 4.2443404650594803e-07,
+        "s_sigma_surface": 0.11013194038601502,
+        "s_sigma_1au": 0.0025110569241314526,
+        "s_sigma_wb": 0.0008545919980144937,
+        "rs_predicted_m13_au": 2576.3358160910416,
+        "rs_predicted_tep_au": 2667.6043252683903,
+        "gradient_screening_factor_analytic": 0.01277182387322589,
+        "ambient_to_star_ratio_wb": 34695888.18681393,
+        "failed": false
+      },
+      "Massive": {
+        "M_msun": 5.0,
+        "R_msun": 3.5,
+        "psi_uns": 6.063343521513544e-06,
+        "s_sigma_surface": 0.11023439396807333,
+        "s_sigma_1au": 0.0018264370802799639,
+        "s_sigma_wb": 0.0007442714636618614,
+        "rs_predicted_m13_au": 4145.708136025304,
+        "rs_predicted_tep_au": 5445.224527124136,
+        "gradient_screening_factor_analytic": 0.0049324241486609416,
+        "ambient_to_star_ratio_wb": 6662297.820821766,
+        "failed": false
+      },
+      "Very massive": {
+        "M_msun": 8.0,
+        "R_msun": 5.0,
+        "psi_uns": 6.790944744095169e-06,
+        "s_sigma_surface": 0.11012133417792,
+        "s_sigma_1au": 0.001975777697606401,
+        "s_sigma_wb": 0.0007847602508806485,
+        "rs_predicted_m13_au": 4848.849650876555,
+        "rs_predicted_tep_au": 6887.724750690233,
+        "gradient_screening_factor_analytic": 0.0036056239257685222,
+        "ambient_to_star_ratio_wb": 4683638.316467073,
+        "failed": false
+      }
     }
+  },
+  "nested_hierarchy": {
+    "description": "phi_total = phi_env + delta_phi: one continuous multi-scale profile, no boundaries between levels",
+    "chain": "cosmological -> galaxy(8 kpc) -> sun(1 AU) -> earth",
+    "galaxy": {
+      "phi_at_sun_pos": 2.847466051459899e-07,
+      "psi_at_sun_pos": 1.4873220869237576,
+      "model_variants": {
+        "fiducial": {
+          "M_factor": 1.0,
+          "R_kpc": 50.0,
+          "psi_uns": 1.9144918753605954e-07,
+          "phi_at_8kpc": 2.847466051459899e-07
+        },
+        "light": {
+          "M_factor": 0.5,
+          "R_kpc": 50.0,
+          "psi_uns": 9.572459376802977e-08,
+          "phi_at_8kpc": 1.4237331958019099e-07
+        },
+        "heavy": {
+          "M_factor": 2.0,
+          "R_kpc": 50.0,
+          "psi_uns": 3.828983750721191e-07,
+          "phi_at_8kpc": 5.694930742344838e-07
+        },
+        "compact": {
+          "M_factor": 1.0,
+          "R_kpc": 30.0,
+          "psi_uns": 3.190819792267659e-07,
+          "phi_at_8kpc": 4.6731609989577013e-07
+        },
+        "extended": {
+          "M_factor": 1.0,
+          "R_kpc": 70.0,
+          "psi_uns": 1.3674941966861397e-07,
+          "phi_at_8kpc": 2.042478362956938e-07
+        }
+      },
+      "phi_range": [
+        1.4237331958019099e-07,
+        5.694930742344838e-07
+      ],
+      "vc_crosscheck": 5.385226271299513e-07,
+      "field_vs_radius": {
+        "inner_1kpc": 2.8715902037073365e-07,
+        "sun_8kpc": 2.847466051459899e-07,
+        "25kpc": 2.6326491732769273e-07,
+        "edge_50kpc": 1.9148320456114243e-07,
+        "halo_150kpc": 6.383332121645615e-08
+      },
+      "dlnA_sun_vs_inner": -2.4124152247437336e-09,
+      "dlnA_sun_vs_halo": 2.2091328392953378e-07
+    },
+    "ambient_shear": {
+      "a_amb_uniform_sphere_ms2": 1.784250573403813e-12,
+      "a_amb_isothermal_ms2": 3.9209332469215813e-10,
+      "g_TEP_ms2": 5e-10,
+      "a_internal_wb_2646au_ms2": 1.050276347674777e-09,
+      "interpretation": "The ambient galactic shear at the solar circle sets an acceleration scale ~2-4e-10 m/s^2 (isothermal-halo estimate), matching g_TEP ~ 5e-10 m/s^2. The wide-binary signal is this ambient environmental shear, not the central star's perturbation \u2014 the single-mass gap was an artifact of attributing the signal to the wrong component."
+    },
+    "sun": {
+      "V0": {
+        "mu0": 0.0,
+        "potential": "linear",
+        "s_sigma_1au_nested": 1.0002792712787283,
+        "s_sigma_1au_isolated": 1.000279556103445,
+        "gamma_1au_nested": -1.0002792322825063,
+        "phi_perturb_1au": 1.974711187119937e-08,
+        "phi_perturb_wb": 3.2191787501007182e-12
+      },
+      "quad_0.01": {
+        "mu0": 0.01,
+        "potential": "linear",
+        "s_sigma_1au_nested": 1.0479366196012707e-08,
+        "s_sigma_1au_isolated": 1.0479369179963088e-08,
+        "gamma_1au_nested": -2.1963423174026764e-16,
+        "phi_perturb_1au": 9.19903128119979e-18,
+        "phi_perturb_wb": 5.081573946874835e-96
+      },
+      "quartic_1e5": {
+        "mu0": 100000.0,
+        "potential": "quartic",
+        "s_sigma_1au_nested": 0.0014648562252879904,
+        "s_sigma_1au_isolated": 0.001464856230173754,
+        "gamma_1au_nested": -4.29159831260216e-06,
+        "phi_perturb_1au": 2.5671428189020913e-11,
+        "phi_perturb_wb": 2.912072188899078e-15
+      },
+      "x_crossover_Rsun": 15.051812316647641,
+      "crossover_AU": 0.07002714821114144,
+      "ambient_ratio_at_1au": 14.419658277283837,
+      "ambient_ratio_at_wb": 88453.1823953799
+    },
+    "earth": {
+      "phi_env": 3.044937170171893e-07,
+      "phi_perturb_surface": 1.392797109126579e-09,
+      "s_sigma_surface": 0.987510499257976,
+      "ambient_ratio_at_surface": 218.62029653991516
+    },
+    "common_mode": {
+      "local_field_variation_1au_to_edge": 1.974711187119937e-08,
+      "ambient_field": 2.847466051459899e-07,
+      "variation_over_ambient": 0.0693497710396758
+    },
+    "decomposition_at_earth_surface": {
+      "phi_galactic": 2.847466051459899e-07,
+      "phi_solar_1au": 1.974711187119937e-08,
+      "phi_earth_surface": 1.392797109126579e-09,
+      "phi_total": 3.0588651412631585e-07,
+      "galactic_fraction": 0.9308896992706379,
+      "solar_fraction": 0.0645569875076114,
+      "earth_fraction": 0.004553313221750677
+    },
+    "cosmo_baseline": {
+      "phi_cosmo_1e-07": {
+        "s_sigma_1au": 1.0002791712513157
+      },
+      "phi_cosmo_1e-06": {
+        "s_sigma_1au": 1.0002782710050517
+      }
+    },
+    "interpretation": "Cassini bounds the Sun's local gradient perturbation \u2014 the constraint is local, not global.  The field VALUE at any point is dominated by the containing environment (ambient exceeds the solar perturbation beyond ~0.07 AU; Earth's own field is ~1/220 of its ambient).  Local fluctuations are small common-mode perturbations on the ambient baseline and cancel in local comparisons.  The galactic baseline itself varies with galactocentric radius (dlnA ~ 2e-7 between the solar circle and the halo), so the ambient clock rate is position-dependent across the galaxy \u2014 the proper-time field is a single continuous multi-scale profile with no boundaries."
   }
 }

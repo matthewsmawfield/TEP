@@ -3,7 +3,7 @@
 TEP Cosmological Distance Models
 =================================
 
-Version: TEP v0.11 (Jakarta)
+Version: TEP v0.13 (Jakarta)
 
 Provides the luminosity-distance--redshift relation for competing hypotheses,
 used by standard-siren and cosmology analyses across the TEP corpus.

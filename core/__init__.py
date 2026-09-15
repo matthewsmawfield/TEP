@@ -1,6 +1,6 @@
 """TEP Core — canonical Python package for the Temporal Equivalence Principle.
 
-Version: TEP v0.11 (Jakarta)
+Version: TEP v0.13 (Jakarta)
 
 This package provides the shared physics layer used by all TEP papers:
   - constants: physical and phenomenological parameters
