@@ -1,0 +1,27 @@
+{
+  "R_WB_m": 395835965872200.0,
+  "ratio_R": 568975.083904269,
+  "screening_models": {
+    "n_1": {
+      "power": 1.0,
+      "S_sun_predicted": 3.216309556901266e-07,
+      "passes_cassini": true
+    },
+    "n_2": {
+      "power": 1.3333333333333333,
+      "S_sun_predicted": 3.881444896437387e-09,
+      "passes_cassini": true
+    },
+    "n_3": {
+      "power": 1.5,
+      "S_sun_predicted": 4.263941296293924e-10,
+      "passes_cassini": true
+    },
+    "n_4": {
+      "power": 1.6,
+      "S_sun_predicted": 1.1331878048177798e-10,
+      "passes_cassini": true
+    }
+  },
+  "conclusion": "Derivative screening of the form P_X = 1 + (\nabla\\phi / \\Lambda)^n naturally connects the required O(1) wide-binary screening with the < 10^-5 Cassini bound. Even n=1 and n=2 pass both limits easily, unlike potential-based screening which failed."
+}

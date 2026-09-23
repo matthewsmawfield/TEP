@@ -1,0 +1,25 @@
+{
+  "assumptions": [
+    "canonical scalar T_mn",
+    "volume-normal congruence",
+    "leading-order cone kinematics",
+    "endpoint-law Dphi = ln(1+z)"
+  ],
+  "z": 0.0098,
+  "L_m": 1.2342710324e+24,
+  "dT_limit_s": 1.7,
+  "Dphi": 0.009752291442678302,
+  "rho_required_over_Mpl2_m^-2": 3.779838035261833e-38,
+  "kappa_required_m^-1": 1.9441805562400405e-19,
+  "kappa_scale_pc": 0.00016669127152613622,
+  "compactness_at_L": 482406186640.50006,
+  "geometric_critical_rho_over_Mpl2_m^-2": 7.835384661181082e-50,
+  "dT_for_critical_s": 820090517288.8502,
+  "tension": 482406186640.5001,
+  "verdict": "mechanism class excluded at ~1e12 by self-compactness",
+  "open_gates": [
+    "tilted congruence (volume identity form)",
+    "non-canonical scalar stress",
+    "finite-distance transport redshift"
+  ]
+}

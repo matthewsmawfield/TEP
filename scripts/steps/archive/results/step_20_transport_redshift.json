@@ -1,0 +1,16 @@
+{
+  "note": "exact geodesic integration through disformal field; geodesic equation reduces to dS/du=2f'S^2, S=n.k, S(u)=S0/(1-2 S0 Df); dk^a/du=-(H/2)S n^a+2f'k^a",
+  "findings": {
+    "shared_ray_exact": "theta=0 co-propagating: z=0, delay~1e-9",
+    "transport_not_endpoint": "z != f(Dphi_end) throughout; sign and magnitude set by path geometry, e.g. counter-prop theta=0: z=-0.044 vs Dphi_end=+0.036",
+    "decoupling": "oblique co-propagating rays: z~O(0.25) with delay~0.009 -- redshift decouples from s^2-delay",
+    "caustic": "S-pole at 1-2 S0 Df = 0 focuses rays (z->-1 seen in packet counter-prop); strong-field lensing constraint",
+    "drift_endpoint_fails": "pure drift: ln(1+z)=-0.22 vs Dphi_end=+0.33 -- even drift redshift is transport",
+    "implication": "step-19 lock (D = ln(1+z)/L) assumed endpoint law; transport redshift frees the gradient scale kappa, so field energy need not exceed geometric critical density"
+  },
+  "open": [
+    "systematic (monotonic, isotropic) transport redshift over realistic field ensembles",
+    "caustic avoidance for the observed ray population",
+    "volume identity on the same solved configuration"
+  ]
+}

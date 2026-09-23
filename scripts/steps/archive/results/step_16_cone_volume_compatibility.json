@@ -1,0 +1,63 @@
+{
+  "formulas_verified": true,
+  "key_correction": "The multimessenger observable is a single-ray arrival-time difference, not an angular average.  For R >= P there exists a direction theta0 = arccos(-Pi/sqrtY) on which k^m phi_m = 0: the ray is null in both metrics.  Verified: P = R = 63/64 gives Q = 63 with v(pi) = c exactly.  A universal delay bound from Q alone is FALSE.",
+  "tradeoff": "On an exactly shared ray, Delta phi = int k.phi = 0: no conformal endpoint redshift.  The joint constraint is DeltaT >= (B/2A^2c)(ln(1+z))^2/L - numerically ~1e-20 (B/A^2) s for z=0.0098, L=40 Mpc - compatible with the 1.7 s bound for a wide range of B.  Saturation needs s(l) uniform along the ray, i.e. a near-null field gradient oriented near theta0 for the whole path.",
+  "open_conditions": [
+    "a field with R >= P (spacelike/null gradient) along observed rays",
+    "local grad-phi near the cancellation direction along each observed path",
+    "the same for rays from all sky directions (isotropy constraint on the gradient field - the hardest condition)",
+    "the volume identity 1+Q = C(x)[A/A_0]^{-6} simultaneously satisfied",
+    "single B(phi): isosurface test on the actual solution"
+  ],
+  "tests": {
+    "A_min_direction_deficit": [
+      {
+        "z": 0.0098,
+        "Q": 0.06025956273846256,
+        "P_star": 0.0,
+        "min_dir": 0.0,
+        "avg": 0.009780298331695877,
+        "worst": 0.028833035438514898
+      },
+      {
+        "z": 0.1,
+        "Q": 0.7715610000000008,
+        "P_star": 0.0,
+        "min_dir": 0.0,
+        "avg": 0.09753235947073795,
+        "worst": 0.24868519909842235
+      },
+      {
+        "z": 0.5,
+        "Q": 10.390625,
+        "P_star": 0.0,
+        "min_dir": 0.0,
+        "avg": 0.4146533778234972,
+        "worst": 0.7037037037037037
+      },
+      {
+        "z": 1.0,
+        "Q": 63.0,
+        "P_star": 0.0,
+        "min_dir": 0.0,
+        "avg": 0.6511815251666035,
+        "worst": 0.875
+      },
+      {
+        "z": 3.0,
+        "Q": 4095.0,
+        "P_star": 0.0,
+        "min_dir": 0.0,
+        "avg": 0.9241785223921506,
+        "worst": 0.984375
+      }
+    ],
+    "B_joint_bound_s_for_B_over_A2_1": 1.16e-20,
+    "C_transport": "same joint functional; not excluded",
+    "D_tilted_congruence": "argument incomplete; open",
+    "E_nonuniform_C": "impossible under B>=0 and positive drift only",
+    "F_isosurface_single_candidate": 0.34980817638292805,
+    "G_negative_B": "not excluded by signature; same joint bound"
+  },
+  "conclusion": "REVISED: the earlier universal-exclusion claim is withdrawn.  Large Q does not force large delay along every ray; for spatial/null-gradient fields a shared photon-GW null direction exists pointwise.  The real question is the joint one: can a single field configuration deliver Delta phi = ln(1+z) along each observed ray while keeping s(l) = k.phi/w small everywhere - i.e. near-null gradients aligned with all observed rays?  The bound DeltaT_min ~ 1e-20 (B/A^2) s shows the constraint is parametrically satisfiable; viability hinges on whether a real Einstein-scalar solution supplies the required gradient organisation isotropically.  The decisive next step is the coupled calculation on one actual field configuration: both channels propagated, delay AND redshift measured on the same rays, for several source directions."
+}

@@ -1,0 +1,162 @@
+{
+  "units": "geometric M=1; Pi in 1/M; u = phi/M_Pl",
+  "scan": {
+    "decisive_potential_closure_test": {
+      "black_hole_test": {
+        "two_exponential": {
+          "U_max_reached": 7.618504028892964,
+          "r_min_reached_over_rh": 1.0005,
+          "invariant_at_rmax": 6.666666666666668e-07,
+          "invariant_at_rmin": 499.25074937547396
+        },
+        "complementary": {
+          "U_max_reached": 7.618504028892964,
+          "r_min_reached_over_rh": 1.0005,
+          "invariant_at_rmax": 6.666666666666668e-07,
+          "invariant_at_rmin": 499.25074937547396
+        }
+      },
+      "cosmology_test": {
+        "u_s": 50.0,
+        "u_range": [
+          -0.6798058772206766,
+          42.80038623808587
+        ],
+        "init_constraint_res00": 0.01324902891263946,
+        "max_00_residual_active_0_le_u_le_12": 0.013249028912639904,
+        "max_ii_residual_active_0_le_u_le_12": 0.013249028914182226,
+        "max_residual_turnaround_u_lt_0": 0.013249028912627026,
+        "max_00_residual_tail_u_gt_12": 0.01324902891260571,
+        "max_ii_residual_tail_u_gt_12": 1.0274163400750127,
+        "max_00_residual_at_u": 11.979839518298016,
+        "max_V_master_deviation_from_V_ideal": 0.520332684493809,
+        "V_deviation_at_u": 42.80038623808587,
+        "integration_steps": 4002
+      },
+      "cosmology_us_scan": {
+        "two_exponential": {
+          "50.0": {
+            "u_s": 50.0,
+            "u_range": [
+              -0.6798058772206766,
+              42.80038623808587
+            ],
+            "init_constraint_res00": 0.01324902891263946,
+            "max_00_residual_active_0_le_u_le_12": 0.013249028912639904,
+            "max_ii_residual_active_0_le_u_le_12": 0.013249028914182226,
+            "max_residual_turnaround_u_lt_0": 0.013249028912627026,
+            "max_00_residual_tail_u_gt_12": 0.01324902891260571,
+            "max_ii_residual_tail_u_gt_12": 1.0274163400750127,
+            "max_00_residual_at_u": 11.979839518298016,
+            "max_V_master_deviation_from_V_ideal": 0.520332684493809,
+            "V_deviation_at_u": 42.80038623808587,
+            "integration_steps": 4002
+          },
+          "100.0": {
+            "u_s": 100.0,
+            "u_range": [
+              -0.692307104501272,
+              40.60281958084176
+            ],
+            "init_constraint_res00": 0.0008293527356730834,
+            "max_00_residual_active_0_le_u_le_12": 0.0008293527356739716,
+            "max_ii_residual_active_0_le_u_le_12": 0.0008293527372398302,
+            "max_residual_turnaround_u_lt_0": 0.0008293527356619812,
+            "max_00_residual_tail_u_gt_12": 0.0008293527356437735,
+            "max_ii_residual_tail_u_gt_12": 0.10642042592678469,
+            "max_00_residual_at_u": 4.574468285184374,
+            "max_V_master_deviation_from_V_ideal": 0.0536248893312139,
+            "V_deviation_at_u": 40.60281958084176,
+            "integration_steps": 4002
+          },
+          "200.0": {
+            "u_s": 200.0,
+            "u_range": [
+              -0.6930941129900529,
+              40.42179448845931
+            ],
+            "init_constraint_res00": 5.1839584449986376e-05,
+            "max_00_residual_active_0_le_u_le_12": 5.1839584450430465e-05,
+            "max_ii_residual_active_0_le_u_le_12": 5.183958604249028e-05,
+            "max_residual_turnaround_u_lt_0": 5.183958443444325e-05,
+            "max_00_residual_tail_u_gt_12": 5.183958441978831e-05,
+            "max_ii_residual_tail_u_gt_12": 0.0066168437348519404,
+            "max_00_residual_at_u": 10.749433352443633,
+            "max_V_master_deviation_from_V_ideal": 0.00333434165963431,
+            "V_deviation_at_u": 40.42179448845931,
+            "integration_steps": 4002
+          }
+        },
+        "complementary": {
+          "50.0": {
+            "u_s": 50.0,
+            "u_range": [
+              -0.6931462289124838,
+              40.40965985150787
+            ],
+            "init_constraint_res00": 2.035124335719729e-08,
+            "max_00_residual_active_0_le_u_le_12": 2.035127444344198e-08,
+            "max_ii_residual_active_0_le_u_le_12": 7.298401543121003e-07,
+            "max_residual_turnaround_u_lt_0": 2.0351269114371462e-08,
+            "max_00_residual_tail_u_gt_12": 2.035127799615566e-08,
+            "max_ii_residual_tail_u_gt_12": 2.035127488753119e-08,
+            "max_00_residual_at_u": 31.548622502325685,
+            "max_V_master_deviation_from_V_ideal": 3.750956958370466e-07,
+            "V_deviation_at_u": 4.004317483896034,
+            "integration_steps": 4002
+          },
+          "100.0": {
+            "u_s": 100.0,
+            "u_range": [
+              -0.693146245085147,
+              40.409660879157535
+            ],
+            "init_constraint_res00": 1.2739320709442836e-09,
+            "max_00_residual_active_0_le_u_le_12": 1.2739640453673928e-09,
+            "max_ii_residual_active_0_le_u_le_12": 4.561393973645522e-08,
+            "max_residual_turnaround_u_lt_0": 1.2739556076724057e-09,
+            "max_00_residual_tail_u_gt_12": 1.273969374437911e-09,
+            "max_ii_residual_tail_u_gt_12": 1.2739689303487012e-09,
+            "max_00_residual_at_u": 31.449628665074236,
+            "max_V_master_deviation_from_V_ideal": 2.344393301711989e-08,
+            "V_deviation_at_u": 4.0043182880762425,
+            "integration_steps": 4002
+          },
+          "200.0": {
+            "u_s": 200.0,
+            "u_range": [
+              -0.6931462460939293,
+              40.40966094334583
+            ],
+            "init_constraint_res00": 7.962830395058518e-11,
+            "max_00_residual_active_0_le_u_le_12": 7.966161064132393e-11,
+            "max_ii_residual_active_0_le_u_le_12": 2.8508821969808196e-09,
+            "max_residual_turnaround_u_lt_0": 7.965628157080573e-11,
+            "max_00_residual_tail_u_gt_12": 7.966605153342243e-11,
+            "max_ii_residual_tail_u_gt_12": 7.966582948881751e-11,
+            "max_00_residual_at_u": 31.435486598991083,
+            "max_V_master_deviation_from_V_ideal": 1.465247700949135e-09,
+            "V_deviation_at_u": 4.004318338328223,
+            "integration_steps": 4002
+          }
+        }
+      },
+      "complementary_potential_structure": {
+        "V_at_0": 1.5,
+        "V_asymptote_pos_u": 2.0,
+        "V_asymptote_neg_u": 2.0,
+        "V_min": -3.1298810727153264e+37,
+        "V_min_at_u": -116.03999999999999,
+        "max_abs_dV_over_trajectory_neg07_to_45": 1.006876094025588,
+        "note": "The e^{-u-(u/u_s)^4} matter term develops a deep narrow minimum at u ~ -u_s*(u_s/4)^(1/3) before the quartic dominates and V -> rho_Lambda; it lies far outside the realized trajectory (u >= -0.7) and is reported as a structural property, not a dynamical obstruction."
+      }
+    }
+  },
+  "verdict": {
+    "statement": "Potential closure test with V_0 = rho_Lambda: the 10^117 energy scale problem is removed by construction. Two transition functions are compared; the step_12 constraint solution is reproduced only approximately by either, with residuals scaling as u_s^-4.",
+    "cosmology_two_exponential": "u_s=50: active-domain max residual 1.32e-02; turnaround 1.32e-02; deep tail 1.03e+00; max V deviation 5.20e-01 at u=42.8.",
+    "cosmology_complementary": "u_s=50: active-domain max residual 2.04e-08; turnaround 2.04e-08; deep tail 2.04e-08; max V deviation 3.75e-07 at u=4.0.",
+    "black_hole": "Because rho_Lambda is vanishingly small (~ 10^-120 M_Pl^4), the potential behaves as a strictly flat floor in the interior, requiring no arbitrary adjustments. However, integrating from the physical scalar charge P = -2M demonstrates that while the scalar logarithmically piles up to form a temporal horizon, its invariant kinetic term (grad u)^2 diverges as 1/(r-2M).",
+    "conclusion": "The divergence of (grad u)^2 shows that this nonzero-flux configuration fails scalar regularity on a FIXED Schwarzschild background. It does not establish that every isolated mass must develop a temporal horizon, nor that metric backreaction restores regularity; both are statements of the coupled construction (Paper 28)."
+  }
+}

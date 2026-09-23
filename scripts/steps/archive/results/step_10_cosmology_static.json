@@ -1,0 +1,9 @@
+{
+  "friedmann_1": "Eq(3*k/a(t)**2 + 3*Derivative(a(t), t)**2/a(t)**2, K*Derivative(phi(t), t)**2/2 + Lambda + V + rho_m)",
+  "friedmann_2": "Eq(3*Derivative(a(t), (t, 2))/a(t), -1.0*K*Derivative(phi(t), t)**2 + 1.0*Lambda + 1.0*V - 0.5*rho_m)",
+  "static_eq1": "Eq(3*k/a(t)**2, K*Derivative(phi(t), t)**2/2 + Lambda + V + rho_m)",
+  "static_eq2": "Eq(3*Derivative(0, t)/a(t), -1.0*K*Derivative(phi(t), t)**2 + 1.0*Lambda + 1.0*V - 0.5*rho_m)",
+  "flat_nolambda_eq1": "Eq(0, K*Derivative(phi(t), t)**2/2 + V + rho_m)",
+  "flat_nolambda_eq2": "Eq(3*Derivative(0, t)/a(t), -1.0*K*Derivative(phi(t), t)**2 + 1.0*V - 0.5*rho_m)",
+  "conclusion": "For k=0 and Lambda=0, Eq1 implies 0 = rho_m + K/2 * phidot^2 + V. Since rho_m > 0, K > 0, V >= 0, this has no real solution for phidot. Therefore, a flat static cosmology with a non-trivial time field REQUIRES either spatial curvature (k != 0) or a cosmological constant (Lambda < 0) or a phantom field (K < 0)."
+}

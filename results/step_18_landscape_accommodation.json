@@ -1,0 +1,18 @@
+{
+  "step": "step_18_landscape_accommodation",
+  "inputs": {
+    "rho_core_Mpl4": 0.001,
+    "sigma_core_lPl": 10.0,
+    "R_max_lPl": 500.0
+  },
+  "results": {
+    "solver_success": true,
+    "psi_core": 1.0278470588223672,
+    "psi_void": 1.0006905422261563,
+    "L_R_core_lPl": 54.772255750516614,
+    "L_R_void_lPl": "infinity",
+    "proper_radius_lPl": 503.1634607512376,
+    "coordinate_radius_lPl": 500.0
+  },
+  "interpretation": "The Lichnerowicz constraint accommodates the massive CMB-epoch energy density strictly within the dense emitting regions (temporal wells). The required Planck-scale spatial curvature (L_R ~ 54 l_Pl) is rigorously quarantined inside the well, while the macroscopic intergalactic void remains geometrically flat (L_R -> infinity). The global manifold is not crushed; the external space maintains its macroscopic volume, validating the TEP inhomogeneous landscape ontology without requiring unphysical Gauss-Bonnet cancellations."
+}

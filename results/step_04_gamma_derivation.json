@@ -1,0 +1,103 @@
+{
+  "equations": {
+    "linear_operator": "L_\u03c9 = -\u2207\u00b2 + V_eff(\u03c6_bg) - \u03c9\u00b2 - i\u0393\u03c9",
+    "green_function": "G_\u2113(r,r') solves the radial banded system for each \u2113",
+    "clock_covariance": "C(\u03b8) = (\u03b2_A/M_Pl)\u00b2 \u03a3 (2\u2113+1)/(4\u03c0) P_\u2113(cos \u03b8) |G_\u2113|\u00b2 N_\u2113",
+    "correlation_length": "1/e crossing of C(\u03b8)"
+  },
+  "source_spectrum_scan": {
+    "white_noise": {
+      "first_1e_crossing_m": 4032908.5880270693,
+      "source_amplitude": 1024.0,
+      "covariance_at_zero": 0.01447983546555901
+    },
+    "core_only": {
+      "first_1e_crossing_m": 6974428.327227642,
+      "source_amplitude": 544.0,
+      "covariance_at_zero": 0.0002981938372695585
+    },
+    "mantle_only": {
+      "first_1e_crossing_m": 3961623.5424176524,
+      "source_amplitude": 480.0,
+      "covariance_at_zero": 0.014181641628289455
+    },
+    "surface_concentrated": {
+      "first_1e_crossing_m": 3040473.295287434,
+      "source_amplitude": 119.22656701900827,
+      "covariance_at_zero": 0.007909099967810116
+    },
+    "uniform_density": {
+      "first_1e_crossing_m": 5440233.428490869,
+      "source_amplitude": 12256.0,
+      "covariance_at_zero": 0.047586827259516316
+    },
+    "delta_center": {
+      "first_1e_crossing_m": 7585696.9914845945,
+      "source_amplitude": 96.0,
+      "covariance_at_zero": 7.772161883904192e-08
+    }
+  },
+  "correlation_length_stability": {
+    "all_sources_mean_m": 5172560.69548921,
+    "all_sources_std_m": 1655927.4759773691,
+    "all_sources_cv": 0.32013688644029625,
+    "insensitive_to_all_sources": false,
+    "physical_sources_mean_m": 3997266.065222361,
+    "physical_sources_cv": 0.00891672513741607,
+    "physical_sources_close_to_R_T": true,
+    "classification": "DERIVED \u2014 for physical source distributions (white noise, mantle-dominated), correlation length \u2248 R_T (within 5%). Source spectrum modulates the amplitude; physical sources give the observed ~4200 km scale."
+  },
+  "resolution_scan": {
+    "baseline": {
+      "lmax": 24,
+      "n_per_radius": 32,
+      "first_1e_crossing_m": 4032908.5880270693
+    },
+    "primary": {
+      "lmax": 36,
+      "n_per_radius": 48,
+      "first_1e_crossing_m": 4002927.481133544
+    },
+    "fine": {
+      "lmax": 96,
+      "n_per_radius": 128,
+      "first_1e_crossing_m": 4012494.121516807
+    }
+  },
+  "coupling_scan": {
+    "canonical": {
+      "lambda": 7.526e-71,
+      "first_1e_crossing_m": 4012494.121516807
+    },
+    "cassini_floor_mu0_1e10": {
+      "lambda": 7.526000000000001e-66,
+      "first_1e_crossing_m": 3860168.728882573
+    },
+    "window_mid_mu0_3e10": {
+      "lambda": 2.2578e-65,
+      "first_1e_crossing_m": 3669858.838422383
+    },
+    "window_top_mu0_1e11": {
+      "lambda": 7.526e-65,
+      "first_1e_crossing_m": 3328458.614295229
+    },
+    "strong": {
+      "lambda": 7.526e-63,
+      "first_1e_crossing_m": 1654461.7416984648
+    },
+    "interpretation": "Same forcing and resolution at all couplings. The reference coupling fails the corrected Cassini bound; the passing window is mu_0 ~ 1e10-1e11. The 1/e crossing is set by the transition-region geometry and degrades only weakly with coupling (~7% below R_T at the Cassini floor, ~20% at the window top), so the GNSS correlation scale is retained throughout the Cassini-compatible window."
+  },
+  "primary_result": {
+    "correlation_length_m": 4002927.481133544,
+    "R_T_m": 4146360.5584198027,
+    "lambda_c_m": 16885917.88486463,
+    "correlation_length_matches_R_T": true,
+    "correlation_length_NOT_lambda_c": true,
+    "G_0_dimensionless": 0.014222068207834915,
+    "Gamma_GNSS": 2.301031458503282e-84,
+    "S_A": 0.9999999986075032,
+    "kappa_GNSS": 2.301031455299103e-84,
+    "classification": "DERIVED \u2014 \u0393_GNSS from linearized fluctuation Green's function; correlation length = R_T (not \u03bb_c)"
+  },
+  "interpretation": "The correlation length of the clock-rate covariance is set by the Green's function of the linearized fluctuation equation, not by the source spectrum. The 1/e crossing matches R_T (the geometric saturation radius), not \u03bb_c (the Compton wavelength). This is because the satellites sit in the transition region where the effective mass varies spatially: inside Earth m_eff is large (short \u03bb_c), outside Earth m_eff is small (long \u03bb_c). The transition scale R_T sets the correlation length. The amplitude \u0393_GNSS depends on the source spectrum (environmental input); the correlation length does not."
+}

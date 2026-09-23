@@ -1,0 +1,63 @@
+<h2>9. Quantum Clocks, Interferometry, and Composition Dependence</h2>
+    
+    <h2>Quantum evolution</h2>
+    <p>Proper-time quantum evolution is defined with respect to matter-frame proper time: $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$, where $\tau$ is the proper time defined by the matter metric $\tilde{g}_{\mu\nu}$. Relative to an Einstein-frame or reference coordinate time $t$, stationary clocks satisfy $d\tau \simeq A(\phi)\,dt$ in the weak field, meaning a single clock's tick rate relative to $t$ carries the $A(\phi)$ scaling. Because this conformal rescaling is locally universal, it cancels exactly from dimensionless ratios of co-located ideal matter clocks. Observable conformal clock signatures arise strictly from comparisons between different spacetime environments, transported clock histories, or small sectoral dilaton-like sensitivities:</p>
+    <div class="equation">
+        $$\delta \ln \nu = \delta \ln A + K_\alpha \delta \ln \alpha + K_\mu \delta \ln \mu + K_q \delta \ln X_q + \ldots$$
+    </div>
+    <p>where the first term represents the universal conformal clock-rate contribution relative to the specified reference standard.</p>
+
+    <h2>Species sensitivity</h2>
+    <p>For a dimensionless ratio of two co-located clock transitions $X$ and $Y$, the universal conformal contribution cancels:</p>
+    <div class="equation">
+        $$\delta \ln \frac{\nu_X}{\nu_Y} = (K_{\alpha,X} - K_{\alpha,Y})\delta \ln \alpha + (K_{\mu,X} - K_{\mu,Y})\delta \ln \mu + (K_{q,X} - K_{q,Y})\delta \ln X_q + \ldots$$
+    </div>
+    <p>Multi-species clock comparisons therefore constrain non-universal sectoral couplings, while universal $A(\phi)$ signatures are tested through comparisons of clock rates or accumulated proper-time histories across distinct spacetime environments.</p>
+    
+    <h2>Interferometry</h2>
+    <p>Phases acquire contributions proportional to the integral of $A(\phi)$ along arms. Atom interferometers with vertical baselines can sense $\partial_h\ln A$ at $10^{-21}$–$10^{-22}$ m$^{-1}$; photon interferometers are sensitive at different bands.</p>
+    
+    <h2>Decoherence</h2>
+    <p>Rapid $\phi$ variations would induce dephasing at rates $O(\partial_t\phi)$, strongly bounded by clock stabilities. Adiabatic evolution in the lab is assumed, consistent with null drift bounds.</p>
+
+    <div class="critical-analysis">
+        <h2>Inset: What "no-variable-c" tests do—and don't—probe (TEP view)</h2>
+        
+        <p><strong>Gauge-invariant observable.</strong> The synchronization holonomy is the loop non-closure of calibrated time transport after GR subtraction. Let $\sigma$ denote the time-transport one-form whose line integral equals the calibrated proper-time increment along each leg. The residual holonomy is</p>
+        
+        <div class="equation">
+            $$H_{\rm resid}(C) \equiv \oint_C (\tilde\sigma - \sigma_{\rm GR}) = \iint_\Sigma (\tilde F - F_{\rm GR}),$$
+        </div>
+        
+        <p>the integral of the residual curvature two-form over a surface $\Sigma$ bounded by the closed loop $C = \partial\Sigma$. It is built from measured proper-time increments along each leg and has units of time. Because it is the closed-loop integral of the GR-subtracted synchronization connection, $\Delta\sigma=\tilde\sigma-\sigma_{\rm GR}$, it is invariant under admissible synchronization re-gaugings. Re-gaugings shift both the matter-frame connection and the corresponding GR reference connection by the same exact one-form, leaving $\Delta\sigma$ invariant (since $\oint_C d\chi = 0$ for single-valued $\chi$). It vanishes in SR/GR and in the conformal-only limit of TEP. The GR subtraction includes Sagnac, Lense–Thirring/gravito-magnetic, Shapiro, gravitational redshift, station motion, clock-scale realization, and reference-frame corrections, computed with ITRF ephemerides and TT/TDB standards.</p>
+        
+        <p>How flagship constraints map to $H_{\rm resid}$:</p>
+        
+        <ul>
+            <li><strong>GW170817 (GW–EM coincidence).</strong> $|c_\gamma-c_g|/c\!\lesssim\!\text{few}\times10^{-15}$ constrains global cone splits. In TEP, late-time conformal coupling preserves null cones, so EM and GW share causal structure; small disformal tilts today are allowed. This is a boundary condition, not a loop-holonomy test.</li>
+            
+            <li><strong>Cassini (PPN-$\gamma$).</strong> Two-way Doppler/Shapiro is reciprocity-even; it calibrates $\sigma_{\rm GR}$ to subtract but does not bound $H_{\rm resid}$.</li>
+            
+            <li><strong>Resonator MM/KT tests.</strong> Cavities provide strong terrestrial bounds on even-parity orientation-dependent photon propagation, including the disformal $D(\hat n\cdot\nabla\phi)^2$ deformation derived in Appendix B. They do not directly measure the distinct odd/non-exact loop-closure observable $H_{\rm resid}$, whose leading synchronization kernel additionally depends on observer motion and path geometry.</li>
+            
+            <li><strong>"GPS works."</strong> Network self-consistency uses explicit GR+Sagnac modeling and largely two-way/common-view calibration. This verifies internal consistency under assumed GR model; not a direction-reversing one-way loop-closure null.</li>
+            
+            <li><strong>Clock redshift & pairwise A↔B tests.</strong> Exquisitely confirm GR locally; <strong>only closed loops</strong> (A→B→C→A with direction reversal) can reveal non-integrability captured by $H_{\rm resid}$.</li>
+        </ul>
+        
+        <p>Why classics can be null while $H_{\rm resid}\neq0$:</p>
+        
+        <ol>
+            <li>Conformal null-cone invariance ⇒ no large GW–EM kinematic delays (consistent with GW170817).</li>
+            <li><strong>$\partial_t\phi = 0$ over loop timescale; gradients conservative: no direct conformal propagation asymmetry.</strong> In the purely conformal limit ($B = 0$), the conformal factor cancels exactly from the null condition, so forward/back propagation times are identical. Residuals require the disformal sector, time dependence, or non-exact transport structure. Thus two-way/closed-path nulls can hold while a loop-holonomy test remains sensitive.</li>
+        </ol>
+        
+        <p><strong>Experimental falsifier (primary endpoints).</strong>
+        Run a closed-loop, one-way time-transfer (and/or portable-clock) test and report:</p>
+        
+        <ul>
+            <li>Leg-wise antisymmetry: $\Delta t_{AB}=t_{AB}-t_{BA}$ (and optionally $\Xi_{AB}\!\equiv\!(t_{AB}-t_{BA})/(t_{AB}+t_{BA})$).</li>
+            <li>Loop holonomy $H_{\rm resid}$ after subtracting the full GR, kinematic, clock-scale, and instrumental synchronization model.
+              Use triangle/quadrilateral geometries with direction reversal; extend with interplanetary one-way links and multi-species clock networks.</li>
+        </ul>
+    </div>

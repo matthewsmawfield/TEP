@@ -1,0 +1,27 @@
+{
+  "step": "step_12_cosmology_solution",
+  "description": "Exact static closed (k=+1) Einstein-frame TEP background: full-dynamics integration with the branch potential V = 2M^2/a^2 - (rho_bar/2)A(phi); verification of the 00, ii and continuity equations along the trajectory; master-family membership test of the reconstructed profile.",
+  "residuals": {
+    "max_abs_00": 3.197442310920451e-14,
+    "max_abs_ii": 3.1716851367491472e-12,
+    "max_abs_continuity": 3.1890046159332996e-12
+  },
+  "quartic_control_ii_spread": 2.0926716318451684,
+  "turnaround": {
+    "t": 9.964300465806565,
+    "rho": 1.9999254738063723,
+    "rho_turnover_2M2_over_a2": 2.0
+  },
+  "Omega0_implied": 0.299778410889522,
+  "matter_frame_age_tauH0_over_A0": 0.8412566051936344,
+  "master_family_membership": {
+    "u_s_probe": 15.0,
+    "exact_member_max_frac_dev": 2.220456736312254e-16,
+    "natural_member_max_frac_dev": 0.2642410900151148,
+    "natural_member_dev_u_le_half_us": 0.06056960375263615,
+    "deep_field_floor": {
+      "V_0_required": 2.0,
+      "V_rec_asymptote": 2.0
+    }
+  }
+}

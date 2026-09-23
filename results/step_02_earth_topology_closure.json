@@ -1,0 +1,47 @@
+{
+  "density_model": "Smoothed two-layer shape (11:4.5 core:mantle), normalized to Earth excess mass; not full PREM.",
+  "equation": "Same exact quartic and homogeneous equilibrium subtraction as step 01",
+  "classification": "Mean-profile geometry. A profile maximum is not a two-point correlation length.",
+  "scan": [
+    {
+      "lambda": 7.526e-73,
+      "mu": 9.020865660273179e-09,
+      "mantle_compton_km": 59813.22360090358,
+      "mantle_interval_maximum_r_km": 3671.1530088543577,
+      "maximum_at_interval_boundary": true,
+      "normalized_gradient": 1.0403617693542628,
+      "surface_varphi": 1.3925208103877396e-09,
+      "max_rms_residual": 1.9658479729175578e-05
+    },
+    {
+      "lambda": 7.526e-71,
+      "mu": 9.02086566027318e-07,
+      "mantle_compton_km": 27762.83580354224,
+      "mantle_interval_maximum_r_km": 3671.1530088543577,
+      "maximum_at_interval_boundary": true,
+      "normalized_gradient": 1.0403611368070997,
+      "surface_varphi": 1.3925144377336983e-09,
+      "max_rms_residual": 1.9658475178272368e-05
+    },
+    {
+      "lambda": 7.526000000000001e-69,
+      "mu": 9.02086566027318e-05,
+      "mantle_compton_km": 12886.366538185715,
+      "mantle_interval_maximum_r_km": 3671.1530088543577,
+      "maximum_at_interval_boundary": true,
+      "normalized_gradient": 1.0402979051198782,
+      "surface_varphi": 1.3923049606768031e-09,
+      "max_rms_residual": 1.965802030184661e-05
+    },
+    {
+      "lambda": 7.526000000000001e-63,
+      "mu": 90.20865660273179,
+      "mantle_compton_km": 1288.636644919829,
+      "mantle_interval_maximum_r_km": 6243.557029299929,
+      "maximum_at_interval_boundary": true,
+      "normalized_gradient": 0.36760577949077716,
+      "surface_varphi": 2.672711776119051e-10,
+      "max_rms_residual": 1.9680558919169866e-05
+    }
+  ]
+}

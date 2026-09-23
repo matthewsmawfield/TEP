@@ -1,0 +1,108 @@
+<h2>Appendix A: Proofs and Key Derivations</h2>
+        
+        <h2>A1. Conformal null-cone invariance</h2>
+    <p>Let $\tilde{g}_{\mu\nu} = A(\phi)^2 g_{\mu\nu}$ with $A > 0$. A vector $k^\mu$ null with respect to $g_{\mu\nu}$, $g_{\mu\nu} k^\mu k^\nu = 0$, satisfies $\tilde{g}_{\mu\nu} k^\mu k^\nu = A^2 g_{\mu\nu} k^\mu k^\nu = 0$. Maxwell's action $S = -(1/4) \int \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$ is conformally invariant in 4D: under $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, $\sqrt{-\tilde{g}} F_{\mu\nu} F^{\mu\nu} = \sqrt{-g} F_{\mu\nu} F^{\mu\nu}$. Hence photon geodesics are conformally invariant; null cones coincide.</p>
+    
+    <h2>A2. Exact direct conformal propagation null</h2>
+    <p>Consider the purely conformal subclass $\tilde{g}_{\mu\nu} = A^2(\phi)\,g_{\mu\nu}$, $B = 0$. A photon trajectory satisfies</p>
+    <div class="equation">$$\tilde{g}_{\mu\nu}\,k^\mu k^\nu = A^2(\phi)\,g_{\mu\nu}\,k^\mu k^\nu = 0.$$</div>
+    <p>Because $A(\phi) > 0$, this is equivalent to $g_{\mu\nu}\,k^\mu k^\nu = 0$. Thus the conformal factor does not alter the local null cone or act as a direction-dependent refractive index. In a static conformal background, forward and backward propagation along the same geometrical path therefore acquire no conformal propagation-time antisymmetry:</p>
+    <div class="equation">$$\Delta t_{\rm prop}^{(A)} \equiv t_\to - t_\leftarrow = 0.$$</div>
+    <p>The conformal sector nevertheless remains observable through matter-clock rates and open-path comparisons. For stationary clocks, $d\tilde{\tau} = A(\phi)\,d\tau_g$, so clocks situated in different field environments can acquire different proper-time histories. The corresponding infinitesimal conformal transport is $\omega^{(A)} = d\ln A$, which is exact. Hence, in a smooth simply connected region,</p>
+    <div class="equation">$$\oint_C d\ln A = 0.$$</div>
+    <p>A static, purely conformal field can therefore produce clock-rate differences and open-path redshift effects, but cannot by itself generate a direction-odd same-path propagation residual or a non-zero closed-loop synchronization holonomy. Such a residual requires the disformal sector $B \neq 0$, explicit time dependence combined with motion through the field, or some other non-exact/topological transport structure.</p>
+        
+        <h2>A3. Synchronization holonomy invariance and projected disformal connection</h2>
+
+    <p>This appendix derives the leading-order disformal contribution to the synchronization connection used in Section 7 and shows why the GR-subtracted closed-loop residual is invariant under synchronization re-gauging.</p>
+
+    <h3>A3.1 Synchronization connection and re-gauging</h3>
+
+    <p>Consider a local threading decomposition of the matter-frame metric relative to a physical clock-network congruence:</p>
+    <div class="equation">$$d\tilde s^2 = \tilde g_{00} \left(dt+\tilde\sigma_i dx^i\right)^2 + \tilde h_{ij}dx^i dx^j .$$</div>
+    <p>Equivalently, up to the sign convention used for $\tilde\sigma_i$,</p>
+    <div class="equation">$$\tilde\sigma_i = \frac{\tilde g_{0i}}{\tilde g_{00}} .$$</div>
+    <p>If the opposite sign convention is adopted, all shifts below acquire the opposite sign, but the closed-loop result is unchanged.</p>
+
+    <p>A synchronization re-gauging of the same physical clock network assigns a different simultaneity offset to the same clock worldlines:</p>
+    <div class="equation">$$t' = t+\chi(x^i),$$</div>
+    <p>where $\chi$ is a single-valued spatial clock-offset function on the network at the epoch of the loop measurement. Then</p>
+    <div class="equation">$$dt = dt' - \partial_i\chi\,dx^i .$$</div>
+    <p>Substituting into the metric gives</p>
+    <div class="equation">$$dt+\tilde\sigma_i dx^i = dt' + \left(\tilde\sigma_i-\partial_i\chi\right)dx^i .$$</div>
+    <p>Therefore</p>
+    <div class="equation">$$\tilde\sigma_i \longrightarrow \tilde\sigma_i' = \tilde\sigma_i-\partial_i\chi .$$</div>
+    <p>In one-form notation,</p>
+    <div class="equation">$$\tilde\sigma \longrightarrow \tilde\sigma-d\chi .$$</div>
+    <p>With the opposite sign convention for $\tilde\sigma$, the sign reverses. In either convention, the change is exact.</p>
+
+    <p>The same simultaneity re-labelling acts on the threading combination $g_{0i}/g_{00}$ of any metric in the same way. The GR reference connection $\sigma_{\rm GR}$ is the corresponding threading connection computed from the GR reference metric on the same physical clock-network congruence, with the same loop, same coordinate convention, and the standard Sagnac, Lense--Thirring, Shapiro, gravitational-redshift, station-motion, clock-scale, and reference-frame corrections included. Therefore the same re-labelling gives</p>
+    <div class="equation">$$\sigma_{\rm GR} \longrightarrow \sigma_{\rm GR}-d\chi .$$</div>
+    <p>The GR-subtracted residual connection</p>
+    <div class="equation">$$\Delta\sigma \equiv \tilde\sigma-\sigma_{\rm GR}$$</div>
+    <p>therefore transforms as</p>
+    <div class="equation">$$\Delta\sigma \longrightarrow (\tilde\sigma-d\chi)-(\sigma_{\rm GR}-d\chi) = \Delta\sigma .$$</div>
+    <p>Thus the closed-loop observable</p>
+    <div class="equation">$$H_{\rm resid}(C) = \oint_C \Delta\sigma$$</div>
+    <p>is invariant under synchronization re-gauging.</p>
+
+    <p>Equivalently, if one works with a representative in which the residual connection itself shifts by an exact form,</p>
+    <div class="equation">$$\Delta\sigma\rightarrow \Delta\sigma+d\chi_{\rm res},$$</div>
+    <p>then the loop integral is still invariant because</p>
+    <div class="equation">$$\oint_C d\chi_{\rm res}=0$$</div>
+    <p>for single-valued $\chi_{\rm res}$. The observable is the loop class of the residual connection modulo exact one-forms, not a raw one-way synchronization convention.</p>
+
+    <p>This proof is local in time. The loop $C$ is evaluated on the spatial network at a specified epoch. Time dependence of $\phi$, $B(\phi)$, or the matter metric may change the value of $\Delta\sigma$ from one epoch to another, but it does not change the synchronization-gauge argument at a fixed epoch. The gauge freedom relevant to the closed-loop observable is the spatial simultaneity re-labelling $\chi(x^i)$ of the specified physical clock network.</p>
+    <p>For experimental campaigns extending over months, the integrated data does not evaluate a single 4D spacetime loop, but rather generates a continuous time-series of instantaneous 3D spatial loop integrations, $H_{\rm resid}(C, t)$. At any given temporal slice $t$, the spatial simultaneity re-labeling remains strictly exact ($\oint_C d\chi(t, x^i) = 0$). Slow temporal variations in $\phi(t)$, or shifts in the Earth's environmental screening state $\mathcal{E}$ along its orbit, merely manifest as predictable, time-dependent modulations (e.g., annual or diurnal phases) of a continuously gauge-invariant spatial holonomy.</p>
+
+    <h3>A3.2 Projected disformal contribution</h3>
+
+    <p>The matter metric is</p>
+    <div class="equation">$$\tilde g_{\mu\nu} = A^2(\phi)g_{\mu\nu} + B(\phi)\nabla_\mu\phi\nabla_\nu\phi .$$</div>
+    <p>Let $u^\mu$ be the four-velocity of the physical clock network defining the synchronization protocol, with</p>
+    <div class="equation">$$u^\mu u_\mu=-1$$</div>
+    <p>in the $(-+++)$ signature. The spatial projector into the local rest space of this congruence is</p>
+    <div class="equation">$$P_\mu{}^\nu = \delta_\mu{}^\nu + u_\mu u^\nu .$$</div>
+    <p>The scalar gradient decomposes as</p>
+    <div class="equation">$$\nabla_\mu\phi = D_\mu\phi - (u\cdot\nabla\phi)u_\mu ,$$</div>
+    <p>where</p>
+    <div class="equation">$$D_\mu\phi = P_\mu{}^\nu\nabla_\nu\phi$$</div>
+    <p>is the spatial gradient measured by the clock network.</p>
+
+    <p>The disformal part of the matter metric is</p>
+    <div class="equation">$$\delta_B \tilde g_{\mu\nu} = B\nabla_\mu\phi\nabla_\nu\phi .$$</div>
+    <p>Its mixed time-space projection relative to the clock-network congruence is</p>
+    <div class="equation">$$P_\mu{}^\alpha u^\beta \delta_B\tilde g_{\alpha\beta} = B \left(P_\mu{}^\alpha\nabla_\alpha\phi\right) \left(u^\beta\nabla_\beta\phi\right),$$</div>
+    <p>so</p>
+    <div class="equation">$$P_\mu{}^\alpha u^\beta \delta_B\tilde g_{\alpha\beta} = B D_\mu\phi (u\cdot\nabla\phi).$$</div>
+
+    <p>The synchronization connection is the normalized mixed time-space component of the matter metric. In a local rest frame of the clock congruence, the conformal background gives</p>
+    <div class="equation">$$\tilde g_{00}^{(A)} = -A^2 ,$$</div>
+    <p>while the disformal correction gives</p>
+    <div class="equation">$$\delta_B\tilde g_{0i} = B (u\cdot\nabla\phi) D_i\phi .$$</div>
+    <p>The disformal sector also corrects $\tilde g_{00}$ at order $B(u\cdot\nabla\phi)^2$. However, in the local rest frame of the clock congruence the conformal background has no mixed time-space component, $\tilde g_{0i}^{(A)}=0$. Therefore the correction to $1/\tilde g_{00}$ multiplies a vanishing conformal numerator and first contributes only at higher order in $B$. To leading order, the denominator may consistently be evaluated at $\tilde g_{00}^{(A)}=-A^2$.</p>
+
+    <p>Therefore, to leading order in $B$, using the convention $\tilde\sigma_i=\tilde g_{0i}/\tilde g_{00}$,</p>
+    <div class="equation">$$\delta\tilde\sigma_i \simeq \frac{\delta_B\tilde g_{0i}}{\tilde g_{00}^{(A)}} \simeq -\frac{B}{A^2} (u\cdot\nabla\phi) D_i\phi .$$</div>
+    <p>With the opposite convention for the synchronization one-form, the overall sign is reversed; the closed-loop invariance and exact/non-exact distinction are unaffected.</p>
+    <p>In covariant projected form this is</p>
+    <div class="equation">$$\delta\tilde{\sigma}_\mu \simeq -\frac{B}{A^2} (u\cdot\nabla\phi) D_\mu\phi ,$$</div>
+    <p>or equivalently</p>
+    <div class="equation">$$\delta\tilde{\sigma}_\mu \simeq -\frac{B}{A^2} (u\cdot\nabla\phi) P_\mu{}^\nu\nabla_\nu\phi .$$</div>
+    <p>Higher-order terms include corrections from the disformal contribution to $\tilde g_{00}$, lapse-shift mixing, and higher powers of $B(\nabla\phi)^2/A^2$.</p>
+
+    <p>In a hypersurface-orthogonal $3+1$ slicing, where $u^\mu=n^\mu$, this reduces to</p>
+    <div class="equation">$$\delta\tilde{\sigma}_i \approx -\frac{B}{A^2N} (\partial_i\phi)(n\cdot\partial\phi),$$</div>
+    <p>up to lapse-shift convention and higher-order disformal corrections.</p>
+    <p>Furthermore, because the reference connection $\sigma_{\rm GR}$ is constructed using the exact same non-inertial clock congruence $u^\mu$, any purely kinematic effects arising from the network's proper acceleration or rotation (such as Sagnac or Thomas precession) enter both $\tilde{\sigma}$ and $\sigma_{\rm GR}$ symmetrically. These kinematics therefore cancel identically in the residual connection $\Delta\sigma = \tilde{\sigma} - \sigma_{\rm GR}$, ensuring that non-inertial cross-terms do not artificially mimic or contaminate the genuine disformal synchronization holonomy.</p>
+
+    <p>This establishes the two claims used in the main text: the leading disformal synchronization representative is the projected mixed time-space component of the matter metric, and the GR-subtracted closed-loop residual is invariant under admissible synchronization re-gaugings of the fixed physical clock network.</p>
+        
+        <h2>A4. Disformal inverse and causality condition</h2>
+    <p>Given $\tilde{g}_{\mu\nu} = A^2 g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$, define the scalar-gradient one-form $q_\mu \equiv \partial_\mu\phi$. The inverse satisfies $\tilde{g}^{\mu\nu} \tilde{g}_{\nu\sigma} = \delta^\mu_\sigma$. Ansätz: $\tilde{g}^{\mu\nu} = A^{-2} (g^{\mu\nu} + C q^\mu q^\nu)$. Solve for $C$:</p>
+    <div class="equation">
+        $$A^{-2} [g^{\mu\nu} + C q^\mu q^\nu] [A^2 g_{\nu\sigma} + B q_\nu q_\sigma] = \delta^\mu_\sigma$$
+        $$\Rightarrow \delta^\mu_\sigma + A^{-2} (B + A^2 C + B C (q \cdot q)) q^\mu q_\sigma = \delta^\mu_\sigma$$
+        $$\Rightarrow A^2 C + B + B C (q \cdot q) = 0 \Rightarrow C = - \frac{B}{A^2 + B (q \cdot q)}.$$
+    </div>
+    <p>Thus $\tilde{g}^{\mu\nu} = A^{-2} \left[ g^{\mu\nu} - \frac{(B/A^2) q^\mu q^\nu}{1 + (B/A^2) (q \cdot q)} \right]$. Lorentzian signature requires $1 + (B/A^2)(q \cdot q) > 0$.</p>

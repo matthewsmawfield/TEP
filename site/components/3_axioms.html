@@ -1,0 +1,300 @@
+<h2>2. Axioms and the Temporal Equivalence Principle</h2>
+    <p>The framework adopts four axioms:</p>
+    <div class="principle">
+        <ul class="axiom-list">
+            <li><strong>A1. Two-metric structure on a single manifold.</strong> Gravity is described by a Lorentzian metric $g_{\mu\nu}$; matter fields, clocks, and rulers couple to a causal (matter) metric $\tilde{g}_{\mu\nu}$. The metrics are related by a disformal map
+                <div class="equation">$$\tilde{g}_{\mu\nu} = A^2(\phi) g_{\mu\nu} + B(\phi) \nabla_\mu\phi \nabla_\nu\phi,$$</div>
+                with a universal conformal factor $A(\phi) = \exp(\beta_A \phi/M_{\text{Pl}})$ and a small disformal function $B(\phi)$ consistent with multi-messenger constraints today.
+            </li>
+            <li><strong>A2. Temporal Equivalence Principle (TEP).</strong> All non-gravitational processes evolve according to proper time $d\tau$ defined by $\tilde{g}_{\mu\nu}$: $i\hbar d|\psi\rangle/d\tau = \hat{H}|\psi\rangle$, nongravitational fields propagate on $\tilde{g}$-null cones, and ideal clocks tick $d\tau^2 = -\tilde{g}_{\mu\nu} dx^\mu dx^\nu/c^2$. In local freely falling frames for $\tilde{g}_{\mu\nu}$, physics reduces to special relativity with invariant c.</li>
+            <li><strong>A3. Causal safety and locality.</strong> Today, $c_g = c_\gamma$ within current bounds ($|c_g - c_\gamma|/c \lesssim \text{few}\times10^{-15}$). This is enforced by choosing $A(\phi)$ universal, such that conformal transformations preserve null cones for photons and gravitons when $B = 0$, and by constraining the observable combination $B(\phi)(\partial\phi)^2$ along late-time astrophysical propagation paths. Different experiments constrain different integrals or responses involving the single disformal function $B(\phi)$; GW170817 does not require $B$ to vanish identically in all regimes. Hyperbolicity and energy conditions hold within the EFT domain.</li>
+            <li><strong>A4. Screening and universality.</strong> The coupling $A(\phi)$ is universal at leading order; loop-induced composition dependence is tightly bounded. Environmental suppression of the locally observable Temporal Shear/source-charge sector reconciles local tests with cosmological dynamics. Chameleon, Vainshtein, Galileon, DBI, and symmetron mechanisms are treated as candidate microscopic completions, not as the defining ontology of TEP. Screening manifests as a continuous spatial and covariance structure of the scalar time field (Temporal Topology) governed by the temporal potential field and its gradient (Temporal Shear), suppressing geometric deviations in screened regimes while leaving cosmology accessible to dynamics.</li>
+        </ul>
+    </div>
+    <p>These axioms encode Einstein's local invariance as a theorem and extend it: c is exactly invariant for every tangent space of $\tilde{g}_{\mu\nu}$, but global synchronization and one-way timing depend on the dynamical field $\phi$.</p>
+
+    <p>The scalar time field $\phi$ is defined on the spacetime manifold of Axiom A1 and is present at every event. The ambient cosmological value $\phi_\infty = 0$ is a boundary condition, not an absence of the field. What distinguishes dense from dilute environments is not the presence or absence of $\phi$ but the matter trace $T^{(\rm m)}$ and the environmental state vector $\mathcal{E}$ (ambient density, compactness, gradients, boundary geometry). The term "vacuum" is retained in its standard field-theory sense — the $T^{(\rm m)} = 0$ limit of the matter sector — and does not denote a region devoid of the temporal field.</p>
+
+    <p>Environmental screening $\mathcal{S}_\Sigma(\mathcal{E})$ suppresses the conformal gradient $\Sigma_\mu = \nabla_\mu \ln A$. In TEP, this spatial gradient—measuring how clock tick-rates slope from one point to another—is formally named the Temporal Shear. It governs the geometric refraction of matter: when the slope is steep, matter geodesics bend; when it is flat ($\Sigma_\mu \to 0$), matter follows standard General Relativity paths. The Temporal Shear is suppressed via temporal-topology pinning in dense regions. It does not suppress the disformal sector $B(\phi)$, which is governed by its own field-space envelope (Section 2.2). The two are distinct mechanisms operating on distinct sectors of the disformal map. The amplitude/shear split ($\mathcal{S}_\Sigma \to 0$, $S_A \sim 1$) suppresses the spatial gradient while preserving the field value: $A(\phi)$ continues to vary inside screened matter, which is why clocks run slower in deeper wells. What is pinned is the gradient, not the field amplitude. Theorem 2 (Section 6) further establishes that a static conformal gradient produces no directional photon-propagation asymmetry; direction-dependent null propagation requires the disformal sector, time-dependent geometry, or another non-exact transport contribution.</p>
+
+    <h2>Sector mapping</h2>
+    <div style="overflow-x: auto; margin: 20px 0;">
+        <table style="border-collapse: collapse; width: 100%; font-size: 14px;">
+            <thead>
+                <tr style="background-color: rgba(28, 46, 74, 0.04); border: 1px solid var(--gray-light);">
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Sector</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Physical effect</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Coupling</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Key bound</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>Conformal $A(\phi)$</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Clock rates, proper time rescaling</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Universal ($\beta_A$)</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Cassini PPN-$\gamma$ (via $S_\Sigma$ source charge), redshift tests</td>
+                </tr>
+                <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>Disformal $B(\phi)$</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Null cone tilts, direction-dependent propagation</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Small, environment-dependent</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">GW170817: $|c_\gamma - c_g|/c \lesssim \text{few}\times10^{-15}$</td>
+                </tr>
+                <tr style="border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>Temporal Topology</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Spatial/covariance structure of $\ln A(\phi)$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Field configuration + gradient suppression</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Clock/covariance correlation length $\lambda_T$</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>The conformal sector governs clock rates; the disformal sector governs cone tilts. GW170817 directly bounds disformal cone splits governed by $B$. It does not directly test common-mode conformal clock-rate structure governed by $A$, although local conformal gradients/source charges remain constrained by PPN, gravitational-redshift, clock-comparison, and equivalence-principle tests.</p>
+
+    <h2>2.1 Relation to Other Modified Gravity Frameworks</h2>
+    <p>The TEP framework can be situated within the broader landscape of modified gravity and scalar-tensor theories. To clarify its unique features, a comparative analysis is provided:</p>
+    
+    <div style="overflow-x: auto; margin: 20px 0;">
+        <table style="border-collapse: collapse; width: 100%; font-size: 14px;">
+            <caption style="font-weight: bold; margin-bottom: 10px;">Table 1: Comparison with Other Scalar-Tensor Frameworks</caption>
+            <thead>
+                <tr style="background-color: rgba(28, 46, 74, 0.04); border: 1px solid var(--gray-light);">
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Theory/Framework</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Key Fields</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Matter Coupling</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">$c_g = c_γ$?</th>
+                    <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Key Observable Signature</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>TEP (This work)</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">$g_{\mu\nu}$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Universal to $\tilde{g}_{\mu\nu} = A^2 g_{\mu\nu} + B \partial_\mu\phi \partial_\nu\phi$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Equal in conformal/common-mode limit; differential deviations possible through $B$ and constrained by same-path EM–GW timing</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Synchronization Holonomy $H_{\rm resid}$</td>
+                </tr>
+                <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>Horndeski</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">$g_{\mu\nu}$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Minimal to $g_{\mu\nu}$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Yes, after GW170817 constraints</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Modified growth, ISW</td>
+                </tr>
+                <tr style="border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>DHOST</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">$g_{\mu\nu}$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Minimal to $g_{\mu\nu}$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Yes, for specific degenerate classes</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Modified growth, screening</td>
+                </tr>
+                <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>TeVeS</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">$g_{\mu\nu}$, $A_\mu$, $\phi$</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">To a combined metric</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">No</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">MOND phenomenology, lensing</td>
+                </tr>
+                <tr style="border: 1px solid var(--gray-light);">
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);"><strong>SMEFT</strong></td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">SM fields</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Lorentz-violating operators</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Model-dependent</td>
+                    <td style="padding: 8px; border: 1px solid var(--gray-light);">Anisotropic propagation, CPT violation</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <p>The multi-messenger constraint from GW170817 constrains the integrated EM–GW differential disformal contribution along observed late-time astrophysical paths. It does not require the disformal sector to vanish identically in all regimes. In the conformal limit, common-mode path effects cancel in EM–GW timing; residual $B$-sector structure remains testable through multipath delays, closed-loop holonomy, and topological or interferometric regimes. The model, with a universal conformal coupling $A(\phi)$ and a disformal term $B(\phi)$, automatically satisfies $c_g = c_γ$ in the conformal limit ($B=0$). A non-zero $B(\phi)$ introduces a calculable deviation $c_γ ≠ c_g$ constrained by future multi-messenger observations.</p>
+    
+    <p>Conceptually, TEP differs from many scalar-tensor theories by its foundational principle: the universal coupling of matter to a single metric $\tilde{g}_{\mu\nu}$. This is philosophically closer to Bekenstein's TeVeS theory, which also introduced a separate matter metric, but the framework is more minimal, using only a scalar, and makes a distinctive operational prediction in the form of the synchronization holonomy.</p>
+
+    <h2>2.2 Minimal covariant action</h2>
+
+    <p>The displayed low-curvature action below represents the leading sector of the master TEP Effective Field Theory. The strong-curvature completion includes higher-order curvature operators (such as the scalar-Gauss-Bonnet coupling $\alpha_{\rm GB} f(\phi)\mathcal{G}$) which are negligible in the weak-field and cosmological regimes studied here, but become active in the strong-field regime to supply real backreaction (as detailed in TEP-BH, Paper 28). The unified action, including the strong-curvature sector, is</p>
+
+    <div class="equation">$$
+    S
+    =
+    \int d^4x\sqrt{-g}
+    \left[
+    \frac{M_{\rm Pl}^2}{2}R
+    -\frac{1}{2}K(\phi)(\nabla\phi)^2
+    -V(\phi)
+    +\alpha_{\rm GB}\,f(\phi)\,\mathcal{G}
+    \right]
+    +
+    S_m[\psi_i,\tilde g_{\mu\nu}],
+    $$</div>
+
+    <p>with the conformal-disformal matter metric</p>
+
+    <div class="equation">$$
+    \tilde g_{\mu\nu}
+    =
+    A^2(\phi)\,g_{\mu\nu}
+    +
+    B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi .
+    $$</div>
+
+    <p>In the weak-field regime ($\alpha_{\rm GB} f(\phi)\mathcal{G}\to 0$, $K\to 1$) this reduces to the minimal scalar-tensor action used throughout Papers 1–19. The strong-curvature sector is activated only in the black-hole completion (Paper 28) and does not participate in any GNSS, LLR, cosmological, or wide-binary calculation. The field-dependent coefficient $K(\phi)$ in this action is absorbable by a field redefinition ($\chi = \int\sqrt{K(u)}\,du$) and does not by itself constitute nonlinear derivative screening; the candidate derivative realization $K(X)$ introduced below is a distinct object, specified separately as a candidate microscopic completion.</p>
+
+    <h3>Canonical microscopic structure</h3>
+
+    <p>The universal conformal coupling, the conformal–disformal matter metric architecture, and the observable Temporal-Topology response structure are fixed. The framework cleanly divides responsibilities: the two-body operator $\mathcal{S}_{\rm eff}$ governs pairwise Temporal Shear recovery, while the scalar self-interaction $V(\phi)$ must remain flat/shallow across the matter-hosting domain to satisfy cosmological background constraints. The candidate master potential of Section 8 is a single smooth ($C^\infty$) function whose essential singularity supplies the locally flat potential floor required by the temporal-well roll (Appendix E, R3). The items below specify the canonical microscopic structure.</p>
+
+    <p><em>Conformal coupling.</em> The conformal factor is fixed universally as</p>
+
+    <div class="equation">$$
+    A(\phi) = \exp\!\left(\frac{\beta_A\,\phi}{M_{\rm Pl}}\right),
+    \qquad \beta_A = -1.0,
+    $$</div>
+
+    <p>so that the dimensionless coupling $d\ln A/d\varphi = \beta_A = -1$ is frozen (equivalently $\alpha_0 = \sqrt{2}\,\beta_A$ in DEF normalization), where $\varphi \equiv \phi/M_{\rm Pl}$ is the dimensionless field variable. The weak-field Solar-System safety is not a second parameter $\beta\approx -0.013$ but the screened source charge $S_\Sigma^{(\odot)}\,\alpha_0$: because the photon probe is unscreened while the source charge is suppressed, the PPN deviation is linear in the solar charge fraction, providing the strict, sign-definite prediction $\gamma_{\rm PPN}-1 = -4\beta_A^2 S_\Sigma^{(\odot)}/(1+2\beta_A^2 S_\Sigma^{(\odot)}) < 0$, constrained by Cassini to $|\gamma_{\rm PPN}-1| < 2.3\times10^{-5}$, fixing $S_\Sigma^{(\odot)} \lesssim 5.8\times10^{-6}$ in the Solar-System environment. The terrestrial amplitude factor $S_A^{(\oplus)}$ governs GNSS clock-rate and covariance observables. The Solar-System source-charge factor $S_\Sigma^{(\odot)}$ is a different projection and need not equal $S_A^{(\oplus)}$.</p>
+
+    <p><em>Sign convention for $\phi$ (corpus-wide).</em> The scalar field is defined so that <strong>$\phi &gt; 0$ in the vicinity of a mass concentration</strong>, with the ambient cosmological value taken as the zero point by convention, $\phi_\infty = 0$. Combined with the frozen coupling $\beta_A = -1$, this fixes every downstream sign in the framework:</p>
+    <ul>
+        <li>$A(\phi) = \exp(\beta_A\varphi) &lt; 1$ near a mass, so the conformal factor is <em>suppressed</em> in a potential well.</li>
+        <li>Since matter clocks tick at $d\tau/dt \simeq A(\phi)$, clocks run slower in deeper wells. This reproduces the sign of the ordinary gravitational redshift and is therefore the convention consistent with general relativity in the screened limit.</li>
+        <li>The Temporal Shear $\Sigma_\mu \equiv \nabla_\mu \ln A = \beta_A \nabla_\mu \varphi$ points <em>outward</em> from a mass (since $\beta_A &lt; 0$ and $\nabla_\mu\varphi$ points inward).</li>
+        <li>Consequently $\beta_A \phi &lt; 0$ near a mass, and $\Delta \ln A &lt; 0$ relative to the ambient environment.</li>
+    </ul>
+    <p>The opposite choice ($\phi &lt; 0$ near a mass, giving $A &gt; 1$ and clocks running <em>faster</em> in wells) is inconsistent with the measured sign of gravitational redshift and is not used anywhere in this corpus. Any paper reporting a conformal-sector sign should be checked against this convention before its result is compared with another paper's. Where a manuscript quotes $\lvert\beta_A\rvert$ or an unsigned effective coupling, that is a magnitude and carries no sign information.</p>
+    <p><em>Bidirectionality of the conformal factor.</em> The prohibition above concerns the sign of $A$ in potential wells. The conformal factor nevertheless deviates symmetrically relative to the ambient medium ($A = 1$): $A &lt; 1$ in overdensities (clocks tick slower) and $A &gt; 1$ in underdensities (clocks tick faster). In the weak-field limit, the scalar perturbation $\delta\phi \simeq 2\beta_A\,M_{\rm Pl}\,\Phi_N$ traces the Newtonian potential with a sign flip, forcing the temporal field to oscillate both above and below unity depending on the local matter distribution. Along an extended line of sight through the cosmic web, these exact conformal excursions spatially average out to recover the smooth cosmological background. However, the non-exact covariance $\mathcal{C}_T$ (Paper 26) retains a cumulative, macroscopic residual that resists spatial averaging. This distinction between exact conformal averaging and non-exact residual survival is the physical content of the $\Sigma_\parallel + \mathcal{C}_{T,\parallel}$ decomposition of Paper 26.</p>
+
+    <p><em>Disformal coupling.</em> The matter metric contains a disformal coupling function $B(\phi)$. Observable disformal effects depend on the complete combination $B(\phi)\nabla_\mu\phi\nabla_\nu\phi$, rather than on $B(\phi)$ alone. Paper 28 employs the field-space envelope</p>
+
+    <div class="equation">$$
+    B(\phi) = B_0\,\frac{\varphi^2}{1+\varphi^2}\,
+    \exp\!\left(-\frac{\varphi^4}{2\,\sigma_B^4}\right),
+    \qquad \varphi\equiv\phi/M_{\rm Pl},
+    $$</div>
+
+    <p>as a prescribed strong-field realization. At weak-field values ($\varphi \sim 10^{-10}$), the exponential damping factor is unity to extremely high precision and $\varphi^2/(1+\varphi^2)\simeq\varphi^2$, so $B(\phi)\simeq B_0\varphi^2$ throughout terrestrial and typical astrophysical environments. Its rapid large-$|\varphi|$ damping provides additional strong-field suppression of the disformal contribution, enforcing conformal dominance and protecting the Lorentzian matter-metric branch when scalar gradients become extreme. This field-space envelope is not identified with ordinary environmental Temporal-Topology screening, which arises primarily through the environment-dependent scalar configuration and its active gradient. The unique corpus-wide microscopic form and normalization of $B(\phi)$ therefore remain part of the action-closure problem. In the dimensionful Jakarta field convention, $B_0$ carries mass dimension $-4$ so that $B(\phi)\,\nabla_\mu\phi\,\nabla_\nu\phi$ is dimensionless; numerical normalizations employed in Paper 28's geometrized, dimensionless-field strong-field construction are therefore not imported directly into the weak-field theory. GW170817 constrains the path-integral combination $B(\phi)(\partial\phi)^2$ along observed late-time astrophysical paths; it does not require $B\equiv 0$ in every regime. The theory field $\phi$ remains dimensionful (mass dimension 1) throughout, consistent with the canonical kinetic term $-\frac12(\nabla\phi)^2$ and the conformal factor $A=\exp(\beta_A\phi/M_{\rm Pl})$; $\varphi$ is introduced only as a shape variable for $B$. The strong-field regime in which this envelope is exercised by Paper 28 lies beyond the small-$B$ EFT domain in which the invertibility and signature conditions of Section 4 are established; those applications are conditional on the completed nonlinear realization.</p>
+
+    <p><em>Temporal-Topology saturation sector.</em> Environmental suppression in TEP is defined by the continuous response of the Temporal Topology rather than by a discrete density threshold or thin-shell boundary. Writing $\Theta \equiv \ln A(\phi)$ and $\Sigma_\mu \equiv \nabla_\mu \Theta$, the conformal-amplitude response $S_A$ and the Temporal-Shear/source-charge response $S_\Sigma$ are distinct observable projections of the same environment-dependent scalar configuration. The macroscopic scale</p>
+
+    <div class="equation">$$
+    \rho_T \simeq 20\ {\rm g\,cm^{-3}}
+    $$</div>
+
+    <p>denotes the empirically calibrated Temporal-Topology saturation/reference scale. It is not a universal microscopic density cutoff and does not define a binary screened/unscreened transition. In the weak-field, canonical $K\to 1$, $B\to 0$, quasistatic limit, a particular microscopic completion must satisfy the scalar field equation $\nabla^2\phi = V_{,\phi} + \mathcal{Q}_m$, with the matter-source convention defined consistently with the action of Section 2.2. Defining the conserved Einstein-frame density $\rho_* = A^3\tilde\rho$, the field equation reads</p>
+
+    <div class="equation">$$
+    \nabla^2\phi = V_{,\phi} + \rho_*\,A_{,\phi}.
+    $$</div>
+
+    <p>In regions where a particular completion admits an adiabatic density-dependent equilibrium, this may reduce to a local balance of the form $V_{,\phi} + \rho_*\,A_{,\phi} \simeq 0$. Such an effective minimum is one possible local realization of Temporal-Topology saturation; it is not the defining screening ontology of TEP. Chameleon, Vainshtein, Galileon, DBI, symmetron, and related mechanisms therefore remain candidate microscopic realizations rather than definitions of the framework. The observable spatial gradient suppression is natively handled by the two-body kinetic operator, leaving the potential $V(\phi)$ free to satisfy the shallow background conditions required by cosmology.</p>
+
+    <p><em>Screening operators.</em> Two projections of the solved nonlinear field configuration are needed. The field-amplitude (clock) screening $S_A$ measures the suppression of the conformal factor excursion relative to its unscreened cosmological baseline (Paper 26; Appendix E, R7):</p>
+
+    <div class="equation">$$
+    S_A(\mathcal{E})
+    \equiv
+    \frac{\bigl(A(\phi(\mathbf r)) - 1\bigr)_{\rm local}}
+         {\bigl(A(\phi) - 1\bigr)_{\rm unscreened}},
+    $$</div>
+
+    <p>The source-charge (shear) screening $S_\Sigma$ measures the suppression of the effective exterior scalar charge relative to the unscreened coupling:</p>
+
+    <div class="equation">$$
+    S_\Sigma(\mathcal{E})
+    \equiv
+    \frac{Q}{Q_0}
+    =
+    \frac{\alpha_{\rm eff}}{\alpha_0},
+    $$</div>
+
+    <p>where $\phi(\mathbf r)$ is the solved static profile for the given source geometry, density, compactness, and boundary conditions, and $Q$ is the effective scalar charge sourced by the body. Both are defined as observable projections of the physical nonlinear field configuration rather than independent domain-by-domain couplings. Their macroscopic environmental response is supplied by the corpus-wide $\mathcal{S}_\Sigma(\mathcal{E})$ construction; derivation of a particular microscopic kinetic realization from the master action remains a separate calculation. $S_A$ governs clock-rate residuals and covariance; $S_\Sigma$ governs PPN deviations and geodesic deviation bounds. The two need not be numerically identical. Strong gradient flattening suppresses $S_\Sigma$, while $S_A$ depends separately on the local field amplitude relative to its reference environment. The mesoscopic screening law of Paper 25 ($\mathcal{S}_\Sigma^{\rm meso} = S_{\rm TEP}\times S_{\rm TF}\times S_{\rm boundary}\times S_{\rm decoherence}$) is a factorization of $S_\Sigma$ at intermediate scales.</p>
+
+    <p><em>Radial ODE closure calculation.</em> The static weak-field scalar equation $\nabla^2\phi = V_{,\phi} + \rho_*\,A_{,\phi}$ is solved numerically for a spherical source with the bidirectional conformal coupling $A(\phi) = \exp(-\phi/M_{\rm Pl})$, $\beta_A = -1$, using <code>scipy.integrate.solve_bvp</code> with core regularity ($\phi'(0)=0$) and cosmological relaxation ($\phi(r_{\max})\to 0$) boundary conditions (Appendix E, R1). The key dimensionless parameter is the unscreened field amplitude $\psi_{\rm uns} = M/(4\pi M_{\rm Pl}^2 R)$, which controls the strength of the conformal nonlinearity. Two theoretical baselines are evaluated against the Cassini bound $|\gamma_{\rm PPN}-1| < 2.3\times 10^{-5}$ (requiring $S_\Sigma^{(\odot)} \lesssim 5.8\times 10^{-6}$ at 1 AU):</p>
+
+    <p>(i) $V = 0$ (pure bidirectional conformal screening). The nonlinear source $-(\rho_*/M_{\rm Pl})\exp(-\phi/M_{\rm Pl})$ provides gradient flattening in overdensities ($\phi > 0$, $\exp(-\phi/M_{\rm Pl}) < 1$, source weakened) and enhancement in underdensities ($\phi < 0$, $\exp(-\phi/M_{\rm Pl}) > 1$). The screening correction is $O(\psi_{\rm uns}) \sim 4\times 10^{-6}$ for the Sun — only a fractional reduction of the effective charge, leaving $S_\Sigma \approx 1$, far above the Cassini requirement $S_\Sigma \lesssim 5.8\times 10^{-6}$. The conformal nonlinearity alone is too weak for Solar-System screening.</p>
+
+    <p><strong>(ii) Candidate kinetic completion of two-body screening.</strong> The effective Temporal-Topology response is produced by the nonlinear interaction of overlapping scalar-field gradients in the nested environmental landscape. A phenomenological target operator for this response is a noncanonical kinetic theory with response function</p>
+    <div class="equation">$$K(X)=1+\left(\frac{|X|}{\Lambda^4}\right)^n, \qquad X=-\frac12(\nabla\phi)^2,$$</div>
+    <p>When the gradients of two bodies overlap, nonlinear derivative interactions can suppress their effective scalar response in a separation-dependent manner. The effective pairwise projection is parameterized by</p>
+    <div class="equation">$$\mathcal S_{\rm eff} =S_{\rm body}(M_1)S_{\rm body}(M_2) \left[1+\left(\frac{R_s}{s}\right)^k\right]^{-1}.$$</div>
+    <p>(The sign-safe form $|X|$ is required: on the static branch $X<0$, and the power law is otherwise defined only for even integer $n$.) This response law, where $k \ge 4$ is strictly required to satisfy Saturn's ephemeris while activating the wide-binary Temporal Shear, defines the effective description tested against orbital observations. The factors $S_{\rm body}(M)$ are single-body exterior charge ratios — distinct quantities from the pairwise suppression $\mathcal S_{\rm eff}(s)$ itself: the adopted Solar-System source-charge conventions in the corpus (e.g., $S_\Sigma^{(\odot)}\sim2\times10^{-6}$) refer to the former, while Cassini-level pairwise suppression is orders of magnitude deeper. The displayed $K(X)$ is a phenomenological target operator for the already-established macroscopic Temporal-Topology response: its derivation from the master action remains an open calculation, while the covariant environmental screening operator itself is already constructed and tested across the corpus (Paper 26, \S2.5). The defining TEP architecture does not depend on selecting this particular kinetic completion.</p>
+    <p>With a mass-scaling $R_s(M) \propto M^p$ evaluated at $p=1/3$ (from wide-binary demographic splits), this single operator simultaneously fits 8 orders of magnitude in distance and 6 orders of magnitude in mass: it recovers the Temporal Shear at wide-binary scales ($2646$ AU), suppresses the pairwise Solar Temporal Shear to $\sim 6\times10^{-23}$ at the conjunction separation $s = 1.6\,R_\odot$ and $10^{-10}$ at Saturn ($9.5$ AU), and yields an Earth–Moon differential acceleration far below the LLR constraint (pairwise response factors $\sim 2.5\times10^{-14}$). Furthermore, in the shear sector it suppresses the Earth-vicinity pairwise response, $F(7013\text{ km}) \to 0$. This is a statement about $\mathcal S_\Sigma$ alone: the clock sector is a different projection, and the terrestrial amplitude factor $S_A^{(\oplus)}$ is not suppressed by $\mathcal S_{\rm eff}(s)$, so the GNSS clock-rate and covariance observables are unaffected; the effective response satisfies the stated benchmark constraints (Appendix E, R2).</p>
+
+    <p><em>The Nested Hierarchy and the Pairwise Projection.</em> The use of a two-body operator does not imply the universe consists of isolated pairs in a vacuum. The full reality is a continuous nested hierarchy: a global cosmological baseline hosts galactic ambients, which in turn host solar and terrestrial wells. At Earth's surface, the field decomposition is overlapping and nested (approximately 93% galactic, 6.5% solar, 0.5% terrestrial). The two-body operator $\mathcal{S}_{\rm eff}$ is simply the effective pairwise projection of the master environmental operator $\mathcal{S}_\Sigma(\mathcal{E})$ — whose covariant EFT form, unifying the gradient and density control parameters, is constructed in Paper 26 \S2.5 — when solving a specific two-body Keplerian orbit (such as Saturn around the Sun, or wide binaries). It describes how the mutual separation $s$ allows the local gradient to recover against the ambient Galactic floor.</p>
+
+    <p><em>The Flyby Reduction Artefact.</em> Because the two-body operator strongly screens the Earth-vicinity Temporal Shear, the $\sim 10^{-3}\,\mathrm{m/s}$ Earth flyby anomaly in $\Delta v$ cannot be a Temporal Shear anomaly. Instead, it is identified as a candidate Clock-Sector Reduction Artefact. Orbit determination codes reconstruct velocities using an assumed GR time standard; highly asymmetric, fast hyperbolic flybys accumulate rapid proper-time offsets at perigee due to the Temporal field's gradient, which are misread by the separate pre- and post-encounter fits as a $\Delta V$ discontinuity. This is consistent with the absence of the effect in circular orbits (GP-B, LAGEOS, GRACE), and with its intermittency across hyperbolic encounters, which a geometry- and pipeline-dependent reduction artefact predicts but a fixed dynamical anomaly does not.</p>
+
+    <p><em>Cassini constraint interpretation.</em> The Cassini Shapiro-delay measurement is a round-trip radio ranging experiment performed during solar conjunction. The signal path samples the Sun's deep potential well, which in TEP corresponds to the strongly screened solar environment of the single-body response. The bound $S_\Sigma^{(\odot)} \lesssim 5.8\times 10^{-6}$ applies to the solar-vicinity environment along the signal path, not to the dilute interstellar medium where the effective coupling recovers for wide-binary dynamics. The pairwise factor $\mathcal S_{\rm eff}(s)$ governs two-body orbital dynamics and is not the projection tested by a massless probe; the Cassini channel is therefore governed by the single-body source charge $S_\Sigma^{(\odot)}$ through the screened-limit PPN relation $\gamma_{\rm PPN}-1 = -4\beta_A^2 S_\Sigma/(1+2\beta_A^2 S_\Sigma)$ of §7. The photon-probe projection of the recovery operator is specified in the companion screening analyses.</p>
+
+        <p><em>Wide-binary and cross-scale consistency.</em> The wide-binary velocity excess (Paper 13, $\alpha_{\rm sat} = 0.366 \pm 0.012$, $R_s = 2646 \pm 182$ AU) is a geodesic kinematics observable. The cross-scale architecture rests on the universal two-body operator $\mathcal{S}_{\rm eff}$. The ten-order-of-magnitude gap between the Cassini and wide-binary single-body response requirements is resolved naturally by the separation factor $[1 + (R_s/s)^4]^{-1}$. The cross-scale structure spans from the solar-conjunction separation $s = 1.6\,R_\odot$ through $1$ AU (LLR), $9.5$ AU (Saturn), and up to $2646$ AU (wide binaries), satisfying the stated cross-scale benchmark constraints within the effective response model; the Cassini bound itself acts on the single-body charge $S_\Sigma^{(\odot)}$ rather than on this pairwise factor. The terrestrial scale is independently resolved, as the Earth-vicinity Temporal Shear is strongly screened, moving the Earth-flyby anomaly entirely into the clock sector as a reduction artefact.</p>
+
+<p><em>Recovery operator — defining constraints.</em> Locally the time field recovers Temporal Shear (a geometric acceleration) only in low-acceleration, two-source configurations, and saturates everywhere else. The recovery operator is fixed by six constraints: F1 — excludes the inverse-power thin-shell branch: with $\beta_A = -1$, the inverse-power potential has no admissible minimum and predicts the wrong environmental direction; F2 — not a pure gradient cap $P(X)$ (a gradient-cap scale $g_{\rm cap} \sim g_{\rm TEP}$ would leave an unsuppressed Solar-System acceleration floor $\approx 2\beta^2 g_{\rm cap} \approx 10^{-9}$ m s$^{-2}$, $10^5\times$ the Saturn bound); F3 — $K > 3\Omega_m$ (kinetic-sector stability bound); F4 — per-system recovery steepness $k \geq 4$ in separation, derived from the Saturn ephemeris bound and the wide-binary transition radius; the corresponding two-body configuration-dependent realization is developed in the companion screening analyses; F5 — transition radius larger in denser environments, amplitude rises with mass ratio $q$, transition radius grows as $R_s \propto M^{1/3}$ while amplitude falls with primary mass (weaker self-screening in lower-mass systems revealing larger unsuppressed response; measured, Paper 13); F6 — environmental coupling normalisation differs by $\approx 4$–6% between host disks and anchors (measured, Paper 11). The canonical exponential is a population curve; each system recovers steeply, $f_i(s) = [1 + (R_i/s)^k]^{-1}$, with transition radii $R_i$ spread by the environmental state. The operator is fixed by what it must do, not by an assumed potential. F3 is the screening-sector counterpart of the invertibility, hyperbolicity, and no-ghost conditions of Section 4: those conditions are established for the canonical branch $K \to 1$, and extending them to the noncanonical $K(X)$ realization belongs to the same open action-level derivation.</p>
+
+    <p>Variation with respect to the Einstein-frame metric, $\phi$, and matter fields gives the Einstein-frame field equations, scalar equation of motion, and matter-frame conservation law.</p>
+
+    <h2>2.3 Field equations and conservation laws</h2>
+
+    <p>The field equations below are the low-curvature $K\to 1$, $\alpha_{\rm GB}f(\phi)\mathcal{G}\to 0$ equations relevant to the sectors considered in this paper (GNSS, LLR, cosmological background, wide binaries). The strong-curvature sector is invoked only in the black-hole completion (Paper 28). Varying the action with respect to the Einstein-frame metric, $\phi$, and the matter fields yields three sets of equations.</p>
+
+    <h3>Einstein-frame field equations</h3>
+
+    <div class="equation">$$G_{\mu\nu} = \frac{1}{M_{\rm Pl}^2}\left[ T_{\mu\nu}^{(\phi)} + T_{\mu\nu}^{(m)} \right],$$</div>
+
+    <p>with the scalar stress-energy</p>
+
+    <div class="equation">$$T_{\mu\nu}^{(\phi)} = \nabla_\mu\phi \nabla_\nu\phi - g_{\mu\nu}\left[\frac{1}{2}(\nabla\phi)^2 + V(\phi)\right].$$</div>
+
+    <p>The Einstein-frame matter stress-energy $T_{\mu\nu}^{(m)}$ is obtained from $S_m[\tilde{g}]$ by functional differentiation with respect to the inverse Einstein-frame metric $g^{\mu\nu}$:</p>
+
+    <div class="equation">$$T_{\mu\nu}^{(m)} = -\frac{2}{\sqrt{-g}}\frac{\delta S_m}{\delta g^{\mu\nu}} = \frac{\sqrt{-\tilde{g}}}{\sqrt{-g}}\,\tilde{T}_{\alpha\beta}^{(m)}\,\frac{\partial\tilde{g}^{\alpha\beta}}{\partial g^{\mu\nu}},$$</div>
+
+    <p>where $\tilde{T}_{\alpha\beta}^{(m)} = -\frac{2}{\sqrt{-\tilde{g}}}\frac{\delta S_m}{\delta\tilde{g}^{\alpha\beta}}$ is the matter-frame stress-energy. For the disformal inverse</p>
+
+    <div class="equation">$$\tilde{g}^{\mu\nu} = A^{-2}\left[g^{\mu\nu} - \frac{(B/A^2)\,\partial^\mu\phi\,\partial^\nu\phi}{1+(B/A^2)(\partial\phi)^2}\right],$$</div>
+
+    <p>the Jacobian $\partial\tilde{g}^{\alpha\beta}/\partial g^{\mu\nu}$ can be evaluated exactly. Writing $X=g^{\mu\nu}\nabla_\mu\phi\,\nabla_\nu\phi$, $D_2=B/A^2$ and $W=1+D_2X$, so that $\sqrt{-\tilde g}=A^4\sqrt W\,\sqrt{-g}$, variation of $S_m[\psi,\tilde g]$ with respect to $g^{\mu\nu}$ at fixed $\nabla_\mu\phi$ gives</p>
+
+    <div class="equation">$$T_{\mu\nu}^{(m)} = A^2\sqrt W\left[\tilde T_{\mu\nu}^{(m)} - \frac{2D_2}{W}\,\phi^\alpha\tilde T_{\alpha(\mu}^{(m)}\phi_{\nu)} + \frac{D_2^2}{W^2}\,(\phi^\alpha\phi^\beta\tilde T_{\alpha\beta}^{(m)})\,\phi_\mu\phi_\nu\right],$$</div>
+
+    <p>which reduces to the conformal result $T_{\mu\nu}^{(m)}=A^2\tilde T_{\mu\nu}^{(m)}$ at $B=0$ (indices on $\tilde T_{\alpha\beta}^{(m)}$ are lowered with the matter metric $\tilde g_{\alpha\beta}$ throughout). Thus the Einstein-frame equations reduce to a scalar-tensor theory with conformally-coupled matter at leading order; disformal corrections enter through the $\phi$-contraction terms at $O(B)$ and are suppressed by the same multi-messenger bounds that constrain the light-cone tilt. The exact (untruncated) source would be required in any regime where the volume-preservation condition of Section 8 were met by a large disformal correction, since the small-$B$ expansion is not uniformly valid there; Section 8 shows that no such regime is physically admissible — the reconstruction is excluded by its own null cone — so the untruncated source is needed only in the formal reconstruction test itself, not on the realized background.</p>
+
+    <h3>Scalar equation of motion</h3>
+
+    <p>For the scalar equation it is useful to define the matter-frame stress tensor by</p>
+    <div class="equation">$$\tilde T^{\mu\nu} \equiv \frac{2}{\sqrt{-\tilde g}} \frac{\delta S_m}{\delta \tilde g_{\mu\nu}} .$$</div>
+    <p>This is equivalent to the covariant definition</p>
+    <div class="equation">$$\tilde T_{\mu\nu} = -\frac{2}{\sqrt{-\tilde g}} \frac{\delta S_m}{\delta \tilde g^{\mu\nu}},$$</div>
+    <p>with indices raised and lowered using $\tilde g_{\mu\nu}$.</p>
+
+    <p>The density-weighted tensor is also defined as</p>
+    <div class="equation">$$\mathcal T^{\mu\nu} \equiv \frac{\sqrt{-\tilde g}}{\sqrt{-g}} \tilde T^{\mu\nu}.$$</div>
+    <p>Varying the matter metric with respect to $\phi$ gives</p>
+    <div class="equation">$$\delta_\phi \tilde g_{\mu\nu} = 2AA_{,\phi}g_{\mu\nu}\delta\phi + B_{,\phi}\nabla_\mu\phi\nabla_\nu\phi\,\delta\phi + B \left( \nabla_\mu\delta\phi\,\nabla_\nu\phi + \nabla_\mu\phi\,\nabla_\nu\delta\phi \right).$$</div>
+    <p>After integrating the derivative terms by parts, the scalar equation can be written as</p>
+    <div class="equation">$$\Box\phi - V_{,\phi} = -\mathcal Q,$$</div>
+    <p>where</p>
+    <div class="equation">$$\mathcal Q = AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu} + \frac12 B_{,\phi} \mathcal T^{\mu\nu} \nabla_\mu\phi\nabla_\nu\phi - \nabla_\mu \left( B\mathcal T^{\mu\nu}\nabla_\nu\phi \right).$$</div>
+    <p>Equivalently,</p>
+    <div class="equation">$$\Box\phi = V_{,\phi} - AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu} - \frac12 B_{,\phi} \mathcal T^{\mu\nu} \nabla_\mu\phi\nabla_\nu\phi + \nabla_\mu \left( B\mathcal T^{\mu\nu}\nabla_\nu\phi \right).$$</div>
+
+    <p>In the conformal limit $B\to0$, this reduces to the standard conformally coupled scalar-tensor source equation,</p>
+    <div class="equation">$$\Box\phi - V_{,\phi} = - AA_{,\phi}g_{\mu\nu}\mathcal T^{\mu\nu}.$$</div>
+    <p>Equivalently, in terms of the effective scalar coupling</p>
+    <div class="equation">$$\alpha(\phi)\equiv \frac{d\ln A}{d\phi},$$</div>
+    <p>the conformal source is proportional to the matter trace. Nonrelativistic matter sources the scalar through $T\simeq-\rho$, while radiation with $T\simeq0$ weakly sources the conformal sector, as used in the cosmological discussion.</p>
+
+    <h3>Matter-frame conservation law</h3>
+
+    <div class="equation">$$\tilde{\nabla}_\mu \tilde{T}^{\mu\nu}_{(m)} = 0,$$</div>
+
+    <p>which follows from diffeomorphism invariance of $S_m[\tilde{g}]$ and implies that non-gravitational test particles and light follow geodesics of the matter metric $\tilde{g}_{\mu\nu}$. In the Einstein frame, matter and the scalar exchange energy-momentum. Diffeomorphism invariance gives</p>
+    <div class="equation">$$\nabla_\mu T^{\mu\nu}_{(m)} = \mathcal Q\nabla^\nu\phi,$$</div>
+    <p>while the scalar stress tensor satisfies</p>
+    <div class="equation">$$\nabla_\mu T^{\mu\nu}_{(\phi)} = -\mathcal Q\nabla^\nu\phi .$$</div>
+    <p>Therefore the total Einstein-frame stress tensor is conserved:</p>
+    <div class="equation">$$\nabla_\mu \left( T^{\mu\nu}_{(m)} + T^{\mu\nu}_{(\phi)} \right) = 0.$$</div>
+    <p>The matter-frame conservation law remains</p>
+    <div class="equation">$$\tilde\nabla_\mu\tilde T^{\mu\nu}_{(m)}=0,$$</div>
+    <p>because matter is minimally coupled to $\tilde g_{\mu\nu}$.</p>
+
+    <p>These equations define the EFT structure used throughout the paper. The scalar source $\mathcal Q$ displays the leading conformal-disformal matter coupling explicitly.</p>

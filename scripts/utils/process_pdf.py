@@ -20,6 +20,7 @@ import re
 from pathlib import Path
 import argparse
 import tempfile
+from datetime import datetime
 
 from compress_pdf import compress_pdf as _compress_pdf
 
@@ -149,7 +150,10 @@ def build_metadata(cff_data):
 
     if date_pdf:
         metadata['CreationDate'] = f'{date_pdf} 00:00:00'
-        metadata['ModifyDate'] = f'{date_pdf} 00:00:00'
+        # Info-dict /CreationDate is a separate tag (PDF:CreateDate)
+        metadata['CreateDate'] = f'{date_pdf} 00:00:00'
+    # ModifyDate records this build's date (CreationDate stays at first release)
+    metadata['ModifyDate'] = datetime.now().strftime('%Y:%m:%d %H:%M:%S%z')
 
     metadata['XMP-dc:Creator'] = author_name
     metadata['XMP-dc:Title'] = title

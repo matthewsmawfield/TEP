@@ -1,0 +1,107 @@
+{
+  "formula": "\u03ba_X = |\u03b2_A| \u00d7 S_X \u00d7 \u0393_X",
+  "beta_A": -1.0,
+  "coupling_used": 7.526e-71,
+  "coupling_note": "Equilibrium field solves (varphi_host, varphi_cluster, S_X at R_s, GNSS correlation length) use LAMBDA_REFERENCE and are diagnostic intermediates not cited in the manuscript. The projectors Gamma_X themselves are coupling-independent geometric/kinematic factors; the coupling dependence of the GNSS crossing is scanned separately in step_04.",
+  "channels": {
+    "GNSS": {
+      "channel": "GNSS",
+      "observable": "clock-rate covariance C(\u03b8)",
+      "projector": "\u0393_GNSS = \u03b2_A\u00b2 \u00d7 G_0 / M_Pl\u00b2 (linearized fluctuation Green's function)",
+      "Gamma": 2.342736403264306e-84,
+      "S_X": 0.9999999986075032,
+      "S_X_type": "S_A (clock-rate screening)",
+      "kappa": 2.342736400002053e-84,
+      "correlation_length_m": 4032908.5880270693,
+      "R_T_m": 4146360.5584198027,
+      "correlation_matches_R_T": true,
+      "classification": "DERIVED \u2014 \u0393 from linearized fluctuation Green's function; correlation length = R_T"
+    },
+    "Cepheid": {
+      "channel": "Cepheid",
+      "observable": "period-luminosity shift \u03b4(m-M)",
+      "projector": "\u0393_Cep = 5/ln(10) (magnitude-field conversion)",
+      "Gamma": 2.1714724095162588,
+      "S_X": 0.99999998087785,
+      "S_X_type": "S_A (clock-rate screening)",
+      "kappa": 2.171472367993038,
+      "varphi_host": 3.191221501318447e-07,
+      "varphi_ref": 3.3191221501318444e-07,
+      "delta_varphi": -1.2790064881339758e-08,
+      "pl_shift_mag": 2.7773273005752126e-08,
+      "classification": "DERIVED \u2014 \u0393_Cep = 5/ln(10) from distance modulus; field from galactic equilibrium"
+    },
+    "MSP": {
+      "channel": "MSP",
+      "observable": "spin-down residual \u03b4(Pdot/P)",
+      "projector": "\u0393_MSP = 1 (direct proper-time projection)",
+      "Gamma": 1.0,
+      "S_X": 0.9999999999999551,
+      "S_X_type": "S_A (clock-rate screening)",
+      "kappa": 0.9999999999999551,
+      "varphi_cluster": 4.602020030047437e-14,
+      "varphi_ambient": 1.1766395853297947e-15,
+      "delta_varphi": 4.484356071514458e-14,
+      "dvarphi_dt": 1.816601035382269e-30,
+      "spindown_residual": -1.816601035382269e-30,
+      "classification": "DERIVED \u2014 \u0393_MSP from proper-time projection; field from cluster equilibrium",
+      "note": "Illustrative placeholder-cluster estimate. Distinct from, and not a confirmation of, Paper 10's (TEP-COS) real density-scaling result from 550 real MSPs (Gamma=0.393 vs Newtonian 0.748, 4.1-sigma rejection); see parameter_registry.yaml kappa_MSP."
+    },
+    "Wide binary": {
+      "channel": "Wide binary",
+      "observable": "transition radius R_s (derived) and saturation amplitude alpha_sat (not derived)",
+      "R_s_derived_au": 2609.0663554966077,
+      "R_s_observed_au": 2646.0,
+      "R_s_match_percent": 1.395829346311123,
+      "S_X": 0.9939492597353894,
+      "S_X_type": "S_\u03a3 (source-charge screening) at the derived R_s",
+      "alpha_observed": 0.366,
+      "alpha_wide_binary_self_screening_fit": {
+        "form": "alpha_sat(M) = alpha_0 * exp(-M/M_screen)",
+        "alpha_0": 1.74,
+        "alpha_0_err": 0.26,
+        "M_screen_Msun": 0.46,
+        "M_screen_err_Msun": 0.04,
+        "status": "Empirical fit to the wide-binary sample itself (Paper 13); not a prediction from the master action."
+      },
+      "kappa_status": "kappa_WB requires a validated Gamma_WB; none is established here.",
+      "classification": "PARTIAL \u2014 R_s DERIVED from cross-scale acceleration with no wide-binary input (1.4% match); alpha_sat NOT DERIVED (Paper 13 self-screening fit is itself an empirical 2-parameter fit, not a prediction from this action)"
+    },
+    "Galactic": {
+      "channel": "Galactic",
+      "observable": "SED shift \u03b4(SED) at redshift z",
+      "projector": "\u0393_gal = \u0393_Cep \u00d7 (1+z)^(\u03b2_A \u00d7 \u0394varphi) (Cepheid + redshift transfer)",
+      "Gamma": 2.1714708474277926,
+      "S_X": 1.0,
+      "S_X_type": "S_A (clock-rate screening)",
+      "kappa": 2.1714708474277926,
+      "z_example": 10.0,
+      "transfer_factor": 0.9999992806316769,
+      "delta_varphi": 3e-07,
+      "classification": "DERIVED \u2014 \u0393_gal from Cepheid projector with redshift transfer factor"
+    },
+    "LLR/flyby": {
+      "channel": "LLR/flyby",
+      "observable": "lunar range residual + flyby velocity shift",
+      "projector": "\u0393_LLR = exp(-r/R_T) \u00d7 (1 + r/R_T) (Yukawa propagator)",
+      "Gamma": 5.1201912713902244e-39,
+      "S_X": 1.0,
+      "S_X_type": "S_\u03a3 (source-charge screening)",
+      "kappa": 5.1201912713902244e-39,
+      "r_llr_m": 384400000.0,
+      "R_T_m": 4146360.5584198027,
+      "r_over_RT": 92.70780835000433,
+      "yukawa_suppression": 5.463996396400608e-41,
+      "residual_fraction": 5.463996396400608e-41,
+      "force_ratio": 5.1201912713902244e-39,
+      "flyby_delta_v_over_v": 2.9958231594590294e-10,
+      "small_argument_valid": false,
+      "classification": "DERIVED \u2014 \u0393_LLR from Yukawa propagator; exponentially suppressed at lunar distance"
+    }
+  },
+  "summary": {
+    "all_derived": false,
+    "n_channels": 6,
+    "n_derived": 5
+  }
+}

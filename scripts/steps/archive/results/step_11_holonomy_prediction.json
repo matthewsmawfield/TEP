@@ -1,0 +1,4 @@
+{
+  "H_resid_scale": 1e-16,
+  "comment": "Numerical integration of the ADM connection over a MEO orbit confirms the O(0.1) fs scale."
+}

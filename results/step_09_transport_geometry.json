@@ -1,0 +1,8 @@
+{
+  "ADM": {
+    "pure_conformal": true,
+    "vanishing_gradient": true,
+    "zero_shift": true,
+    "consistency_A4": true
+  }
+}

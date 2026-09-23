@@ -1,0 +1,141 @@
+{
+  "units": "SI",
+  "box_Mpc": 100.0,
+  "grid": 64,
+  "NP": 262144,
+  "H0": 2.27e-18,
+  "identity": "Pi = -<v.grad lnA>; a = g_N - S c^2 grad ell (beta_A = -1 canonical)",
+  "scan": {
+    "lc=100kpc,g=0.05/Mpc,S=1e-05": {
+      "Pi_inf_s-1": 3.1846202625523524e-20,
+      "Pi_over_H0": 0.014029164152213006,
+      "vrms_over_c": 0.0005129080617551788,
+      "rho_max_over_mean": 14.165125158357673,
+      "delta_lnA_rms": 0.005000000000000001
+    },
+    "lc=100kpc,g=0.05/Mpc,S=0.0001": {
+      "Pi_inf_s-1": 2.712197475261557e-20,
+      "Pi_over_H0": 0.01194800649894959,
+      "vrms_over_c": 0.0017931285002492105,
+      "rho_max_over_mean": 10.373492988136048,
+      "delta_lnA_rms": 0.005000000000000001
+    },
+    "lc=100kpc,g=0.05/Mpc,S=0.001": {
+      "Pi_inf_s-1": 6.687587986361106e-20,
+      "Pi_over_H0": 0.029460740028022497,
+      "vrms_over_c": 0.00669591435400538,
+      "rho_max_over_mean": 9.13225462460582,
+      "delta_lnA_rms": 0.005000000000000001
+    },
+    "lc=100kpc,g=0.2/Mpc,S=1e-05": {
+      "Pi_inf_s-1": 1.0053445905656011e-19,
+      "Pi_over_H0": 0.04428830795443177,
+      "vrms_over_c": 0.0010833835253421802,
+      "rho_max_over_mean": 11.09861303637349,
+      "delta_lnA_rms": 0.020000000000000004
+    },
+    "lc=100kpc,g=0.2/Mpc,S=0.0001": {
+      "Pi_inf_s-1": 1.8216491198766156e-19,
+      "Pi_over_H0": 0.08024885990645884,
+      "vrms_over_c": 0.003914413172266055,
+      "rho_max_over_mean": 10.249662475247552,
+      "delta_lnA_rms": 0.020000000000000004
+    },
+    "lc=100kpc,g=0.2/Mpc,S=0.001": {
+      "Pi_inf_s-1": 4.913587127738633e-19,
+      "Pi_over_H0": 0.21645758271976356,
+      "vrms_over_c": 0.01569446798318372,
+      "rho_max_over_mean": 8.086227472555791,
+      "delta_lnA_rms": 0.020000000000000004
+    },
+    "lc=500kpc,g=0.05/Mpc,S=1e-05": {
+      "Pi_inf_s-1": 2.1225692013809855e-20,
+      "Pi_over_H0": 0.009350525116215796,
+      "vrms_over_c": 0.0004944628096014084,
+      "rho_max_over_mean": 13.40466198981264,
+      "delta_lnA_rms": 0.025
+    },
+    "lc=500kpc,g=0.05/Mpc,S=0.0001": {
+      "Pi_inf_s-1": 2.7693949734004177e-20,
+      "Pi_over_H0": 0.012199977856389505,
+      "vrms_over_c": 0.0017107922690041783,
+      "rho_max_over_mean": 9.965524261501598,
+      "delta_lnA_rms": 0.025
+    },
+    "lc=500kpc,g=0.05/Mpc,S=0.001": {
+      "Pi_inf_s-1": 7.1855992696777e-20,
+      "Pi_over_H0": 0.03165462233338194,
+      "vrms_over_c": 0.006549988596228485,
+      "rho_max_over_mean": 8.461766161446153,
+      "delta_lnA_rms": 0.025
+    },
+    "lc=500kpc,g=0.2/Mpc,S=1e-05": {
+      "Pi_inf_s-1": 9.050300707134606e-20,
+      "Pi_over_H0": 0.03986916611072514,
+      "vrms_over_c": 0.0010351598052718185,
+      "rho_max_over_mean": 10.573936536245002,
+      "delta_lnA_rms": 0.1
+    },
+    "lc=500kpc,g=0.2/Mpc,S=0.0001": {
+      "Pi_inf_s-1": 1.9429141695785498e-19,
+      "Pi_over_H0": 0.08559093258055286,
+      "vrms_over_c": 0.0037981739878832055,
+      "rho_max_over_mean": 8.7557476970152,
+      "delta_lnA_rms": 0.1
+    },
+    "lc=500kpc,g=0.2/Mpc,S=0.001": {
+      "Pi_inf_s-1": 5.261045785968156e-19,
+      "Pi_over_H0": 0.23176413154044742,
+      "vrms_over_c": 0.015642324216433835,
+      "rho_max_over_mean": 7.048670428781493,
+      "delta_lnA_rms": 0.1
+    },
+    "lc=2Mpc,g=0.05/Mpc,S=1e-05": {
+      "Pi_inf_s-1": 1.2894275046830113e-19,
+      "Pi_over_H0": 0.056802973774581995,
+      "vrms_over_c": 0.0007984684459556307,
+      "rho_max_over_mean": 35.32311702108927,
+      "delta_lnA_rms": 0.1
+    },
+    "lc=2Mpc,g=0.05/Mpc,S=0.0001": {
+      "Pi_inf_s-1": 7.763611647705482e-21,
+      "Pi_over_H0": 0.0034200932368746617,
+      "vrms_over_c": 0.0025009920476077485,
+      "rho_max_over_mean": 18.86146415974314,
+      "delta_lnA_rms": 0.1
+    },
+    "lc=2Mpc,g=0.05/Mpc,S=0.001": {
+      "Pi_inf_s-1": 8.394302706014846e-21,
+      "Pi_over_H0": 0.0036979307074955273,
+      "vrms_over_c": 0.007983147638142465,
+      "rho_max_over_mean": 15.478519527593798,
+      "delta_lnA_rms": 0.1
+    },
+    "lc=2Mpc,g=0.2/Mpc,S=1e-05": {
+      "Pi_inf_s-1": -1.0804195737531492e-20,
+      "Pi_over_H0": -0.004759557593626208,
+      "vrms_over_c": 0.0015798755604585469,
+      "rho_max_over_mean": 21.59440708121213,
+      "delta_lnA_rms": 0.4
+    },
+    "lc=2Mpc,g=0.2/Mpc,S=0.0001": {
+      "Pi_inf_s-1": 3.292167719339325e-20,
+      "Pi_over_H0": 0.014502941494886894,
+      "vrms_over_c": 0.00501181838723338,
+      "rho_max_over_mean": 17.247639261938314,
+      "delta_lnA_rms": 0.4
+    },
+    "lc=2Mpc,g=0.2/Mpc,S=0.001": {
+      "Pi_inf_s-1": 4.251728319320139e-20,
+      "Pi_over_H0": 0.018730080701850834,
+      "vrms_over_c": 0.016140414433448345,
+      "rho_max_over_mean": 15.59458128643694,
+      "delta_lnA_rms": 0.4
+    }
+  },
+  "verdict": {
+    "self_consistent_windows": [],
+    "n_windows": 0,
+    "statement": "no (G_rms, ell_c, S) window satisfies all three constraints in the scanned range"
+  }
+}

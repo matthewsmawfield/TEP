@@ -1,0 +1,91 @@
+{
+  "perturbative_regime": {
+    "regime": "B=0, conformal coupling only (A(\u03c6) = exp(\u03b2_A \u03c6/M_Pl))",
+    "scalar_eom": "\u25a1\u03c6 = V'(\u03c6) + \u03b1(\u03c6)\u03c1  (second-order)",
+    "metric_eom": "Einstein-scalar  (second-order)",
+    "principal_symbol": "Standard Einstein-Klein-Gordon",
+    "eigenvalues": "Real (gravitational waves + scalar waves)",
+    "theorem": "Choquet-Bruhat, Geroch: Einstein-Klein-Gordon is strongly hyperbolic",
+    "classification": "DERIVED \u2014 strongly hyperbolic in perturbative regime"
+  },
+  "gw170817_bound": {
+    "bound": "|c_T/c - 1| < 10\u207b\u00b9\u2075 along observed path/epoch",
+    "constrained_combination": "cone-split projection of B(\u2202\u03c6)\u00b2/A\u00b2",
+    "disformal_perturbation": "O(B \u00d7 (\u2202\u03c6)\u00b2) small where cone split is small",
+    "scalar_principal_perturbation": "NOT bounded by GW170817 \u2014 Z_t, Z_s involve B\u00b7\u03c1 and require the separate Z_t>0, Z_s>0 conditions",
+    "eigenvalue_shift": "c_\u00b1 = c(1 \u00b1 O(10\u207b\u00b9\u2075)) in the propagation sector only",
+    "classification": "DERIVED \u2014 propagation-sector cone split is a small regular perturbation; the matter-dependent principal operator is separately conditioned by Z_t>0, Z_s>0"
+  },
+  "strong_field_necessary_conditions": {
+    "scalar_principal_operator": "L = -Z_t \u2202_t\u00b2 + Z_s \u2207\u00b2 + ...",
+    "Z_t_formula": "Z_t = 1 + B \u00d7 (1 + w) \u00d7 \u03c1 / A\u00b2",
+    "Z_s_formula": "Z_s = 1 + B \u00d7 (1 - w) \u00d7 \u03c1 / (3A\u00b2)",
+    "hyperbolicity_conditions": [
+      "Z_t > 0",
+      "Z_s > 0",
+      "det(g\u0303) \u2260 0"
+    ],
+    "metric_nondegeneracy_necessary_but_not_sufficient": true,
+    "classification": "DERIVED \u2014 necessary conditions identified; sufficient conditions require full principal symbol"
+  },
+  "counterexample": {
+    "regular_metric_elliptic_scalar": {
+      "parameterization": "Z_t = 1 + d\u03c1, Z_s = 1 \u2212 dp (reduced operator)",
+      "A": 1.0,
+      "B": 1.0,
+      "q": 0.0,
+      "d": 1.0,
+      "rho": 3.0,
+      "p": 2.0,
+      "Z_t": 4.0,
+      "Z_s": -1.0,
+      "sound_speed_squared": -0.25,
+      "metric_nondegenerate": true,
+      "hyperbolic": false,
+      "pathology": "Z_t = 4.00 > 0 but Z_s = -1.00 < 0 \u2192 c_s\u00b2 = -0.25 < 0 (imaginary sound speed, elliptic)",
+      "conclusion": "Metric nondegeneracy alone does not guarantee hyperbolicity: a regular matter metric coexists with an elliptic scalar sector.",
+      "pathology_class": "Coefficient sign (sound speed), NOT Ostrogradsky (EOM order)",
+      "classification": "DERIVED \u2014 counterexample shows metric nondegeneracy is insufficient"
+    },
+    "B": -5.0,
+    "rho": 1.0,
+    "A2": 1.0,
+    "w": 0.0,
+    "Z_t": -4.0,
+    "Z_s": -0.6666666666666667,
+    "sound_speed_squared": 0.16666666666666669,
+    "metric_nondegenerate": true,
+    "hyperbolic": false,
+    "pathology": "Z_t = -4.00 < 0 (wrong signature) AND Z_s = -0.67 < 0 (imaginary sound speed if Z_t > 0)",
+    "conclusion": "Metric nondegeneracy alone does not guarantee hyperbolicity. Both Z_t and Z_s must be positive. Here both are negative, indicating a wrong-signature principal symbol.",
+    "pathology_class": "Coefficient sign (wrong signature), NOT Ostrogradsky (EOM order)",
+    "classification": "DERIVED \u2014 counterexample shows metric nondegeneracy is insufficient"
+  },
+  "distinction_from_scalar_gb": {
+    "scalar_gb": {
+      "action_term": "f(\u03c6) \u00d7 R_GB\u00b2",
+      "eom_order": "2nd-order (Horndeski class)",
+      "pathology": "Characteristic degeneration on nontrivial backgrounds (weakly elliptic sector; Papallo & Reall 2017)",
+      "pathology_class": "Principal-symbol degeneration despite 2nd-order EOM",
+      "fix": "Independent characteristic analysis on each background; second-order EOM alone is insufficient"
+    },
+    "tep": {
+      "action_term": "B(\u03c6, \u2202\u03c6) \u00d7 (\u2202\u03c6)\u00b2",
+      "eom_order": "2nd-order (metric and scalar)",
+      "pathology": "Sound speed instability (if Z_s < 0)",
+      "pathology_class": "Coefficient sign (sound speed), NOT EOM order",
+      "fix": "Require Z_t > 0, Z_s > 0 (positive sound speeds)"
+    },
+    "fundamentally_distinct": true,
+    "distinction": "Both TEP and Horndeski scalar-GB have 2nd-order EOM; neither can be exempted from characteristic analysis. The TEP pathology class (matter-dependent coefficient sign) is distinct from the scalar-GB background-dependent characteristic degeneration.",
+    "classification": "DERIVED \u2014 second-order EOM is not sufficient for hyperbolicity in either sector"
+  },
+  "summary": {
+    "perturbative_hyperbolic": true,
+    "disformal_perturbation_bounded": true,
+    "strong_field_sufficient": false,
+    "strong_field_necessary": true,
+    "tep_distinct_from_scalar_gb": true,
+    "overall": "Perturbative regime: strongly hyperbolic (derived). GW170817 bounds the propagation-sector cone split only; the matter-dependent principal operator is conditioned separately by Z_t>0, Z_s>0. Strong-field: necessary conditions identified, sufficient conditions require full principal symbol. Scalar-GB: 2nd-order EOM; characteristic degeneration requires separate analysis."
+  }
+}

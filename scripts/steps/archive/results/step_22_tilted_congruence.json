@@ -1,0 +1,84 @@
+{
+  "T1_drift_B0_v0": {
+    "theta_tilde_rms": 0.010926099834808748,
+    "expected": "3*Pi/A ~ nonzero -> drift alone IS expansion"
+  },
+  "T1_drift_B5_v0": {
+    "theta_tilde_rms": 0.010937042351156447,
+    "expected": "still nonzero -- disformal needs SPATIAL gradient"
+  },
+  "T2_converging_flow": {
+    "H_over_Pi": 1.0,
+    "theta_tilde_rms": 0.023318560928264905,
+    "theta_tilde_mean": 0.0069152393500384775,
+    "expected": "~0 if flow divergence compensates drift"
+  },
+  "T3_kappa_0.000e+00": {
+    "theta_tilde_rms": 0.012490580011450729,
+    "theta_tilde_mean": 0.010441163531403898,
+    "note": "v = kappa d_x phi: flow toward slow-time wells"
+  },
+  "T3_kappa_7.280e+01": {
+    "theta_tilde_rms": 0.22417429646064865,
+    "theta_tilde_mean": -0.009352635259475496,
+    "note": "v = kappa d_x phi: flow toward slow-time wells"
+  },
+  "T3_kappa_1.456e+02": {
+    "theta_tilde_rms": 0.2755388776751788,
+    "theta_tilde_mean": -0.009483015540337016,
+    "note": "v = kappa d_x phi: flow toward slow-time wells"
+  },
+  "T4_z_of_L_B0_converging": {
+    "L": [
+      0.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0
+    ],
+    "z": [
+      0.0,
+      -0.0003352915083100205,
+      -0.002728824026526966,
+      -0.009474436211782566,
+      -0.023371485636324407,
+      -0.04811033054261904,
+      -0.08894059980474545,
+      -0.15405465687148268,
+      -0.25815302383584415,
+      -0.43572834722361153,
+      NaN,
+      NaN,
+      NaN
+    ],
+    "note": "conformal drift redshift vs converging-flow Doppler: first-order cancellation is the <H>=theta/3 statement"
+  },
+  "T5_z_inhomogeneous": {
+    "b_0.0": {
+      "z": 4.07853841364229,
+      "t_arr": 80.00008682537481
+    },
+    "b_5.0": {
+      "z": 4.092237526766777,
+      "t_arr": 80.12897541996388
+    },
+    "b_20.0": {
+      "z": 4.133864438887865,
+      "t_arr": 80.51858246229092
+    }
+  },
+  "interpretation": {
+    "T1": "v=0: drift needs disformal structure (old identity)",
+    "T2": "homogeneous converging flow gives theta~=0 but kills linear z(L) -- pure relabeling, no Hubble law",
+    "T3": "inhomogeneous landscape: flow toward/through gradients shares the burden statistically",
+    "T5": "the question that matters: transport z on the true congruence in a lumpy landscape"
+  }
+}

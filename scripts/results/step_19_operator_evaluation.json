@@ -1,0 +1,13 @@
+{
+  "cassini_suppression": 1.5783542466673296e-22,
+  "saturn_suppression": 4.187052333463012e-10,
+  "llr_earth_sun_suppression": 4.854355584669448e-14,
+  "llr_moon_sun_suppression": 5.0726848701774083e-14,
+  "llr_differential_bound": 5.0726848701774083e-14,
+  "gpb_suppression": 5.7313411728161436e-24,
+  "hierarchy_decomposition": {
+    "galactic_percent": 98.26405100465375,
+    "solar_percent": 1.6216195796810777,
+    "terrestrial_percent": 0.11432941566517013
+  }
+}

@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Temporal Equivalence Principle: Dynamic Time &amp; Light Speed</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Temporal Equivalence Principle: Dynamic Time &amp; Light Speed">
+    <meta name="description" content="Proper time is dynamical; the speed of light is emergent and strictly local in this covariant framework. Reproducible pipeline and data in this repository.">
+    <meta name="author" content="Matthew Lukin Smawfield">
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English">
+    <meta name="subject" content="Theoretical Physics">
+    <meta name="coverage" content="Worldwide">
+    <meta name="classification" content="Education, Science, Research, Physics">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mlsmawfield.com/tep/theory/">
+    
+    <!-- Alternate PDF Version (for Google Scholar) -->
+    <link rel="alternate" type="application/pdf" title="Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed" href="https://mlsmawfield.com/tep/theory/0-TEP-v0.14-Jakarta.pdf">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mlsmawfield.com/tep/theory/">
+    <meta property="og:title" content="Temporal Equivalence Principle: Dynamic Time &amp; Light Speed">
+    <meta property="og:description" content="Proper time is dynamical; the speed of light is emergent and strictly local in this covariant framework. Reproducible pipeline and data in this repository.">
+    <meta property="og:image" content="https://mlsmawfield.com/tep/theory/og-image.jpg">
+    <meta property="og:image:alt" content="The Temporal Equivalence Principle">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="The Temporal Equivalence Principle">
+    <meta property="article:author" content="Matthew Lukin Smawfield">
+    <meta property="article:published_time" content="2025-08-18T00:00:00Z">
+    <meta property="article:modified_time" content="2026-09-23T00:00:00Z">
+    <meta property="article:section" content="Physics">
+    <meta property="article:tag" content="Quantum Gravity">
+    <meta property="article:tag" content="Theoretical Physics">
+    <meta property="article:tag" content="Cosmology">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mlsmawfield.com/tep/theory/">
+    <meta name="twitter:title" content="Temporal Equivalence Principle: Dynamic Time &amp; Light Speed">
+    <meta name="twitter:description" content="Proper time is dynamical; the speed of light is emergent and strictly local in this covariant framework.">
+    <meta name="twitter:image" content="https://mlsmawfield.com/tep/theory/twitter-image.jpg">
+    <meta name="twitter:image:alt" content="The Temporal Equivalence Principle">
+    <meta name="twitter:creator" content="@matthewsmawfield">
+    <meta name="twitter:site" content="@matthewsmawfield">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+    <link rel="alternate icon" href="public/favicon.ico">
+    <link rel="shortcut icon" href="public/favicon.ico">
+    <link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="alternate" href="https://mlsmawfield.com/tep/theory/" />
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Google Scholar Meta Tags -->
+    <meta name="citation_title" content="Temporal Equivalence Principle: Dynamic Time &amp; Emergent Light Speed">
+    <meta name="citation_author" content="Smawfield, Matthew Lukin">
+    <meta name="citation_date" content="2025-08-18">
+    <meta name="citation_author_institution" content="Independent Researcher">
+    <meta name="citation_author_email" content="matthew@mlsmawfield.com">
+    <meta name="citation_publication_date" content="2025/08/18">
+    <meta name="citation_online_date" content="2025/08/18">
+    <meta name="citation_journal_title" content="Preprint">
+    <meta name="citation_doi" content="10.5281/zenodo.16921911">
+    <meta name="citation_abstract_html_url" content="https://mlsmawfield.com/tep/theory/">
+    <meta name="citation_pdf_url" content="https://mlsmawfield.com/tep/theory/0-TEP-v0.14-Jakarta.pdf">
+    <meta name="citation_language" content="en">
+    <meta name="citation_keywords" content="Temporal Equivalence Principle; Temporal Shear; Temporal Topology; proper time; conformal metric; disformal metric; synchronization holonomy; clock anholonomy; clock synchronization; Einstein synchronization; one-way light-time; closed-loop time transfer; time transfer; optical clocks; precision clock networks; precision metrology; local Lorentz invariance; time field; scalar field; scalar-tensor theory; bimetric theory; matter metric; conformal-disformal coupling; disformal transformation; modified gravity; general relativity; PPN mapping; equivalence principle; screening; fifth-force screening; cosmology; multi-messenger astronomy; GW170817; Sagnac effect; Shapiro delay; gravitational redshift; experimental predictions; fundamental physics; clock-sector gravity; emergent light speed; two-metric geometry">
+    
+    <!-- Extended Academic Metadata -->
+    <meta name="dc.title" content="Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed">
+    <meta name="dc.creator" content="Smawfield, Matthew Lukin">
+    <meta name="dc.subject" content="Physics; Theoretical Physics; Quantum Gravity; Cosmology; General Relativity; Time; Light Speed; Synchronization; Modified Gravity; Scalar-Tensor Theory; Bimetric Theory; Precision Metrology; Optical Clocks; Multi-Messenger Astronomy">
+    <meta name="dc.description" content="This paper proposes a covariant, testable reformulation of relativity in which proper time is a dynamical field and the &quot;speed of light&quot; is an emergent, strictly local invariant rather than a global constant. The framework is built on a single spacetime manifold endowed with two metrics: a gravitational metric g_{μν} and a causal (matter) metric g̃_{μν} to which all non-gravitational fields and clocks couple. The metrics are related by a controlled disformal map, g̃_{μν} = A²(φ) g_{μν} + B(φ) ∇_μφ ∇_νφ, where φ is the time field, A(φ) = exp(β_A φ/M_Pl) is a universal conformal factor, and B(φ) encodes tiny, direction-dependent deformations of the light cone consistent with GW170817-class multi-messenger constraints (|c_γ − c_g|/c ≲ few × 10^{-15} today). Proper time is elevated to a field by postulating that all matter, electromagnetism, and quantum phases evolve with respect to g̃-proper time τ; in local freely falling frames, this guarantees exact local Lorentz invariance and a locally invariant c, while globally it implies that synchronization procedures and one-way light-time measurements can become path-dependent in the disformal/non-exact sector of a dynamical-time background. The covariant action, field equations, conservation laws, and PPN mapping are developed; screening is formulated as continuous Temporal Topology, with the quartic density-dependent-mass branch providing an explicit microscopic completion of the Solar-System/interstellar screening requirements. The breakdown of global simultaneity is formalized using a synchronization-transport law, deriving a convention-independent &quot;synchronization holonomy,&quot; an invariant measure of non-integrability of time transport around closed loops. In the purely conformal subclass this holonomy vanishes after subtraction of the full GR, kinematic, clock-scale, and reference-frame synchronization model; nonzero holonomy at leading order requires residual non-exact synchronization structure, supplied in the minimal TEP model by disformal coupling B(φ)≠0, and in more general extensions by non-metricity or other explicitly non-exact transport structure.">
+    <meta name="dc.publisher" content="Independent Research">
+    <meta name="dc.date" content="2025-08-18">
+    <meta name="dc.type" content="Text.Article">
+    <meta name="dc.format" content="text/html">
+    <meta name="dc.identifier" content="https://mlsmawfield.com/tep/theory/">
+    <meta name="dc.identifier.doi" content="10.5281/zenodo.16921911">
+    <meta name="dc.language" content="en">
+    <meta name="dc.rights" content="Creative Commons Attribution 4.0 International License">
+    
+    <!-- Research Classification -->
+    <meta name="citation_technical_report_institution" content="Independent Research">
+    
+    <!-- Subject Classification -->
+    <meta name="citation_subject" content="Physics">
+    <meta name="citation_subject" content="Theoretical Physics">
+    <meta name="citation_subject" content="Quantum Gravity">
+    <meta name="citation_subject" content="General Relativity">
+    <meta name="citation_subject" content="Cosmology">
+    <meta name="citation_subject" content="Mathematical Physics">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- DNS prefetch for performance -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7NZYHS2FW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P7NZYHS2FW', { 'anonymize_ip': true });
+    </script>
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ScholarlyArticle", "ResearchProject"],
+  "@id": "https://mlsmawfield.com/tep/theory/#article",
+  "sameAs": "https://doi.org/10.5281/zenodo.16921911",
+      "headline": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+      "description": "Proper time is dynamical; the speed of light is emergent and strictly local in this covariant framework.",
+      "author": {
+        "@type": "Person",
+        "name": "Matthew Lukin Smawfield",
+        "email": "matthew@mlsmawfield.com",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Independent Researcher"
+        },
+        "sameAs": [
+          "https://github.com/matthewsmawfield",
+          "https://orcid.org/0009-0003-8219-3159"
+        ]
+      },
+      "datePublished": "2025-08-18",
+      "dateModified": "2026-09-23",
+      "version": "v0.14 (Jakarta)",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Independent Research",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mlsmawfield.com/tep/theory/og-image.jpg"
+        }
+      },
+      "keywords": [
+        "Temporal Equivalence Principle",
+        "Temporal Shear",
+        "Temporal Topology",
+        "proper time",
+        "conformal metric",
+        "disformal metric",
+        "synchronization holonomy",
+        "clock-sector gravity",
+        "scalar-tensor theory",
+        "emergent light speed",
+        "two-metric geometry",
+        "PPN mapping",
+        "screening",
+        "cosmology",
+        "Hubble tension",
+        "S8 tension",
+        "optical clocks",
+        "time transfer",
+        "experimental predictions",
+        "fundamental physics",
+        "general relativity"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Quantum Gravity"
+        },
+        {
+          "@type": "Thing", 
+          "name": "Theoretical Physics"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cosmology"
+        },
+        {
+          "@type": "Thing",
+          "name": "General Relativity"
+        },
+        {
+          "@type": "Thing",
+          "name": "Mathematical Physics"
+        }
+      ],
+      "researchField": [
+        "Theoretical Physics",
+        "Quantum Gravity",
+        "General Relativity",
+        "Cosmology",
+        "Mathematical Physics"
+      ],
+      "methodology": [
+        "Mathematical Modeling",
+        "Theoretical Analysis",
+        "Experimental Predictions",
+        "Covariant Formulation"
+      ],
+      "experimentalData": {
+        "@type": "Dataset",
+        "name": "Theoretical Predictions and Error Budgets",
+        "description": "Quantitative experimental predictions with error budgets for testing the Temporal Equivalence Principle",
+        "creator": {
+          "@type": "Person",
+          "name": "Matthew Lukin Smawfield"
+        },
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "image": "https://mlsmawfield.com/tep/theory/og-image.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mlsmawfield.com/tep/theory/"
+      },
+      "inLanguage": "en",
+      "copyrightYear": "2026",
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "Matthew Lukin Smawfield"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": "10.5281/zenodo.16921911"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "URL",
+          "value": "https://mlsmawfield.com/tep/theory/"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "ORCID",
+          "value": "0009-0003-8219-3159"
+        }
+      ],
+      "isAccessibleForFree": true,
+      "creativeWorkStatus": "Preprint",
+      "educationalLevel": "Graduate",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "Researcher"
+      },
+      "abstract": "This paper develops a covariant, testable reformulation of relativity in which proper time is a dynamical field. The theory is formulated on a single spacetime manifold with two metrics: a gravitational metric governing curvature and a universal matter (causal) metric governing clocks, rulers, and nongravitational propagation. The metrics are related by a controlled conformal-disformal map driven by a scalar time field, chosen to satisfy stringent multi-messenger constraints today. The framework yields a convention-independent observable: synchronization holonomy, a measure of the non-integrability of time transport around closed loops after subtracting standard relativistic contributions. The action, field equations, conservation laws, screening is formulated as continuous Temporal Topology with the quartic density-dependent-mass branch providing an explicit microscopic completion of the Solar-System/interstellar screening requirements, and PPN mapping are developed to ensure consistency with terrestrial tests while enabling falsifiable predictions for precision time-transfer, clock networks, and cosmological dynamics.",
+      "citation": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+          "author": "Smawfield, Matthew Lukin"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- WebSite Structured Data for Google Search site name -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Temporal Equivalence Principle",
+      "alternateName": "TEP",
+      "url": "https://mlsmawfield.com/tep/theory/",
+      "description": "A covariant, testable reformulation of relativity in which proper time is a dynamical field and the speed of light is an emergent, strictly local invariant.",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Person",
+        "name": "Matthew Lukin Smawfield",
+        "url": "https://orcid.org/0009-0003-8219-3159"
+      }
+    }
+    </script>
+    
+    <!-- MathJax for mathematical formulas -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                tags: 'all'
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    
+    
+    <style>
+        /* Prevent horizontal scrolling */
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+        }
+
+        /* Force long URLs and text to wrap */
+        a {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-all;
+        }
+
+        /* Code blocks and preformatted text */
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        /* Academic paper styling - Navy palette matching TEP corpus */
+        :root {
+            --purple-deep: #1C2E4A;  /* Deep Navy for main headers */
+            --purple-dark: #2C3E50;  /* Midnight Blue for borders/subheads */
+            --purple-mid: #5D6D7E;   /* Blue Grey for secondary borders */
+            --purple-accent: #84a3aa; /* Muted Blue-Grey for accents */
+            --magenta: #1A5276;      /* Dark Blue for links/hover */
+            --magenta-light: #D4E6F1; /* Light Blue */
+            --gray-purple: #566573;  /* Charcoal Blue for meta text */
+            --gray-light: #EBEDEF;   /* White Smoke */
+            --text-dark: #17202A;    /* Dark Text with blue tint */
+            --bg-tint: rgba(28, 46, 74, 0.03); /* Blue tint */
+            /* Paper 0 specific accent (critical-analysis boxes) */
+            --accent: #d47341;
+            --accent-light: #e8985e;
+            /* Border radius */
+            --radius-sm: 4px;
+            --radius: 6px;
+            --radius-lg: 8px;
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            word-wrap: break-word;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--purple-dark);
+            padding-bottom: 20px;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: normal;
+            color: var(--gray-purple);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .author {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .author .email-icon { 
+            display: inline-block; 
+            margin-left: 2px; 
+            font-size: 18px; 
+            color: var(--gray-purple); 
+            text-decoration: none; 
+        }
+        
+        .author .email-icon:hover {
+            color: var(--purple-dark);
+        }
+        
+        /* Link styling */
+        a {
+            color: var(--purple-dark);
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: var(--gray-purple);
+        }
+        
+        a:hover {
+            color: var(--magenta);
+            text-decoration: underline;
+        }
+        
+        .contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(28, 46, 74, 0.04);
+            border-left: 4px solid var(--purple-dark);
+            font-style: italic;
+        }
+        
+        .contact-section h2 { 
+            margin-top: 0; 
+            font-size: 18px; 
+            font-weight: bold; 
+            font-style: normal; 
+            color: var(--purple-deep);
+        }
+        
+        .version, .date, .status, .status-chip, .doi {
+            font-size: 14px;
+            color: var(--gray-purple);
+            margin-bottom: 5px;
+        }
+
+        .paper-series {
+            font-size: 13px;
+            color: var(--purple-dark);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .abstract {
+            background-color: rgba(28, 46, 74, 0.04);
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid var(--purple-dark);
+            font-style: italic;
+        }
+        
+        .abstract h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--purple-deep);
+            border-bottom: 1px solid var(--purple-mid);
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--purple-deep);
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--purple-deep);
+        }
+
+        h4 {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: var(--purple-deep);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .equation {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+        }
+        
+        .theorem, .principle, .key-concept {
+            background-color: rgba(28, 46, 74, 0.04);
+            border: 1px solid var(--purple-mid);
+            border-radius: var(--radius);
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .theorem h3, .principle h3, .key-concept h3, .theorem h4, .principle h4, .key-concept h4 {
+            margin-top: 0;
+            color: var(--purple-dark);
+        }
+
+        .axiom-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .axiom-list li {
+            margin-bottom: 15px;
+        }
+        
+        .proof {
+            font-style: italic;
+            margin-left: 20px;
+            color: var(--gray-purple);
+        }
+        
+        .experimental-section {
+            background-color: rgba(28, 46, 74, 0.04);
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .error-budget {
+            font-family: 'Courier New', monospace;
+            background-color: var(--gray-light);
+            padding: 10px;
+            border-radius: 3px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .references {
+            font-size: 14px;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        .references h2 {
+            font-size: 18px;
+        }
+        
+        .ref-item {
+            margin-bottom: 8px;
+            text-indent: -20px;
+            margin-left: 20px;
+        }
+        
+        .appendix {
+            margin-top: 40px;
+            page-break-before: always;
+            border-top: 2px solid var(--purple-mid);
+            padding-top: 20px;
+        }
+        
+        .significance {
+            background-color: #f0fdf4;
+            border: 1px solid #38a169;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .critical-analysis {
+            background-color: #fef7ed;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .critical-analysis h2 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .critical-analysis h3 {
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .critical-analysis ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .critical-analysis li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .critical-analysis strong {
+            color: var(--accent-light);
+        }
+
+        /* ============================================
+           EXECUTIVE SUMMARY
+           ============================================ */
+        .executive-summary {
+            background: linear-gradient(135deg, rgba(28, 46, 74, 0.05) 0%, rgba(44, 62, 80, 0.05) 100%);
+            border: 1px solid rgba(44, 62, 80, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .executive-summary h2 {
+            color: var(--purple-deep);
+            margin-top: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .executive-summary h3 {
+            color: var(--purple-deep);
+            margin-top: 0;
+        }
+
+        .executive-summary-section {
+            background-color: rgba(255,255,255,0.8);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+        }
+
+        .executive-summary-conclusion {
+            background-color: rgba(44, 62, 80, 0.08);
+            border: 1px solid rgba(44, 62, 80, 0.4);
+            padding: 20px;
+            border-radius: var(--radius);
+        }
+
+        .executive-summary-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(44, 62, 80,0.2);
+        }
+
+        .executive-summary-footnote {
+            font-size: 12px;
+            color: var(--gray-purple);
+            margin: 5px 0 0 0;
+        }
+
+        /* ============================================
+           CALLOUT BOXES
+           ============================================ */
+        .callout-box {
+            background-color: rgba(245,245,245,0.6);
+            border-left: 3px solid #666;
+            padding: 12px 15px;
+            margin: 15px 0;
+        }
+
+        .callout-box-info {
+            background-color: rgba(33,150,243,0.06);
+            border-left: 3px solid var(--purple-dark);
+            padding: 12px 15px;
+            margin: 15px 0;
+        }
+
+        .callout-box-warning {
+            background-color: rgba(255,152,0,0.06);
+            border-left: 3px solid #ff9800;
+            padding: 12px 15px;
+            margin: 15px 0;
+        }
+
+        .callout-box-success {
+            background-color: rgba(76,175,80,0.06);
+            border-left: 3px solid #4caf50;
+            padding: 12px 15px;
+            margin: 15px 0;
+        }
+
+        .callout-note {
+            background-color: rgba(28, 46, 74,0.04);
+            border-left: 3px solid var(--purple-mid);
+            padding: 12px 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        /* ============================================
+           KEY FINDING / INSIGHT / POINTS BOXES
+           ============================================ */
+        .key-finding {
+            background-color: rgba(28, 46, 74, 0.06);
+            border: 2px solid var(--purple-dark);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .key-finding h3 {
+            margin-top: 0;
+            color: var(--purple-dark);
+        }
+
+        .key-insight {
+            background-color: rgba(132, 163, 170, 0.08);
+            border: 1px solid rgba(132, 163, 170, 0.4);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .key-insight h4 {
+            margin-top: 0;
+            color: var(--purple-dark);
+        }
+
+        .key-points {
+            background-color: rgba(255,255,255,0.9);
+            border-left: 4px solid var(--purple-dark);
+            padding: 15px 15px 15px 20px;
+            margin: 15px 0;
+        }
+
+        .key-points h4 {
+            color: var(--purple-deep);
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        .key-points ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .key-points li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           SUMMARY / CONCLUSION / SCOPE BOXES
+           ============================================ */
+        .summary-box, .conclusion-box {
+            background-color: rgba(28, 46, 74,0.06);
+            border: 2px solid var(--purple-deep);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .summary-box h4, .conclusion-box h4 {
+            margin-top: 0;
+            color: var(--purple-dark);
+            border-bottom: 1px solid var(--purple-mid);
+            padding-bottom: 8px;
+        }
+
+        .scope-box {
+            background: var(--bg-tint);
+            border: 1px solid var(--purple-deep);
+            border-radius: var(--radius-sm);
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+
+        .scope-box h4 {
+            margin-top: 0;
+            color: var(--purple-dark);
+            font-size: 1em;
+        }
+
+        /* ============================================
+           STATS GRID & CARDS
+           ============================================ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: #fff;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            padding: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--gray-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 5px;
+        }
+
+        .stat-description {
+            font-size: 13px;
+            color: var(--gray-purple);
+        }
+
+        /* ============================================
+           METHODOLOGY STEPS
+           ============================================ */
+        .methodology-step {
+            background: #fafafa;
+            border: 1px solid var(--purple-mid);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .methodology-step h4 {
+            margin-top: 0;
+            color: var(--purple-deep);
+        }
+
+        .methodology-step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: var(--purple-dark);
+            color: white;
+            border-radius: 50%;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .method-box {
+            background-color: rgba(245,245,245,0.8);
+            border: 1px solid var(--purple-mid);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: var(--radius-sm);
+        }
+
+        .method-box h4 {
+            color: var(--purple-deep);
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        /* ============================================
+           VALIDATION BADGES
+           ============================================ */
+        .validation-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .validation-badge-pass {
+            background: #4caf50;
+            color: white;
+        }
+
+        .validation-badge-fail {
+            background: #f44336;
+            color: white;
+        }
+
+        .validation-badge-warning {
+            background: #ff9800;
+            color: white;
+        }
+
+        .validation-badge-info {
+            background: var(--purple-dark);
+            color: white;
+        }
+
+        /* ============================================
+           FIGURE CAPTIONS
+           ============================================ */
+        .figure-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .figure-caption {
+            font-size: 14px;
+            color: var(--gray-purple);
+            margin-top: 10px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .figure-caption strong {
+            color: var(--text-dark);
+        }
+
+        /* ============================================
+           RESULT HIGHLIGHTS
+           ============================================ */
+        .result-highlight {
+            background: linear-gradient(135deg, rgba(28, 46, 74, 0.04) 0%, var(--bg-tint) 100%);
+            border: 2px solid var(--purple-dark);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .result-highlight h3 {
+            margin-top: 0;
+            color: var(--purple-deep);
+        }
+
+        .result-highlight-critical {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: 2px solid #ff9800;
+        }
+
+        .result-highlight-critical h3 {
+            color: #e65100;
+        }
+
+        .result-highlight-main {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* ============================================
+           ENHANCED EQUATION STYLING
+           ============================================ */
+        .equation {
+            margin: 20px 0;
+            padding: 12px 10px;
+            background-color: rgba(28, 46, 74,0.03);
+            border-radius: var(--radius-sm);
+            overflow-x: auto;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* MathJax display equation containers with numbering */
+        mjx-container[display="true"] {
+            display: block;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        /* Ensure equation numbers sit on the right */
+        mjx-container[display="true"] mjx-mtable {
+            width: 100%;
+        }
+
+        .equation-box {
+            background-color: rgba(250,250,250,0.8);
+            border: 1px solid var(--purple-mid);
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border-radius: var(--radius-sm);
+        }
+
+        /* ============================================
+           TABLE ENHANCEMENTS
+           ============================================ */
+        table tbody tr:hover {
+            background-color: rgba(28, 46, 74,0.04);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius-sm);
+        }
+
+        .table-wrapper table {
+            margin: 0;
+        }
+
+        .table-caption {
+            font-size: 14px;
+            color: var(--gray-purple);
+            margin-top: 8px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .table-caption strong {
+            color: var(--text-dark);
+            font-style: normal;
+        }
+
+        /* ============================================
+           DISCUSSION & WARNING BOXES
+           ============================================ */
+        .discussion-box {
+            background-color: rgba(249,247,248,0.5);
+            border: 1px solid rgba(75,58,85,0.3);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: var(--radius-sm);
+        }
+
+        .warning-box {
+            background-color: rgba(255,243,205,0.3);
+            border: 1px solid rgba(255,152,0,0.4);
+            border-radius: var(--radius-sm);
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .validation-box {
+            background-color: rgba(44, 62, 80,0.08);
+            border: 1px solid rgba(44, 62, 80,0.4);
+            border-radius: var(--radius-sm);
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .validation-box h4 {
+            color: var(--purple-deep);
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        /* ============================================
+           REFERENCE LIST
+           ============================================ */
+        .reference-list {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .reference-list li {
+            margin-bottom: 12px;
+        }
+
+        .citation-inline {
+            color: var(--purple-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .citation-inline:hover {
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           APPENDIX SECTION
+           ============================================ */
+        .appendix-section {
+            background: #fafafa;
+            border-top: 2px solid var(--purple-mid);
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .appendix-section h2 {
+            color: var(--purple-deep);
+            margin-top: 0;
+        }
+
+        /* ============================================
+           KEY QUOTE
+           ============================================ */
+        .key-quote {
+            background-color: var(--bg-tint);
+            border-left: 4px solid var(--purple-dark);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .key-quote blockquote {
+            margin: 0;
+            padding: 0;
+        }
+
+        .key-quote cite {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            color: var(--gray-purple);
+            font-size: 14px;
+        }
+
+        /* ============================================
+           SIGNIFICANCE ENHANCED
+           ============================================ */
+        .significance {
+            background-color: #f0fdf4;
+            border: 1px solid #38a169;
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        /* ============================================
+           EXPERIMENTAL SECTION ENHANCED
+           ============================================ */
+        .experimental-section {
+            background-color: rgba(28, 46, 74, 0.04);
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* ============================================
+           ABSTRACT ENHANCED
+           ============================================ */
+        .abstract {
+            background: linear-gradient(135deg, rgba(28, 46, 74, 0.04) 0%, var(--bg-tint) 100%);
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 4px solid var(--purple-dark);
+            font-style: italic;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .abstract h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--purple-deep);
+        }
+
+        /* Math styling */
+        .MathJax {
+            font-size: 1.1em !important;
+        }
+        
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+
+        /* Typography */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .text-muted { color: var(--gray-purple); }
+        .text-secondary { color: var(--gray-purple); }
+        .text-primary { color: var(--purple-dark); }
+        .text-success { color: #4caf50; }
+        .text-warning { color: #ff9800; }
+        .text-danger { color: #f44336; }
+        .text-small { font-size: 12px; }
+        .text-medium { font-size: 14px; }
+        .text-large { font-size: 16px; }
+        .font-weight-normal { font-weight: 400; }
+        .font-weight-medium { font-weight: 500; }
+        .font-weight-semibold { font-weight: 600; }
+        .font-weight-bold { font-weight: 700; }
+        .line-height-tight { line-height: 1.4; }
+        .line-height-normal { line-height: 1.6; }
+        .line-height-relaxed { line-height: 1.8; }
+
+        /* Margins */
+        .m-0 { margin: 0; }
+        .mt-0 { margin-top: 0; }
+        .mr-0 { margin-right: 0; }
+        .mb-0 { margin-bottom: 0; }
+        .ml-0 { margin-left: 0; }
+        .m-1 { margin: 5px; }
+        .mt-1 { margin-top: 5px; }
+        .mr-1 { margin-right: 5px; }
+        .mb-1 { margin-bottom: 5px; }
+        .ml-1 { margin-left: 5px; }
+        .m-2 { margin: 10px; }
+        .mt-2 { margin-top: 10px; }
+        .mr-2 { margin-right: 10px; }
+        .mb-2 { margin-bottom: 10px; }
+        .ml-2 { margin-left: 10px; }
+        .m-3 { margin: 15px; }
+        .mt-3 { margin-top: 15px; }
+        .mr-3 { margin-right: 15px; }
+        .mb-3 { margin-bottom: 15px; }
+        .ml-3 { margin-left: 15px; }
+        .m-4 { margin: 20px; }
+        .mt-4 { margin-top: 20px; }
+        .mr-4 { margin-right: 20px; }
+        .mb-4 { margin-bottom: 20px; }
+        .ml-4 { margin-left: 20px; }
+        .m-5 { margin: 25px; }
+        .mt-5 { margin-top: 25px; }
+        .mr-5 { margin-right: 25px; }
+        .mb-5 { margin-bottom: 25px; }
+        .ml-5 { margin-left: 25px; }
+
+        /* Padding */
+        .p-0 { padding: 0; }
+        .pt-0 { padding-top: 0; }
+        .pr-0 { padding-right: 0; }
+        .pb-0 { padding-bottom: 0; }
+        .pl-0 { padding-left: 0; }
+        .p-1 { padding: 5px; }
+        .pt-1 { padding-top: 5px; }
+        .pr-1 { padding-right: 5px; }
+        .pb-1 { padding-bottom: 5px; }
+        .pl-1 { padding-left: 5px; }
+        .p-2 { padding: 10px; }
+        .pt-2 { padding-top: 10px; }
+        .pr-2 { padding-right: 10px; }
+        .pb-2 { padding-bottom: 10px; }
+        .pl-2 { padding-left: 10px; }
+        .p-3 { padding: 15px; }
+        .pt-3 { padding-top: 15px; }
+        .pr-3 { padding-right: 15px; }
+        .pb-3 { padding-bottom: 15px; }
+        .pl-3 { padding-left: 15px; }
+        .p-4 { padding: 20px; }
+        .pt-4 { padding-top: 20px; }
+        .pr-4 { padding-right: 20px; }
+        .pb-4 { padding-bottom: 20px; }
+        .pl-4 { padding-left: 20px; }
+        .p-5 { padding: 25px; }
+        .pt-5 { padding-top: 25px; }
+        .pr-5 { padding-right: 25px; }
+        .pb-5 { padding-bottom: 25px; }
+        .pl-5 { padding-left: 25px; }
+
+        /* Display */
+        .d-none { display: none; }
+        .d-block { display: block; }
+        .d-inline { display: inline; }
+        .d-inline-block { display: inline-block; }
+        .d-flex { display: flex; }
+        .d-grid { display: grid; }
+
+        /* Flexbox */
+        .flex-row { flex-direction: row; }
+        .flex-column { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
+        .justify-start { justify-content: flex-start; }
+        .justify-center { justify-content: center; }
+        .justify-end { justify-content: flex-end; }
+        .justify-between { justify-content: space-between; }
+        .align-start { align-items: flex-start; }
+        .align-center { align-items: center; }
+        .align-end { align-items: flex-end; }
+        .gap-1 { gap: 5px; }
+        .gap-2 { gap: 10px; }
+        .gap-3 { gap: 15px; }
+        .gap-4 { gap: 20px; }
+
+        /* Width & Height */
+        .w-25 { width: 25%; }
+        .w-50 { width: 50%; }
+        .w-75 { width: 75%; }
+        .w-100 { width: 100%; }
+        .w-auto { width: auto; }
+        .h-100 { height: 100%; }
+        .h-auto { height: auto; }
+
+        /* Overflow */
+        .overflow-auto { overflow: auto; }
+        .overflow-hidden { overflow: hidden; }
+        .overflow-x-auto { overflow-x: auto; }
+        .overflow-y-auto { overflow-y: auto; }
+
+        /* Shadows */
+        .shadow-none { box-shadow: none; }
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow { box-shadow: var(--shadow); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+
+        /* Borders */
+        .border { border: 1px solid var(--gray-light); }
+        .border-top { border-top: 1px solid var(--gray-light); }
+        .border-right { border-right: 1px solid var(--gray-light); }
+        .border-bottom { border-bottom: 1px solid var(--gray-light); }
+        .border-left { border-left: 1px solid var(--gray-light); }
+        .rounded-sm { border-radius: var(--radius-sm); }
+        .rounded { border-radius: var(--radius); }
+        .rounded-lg { border-radius: var(--radius-lg); }
+
+        /* Background */
+        .bg-white { background-color: #fff; }
+        .bg-light { background-color: rgba(28, 46, 74, 0.04); }
+        .bg-tint { background-color: var(--bg-tint); }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+            
+            .title {
+                font-size: 20px;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+            
+            .header-image {
+                margin-bottom: 15px;
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 18px;
+                word-wrap: break-word;
+            }
+            
+            h2 {
+                font-size: 16px;
+                word-wrap: break-word;
+            }
+            
+            .abstract, .theorem, .principle, .experimental-section,
+            .executive-summary, .key-finding, .result-highlight,
+            .summary-box, .conclusion-box, .critical-analysis {
+                padding: 15px;
+                margin: 15px 0;
+                overflow-x: hidden;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-value {
+                font-size: 20px;
+            }
+
+            .data-table, .prediction-table, .results-table,
+            .comparison-table, .validation-table {
+                font-size: 12px;
+            }
+
+            .data-table th, .data-table td,
+            .prediction-table th, .prediction-table td,
+            .results-table th, .results-table td,
+            .comparison-table th, .comparison-table td,
+            .validation-table th, .validation-table td {
+                padding: 6px;
+            }
+
+            .equation {
+                overflow-x: auto;
+                font-size: 14px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            .callout-box, .callout-box-info, .callout-box-warning,
+            .callout-box-success, .callout-note {
+                padding: 10px 12px;
+            }
+
+            .methodology-step {
+                padding: 15px;
+            }
+            
+            /* Prevent long URLs and DOIs from causing horizontal scroll */
+        .doi a {
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+
+            /* Ensure figures don't overflow */
+            figure {
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            figure img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        header .title { border-bottom: none; padding-bottom: 0; }
+        .doi .pdf-link { display: inline-flex; align-items: center; margin-left: 8px; color: #495773; opacity: 0.8; }
+        .doi .pdf-link:hover { color: #1a365d; opacity: 1; text-decoration: none; }
+        .doi .pdf-link svg { width: 14px; height: 14px; vertical-align: middle; }
+        .doi svg { width: 14px; height: 14px; vertical-align: middle; margin-left: 8px; }
+
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 15px 10px;
+                font-size: 15px;
+                overflow-x: hidden;
+            }
+            
+            .title {
+                font-size: 18px;
+                line-height: 1.2;
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+            
+            .abstract, .theorem, .principle, .experimental-section,
+            .executive-summary, .key-finding, .result-highlight,
+            .summary-box, .conclusion-box, .critical-analysis {
+                padding: 12px;
+                margin: 12px 0;
+                overflow-x: hidden;
+            }
+
+            /* Extra small screen adjustments */
+            .equation {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .stat-value {
+                font-size: 18px;
+            }
+            
+            .doi a {
+                font-size: 13px;
+                word-break: break-all;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .abstract, .theorem, .principle {
+                break-inside: avoid;
+            }
+
+            mjx-container[display="true"] {
+                break-inside: avoid;
+            }
+            /* Allow Abstract to split across pages while keeping other blocks intact */
+            .abstract {
+                break-inside: auto;
+            }
+            .abstract h2 {
+                break-after: avoid;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+
+            /* Print-safe tables */
+            table, .table-wrapper {
+                page-break-inside: avoid;
+            }
+
+            table thead {
+                display: table-header-group;
+            }
+
+            table tbody {
+                display: table-row-group;
+            }
+
+            /* Print-safe component boxes */
+            .executive-summary, .key-finding, .key-insight,
+            .result-highlight, .summary-box, .conclusion-box,
+            .callout-box, .callout-box-info, .callout-box-warning,
+            .callout-box-success, .callout-note, .methodology-step,
+            .validation-box, .scope-box, .warning-box {
+                page-break-inside: avoid;
+            }
+
+            /* Print: flatten backgrounds */
+            .executive-summary,
+            .executive-summary-section,
+            .executive-summary-conclusion {
+                background: white;
+                border: 1px solid #ccc;
+            }
+
+            .callout-box, .callout-box-info, .callout-box-warning,
+            .callout-box-success, .callout-note {
+                background: white;
+                border: 1px solid #ccc;
+            }
+
+            .result-highlight, .result-highlight-critical {
+                background: white;
+                border: 2px solid #ccc;
+            }
+
+            .key-finding, .key-insight, .key-points {
+                background: white;
+                border: 1px solid #ccc;
+            }
+
+            .abstract {
+                background: white;
+                border-left: 4px solid var(--purple-dark);
+            }
+
+            /* Ensure links show URLs in print */
+            a[href]:after {
+                content: "";
+            }
+
+            .citation-inline[href]:after {
+                content: "";
+            }
+        }
+    </style>
+      <meta name="citation_fulltext_html_url" content="https://mlsmawfield.com/tep/theory/">
+</head>
+  <body>
+    <header class="header" role="banner">
+        <img src="public/og-image.jpg" alt="The Temporal Equivalence Principle - Diagram showing the relationship between gravitational metric g and matter metric g-tilde through conformal-disformal coupling" class="header-image" loading="eager">
+        <h1 class="title">Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed</h1>
+        <div class="author">Matthew Lukin Smawfield</div>
+        <div class="version">Version: v0.14 (Jakarta)</div>
+        <div class="date">First published: 18 August 2025 · Last updated: 23 September 2026</div>
+        <div class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.16921911">10.5281/zenodo.16921911</a><a class="pdf-link no-print" href="public/docs/0-TEP-v0.14-Jakarta.pdf" aria-label="Download PDF (v0.14)" title="Download PDF (v0.14)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+        </a></div>
+        
+    </header>
+
+    <main id="main-content" role="main">
+    <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+        <div id="loading" class="loading">
+            Loading manuscript components...
+        </div>
+        <div id="manuscript-content" style="display: none;">
+            <!-- Components will be loaded here -->
+        </div>
+        </article>
+</main>
+
+    <!-- Component Loading Script -->
+    <script>
+        // Component loading system
+        async function loadManuscriptComponents() {
+            try {
+                // Load manifest
+                const manifest = await fetch('manifest.json').then(r => r.json());
+
+                // Get container elements
+                const loadingDiv = document.getElementById('loading');
+                const contentDiv = document.getElementById('manuscript-content');
+
+                // Load each section in order
+                for (const section of manifest.sections.sort((a, b) => a.order - b.order)) {
+                    try {
+                        const html = await fetch(`components/${section.file}`).then(r => r.text());
+
+                        // Create section container
+                        const sectionDiv = document.createElement('div');
+                        sectionDiv.id = section.id;
+                        sectionDiv.className = 'manuscript-section';
+                        sectionDiv.setAttribute('data-section', section.title);
+                        sectionDiv.innerHTML = html;
+
+                        // Append to content container
+                        contentDiv.appendChild(sectionDiv);
+
+                        console.log(`Loaded section: ${section.title}`);
+                    } catch (error) {
+                        console.error(`Failed to load section ${section.title}:`, error);
+
+                        // Create error placeholder
+                        const errorDiv = document.createElement('div');
+                        errorDiv.innerHTML = `<div style="background-color: #ffe6e6; border: 1px solid #ff9999; padding: 15px; margin: 20px 0; border-radius: 5px;">
+                            <h3 style="color: #cc0000; margin-top: 0;">Error Loading Section: ${section.title}</h3>
+                            <p>Failed to load <code>components/${section.file}</code></p>
+                            <p style="font-size: 12px; color: #666;">Check console for details</p>
+                        </div>`;
+                        contentDiv.appendChild(errorDiv);
+                    }
+                }
+
+                // Hide loading, show content
+                loadingDiv.style.display = 'none';
+                contentDiv.style.display = 'block';
+
+                // Re-initialize features that depend on content being loaded
+                initializePageFeatures();
+
+                console.log('Manuscript loading complete');
+
+            } catch (error) {
+                console.error('Failed to load manuscript:', error);
+                document.getElementById('loading').innerHTML = `
+                    <div style="background-color: #ffe6e6; border: 1px solid #ff9999; padding: 20px; border-radius: 5px;">
+                        <h3 style="color: #cc0000; margin-top: 0;">Error Loading Manuscript</h3>
+                        <p>Failed to load the manuscript components. Please check your network connection and try again.</p>
+                        <p style="font-size: 12px; color: #666;">Error: ${error.message}</p>
+                        <button onclick="location.reload()" style="background: #4A90C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Retry</button>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize page features after content is loaded
+        function initializePageFeatures() {
+            // Re-render MathJax if present
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise().catch(err => console.warn('MathJax rendering error:', err));
+            }
+        }
+
+        // Load components when page is ready
+        document.addEventListener('DOMContentLoaded', loadManuscriptComponents);
+
+        // Trigger MathJax after components load, just in case
+        setTimeout(function() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise().catch(function (err) {
+                    console.error('MathJax error:', err.message);
+                });
+            }
+        }, 1000);
+
+        // Change title for PDF filename when printing
+        const originalTitle = document.title;
+        const pdfTitle = 'TEP';
+        window.addEventListener('beforeprint', () => { document.title = pdfTitle; });
+        window.addEventListener('afterprint', () => { document.title = originalTitle; });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise().catch(function (err) {
+                    console.error('MathJax error:', err.message);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

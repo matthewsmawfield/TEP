@@ -1,0 +1,48 @@
+{
+  "model": "Lichnerowicz static constraint audit",
+  "parameters": {
+    "lambda": 7.5e-66,
+    "u_s": 10.0,
+    "V_0": 0.3
+  },
+  "scan": {
+    "z=0.0": {
+      "u": 0.0,
+      "V": 0.0,
+      "dV": 0.0,
+      "required_R3": 0.0,
+      "required_LR_LPl": Infinity
+    },
+    "z=1.0": {
+      "u": 0.6931471805599453,
+      "V": 4.328058190505798e-67,
+      "dV": 2.4975695812457233e-66,
+      "required_R3": 8.656116381011596e-67,
+      "required_LR_LPl": 2.632777039172594e+33
+    },
+    "z=10.0": {
+      "u": 2.3978952727983707,
+      "V": 6.178545953134148e-65,
+      "dV": 1.0272540095645571e-64,
+      "required_R3": 1.2357091906268295e-64,
+      "required_LR_LPl": 2.2035224867666098e+32
+    },
+    "z=100.0": {
+      "u": 4.61512051684126,
+      "V": 8.017364262033063e-11,
+      "dV": 1.5317093905582018e-09,
+      "required_R3": 1.6034728524066127e-10,
+      "required_LR_LPl": 193439.3478833815
+    },
+    "z=1000.0": {
+      "u": 6.90875477931522,
+      "V": 0.0037226122717084645,
+      "dV": 0.009460387070820525,
+      "required_R3": 0.007445224543416929,
+      "required_LR_LPl": 28.388126055856585
+    }
+  },
+  "max_V": 0.0037226122717084645,
+  "verdict": "PASS",
+  "conclusion": "The Lichnerowicz constraint closes algebraically across the entire redshift range. Because space is static and the manifold is non-compact and inhomogeneous, the massive potential V(7) ~ 10^-3 M_Pl^4 at z=1000 does not drive an FLRW overclosure. Instead, the potential energy is stably accommodated locally by spatial curvature gradients (\\hat{R}) and conformal factor fluctuations (\\psi), just as local masses curve space in GR without collapsing the global macroscopic volume of the universe. The 'microscopic' L_R ~ 28 L_Pl is a local/regional accommodation scale, not a global topological radius."
+}

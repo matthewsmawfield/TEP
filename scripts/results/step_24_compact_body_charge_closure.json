@@ -1,0 +1,27 @@
+{
+  "action": {
+    "kinetic": "canonical",
+    "potential": "unified_quartic_plus_plateau",
+    "lambda": 7.526e-71,
+    "beta_A": -1.0
+  },
+  "bodies": {
+    "NS": {
+      "mass_Msun": 1.46,
+      "radius_m": 12000.0,
+      "S_charge_ratio": 0.0006555064727652347,
+      "alpha_eff": -0.0006555064727652347
+    },
+    "WD": {
+      "mass_Msun": 0.18100000000000002,
+      "radius_m": 10000000.0,
+      "S_charge_ratio": 0.004962074426243104,
+      "alpha_eff": -0.004962074426243104
+    }
+  },
+  "constraint": {
+    "predicted_diff": 0.004306567953477869,
+    "observational_bound": 0.002,
+    "passes_without_refitting": false
+  }
+}

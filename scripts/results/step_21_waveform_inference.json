@@ -1,0 +1,25 @@
+{
+  "sourced_emission": {
+    "effective_mass_derivation": "T_g^uv = A^6 \tilde{T}^uv => m = A_e \tilde{m}",
+    "einstein_frame_chirp_mass": "M_e = A_e M_tilde"
+  },
+  "propagation": {
+    "time_intervals": "Delta t_o = Delta t_e (static background)",
+    "frequency": "f_o = f_e"
+  },
+  "detector_inference": {
+    "matter_proper_time": "d_tau_tilde_o = A_o dt",
+    "matter_frequency": "f_tilde_o = f_o / A_o",
+    "detector_frame_chirp_mass": "M_det = A_o A_e M_tilde = M_tilde / (1+z) (for A_o=1)",
+    "inferred_gw_distance": "D_L_GW = A_o r"
+  },
+  "electromagnetic_distance": {
+    "area_distance": "D_A = A_e r (from solid angle at observer to physical area at source)",
+    "luminosity_distance": "D_L_EM = (1+z)^2 D_A = (1+z) A_o r"
+  },
+  "siren_ratio": {
+    "Xi_z": "1 / (1+z)",
+    "matches_manuscript": true,
+    "refutes_cancellation_argument": true
+  }
+}

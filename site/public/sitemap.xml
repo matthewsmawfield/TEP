@@ -5,13 +5,13 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://mlsmawfield.com/tep/theory/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mlsmawfield.com/tep/theory/0-TEP-v0.13-Jakarta.pdf</loc>
-        <lastmod>2026-09-15</lastmod>
+        <loc>https://mlsmawfield.com/tep/theory/0-TEP-v0.14-Jakarta.pdf</loc>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

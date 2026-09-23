@@ -1,0 +1,129 @@
+{
+  "postulate": "Matter evolves in proper time \u03c4 defined by the matter metric g\u0303",
+  "kinematics_established": {
+    "schrodinger": {
+      "equation": "i\u210f d|\u03c8\u27e9/d\u03c4 = \u0124|\u03c8\u27e9",
+      "proper_time": "d\u03c4\u00b2 = -g\u0303_\u03bc\u03bd dx^\u03bc dx^\u03bd / c\u00b2",
+      "hamiltonian": "\u0124 = self-adjoint operator (species-dependent)",
+      "classification": "ESTABLISHED \u2014 postulate of TEP; standard quantum evolution in proper time"
+    },
+    "unitarity": {
+      "theorem": "d\u27e8\u03c8|\u03c8\u27e9/d\u03c4 = 0 for self-adjoint \u0124",
+      "proof": "d\u27e8\u03c8|\u03c8\u27e9/d\u03c4 = (1/i\u210f)(\u27e8\u03c8|\u0124|\u03c8\u27e9 - \u27e8\u03c8|\u0124|\u03c8\u27e9*) = 0",
+      "numerical_check": {
+        "purity_initial": 0.2499999999999999,
+        "purity_final": 0.24999999999999878,
+        "purity_preserved": true
+      },
+      "classification": "ESTABLISHED \u2014 theorem of quantum mechanics for self-adjoint \u0124"
+    },
+    "species_sensitivity": {
+      "mechanism": "d\u03c4_species = A_species(\u03c6) \u00d7 d\u03c4_coord",
+      "relative_phase": "\u0394\u03c6_12 = \u222b (m\u2081 A\u2081 - m\u2082 A\u2082)/\u210f \u00d7 d\u03c4_coord",
+      "observable": "clock-comparison tests (GNSS, MSP, atomic clocks)",
+      "classification": "ESTABLISHED \u2014 species-dependent proper time from universal coupling"
+    },
+    "phase_accumulation": {
+      "formula": "\u03c6 = \u222b (m/\u210f) d\u03c4",
+      "basis": "de Broglie phase in proper time",
+      "classification": "ESTABLISHED \u2014 standard quantum phase in proper time"
+    },
+    "decoherence": {
+      "pure_state": "d\u03c1/d\u03c4 = -i/\u210f [\u0124, \u03c1] \u2192 \u03c1 remains pure (no decoherence)",
+      "requires_trace": "Decoherence requires Tr_environment[|\u03a8\u27e9\u27e8\u03a8|]",
+      "dissipative_term": "D[\u03c1_reduced] from trace over unresolved sector",
+      "not_automatic": "Proper-time evolution alone does not decohere a pure state",
+      "numerical_check": {
+        "purity_rho_initial": 0.24999999999999878,
+        "purity_rho_final": 0.24999999999999878,
+        "purity_preserved": true
+      },
+      "classification": "ESTABLISHED \u2014 decoherence requires tracing over unresolved sector (not automatic)"
+    },
+    "dirac_rescaling": {
+      "conformal_rescaling": "\u03c8 = A^(-3/2) \u03c7 for g\u0303 = A\u00b2 \u03b7",
+      "rescaling_identity_verified": true,
+      "requires_additional": [
+        "Clifford algebra (gamma matrices)",
+        "Tetrad (vierbein) for curved space",
+        "Spin connection",
+        "Field action for spin-1/2"
+      ],
+      "classification": "PARTIALLY ESTABLISHED \u2014 conformal rescaling identity verified; full Dirac structure requires additional spinor geometry"
+    }
+  },
+  "dynamics_candidate": {
+    "path_integral": {
+      "formula": "K(x_f, x_i) = \u222b D[x(\u03c4)] exp(i S[x(\u03c4)] / \u210f)",
+      "requires": [
+        "Specified action S (from field theory)",
+        "Boundary conditions (x_i, x_f)",
+        "Measure D[x(\u03c4)] (regularization scheme)",
+        "Regularization (UV/IR cutoffs)"
+      ],
+      "proper_time_role": "\u03c4 is the evolution parameter; additional structure required",
+      "classification": "CANDIDATE \u2014 requires action, measure, regularization beyond proper time"
+    },
+    "spin_1_2": {
+      "requires": [
+        "Clifford algebra",
+        "Tetrad",
+        "Spin connection",
+        "Field action"
+      ],
+      "classification": "CANDIDATE \u2014 requires spinor geometry beyond proper-time kinematics"
+    },
+    "antiparticles": {
+      "requires": [
+        "CPT structure from field action",
+        "Charge conjugation"
+      ],
+      "classification": "CANDIDATE \u2014 requires field action with CPT symmetry"
+    },
+    "born_rule": {
+      "requires": [
+        "Measurement theory",
+        "Decoherence program",
+        "Eigenstate structure"
+      ],
+      "classification": "CANDIDATE \u2014 requires measurement theory beyond unitary evolution"
+    },
+    "renormalizability": {
+      "requires": [
+        "Field action",
+        "Power counting",
+        "Regularization scheme"
+      ],
+      "classification": "CANDIDATE \u2014 requires field action and power counting"
+    },
+    "standard_model": {
+      "requires": [
+        "Gauge group SU(3)\u00d7SU(2)\u00d7U(1)",
+        "Matter content",
+        "Yukawa couplings"
+      ],
+      "classification": "CANDIDATE \u2014 requires gauge structure in the action"
+    }
+  },
+  "summary": {
+    "n_established": 6,
+    "n_candidate": 6,
+    "established": [
+      "Schr\u00f6dinger equation",
+      "Unitarity",
+      "Species sensitivity",
+      "Phase accumulation",
+      "Decoherence (requires trace)",
+      "Dirac conformal rescaling (partial)"
+    ],
+    "candidate": [
+      "Path integral",
+      "Spin-1/2",
+      "Antiparticles",
+      "Born rule",
+      "Renormalizability",
+      "Standard Model"
+    ],
+    "classification": "KINEMATICS ESTABLISHED from proper-time postulate; DYNAMICS CANDIDATE (requires additional structure)"
+  }
+}

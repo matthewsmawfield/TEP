@@ -1,0 +1,41 @@
+{
+  "units": "SI",
+  "model": "composite well ensemble; depth-stratified A^-1-weighted balance integral",
+  "scan": {
+    "dH=20,p=2": {
+      "balance_frac_integrated": 9.275393620292897e-05,
+      "flow_term_share_at_delta<1e-3": 9.390695404386841e-14,
+      "depth_at_90pct_balance": 19.999999999999943,
+      "delta_H": 20.0,
+      "p": 2.0,
+      "well_volume_frac": 4.214075155351892
+    },
+    "dH=30,p=2": {
+      "balance_frac_integrated": 2.0938875262710748,
+      "flow_term_share_at_delta<1e-3": 6.239761813466771e-18,
+      "depth_at_90pct_balance": 29.999999999999915,
+      "delta_H": 30.0,
+      "p": 2.0,
+      "well_volume_frac": 4.214075155351892
+    },
+    "dH=30,p=1": {
+      "balance_frac_integrated": 2.0296478194204877,
+      "flow_term_share_at_delta<1e-3": 3.2121360459051136e-11,
+      "depth_at_90pct_balance": 29.999999999999954,
+      "delta_H": 30.0,
+      "p": 1.0,
+      "well_volume_frac": 4.214075155351892
+    },
+    "dH=40,p=2": {
+      "balance_frac_integrated": 47594.11554617086,
+      "flow_term_share_at_delta<1e-3": 3.6601772490330544e-22,
+      "depth_at_90pct_balance": 39.999999999999886,
+      "delta_H": 40.0,
+      "p": 2.0,
+      "well_volume_frac": 4.214075155351892
+    }
+  },
+  "verdict": {
+    "statement": "closure by horizon saturation iff integrated flow/drift ratio -> O(1) with the overwhelming share at delta >> 1 while the observable-depth share stays consistent with endpoint redshift scatter"
+  }
+}

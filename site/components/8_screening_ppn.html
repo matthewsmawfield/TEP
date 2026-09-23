@@ -1,0 +1,192 @@
+<h2>7. Screening, PPN, Equivalence Principle, and Disformal Bounds</h2>
+    
+    <h2>Screening</h2>
+    <p>Screening in TEP is described as suppression of the locally observable Temporal Shear/source-charge sector, not as a commitment to a specific chameleon, Vainshtein, Galileon, DBI, or symmetron microphysics. Those mechanisms may be studied as candidate completions. In the effective theory used here, screening is expressed through the conformal factor $\ln A(\phi)$, its gradient $\Sigma_\mu$, and its covariance $C_A$. Source structure, environmental state, and boundary conditions suppress the locally active shear sector in screened regimes.</p>
+    
+    <p>The saturation scale $\rho_T$ denotes the Temporal Topology saturation scale. It is not a local on/off condition of the form $\rho > \rho_T \Rightarrow$ GR and $\rho < \rho_T \Rightarrow$ active. Recovery of GR in local tests is controlled by suppression of the observable shear/source-charge sector, $\Sigma_\mu^{\text{obs}} = \mathcal S_\Sigma(\mathcal E)\Sigma_\mu$ with $\mathcal S_\Sigma \to 0$ in screened regimes, where $\mathcal E$ includes source structure, environment, boundary conditions, and density.</p>
+
+    <p><strong>Screening is not a single density switch.</strong> It is an environmental suppression operator $\mathcal S_\Sigma(\mathcal E)$ whose observable projection depends on scale. The environmental state $\mathcal E$ includes: ambient density $\rho$, gravitational compactness $\Phi/c^2$, density gradients $\nabla\rho$, potential gradients $\nabla\Phi$, proximity to field sources, coherence volume, boundary geometry, and asymptotic horizon proximity. Each domain uses a different projection of $\mathcal E$:</p>
+
+    <ul>
+        <li><strong>GNSS/clock covariance:</strong> spatial covariance / Earth-scale saturation projection of $\mathcal S_\Sigma(\mathcal E)$.</li>
+        <li><strong>UCD/galaxy scales:</strong> mass-radius-density saturation projection through the geometric scale $R_T(M)$.</li>
+        <li><strong>NIST/laboratory G:</strong> lab-scale geophysical column projection of $\mathcal S_\Sigma(\mathcal E)$.</li>
+        <li><strong>MSP pulsars:</strong> cluster-potential response with stellar/environmental transfer.</li>
+        <li><strong>Cepheids:</strong> galactic-potential clock-bias response.</li>
+        <li><strong>JWST/high-z:</strong> halo-potential response transferred from Cepheid prior.</li>
+        <li><strong>Wide binaries:</strong> weak-field recovery / low-acceleration environmental un-screening.</li>
+        <li><strong>Flyby:</strong> clock-sector reduction artefact (Section 2.2); the Earth-vicinity shear is pairwise-screened and carries no flyby shear signal.</li>
+        <li><strong>LLR:</strong> compactness-dependent Earth/Moon differential screening.</li>
+        <li><strong>LHC:</strong> proximity-saturated hadronic coherence-volume screening.</li>
+        <li><strong>SPIN/QF/KIN:</strong> subatomic proximity/topological-core screening as microscopic projection of $\mathcal S_\Sigma(\mathcal E)$.</li>
+        <li><strong>C0/HC/TH:</strong> temporal-horizon asymptotic transport and late-time conformal acoustic equivalence.</li>
+    </ul>
+
+    <p>These projections are not interchangeable. Each is calibrated against the environmental variables active in its domain, and evaluating a projection outside the regime where its governing variable dominates yields screening factors that are physically meaningless, as the omitted terms can exceed the retained ones by many orders of magnitude.</p>
+
+    <p>The local and cosmological screening responses form a continuous nested hierarchy, not two independent regimes separated by a boundary. The temporal field varies both spatially and temporally: the rate of time differs from place to place, and at any given location it also evolves over time. The cosmological temporal background — the ambient clock-rate field $A(\phi_\infty)$ — is itself spatially varying, with gradients across large-scale structure that can differ substantially between cosmic environments, and temporally evolving, with the cosmological clock rate changing across cosmic history. Within this cosmological baseline, local environmental screening produces additional spatial fluctuations in the observable clock rate and Temporal Shear, smaller in amplitude and varying across shorter scales, and these local fluctuations themselves evolve as the local environment and the cosmological background evolve. The local response is defined relative to the cosmological baseline at the corresponding epoch, not in isolation from it. Both layers are dynamical and continuous in space and time; neither constitutes a discrete transition. The environmental state vector $\mathcal{E}$ therefore carries information at multiple nested scales simultaneously: the cosmological ambient field, the local environmental perturbation, and their coupling, all evaluated at the relevant cosmic epoch. The structure is analogous to temperature in a room: local temperature fluctuates from point to point within the room, but is also defined relative to the external temperature, which itself varies more radically between regions, and all of these temperatures change over time — the room cools at night, the outside temperature shifts with seasons. The temporal field exhibits the same nested character in both dimensions — local clock-rate fluctuations sit within a cosmological time-rate background, both vary continuously across space, and both evolve continuously over time.</p>
+
+    <p>The nested structure is quantitative, not merely schematic. Solving the radial field equation for each level of the hierarchy with the containing environment's field as the asymptotic condition — a single continuous profile $\phi_{\rm total} = \phi_{\rm env} + \delta\phi$, in which the conformal nonlinearity acts on the total field and the perturbation decays to the ambient value rather than to zero — yields the following nested-hierarchy decomposition (Appendix E, R1). The galactic field at the solar circle is $\phi_{\rm gal}(8\,{\rm kpc}) \simeq 2.8\times10^{-7}$ ($1.4$–$5.7\times10^{-7}$ across galactic model variants, consistent with the independent circular-velocity estimate $(v_c/c)^2 \simeq 5.4\times10^{-7}$), while the Sun's own perturbation at 1 AU is only $2.0\times10^{-8}$: the ambient field exceeds the solar contribution beyond $\sim 15\,R_\odot \approx 0.07$ AU, in the $V = 0$ baseline the ambient-to-perturbation ratio is $\sim 9\times10^{4}$ at the wide-binary separation (2646 AU), rising to $\sim 10^7$ across the stellar population — the binary is embedded almost entirely in the galactic field. At the terrestrial surface the decomposition is approximately 93% galactic, 6.5% solar, and 0.5% terrestrial: a local clock measures a small perturbation on a much larger ambient baseline, and because the ambient component is common-mode it cancels in local comparisons. For the same reason the Cassini bound is intrinsically local: it constrains the Sun's gradient perturbation $S_\Sigma^{(\odot)}$, while the ambient galactic field carries negligible gradient over AU scales and drops out of the observable. Under the two-body kinetic operator the pairwise shear at the conjunction separation is suppressed to $F(1.6\,R_\odot) \approx 6\times10^{-23}$ — orders of magnitude deeper than required — while the Cassini bound itself constrains the single-body exterior source charge, $S_\Sigma^{(\odot)} \lesssim 5.8\times10^{-6}$, which the adopted Solar-System source-charge convention $S_\Sigma^{(\odot)} \sim 2\times10^{-6}$ satisfies comfortably (the derivation of that charge from the stated $K(X)$ is part of the same open single-body calculation). The baseline itself is not uniform: the ambient clock rate differs by $\Delta\ln A \simeq 2.2\times10^{-7}$ between the solar circle and the galactic halo, so the proper-time field is genuinely position-dependent across the galaxy — one continuous multi-scale profile with no boundaries between levels. The nested field hierarchy has two complementary properties: the field value at any point is dominated by the largest enclosing structure (Galaxy, then Sun, then Earth), while the field gradient is dominated by the nearest mass. This gives the clock/shear split its physical content: clock rates are set by the whole nested hierarchy, while the local Temporal Shear is set by the nearest body's gradient.</p>
+
+    <p>The parameter $\rho_T \approx 20$ g/cm³ is a macroscopic phenomenological saturation scale for the scalar response. It is not a universal microscopic density cutoff, a binary screened/unscreened switch, or automatically applicable to quantum cores without a transfer map. For quantum and accelerator domains, the microscopic topological-core regulator is a proximity/coherence-volume projection of $\mathcal S_\Sigma(\mathcal E)$, not literal bulk density.</p>
+    
+    <h3>Temporal Topology and Temporal Shear: Canonical Formulation</h3>
+    
+    <p>The screening ontology is organized through a sector dictionary. The Temporal Shear is defined as the gradient of the conformal factor:</p>
+    
+    <div class="equation">
+        $$\Sigma_\mu \equiv \nabla_\mu \ln A(\phi) = \frac{\partial \ln A}{\partial \phi} \nabla_\mu \phi = \frac{\alpha(\varphi)}{M_{\rm Pl}} \nabla_\mu \phi,$$
+    </div>
+    
+    <p>where $\alpha(\varphi) \equiv d(\ln A)/d\varphi$ is the dimensionless conformal coupling strength, and $\varphi \equiv \phi/M_{\rm Pl}$. For compactness one may write $\Theta \equiv \ln A$, but the canonical series notation remains $\ln A$, $\Sigma_\mu = \nabla_\mu \ln A$, and $C_A$.</p>
+
+    <p>The observable Temporal Shear is suppressed by the environmental screening operator $\mathcal S_\Sigma(\mathcal E)$:</p>
+
+    <div class="equation">
+        $$\Sigma_\mu^{\text{obs}} = \mathcal S_\Sigma(\mathcal E) \, \nabla_\mu \ln A(\phi),$$
+    </div>
+
+    <p>where the environmental state is
+    $$\mathcal E = \{\rho, \Phi/c^2, \nabla\rho, \nabla\Phi, \text{compactness}, R_T(M), \text{proximity}, T, z, \text{boundary geometry}, \text{coherence volume}\}.$$
+    The common environmental state $\mathcal{E}$ organizes these domain-specific observable projections; the projections themselves need not be numerically identical.</p>
+
+    <p>The Temporal Topology correlation function $C_A(x,x')$ characterizes correlations of conformal-factor fluctuations:</p>
+    <div class="equation">
+        $$C_A(x,x') \equiv \langle \delta\ln A(x) \, \delta\ln A(x') \rangle,$$
+    </div>
+    <p>It is measured through clock/covariance data.</p>
+    
+    <p>The temporal correlation length $\lambda_T$ is the characteristic scale extracted from $C_A(x,x')$ in covariance measurements, not a derived algebraic combination of local fields.</p>
+    
+    <p>The temporal saturation scale $\rho_T$ is the characteristic scale at which Temporal Topology effects saturate in screening; it is a property of the theory's non-linear regime, not a local temporal energy density.</p>
+    
+    <p>Finally, the observable response of any measurement channel $X$ is parameterized by response coefficients $\kappa_X$:</p>
+    
+    <div class="equation">
+        $$\Delta O_X = \kappa_X \cdot \mathcal S_X(\mathcal E) \cdot \mathcal F_X[\Delta\ln A, \Sigma_\mu, C_A; \Phi, \rho, z],$$
+    </div>
+    
+    <p>where $\kappa_X$ is an observable response coefficient for channel $X$, not the microscopic conformal coupling $\beta_A$ and not a PPN coupling. The locally active PPN coupling is suppressed by the environmental/source screening factor $\mathcal S_\Sigma(\mathcal E)$ and should not be confused with channel response coefficients $\kappa_X$.</p>
+
+    <h3>Universal transfer map ($\beta_A \to \kappa_X$)</h3>
+
+    <p>The transfer map translates the microscopic coupling $\beta_A = -1.0$ into domain-specific observable response coefficients ($\kappa_X$). Channel-specific response coefficients are observable projections of the universal conformal sector, with $\kappa_X = |\beta_A|S_X(\mathcal E_X)\Gamma_X$. They encode the channel geometry and environmental response and are distinct from the frozen microscopic coupling $\beta_A = -1$:</p>
+
+    <p>Observable channel coefficients are defined as positive response magnitudes</p>
+    <div class="equation">$$
+    \kappa_X \equiv \lvert\beta_A\rvert\,S_X(\mathcal E_X)\,\Gamma_X.
+    $$</div>
+
+    <p>They are not the bare coupling. $S_X$ is the screening projection appropriate to the channel: $S_A$ for clock-rate and covariance observables (GNSS, J0437, clock networks), $S_\Sigma$ for source-charge and geodesic-kinematics observables (Cassini, LLR, wide binaries). $\mathcal{E}_X$ is the environmental state evaluated for the target channel. $\Gamma_X$ is a geometric/kinematic projector — a known function of the channel geometry — that is not tabulated in this paper; its evaluation requires the transfer-function calculation, and the channel-specific $\kappa_X$ values listed below are accordingly conditional on its supply rather than derived predictions.</p>
+
+    <table style="border-collapse: collapse; width: 100%; margin: 1em 0;">
+        <thead>
+            <tr style="background: rgba(28, 46, 74, 0.04);">
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Domain</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Base coupling</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Screening projection</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Observable response</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Solar System / GNSS</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\beta_A = -1.0$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$S_A^{(\oplus)}$ (clock)</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\lambda_T$, clock response $\kappa_{\rm GNSS}$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Projection ($\Gamma_X$ pending)</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Wide binaries</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\beta_A = -1.0$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$S_\Sigma(\rho_{\rm gal\ disk})$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\alpha_{\rm sat}$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Projection ($\Gamma_X$ pending)</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Cepheids ($H_0$)</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\beta_A = -1.0$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$S_A(\rho_{\rm host\ gal})$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\kappa_{\rm Cep}$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Projection ($\Gamma_X$ pending)</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">JWST high-$z$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\beta_A = -1.0$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Stellar-population transfer</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\kappa_{\rm gal}$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Inherited</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Globular clusters</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$\beta_A = -1.0$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">$S_A(\text{cluster env})$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Pulsar $\Gamma$</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Projection ($\Gamma_X$ pending)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Once the kinetic realization is fixed, any discrepancy between the predicted $\kappa_X$ and empirical fits (such as the variation in $\kappa_{\rm Cep}$ between 0.326–0.452 $\times 10^6$ mag and the theory benchmark of 0.96 $\times 10^6$ mag) ceases to be an unconstrained liability and becomes a direct constraint on the kinetic structure of the action.</p>
+    <p><em>On the benchmark value and its unit.</em> The canonical figure $\kappa_{\rm canonical} = 0.96 \times 10^6$ mag is a prespecified theory benchmark, not a fitted parameter: it is declared in advance so that downstream analyses (for example the JWST application, Paper 12) can be run without any domain-specific refitting, which is what makes those applications tests rather than fits. The unit &ldquo;mag&rdquo; is a bookkeeping convention inherited from the Cepheid period&ndash;luminosity relation in which the coefficient was first expressed; in the transfer-map sense of the equation above, $\kappa_X$ is a dimensionless response magnitude, and the magnitude unit simply records the observational channel through which it is measured. It should not be treated as a physical dimension carried by the coupling. The factor $2$–$3$ separation between $\kappa_{\rm canonical}$ and the empirical Cepheid-channel values is carried explicitly as an unresolved normalization target, not a confirmed output: within $\kappa_{\rm Cep} = |\beta_A|\,S_A(\rho_{\rm host})\,\Gamma_{\rm Cep}$ the offset must be absorbed either by the normalization of the galactic-host screening projection $S_A(\rho_{\rm host})$ or by additional distance-ladder or period-dependent structure in the channel projector $\Gamma_{\rm Cep}$ not yet present in the transfer map. Until the transfer-function calculation supplies both factors, the location of the required correction is identified even though its decomposition is not.</p>
+    <p>Because the environmental vector $\mathcal{E}$ encompasses the total localized state (source structure, boundary conditions, and ambient fields), its operational realization depends strictly on the physical domain being probed. In dense macroscopic matter, it manifests via a density proxy; in cosmological voids and local potential wells, it tracks potential-depth gradients; in kinematic orbital phase space, it follows velocity-dispersion transitions; in geodetic clock networks, it is defined by geometric covariance lengths $\lambda_T$; and in subatomic environments, it is bounded by geometric proximity regulators. These are not competing mechanisms, but domain-specific macroscopic projections of the same underlying continuous saturation of the Temporal Topology.</p>
+    
+    <h2>PPN mapping</h2>
+    <p>The PPN parameter is $\gamma_{\rm PPN} = (1 - 2\beta_A^2 S_\Sigma) / (1 + 2\beta_A^2 S_\Sigma)$, which at leading order gives the strict, sign-definite prediction $\gamma_{\rm PPN} - 1 \simeq -4\beta_A^2 S_\Sigma < 0$, where $S_\Sigma$ is the source's screening fraction. With $\alpha_0 = \sqrt{2}\,\beta_A = -\sqrt{2}$, Cassini's $|\gamma_{\rm PPN} - 1| < 2.3\times10^{-5}$ requires the bound $S_\Sigma^{(\odot)} \lesssim 5.8\times10^{-6}$ in the Solar-System environment. Near massive bodies, the suppression of Temporal Shear (vanishing field gradient) suppresses the effective scalar charge, cleanly preserving PPN bounds without invoking rigid thin-shell approximations.</p>
+
+    <p><strong>PPN recovery in the screened limit.</strong> For $A(\phi) = \exp(\beta_A\phi/M_{\rm Pl})$, the dimensionless microscopic coupling is $d\ln A/d\varphi = \beta_A = -1$ (equivalently $\alpha_0 = \sqrt{2}\,\beta_A$ in DEF normalization). Environmental screening does not alter this universal microscopic coupling. Instead, it suppresses the effective exterior scalar charge,</p>
+    <div class="equation">$$\alpha_{\rm eff} = S_\Sigma(\mathcal E)\,\alpha_0,$$</div>
+    <p>where $S_\Sigma(\mathcal E) \to 0$ in dense environments. Because the photon probe is unscreened while the source charge is suppressed, the PPN deviation is bilinear in the probe and source charges, enforcing the sign-definite prediction $\gamma_{\rm PPN} - 1 < 0$:</p>
+    <div class="equation">$$\gamma_{\rm PPN} - 1 = -\frac{2\alpha_0\,\alpha_{\rm eff}}{1 + \alpha_0\,\alpha_{\rm eff}} = -\frac{4\beta_A^2 S_\Sigma}{1 + 2\beta_A^2 S_\Sigma},$$</div>
+    <p>which is linear in $S_\Sigma$ at leading order. Therefore $S_\Sigma \to 0 \;\Longrightarrow\; \alpha_{\rm eff} \to 0 \;\Longrightarrow\; \gamma_{\rm PPN} \to 1$. The remaining PPN parameters likewise recover their GR values in the screened limit. No independent running of the frozen microscopic coupling $\alpha_0$ is required.</p>
+    
+    <h2>Equivalence principle</h2>
+    <p>TEP ensures universality in the matter frame. In the Einstein frame, the anomalous geometric acceleration (conventionally parameterized as a fifth force) is bounded by Eötvös experiments; MICROSCOPE gives $\eta \lesssim 10^{-15}$. Sectoral dilaton-like couplings (to $\alpha$, $\mu$, quark masses) are constrained to $|d| \lesssim 10^{-5}$–$10^{-6}$ by composition tests and clock ratios.</p>
+    
+    <h2>Disformal constraints</h2>
+    <p>GW170817/GRB170817A constrain $|c_\gamma - c_g|/c \lesssim \text{few}\times10^{-15}$ at $z \approx 0.01$, bounding the observable combination $B(\phi)(\partial\phi)^2$ along the observed astrophysical path. This does not require $B$ to vanish identically. In regimes where common-mode conformal effects dominate, $B$ may remain active as a source for synchronization holonomy, multipath propagation anomalies, or interferometric signatures without violating the same-path EM–GW timing bound.</p>
+
+    <h2>Disformal holonomy and the screening ontology</h2>
+
+    <p>As established in Section 3.3, the invariant synchronization observable is the GR-subtracted residual</p>
+    <div class="equation">$$H_{\rm resid}(C) = \oint_C \Delta\sigma, \qquad \Delta\sigma \equiv \tilde{\sigma}-\sigma_{\rm GR}.$$</div>
+    <p>In the conformal-only subclass, the scalar clock-rate contribution is the exact one-form $d\ln A$, so it cannot by itself generate closed-loop residual synchronization holonomy in a smooth simply connected region. A leading-order nonzero $H_{\rm resid}$ requires residual synchronization curvature,</p>
+    <div class="equation">$$d\Delta\sigma \neq 0 .$$</div>
+    <p>In the minimal TEP model this curvature is supplied by the disformal sector; in more general extensions it may arise from non-metricity or other explicitly non-exact transport structure.</p>
+
+    <p>To state the disformal contribution in a measurement-defined way, let $u^\mu$ denote the four-velocity field of the physical clock network or observer congruence used to define the synchronization protocol. The $(-+++)$ signature is used, so that</p>
+    <div class="equation">$$u^\mu u_\mu = -1 .$$</div>
+    <p>Let</p>
+    <div class="equation">$$P_\mu{}^\nu = \delta_\mu{}^\nu + u_\mu u^\nu$$</div>
+    <p>be the spatial projector into the local rest space of that congruence. To leading order in the disformal correction, the projected contribution to the synchronization connection has the representative form</p>
+    <div class="equation">$$\delta\tilde{\sigma}_\mu \simeq -\frac{B}{A^2} (u\cdot\nabla\phi) P_\mu{}^\nu \nabla_\nu\phi ,$$</div>
+    <p>up to the sign convention used for the synchronization one-form and higher-order disformal corrections.</p>
+
+    <p>Appendix A3 derives this expression from the mixed time-space projection of the disformal matter metric. It also shows that synchronization re-gaugings shift both the matter-frame synchronization connection and the corresponding GR reference connection by the same exact one-form. Therefore the GR-subtracted residual connection $\Delta\sigma$ is invariant under synchronization convention changes, and</p>
+    <div class="equation">$$H_{\rm resid}(C) = \oint_C \Delta\sigma$$</div>
+    <p>is independent of the arbitrary simultaneity convention used to coordinatize the specified physical clock network.</p>
+
+    <p>The invariant claim is therefore precise: $H_{\rm resid}$ is not independent of which physical clock network is used, but for a specified physical clock-network protocol it is independent of arbitrary synchronization re-labelling.</p>
+
+    <p>For a hypersurface-orthogonal clock network, $u^\mu=n^\mu$, the projected expression reduces to the familiar $3+1$ form</p>
+    <div class="equation">$$\delta\tilde{\sigma}_i \approx -\frac{B}{A^2N} (\partial_i\phi)(n\cdot\partial\phi),$$</div>
+    <p>where $N$ is the lapse and $n^\mu$ is the unit normal to the spatial slices. This ADM expression should be read as a special-case representation of the physical congruence formulation, not as the definition of the observable.</p>
+
+    <p>Unlike $d\ln A$, the disformal contribution is not generically exact. In the local non-topological case, its curvature satisfies</p>
+    <div class="equation">$$d(\delta\tilde{\sigma}) = -\frac{B}{A^2} d\left(\frac{\dot{\phi}}{N^2}\right) \wedge d\phi$$</div>
+    <p>whenever the prefactor multiplying the projected scalar gradient varies independently around the loop, for example through time dependence, anisotropic boundary conditions, inhomogeneous field structure, lapse/shift structure, or spatial variation of the disformal response within a fixed physical clock-network protocol. For a loop $C$ bounding a smooth surface $\Sigma$, the local non-exact contribution to the residual holonomy may be written</p>
+    <div class="equation">$$H_{\rm resid}(C) = \oint_C \Delta\sigma = \iint_\Sigma d(\Delta\sigma).$$</div>
+    <p>At leading order beyond the GR-subtracted reference model, $d(\Delta\sigma)$ contains the disformal curvature $d(\delta\tilde{\sigma})$. Topological holonomy, where the loop does not bound a smooth surface or the connection is locally closed but not globally exact, is a separate case and is not represented by the Stokes expression above.</p>
+
+    <p>The conformal and disformal responses arise from the same environment-dependent scalar configuration. For the universal exponential coupling,</p>
+    <div class="equation">$$\Sigma_\mu \equiv \nabla_\mu\ln A = \frac{\beta_A}{M_{\rm Pl}}\nabla_\mu\phi,$$</div>
+    <p>while the leading disformal deformation relative to the conformal metric is</p>
+    <div class="equation">$$\mathcal{D}_{\mu\nu} \equiv \frac{B(\phi)}{A^2(\phi)}\nabla_\mu\phi\nabla_\nu\phi = \frac{B(\phi)\,M_{\rm Pl}^2}{A^2(\phi)\,\beta_A^2}\,\Sigma_\mu\Sigma_\nu.$$</div>
+    <p>Environmental flattening of the Temporal Topology therefore suppresses both responses: Temporal Shear is linear in the locally active scalar gradient, whereas the leading disformal deformation is quadratic in that gradient for fixed $B/A^2$. Their observable suppression is nevertheless not represented by a single universal numerical factor, because the disformal response additionally depends on $B(\phi)$, the solved field profile, path geometry, boundary conditions, and the observer congruence. The body-level exterior source-charge factor</p>
+    <div class="equation">$$S_\Sigma \equiv Q/Q_0$$</div>
+    <p>is an integrated observable projection of the field configuration and should not be inserted directly as a universal local $S_\Sigma^2$ multiplier for disformal observables. At leading disformal order, the synchronization correction may equivalently be written</p>
+    <div class="equation">$$\delta\tilde{\sigma}_\mu \simeq -\frac{B(\phi)\,M_{\rm Pl}^2}{A^2(\phi)\,\beta_A^2}\,(u\!\cdot\!\Sigma)\,P_\mu{}^\nu\Sigma_\nu.$$</div>
+    <p>Thus synchronization holonomy depends on the local field value and Temporal Shear, the observer motion relative to that field, the orientation of the gradient, and the complete path geometry. Experimental response therefore cannot in general be inferred from ambient density or a body-level source-charge factor alone.</p>
+
+    <p>Accordingly, high-energy, mesoscopic, and topological probes should not be modeled solely by the ambient bulk-density screening function used in astrophysical applications. Their responses are represented by channel-specific coefficients $\kappa_X$, depending on momentum transfer, interaction topology, boundary geometry, and microscopic field structure. These probes test whether non-exact disformal transport remains measurable in regimes where the conformal clock-rate response is screened.</p>

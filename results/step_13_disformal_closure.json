@@ -1,0 +1,57 @@
+{
+  "units": "dimensionless (H0,c,M_Pl)",
+  "box_Mpc": 100.0,
+  "grid": 64,
+  "model": "lnA = Pi_bar t w(rho_s) + delta F(rho_s); Q_req from transport identity; b_req collapse test",
+  "scan": {
+    "partitioned,delta=1e-6": {
+      "u_lo": -0.0523961578887406,
+      "u_hi": -0.004861679775104488,
+      "median_within_bin_rel_scatter": 0.5489320053506968,
+      "n_bins": 39,
+      "b_median_range": [
+        -0.004762047902169187,
+        -0.0001560831853088343
+      ],
+      "Q_min": -0.8101474084622144,
+      "Q_p50": -0.07303573773592231,
+      "Q_max": -0.01634296146932257,
+      "frac_bpos_late": 0.0,
+      "rho_max_late": 3.396980579501792
+    },
+    "universal,delta=1e-6": {
+      "u_lo": -0.9886495412496848,
+      "u_hi": -0.5158175806680956,
+      "median_within_bin_rel_scatter": 2.122112692510068e-08,
+      "n_bins": 12,
+      "b_median_range": [
+        2.8056499263436385,
+        7.223207067740219
+      ],
+      "Q_min": -0.9973465729584603,
+      "Q_p50": -0.9889476771214338,
+      "Q_max": -0.9547208958122653,
+      "frac_bpos_late": 1.0,
+      "rho_max_late": 4.537444257646316
+    },
+    "partitioned,delta=1e-5": {
+      "u_lo": -0.052023247635674494,
+      "u_hi": -0.0048004455318289025,
+      "median_within_bin_rel_scatter": 0.560956815246003,
+      "n_bins": 39,
+      "b_median_range": [
+        -0.004706256903718664,
+        -0.00015909194872465871
+      ],
+      "Q_min": -0.7699282177586073,
+      "Q_p50": -0.07363627115691618,
+      "Q_max": -0.013966368759772418,
+      "frac_bpos_late": 0.0,
+      "rho_max_late": 3.756110352757638
+    }
+  },
+  "verdict": {
+    "statement": "admissible iff b_req(u) collapses to a single-valued curve (within-bin scatter << 1) with b<0 in rolling regions; frac_bpos measures inconsistent cells",
+    "physical_status": "no-go: a formal single-valued b_req exists, but b<0 implies superluminal longitudinal photons (v_par = c/sqrt(1+(B/A^2)|grad phi|^2) > c) inside structure and a universal roll drives Q -> -1 (matter-metric degeneracy); excluded as a physical carrier \u2014 balance saturates via the A^-1-weighted flow term behind the temporal horizon (step_14)"
+  }
+}

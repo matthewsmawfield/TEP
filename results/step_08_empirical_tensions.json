@@ -1,0 +1,56 @@
+{
+  "mgex": {
+    "canonical_length_km": 4200,
+    "mgex_length_km": 1862,
+    "mgex_length_err_km": 112,
+    "axis_offset_from_cmb_deg": 21.4,
+    "tep_interpretation": "Nested hierarchy: 4200 km = R_T (outer structure), 1862 km lies between inner-core and outer-core R_T; axis remains CMB-consistent",
+    "R_T_inner_core_km": 1254.4502648018226,
+    "R_T_outer_core_km": 3497.1759370900636,
+    "inner_core_match_percent": 32.62887944136291,
+    "outer_core_match_percent": 87.81825655693144,
+    "axis_interpretation": "Recovered axis within 21.4\u00b0 of the CMB dipole: same preferred direction as the canonical product; the discrepancy is in scale, not orientation",
+    "classification": "UNRESOLVED \u2014 product-dependent replication difference in scale; axis consistent with canonical direction; inner-core identification is a hypothesis requiring a prespecified prediction",
+    "resolution_test": "Product-level transfer model: freeze observation operator for each product, predict both length and axis from TEP hierarchy"
+  },
+  "jwst": {
+    "primary_joint_ln_BF": 64.5,
+    "conventional_residual_ln_BF": -3.9,
+    "corrected_residual_ln_BF": 151.4,
+    "constrained_agn_residual_ln_BF": 106.4,
+    "mass_correction_transfer_mean_ln_BF": -3.1,
+    "dust_aic_agn_weight": 0.83,
+    "bayes_factor": 0.02024191144580439,
+    "classification": "MIXED \u2014 primary covariance-corrected joint evidence favors TEP (ln BF = +64.5); conventional residual space favors the null (ln BF = -3.9); corrected residual space favors TEP (ln BF = +151.4, +106.4 vs constrained AGN)",
+    "tep_transfer_factor_z10": 0.9999992806316769,
+    "tep_correction_magnitude": 7.193683231321302e-07,
+    "interpretation": "At z~10, the direct SED correction is ~7e-7 (very small); the decisive evidence comes from the correlation structure. The unfavorable residual-space result holds only in the conventional raw-mass space where signal absorption is expected.",
+    "parameter_count_argument": "AGN models have more free parameters, but parameter count alone does NOT predict evidence ranking. A physically normalized likelihood is required.",
+    "resolution_test": "Lower-redshift analysis where TEP correction is larger; prespecify physically normalized SED response"
+  },
+  "llr_flyby": {
+    "lunar_distance_km": 384400.0,
+    "R_T_km": 4146.360558419803,
+    "r_over_RT": 92.70780835000433,
+    "yukawa_suppression": 5.463996396400608e-41,
+    "classification": "NOT CONSTRAINING at lunar distance \u2014 Yukawa force exponentially suppressed (exp(-92) \u2248 10\u207b\u2074\u2070). LLR cannot distinguish TEP from GR.",
+    "flyby_analysis": {
+      "r_flyby_km": 6371.0,
+      "r_flyby_over_RT": 1.5365282179965598,
+      "yukawa_flyby": 0.21512667936994453,
+      "varphi_earth": 1.3925856003695548e-09,
+      "delta_v_over_v": 2.9958231594590294e-10,
+      "observed_anomaly": 1e-06,
+      "tep_prediction": 2.9958231594590294e-10,
+      "prediction_vs_observed": 0.00029958231594590296,
+      "classification": "NOT EXPLAINED \u2014 TEP conformal coupling predicts \u03b4v/v \u2248 3.0e-10, much smaller than observed ~10\u207b\u2076. Disformal coupling or different mechanism needed."
+    },
+    "resolution_test": "Forward-dynamics integration: integrate TEP force model through LLR observation times, construct variational/design matrices, refit nuisance parameters, evaluate retained signal. For flyby: include disformal coupling in the trajectory model."
+  },
+  "summary": {
+    "mgex": "UNRESOLVED \u2014 1862 km lies between inner-core and outer-core R_T; axis consistent with CMB direction (21.4\u00b0)",
+    "jwst": "MIXED \u2014 primary covariance-corrected evidence favors TEP (ln BF = +64.5); conventional residual space favors the null",
+    "llr": "NOT CONSTRAINING at lunar distance; flyby NOT EXPLAINED by conformal coupling alone",
+    "overall": "MGEX scale unresolved between hierarchy levels; axis consistent. JWST evidence mixed across comparison spaces. LLR not constraining (exponential suppression). Flyby requires disformal coupling."
+  }
+}

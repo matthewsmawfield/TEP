@@ -1,0 +1,64 @@
+{
+  "verified": true,
+  "test_A_feasibility": [
+    {
+      "z": 0.0098,
+      "L_Mpc": 40.0,
+      "s_drift": 7.900430527121112e-27,
+      "Q": 0.06025956273846256,
+      "L": 1.2344e+24,
+      "kappa_required": 6.554360598455974e-20
+    },
+    {
+      "z": 0.1,
+      "L_Mpc": 430.0,
+      "s_drift": 7.182488040838968e-27,
+      "Q": 0.7715610000000008,
+      "L": 1.3269800000000001e+25,
+      "kappa_required": 5.408276732103681e-19
+    },
+    {
+      "z": 1.0,
+      "L_Mpc": 3400.0,
+      "s_drift": 6.606183338034628e-27,
+      "Q": 63.0,
+      "L": 1.04924e+26,
+      "kappa_required": 2.102873056808434e-18
+    }
+  ],
+  "main_result": {
+    "statement": "Conditional bound (leading order, endpoint law assumed): DeltaT_min ~ (Q/(2(1+Q)))(L/c)(s_drift/kappa)^2 where kappa is the largest cosmological field gradient the solved geometry permits. Hubble-scale gradients give DeltaT ~ 1e14 s (excluded); kappa ~> 1e7 H0/c (sub-pc lumpiness) satisfies the 1.7 s bound parametrically \u2014 IF such gradients are gravitationally consistent and ray-aligned.  The previous unconditional ~1e13 exclusion is WITHDRAWN: it imported rho_crit = 3 M_Pl^2 H0^2, which is defined from the expansion rate under test.",
+    "assumptions_flagged": [
+      "endpoint-law redshift Delta phi_hat = ln(1+z) (alternatives share the same integral)",
+      "volume identity on the zero-shift volume-normal congruence (tilted congruence open)",
+      "leading-order weak-deformation delay formula",
+      "B >= 0 (B<0 same magnitude bound)"
+    ],
+    "kappa_required_per_z": [
+      {
+        "z": 0.0098,
+        "kappa_per_m": 6.554360598455974e-20,
+        "wavelength_pc": 494.3946325898745
+      },
+      {
+        "z": 0.1,
+        "kappa_per_m": 5.408276732103681e-19,
+        "wavelength_pc": 59.91632566987272
+      },
+      {
+        "z": 1.0,
+        "kappa_per_m": 2.102873056808434e-18,
+        "wavelength_pc": 15.409587799147813
+      }
+    ]
+  },
+  "test_C_momentum_flux": "T_0i ~ Pi^2 direction is a directed flux V cannot cancel; needs gravitomagnetic metric response inconsistent with the static ansatz, or an isotropic lump average that destroys ray alignment.",
+  "test_D_isotropy": "Spherical converging null wave solves ray alignment for one observer only \u2014 O(1) anisotropy for displaced observers.  Universal version requires per-observer converging structure \u2014 open existence question.",
+  "open_loopholes": [
+    "tilted congruence: if the physical galaxy network is not the zero-shift volume-normal congruence, the identity 1+Q = C A^{-6} changes form \u2014 the Q requirement itself is congruence-dependent (full expansion formula not yet derived on a candidate solution)",
+    "B < 0: signature-safe (W>0 possible); flips deformation sign (superluminal branch) but |DeltaT| bound identical in magnitude \u2014 no escape shown",
+    "non-endpoint redshift: transport redshift shares the same s(l) functional \u2014 delay and shift are the same integral; moving-endpoint Doppler is bounded by peculiar velocities and cannot produce a smooth Hubble law",
+    "kappa >> H0/c: the needed gradient scale is set by the solved field, not by rho_crit; whether sub-pc-scale cosmological gradients are consistent with the Einstein equations is the open existence question"
+  ],
+  "conclusion": "REVISED (v3): the shared-null-direction mechanism evades delay only for rays carrying no field change; redshift requires s ~ s_drift ~ z/L.  Whether cancellation is available depends on the allowed cosmological gradient scale kappa \u2014 which must come from a solved geometry, not an imported critical density.  If the field is lumpy on sub-pc scales with ray-aligned gradients, the bound is satisfied parametrically; if gradients are Hubble-scale, it fails by ~1e13. The multimessenger question is therefore NOT decided by inequalities \u2014 it requires the single coupled solution test (Einstein + scalar equations, both ray channels, redshift and delay on the same rays)."
+}

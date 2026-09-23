@@ -1,0 +1,70 @@
+{
+  "nonzero_loop": {
+    "input": {
+      "D": 1000.0,
+      "q": 0.001,
+      "k": 0.001,
+      "acceleration": 0.1,
+      "length": 1.0
+    },
+    "clockwise_arrival": 3.8178208845508483,
+    "counterclockwise_arrival": 3.818168626834075,
+    "coordinate_arrival_difference": -0.00034774228322653755,
+    "connection_loop": 0.0001738711416130773,
+    "stationary_identity_error": -3.8294020732188017e-16,
+    "receiver_proper_time_difference": -0.0003464171363245505,
+    "GR_reference_arrival_difference": 0.0,
+    "scope": "Dimensionless local test-field transport example; no astrophysical amplitude calibration."
+  },
+  "conformal_null": {
+    "input": {
+      "D": 0,
+      "q": 0.001,
+      "k": 0.001,
+      "acceleration": 0.1,
+      "length": 1.0
+    },
+    "clockwise_arrival": 3.8152945051774063,
+    "counterclockwise_arrival": 3.8152945051774063,
+    "coordinate_arrival_difference": 0.0,
+    "connection_loop": 0.0,
+    "stationary_identity_error": 0.0,
+    "receiver_proper_time_difference": 0.0,
+    "GR_reference_arrival_difference": 0.0,
+    "scope": "Dimensionless local test-field transport example; no astrophysical amplitude calibration."
+  },
+  "uniform_lapse_null": {
+    "input": {
+      "D": 1000.0,
+      "q": 0.001,
+      "k": 0.001,
+      "acceleration": 0,
+      "length": 1.0
+    },
+    "clockwise_arrival": 4.003002752627549,
+    "counterclockwise_arrival": 4.003002752627549,
+    "coordinate_arrival_difference": 0.0,
+    "connection_loop": 0.0,
+    "stationary_identity_error": 0.0,
+    "receiver_proper_time_difference": 0.0,
+    "GR_reference_arrival_difference": 0.0,
+    "scope": "Dimensionless local test-field transport example; no astrophysical amplitude calibration."
+  },
+  "static_scalar_null": {
+    "input": {
+      "D": 1000.0,
+      "q": 0,
+      "k": 0.001,
+      "acceleration": 0.1,
+      "length": 1.0
+    },
+    "clockwise_arrival": 3.816248812114832,
+    "counterclockwise_arrival": 3.816248812114832,
+    "coordinate_arrival_difference": 0.0,
+    "connection_loop": 0.0,
+    "stationary_identity_error": 0.0,
+    "receiver_proper_time_difference": 0.0,
+    "GR_reference_arrival_difference": 0.0,
+    "scope": "Dimensionless local test-field transport example; no astrophysical amplitude calibration."
+  }
+}

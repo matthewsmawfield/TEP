@@ -1,0 +1,37 @@
+{
+  "name": "tep-site",
+  "version": "0.14.0",
+  "description": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "python3 -m http.server 8000",
+    "build": "node build.js",
+    "build:markdown": "npm run build && node html-to-markdown.js",
+    "markdown": "node html-to-markdown.js",
+    "serve": "python3 -m http.server",
+    "serve:dist": "cd dist && python3 -m http.server 8349"
+  },
+  "keywords": [
+    "TEP",
+    "Temporal Equivalence Principle",
+    "proper time",
+    "emergent light speed",
+    "scalar-tensor theory",
+    "physics"
+  ],
+  "author": "Matthew Lukin Smawfield <matthew@mlsmawfield.com>",
+  "license": "CC-BY-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewsmawfield/TEP.git"
+  },
+  "homepage": "https://mlsmawfield.com/tep/theory/",
+  "devDependencies": {
+    "chokidar": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.10"
+  }
+}

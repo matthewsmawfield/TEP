@@ -2,6 +2,90 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../manuscripts"
+		},
+		{
+			"path": "../TEP-WB"
+		},
+		{
+			"path": "../TEP-9"
+		},
+		{
+			"path": "../TEP-GTE"
+		},
+		{
+			"path": "../TEP-EFA"
+		},
+		{
+			"path": "../TEP-GNSS-MGEX"
+		},
+		{
+			"path": "../TEP-GNSS-RINEX"
+		},
+		{
+			"path": "../TEP-LLR"
+		},
+		{
+			"path": "../TEP-SLR"
+		},
+		{
+			"path": "../TEP-J0437"
+		},
+		{
+			"path": "../TEP-HC"
+		},
+		{
+			"path": "../TEP-HUB"
+		},
+		{
+			"path": "../TEP-QF"
+		},
+		{
+			"path": "../TEP-BBN"
+		},
+		{
+			"path": "../TEP-EXP"
+		},
+		{
+			"path": "../TEP-GL"
+		},
+		{
+			"path": "../TEP-BH"
+		},
+		{
+			"path": "../TEP-LENS"
+		},
+		{
+			"path": "../TEP-GNSS"
+		},
+		{
+			"path": "../TEP-H0"
+		},
+		{
+			"path": "../TEP-COS"
+		},
+		{
+			"path": "../TEP-RBH"
+		},
+		{
+			"path": "../TEP-GNSS-II"
+		},
+		{
+			"path": "../TEP-JWST"
+		},
+		{
+			"path": "../TEP-VOID"
+		},
+		{
+			"path": "../TEP-TH"
+		},
+		{
+			"path": "../TEP-C0"
+		},
+		{
+			"path": "../corpus-notes"
 		}
 	],
 	"settings": {}

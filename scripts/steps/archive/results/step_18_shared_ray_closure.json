@@ -1,0 +1,160 @@
+{
+  "exact_solution": {
+    "form": "phi = f(t+r); f' = sqrt((1-e^{-6f})/b)",
+    "property": "satisfies A^6(1+Q)=1 identically on every worldline; pure null gradient; carries zero redshift"
+  },
+  "required_drift_per_m": 7.900430527121112e-27,
+  "sweep": [
+    {
+      "b_t": 1e+30,
+      "D": 7.900430527121112e-27,
+      "ident_resid_rms": 2.3701291581363357e-26,
+      "regular": true,
+      "dphi_ray": 0.0097522914426783,
+      "delay_s": 0.0,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+30,
+      "D": 7.900430527121112e-26,
+      "ident_resid_rms": 2.370129158136336e-25,
+      "regular": true,
+      "dphi_ray": 0.09752291442678301,
+      "delay_s": 0.0,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+30,
+      "D": 7.900430527121112e-25,
+      "ident_resid_rms": 2.3701291581363337e-24,
+      "regular": true,
+      "dphi_ray": 0.9752291442678301,
+      "delay_s": 0.0,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+34,
+      "D": 7.900430527121112e-27,
+      "ident_resid_rms": 2.3701291581363357e-26,
+      "regular": true,
+      "dphi_ray": 0.0097522914426783,
+      "delay_s": 0.0,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+34,
+      "D": 7.900430527121112e-26,
+      "ident_resid_rms": 2.370129158136336e-25,
+      "regular": true,
+      "dphi_ray": 0.09752291442678301,
+      "delay_s": 0.9142490337540315,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+34,
+      "D": 7.900430527121112e-25,
+      "ident_resid_rms": 2.3701291581363337e-24,
+      "regular": true,
+      "dphi_ray": 0.9752291442678301,
+      "delay_s": 12.799486472556444,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+37,
+      "D": 7.900430527121112e-27,
+      "ident_resid_rms": 2.3701291581363357e-26,
+      "regular": true,
+      "dphi_ray": 0.0097522914426783,
+      "delay_s": 1.828498067508063,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+37,
+      "D": 7.900430527121112e-26,
+      "ident_resid_rms": 2.370129158136336e-25,
+      "regular": true,
+      "dphi_ray": 0.09752291442678301,
+      "delay_s": 128.90911375931844,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+37,
+      "D": 7.900430527121112e-25,
+      "ident_resid_rms": 2.3701291581363337e-24,
+      "regular": true,
+      "dphi_ray": 0.9752291442678301,
+      "delay_s": 12849.770169412912,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+40,
+      "D": 7.900430527121112e-27,
+      "ident_resid_rms": 2.3701291581363357e-26,
+      "regular": true,
+      "dphi_ray": 0.0097522914426783,
+      "delay_s": 1285.4341414581686,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+40,
+      "D": 7.900430527121112e-26,
+      "ident_resid_rms": 2.370129158136336e-25,
+      "regular": true,
+      "dphi_ray": 0.09752291442678301,
+      "delay_s": 128498.61594316289,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+40,
+      "D": 7.900430527121112e-25,
+      "ident_resid_rms": 2.3701291581363337e-24,
+      "regular": true,
+      "dphi_ray": 0.9752291442678301,
+      "delay_s": 12849783.883148419,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+44,
+      "D": 7.900430527121112e-27,
+      "ident_resid_rms": 2.3701291581363357e-26,
+      "regular": true,
+      "dphi_ray": 0.0097522914426783,
+      "delay_s": 12849783.883148419,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+44,
+      "D": 7.900430527121112e-26,
+      "ident_resid_rms": 2.370129158136336e-25,
+      "regular": true,
+      "dphi_ray": 0.09752291442678301,
+      "delay_s": 1284978937.7785113,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    },
+    {
+      "b_t": 1e+44,
+      "D": 7.900430527121112e-25,
+      "ident_resid_rms": 2.3701291581363337e-24,
+      "regular": true,
+      "dphi_ray": 0.9752291442678301,
+      "delay_s": 128503849225.313,
+      "kappa_per_m": 0.0,
+      "flux_scale": 0.0
+    }
+  ],
+  "interpretation": "The volume identity admits an exact null-gradient wave solution, but it is redshift-free (s=0 on inward rays).  Adding the drift D needed for redshift breaks nullity; the resulting delay scales as DeltaT ~ (b/2) D^2 L/c while the volume identity fixes b f'^2 ~ Q/(1+Q).Combining: DeltaT ~ (Q/(2(1+Q))) (D/f')^2 L/c.  Satisfying 1.7 s at z=0.0098 needs f' ~> (100-500 pc)^-1 -- i.e. cosmological gradients on sub-kpc scales, whose stress-energy must then be carried by the solved metric.  Whether Einstein's equations admit such structure while remaining consistent with measured local geometry is THE open existence question; this script does not import rho_crit to decide it."
+}

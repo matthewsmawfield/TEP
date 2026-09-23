@@ -1,0 +1,134 @@
+{
+  "units": "seconds",
+  "model": "H = (1/c) oint f grad u . dx; f=-B M^2 u_dot/(A^2 N^2 c); drift partition W(r); Earth tracking well",
+  "scan": {
+    "calibrated": {
+      "H_resid_s": -1.9126470269291276e-15,
+      "H_frac_per_0.3s": -6.375490089763759e-15,
+      "legs_m": {
+        "A->S": 0.00035398610717584533,
+        "S->B": -0.00035455951799357886,
+        "B->A": -7.609398192890339e-13
+      },
+      "B0_for_1e-18s": -1.6730739937613044e-06
+    },
+    "fiducial": {
+      "H_resid_s": -5.977021959153173e-13,
+      "H_frac_per_0.3s": -1.992340653051058e-12,
+      "legs_m": {
+        "A->S": 0.11062065849245166,
+        "S->B": -0.11079984937299338,
+        "B->A": -2.37793693527823e-10
+      },
+      "B0_for_1e-18s": -1.6730739937614023e-06
+    },
+    "unscreened": {
+      "H_resid_s": -1.1794192465011183e-12,
+      "H_frac_per_0.3s": -3.931397488337061e-12,
+      "legs_m": {
+        "A->S": 2.4157417241978663,
+        "S->B": -2.4158575203944395,
+        "B->A": -0.0002377936935278318
+      },
+      "B0_for_1e-18s": -8.478749206158998e-07
+    },
+    "deep_boundary": {
+      "H_resid_s": -4.2937043386513197e-13,
+      "H_frac_per_0.3s": -1.43123477955044e-12,
+      "legs_m": {
+        "A->S": 0.0807059861869022,
+        "S->B": -0.08083471126406604,
+        "B->A": -1.789089255857364e-10
+      },
+      "B0_for_1e-18s": -2.328991288473548e-06
+    },
+    "boundary_on_loop": {
+      "H_resid_s": -2.901997157500975e-13,
+      "H_frac_per_0.3s": -9.673323858336584e-13,
+      "legs_m": {
+        "A->S": 0.05512831196294653,
+        "S->B": -0.0552153137128261,
+        "B->A": -1.2490230783810278e-10
+      },
+      "B0_for_1e-18s": -3.445902754988016e-06
+    },
+    "cal_boundary_on_loop": {
+      "H_resid_s": -9.286390904002755e-16,
+      "H_frac_per_0.3s": -3.0954636346675852e-15,
+      "legs_m": {
+        "A->S": 0.0001764105982814289,
+        "S->B": -0.00017668900388104352,
+        "B->A": -3.9968738508192887e-13
+      },
+      "B0_for_1e-18s": -3.4459027549881515e-06
+    },
+    "Pi=0_control": {
+      "H_resid_s": 0.0,
+      "H_frac_per_0.3s": 0.0,
+      "legs_m": {
+        "A->S": 0.0,
+        "S->B": 0.0,
+        "B->A": 0.0
+      }
+    },
+    "B0=0_control": {
+      "H_resid_s": 0.0,
+      "H_frac_per_0.3s": 0.0,
+      "legs_m": {
+        "A->S": 0.0,
+        "S->B": 0.0,
+        "B->A": 0.0
+      }
+    },
+    "reversed": {
+      "H_resid_s": 5.977021959153637e-13,
+      "H_frac_per_0.3s": 1.9923406530512123e-12,
+      "legs_m": {
+        "B->A": 2.37793693527823e-10,
+        "S->B": 0.11079984937299338,
+        "A->S": -0.11062065849245165
+      },
+      "B0_for_1e-18s": -1.6730739937612725e-06
+    },
+    "cal_s0=1e-9": {
+      "H_resid_s": -1.9126451672941622e-15,
+      "H_frac_per_0.3s": -6.375483890980541e-15,
+      "legs_m": {
+        "A->S": 0.0003539787381574535,
+        "S->B": -0.0003545521491778473,
+        "B->A": -7.609398192890254e-16
+      },
+      "B0_for_1e-18s": -1.6730756204649667e-06
+    },
+    "cal_s0=1e-3": {
+      "H_resid_s": -1.9145066618561387e-15,
+      "H_frac_per_0.3s": -6.381688872853796e-15,
+      "legs_m": {
+        "A->S": 0.0003613551255677108,
+        "S->B": -0.000361928333725116,
+        "B->A": -7.609398192890268e-10
+      },
+      "B0_for_1e-18s": -1.6714488717931959e-06
+    }
+  },
+  "isotropy_consistency": {
+    "b_Earth": 3.574194736034273e-19,
+    "BM2_m2": 6.234329520125559e+33,
+    "Sigma_bare_surface_m-1": 1.0925153162833437e-16,
+    "s0_required_for_D<1e-18": 1.1592512932529125e-10,
+    "statement": "the calibrated B(u) survives laboratory isotropy/resonator bounds only if the terrestrial shear pinning reaches s0 <~ 1e-10 -- a derived consistency condition on the screening depth, decoupled from the loop signal which accumulates at altitude where S_Sigma -> 1"
+  },
+  "verdict": {
+    "H_resid_calibrated_s": -1.9126470269291276e-15,
+    "frac_per_0p3s_loop": -6.375490089763759e-15,
+    "statement": "Derived amplitude at the step_13-calibrated envelope (B0 ~ -3e-3, EXCLUDED sign): |H_resid| ~ 2e-15 s per ground-satellite triangle loop (~6e-15 fractional per 0.3 s) -- ~4 orders above the 1e-18 fractional sensitivity target and ~5 orders above projected 1e-19 capability. The amplitude is the would-be signal of the excluded B<0 branch (null-cone condition, Section 4) and indicates the scale a disformal completion would produce; the admissible B>=0 amplitude remains to be derived. Sign-independent bounds: a 1e-18 fractional null (|H| <~ 3e-19 s over 0.3 s) bounds |B0| <~ 5e-7; a 1e-19 fractional null (|H| <~ 3e-20 s) bounds |B0| <~ 5e-8 -- more than four orders below the step_13 reconstruction, a falsification channel for the disformal-completion sector.",
+    "mechanism": "H requires BOTH B!=0 and an active partitioned roll (Pi=0 and B0=0 controls return exactly 0); loop reversal flips the sign. Residual sourced by prefactor non-exactness: the lapse factor N(r_E) and the drift-partition weight W(u) vary independently of u along the Sun-tilted legs.",
+    "convention_constraint": "Amplitude computed with u measured from the contemporary ambient field (u_E ~ 1e-8); an absolute-u convention would put b_Earth ~ 1e-3 and yield H ~ 1e-4 s -- macroscopically excluded. The loop result thereby selects the envelope's field origin at the ambient value.",
+    "model_dependencies": [
+      "B0 extrapolated over ~8 decades in u via the u^2 envelope (b(0.75)~1e-3 -> B0~-3.2e-3)",
+      "local drift u_dot = -Pi_bar W assumed to participate at H0 on matter-hosting field values; H scales linearly",
+      "schematic loop geometry (altitude 2000 km, 60 deg ground separation, solar offset tilt)",
+      "leading-order connection; higher-order disformal corrections not included"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "benchmark": "PSR J1738+0333",
+  "orbital_wavelength_m": 9173649214800.0,
+  "compton_wavelength_m": 4.10438e+16,
+  "propagating_modes_supported": true,
+  "charge_evaluation": {
+    "ns_potential_approx": 0.2,
+    "wd_potential_approx": 0.0001,
+    "charges_equal": false,
+    "dipole_radiation_present": true
+  },
+  "closure_status": "PENDING_ACTION_NORMALIZATION",
+  "conclusion": "The TEP action supports propagating scalar waves for this binary. Because the NS and WD have vastly different binding potentials, the nonlinear field profiles yield different effective scalar charges (thin-shell suppression). This sources scalar dipole radiation. However, calculating the precise P_b_dot requires the absolute dimensional normalization of the field \\phi to evaluate the thin-shell factor. This is a recognized action-closure issue."
+}

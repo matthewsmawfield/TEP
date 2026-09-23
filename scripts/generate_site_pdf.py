@@ -68,6 +68,49 @@ def load_citation_metadata():
         return {'version': '0.9', 'codename': 'Jakarta', 'title': 'Temporal Equivalence Principle'}
 
 
+def strip_trailing_blank_pages(pdf_path: Path):
+    """Remove trailing pages that contain only the page-number footer.
+
+    Chromium printToPDF can emit a final blank page when the body height
+    marginally overflows. A page is treated as blank only if its extracted
+    text reduces to the footer 'Page N of N' and it has no XObject images
+    or annotations.
+    """
+    try:
+        import pypdf
+    except ImportError:
+        print("⚠️  pypdf not available, skipping blank-page trim")
+        return
+
+    reader = pypdf.PdfReader(str(pdf_path))
+    writer = pypdf.PdfWriter()
+    pages = reader.pages
+    n = len(pages)
+    keep = n
+
+    for i in range(n - 1, -1, -1):
+        page = pages[i]
+        text = re.sub(r'\s+', '', page.extract_text() or '')
+        footer_only = re.fullmatch(r'Page\d+of\d+', text) is not None
+        resources = page.get('/Resources') or {}
+        has_images = '/XObject' in resources
+        has_annots = bool(page.get('/Annots'))
+        if footer_only and not has_images and not has_annots:
+            keep = i
+        else:
+            break
+
+    if keep == n:
+        print("   No trailing blank pages")
+        return
+
+    for i in range(keep):
+        writer.add_page(pages[i])
+    with open(pdf_path, 'wb') as f:
+        writer.write(f)
+    print(f"   Stripped {n - keep} trailing blank page(s): {n} -> {keep}")
+
+
 def process_pdf_with_metadata(pdf_path: Path):
     """Run the PDF processing script to add metadata and compress."""
     process_script = Path(__file__).parent / 'utils' / 'process_pdf.py'
@@ -89,12 +132,13 @@ def process_pdf_with_metadata(pdf_path: Path):
 async def generate_pdf(quality: str = 'high', wait_time: float = 5.0):
     """Generate PDF from the main TEP paper."""
     
-    # Paths
+    # Paths — the built static site is the authoritative rendering
     base_dir = Path(__file__).parent.parent
-    html_file = base_dir / 'index.html'
+    html_file = base_dir / 'site' / 'dist' / 'index.html'
     
     if not html_file.exists():
         print(f"❌ HTML file not found: {html_file}")
+        print("   Run `cd site && npm run build` first.")
         return False
     
     # Load metadata for filename
@@ -134,6 +178,19 @@ async def generate_pdf(quality: str = 'high', wait_time: float = 5.0):
     options['margin_left'] = '1cm'
     options['margin_right'] = '1cm'
     
+    # Prevent a trailing footer-only blank page: the body's 40px bottom padding
+    # overflows the last page's printable area, so remove it at print time and
+    # strip trailing margins on the final content elements.
+    options['custom_css'] = '''
+        @media print {
+            body { padding-bottom: 0 !important; }
+            main > *:last-child,
+            article > *:last-child,
+            article section > *:last-child,
+            article section div.contact-section { margin-bottom: 0 !important; }
+        }
+    '''
+    
     # Add page numbers footer
     options['display_header_footer'] = True
     options['header_template'] = '<div></div>'  # Empty header
@@ -162,6 +219,9 @@ async def generate_pdf(quality: str = 'high', wait_time: float = 5.0):
         print(f"✅ PDF generated: {output_pdf}")
         print(f"   Size: {output_pdf.stat().st_size / (1024*1024):.2f} MB")
         print(f"   Version: {version_str}")
+        
+        # Strip any trailing footer-only blank page before metadata/compression
+        strip_trailing_blank_pages(output_pdf)
         
         # Process with metadata
         process_pdf_with_metadata(output_pdf)

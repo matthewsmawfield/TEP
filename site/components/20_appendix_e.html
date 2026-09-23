@@ -1,0 +1,65 @@
+<h2>Appendix E: Reproducibility Record</h2>
+
+    <p>Every numerical claim in the body of this paper traces to a registered pipeline step in <code>scripts/steps/</code>, executed in the pinned environment described in <code>scripts/README.md</code>. The table below keys each claim to its step and output artifact in <code>results/</code>; the body text cites the corresponding record identifier rather than implementation paths.</p>
+
+    <style>
+        .repro-table { table-layout: fixed; }
+        .repro-table td, .repro-table th { overflow-wrap: anywhere; }
+        .repro-table code { word-break: break-all; font-size: 12px; }
+    </style>
+    <table class="repro-table" style="border-collapse: collapse; width: 100%; font-size: 14px;">
+        <thead>
+            <tr style="background-color: rgba(28, 46, 74, 0.04); border: 1px solid var(--gray-light);">
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left; width: 6%;">ID</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left; width: 38%;">Claim supported</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left; width: 28%;">Step</th>
+                <th style="padding: 8px; border: 1px solid var(--gray-light); text-align: left; width: 28%;">Output artifact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R1</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Radial ODE closure and the nested galactic&ndash;solar&ndash;terrestrial field decomposition (Sections 2, 7): $\phi_{\rm gal}(8\,{\rm kpc}) \simeq 2.8\times10^{-7}$, solar perturbation at 1 AU, ambient-to-perturbation ratios, surface composition.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_01_radial_ode.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_01_radial_ode.json</code></td>
+            </tr>
+            <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R2</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Two-body operator benchmark evaluation (Section 2): wide-binary shear recovery at 2646 AU, conjunction suppression $F(1.6\,R_\odot)\sim6\times10^{-23}$, Saturn suppression, Earth&ndash;Moon pairwise response factor $\sim2.5\times10^{-14}$.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_19_operator_evaluation.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_19_operator_evaluation.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R3</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Interior rolling-floor solution on the Painlev&eacute;&ndash;Gullstrand background (Sections 2, 8): logarithmic pileup to $u\simeq9$&ndash;$10$ at $1.01\,r_h$, native $A\to0$ branch selection, flatness closure to $7\times10^{-14}$.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_16_interior_roll.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_16_interior_roll.json</code></td>
+            </tr>
+            <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R4</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Closed static eternal cosmological benchmark (Section 8): field-equation residuals below $10^{-11}$; algebraic representation of the reconstructed closed-static potential within the parametrized master family confirmed numerically to machine precision; the natural shallow choice $V_{\rm matter}=V_{\rm rec}$ provides the non-trivial approximate comparison across the transition region.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_12_cosmology_solution.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_12_cosmology_solution.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R5</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Volume-balance disformal reconstruction (Section 10A): $|b|\sim10^{-3}$ at $u\sim0.75$, envelope normalization $B_0\simeq-3\times10^{-3}$ on the sign-excluded branch.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_13_disformal_closure.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_13_disformal_closure.json</code></td>
+            </tr>
+            <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R6</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Loop-holonomy amplitude benchmark (Section 10A): $|H_{\rm resid}|\approx2\times10^{-15}$ s per loop, null-reversal sign flip, conformal/uniform-roll/$B=0$ zeros, $|B_0|$ bound map, residual model dependencies.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_15_holonomy_amplitude.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_15_holonomy_amplitude.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R7</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Clock-amplitude screening baseline $S_A$ (Section 2): computed in the companion screening paper's pipeline.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Paper 26 (TEP-C0), <code>step_02_02</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Paper 26 results.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>The full step registry, execution order, and pinned dependency versions are documented in <code>scripts/README.md</code>; the complete output set in <code>results/</code> also archives the intermediate diagnostics for steps not cited in the body.</p>

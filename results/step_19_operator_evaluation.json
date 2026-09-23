@@ -1,0 +1,24 @@
+{
+  "conventions": {
+    "R_s_scaling": "R_s(M) = 2646 AU * (M / 1.2 M_sun)^(1/3), k = 4",
+    "note": "R_s = 2646 AU is the Paper 13 wide-binary measurement at sample median total mass ~1.2 M_sun; R_s(1 M_sun) = 2490 AU under p = 1/3."
+  },
+  "cassini_suppression": 7.987413174341762e-23,
+  "cassini_suppression_Rs2646_at_1Msun": 6.263702978845489e-23,
+  "saturn_suppression": 2.118898026060591e-10,
+  "llr_earth_sun_suppression": 2.4565932414601695e-14,
+  "llr_moon_sun_suppression": 2.5670808721738172e-14,
+  "llr_differential_bound": 2.5670808721738172e-14,
+  "gpb_suppression": 2.9004002166851856e-24,
+  "hierarchy_decomposition_field_amplitude_basis": {
+    "galactic_percent": 93.08889502998274,
+    "solar_percent": 6.455774014190606,
+    "terrestrial_percent": 0.4553309558266441,
+    "source": "results/step_01_radial_ode.json nested_hierarchy"
+  },
+  "hierarchy_decomposition_newtonian_potential_basis": {
+    "galactic_percent": 98.26405100465375,
+    "solar_percent": 1.6216195796810777,
+    "terrestrial_percent": 0.11432941566517013
+  }
+}

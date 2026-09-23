@@ -1,0 +1,99 @@
+<h2>10. Experimental Proposals and Falsifiability</h2>
+    
+    <p>A suite of decisive, cross-checking experiments is proposed that can falsify, constrain, or provide controlled support for the theory. All observables are dimensionless ratios or calibrated residuals; all designs include nulls, blinding, and open data.</p>
+
+    <figure style="text-align:center; margin: 10px 0;">
+        <img src="figures/fig3_sensitivity.svg" alt="Sensitivity to TEP signals and constraints" style="max-width:100%; height:auto;">
+        <figcaption style="font-style:italic; font-size:14px; color:var(--gray-purple);">Figure 3. Triangle synchronization experiment geometry. Two ground stations (sea level and mountain) and a medium-Earth-orbit satellite form ~3000 km baselines; two-way time transfer calibrates each edge while one-way transfers around the loop probe $H_{\rm resid}$ after GR subtraction.</figcaption>
+    </figure>
+    
+    <div class="experimental-section">
+        <h2>A. Triangle synchronization holonomy (ground–ground–satellite)</h2>
+        
+        <p><strong>Geometry.</strong> Three stations A, B, C forming 1000–3000 km baselines: two ground sites (sea level and high-altitude) and a medium-Earth-orbit satellite. Optical two-way time transfer (TWTT) on each edge provides calibration; stabilized fibers and free-space optical links carry both calibration and one-way signals.</p>
+        
+        <p><strong>Protocol.</strong> Establish Einstein synchronization on each edge via TWTT. Execute one-way transfers around the loop in both senses at high cadence for months. Record raw timestamps, environmental monitors (pressure, temperature, humidity), refractivity profiles, TEC for ionosphere, and precise ephemerides.</p>
+        
+        <p><strong>Modeling.</strong> Subtract GR Sagnac (Earth rotation, frame dragging), Shapiro delays, gravitational redshift differences, tropospheric and ionospheric delays, fiber dispersion and thermomechanical drifts. Use GNSS and gravimetric models.</p>
+        
+        <p><strong>Observable.</strong> The measured loop residual is</p>
+        <div class="equation">$$H_{\rm resid}(C) = \oint_C(\tilde{\sigma}-\sigma_{\rm GR}) = \oint_C\Delta\sigma ,$$</div>
+        <p>where $\sigma_{\rm GR}$ is computed from the full GR, kinematic, geodetic, atmospheric, instrumental, and clock-scale model for the same loop.</p>
+        <p><strong>Benchmark sensitivity window.</strong> The target bounds are designed to be independent of the disformal sign. Previous phenomenological estimates motivate sensitivity in the $10^{-18}$–$10^{-16}$ fractional range per loop time (0.1–1 s). The absolute signal has now been computed directly from the common field architecture (Appendix E, R6): integrating the projected disformal connection $\delta\tilde\sigma_i \simeq -(B M_{\rm Pl}^2/A^2N^2)\,\partial_i u\,(\dot u/c)$ around a schematic Earth triangle (2000 km altitude, 60° ground separation, solar-offset asymmetry) yields a residual sourced entirely by the non-exactness of the prefactor — the lapse factor $N(r)$ and the drift-partition weight $W(\mathbf x)$, the distinction between the matter-hosting field values that carry the cosmological drift and the ambient shallow field, vary independently of $u$ along the tilted space legs, while the conformal-only limit, a uniform roll, and $B=0$ all return exactly zero and loop reversal flips the sign. Calibrating the corpus envelope $B(u)=B_0\,u^2/(1+u^2)\,e^{-u^4/2\sigma^4}$ to the volume-balance reconstruction (Appendix E, R5; $|b|\sim10^{-3}$ at cosmological $u\sim0.75$, giving $B_0\simeq-3\times10^{-3}$) and measuring $u$ from the contemporary ambient field produces $|H_{\rm resid}|\approx2\times10^{-15}$ s per loop — roughly $6\times10^{-15}$ fractional per 0.3 s, about four orders of magnitude above the benchmark target and five above projected capability. This amplitude is the would-be signal of the volume-balance reconstruction: its $B<0$ sign is excluded by the null-cone condition (Section 4), so the number calibrates the instrumental scale a disformal completion would produce rather than predicting the admissible-branch signal — the admissible $B\geq0$ amplitude is fixed by the completed nonlinear realization and is bounded, not assumed, by this measurement. The bound itself is sign-independent: a null at the $10^{-18}$ fractional target ($|H_{\rm resid}|\lesssim3\times10^{-19}$ s over a 0.3 s loop) would bound $|B_0|\lesssim5\times10^{-7}$, while the projected $10^{-19}$ capability ($|H_{\rm resid}|\lesssim3\times10^{-20}$ s) would reach $|B_0|\lesssim5\times10^{-8}$, more than four orders below the reconstructed normalization — a definitive, sign-independent observational exclusion of non-exact transport for the disformal-completion sector. The computation also selects the field-origin convention: an absolute-$u$ reading with $u_{\rm amb}\sim O(1)$ would predict a macroscopically excluded $\sim10^{-4}$ s residual, so the envelope's field variable must be anchored at the contemporary ambient value. Two field coordinates should not be conflated: the $u$ entering the holonomy computation is the ambient-anchored excursion $\varphi=\phi/M_{\rm Pl}$ measured from the convention $\phi_\infty=0$ of Section 2, whereas the $u\sim0.75$ quoted from the volume-balance reconstruction is that analysis's background drift coordinate, referenced to a different origin — it is not the present-day ambient excursion. The same bookkeeping applies to units: within the weak-field canonical EFT (Section 2.2) $B_0$ carries mass dimension $-4$, while the normalizations quoted here ($B_0\simeq-3\times10^{-3}$ and the $|B_0|$ bounds below) are the dimensionless coefficients of the $M_{\rm Pl}=1$ geometric convention used by the reconstruction scripts. The observable combination $B(\phi)(\partial\phi)^2$ is strictly dimensionless in both conventions. Residual model dependencies — the drift-partition boundary geometry, the $u^2$ extrapolation of $B$ over eight decades, and the leading-order connection — are recorded in the output artifact (Appendix E, R6). The relative contribution of each segment is a prediction of the completed field solution. The experiment is sensitive to disformal or otherwise non-exact transport contributions. Null in GR by design.</p>
+        <p>Because the Earth-vicinity pairwise response is strongly suppressed (Section 2.2), the loop residual is not sourced by the Earth's own shear on any leg, ground or space. The kernel above is sourced by the drift-partition weight $W(\mathbf x)$ acting on the ambient field; the weight along each leg, and the resulting segment contributions, are outputs of the completed field solution and are quoted with that suppression applied.</p>
+        
+        <div class="error-budget">
+            <strong>Error budget (fractional per loop, targets after months):</strong><br>
+            <ul>
+                <li>Clock instability after averaging: $5 \times 10^{-19}$</li>
+                <li>Two-way calibration residual: $2 \times 10^{-19}$</li>
+                <li>Troposphere residual: $2 \times 10^{-19}$</li>
+                <li>Fiber path noise after stabilization: $5 \times 10^{-20}$</li>
+                <li>Ephemeris/geodesy: $2 \times 10^{-19}$</li>
+                <li>GR subtraction residual: $5 \times 10^{-19}$</li>
+                <li><strong>Total systematic floor (rss): $\sim 8 \times 10^{-19}$</strong></li>
+            </ul>
+            <p><strong>Target:</strong> below $10^{-18}$; projected capability with advanced turbulent cancellation techniques reaches the $10^{-19}$ regime.</p>
+        </div>
+        
+        <p><strong>Falsification.</strong> Null at the $10^{-18}$ fractional target across seasons/geometry bounds the non-exact-transport kernel and normalization at the calibrated level; reaching the projected $10^{-19}$ capability would bound the disformal normalization at $|B_0|\lesssim5\times10^{-8}$, more than four orders below the value the volume-balance reconstruction required ($|B_0|\sim3\times10^{-3}$; Appendix E, R6) — an independent observational exclusion of the channel already closed analytically by its own null cone (Section 4). The same calibration carries a terrestrial consistency condition: laboratory resonator and isotropy tests bound the directional cone deformation $B(\phi)(\partial\phi)^2$ at the $\sim10^{-18}$ level, which at $|B_0|\sim3\times10^{-3}$ is respected only if the near-surface shear pinning reaches $\mathcal S_\Sigma\lesssim10^{-10}$ — four orders of magnitude deeper than the solar-vicinity Cassini value. This is a consistency condition whose verification belongs to the same open single-body calculation as the Solar-System source charge (Section 7), not a derived output of the stated screening operator; and because the quoted $|B_0|$ calibration sits on the sign-excluded branch, the required pinning relaxes with whatever amplitude the admissible $B\geq0$ realization supplies. The condition is in any case decoupled from the loop signal: the resonator bound tests $B(\phi)\Sigma^2$ at the surface, while the holonomy tests $B(\phi)\Sigma\,\dot u$ integrated along the transit.</p>
+    </div>
+    
+    <div class="experimental-section">
+        <h2>B. Portable-clock "clock anholonomy"</h2>
+        
+        <p><strong>Design.</strong> Two identical optical clocks transported from A to B along distinct paths (e.g., sea-level highway vs. mountain pass), durations ~1–3 days, then compared at B to a stationary clock. Common-view time transfer provides epoch.</p>
+        
+        <p><strong>Prediction.</strong> Path-dependent discrepancy $\Delta_{12}$ at few$\times10^{-19}$ for plausible $\alpha \dot{\phi}_0$ and $\partial_h\ln A$ under screening; null at $10^{-20}$ bounds $\partial_t\ln A$ and $\partial_h\ln A$ tightly.</p>
+        
+        <p><strong>Systematics.</strong> Temperature, vibration, transport-induced shifts, gravitational potential changes modeled and controlled; use transport pods with environmental control.</p>
+    </div>
+    
+    <div class="experimental-section">
+        <h2>C. Multi-species clock network: annual modulations</h2>
+        
+        <p><strong>Network.</strong> Global network of optical clocks (Sr, Yb, Al⁺, Hg⁺, Ca, H(1s–2s)) cross-compared over years.</p>
+        
+        <p><strong>Conditional extension-sector test.</strong> Phase-locked annual modulations in differential ratios $\nu_A/\nu_B$ with amplitudes $10^{-19}$–$10^{-17}$, phases tied to orbital eccentricity. The universal conformal factor cancels identically in co-located dimensionless ratios (Section 9), so this channel tests non-universal sectoral couplings rather than the canonical action: species-amplitude ratios reflect $\alpha_A - \alpha_B$; a fit yields $\alpha(\phi)$ and dilaton coefficients $d_e$, $d_\mu$, $d_q$.</p>
+        
+        <p><strong>Nulls.</strong> Compare to environmental seasonality, tidal potentials, solar activity; require phase-locked global coherence characteristic of orbital eccentric anomaly.</p>
+    </div>
+    
+    <div class="experimental-section">
+        <h2>D. Interplanetary one-way optical time transfer</h2>
+        
+        <p><strong>Design.</strong> Two drag-free spacecraft with $10^{-18}$-class optical lattice clocks, separated by 1–5 AU. Optical comb-based one-way time transfer, with third node for calibration (Earth or a relay). Kinematic synchronization via slow-clock transport or common-view transponders.</p>
+        
+        <p><strong>Benchmark sensitivity window.</strong> Geometry-dependent one-way asymmetry parameter $\Xi_{AB} \equiv (t_{AB} - t_{BA})/(t_{AB} + t_{BA})$ at $10^{-15}$–$10^{-14}$ (0.05–5 ps) for disformal tilts consistent with GW bounds. The absolute signal magnitude remains to be derived from the solved path-dependent kernel; this range is a benchmark target, not a no-refit prediction.</p>
+        
+        <p><strong>Systematics.</strong> Plasma delays, pointing jitter, thermal drifts, deep-space clock performance; anticipate >decade timeline.</p>
+    </div>
+    
+    <div class="experimental-section">
+        <h2>E. Clock Network Correlation Analysis and Environmental Screening Maps</h2>
+        
+        <p><strong>Objective.</strong> Detect spatial correlations and environmental screening signatures in atomic clock frequency residuals consistent with screened scalar field coupling $A(\phi)$ to transition frequencies.</p>
+        
+        <p><strong>Design.</strong><br>
+        <em>Phase I - Distance Correlation Analysis:</em><br>
+        • Analyze existing precision clock networks (GNSS, optical clock arrays) for distance-dependent correlations in frequency residuals<br>
+        • Apply phase-coherent cross-spectral analysis between station pairs<br>
+        • Bin pairs by 3D distance, fit exponential correlation model: $C(r) = A \cdot \exp(-r/\lambda_T) + C_0$<br>
+        • Cross-validate across independent analysis centers to control systematics<br><br>
+        <em>Phase II - Environmental Screening Maps:</em><br>
+        • Deploy identical optical clocks at sea-level, mountain, stratospheric balloon, and LEO; intercompare with two-way optical links<br>
+        • Subtract GR redshift and Doppler shifts; correlate residuals with detailed geophysical models and gravimetry to isolate screening signatures</p>
+        
+        <p><strong>Forecast.</strong><br>
+        • Distance correlations: Exponential decay with characteristic length $\lambda_T \sim 1,000$–$10,000$ km for viable screening parameters. The empirical terrestrial calibration $L_c \approx 4{,}200$ km, obtained from 25-year multi-centre GNSS clock analysis (Papers 1, 2, 6), falls inside this prespecified theoretical prior. It is an empirical calibration adopted by the corpus, not a value derived here; the held-out MGEX replication (Paper 14) returns a shorter length ($\approx 1{,}400$ km) on a different product type, also within the prespecified theoretical prior. Forward analyses that adopt $\lambda_T \approx 4{,}200$ km should state it as a calibration input.<br>
+        • Altitude dependence: $10^{-19}$–$10^{-18}$ frequency shifts over tens of kilometers for $\lambda_{\text{scr}} \sim 10$ km near Earth<br>
+        • Multi-center cross-validation expected to show $\sim 10$–$15\%$ variation in fitted parameters</p>
+    </div>
+    
+    <div class="experimental-section">
+        <h2>F. Multi-messenger ensemble</h2>
+        
+        <p><strong>Design.</strong> Stack $N \gtrsim 30$ multi-messenger events with prompt EM counterparts; marginalize astrophysical lag distributions. Seek distance-correlated trends in $t_{\text{EM}} - t_{\text{GW}}$.</p>
+        
+        <p><strong>Prediction.</strong> In late-time conformal subclass, no kinematics-induced trend; disformal residuals bounded to sub-100 ms over 40–200 Mpc. Nulls constrain $B(\phi_0)(\partial\phi)^2$.</p>
+    </div>

@@ -1,0 +1,48 @@
+{
+  "lambda_reference_dimensionless": 7.526e-71,
+  "lambda_cassini_compatible_dimensionless": 7.526000000000001e-66,
+  "primary_derivation": {
+    "method": "Geometric identification: \u03bb_T = R_T (not \u03bb_c)",
+    "lambda_T_m": 4200000.0,
+    "identification": "The GNSS clock covariance correlation length is the geometric saturation radius, not the Compton wavelength. This is a testable prediction: for any source, \u03bb_T(source) = R_T(source) = (3M/(4\u03c0\u03c1))^{1/3}.",
+    "rho_T_derived_g_cm3": 19.243466961143486,
+    "rho_T_calibrated_g_cm3": 20.0,
+    "rho_T_match_percent": 3.782665194282564,
+    "R_T_from_calibrated_m": 4146360.5584198027,
+    "R_T_match_percent": 1.2771295614332656,
+    "classification": "DERIVED identification, CALIBRATED value \u2014 the relation \u03bb_T(source) = R_T(source) \u221d M^{1/3} \u03c1^{-1/3} is the testable content; the \u03c1_T reconstruction returns the calibrated density through the same identification and is a calibration identity, not an independent confirmation"
+  },
+  "quartic_universal_ratio": {
+    "lambda_c_m": 16885917.88486463,
+    "R_T_m": 4146360.5584198027,
+    "ratio_lambda_c_over_R_T": 4.072467323319304,
+    "ratio_at_rho_5": 4.072467243100785,
+    "density_independent": true,
+    "formula": "\u03bb_c/R_T = 3^(-1/2) (4\u03c0/3)^(1/3) \u03bb^(-1/6) (M_Pl/M)^(1/3)",
+    "value_for_Earth": 4.072467323319304,
+    "lambda_c_at_cassini_compatible_m": 2478513.6613604603,
+    "ratio_at_cassini_compatible": 0.5977564243243316,
+    "classification": "DERIVED \u2014 universal, density-independent prediction of the quartic"
+  },
+  "compton_self_consistency": {
+    "k_inferred": 2.650434450614445,
+    "k_predicted": false,
+    "independent_k_derivation_supplied": false,
+    "trial_k": 2.5,
+    "rho_trial_g_cm3": 23.832037489847227,
+    "rho_trial_difference_percent": 19.160187449236133,
+    "R_trial_m": 3911019.717407612,
+    "R_trial_difference_percent": 5.675841203300469,
+    "R_trial_vs_lambda_T_percent": 6.880482918866382,
+    "note": "k = \u03bb_c/R_Earth is inferred from the calibrated density, not predicted ab initio. The geometric identification \u03bb_T = R_T is the primary derivation; the Compton self-consistency is a secondary check only.",
+    "classification": "CALIBRATED \u2014 secondary check, k not predicted"
+  },
+  "derivation_chain": [
+    "1. Reference \u03bb = 7.526e-71 (dimensionless, \u03bc\u2080=10\u2075; step_01). FAILS the corrected (linear-in-S) Cassini bound at 1 AU (\u03b3_PPN-1 \u2248 -5.8e-3, ~250x over 2.3e-5); the compatible coupling is \u03bc\u2080 \u2273 10^10 (\u03bb \u00d710\u2075)",
+    "2. Quartic predicts m_eff(\u03c1) \u221d \u03c1^(1/3) (density-dependent mass)",
+    "3. \u03bb_c/R_T = universal ratio \u2248 4.07 (density-independent, derived from quartic)",
+    "4. \u03bb_T = R_T (geometric identification \u2014 testable prediction of TEP)",
+    "5. R_T = 4200 km \u2192 \u03c1_T = 3M\u2295/(4\u03c0 R_T\u00b3) \u2248 19.2 g/cm\u00b3 (calibration identity)",
+    "6. \u03c1_T \u2248 19.2 vs calibrated 20 \u2192 3.8% (self-consistency of the identification)"
+  ]
+}

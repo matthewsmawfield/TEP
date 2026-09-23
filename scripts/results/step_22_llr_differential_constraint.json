@@ -1,0 +1,27 @@
+{
+  "radii_au": {
+    "sun": 2489.9813324192014,
+    "earth": 35.921772920486525,
+    "moon": 8.292921339477399
+  },
+  "suppression": {
+    "sun_earth": 2.4565932414601695e-14,
+    "sun_moon": 2.5670808721738172e-14
+  },
+  "acceleration_ms2": {
+    "newtonian": 0.005931674617160913,
+    "scalar_earth": 1.4571711775058337e-16,
+    "scalar_moon": 1.522708844967273e-16,
+    "differential": 6.553766746143925e-18
+  },
+  "llr_test": {
+    "predicted_eta": 1.1048763071364765e-15,
+    "bound_eta": 1.3e-13,
+    "passes": true
+  },
+  "consistency_checks": {
+    "cassini_suppression": 7.987413174341762e-23,
+    "saturn_suppression": 2.118898026060591e-10,
+    "wb_activation": 0.1360617485944091
+  }
+}

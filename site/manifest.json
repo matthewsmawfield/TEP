@@ -1,0 +1,160 @@
+{
+  "title": "Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
+  "short_title": "TEP Theory",
+  "author": "Matthew Lukin Smawfield",
+  "version": "v0.14 (Jakarta)",
+  "first_published": "18 August 2025",
+  "date": "23 September 2026",
+  "last_updated": "23 September 2026",
+  "description": "Proper time is dynamical; the speed of light is emergent and strictly local in this covariant framework. Reproducible pipeline and data in this repository.",
+  "doi": "10.5281/zenodo.16921911",
+  "code_repo": "github.com/matthewsmawfield/TEP",
+  "paper_number": 0,
+  "paper_series": "TEP Series: Paper 0 (foundations)",
+  "name": "TEP",
+  "short_name": "TEP",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "public/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "sections": [
+    {
+      "id": "abstract",
+      "file": "1_abstract.html",
+      "title": "Abstract",
+      "order": 1
+    },
+    {
+      "id": "introduction",
+      "file": "2_introduction.html",
+      "title": "1. Introduction",
+      "order": 2
+    },
+    {
+      "id": "axioms",
+      "file": "3_axioms.html",
+      "title": "2. Axioms and the Temporal Equivalence Principle",
+      "order": 3
+    },
+    {
+      "id": "operational",
+      "file": "4_operational_foundations.html",
+      "title": "3. Operational Foundations",
+      "order": 4
+    },
+    {
+      "id": "invertibility",
+      "file": "5_invertibility_causality.html",
+      "title": "4. Disformal Invertibility, Causality, and Hyperbolicity",
+      "order": 5
+    },
+    {
+      "id": "lorentz",
+      "file": "6_local_lorentz.html",
+      "title": "5. Local Lorentz Invariance, Proper Time, and the Emergence of c",
+      "order": 6
+    },
+    {
+      "id": "synchronization",
+      "file": "7_synchronization_holonomy.html",
+      "title": "6. Synchronization in a Dynamical Time",
+      "order": 7
+    },
+    {
+      "id": "screening",
+      "file": "8_screening_ppn.html",
+      "title": "7. Screening, PPN, Equivalence Principle, and Disformal Bounds",
+      "order": 8
+    },
+    {
+      "id": "cosmology",
+      "file": "9_cosmology.html",
+      "title": "8. Cosmology",
+      "order": 9
+    },
+    {
+      "id": "quantum",
+      "file": "10_quantum_clocks.html",
+      "title": "9. Quantum Clocks, Interferometry, and Composition Dependence",
+      "order": 10
+    },
+    {
+      "id": "experiments",
+      "file": "11_experimental_proposals.html",
+      "title": "10. Experimental Proposals and Falsifiability",
+      "order": 11
+    },
+    {
+      "id": "statistics",
+      "file": "12_statistics.html",
+      "title": "11. Statistical and Open Science Principles",
+      "order": 12
+    },
+    {
+      "id": "critiques",
+      "file": "13_critiques.html",
+      "title": "12. Addressing Critiques and Clarifying Claims",
+      "order": 13
+    },
+    {
+      "id": "philosophy",
+      "file": "14_philosophy.html",
+      "title": "13. Philosophical and Conceptual Implications",
+      "order": 14
+    },
+    {
+      "id": "conclusions",
+      "file": "15_conclusions.html",
+      "title": "14. Conclusions",
+      "order": 15
+    },
+    {
+      "id": "appendix-a",
+      "file": "16_appendix_a.html",
+      "title": "Appendix A: Proofs and Key Derivations",
+      "order": 16
+    },
+    {
+      "id": "appendix-b",
+      "file": "17_appendix_b.html",
+      "title": "Appendix B: Photon Phase Speed and GW\u2013EM Constraints",
+      "order": 17
+    },
+    {
+      "id": "appendix-c",
+      "file": "18_appendix_c.html",
+      "title": "Appendix C: Glossary of Symbols",
+      "order": 18
+    },
+    {
+      "id": "appendix-d",
+      "file": "19_appendix_d.html",
+      "title": "Appendix D: Terminology and Usage Glossary",
+      "order": 19
+    },
+    {
+      "id": "references",
+      "file": "20_references.html",
+      "title": "References & Contact",
+      "order": 21
+    },
+    {
+      "order": 20,
+      "id": "appendix-e",
+      "title": "Appendix E: Reproducibility Record",
+      "file": "20_appendix_e.html"
+    }
+  ]
+}
