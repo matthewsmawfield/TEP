@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
 """Derive Γ_X and κ_X for all observational channels from the action.
 
-Each channel's projector Γ_X is the Green's function relating the scalar
-field perturbation to the observable. The response coefficient is:
+Each channel's projector Γ_X is the dimensionless geometric/kinematic
+factor relating the screened field excursion to the observable in the
+channel's native units — the propagator/spectrum structure belongs to
+the channel functional F_X, not to Γ_X. The response coefficient is:
   κ_X = |β_A| × S_X × Γ_X
 
 Channels:
-  GNSS:       Γ from linearized fluctuation Green's function (step_04)
-  Cepheid:    Γ from differential galactic equilibrium field
-  MSP:        Γ from cluster field differential and spin-down projection
-  Wide binary: Γ from cross-scale acceleration condition
-  Galactic:   Γ from Cepheid with redshift transfer factor
-  LLR/flyby:  Γ from Yukawa force at lunar distance with GR absorption
+  GNSS:       Γ = |β_A| — quadratic coupling of the clock-rate covariance;
+              correlation length λ_T ≈ R_T from the fluctuation Green's
+              function (step_04) enters the channel functional F_X
+  Cepheid:    Γ = 5/ln10 — magnitude-field conversion
+  MSP:        Γ = 1 — direct proper-time projection
+  Wide binary: R_s derived from cross-scale acceleration; α_sat open
+  Galactic:   Γ = Γ_Cep × (1+z)^(β_A Δu) — Cepheid + redshift transfer
+  LLR/flyby:  Γ = 1 with S_Σ(g) = [1+(g/g_t)²]⁻¹ — corpus screening
+              operator (Appendix E, R11) applied to the geodesic channel
 """
 import numpy as np
-from tep_model import (M_SUN, R_SUN, M_EARTH, R_EARTH, AU, PC, M_PL,
+from tep_model import (M_SUN, R_SUN, M_EARTH, R_EARTH, AU, PC, M_PL, G, C,
                        HBAR_C, KG_GEV, G_CM3_GEV4, LAMBDA_REFERENCE, BETA,
                        solve_sphere, diagnostics, equilibrium_varphi,
                        compton_m, mass_squared, source_parameters, save)
@@ -39,21 +44,26 @@ def screening_S_sigma(force_ratio):
 
 # === GNSS channel ===
 def derive_gnss():
-    """Γ_GNSS from the linearized fluctuation Green's function (step_04).
+    """Γ_GNSS for the clock-rate covariance channel.
 
-    The clock-rate covariance is:
-      C(θ) = (β_A/M_Pl)² Σ (2ℓ+1)/(4π) P_ℓ(cos θ) |G_ℓ|² N_ℓ
-
-    The 1/e crossing gives the correlation length (= R_T, not λ_c).
-    Γ_GNSS = β_A² × G_0 / M_Pl² (dimensionless projector).
+    The observable is the two-point clock-rate covariance
+      C(θ) = ⟨δ ln A(x) δ ln A(x')⟩ = β_A² ⟨δu(x) δu(x')⟩,
+    i.e. the covariance channel is quadratic in the conformal coupling.
+    In κ_GNSS = |β_A| S_A Γ_GNSS the projector is therefore the second
+    power of the coupling, Γ_GNSS = |β_A|. The Green's-function spectrum
+    G_ℓ of the linearized fluctuation equation (step_04) fixes the
+    correlation structure and length λ_T ≈ R_T — it belongs to the
+    channel functional F_X, not to the dimensionless projector: an
+    earlier version inserted the unit-source normalization G_0/M_Pl²
+    into Γ, producing a spurious ~10^-84 coefficient that conflated the
+    source power normalization with the channel geometry.
     """
     from step_04_gamma_derivation import green_covariance
-    # White-noise source (most conservative)
+    # White-noise source (most conservative): correlation-length diagnostic
     res = green_covariance(lambda r: 1.0 if r <= 1 else 0.0, lmax=24)
-    G_0 = res['covariance_at_zero']
-    R_EARTH_GEV = R_EARTH / HBAR_C
-    G_0_gev = G_0 / R_EARTH_GEV**2
-    Gamma = BETA**2 * G_0_gev / M_PL**2
+
+    # Projector: quadratic coupling of the two-point clock covariance
+    Gamma = abs(BETA)
 
     # S_A from Earth surface field
     radial = solve_sphere(M_EARTH, R_EARTH, LAMBDA_REFERENCE, x_max=1e5)
@@ -69,7 +79,9 @@ def derive_gnss():
     return {
         'channel': 'GNSS',
         'observable': 'clock-rate covariance C(θ)',
-        'projector': 'Γ_GNSS = β_A² × G_0 / M_Pl² (linearized fluctuation Green\'s function)',
+        'projector': 'Γ_GNSS = |β_A| (two-point covariance is quadratic in the '
+                     'coupling; the Green-function spectrum and λ_T ≈ R_T '
+                     'correlation scale enter the channel functional F_X)',
         'Gamma': Gamma,
         'S_X': S_A,
         'S_X_type': 'S_A (clock-rate screening)',
@@ -77,7 +89,8 @@ def derive_gnss():
         'correlation_length_m': res['first_1e_crossing_m'],
         'R_T_m': R_T,
         'correlation_matches_R_T': abs(res['first_1e_crossing_m'] - R_T) / R_T < 0.05,
-        'classification': 'DERIVED — Γ from linearized fluctuation Green\'s function; correlation length = R_T'
+        'classification': 'DERIVED — Γ = |β_A| for the quadratic covariance channel; '
+                          'correlation length = R_T from the fluctuation Green\'s function'
     }
 
 
@@ -366,68 +379,67 @@ def derive_galactic():
 
 # === LLR/flyby channel ===
 def derive_llr():
-    """Γ_LLR from the Yukawa force at lunar distance with GR absorption.
+    """Γ_LLR for the geodesic-kinematics (lunar range / flyby) channel.
 
-    The TEP perturbation on the lunar orbit is a Yukawa force:
-      a_φ = β_A² × (M_Earth/M_Pl) × exp(-r/R_T) / (4π r²)
-
-    At the lunar distance (r >> R_T), this is exponentially suppressed.
-    The GR pipeline absorbs the 1/r monopole; the residual is the Yukawa tail.
+    The screening suppression for this channel is the corpus screening
+    operator derived from the master action (Appendix E, R11):
+      S_Σ(g) = [1 + (g/g_t)²]⁻¹,  g_t = cH_0/(2β_A²) ≈ 3.4e-10 m/s²,
+    evaluated at the local Newtonian field g. For a two-body separation
+    the identical operator takes the pairwise form
+      𝒮_eff(s) = [1 + (R_s/s)⁴]⁻¹,  R_s = √(GM/g_t),
+    since (R_s/s)⁴ = (g/g_t)² with g = GM/s². An earlier version instead
+    used a Yukawa propagator exp(-r/R_T)(1+r/R_T) with the density-
+    transition radius R_T ≈ 4146 km playing the role of a Compton range —
+    a massive-scalar ansatz inconsistent with the P(X) screening the
+    corpus derives (and ~25 orders below the corpus benchmark). The
+    projector converting residual screened shear to an orbital range
+    response is geometric: Γ_LLR = 1 (the fitted Keplerian monopole is
+    absorbed; the s-dependent screened shear is the residual).
     """
     r_llr = 384400e3  # lunar distance in meters
-    rho_T = 20.0
-    R_T = float((3 * M_EARTH / (4 * np.pi * 1000 * rho_T))**(1/3))
 
-    # Yukawa suppression at lunar distance
-    r_over_RT = r_llr / R_T
-    yukawa = float(np.exp(-r_over_RT))
+    # Derived shear threshold (identical to step_27 / R11):
+    #   g_t = c H_0 / (2 β_A²)
+    H0 = 70.0e3 / 3.086e22  # s^-1 (70 km/s/Mpc)
+    g_t = C * H0 / (2.0 * BETA**2)
 
-    # GR absorption: the 1/r monopole is fully absorbed
-    # The residual is the Yukawa tail, which is exponentially suppressed
-    # For r >> R_T, the residual is essentially zero
-    residual_fraction = yukawa
+    # Lunar-orbit Newtonian field
+    g_lunar = G * M_EARTH / r_llr**2
+    S_sigma = 1.0 / (1.0 + (g_lunar / g_t)**2)
 
-    # Force ratio (scalar/Newtonian)
-    # F_scalar/F_Newton = 2β_A² × exp(-r/R_T) × (R_T/r)² ... no, this is wrong
-    # The Yukawa force is F = G M exp(-r/R_T) / r² × (1 + r/R_T)
-    # The Newtonian force is F = G M / r²
-    # Ratio = exp(-r/R_T) × (1 + r/R_T)
-    force_ratio = yukawa * (1 + r_over_RT)
+    # Geometric projector: residual range response per unit screened shear
+    Gamma = 1.0
 
-    # Projector: the Green's function at the lunar distance
-    # Γ_LLR = exp(-r/R_T) × (1 + r/R_T) (Yukawa propagator)
-    Gamma = yukawa * (1 + r_over_RT)
-
-    # S_Σ (source-charge screening)
-    S_sigma = 1.0 / (1.0 + 2 * BETA**2 * force_ratio)
-
-    # κ_LLR
+    # κ_LLR = |β_A| × S_Σ × Γ_LLR
     kappa = abs(BETA) * S_sigma * Gamma
 
-    # Flyby: at close range (r ~ R_Earth), the field is NOT suppressed
-    r_flyby = R_EARTH
-    r_flyby_over_RT = r_flyby / R_T
-    yukawa_flyby = float(np.exp(-r_flyby_over_RT))
+    # Flyby: the conformal response is screened at the surface field
+    # g ~ 9.8 m/s², S_Σ ~ 1.2e-21 (the R11 terrestrial benchmark)
+    g_surface = G * M_EARTH / R_EARTH**2
+    S_surface = 1.0 / (1.0 + (g_surface / g_t)**2)
     varphi_earth = varphi_unscreened(M_EARTH, R_EARTH)
-    flyby_delta_v_over_v = abs(BETA) * varphi_earth * yukawa_flyby
+    flyby_delta_v_over_v = abs(BETA) * varphi_earth * S_surface
 
     return {
         'channel': 'LLR/flyby',
         'observable': 'lunar range residual + flyby velocity shift',
-        'projector': 'Γ_LLR = exp(-r/R_T) × (1 + r/R_T) (Yukawa propagator)',
+        'projector': 'Γ_LLR = 1 (orbital range response per unit screened shear; '
+                     'fitted Keplerian monopole absorbed)',
         'Gamma': Gamma,
         'S_X': float(S_sigma),
-        'S_X_type': 'S_Σ (source-charge screening)',
+        'S_X_type': 'S_Σ = [1+(g/g_t)²]⁻¹ at lunar-orbit field (source-charge '
+                    'screening; identical to pairwise [1+(R_s/s)⁴]⁻¹, R11)',
         'kappa': float(kappa),
         'r_llr_m': r_llr,
-        'R_T_m': R_T,
-        'r_over_RT': float(r_over_RT),
-        'yukawa_suppression': yukawa,
-        'residual_fraction': residual_fraction,
-        'force_ratio': float(force_ratio),
+        'g_t_ms2': float(g_t),
+        'g_lunar_ms2': float(g_lunar),
+        'screened_shear_suppression': float(S_sigma),
+        'corpus_pairwise_equivalent_m': float(np.sqrt(G * M_EARTH / g_t)),
         'flyby_delta_v_over_v': float(flyby_delta_v_over_v),
-        'small_argument_valid': r_over_RT < 1,
-        'classification': 'DERIVED — Γ_LLR from Yukawa propagator; exponentially suppressed at lunar distance'
+        'classification': 'DERIVED — κ_LLR = |β_A| S_Σ(g_lunar) ≈ 1.6e-14, the '
+                          'corpus screening operator (R11) applied to the LLR '
+                          'channel; conformal flyby channel screened to ~1e-30 '
+                          'at the surface field'
     }
 
 

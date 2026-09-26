@@ -1,0 +1,29 @@
+{
+  "4": {
+    "chi2": 59.199800851504726,
+    "median_R_AU": 2750,
+    "sigma_int": 1.6,
+    "amplitude": 1.2,
+    "min_safe_R_sun_AU": 3391.8901467082414,
+    "unsafe_fraction_population": 0.5521584305115679,
+    "unsafe_fraction_midplane": 0.3125943240026101
+  },
+  "6": {
+    "chi2": 67.07113502035064,
+    "median_R_AU": 2250,
+    "sigma_int": 1.6,
+    "amplitude": 1.1,
+    "min_safe_R_sun_AU": 471.8460816931169,
+    "unsafe_fraction_population": 0.16446523889780978,
+    "unsafe_fraction_midplane": 0.05525590463662955
+  },
+  "8": {
+    "chi2": 67.60942061553739,
+    "median_R_AU": 2250,
+    "sigma_int": 1.6,
+    "amplitude": 1.1,
+    "min_safe_R_sun_AU": 177.9111677916692,
+    "unsafe_fraction_population": 0.056383754087199534,
+    "unsafe_fraction_midplane": 0.013709436395722419
+  }
+}

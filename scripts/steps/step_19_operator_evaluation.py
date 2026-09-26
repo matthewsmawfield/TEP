@@ -1,5 +1,6 @@
 import json
 import os
+from scipy.optimize import brentq
 
 # Physical constants
 AU = 1.496e11  # meters
@@ -8,59 +9,103 @@ M_earth = 5.972e24  # kg
 M_moon = 7.348e22  # kg
 R_sun = 6.96e8  # meters
 R_earth = 6.371e6  # meters
+G = 6.674e-11
+c = 299792458.0
+H0 = 70e3 / 3.085677581e22
+BETA_A = -1.0
+g_t = c * H0 / (2 * BETA_A ** 2)   # canonical transition acceleration 3.4e-10
 
-# Wide Binary calibration: R_s = 2646 AU measured for Paper 13's
-# sample median total mass M ~ 1.2 M_sun (TEP-WB §2.2)
-R_s_wb = 2646 * AU
-M_wb = 1.2 * M_sun
+# Galactic embedding ambient (calibrated to the wide-binary plateau:
+# observed plateau -> q_env^2 ~ 0.43 -> q_env ~ 0.66 -> X_gal ~ 0.52)
+X_GAL = 0.52
 
-def get_Rs(M):
-    """Scaling of the temporal topology activation radius with mass"""
-    # R_s(M) prop M^(1/3)
-    return R_s_wb * (M / M_wb)**(1./3.)
 
-def S_eff(M1, M2, s, k=4):
-    """Two-Body Kinetic Operator suppression factor"""
-    Rs_tot = get_Rs(M1) + get_Rs(M2)
-    return 1.0 / (1.0 + (Rs_tot / s)**k)
+def r_star_M(M):
+    """Derived Temporal-Topology shell radius r* = sqrt(GM/g_t) (M^1/2 law)."""
+    return (G * M / g_t) ** 0.5
+
+
+def y_profile(x):
+    """Exact flux-conserving profile y: y(1 + y^2 x^-4) = 1, x = r/r*.
+    Asymptotes: y ~ x^(4/3) deep inside, y -> 1 outside."""
+    if x >= 50.0:
+        return 1.0
+    return brentq(lambda yy: yy * (1.0 + yy * yy / x ** 4) - 1.0,
+                  1e-30, 1.0, xtol=1e-14)
+
+
+def S_sigma(X):
+    """Inverse kinetic stiffness in ambient X (units of Lambda^4/2)."""
+    return 1.0 / (1.0 + X)
+
+
+def R_hierarchical(M_dom, s, X_extra=0.0):
+    """Pair response for a test member embedded in a dominant source's
+    pre-existing nonlinear field: vertex factors q = S_Sigma(X_env) with
+    X_env the dominant field at the pair's scale plus external ambients,
+    giving R = q_env^2 * y(s) -> y^3 ~ s^4 deep inside."""
+    y = y_profile(s / r_star_M(M_dom))
+    q_env = S_sigma((1.0 - y) / y + X_GAL + X_extra)
+    return q_env ** 2 * y
+
 
 def run():
     results = {}
     results["conventions"] = {
-        "R_s_scaling": "R_s(M) = 2646 AU * (M / 1.2 M_sun)^(1/3), k = 4",
-        "note": "R_s = 2646 AU is the Paper 13 wide-binary measurement at sample median total mass ~1.2 M_sun; R_s(1 M_sun) = 2490 AU under p = 1/3."
+        "operator": "R(pair) = S_Sigma(X_env)^2 * y(s); "
+                    "y(1 + y^2 (r*/r)^4) = 1; r* = sqrt(GM/g_t) (M^1/2)",
+        "regime": "hierarchical channels: X_env = dominant-member field at "
+                  "pair scale -> R -> y^3 ~ s^4; comparable-mass pairs: "
+                  "X_env = galactic embedding -> S_env^2 * y(s) (4/3)",
+        "g_t": g_t,
+        "X_gal": X_GAL,
+        "note": "Resolved nested operator (step_30, issue 0-27). The former "
+                "bare-quartic S_eff = [1+(R_s_tot/s)^4]^-1 with M^(1/3) "
+                "scaling is superseded; hierarchical benchmark values are "
+                "numerically preserved through the y^3 deep-interior limit."
     }
-    
-    # 1. Cassini bound (s = 1.6 R_sun)
-    # The spacecraft acts as a test mass, so we use M_sun and 0.
+
+    # 1. Cassini (s = 1.6 R_sun): the shear-channel path profile is y; the
+    #    bound itself applies to the V-sector source charge (separate).
     s_cassini = 1.6 * R_sun
-    S_cassini = S_eff(M_sun, 0.0, s_cassini)
-    results["cassini_suppression"] = S_cassini
-    results["cassini_suppression_Rs2646_at_1Msun"] = 1.0 / (1.0 + (2646 * AU / s_cassini)**4)
-    
+    results["cassini_path_profile"] = y_profile(s_cassini / r_star_M(M_sun))
+    results["cassini_shear_response"] = R_hierarchical(M_sun, s_cassini)
+
     # 2. Saturn ephemeris (s = 9.5 AU)
     s_saturn = 9.5 * AU
-    S_saturn = S_eff(M_sun, 0.0, s_saturn) # Using test mass for generic S_eff bound, though M_saturn could be used
-    results["saturn_suppression"] = S_saturn
-    
-    # 3. LLR (Earth-Moon differential)
-    # Earth-Sun and Moon-Sun suppressions
+    R_sat = R_hierarchical(M_sun, s_saturn)
+    results["saturn_suppression"] = R_sat
+    aN_sat = G * M_sun / s_saturn ** 2
+    results["saturn_anomalous_accel_ms2"] = 2.0 * BETA_A ** 2 * R_sat * aN_sat
+
+    # 3. LLR (Earth-Sun vs Moon-Sun differential at 1 AU)
     s_llr = 1.0 * AU
-    S_earth_sun = S_eff(M_sun, M_earth, s_llr)
-    S_moon_sun = S_eff(M_sun, M_moon, s_llr)
-    
-    # The absolute coupling is suppressed by this factor.
-    # Differential acceleration is bounded by the max of these.
+    X_em = (1.0 - y_profile(2.57e-3 * AU / r_star_M(M_earth))) \
+        / y_profile(2.57e-3 * AU / r_star_M(M_earth))
+    X_sun_1au = (1.0 - y_profile(s_llr / r_star_M(M_sun))) \
+        / y_profile(s_llr / r_star_M(M_sun))
+    S_earth_sun = S_sigma(X_sun_1au + X_GAL) ** 2 \
+        * y_profile(s_llr / r_star_M(M_sun))
+    S_moon_sun = S_sigma(X_sun_1au + X_em + X_GAL) ** 2 \
+        * y_profile(s_llr / r_star_M(M_sun))
     results["llr_earth_sun_suppression"] = S_earth_sun
     results["llr_moon_sun_suppression"] = S_moon_sun
     results["llr_differential_bound"] = max(S_earth_sun, S_moon_sun)
-    
-    # 4. GP-B (s = 7013 km from Earth center)
-    s_gpb = 7013e3 # meters
-    S_gpb = S_eff(M_earth, 0.0, s_gpb)
-    results["gpb_suppression"] = S_gpb
-    
-    # 5. Nested Hierarchy Decomposition at Earth surface
+    aN_1au = G * M_sun / s_llr ** 2
+    results["llr_differential_accel_ms2"] = \
+        abs(S_moon_sun - S_earth_sun) * 2.0 * aN_1au
+
+    # 4. Earth-Moon pair response
+    R_em = S_sigma(X_em + X_sun_1au + X_GAL) ** 2 \
+        * y_profile(2.57e-3 * AU / r_star_M(M_earth))
+    results["earth_moon_response"] = R_em
+
+    # 5. GP-B (s = 7013 km from Earth centre)
+    s_gpb = 7013e3
+    results["gpb_suppression"] = R_hierarchical(M_earth, s_gpb,
+                                                X_extra=X_sun_1au)
+
+    # 6. Nested Hierarchy Decomposition at Earth surface
     # Two bases: (a) field-amplitude decomposition from the step_01
     # nonlinear nested solve — the basis quoted in manuscript §3;
     # (b) crude Newtonian-potential proxy, kept labeled for contrast.
@@ -74,26 +119,22 @@ def run():
         "terrestrial_percent": nh["earth_fraction"] * 100,
         "source": "results/step_01_radial_ode.json nested_hierarchy"
     }
-    
-    G = 6.674e-11
+
     M_gal = 1e11 * M_sun
     R_gal = 8e3 * 3.086e16
     Phi_gal = G * M_gal / R_gal
-    
     Phi_sun = G * M_sun / AU
     Phi_earth = G * M_earth / R_earth
-    
     Phi_tot = Phi_gal + Phi_sun + Phi_earth
-    
     results["hierarchy_decomposition_newtonian_potential_basis"] = {
         "galactic_percent": (Phi_gal / Phi_tot) * 100,
         "solar_percent": (Phi_sun / Phi_tot) * 100,
         "terrestrial_percent": (Phi_earth / Phi_tot) * 100
     }
-    
+
     # Print and save
     print(json.dumps(results, indent=2))
-    
+
     outdir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
         os.path.abspath(__file__)))), "results")
     os.makedirs(outdir, exist_ok=True)

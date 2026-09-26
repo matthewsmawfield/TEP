@@ -1,0 +1,40 @@
+{
+  "status": "derived",
+  "inputs": {
+    "beta_A": -1.0,
+    "poisson_equation": "nabla^2 Phi_N = rho_*/(2 M_Pl^2)",
+    "scalar_equation": "nabla^2 delta_phi = beta_A rho_*/M_Pl",
+    "einstein_frame_lapse": "ln(N/N_infinity) = Phi_N + O(Phi_N^2)"
+  },
+  "derived_relations": {
+    "delta_phi_over_M_Pl": "2 beta_A Phi_N",
+    "delta_phi_over_M_Pl_coefficient": -2.0,
+    "ln_A_over_A_infinity": "2 beta_A^2 Phi_N",
+    "ln_A_over_A_infinity_coefficient": 2.0,
+    "unscreened_matter_lapse": "N_tilde/N_tilde_infinity = exp[(1 + 2 beta_A^2) Phi_N] + O(Phi_N^2)",
+    "unscreened_matter_lapse_coefficient": 3.0,
+    "unscreened_G_eff_over_G": 3.0
+  },
+  "screened_exterior": {
+    "relation": "grad ln N_tilde = [1 + 2 beta_A^2 S_Sigma(E)] grad Phi_N",
+    "cases": {
+      "fully_screened": {
+        "S_Sigma": 0.0,
+        "gradient_coefficient_relative_to_Phi_N": 1.0,
+        "G_eff_over_G": 1.0
+      },
+      "cassini_upper_bound": {
+        "S_Sigma": 5.8e-06,
+        "gradient_coefficient_relative_to_Phi_N": 1.0000116,
+        "G_eff_over_G": 1.0000116
+      },
+      "unscreened": {
+        "S_Sigma": 1.0,
+        "gradient_coefficient_relative_to_Phi_N": 3.0,
+        "G_eff_over_G": 3.0
+      }
+    },
+    "gr_recovery": true
+  },
+  "interpretation": "For beta_A=-1 the bare scalar adds 2 Phi_N to the Einstein-frame lapse, so the unscreened matter-frame response is 3 Phi_N and G_eff/G=3. Environmental suppression acts on the exterior source charge; S_Sigma -> 0 recovers the GR lapse gradient."
+}

@@ -1,0 +1,334 @@
+{
+  "T1_inverse_power_sign": {
+    "beta_plus1_has_minimum": true,
+    "beta_minus1_has_minimum": false,
+    "verdict": "V=L^4(1+L/phi) admits no screening minimum for beta_A=-1; Phase 4 v4.0-v4.2 used beta=+1"
+  },
+  "T2_PX_floor": {
+    "g_star": 4.6303631843221474e-10,
+    "floor_anomalous_accel": 9.260726368644295e-10,
+    "saturn_bound": 1e-14,
+    "excess": 92607.26368644295,
+    "verdict": "|grad phi| saturates near Lambda^2 once |grad phi_N| exceeds it: floor ~2 beta^2 g_*"
+  },
+  "T3_wb_profile_in_solar_system": {
+    "saturn_dg": 1.7181998782534111e-07,
+    "saturn_bound": 1e-14,
+    "excess": 17181998.78253411,
+    "mercury_dg_over_g": 0.00010705626067175622,
+    "verdict": "canonical Paper 13 law excluded by ephemerides by ~1e7"
+  },
+  "T4_joint_wb_solar_system": {
+    "canonical_chi2": 86.34,
+    "best_any": {
+      "sigma_lnM": 0.8,
+      "g_star": "cH0",
+      "n": 1,
+      "coupling": 1.0,
+      "chi2": 494.12686423170567,
+      "saturn_dg": 6.548256645367796e-10,
+      "solar_system_ok": false
+    },
+    "best_solar_system_safe": {
+      "sigma_lnM": 0.8,
+      "g_star": "cH0",
+      "n": 2,
+      "coupling": 1.0,
+      "chi2": 1057.280586282114,
+      "saturn_dg": 6.5769246109458745e-15,
+      "solar_system_ok": true
+    },
+    "rows": [
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "g_TEP",
+        "n": 1,
+        "coupling": 1.0,
+        "chi2": 1026.639770146101,
+        "saturn_dg": 4.999961655800426e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "g_TEP",
+        "n": 1,
+        "coupling": 2.0,
+        "chi2": 4505.921002170176,
+        "saturn_dg": 9.999923311600853e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "g_TEP",
+        "n": 2,
+        "coupling": 1.0,
+        "chi2": 2124.7176172462873,
+        "saturn_dg": 3.834447217442644e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "g_TEP",
+        "n": 2,
+        "coupling": 2.0,
+        "chi2": 8249.507895099767,
+        "saturn_dg": 7.668894434885288e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0",
+        "n": 1,
+        "coupling": 1.0,
+        "chi2": 635.126400913392,
+        "saturn_dg": 6.548256645367796e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0",
+        "n": 1,
+        "coupling": 2.0,
+        "chi2": 6619.122365315298,
+        "saturn_dg": 1.3096513290735592e-09,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0",
+        "n": 2,
+        "coupling": 1.0,
+        "chi2": 1756.853178778715,
+        "saturn_dg": 6.5769246109458745e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0",
+        "n": 2,
+        "coupling": 2.0,
+        "chi2": 11266.918271955941,
+        "saturn_dg": 1.3153849221891749e-14,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0/sqrt2",
+        "n": 1,
+        "coupling": 1.0,
+        "chi2": 1164.497178321201,
+        "saturn_dg": 4.630330299912764e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0/sqrt2",
+        "n": 1,
+        "coupling": 2.0,
+        "chi2": 3989.614247736717,
+        "saturn_dg": 9.260660599825528e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0/sqrt2",
+        "n": 2,
+        "coupling": 1.0,
+        "chi2": 2283.1932540838275,
+        "saturn_dg": 3.2884623056388e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.0,
+        "g_star": "cH0/sqrt2",
+        "n": 2,
+        "coupling": 2.0,
+        "chi2": 7509.942087494802,
+        "saturn_dg": 6.5769246112776e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "g_TEP",
+        "n": 1,
+        "coupling": 1.0,
+        "chi2": 889.2172358137661,
+        "saturn_dg": 4.999961655800426e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "g_TEP",
+        "n": 1,
+        "coupling": 2.0,
+        "chi2": 3771.0971233092187,
+        "saturn_dg": 9.999923311600853e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "g_TEP",
+        "n": 2,
+        "coupling": 1.0,
+        "chi2": 1462.6095610235202,
+        "saturn_dg": 3.834447217442644e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "g_TEP",
+        "n": 2,
+        "coupling": 2.0,
+        "chi2": 6559.352032718898,
+        "saturn_dg": 7.668894434885288e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0",
+        "n": 1,
+        "coupling": 1.0,
+        "chi2": 494.12686423170567,
+        "saturn_dg": 6.548256645367796e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0",
+        "n": 1,
+        "coupling": 2.0,
+        "chi2": 5773.19435726321,
+        "saturn_dg": 1.3096513290735592e-09,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0",
+        "n": 2,
+        "coupling": 1.0,
+        "chi2": 1057.280586282114,
+        "saturn_dg": 6.5769246109458745e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0",
+        "n": 2,
+        "coupling": 2.0,
+        "chi2": 9201.981897156515,
+        "saturn_dg": 1.3153849221891749e-14,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0/sqrt2",
+        "n": 1,
+        "coupling": 1.0,
+        "chi2": 1017.4697029640913,
+        "saturn_dg": 4.630330299912764e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0/sqrt2",
+        "n": 1,
+        "coupling": 2.0,
+        "chi2": 3287.1659023504653,
+        "saturn_dg": 9.260660599825528e-10,
+        "solar_system_ok": false
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0/sqrt2",
+        "n": 2,
+        "coupling": 1.0,
+        "chi2": 1610.0010528223324,
+        "saturn_dg": 3.2884623056388e-15,
+        "solar_system_ok": true
+      },
+      {
+        "sigma_lnM": 0.8,
+        "g_star": "cH0/sqrt2",
+        "n": 2,
+        "coupling": 2.0,
+        "chi2": 5815.588657199481,
+        "saturn_dg": 6.5769246112776e-15,
+        "solar_system_ok": true
+      }
+    ],
+    "verdict": "no zero-parameter acceleration law fits the bins and passes the Solar System"
+  },
+  "T5_wb_systematics": {
+    "newtonian_forward_outer_v": {
+      "circular": 0.9867552018097394,
+      "uniform": 0.9906784197679068,
+      "thermal": 1.0066029692561447,
+      "superthermal": 0.997751507095364
+    },
+    "triples_can_explain": {
+      "0.05": "NO",
+      "0.1": "NO",
+      "0.15": "NO",
+      "0.2": "NO",
+      "0.3": "NO",
+      "0.5": "NO"
+    },
+    "verdict": "Newtonian forward model and triples do not produce the rise; the anomaly is not a Newtonian artefact"
+  },
+  "T6_cepheid_disformal": {
+    "B0_GeV-4": 8.142954042035838e+60,
+    "M_B_eV": 5.919765510165898e-07,
+    "gw170817_dc_over_c_generous": 1.6171875000000004e-08,
+    "gw_bound": 3e-15,
+    "excess": 5390625.000000002,
+    "conformal_unscreened_dlnA": 8e-07,
+    "conformal_shortfall": 25875.0,
+    "verdict": "conformal ~1e5 short; disformal at required amplitude violates GW170817 by >=1e7"
+  },
+  "T7_static_background": {
+    "identity": "rho_tot+p_tot = phidot^2 + rho_m + p_m",
+    "verdict": "must vanish for a static flat Einstein frame; impossible with phidot!=0 and ordinary matter"
+  },
+  "T7b_clock_map_energy": {
+    "rho_kin_over_rho_crit": 0.16666666666666666,
+    "delta_Neff_if_radiation_like": 1.4894409324916928,
+    "verdict": "carrying 1+z entirely in A(phi) with K=1 gives Delta N_eff ~1.5"
+  },
+  "T8_paper27_HTEP": {
+    "fractional_dH": {
+      "0.1": {
+        "recombination": 0.2820888539868154,
+        "BBN": 4.757129522524448
+      },
+      "0.0055": {
+        "recombination": 0.01376080676068625,
+        "BBN": 0.10106087317993562
+      }
+    },
+    "v42_formula_z0": {
+      "0.5": 0.2,
+      "1": 0.1,
+      "3": 0.03333333333333333,
+      "100": 0.001
+    },
+    "verdict": "shipped defaults give +28% at recombination and +476% at BBN; v4.2 'exact' formula shifts H0"
+  },
+  "T9_paper28_sgb": {
+    "10": {
+      "eta_max": 0.01981148476676533,
+      "sqrt_alpha_for_eta_0p1_km": 2.6960176658773296
+    },
+    "30": {
+      "eta_max": 0.002201276085196148,
+      "sqrt_alpha_for_eta_0p1_km": 8.088052997631987
+    },
+    "65": {
+      "eta_max": 0.0004689108820536174,
+      "sqrt_alpha_for_eta_0p1_km": 17.524114828202638
+    }
+  },
+  "T10_paper17": {
+    "nordtvedt_eta_leading_order": 0.0,
+    "verdict": "universal coupling -> no SEP violation; TEP predicts no cos D signal at the 5 mm level"
+  }
+}

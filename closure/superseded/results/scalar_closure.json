@@ -1,0 +1,88 @@
+{
+  "Lambda_GeV": 1.9066873309734403e-12,
+  "Lambda_meV": 1.9066873309734403e-09,
+  "beta_A": -1.0,
+  "potential": "V(phi) = Lambda^4 + (1/2)*Lambda^2*phi^2",
+  "scalar_mass_GeV": 1.9066873309734403e-12,
+  "compton_wavelength_cm": 0.01034778994935003,
+  "compton_wavelength_mm": 0.10347789949350031,
+  "V0_GeV4": 1.3216544531211453e-47,
+  "rho_DE_observed_GeV4": 3.013262891580016e-47,
+  "V0_over_rho_DE": 0.43861239482763176,
+  "a0_m_s2": 6.800388852883993e-10,
+  "a0_natural_GeV": 1.4930006480881402e-42,
+  "identity_ratio": 1.0000000000000002,
+  "Lambda2_over_M_Pl_GeV": 1.4930006480881402e-42,
+  "H0_hbar_GeV": 1.49300064808814e-42,
+  "gates": {
+    "Cassini": {
+      "observable": "S_Sun",
+      "value": 2.2294337903478393e-13,
+      "bound": 5.75e-06,
+      "pass": true
+    },
+    "Geodesy": {
+      "observable": "alpha_Earth",
+      "value": 4.871090623432989e-11,
+      "bound": 1e-08,
+      "pass": true
+    },
+    "LLR": {
+      "observable": "eta_N",
+      "value": 5.659456791385619e-22,
+      "bound": 0.00044,
+      "pass": true
+    },
+    "Pulsar": {
+      "observable": "alpha_NS",
+      "value": 1.2930716039750979e-08,
+      "bound": 0.001,
+      "pass": true
+    },
+    "WD": {
+      "observable": "alpha_WD",
+      "value": 2.2166941687049232e-11,
+      "bound": 0.01,
+      "pass": true
+    }
+  },
+  "n_gates_pass": 5,
+  "bodies": {
+    "Sun": {
+      "S_Sigma": 2.2294337903478393e-13,
+      "x_mR": 6728165718552.599,
+      "phi_eq_over_M_Pl": 2.8125519007947022e-25
+    },
+    "Earth": {
+      "S_Sigma": 2.4355453117164944e-11,
+      "x_mR": 61587850277.15316,
+      "phi_eq_over_M_Pl": 1.1010079753234485e-24
+    },
+    "Moon": {
+      "S_Sigma": 8.933137122211777e-11,
+      "x_mR": 16791413582.07739,
+      "phi_eq_over_M_Pl": 6.678953285296886e-25
+    },
+    "Jupiter": {
+      "S_Sigma": 2.2198654049830177e-12,
+      "x_mR": 675716643285.6704,
+      "phi_eq_over_M_Pl": 2.649464848371387e-25
+    },
+    "NS": {
+      "S_Sigma": 1.2930716039750979e-08,
+      "x_mR": 116002857.21642411,
+      "phi_eq_over_M_Pl": 7.68102137801162e-11
+    },
+    "WD": {
+      "S_Sigma": 2.2166941687049232e-11,
+      "x_mR": 67668333376.2474,
+      "phi_eq_over_M_Pl": 1.6679407033784155e-19
+    }
+  },
+  "wide_binary": {
+    "R_s_predicted_AU": 3288.6894746781363,
+    "R_s_predicted_eta2_AU": 2325.454628761735,
+    "R_s_observed_AU": 2646,
+    "M_WB_solar_masses": 1.24
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "step": "step_21_congruence_preservation",
+  "description": "Zero-expansion congruence preservation on the constraint-satisfying inhomogeneous slice: joint solve of the Lichnerowicz integrability (lambda*) and the maximal-slicing lapse zero-mode (mu_0 = 0 via the drift momentum Pi*^2).",
+  "landscape": {
+    "V0": 60.0,
+    "rhob_half": 30.0,
+    "u_well": 0.4,
+    "u_void": -2.2,
+    "rho0": 0.5,
+    "N": 40,
+    "variational_scan_N40": [
+      {
+        "u_void": -1.0,
+        "sigma_frac_L": 0.25,
+        "lambda_star_est": -25.566098826963085,
+        "rayleigh_bound": 7.471194218225978,
+        "f_min": -14.074279620235451,
+        "f_max": 32.65657403609226
+      },
+      {
+        "u_void": -1.4,
+        "sigma_frac_L": 0.25,
+        "lambda_star_est": -19.471205109449517,
+        "rayleigh_bound": 4.537179409233463,
+        "f_min": -20.16917333774902,
+        "f_max": 54.092145594112985
+      },
+      {
+        "u_void": -1.8,
+        "sigma_frac_L": 0.25,
+        "lambda_star_est": -11.958202026938642,
+        "rayleigh_bound": 0.6769418335816777,
+        "f_min": -27.6821764202599,
+        "f_max": 85.41043555947464
+      },
+      {
+        "u_void": -2.2,
+        "sigma_frac_L": 0.25,
+        "lambda_star_est": -2.578872187745497,
+        "rayleigh_bound": -4.4664064564648776,
+        "f_min": -37.06150625945304,
+        "f_max": 130.7951310114432
+      },
+      {
+        "u_void": -2.6,
+        "sigma_frac_L": 0.25,
+        "lambda_star_est": 9.237158642642239,
+        "rayleigh_bound": -11.35295779890027,
+        "f_min": -48.87753708984077,
+        "f_max": 196.1992305567885
+      },
+      {
+        "u_void": -1.0,
+        "sigma_frac_L": 0.3333333333333333,
+        "lambda_star_est": -25.899604824710288,
+        "rayleigh_bound": 5.748987635865704,
+        "f_min": -13.740773622488248,
+        "f_max": 28.895587387680152
+      },
+      {
+        "u_void": -1.4,
+        "sigma_frac_L": 0.3333333333333333,
+        "lambda_star_est": -20.0049998362716,
+        "rayleigh_bound": 3.1863405105872866,
+        "f_min": -19.635378610926935,
+        "f_max": 47.257616344992336
+      },
+      {
+        "u_void": -1.8,
+        "sigma_frac_L": 0.3333333333333333,
+        "lambda_star_est": -12.833767636823554,
+        "rayleigh_bound": -0.13652758633772422,
+        "f_min": -26.80661081037499,
+        "f_max": 73.68879640121075
+      },
+      {
+        "u_void": -2.2,
+        "sigma_frac_L": 0.3333333333333333,
+        "lambda_star_est": -4.01959095092893,
+        "rayleigh_bound": -4.4922274980989965,
+        "f_min": -35.62078749626961,
+        "f_max": 111.41892611629358
+      },
+      {
+        "u_void": -2.6,
+        "sigma_frac_L": 0.3333333333333333,
+        "lambda_star_est": 6.8972396986106155,
+        "rayleigh_bound": -10.227932019664516,
+        "f_min": -46.53761814580915,
+        "f_max": 164.96342043563925
+      }
+    ],
+    "note": "Rule-23 deep-well regime (V0 = 60): the lapse source f changes sign only where wells are potential-dominated, and a bound state (mu_0 < 0 at Pi^2 = 0) requires |f_w| sigma^2 >~ pi^2.  The scan minimises the Rayleigh bound on mu_0."
+  },
+  "joint_solution": {
+    "lambda_star": -18.347222324896517,
+    "Pi_star2": -8.842770282966201,
+    "mu_0_final": 2.1671553440683056e-13,
+    "psi_range": [
+      0.7498683681336928,
+      1.814813559942025
+    ],
+    "fixed_point_history": [
+      {
+        "Pi2": 0.0,
+        "lambda": -22.768607466379493,
+        "mu0": 13.264155424449086,
+        "f_min": -16.871770980819043,
+        "f_max": 150.98486629007718
+      },
+      {
+        "Pi2": -8.842770282966057,
+        "lambda": -18.347222324896517,
+        "mu0": 2.1671553440683056e-13,
+        "f_min": -30.135926405268076,
+        "f_max": 137.72071086562815
+      }
+    ]
+  },
+  "lapse_source_structure": {
+    "f_min": -30.135926405268076,
+    "f_max": 137.72071086562815,
+    "f_well_mean": 14.233427085809918,
+    "f_void_mean": NaN,
+    "sign_changing": true,
+    "interpretation": "f < 0 in potential-dominated wells (local expansion), f > 0 in negative-V voids (local contraction): the eternal slice is a steady-state circulation, not a pointwise-static geometry"
+  },
+  "mean_preservation": {
+    "achieved": true,
+    "lapse_modulation_delta": 2.6592107435311836,
+    "int_Nf": 1.818989403545857e-15
+  },
+  "exact_preservation": {
+    "mu_0": 2.1671553440683056e-13,
+    "required_Pi2": -8.842770282966201,
+    "eigenfunction_positive": true,
+    "eigen_residual": 1.0885514711844735e-10,
+    "int_eigenfunction_f": 2.344222593819723e-13
+  },
+  "remaining_open": [
+    "linearized inhomogeneous-mode growth (the landscape analogue of the Eddington mode) \u2014 requires perturbation evolution, not the initial-data level shown here",
+    "A_ij != 0 sector",
+    "long-time stationarity of the landscape statistics"
+  ],
+  "verdict": "PASS"
+}

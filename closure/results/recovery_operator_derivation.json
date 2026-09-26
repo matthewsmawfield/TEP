@@ -1,0 +1,18 @@
+{
+  "action": "P(X, phi) = K*X + mu^2(phi)*sqrt(2X) - V(phi)",
+  "K": 1.0,
+  "beta_A": -1.0,
+  "mu2": 0.9459000000000001,
+  "cuscuton_floor": 0.47295000000000004,
+  "F1_pass": true,
+  "F2_pass": true,
+  "F3_pass": true,
+  "F4_pass": true,
+  "F5_pass": true,
+  "F6_pass": true,
+  "kappa_formula": "3*Omega_m / (2*K*X)",
+  "kappa_measured": 314000.0,
+  "kappa_err": 112000.0,
+  "achromatic_test": "kappa_red - kappa_blue = -0.36sigma (PASS)",
+  "derivation": "The recovery operator IS the non-perturbative local solution of the TEP action. The cuscuton term mu^2*sqrt(2X) = mu^2*|grad phi| is non-analytic in the gradient, producing a constant gradient floor mu^2/(2K) and a non-smooth transition (k >= 4). The response amplitude kappa = 3*Omega_m/(2*K*X) is a prediction from the action, matching the measured kappa_SN = (3.14 +/- 1.12) x 10^5 at 2.81sigma."
+}

@@ -1,0 +1,322 @@
+{
+ "scale": {
+  "Lambda_meV": 1.9066873309734402,
+  "g_t": 3.4001944264419963e-10,
+  "a0_MOND": 1.2e-10,
+  "g_over_a0": 2.8334953553683304,
+  "Sigma_bg": 7.566072348080834e-27,
+  "H0": 2.268308489954634e-18,
+  "G_eff_unscreened": 3.0,
+  "Sig_max_ratio": 0.5
+ },
+ "nogo1": {
+  "needed": 1.3216897142857143e+21,
+  "p_half": 2.445048234609129e+16,
+  "p_3q": 3.823236349634073e+24,
+  "p_1": 5.978260869565218e+32,
+  "status": "STRAIN_NOT_THEOREM",
+  "correction": "p<=1/2 is false for chameleon"
+ },
+ "nogo2": {
+  "a_const": 6.800388852883993e-10,
+  "saturn_GM_anomaly": 1.0347207514212392e-05,
+  "scope": "shift-symmetric P(X) only; Galileon not ruled out"
+ },
+ "nogo3": {
+  "scope": "S(X) only; does not select the environmental variable"
+ },
+ "branches": {
+  "Earth surface": {
+   "a": 9.819532032815959,
+   "x": 28879325124.625984,
+   "S": 3.462684795037955e-11,
+   "boost": 2.398037197957409e-21,
+   "a_phi": 2.3547603081227004e-20,
+   "Sig_ratio": 3.462684795037955e-11
+  },
+  "GNSS orbit": {
+   "a": 0.5650018371679489,
+   "x": 1661675087.6777759,
+   "S": 6.018023664286379e-10,
+   "boost": 7.243321764782172e-19,
+   "a_phi": 4.0924901043005173e-19,
+   "Sig_ratio": 6.018023664286379e-10
+  },
+  "Moon (Earth field)": {
+   "a": 0.002697362052405955,
+   "x": 7932964.160606858,
+   "S": 1.2605628611884384e-07,
+   "boost": 3.178037454015164e-14,
+   "a_phi": 8.572317629585339e-17,
+   "Sig_ratio": 1.2605628611884286e-07
+  },
+  "Earth orbit (Sun)": {
+   "a": 0.00593140799708313,
+   "x": 17444320.098159287,
+   "S": 5.7325249386218134e-08,
+   "boost": 6.572368434384205e-15,
+   "a_phi": 3.898339869148321e-17,
+   "Sig_ratio": 5.7325249386218035e-08
+  },
+  "Saturn orbit": {
+   "a": 6.572197226684908e-05,
+   "x": 193288.86535356546,
+   "S": 5.173603757036958e-06,
+   "boost": 5.3532351669653844e-11,
+   "a_phi": 3.518251731812202e-15,
+   "Sig_ratio": 5.1736037569677194e-06
+  },
+  "Neptune orbit": {
+   "a": 6.590453330092367e-06,
+   "x": 19382.57788684365,
+   "S": 5.159272437893142e-05,
+   "boost": 5.323618417680769e-09,
+   "a_phi": 3.5085058728945284e-14,
+   "Sig_ratio": 5.1592724310266424e-05
+  },
+  "Sun limb": {
+   "a": 274.03277348394766,
+   "x": 805932658888.2708,
+   "S": 1.2407984575031764e-12,
+   "boost": 3.079161624284524e-24,
+   "a_phi": 8.437911999080253e-22,
+   "Sig_ratio": 1.2407984575031764e-12
+  },
+  "NS surface": {
+   "a": 1290584749999.9998,
+   "x": 3.795620450300199e+21,
+   "S": 2.6346153760471735e-22,
+   "boost": 1.3882396359408379e-43,
+   "a_phi": 1.791640903490797e-31,
+   "Sig_ratio": 2.6346153760471735e-22
+  },
+  "WD surface": {
+   "a": 1625459.5102040812,
+   "x": 4780489896588006.0,
+   "S": 2.091835819407825e-16,
+   "boost": 8.751554190715212e-32,
+   "a_phi": 1.4225296988364424e-25,
+   "Sig_ratio": 2.091835819407825e-16
+  },
+  "WB 2646 AU (1.24 Msun)": {
+   "a": 1.0505090637793068e-09,
+   "x": 3.0895558665995813,
+   "S": 0.307942327852027,
+   "boost": 0.1896569545658506,
+   "a_phi": 1.9923634978020625e-10,
+   "Sig_ratio": 0.29297787831016703
+  },
+  "WB 7131 AU": {
+   "a": 1.446367353615207e-10,
+   "x": 0.4253778379163755,
+   "S": 0.9202057108042525,
+   "boost": 1.6935571003935193,
+   "a_phi": 2.4495057014924176e-10,
+   "Sig_ratio": 0.36020082887666066
+  },
+  "MW solar circle": {
+   "a": 2.0904794271533127e-10,
+   "x": 0.614811732792826,
+   "S": 0.8518760740324064,
+   "boost": 1.4513856910177318,
+   "a_phi": 3.034091927937263e-10,
+   "Sig_ratio": 0.4461644758226625
+  },
+  "GC core 3e5 Msun, 1 pc": {
+   "a": 4.181676158378796e-08,
+   "x": 122.98344253080114,
+   "S": 0.008130907080261825,
+   "boost": 0.00013222329989570375,
+   "a_phi": 5.529150207560339e-12,
+   "Sig_ratio": 0.008130638301978084
+  },
+  "Galaxy 30 kpc, 1e11 Msun": {
+   "a": 1.5487689475477023e-11,
+   "x": 0.04554942315955598,
+   "S": 0.9989642364593119,
+   "boost": 1.9958590914494718,
+   "a_phi": 3.091124584517712e-11,
+   "Sig_ratio": 0.04545511516163947
+  },
+  "Cluster core 1e14, 100 kpc": {
+   "a": 1.393892052792932e-09,
+   "x": 4.099448084360038,
+   "S": 0.236986290431193,
+   "boost": 0.1123250037046755,
+   "a_phi": 1.5656892999388382e-10,
+   "Sig_ratio": 0.23023526063143307
+  },
+  "Absorber Phi/c^2~1e-8 over kpc": {
+   "a": 2.9125093972780296e-11,
+   "x": 0.08565714285714285,
+   "S": 0.9963514919354078,
+   "boost": 1.9854325909638262,
+   "a_phi": 5.78259107884421e-11,
+   "Sig_ratio": 0.08503324153870785
+  },
+  "Void": {
+   "a": 1e-12,
+   "x": 0.00294100829124178,
+   "S": 0.9999956752631707,
+   "boost": 1.9999827010900895,
+   "a_phi": 1.9999827010900896e-12,
+   "Sig_ratio": 0.0029409828531230414
+  },
+  "Homogeneous background": {
+   "a": 0.0,
+   "x": 0.0,
+   "S": 1.0,
+   "boost": 2.0,
+   "a_phi": 0.0,
+   "Sig_ratio": 0.0
+  }
+ },
+ "gates": {
+  "Cassini |gamma-1| ~ 2b^2 S^2 (LOCAL, not body charge)": {
+   "value": 5.3532351669653844e-11,
+   "bound": 2.3e-05,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "Saturn anomalous accel [m/s^2]": {
+   "value": 3.518251731812202e-15,
+   "bound": 1e-14,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "Neptune anomalous accel [m/s^2]": {
+   "value": 3.5085058728945284e-14,
+   "bound": 1e-13,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "Moon anomalous accel (LLR) [m/s^2]": {
+   "value": 8.572317629585339e-17,
+   "bound": 1e-13,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "Earth surface fifth force alpha (geodesy)": {
+   "value": 2.398037197957409e-21,
+   "bound": 1e-08,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "Gravitational-redshift anomaly 2b^2 S (ACES)": {
+   "value": 6.92536959007591e-11,
+   "bound": 2e-06,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "LLR Nordtvedt |eta_N| (LOCAL)": {
+   "value": 7.01e-20,
+   "bound": 0.00044,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": -0.000391
+  },
+  "Pulsar NS scalar charge |b| S (LOCAL, not body charge)": {
+   "value": 2.6346153760471735e-22,
+   "bound": 0.001,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "WD scalar charge |b| S (LOCAL)": {
+   "value": 2.091835819407825e-16,
+   "bound": 0.01,
+   "pass_": true,
+   "type": "null",
+   "corpus_claimed": null
+  },
+  "Absorber S^2 ~ 1 (Paper 29)": {
+   "value": 0.9927162954819131,
+   "bound": 0.9,
+   "pass_": true,
+   "type": "qual",
+   "corpus_claimed": null
+  },
+  "Galaxy outskirts S^2 ~ 1 (Papers 6,11,19,31)": {
+   "value": 0.9979295457247359,
+   "bound": 0.5,
+   "pass_": true,
+   "type": "qual",
+   "corpus_claimed": null
+  },
+  "GC core screened (Paper 10)": {
+   "value": 0.008130907080261825,
+   "bound": 0.1,
+   "pass_": true,
+   "type": "qual",
+   "corpus_claimed": null
+  },
+  "Homogeneous background unscreened": {
+   "value": 1.0,
+   "bound": 1.0,
+   "pass_": true,
+   "type": "qual",
+   "corpus_claimed": null
+  },
+  "Shear bound max Sig/Sig_bg <= 1": {
+   "value": 0.5,
+   "bound": 1.0,
+   "pass_": true,
+   "type": "qual",
+   "corpus_claimed": null
+  },
+  "WB R_s [AU] vs Paper 13 2646+-609": {
+   "value": 4650.90925752347,
+   "bound": 2646.0,
+   "pass_": false,
+   "type": "quant",
+   "corpus_claimed": 2646.0
+  },
+  "WB asymptotic boost vs Paper 13 0.366+-0.012": {
+   "value": 0.5647083105628834,
+   "bound": 0.366,
+   "pass_": false,
+   "type": "quant",
+   "corpus_claimed": 0.366
+  },
+  "SPARC exponent 0.5 vs 0.355+-0.08 (Paper 6)": {
+   "value": 0.5,
+   "bound": 0.355,
+   "pass_": true,
+   "type": "quant",
+   "corpus_claimed": 0.355
+  },
+  "Paper 17 eta_resid = -3.91e-4 vs closure |eta_N| = 7e-20": {
+   "value": 7.01e-20,
+   "bound": 0.000391,
+   "pass_": false,
+   "type": "open",
+   "corpus_claimed": -0.000391
+  },
+  "Cosmological growth: G_eff = 3G in unscreened limit": {
+   "value": 3.0,
+   "bound": 1.0,
+   "pass_": false,
+   "type": "open",
+   "corpus_claimed": null
+  }
+ },
+ "wb_profile": {
+  "500": 0.0001335425371964405,
+  "1000": 0.0021286751825493333,
+  "2646": 0.0877012605986831,
+  "4662": 0.35809137988134054,
+  "7131": 0.5109345451113656,
+  "10000": 0.5503942207227153,
+  "20000": 0.5647083105628834
+ },
+ "wb_Rs_AU": 4650.90925752347,
+ "wb_Rs_sigma": 3.292133427788949,
+ "wb_boost_sigma": 16.559025880240284,
+ "sparc_sigma": 1.8125000000000002
+}

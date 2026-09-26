@@ -1,0 +1,241 @@
+{
+  "potential": "V = Lambda^4(1 + phi^2/(2Lambda^2)), Lambda = 0.00 meV, m = 1.8704e-12 GeV",
+  "Lambda_GeV": 1.8703871069932236e-12,
+  "Lambda_meV": 1.8703871069932236e-09,
+  "m_GeV": 1.8703871069932236e-12,
+  "compton_mm": 0.0010548618479153944,
+  "screening": {
+    "Sun": {
+      "x": 6600072392189.128,
+      "S_Sigma": 2.2727023445610874e-13,
+      "phi_eq_body": 7.12518475612178e-13,
+      "phi_eq_amb": 5.0533225220721835e-36,
+      "phi_eq_body_over_Mpl": 2.9261539039514494e-31,
+      "compton_cm": 0.010548618479153943,
+      "name": "Sun"
+    },
+    "Earth": {
+      "x": 60415317831.3749,
+      "S_Sigma": 2.4828140508985846e-11,
+      "phi_eq_body": 2.7843807096617728e-12,
+      "phi_eq_amb": 5.0533225220721835e-36,
+      "phi_eq_body_over_Mpl": 1.1434828376434384e-30,
+      "compton_cm": 0.010548618479153943,
+      "name": "Earth"
+    },
+    "Moon": {
+      "x": 16471732392.575453,
+      "S_Sigma": 9.10651025827526e-11,
+      "phi_eq_body": 1.6878097223721093e-12,
+      "phi_eq_amb": 5.0533225220721835e-36,
+      "phi_eq_body_over_Mpl": 6.931456765388539e-31,
+      "compton_cm": 0.010548618479153943,
+      "name": "Moon"
+    },
+    "Jupiter": {
+      "x": 662852098008.6494,
+      "S_Sigma": 2.2629482572469103e-12,
+      "phi_eq_body": 6.720918954356004e-13,
+      "phi_eq_amb": 5.0533225220721835e-36,
+      "phi_eq_body_over_Mpl": 2.760130987415197e-31,
+      "compton_cm": 0.010548618479153943,
+      "name": "Jupiter"
+    },
+    "NS": {
+      "x": 113794351.58946772,
+      "S_Sigma": 1.3181673656372149e-08,
+      "phi_eq_body": 141.49303061802115,
+      "phi_eq_amb": 5.0533225220721835e-36,
+      "phi_eq_body_over_Mpl": 5.810802078768836e-17,
+      "compton_cm": 0.010548618479153943,
+      "name": "NS"
+    },
+    "WD": {
+      "x": 66380038427.18951,
+      "S_Sigma": 2.2597154740375882e-11,
+      "phi_eq_body": 5.053322522072184e-07,
+      "phi_eq_amb": 5.0533225220721835e-36,
+      "phi_eq_body_over_Mpl": 2.0752864567031557e-25,
+      "compton_cm": 0.010548618479153943,
+      "name": "WD"
+    },
+    "Cepheid": {
+      "x": 4741431316227822.0,
+      "S_Sigma": 3.1636016636287944e-16,
+      "phi_eq_body": 5.053322522072184e-16,
+      "phi_eq_amb": 5.0533225220721835e-37,
+      "phi_eq_body_over_Mpl": 2.0752864567031557e-34,
+      "compton_cm": 0.010548618479153943,
+      "name": "Cepheid"
+    },
+    "Host_gal": {
+      "x": 2.844858789736693e+24,
+      "S_Sigma": 5.272669439381324e-25,
+      "phi_eq_body": 5.0533225220721835e-37,
+      "phi_eq_amb": 5.0533225220721835e-37,
+      "phi_eq_body_over_Mpl": 2.0752864567031556e-55,
+      "compton_cm": 0.010548618479153943,
+      "name": "Host_gal"
+    },
+    "MW": {
+      "x": 2.844858789736693e+24,
+      "S_Sigma": 5.272669439381324e-25,
+      "phi_eq_body": 5.0533225220721835e-37,
+      "phi_eq_amb": 5.0533225220721835e-37,
+      "phi_eq_body_over_Mpl": 2.0752864567031556e-55,
+      "compton_cm": 0.010548618479153943,
+      "name": "MW"
+    }
+  },
+  "gates": {
+    "Cassini": {
+      "value": 2.2727023445610874e-13,
+      "bound": 5.75e-06,
+      "pass": "True",
+      "margin": 25300277.503389742
+    },
+    "Geodesy": {
+      "value": 4.965628101797169e-11,
+      "bound": 1e-08,
+      "pass": "True",
+      "margin": 201.384392769583
+    },
+    "LLR": {
+      "value": 5.769294775387078e-22,
+      "bound": 0.00044,
+      "pass": "True",
+      "margin": 7.626582054311468e+17,
+      "corpus_claim": -0.000391
+    },
+    "Pulsar": {
+      "value": 1.3181673656372149e-08,
+      "bound": 0.001,
+      "pass": "True",
+      "margin": 75862.90072631181
+    },
+    "WD": {
+      "value": 2.2597154740375882e-11,
+      "bound": 0.01,
+      "pass": "True",
+      "margin": 442533589.5112634
+    }
+  },
+  "clock_force_split": {
+    "Sun": {
+      "S_A": 1.0,
+      "S_Sigma": 2.2727023445610874e-13,
+      "split_ratio": 4400048261459.085,
+      "phi_eq_GeV": 7.12518475612178e-13,
+      "phi_amb_GeV": 5.0533225220721835e-36,
+      "phi_eq_over_Mpl": 2.9261539039514494e-31,
+      "clock_rate_shift": 2.9261539039514494e-31
+    },
+    "Earth": {
+      "S_A": 1.0,
+      "S_Sigma": 2.4828140508985846e-11,
+      "split_ratio": 40276878553.9166,
+      "phi_eq_GeV": 2.7843807096617728e-12,
+      "phi_amb_GeV": 5.0533225220721835e-36,
+      "phi_eq_over_Mpl": 1.1434828376434384e-30,
+      "clock_rate_shift": 1.1434828376434384e-30
+    },
+    "Moon": {
+      "S_A": 1.0,
+      "S_Sigma": 9.10651025827526e-11,
+      "split_ratio": 10981154928.050303,
+      "phi_eq_GeV": 1.6878097223721093e-12,
+      "phi_amb_GeV": 5.0533225220721835e-36,
+      "phi_eq_over_Mpl": 6.931456765388539e-31,
+      "clock_rate_shift": 6.931456765388539e-31
+    },
+    "Jupiter": {
+      "S_A": 1.0,
+      "S_Sigma": 2.2629482572469103e-12,
+      "split_ratio": 441901398672.0996,
+      "phi_eq_GeV": 6.720918954356004e-13,
+      "phi_amb_GeV": 5.0533225220721835e-36,
+      "phi_eq_over_Mpl": 2.760130987415197e-31,
+      "clock_rate_shift": 2.760130987415197e-31
+    },
+    "NS": {
+      "S_A": 1.0,
+      "S_Sigma": 1.3181673656372149e-08,
+      "split_ratio": 75862900.72631182,
+      "phi_eq_GeV": 141.49303061802115,
+      "phi_amb_GeV": 5.0533225220721835e-36,
+      "phi_eq_over_Mpl": 5.810802078768836e-17,
+      "clock_rate_shift": 5.810802078768836e-17
+    },
+    "WD": {
+      "S_A": 1.0,
+      "S_Sigma": 2.2597154740375882e-11,
+      "split_ratio": 44253358951.126335,
+      "phi_eq_GeV": 5.053322522072184e-07,
+      "phi_amb_GeV": 5.0533225220721835e-36,
+      "phi_eq_over_Mpl": 2.0752864567031557e-25,
+      "clock_rate_shift": 2.0752864567031557e-25
+    },
+    "Cepheid": {
+      "S_A": 1.0,
+      "S_Sigma": 3.1636016636287944e-16,
+      "split_ratio": 3160954210818547.5,
+      "phi_eq_GeV": 5.053322522072184e-16,
+      "phi_amb_GeV": 5.0533225220721835e-37,
+      "phi_eq_over_Mpl": 2.0752864567031557e-34,
+      "clock_rate_shift": 2.0752864567031557e-34
+    },
+    "Host_gal": {
+      "S_A": 0.0,
+      "S_Sigma": 5.272669439381324e-25,
+      "split_ratio": 0.0,
+      "phi_eq_GeV": 5.0533225220721835e-37,
+      "phi_amb_GeV": 5.0533225220721835e-37,
+      "phi_eq_over_Mpl": 2.0752864567031556e-55,
+      "clock_rate_shift": 2.0752864567031556e-55
+    },
+    "MW": {
+      "S_A": 0.0,
+      "S_Sigma": 5.272669439381324e-25,
+      "split_ratio": 0.0,
+      "phi_eq_GeV": 5.0533225220721835e-37,
+      "phi_amb_GeV": 5.0533225220721835e-37,
+      "phi_eq_over_Mpl": 2.0752864567031556e-55,
+      "clock_rate_shift": 2.0752864567031556e-55
+    }
+  },
+  "cepheid_channel": {
+    "phi_Cepheid_GeV": 5.053322522072184e-16,
+    "phi_host_gal_GeV": 8.164609652321173e-37,
+    "phi_MW_gal_GeV": 8.164609652321173e-37,
+    "phi_gal_typical_GeV": 5.0533225220721835e-37,
+    "phi_gal_over_Mpl": 2.0752864567031556e-55,
+    "conformal_amplitude": 1.0376432283515778e-55,
+    "observed_clock_rate_shift": 0.020723265836946413,
+    "observed_delta_mu": 0.045,
+    "ratio_conformal_to_observed": 5.0071414250818454e-54,
+    "paper_29_conformal_only": 0.01,
+    "paper_31_conformal_bound": 0.01,
+    "verdict": "conformal_insufficient"
+  },
+  "holonomy": {
+    "lambda_C_mm": 0.0010548618479153944,
+    "L_triangle_km": 3000.0,
+    "H_per_B0": 4.775144272472533e-40,
+    "H_threshold": 1e-18,
+    "B0_min": 2.0941775639423932e+21,
+    "B0_max_eft": 6.102566573805649e+164,
+    "B0_max_cassini": 8.143957498413734e+172,
+    "B0_max": 6.102566573805649e+164,
+    "window_exists": "True",
+    "window_ratio": 2.9140635822290375e+143,
+    "M_B_min_eV": 4674.623353499574,
+    "M_B_max_eV": 6.362413171517637e-33,
+    "phi_earth_Mpl": 1.1434828376434384e-30,
+    "phi_sun_Mpl": 2.9261539039514494e-31,
+    "phi_gal_Mpl": 2.0752864567031556e-55,
+    "epsilon_per_B0_earth": 1.6386547986094079e-165,
+    "gamma_disformal_per_B0": 2.8241797681876286e-178,
+    "GW170817": "PASS (B(0)=0 by construction)",
+    "verdict": "window_exists"
+  }
+}

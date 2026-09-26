@@ -1,0 +1,135 @@
+{
+  "Lambda_GeV": 1.8711811956247647e-12,
+  "Lambda_meV": 1.8711811956247646,
+  "Lambda4_GeV4": 1.2259235207955448e-47,
+  "rho_DE_obs_GeV4": 2.538e-47,
+  "a0_Lambda2_over_MPl_SI": 6.548322413981453e-10,
+  "a0_MOND_SI": 1.2e-10,
+  "_definitional_warning": "Lambda^4 = M_Pl^2 H0^2 = rho_crit/3 identically, and Lambda^2/M_Pl = H0 identically. So 'Lambda^4 matches dark energy' and 'a_0 = c H_0' are consequences of the DEFINITION Lambda = sqrt(M_Pl H0), not predictions. They show the scale is natural; they are not independent confirmations.",
+  "thin_shell": {
+    "Sun": {
+      "dR_over_R": 3.669760880271864e-14,
+      "s": 1.1009282640815592e-13,
+      "Phi_N": 2.1231324960869663e-06
+    },
+    "Earth": {
+      "dR_over_R": 1.1192789771871499e-14,
+      "s": 3.357836931561449e-14,
+      "Phi_N": 6.961078186654634e-10
+    },
+    "Moon": {
+      "dR_over_R": 2.482767110172731e-09,
+      "s": 7.448301330518193e-09,
+      "Phi_N": 3.13818744652177e-11
+    },
+    "NS": {
+      "dR_over_R": 1.4219154111008665e-18,
+      "s": 4.265746233302599e-18,
+      "Phi_N": 0.17327707294610217
+    },
+    "WD": {
+      "dR_over_R": 1.935384865109511e-15,
+      "s": 5.8061545953285336e-15,
+      "Phi_N": 0.0001273056046134628
+    }
+  },
+  "local_gates": {
+    "Cassini_gamma": {
+      "expr": "|gamma-1| = 4*beta^2*s_Sun/(1+2*beta^2*s_Sun)",
+      "value": 4.403713056325267e-13,
+      "bound": 2.3e-05,
+      "margin": 52228652.74331165,
+      "status": "PASS"
+    },
+    "Geodesy_Earth": {
+      "expr": "alpha_E = 2*beta^2*s_E",
+      "value": 6.715673863122899e-14,
+      "bound": 1e-08,
+      "margin": 148905.38468391073,
+      "status": "PASS"
+    },
+    "LLR_Nordtvedt": {
+      "expr": "eta = 2|s_E - s_Moon|",
+      "value": 1.4896535504297754e-08,
+      "bound": 0.00044,
+      "margin": 29537.06919793914,
+      "status": "PASS"
+    },
+    "Pulsar_NS": {
+      "expr": "alpha_NS = 2*beta^2*s_NS",
+      "value": 8.531492466605199e-18,
+      "bound": 0.001,
+      "margin": 117212785912230.22,
+      "status": "PASS"
+    },
+    "WhiteDwarf": {
+      "expr": "alpha_WD = 2*beta^2*s_WD",
+      "value": 1.1612309190657067e-14,
+      "bound": 0.01,
+      "margin": 861155161804.141,
+      "status": "PASS"
+    }
+  },
+  "clock_force_split": {
+    "Sun": {
+      "S_Sigma_force": 1.1009282640815592e-13,
+      "S_A_clock": 1.0,
+      "ratio": 9083243955356.547
+    },
+    "Earth": {
+      "S_Sigma_force": 3.357836931561449e-14,
+      "S_A_clock": 1.0,
+      "ratio": 29781076936782.145
+    },
+    "Moon": {
+      "S_Sigma_force": 7.448301330518193e-09,
+      "S_A_clock": 1.0,
+      "ratio": 134258800.17805725
+    }
+  },
+  "wide_binary": {
+    "R_s_observed_AU": 2646,
+    "rho_required_kg_m3": 3.997613925655816e-22,
+    "n_H_required_cm3": 0.23900597427094442,
+    "local_ISM_warm_cm3": "0.1 - 0.5",
+    "verdict": "standard warm-ISM density; not tuned"
+  },
+  "environmental_ordering": [
+    {
+      "split": "in_plane_vs_out_of_plane",
+      "R_s_dense_AU": 4662,
+      "R_s_dilute_AU": 7131,
+      "R_s_ratio": 1.5296010296010296,
+      "implied_density_ratio": 0.5674084210523768,
+      "direction_predicted": "lower density -> larger R_s",
+      "direction_observed": "matches"
+    },
+    {
+      "split": "disk_control",
+      "R_s_dense_AU": 4145,
+      "R_s_dilute_AU": 6856,
+      "R_s_ratio": 1.6540410132689989,
+      "implied_density_ratio": 0.5112166239700694,
+      "direction_predicted": "lower density -> larger R_s",
+      "direction_observed": "matches"
+    }
+  ],
+  "cepheid": {
+    "delta_phi_over_MPl": 1.4783119957267387e-18,
+    "required": 0.0207,
+    "shortfall_orders": 16.146204244467693,
+    "verdict": "conformal channel insufficient; disformal B(phi) still required"
+  },
+  "quadratic_comparison": {
+    "lambda_C_everywhere_m": 0.00010545583762801302,
+    "mass_is_density_independent": true,
+    "wide_binary_reachable": false,
+    "note": "V'' = Lambda^2 is constant: lambda_C = 0.105 mm in EVERY environment, so Temporal Topology saturation has no environmental response"
+  },
+  "gnss_scale_distinction": {
+    "lambda_T_GNSS_m": 4200000.0,
+    "rho_that_would_give_it_kg_m3": 1.714570963562654e-11,
+    "physical": false,
+    "note": "lambda_T = 4,200 km corresponds to no physical terrestrial density. It is a distinct scale from the topological correlation length and must come from the disformal sector B(phi), not from TEP screening."
+  }
+}

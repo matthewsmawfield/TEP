@@ -1,0 +1,169 @@
+{
+  "A_cosmology": {
+    "rows": [
+      {
+        "z": 0,
+        "A": 1.0,
+        "V": -0.946173,
+        "mu2": -0.9462640000000001,
+        "eom_residual": 6.9842288910371004e-12,
+        "rho_tot": 0.0,
+        "p_tot": -6.324964423737311e-17
+      },
+      {
+        "z": 0.5,
+        "A": 0.6666666666666666,
+        "V": -0.630873,
+        "mu2": -0.71560804360718,
+        "eom_residual": 6.9842288910371004e-12,
+        "rho_tot": 0.0,
+        "p_tot": -6.324964423737311e-17
+      },
+      {
+        "z": 1,
+        "A": 0.5,
+        "V": -0.47322300000000006,
+        "mu2": -0.5284826001954869,
+        "eom_residual": 6.9842288910371004e-12,
+        "rho_tot": 0.0,
+        "p_tot": 4.777265822514254e-17
+      },
+      {
+        "z": 3,
+        "A": 0.25,
+        "V": -0.23674800000000001,
+        "mu2": -0.2072879636029818,
+        "eom_residual": 6.567029637307307e-11,
+        "rho_tot": 0.0,
+        "p_tot": -7.738493006115288e-18
+      },
+      {
+        "z": 10,
+        "A": 0.09090909090909091,
+        "V": -0.0862639090909091,
+        "mu2": -0.046258077172423896,
+        "eom_residual": 1.2505934958595945e-10,
+        "rho_tot": 0.0,
+        "p_tot": -7.738493006115288e-18
+      },
+      {
+        "z": 100,
+        "A": 0.009900990099009901,
+        "V": -0.009638346534653466,
+        "mu2": -0.001699500171217354,
+        "eom_residual": 1.0213522001398454e-10,
+        "rho_tot": 0.0,
+        "p_tot": 9.351243737687476e-19
+      },
+      {
+        "z": 1100,
+        "A": 0.0009082652134423251,
+        "V": -0.0011321280653950954,
+        "mu2": -5.718701934781438e-05,
+        "eom_residual": 5.581281870842099e-11,
+        "rho_tot": 0.0,
+        "p_tot": 6.776263578034403e-20
+      },
+      {
+        "z": 100000.0,
+        "A": 9.99990000099999e-06,
+        "V": -0.0002824589054109459,
+        "mu2": -3.848765655834456e-07,
+        "eom_residual": 9.562638219546462e-10,
+        "rho_tot": 0.0,
+        "p_tot": 1.3552527156068805e-20
+      },
+      {
+        "z": 100000000.0,
+        "A": 9.9999999e-09,
+        "V": -0.0002730094589999054,
+        "mu2": -3.8157898199304505e-10,
+        "eom_residual": 1.4353348043773056e-06,
+        "rho_tot": 0.0,
+        "p_tot": 1.3552527156068805e-20
+      }
+    ],
+    "max_eom_residual": 1.4353348043773056e-06,
+    "kinetic_energy_density": 0.0,
+    "delta_Neff_from_phi": 0.0,
+    "c_T": 1.0,
+    "mu2_today_over_Lambda2": -0.9459000000000001,
+    "statement": "static flat gravitational frame; rho_tot=p_tot=0; scalar EOM V_phi = beta T / M_Pl holds identically"
+  },
+  "B_local_stability": {
+    "K_grad": "K - |mu^2|/|phidot| = K - 3 Omega_m",
+    "requirement": "K > 0.946",
+    "K1_gives_cs2": 0.054099999999999926,
+    "unscreened_force_over_newton_at_K1": 36.96857670979672
+  },
+  "C_wide_binaries": {
+    "canonical_chi2": 86.3,
+    "population_fits": [
+      {
+        "k": 2,
+        "chi2": 59.392594129325026,
+        "median_R_AU": 2800,
+        "sigma_lnR": 1.8,
+        "amplitude": 0.55,
+        "saturn_dg_over_g_R_midplane": 1.967499364416416e-06
+      },
+      {
+        "k": 4,
+        "chi2": 54.12391585616677,
+        "median_R_AU": 2400,
+        "sigma_lnR": 1.8,
+        "amplitude": 0.5,
+        "saturn_dg_over_g_R_midplane": 3.199229418854791e-12
+      },
+      {
+        "k": 8,
+        "chi2": 54.578484755076715,
+        "median_R_AU": 2400,
+        "sigma_lnR": 1.8,
+        "amplitude": 0.5,
+        "saturn_dg_over_g_R_midplane": 1.0235068874531451e-23
+      },
+      {
+        "k": 16,
+        "chi2": 55.30708346029861,
+        "median_R_AU": 2400,
+        "sigma_lnR": 1.8,
+        "amplitude": 0.5,
+        "saturn_dg_over_g_R_midplane": 1.0475663486640253e-46
+      }
+    ],
+    "saturn_bound": 1.5e-10,
+    "requirement": "per-system recovery steepness k >= 4",
+    "statement": "the canonical exponential is a population CDF of steep per-system transitions"
+  },
+  "D_environmental_ordering": {
+    "midplane_high_density_R_s": 7131,
+    "high_Z_low_density_R_s": 4662,
+    "direction": "denser environment -> LARGER transition radius",
+    "density_thin_shell_prediction": "denser -> smaller range -> smaller R_s  (WRONG sign)",
+    "statement": "environmental variable is the ambient Temporal-Topology state, not local density"
+  },
+  "E_cepheid_carrier": {
+    "dW_at_fixed_P_per_dlnG": -0.7600153433306907,
+    "required_dlnG_env": {
+      "SH0ES_host_mean": 0.05920933096270403,
+      "LMC_inner_minus_outer": 0.03736766665201766,
+      "M31_inner_minus_outer": 0.46841159606050303
+    },
+    "gw170817": "unaffected: conformal/force sector, no disformal term",
+    "correlated_predictions": [
+      "TRGB offsets between hosts",
+      "SN Ia host-environment step",
+      "GC pulsar spin-down excess (Paper 10)"
+    ],
+    "caveat": "M31 offset does not survive matched controls; LMC does"
+  },
+  "F_local_operator_constraints": [
+    "not a density thin-shell (fails beta_A=-1 sign; predicts wrong environmental direction; stars screened)",
+    "not a pure P(X) gradient cap (leaves Solar-System acceleration floor ~2 beta^2 g_*)",
+    "K > 3 Omega_m (stability inherited from the cosmological branch)",
+    "per-system recovery steepness k >= 4 in separation",
+    "transition radius and amplitude depend on ambient Temporal-Topology state: larger R in denser midplane, amplitude rising with mass ratio q, falling with primary mass",
+    "environmental coupling normalisation varies by ~4-6% between host disks and anchors (Cepheid carrier)"
+  ]
+}

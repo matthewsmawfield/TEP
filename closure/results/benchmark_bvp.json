@@ -1,0 +1,56 @@
+{
+  "benchmark": "V = 0.5 * m^2 * phi^2, m = Lambda_DE (benchmark, NOT TEP)",
+  "m_GeV": 1.9066873309734403e-12,
+  "lambda_C_cm": 0.01034778994935003,
+  "beta_A": -1.0,
+  "K": 1,
+  "B": 0,
+  "bodies": {
+    "Sun": {
+      "x_mR": 6728165718552.599,
+      "S_Sigma_at_R": 2.229433790347674e-13,
+      "phi_body_GeV": 6.856463502462329e-13,
+      "phi_body_over_M_Pl": 2.815796099573852e-31,
+      "Sigma_max_GeV": 1.2952697902420348e-27,
+      "Q_eff": 0.2998397979356308,
+      "Q_0": 4.587745696415008e+38
+    },
+    "Earth": {
+      "x_mR": 61587850277.15316,
+      "S_Sigma_at_R": 2.4355453116967212e-11,
+      "phi_body_GeV": 2.679369780040243e-12,
+      "phi_body_over_M_Pl": 1.1003571991951716e-30,
+      "Sigma_max_GeV": 5.0648633811006144e-27,
+      "Q_eff": 0.01072556374105385,
+      "Q_0": 1.3750766869532142e+33
+    }
+  },
+  "pass_fail": {
+    "sun_cassini": {
+      "value": 2.229433790347674e-13,
+      "bound": 5.75e-06,
+      "pass": true
+    },
+    "eps_B_GW": {
+      "value": 0.0,
+      "bound": 1e-15,
+      "pass": true,
+      "note": "B=0 frozen, trivially satisfied"
+    },
+    "earth_recovery": {
+      "transition_width_lambda_C": 4.592296148074038,
+      "smooth": true,
+      "nonzero_inside": true,
+      "nonzero_outside": false,
+      "pass": true,
+      "note": "smooth exponential recovery, not a step"
+    },
+    "triangle_kernel": {
+      "nonzero": true,
+      "pass": true,
+      "note": "Sigma_r != 0 on space legs; holonomy=0 (exact form, B=0)"
+    }
+  },
+  "overall": "4/4 PASS",
+  "outcome": "PASS: local K=1 is viable; V still a benchmark, not frozen"
+}

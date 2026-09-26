@@ -11,7 +11,7 @@ Tensions:
   3. LLR/flyby: post-fit residual circularity
 """
 import numpy as np
-from tep_model import (M_EARTH, R_EARTH, M_SUN, AU, PC, M_PL, HBAR_C,
+from tep_model import (M_EARTH, R_EARTH, M_SUN, AU, PC, M_PL, G, C, HBAR_C,
                        BETA, LAMBDA_REFERENCE, solve_sphere, diagnostics,
                        equilibrium_varphi, compton_m, save)
 
@@ -137,24 +137,20 @@ def run():
     #   - J₂, J₃, ... (absorbs low-order multipoles)
     #   - Tidal terms (absorbs time-varying components)
 
-    # The TEP perturbation is a Yukawa force with scale R_T ≈ 4200 km.
-    # At the lunar distance (r ≈ 384,400 km, r/R_T ≈ 92):
-    #   F_Yukawa = exp(-r/R_T) / r² ≈ exp(-92) / r² ≈ 10⁻⁴⁰ / r²
-    # This is exponentially suppressed.
+    # The TEP perturbation is the screened shear response: the corpus
+    # operator derived from the master action (step_27 / Appendix E R11)
+    #   S_Σ(g) = [1 + (g/g_t)²]⁻¹,  g_t = cH_0/(2β_A²) ≈ 3.4e-10 m/s²,
+    # evaluated at the local Newtonian field g. Equivalently, for a
+    # two-body separation s: S_eff = [1 + (R_s/s)⁴]⁻¹, R_s = √(GM/g_t).
+    # At the lunar distance (g_lunar = GM_Earth/r² ≈ 2.7e-3 m/s²):
+    #   S_Σ(g_lunar) ≈ 1.6e-14.
+    # An earlier version used a Yukawa propagator exp(-r/R_T)(1+r/R_T)
+    # with the density-transition radius R_T ≈ 4200 km as a Compton
+    # range — a massive-scalar ansatz inconsistent with the derived
+    # P(X) screening (it predicted ~10⁻⁴⁰ instead of ~10⁻¹⁴).
 
-    # The GR pipeline absorbs the 1/r monopole. The Yukawa tail is:
-    #   F_residual = F_Yukawa - (absorbed 1/r component)
-    # For r >> R_T, the Yukawa force is essentially zero, so the residual is zero.
-
-    # BUT: the TEP perturbation is NOT just a Yukawa force. It also includes:
-    #   1. Clock-rate effect: δ(ln A) = β_A × δ(varphi)
-    #   2. Disformal metric perturbation: O(B × (∂φ)²)
-    #   3. Time-varying field: from Earth's motion through the galactic field
-
-    # The clock-rate effect at the lunar distance:
-    #   δ(ln A) = β_A × (varphi(r) - varphi_ambient)
-    # At r >> R_T, varphi(r) → varphi_ambient, so δ(ln A) → 0.
-    # The clock-rate effect is also exponentially suppressed.
+    # The GR pipeline absorbs the 1/r² monopole; the residual is the
+    # screened shear response, fraction ~2β_A² S_Σ of Newtonian.
 
     # The disformal metric perturbation is O(10⁻¹⁵) (from GW170817).
     # This is a regular perturbation of the principal symbol, not a new force.
@@ -163,44 +159,45 @@ def run():
     #   d(varphi)/dt ~ varphi_ambient × (v_Earth/c) / r_gal
     # This is a very slow, smooth variation that is absorbed by the tidal terms.
 
-    # Conclusion: at the lunar distance, the TEP perturbation is exponentially
-    # suppressed. The LLR residual is essentially zero. The TEP effect is
-    # NOT distinguishable at the lunar distance through the standard channels.
+    # Conclusion: the conformal TEP perturbation at the lunar distance is
+    # screened to ~1.6e-14 — small but nonzero. The effect is below the
+    # standard-channel sensitivity but is the corpus-consistent suppression,
+    # not an exponential cutoff.
 
-    # HOWEVER: the Earth flyby (close approach, r ~ R_Earth) is different:
-    #   At r ~ R_Earth, the field is NOT suppressed (exp(-R_Earth/R_T) ≈ exp(-1.5) ≈ 0.22).
+    # HOWEVER: the Earth flyby (close approach, r ~ R_Earth) is much more
+    # deeply screened: S_Σ(g_surface ≈ 9.8 m/s²) ≈ 1.2e-21.
     #   The flyby velocity shift is:
-    #     δv/v = β_A × varphi_Earth × exp(-r/R_T)
-    #   For r = R_Earth: δv/v ≈ (-1) × 1.4e-9 × 0.22 ≈ -3e-10
+    #     δv/v = β_A × varphi_Earth × S_Σ(g_surface)
+    #   ≈ 1.4e-9 × 1.2e-21 ≈ 1.7e-30
     #   This is much smaller than the observed flyby anomaly (~10⁻⁶).
 
     # The flyby anomaly is NOT explained by the conformal coupling alone.
     # The disformal coupling or a different mechanism may be needed.
 
     r_llr = 384400e3  # lunar distance
-    rho_T = 20.0
-    R_T = float((3 * M_EARTH / (4 * np.pi * 1000 * rho_T))**(1/3))
-    r_over_RT = r_llr / R_T
-    yukawa = float(np.exp(-r_over_RT))
+    H0 = 70.0e3 / 3.086e22  # s^-1
+    g_t = C * H0 / (2.0 * BETA**2)  # derived shear threshold (R11/step_27)
+    g_lunar = G * M_EARTH / r_llr**2
+    s_sigma_lunar = float(1.0 / (1.0 + (g_lunar / g_t)**2))
 
     # Flyby at close approach
-    r_flyby = R_EARTH
-    r_flyby_over_RT = r_flyby / R_T
-    yukawa_flyby = float(np.exp(-r_flyby_over_RT))
+    g_surface = G * M_EARTH / R_EARTH**2
+    s_sigma_surface = float(1.0 / (1.0 + (g_surface / g_t)**2))
     varphi_earth = float(M_EARTH * 5.60958885e26 / (4 * np.pi * M_PL**2 * R_EARTH / HBAR_C))
-    flyby_delta_v_over_v = abs(BETA) * varphi_earth * yukawa_flyby
+    flyby_delta_v_over_v = abs(BETA) * varphi_earth * s_sigma_surface
 
     llr = {
         'lunar_distance_km': r_llr / 1000,
-        'R_T_km': R_T / 1000,
-        'r_over_RT': float(r_over_RT),
-        'yukawa_suppression': yukawa,
-        'classification': 'NOT CONSTRAINING at lunar distance — Yukawa force exponentially '
-                        'suppressed (exp(-92) ≈ 10⁻⁴⁰). LLR cannot distinguish TEP from GR.',
+        'g_t_ms2': float(g_t),
+        'g_lunar_ms2': float(g_lunar),
+        's_sigma_lunar': s_sigma_lunar,
+        'classification': 'SCREENED at lunar distance — conformal shear '
+                        'suppressed to S_Σ(g_lunar) ≈ 1.6e-14 by the corpus '
+                        'operator [1+(g/g_t)²]⁻¹; a small nonzero residual, '
+                        'not an exponential cutoff.',
         'flyby_analysis': {
-            'r_flyby_km': r_flyby / 1000,
-            'r_flyby_over_RT': float(r_flyby_over_RT),
-            'yukawa_flyby': yukawa_flyby,
+            'g_surface_ms2': float(g_surface),
+            's_sigma_surface': s_sigma_surface,
             'varphi_earth': varphi_earth,
             'delta_v_over_v': flyby_delta_v_over_v,
             'observed_anomaly': 1e-6,
@@ -225,10 +222,10 @@ def run():
                     'axis consistent with CMB direction (21.4°)',
             'jwst': 'MIXED — primary covariance-corrected evidence favors TEP '
                     '(ln BF = +64.5); conventional residual space favors the null',
-            'llr': 'NOT CONSTRAINING at lunar distance; flyby NOT EXPLAINED by conformal coupling alone',
+            'llr': 'SCREENED to ~1.6e-14 at lunar distance; flyby NOT EXPLAINED by conformal coupling alone',
             'overall': 'MGEX scale unresolved between hierarchy levels; axis consistent. '
                       'JWST evidence mixed across comparison spaces. '
-                      'LLR not constraining (exponential suppression). Flyby requires disformal coupling.'
+                      'LLR conformal channel screened to ~1.6e-14 (corpus operator). Flyby requires disformal coupling.'
         }
     }
     save('step_08_empirical_tensions.json', result)
@@ -237,7 +234,7 @@ def run():
     print(f"JWST: {jwst['classification']}")
     print(f"  TEP correction at z=10: {transfer_correction:.1e}")
     print(f"LLR: {llr['classification']}")
-    print(f"  Yukawa suppression: exp(-{r_over_RT:.0f}) = {yukawa:.1e}")
+    print(f"  S_Σ(g_lunar) = {s_sigma_lunar:.1e} at g = {g_lunar:.2e} m/s²")
     print(f"  Flyby: δv/v = {flyby_delta_v_over_v:.1e} (observed ~1e-6)")
     return result
 

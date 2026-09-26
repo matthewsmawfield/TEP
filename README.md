@@ -5,8 +5,8 @@
 ![The Temporal Equivalence Principle](./site/public/og-image.jpg)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.14 (Jakarta)  
-**First published:** 18 August 2025 · **Last updated:** 23 September 2026
+**Version:** v0.15 (Jakarta)  
+**First published:** 18 August 2025 · **Last updated:** 25 September 2026
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.16921911](https://doi.org/10.5281/zenodo.16921911)  
 **Website:** [https://mlsmawfield.com/tep/theory/](https://mlsmawfield.com/tep/theory/)
@@ -61,7 +61,7 @@ This paper develops a covariant bi-metric framework where proper time is a dynam
 
 ## Manuscript source
 
-The manuscript source is `site/components/`, ordered by `site/manifest.json`. The Markdown file (`0-TEP-v0.14-Jakarta.md`) and `site/dist/` are generated build outputs — edit the components, then rebuild:
+The manuscript source is `site/components/`, ordered by `site/manifest.json`. The Markdown file (`0-TEP-v0.15-Jakarta.md`) and `site/dist/` are generated build outputs — edit the components, then rebuild:
 
 ```bash
 cd site

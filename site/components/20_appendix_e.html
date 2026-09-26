@@ -25,7 +25,7 @@
             </tr>
             <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
                 <td style="padding: 8px; border: 1px solid var(--gray-light);">R2</td>
-                <td style="padding: 8px; border: 1px solid var(--gray-light);">Two-body operator benchmark evaluation (Section 2): wide-binary shear recovery at 2646 AU, conjunction suppression $F(1.6\,R_\odot)\sim6\times10^{-23}$, Saturn suppression, Earth&ndash;Moon pairwise response factor $\sim2.5\times10^{-14}$.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Two-body operator benchmark evaluation (Section 2): wide-binary shear recovery at 2646 AU, conjunction suppression $\mathcal R(1.6\,R_\odot)\sim1\times10^{-23}$, Saturn suppression $2.7\times10^{-11}$, Earth&ndash;Moon pairwise response factor $\sim2.2\times10^{-15}$ (resolved nested operator, R11).</td>
                 <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_19_operator_evaluation.py</code></td>
                 <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_19_operator_evaluation.json</code></td>
             </tr>
@@ -58,6 +58,42 @@
                 <td style="padding: 8px; border: 1px solid var(--gray-light);">Clock-amplitude screening baseline $S_A$ (Section 2): computed in the companion screening paper's pipeline.</td>
                 <td style="padding: 8px; border: 1px solid var(--gray-light);">Paper 26 (TEP-C0), <code>step_02_02</code></td>
                 <td style="padding: 8px; border: 1px solid var(--gray-light);">Paper 26 results.</td>
+            </tr>
+            <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R8</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Inhomogeneous non-compact slice existence demonstration and flatness ledger (Section 8): nonlinear Lichnerowicz constraint solved on a periodic cell (universal cover $R^3$), residual $\sim10^{-10}$; required sign-changing total-energy structure with negative-energy void sector ($\lambda_*=-2.42$ in slice units); mean gravitational-frame curvature $\sim10^{-3}$ of local scale; matter-frame curvature scaling $|\Omega_k^{\rm eff}|\sim7\times10^{-2}$ at $\Delta u=0.1$ falling to $\sim10^{-3}$ at $\Delta u=0.02$.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_20_landscape_existence.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_20_landscape_existence.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R9</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Canonical weak-field normalization ledger (Section 2): $\delta\phi/M_{\rm Pl}=2\beta_A\Phi_N$, $\ln(A/A_\infty)=2\beta_A^2\Phi_N$, bare unscreened matter lapse $\tilde N/\tilde N_\infty=e^{3\Phi_N}+O(\Phi_N^2)$ and $G_{\rm eff}/G=3$ for $\beta_A=-1$, with GR recovery as $S_\Sigma\to0$.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_26_weak_field_lapse_ledger.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_26_weak_field_lapse_ledger.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R10</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Standard-siren source-to-detector mapping (Section 8): Einstein-frame sourcing mass $\mathcal M_e=A_e\tilde{\mathcal M}$, stationary-coordinate transport $\Delta t_o=\Delta t_e$, matter-frame readout $\tilde f_o=f_o/A_o$ with strain invariant, inferred chirp mass $\mathcal M_{\rm det}=A_oA_e\tilde{\mathcal M}$, inferred distances $d_L^{\rm GW}=A_o r$ and $d_L^{\rm EM}=(1+z)A_o r$, ratio $\Xi(z)=1/(1+z)$; all four links symbolic-verified.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_21_waveform_inference.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_21_waveform_inference.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R11</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Master-action screening closure (Section 2): kinetic completion $P=X-V+X|X|/\Lambda^4$ with $\Lambda^4=M_{\rm Pl}^2H_0^2$ gives $\mathcal S_\Sigma=[1+(g/g_t)^2]^{-1}$, $g_t=cH_0/(2\beta_A^2)=3.4\times10^{-10}$ m s$^{-2}$, and the nested pairwise response $\mathcal R=\mathcal S_\Sigma(X_{\rm env})^2\,y(s)$ with $y$ the flux-conserving profile $y[1+y^2(r_*/r)^4]=1$ and $r_*=\sqrt{GM/g_t}$; benchmark table returns $1.0\times10^{-23}$ (Cassini conjunction), $1.6\times10^{-14}$ (Earth–Moon; $2.2\times10^{-15}$ including the solar ambient in the vertex factors), $2.7\times10^{-11}$ (Saturn — hierarchical $\mathcal R=y^3\sim s^4$, corresponding to $\delta a\simeq3.5\times10^{-15}$ m s$^{-2}$ against the $\sim5\times10^{-13}$ ephemeris bound), $1.2\times10^{-21}$ (terrestrial shear), and the wide-binary transition scale at zero free parameters (comparable-mass pairs: $\mathcal R=\mathcal S_{\rm env}^2 y\sim s^{4/3}$, the exponent selected by the 341k-binary forward model).</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_27_master_action_screening_closure.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_27_master_action_screening_closure.json</code></td>
+            </tr>
+            <tr style="background-color: var(--gray-light); border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R12</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Channel-response transfer map (Section 7): $\kappa_X = |\beta_A|\,S_X\,\Gamma_X$ evaluated across the six primary channels (GNSS, Cepheid, millisecond pulsar, wide binary, galactic, LLR/flyby). Derived projectors: $\Gamma_{\rm GNSS}=|\beta_A|$ (quadratic covariance channel), $\Gamma_{\rm Cep}=5/\ln 10$, $\Gamma_{\rm MSP}=1$, $\Gamma_{\rm gal}=\Gamma_{\rm Cep}(1+z)^{\beta_A\Delta u}$, $\Gamma_{\rm LLR}=1$ with $S_\Sigma(g_{\rm lunar})=1.6\times10^{-14}$ supplied by the R11 operator; wide-binary saturation amplitude flagged partial.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_05_gamma_all_channels.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_05_gamma_all_channels.json</code></td>
+            </tr>
+            <tr style="border: 1px solid var(--gray-light);">
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">R13</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);">Lapse and momentum/shear sectors of the landscape slice (Section 8): the maximal-slicing lapse equation on the R8/R8-deep landscape admits a strictly positive ground state ($\mu_*=+1.53$, residual $10^{-12}$); the $\hat{\mathcal A}_{ij}\neq0$ sector is solved by the conformal-Killing construction $\hat{\mathcal A}_{ij}=(\hat L W)_{ij}$ for the drift-sourced momentum $j_i\propto\Pi\hat\nabla_i u$ (momentum-constraint residual $\sim10^{-3}$, truncation level), and the full Hamiltonian constraint including the $\hat{\mathcal A}^2\psi^{-7}/8$ shear term admits a positive conformal factor at every scanned drift amplitude ($c_\Pi=0$–$8$, $\psi\in[0.75,1.81]$), with the linearized constraint operator invertible at each solution.</td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>scripts/steps/step_21_lapse_solvability.py</code>, <code>scripts/steps/step_28_momentum_shear_sector.py</code></td>
+                <td style="padding: 8px; border: 1px solid var(--gray-light);"><code>results/step_21_lapse_solvability.json</code>, <code>results/step_28_momentum_shear.json</code></td>
             </tr>
         </tbody>
     </table>

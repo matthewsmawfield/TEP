@@ -7,15 +7,15 @@
     "GNSS": {
       "channel": "GNSS",
       "observable": "clock-rate covariance C(\u03b8)",
-      "projector": "\u0393_GNSS = \u03b2_A\u00b2 \u00d7 G_0 / M_Pl\u00b2 (linearized fluctuation Green's function)",
-      "Gamma": 2.342736403264306e-84,
+      "projector": "\u0393_GNSS = |\u03b2_A| (two-point covariance is quadratic in the coupling; the Green-function spectrum and \u03bb_T \u2248 R_T correlation scale enter the channel functional F_X)",
+      "Gamma": 1.0,
       "S_X": 0.9999999986075032,
       "S_X_type": "S_A (clock-rate screening)",
-      "kappa": 2.342736400002053e-84,
+      "kappa": 0.9999999986075032,
       "correlation_length_m": 4032908.5880270693,
       "R_T_m": 4146360.5584198027,
       "correlation_matches_R_T": true,
-      "classification": "DERIVED \u2014 \u0393 from linearized fluctuation Green's function; correlation length = R_T"
+      "classification": "DERIVED \u2014 \u0393 = |\u03b2_A| for the quadratic covariance channel; correlation length = R_T from the fluctuation Green's function"
     },
     "Cepheid": {
       "channel": "Cepheid",
@@ -83,20 +83,18 @@
     "LLR/flyby": {
       "channel": "LLR/flyby",
       "observable": "lunar range residual + flyby velocity shift",
-      "projector": "\u0393_LLR = exp(-r/R_T) \u00d7 (1 + r/R_T) (Yukawa propagator)",
-      "Gamma": 5.1201912713902244e-39,
-      "S_X": 1.0,
-      "S_X_type": "S_\u03a3 (source-charge screening)",
-      "kappa": 5.1201912713902244e-39,
+      "projector": "\u0393_LLR = 1 (orbital range response per unit screened shear; fitted Keplerian monopole absorbed)",
+      "Gamma": 1.0,
+      "S_X": 1.5887959411252006e-14,
+      "S_X_type": "S_\u03a3 = [1+(g/g_t)\u00b2]\u207b\u00b9 at lunar-orbit field (source-charge screening; identical to pairwise [1+(R_s/s)\u2074]\u207b\u00b9, R11)",
+      "kappa": 1.5887959411252006e-14,
       "r_llr_m": 384400000.0,
-      "R_T_m": 4146360.5584198027,
-      "r_over_RT": 92.70780835000433,
-      "yukawa_suppression": 5.463996396400608e-41,
-      "residual_fraction": 5.463996396400608e-41,
-      "force_ratio": 5.1201912713902244e-39,
-      "flyby_delta_v_over_v": 2.9958231594590294e-10,
-      "small_argument_valid": false,
-      "classification": "DERIVED \u2014 \u0393_LLR from Yukawa propagator; exponentially suppressed at lunar distance"
+      "g_t_ms2": 3.40010888852884e-10,
+      "g_lunar_ms2": 0.0026974833003256017,
+      "screened_shear_suppression": 1.5887959411252006e-14,
+      "corpus_pairwise_equivalent_m": 1082720472285.5342,
+      "flyby_delta_v_over_v": 1.669501932786796e-30,
+      "classification": "DERIVED \u2014 \u03ba_LLR = |\u03b2_A| S_\u03a3(g_lunar) \u2248 1.6e-14, the corpus screening operator (R11) applied to the LLR channel; conformal flyby channel screened to ~1e-30 at the surface field"
     }
   },
   "summary": {

@@ -1,0 +1,25 @@
+{
+ "step": 21,
+ "name": "lapse_solvability_on_R8_landscape",
+ "constraint": {
+  "psi_min": 0.9994132666721861,
+  "psi_max": 1.0012214887706348,
+  "lam_star": -2.4187832804655494,
+  "converged": true
+ },
+ "lapse_source": {
+  "form": "q = rho_m - |grad u|^2/2 - 2(V + lam*)",
+  "q_min": -0.16252152717874369,
+  "q_max": 3.5733420018117696,
+  "q_mean": 1.5321193434778368
+ },
+ "principal_eigenpair": {
+  "mu_star": 1.5317862989297395,
+  "eig_residual": 1.295236487508511e-12,
+  "alpha_min": 0.0030033122653983745,
+  "alpha_max": 0.0030131222834452825,
+  "alpha_strictly_positive": true
+ },
+ "verdict": "PASS",
+ "interpretation": "mu* is the constant lapse-sector offset at which the maximal-slicing lapse equation lap alpha = (q - mu*)alpha admits its positive zero mode on the solved landscape.  The scalar floor enters the lapse source with a different sign combination than the constraint, so mu* need not equal lam* = -2.4188; the ratio mu*/lam* = -0.633 quantifies how close the two conditions sit.  What remains unproven: stability of the zero-expansion congruence under time evolution (this solves the slice, not the dynamics) and the A_ij != 0 shear sector."
+}

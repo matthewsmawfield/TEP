@@ -1,0 +1,86 @@
+{
+  "step": "master_action_screening_closure",
+  "action_completion": "P(X,phi) = X - V(phi) + X|X|/Lambda^4 ; V = lambda phi^4/4",
+  "single_scale": {
+    "Lambda_GeV": 1.90668733097344e-12,
+    "Lambda_meV": 1.9066873309734398,
+    "g_t": 3.4001944264419963e-10,
+    "Sigma_bg": 7.566072348080834e-27
+  },
+  "derived_operators": {
+    "S_Sigma": "1/P_,X = [1 + 2|X|/Lambda^4]^-1 = [1 + (g/g_t)^2]^-1",
+    "S_eff": "[1 + (R_s/s)^4]^-1, R_s = sqrt(GM/g_t)",
+    "S_A": "min[1, (rho_bar/rho_T)^(1/3)]"
+  },
+  "benchmarks": {
+    "Earth surface (gravimetry, geodesy)": {
+      "g": 9.819532032815959,
+      "S_Sigma": 1.1990185989787046e-21,
+      "note": "Eotvos/geodesy: tightest local gate"
+    },
+    "GNSS orbit r = 26,560 km": {
+      "g": 0.5650018371679489,
+      "S_Sigma": 3.6216608823910864e-19,
+      "note": "clock-covariance band"
+    },
+    "Moon orbit (Earth-Moon pair)": {
+      "g": 0.002697362052405955,
+      "S_Sigma": 1.5890187270075824e-14,
+      "note": "LLR pairwise ~2.5e-14"
+    },
+    "Sun field at 1 AU (Cassini path)": {
+      "g": 0.00593140799708313,
+      "S_Sigma": 3.2861842171921026e-15,
+      "note": "Cassini S_Sigma <~ 5.8e-6"
+    },
+    "Sun field at 9.5 AU (Saturn)": {
+      "g": 6.572197226684908e-05,
+      "S_Sigma": 2.6766175834826925e-11,
+      "note": "ephemeris ~1e-10"
+    },
+    "Sun conjunction limb 1.6 Rsun": {
+      "g": 107.04405214216705,
+      "S_Sigma": 1.008979681045553e-23,
+      "note": "pairwise ~6e-23"
+    },
+    "Wide binary 2646 AU, M=1.24 Msun": {
+      "g": 1.0505090637793068e-09,
+      "S_Sigma": 0.09482847728292532,
+      "note": "transition region"
+    },
+    "MW solar circle (ambient)": {
+      "g": 2e-10,
+      "S_Sigma": 0.7429524326642427,
+      "note": "halo / active-shear regime"
+    },
+    "Void / cosmic web": {
+      "g": 1e-12,
+      "S_Sigma": 0.9999913505450446,
+      "note": "unscreened cosmological regime"
+    }
+  },
+  "pairwise": {
+    "Saturn 9.5 AU": {
+      "derived": 2.6766175834826922e-11,
+      "corpus_quoted": "~1e-10"
+    },
+    "Cassini conj. 1.6 Rsun": {
+      "derived": 1.0089796810455534e-23,
+      "corpus_quoted": "~6e-23"
+    },
+    "Earth-Moon (LLR)": {
+      "derived": 1.5890187270075827e-14,
+      "corpus_quoted": "2.5e-14"
+    },
+    "Earth-surface pair 7013 km": {
+      "derived": 1.7603979539368675e-21,
+      "corpus_quoted": "F -> 0"
+    }
+  },
+  "WB_transition": {
+    "derived_AU": 4650.90925752347,
+    "fitted_AU": 2646,
+    "ratio": 1.757713249253012
+  },
+  "consistency": "derived operator reproduces corpus S_Sigma values (Earth surface ~1.8e-21 vs C0 ~1e-21; LLR 1.6e-14 vs 2.5e-14) with zero free parameters in the kinetic sector"
+}

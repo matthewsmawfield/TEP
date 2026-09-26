@@ -94,10 +94,10 @@
     "correlation_length_matches_R_T": true,
     "correlation_length_NOT_lambda_c": true,
     "G_0_dimensionless": 0.014222068207834915,
-    "Gamma_GNSS": 2.301031458503282e-84,
+    "Gamma_GNSS": 1.0,
     "S_A": 0.9999999986075032,
-    "kappa_GNSS": 2.301031455299103e-84,
-    "classification": "DERIVED \u2014 \u0393_GNSS from linearized fluctuation Green's function; correlation length = R_T (not \u03bb_c)"
+    "kappa_GNSS": 0.9999999986075032,
+    "classification": "DERIVED \u2014 \u0393_GNSS = |\u03b2_A| (quadratic covariance projector); correlation length = R_T (not \u03bb_c)"
   },
-  "interpretation": "The correlation length of the clock-rate covariance is set by the Green's function of the linearized fluctuation equation, not by the source spectrum. The 1/e crossing matches R_T (the geometric saturation radius), not \u03bb_c (the Compton wavelength). This is because the satellites sit in the transition region where the effective mass varies spatially: inside Earth m_eff is large (short \u03bb_c), outside Earth m_eff is small (long \u03bb_c). The transition scale R_T sets the correlation length. The amplitude \u0393_GNSS depends on the source spectrum (environmental input); the correlation length does not."
+  "interpretation": "The correlation length of the clock-rate covariance is set by the Green's function of the linearized fluctuation equation, not by the source spectrum. The 1/e crossing matches R_T (the geometric saturation radius), not \u03bb_c (the Compton wavelength). This is because the satellites sit in the transition region where the effective mass varies spatially: inside Earth m_eff is large (short \u03bb_c), outside Earth m_eff is small (long \u03bb_c). The transition scale R_T sets the correlation length. The covariance normalization G_0 depends on the source spectrum (environmental input); the correlation length does not. The channel projector \u0393_GNSS = |\u03b2_A| encodes the quadratic coupling of the two-point observable; the fluctuation spectrum enters the channel functional F_X."
 }

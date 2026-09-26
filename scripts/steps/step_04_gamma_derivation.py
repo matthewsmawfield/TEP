@@ -175,17 +175,15 @@ def run():
         'scale is retained throughout the Cassini-compatible window.')
 
     # === Compute Γ_GNSS ===
-    # The covariance at zero separation gives G_0 (in dimensionless units)
-    # Γ_GNSS = (β_A² / M_Pl²) × G_0 × (1/R_Earth²)
-    # (conversion from dimensionless to physical units)
+    # The clock-rate covariance C(θ) = β_A² ⟨δu δu'⟩ is quadratic in the
+    # coupling, so in κ_GNSS = |β_A| S_A Γ_GNSS the channel projector is
+    # Γ_GNSS = |β_A|. The Green's-function spectrum (and its unit-source
+    # normalization G_0) fixes the correlation structure inside the
+    # channel functional F_X — it is not part of the dimensionless
+    # projector. (An earlier version inserted G_0/M_Pl² into Γ_GNSS,
+    # producing a spurious ~1e-84 coefficient.)
     G_0 = primary['covariance_at_zero']
-    # Convert: the Green's function is in units of 1/R_Earth² (dimensionless r)
-    # Physical: G_0_physical = G_0 / R_Earth² (in m⁻²)
-    # Γ_GNSS = β_A² × G_0_physical / M_Pl² (in GeV⁻² m⁻²)
-    # But M_Pl is in GeV, R_Earth is in m, so need HBAR_C conversion
-    R_EARTH_GEV = R_EARTH / HBAR_C  # R_Earth in GeV⁻¹
-    G_0_gev = G_0 / R_EARTH_GEV**2  # G_0 in GeV²
-    Gamma_GNSS = BETA**2 * G_0_gev / M_PL**2  # dimensionless (β² × G_0 / M_Pl²)
+    Gamma_GNSS = abs(BETA)
 
     # S_A from the radial ODE (clock screening at Earth's surface)
     radial = solve_sphere(M_EARTH, R_EARTH, LAMBDA_REFERENCE, x_max=1e5)
@@ -238,9 +236,9 @@ def run():
             'Gamma_GNSS': Gamma_GNSS,
             'S_A': S_A,
             'kappa_GNSS': kappa_GNSS,
-            'classification': 'DERIVED — Γ_GNSS from linearized fluctuation Green\'s function; correlation length = R_T (not λ_c)'
+            'classification': 'DERIVED — Γ_GNSS = |β_A| (quadratic covariance projector); correlation length = R_T (not λ_c)'
         },
-        'interpretation': 'The correlation length of the clock-rate covariance is set by the Green\'s function of the linearized fluctuation equation, not by the source spectrum. The 1/e crossing matches R_T (the geometric saturation radius), not λ_c (the Compton wavelength). This is because the satellites sit in the transition region where the effective mass varies spatially: inside Earth m_eff is large (short λ_c), outside Earth m_eff is small (long λ_c). The transition scale R_T sets the correlation length. The amplitude Γ_GNSS depends on the source spectrum (environmental input); the correlation length does not.'
+        'interpretation': 'The correlation length of the clock-rate covariance is set by the Green\'s function of the linearized fluctuation equation, not by the source spectrum. The 1/e crossing matches R_T (the geometric saturation radius), not λ_c (the Compton wavelength). This is because the satellites sit in the transition region where the effective mass varies spatially: inside Earth m_eff is large (short λ_c), outside Earth m_eff is small (long λ_c). The transition scale R_T sets the correlation length. The covariance normalization G_0 depends on the source spectrum (environmental input); the correlation length does not. The channel projector Γ_GNSS = |β_A| encodes the quadratic coupling of the two-point observable; the fluctuation spectrum enters the channel functional F_X.'
     }
     save('step_04_gamma_derivation.json', result)
     print(f"Correlation length: {primary['first_1e_crossing_m']:.0f} m (R_T = {R_T:.0f} m)")

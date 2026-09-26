@@ -1,0 +1,128 @@
+{
+  "C1": {
+    "rho_phi": "K*X + V",
+    "V_full": "-K*phidot**2/2 - rho_m - rho_r",
+    "mu2_full": "(-K*phidot**2 - rho_m - 4*rho_r/3)/phidot",
+    "P_X_full": "(-rho_m - 4*rho_r/3)/phidot**2",
+    "P_X_corpus_KX_dropped": "(K*phidot**2 - rho_m - 4*rho_r/3)/phidot**2",
+    "fluct_time_coeff": "K",
+    "fluct_gradient_coeff": "(-rho_m - 4*rho_r/3)/phidot**2",
+    "rows_K1": [
+      {
+        "z": 0.0,
+        "KX_over_rho_m_plus_rho_r": 0.5284445867721864,
+        "V_full": -1.446173,
+        "cs2_full_K1": -0.9462640000000001,
+        "cs2_corpus_K1": 0.053735999999999895
+      },
+      {
+        "z": 1.0,
+        "KX_over_rho_m_plus_rho_r": 0.8475034497477933,
+        "V_full": -0.8742811250000001,
+        "cs2_full_K1": -0.59008154990003,
+        "cs2_corpus_K1": 0.40991845009996997
+      },
+      {
+        "z": 10.0,
+        "KX_over_rho_m_plus_rho_r": 20.199460946913536,
+        "V_full": -1.828748371900827,
+        "cs2_full_K1": -0.02477924794567574,
+        "cs2_corpus_K1": 0.9752207520543242
+      },
+      {
+        "z": 1100.0,
+        "KX_over_rho_m_plus_rho_r": 202033.5002494264,
+        "V_full": -228.72892791044805,
+        "cs2_full_K1": -2.6737635039311314e-06,
+        "cs2_corpus_K1": 0.9999973262364961
+      },
+      {
+        "z": 100000.0,
+        "KX_over_rho_m_plus_rho_r": 1666700000.1666672,
+        "V_full": -470774.25797795906,
+        "cs2_full_K1": -3.966432948554523e-10,
+        "cs2_corpus_K1": 0.9999999996033567
+      },
+      {
+        "z": 400000000.0,
+        "KX_over_rho_m_plus_rho_r": 2.6666666799999996e+16,
+        "V_full": -7280063096400.157,
+        "cs2_full_K1": -2.4999945737419902e-17,
+        "cs2_corpus_K1": 1.0
+      }
+    ],
+    "efold_time_s": {
+      "1_AU_mode": 81.64294870622537,
+      "1_km_mode": 5.457494035456573e-07
+    }
+  },
+  "C2": {
+    "matter_clock_age_Gyr": 13.78705852005383,
+    "einstein_frame_time_Gyr": 46.12058829532267,
+    "coasting_constant_phidot_age_Gyr": 14.507302992296575
+  },
+  "C3": {
+    "Gdot_over_G_per_yr": 1.378615998481597e-10,
+    "ratio_to_LLR_1sigma_7.6e-14": 1813.9684190547327,
+    "G_rec_over_G0": 8.249456979494324e-07,
+    "G_BBN_over_G0": 6.250000000000001e-18
+  },
+  "C4": {
+    "LCDM": 774.1546013687239,
+    "TEP_screened": 3.770979858165718,
+    "TEP_unscreened_1plus2beta2": 5.332963403558871
+  },
+  "C5": {
+    "dlnA=1e-13": 0.0021398932827067087,
+    "dlnA=1e-14": 0.00021398932827067086,
+    "dlnA=1e-15": 2.139893282706709e-05,
+    "dlnA=1e-18": 2.1398932827067087e-08,
+    "max_time_variable_dlnA_gravity_noise_1e-10": 4.673130235425198e-21
+  },
+  "C6": {
+    "X_sign_flip_accel_m_s2": 3.2741612069907265e-10,
+    "X_sign_flip_radius_solar_mass_AU": 4255.791822185339,
+    "floor_accel_m_s2": 6.194058171385057e-10,
+    "floor_accel_corpus_factor_half_m_s2": 3.0970290856925285e-10,
+    "corpus_T2_saturn_bound_m_s2": 1e-14,
+    "floor_over_bound": 30970.290856925287,
+    "kappa_times_X": 0.47295000000000004
+  },
+  "C7": {
+    "Delta_mg_mi": 1.73995e-13,
+    "cosD_amplitude_mm": 5.1221000000000005,
+    "eta_tension_with_HM2018_sigma": -3.0023325830286245
+  },
+  "C8": {
+    "GPS": {
+      "lambda_pure_exp_0_8000km": 10055.686126648914,
+      "shared_fraction_at_4200km": 0.680226209048362
+    },
+    "Galileo": {
+      "lambda_pure_exp_0_8000km": 10401.29691320908,
+      "shared_fraction_at_4200km": 0.6889387321449651
+    },
+    "GLONASS": {
+      "lambda_pure_exp_0_8000km": 9920.26214415193,
+      "shared_fraction_at_4200km": 0.6768497662678695
+    }
+  },
+  "C9": {
+    "p=0.25": {
+      "H_over_H0_z1": 0.125,
+      "H_over_H0_z1100": 7.492694804263692e-10,
+      "delta_mu_mag_z1": 3.4533422765145954,
+      "acoustic_angle_ratio_z1090": 8.797448535096316e-12
+    },
+    "p=0.5": {
+      "H_over_H0_z1": 0.5,
+      "H_over_H0_z1100": 0.0009082652134423251,
+      "delta_mu_mag_z1": 1.4636422331544074,
+      "acoustic_angle_ratio_z1090": 5.235722318625756e-06
+    },
+    "LCDM": {
+      "H_over_H0_z1": 1.7912188587662872,
+      "H_over_H0_z1100": 23548.420871693288
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+ "grid_standard_origin": [
+  {
+   "kappa": -600000.0,
+   "chi2": 3556.3822429902207,
+   "H0": 75.18548143034569,
+   "H0_err": 1.036691959188706,
+   "n_rows": 3132
+  },
+  {
+   "kappa": -200000.0,
+   "chi2": 3552.0600066758097,
+   "H0": 73.75057332009769,
+   "H0_err": 1.016906786948413,
+   "n_rows": 3132
+  },
+  {
+   "kappa": 0.0,
+   "chi2": 3552.7062704695572,
+   "H0": 73.04342157542906,
+   "H0_err": 1.0071562538178458,
+   "n_rows": 3132
+  },
+  {
+   "kappa": 365000.0,
+   "chi2": 3558.7103047501028,
+   "H0": 71.77030231541276,
+   "H0_err": 0.9896019005725332,
+   "n_rows": 3132
+  },
+  {
+   "kappa": 960000.0,
+   "chi2": 3581.86084118432,
+   "H0": 69.7423386912137,
+   "H0_err": 0.9616394064481583,
+   "n_rows": 3132
+  },
+  {
+   "kappa": 1400000.0,
+   "chi2": 3609.6345801101497,
+   "H0": 68.27961505621955,
+   "H0_err": 0.9414707009738367,
+   "n_rows": 3132
+  }
+ ],
+ "origin_invariance": {
+  "87.165": 3581.86084118432,
+  "30.507": 3581.8608411843234,
+  "0": 3581.860841184341,
+  "150": 3581.8608411843197
+ },
+ "profile_published_anchors": {
+  "kappa_best_1e6": -0.1690604775224819,
+  "kappa_err_1e6": 0.20674731174611177,
+  "canonical_0p96_excluded_sigma": 5.461064852485154,
+  "endpoint_0p365_offset_sigma": 2.583155606774296,
+  "kappa_95_upper_1e6": 0.23616425349989714
+ },
+ "profile_anchors_Vrot_over_sqrt2": {
+  "kappa_best_1e6": -0.09068403195544739,
+  "kappa_err_1e6": 0.16090174065493626,
+  "canonical_0p96_excluded_sigma": 6.529973061066531,
+  "endpoint_0p365_offset_sigma": 2.8320640292679617,
+  "kappa_95_upper_1e6": 0.22468337972822766
+ },
+ "profile_anchors_uncorrected": {
+  "kappa_best_1e6": -0.17397685864054316,
+  "kappa_err_1e6": 0.20680971745149251,
+  "canonical_0p96_excluded_sigma": 5.483189439135127,
+  "endpoint_0p365_offset_sigma": 2.6061486146895434,
+  "kappa_95_upper_1e6": 0.23137018756438218
+ },
+ "profile_diagonal_covariance": {
+  "kappa_best_1e6": -0.3788581285192049,
+  "kappa_err_1e6": 0.1659543006789076,
+  "canonical_0p96_excluded_sigma": 8.067631408418032,
+  "endpoint_0p365_offset_sigma": 4.482307029562552,
+  "kappa_95_upper_1e6": -0.053587699188546056
+ },
+ "provenance": {
+  "H0_66p65": {
+   "source": "step_04 unified_h0 = unweighted mean of per-host cz/d after in-sample kappa that zeroes an unweighted slope",
+   "unified_h0": 66.6471548707494,
+   "unified_h0_screened_origin": 64.74090022323082,
+   "origin_dependence_kms_Mpc": 1.9062546475185798,
+   "optimal_kappa": 849468.994140625,
+   "wls_kappa": -277858.65841201454,
+   "wls_kappa_err_scaled": 446564.81833471515,
+   "bootstrap_kappa_mean": 967057.91015625,
+   "bootstrap_kappa_std": 890934.012908004
+  },
+  "kappa_25p24_sigma": {
+   "source": "step_34 stage1 summary likelihood",
+   "kappa_Cep": 2156824.6751788543,
+   "kappa_err": 85437.43554114882,
+   "kappa_significance": 25.24449220084647,
+   "mu_true_baseline": 31.225477320274038,
+   "chi2": 20917.119015055127,
+   "dof": 36,
+   "chi2_reduced": 581.0310837515312,
+   "mean_mu_shift": -0.24201412897715713,
+   "n_hosts": 38,
+   "condition_number": 92269066374361.2,
+   "model_status": "poor_fit",
+   "pipeline_label": "Discarded: model broken"
+  },
+  "injection_recovery_matrix": {
+   "kappa_injected": 960000.0,
+   "kappa_recovered": 960259.9445268322,
+   "kappa_err": 206747.31174620092,
+   "recovery_fraction": 1.0002707755487836,
+   "rank_aug": 47,
+   "chi2_aug": 0.38070097665318564,
+   "kappa_neg_injected": -960000.0,
+   "kappa_neg_recovered": -959145.9572982382
+  }
+ },
+ "statement": "The full SH0ES matrix is not blind to a host-level Cepheid term: an injected kappa=0.96e6 is recovered at 100% with +-0.21e6. On the real data kappa is consistent with zero and the canonical value is excluded. H0=66.65 is origin-dependent and not a full-ladder estimate."
+}

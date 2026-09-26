@@ -21,5 +21,11 @@
     "Xi_z": "1 / (1+z)",
     "matches_manuscript": true,
     "refutes_cancellation_argument": true
+  },
+  "symbolic_verification": {
+    "chirp_mass_map_verified": true,
+    "gw_distance_verified": true,
+    "em_distance_verified": true,
+    "siren_ratio_verified": true
   }
 }

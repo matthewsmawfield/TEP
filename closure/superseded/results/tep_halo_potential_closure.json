@@ -1,0 +1,178 @@
+{
+ "prereg": "closure/results/tep_shared_distortion_prereg.md",
+ "coordinate": "halo_velocity_dispersion",
+ "smhm": "Behroozi-like (tep_model.py): log_ratio = -1.8 - 0.1*(log_mstar-10) - 0.05*(z-5)",
+ "sigma_halo": "sigma_halo = 160 km/s * (M_h / 1e12)^(1/3) (virial relation)",
+ "X_definition": "X = S * sigma_halo^2 / c^2 - Uref",
+ "recovery_test": {
+  "kappa_injected": 400000.0,
+  "kappa_recovered_mean": 399636.30159078777,
+  "kappa_recovered_sd": 18522.057571063
+ },
+ "step1_primary": {
+  "n": 277,
+  "kappa": 37929.38789221906,
+  "kappa_err": 17558.591484090433,
+  "sigma_int": 0.09895954780505598,
+  "chi2_dof": 0.9999798038992583,
+  "alpha": 0.12993620675450912,
+  "beta": 2.644485512876793,
+  "kappa_sigma": 2.1601611909808534
+ },
+ "step1_variants": {
+  "biasCor_subtracted": {
+   "n": 277,
+   "kappa": -7558.274626669998,
+   "kappa_err": 17762.400161899663,
+   "sigma_int": 0.09461673256122183,
+   "chi2_dof": 0.9999800191917967,
+   "alpha": 0.13285723288352158,
+   "beta": 3.0510403263004715,
+   "kappa_sigma": -0.4255210195569455
+  },
+  "published_m_b_corr": {
+   "n": 277,
+   "kappa": 6856.8587042824365,
+   "kappa_err": 25751.544770419394,
+   "sigma_int": 0.0,
+   "chi2_dof": 0.4149968810524067,
+   "kappa_sigma": 0.26626980110951864
+  },
+  "z_0.01_0.15_noncal": {
+   "n": 705,
+   "kappa": 32492.548841600772,
+   "kappa_err": 11125.503227044965,
+   "sigma_int": 0.11992033574553992,
+   "chi2_dof": 1.0000043882924934,
+   "alpha": 0.1442236130554031,
+   "beta": 2.8349557161144183,
+   "kappa_sigma": 2.9205464398783056
+  },
+  "logM_gt_9": {
+   "n": 211,
+   "kappa": 16664.00933492789,
+   "kappa_err": 18620.229607265566,
+   "sigma_int": 0.09111565911580516,
+   "chi2_dof": 0.9998979765779331,
+   "alpha": 0.12953062839014923,
+   "beta": 2.732447326840362,
+   "kappa_sigma": 0.8949411305017225
+  },
+  "with_joint_mass_step": {
+   "n": 277,
+   "kappa": 19061.71090095886,
+   "kappa_err": 23135.46358349537,
+   "sigma_int": 0.09856101340359114,
+   "chi2_dof": 0.999975917198004,
+   "alpha": 0.13191645242454975,
+   "beta": 2.6526879834102637,
+   "mass_step": -0.025822403403543914,
+   "mass_step_err": 0.020640350464540776,
+   "kappa_sigma": 0.8239173955674401
+  },
+  "smhm_plus_0.5_dex_offset": {
+   "n": 277,
+   "kappa": 17605.262330623897,
+   "kappa_err": 8149.97621665229,
+   "sigma_int": 0.09895954780505581,
+   "chi2_dof": 0.9999798038992526,
+   "alpha": 0.12993620675450812,
+   "beta": 2.644485512876768,
+   "kappa_sigma": 2.160161190980198
+  }
+ },
+ "step2": {
+  "kappa_vel_by_sigma_v_stellar_units": {
+   "150": {
+    "kappa": 451681.93636651745,
+    "err": 218541.8327312373
+   },
+   "182.1": {
+    "kappa": 416921.2120764591,
+    "err": 246619.61800836032
+   },
+   "250": {
+    "kappa": 368562.5356836243,
+    "err": 309922.15249975416
+   },
+   "500": {
+    "kappa": 300285.90774205496,
+    "err": 563554.7346500647
+   }
+  },
+  "kappa_vel_stellar_units": 368562.5356836243,
+  "kappa_vel_stellar_err": 309922.15249975416,
+  "kappa_vel_halo_units": 104517.75518466467,
+  "kappa_vel_halo_err": 87888.38941861244,
+  "kappa_SN_halo": 37929.38789221906,
+  "kappa_SN_err": 17558.591484090433,
+  "amplification_factor": 3.526315074720448,
+  "sigma_stellar_typical": 84.38570459612772,
+  "sigma_halo_typical": 158.46357072438317,
+  "difference_sigma": -0.7429649379770036,
+  "agreement_within_2sigma": true,
+  "kappa_SN_detection_one_sided_p": 0.015380096673876565,
+  "kappa_SN_detected_2sigma": true
+ },
+ "step3": {
+  "mean_sigma2_HF_hosts_km2s2": 34463.153115102636,
+  "mean_S_sigma2_calibrators_km2s2": 70314.5469177718,
+  "observed_uncorrected_calibrator_cz_over_d": 67.72,
+  "predictions": {
+   "unscreened_87.165|kappa_vel_halo": {
+    "Xbar_HF_minus_anchor": 2.9891806496026473e-07,
+    "H0_true_pred": 71.99665435922016,
+    "H0_pred_err_from_kappa": 0.8710471578507555,
+    "pred_uncorrected_calibrator_cz_over_d": 74.61507919853537
+   },
+   "unscreened_87.165|kappa_SN_halo": {
+    "Xbar_HF_minus_anchor": 2.9891806496026473e-07,
+    "H0_true_pred": 72.65963446323445,
+    "H0_pred_err_from_kappa": 0.17562273247145835,
+    "pred_uncorrected_calibrator_cz_over_d": 73.57027990843599
+   },
+   "unscreened_87.165|required": {
+    "Xbar_HF_minus_anchor_needed_at_kappa_vel_halo": 1.669614312384483e-06,
+    "equivalent_HF_mean_sigma2_km2s2": 157655.18819986645,
+    "equivalent_HF_sigma_kms": 397.0581672751065
+   },
+   "screened_30.507|kappa_vel_halo": {
+    "Xbar_HF_minus_anchor": 3.730991137456573e-07,
+    "H0_true_pred": 71.74004886581537,
+    "H0_pred_err_from_kappa": 1.0833357521126525,
+    "pred_uncorrected_calibrator_cz_over_d": 74.61507919853537
+   },
+   "screened_30.507|kappa_SN_halo": {
+    "Xbar_HF_minus_anchor": 3.730991137456573e-07,
+    "H0_true_pred": 72.56554816918839,
+    "H0_pred_err_from_kappa": 0.21892232753767668,
+    "pred_uncorrected_calibrator_cz_over_d": 73.57027990843598
+   },
+   "screened_30.507|required": {
+    "Xbar_HF_minus_anchor_needed_at_kappa_vel_halo": 1.669614312384483e-06,
+    "equivalent_HF_mean_sigma2_km2s2": 150988.12802386645,
+    "equivalent_HF_sigma_kms": 388.57190843377555
+   }
+  }
+ },
+ "summary": {
+  "coordinate": "halo_velocity_dispersion",
+  "kappa_SN_halo": 37929.38789221906,
+  "kappa_SN_err": 17558.591484090433,
+  "kappa_SN_sigma": 2.1601611909808534,
+  "kappa_vel_halo": 104517.75518466467,
+  "kappa_vel_halo_err": 87888.38941861244,
+  "amplification_factor": 3.526315074720448,
+  "sigma_halo_typical": 158.46357072438317,
+  "sigma_stellar_typical": 84.38570459612772,
+  "H0_true_from_kappa_SN_screened": 72.56554816918839,
+  "H0_true_from_kappa_vel_screened": 71.74004886581537,
+  "H0_true_from_kappa_SN_unscreened": 72.65963446323445,
+  "H0_true_from_kappa_vel_unscreened": 71.99665435922016,
+  "H0_planck_lcdm": 67.4,
+  "H0_sh0es": 73.04,
+  "gap_to_close": 5.640000000000001,
+  "fraction_closed_SN_screened": 0.08412266503752074,
+  "fraction_closed_vel_screened": 0.23048778974904938
+ }
+}

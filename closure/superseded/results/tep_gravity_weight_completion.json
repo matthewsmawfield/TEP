@@ -1,0 +1,220 @@
+{
+  "W1_FRW_equations_general_F": {
+    "E_N (energy constraint)": "-K*a0**3*phidot**2/2 + 3*M**2*Psi*a0*adot**2*exp(2*beta*phi0/M) + 3*M**2*Psip*a0**2*adot*phidot*exp(2*beta*phi0/M) + 6*M*Psi*a0**2*adot*beta*phidot*exp(2*beta*phi0/M) - V*a0**3 - rho_m0*exp(beta*phi0/M) - rho_r0/a0",
+    "E_a (pressure equation)": "3*K*a0**2*phidot**2/2 + 6*M**2*Psi*a0*addot*exp(2*beta*phi0/M) + 3*M**2*Psi*adot**2*exp(2*beta*phi0/M) + 3*M**2*Psip*a0**2*phiddot*exp(2*beta*phi0/M) + 6*M**2*Psip*a0*adot*phidot*exp(2*beta*phi0/M) + 3*M**2*Psipp*a0**2*phidot**2*exp(2*beta*phi0/M) + 6*M*Psi*a0**2*beta*phiddot*exp(2*beta*phi0/M) + 12*M*Psi*a0*adot*beta*phidot*exp(2*beta*phi0/M) + 12*M*Psip*a0**2*beta*phidot**2*exp(2*beta*phi0/M) + 12*Psi*a0**2*beta**2*phidot**2*exp(2*beta*phi0/M) - 3*V*a0**2 + 3*a0**2*mu2*phidot*sigma + rho_r0/a0**2",
+    "E_phi (scalar equation)": "(M*a0*(3*M**2*Psip*(a0*addot + adot**2)*exp(2*beta*phi0/M) + 6*M*Psi*beta*(a0*addot + adot**2)*exp(2*beta*phi0/M) + a0**2*(-Vp + mu2p*phidot*sigma) - a0*(a0*(K*phiddot + mu2p*phidot*sigma) + 3*adot*(K*phidot + mu2*sigma))) - beta*rho_m0*exp(beta*phi0/M))/M"
+  },
+  "W1_static_frame_equations": {
+    "gravity_weight_F=A^2 Psi": [
+      "-K*phidot**2/2 - V - rho_m0*exp(beta*phi0/M) - rho_r0",
+      "3*K*phidot**2/2 - 3*V + 3*mu2*phidot*sigma + rho_r0 + 3*(M*(M*(Psip*phiddot + Psipp*phidot**2) + 4*Psip*beta*phidot**2) + 2*Psi*beta*(M*phiddot + 2*beta*phidot**2))*exp(2*beta*phi0/M)",
+      "-K*phiddot - Vp - beta*rho_m0*exp(beta*phi0/M)/M"
+    ],
+    "Paper0_v0.11_F=1": [
+      "-K*phidot**2/2 - V - rho_m0*exp(beta*phi0/M) - rho_r0",
+      "3*K*phidot**2/2 - 3*V + 3*mu2*phidot*sigma + rho_r0",
+      "-K*phiddot - Vp - beta*rho_m0*exp(beta*phi0/M)/M"
+    ]
+  },
+  "W2_static_frame_K0_Psi1": [
+    {
+      "z": 0.0,
+      "V": -0.946173,
+      "residual_E_N": 0.0,
+      "residual_E_a": 0.0,
+      "residual_E_phi": 0.0
+    },
+    {
+      "z": 0.5,
+      "V": -0.630873,
+      "residual_E_N": 0.0,
+      "residual_E_a": 0.0,
+      "residual_E_phi": 0.0
+    },
+    {
+      "z": 2.0,
+      "V": -0.315573,
+      "residual_E_N": 1.759058957238351e-16,
+      "residual_E_a": 1.4072471657906809e-15,
+      "residual_E_phi": 0.0
+    },
+    {
+      "z": 10.0,
+      "V": -0.0862639090909091,
+      "residual_E_N": 1.6087594399634e-16,
+      "residual_E_a": 1.28700755197072e-15,
+      "residual_E_phi": 1.6087594399634e-16
+    },
+    {
+      "z": 1100.0,
+      "V": -0.0011321280653950952,
+      "residual_E_N": 3.83066971175963e-16,
+      "residual_E_a": 7.66133942351926e-16,
+      "residual_E_phi": 1.915334855879815e-16
+    },
+    {
+      "z": 100000.0,
+      "V": -0.00028245890541094595,
+      "residual_E_N": 1.4394158119764083e-16,
+      "residual_E_a": 7.676884330540844e-16,
+      "residual_E_phi": 2.3990263532940138e-17
+    },
+    {
+      "z": 400000000.0,
+      "V": -0.00027300236474999415,
+      "residual_E_N": 1.4896696903491012e-16,
+      "residual_E_a": 2.382841277169987e-15,
+      "residual_E_phi": 1.09455044704599e-16
+    }
+  ],
+  "W3_static_frame_K1_Psi1": [
+    {
+      "z": 0.0,
+      "V": -1.4461730000000002,
+      "residual_E_N": 1.1733826949460156e-16,
+      "residual_E_a": 0.0,
+      "residual_E_phi": 1.1733826949460156e-16
+    },
+    {
+      "z": 0.5,
+      "V": -1.0195857083333335,
+      "residual_E_N": 1.759820161308467e-16,
+      "residual_E_a": 1.4078561290467737e-15,
+      "residual_E_phi": 6.599325604906751e-17
+    },
+    {
+      "z": 2.0,
+      "V": -0.8269663333333334,
+      "residual_E_N": 0.0,
+      "residual_E_a": 0.0,
+      "residual_E_phi": 8.795294786191756e-16
+    },
+    {
+      "z": 10.0,
+      "V": -1.8287483719008266,
+      "residual_E_N": 2.57401510394144e-15,
+      "residual_E_a": 1.029606041576576e-14,
+      "residual_E_phi": 5.14803020788288e-15
+    },
+    {
+      "z": 1100.0,
+      "V": -228.72892791044805,
+      "residual_E_N": 0.0,
+      "residual_E_a": 2.008374161839033e-10,
+      "residual_E_phi": 5.0209354045975825e-11
+    },
+    {
+      "z": 100000.0,
+      "V": -470774.257977959,
+      "residual_E_N": 2.0607479459279862e-07,
+      "residual_E_a": 1.648598356742389e-06,
+      "residual_E_phi": 1.2364487675567917e-06
+    },
+    {
+      "z": 400000000.0,
+      "V": -7280063096400.158,
+      "residual_E_N": 3.577121029315264,
+      "residual_E_a": 28.616968234522112,
+      "residual_E_phi": 14.308484117261056
+    }
+  ],
+  "W3_note": "K>0: V ~ -K Omega_r (1+z)^2/2 at high z (unbounded); K=0: V -> -3 Omega_r (bounded)",
+  "W4_clock_frame_fluctuations": {
+    "time_coefficient P_X+2X P_XX": "6 + K/A**2",
+    "gradient_coefficient P_X": "s",
+    "c_s^2": "s/(6 beta^2 + K/A^2)  >= 0 for s >= 0",
+    "Paper0_v0.11_F=1_static": "c_s^2 = -(rho_m + 4 rho_r/3)/(K phidot^2) < 0 (see independent_foundations_checks.py C1)",
+    "dark_energy_equation_of_state": "1 + w_phi = s H~^2 / rho~_phi"
+  },
+  "W5_bounds": {
+    "Gdot_over_G": "psi_1 * H~_0",
+    "alpha_matter": "-psi_1 / (2 sqrt(6 beta^2 + 1.5 psi_1^2))",
+    "psi1_max_LLR": 0.0011025550274145397,
+    "alpha_max_LLR": 0.00022505810254216173,
+    "gamma_minus_1_at_LLR_limit": 1.0130229903975637e-07,
+    "psi1_max_Cassini": 0.01661324772583615,
+    "tightest": "LLR"
+  },
+  "W6_transition": {
+    "g_x_formula": "sqrt(6) c H0 / (2|alpha|)",
+    "g_x_at_LLR_alpha_m_s2": 3.563535017025181e-06,
+    "r_x_Sun_AU": 40.79339865998496,
+    "r_x_scaling": "r_x = sqrt(2|alpha| G M / (sqrt(6) c H0))  ~ M^(1/2)",
+    "Psi_equal_1": "no matter-sourced gradient; X stays timelike wherever |Phi|/c^2 << 1"
+  },
+  "W7_horizon_branch_stability": {
+    "power_law_p=0.25": [
+      {
+        "t": -10.0,
+        "A": 0.5623413251903491,
+        "s_from_field_equations": -2699.160900838585,
+        "s_closed_form": -2699.1609008385894
+      },
+      {
+        "t": -1000.0,
+        "A": 0.1778279410038923,
+        "s_from_field_equations": -85291162.57053648,
+        "s_closed_form": -85291162.57053642
+      },
+      {
+        "t": -100000.0,
+        "A": 0.05623413251903491,
+        "s_from_field_equations": -2709736295428.1294,
+        "s_closed_form": -2709736295428.129
+      }
+    ],
+    "power_law_p=0.5": [
+      {
+        "t": -10.0,
+        "A": 0.31622776601683794,
+        "s_from_field_equations": -1199.9353755013078,
+        "s_closed_form": -1199.9353755013083
+      },
+      {
+        "t": -1000.0,
+        "A": 0.03162277660168379,
+        "s_from_field_equations": -121103939.55013083,
+        "s_closed_form": -121103939.55013078
+      },
+      {
+        "t": -100000.0,
+        "A": 0.0031622776601683794,
+        "s_from_field_equations": -13420793755015.064,
+        "s_closed_form": -13420793755015.084
+      }
+    ],
+    "exponential_lambda=1": [
+      {
+        "t": -5.0,
+        "A": 0.006737946999085467,
+        "s_from_field_equations": -146.40164074443652,
+        "s_closed_form": -146.40164074443686
+      },
+      {
+        "t": -10.0,
+        "A": 4.5399929762484854e-05,
+        "s_from_field_equations": -197432.9651244709,
+        "s_closed_form": -197432.96512447135
+      },
+      {
+        "t": -20.0,
+        "A": 2.061153622438558e-09,
+        "s_from_field_equations": -85680696046431.98,
+        "s_closed_form": -85680696046431.61
+      }
+    ],
+    "LCDM_check_z0.3": {
+      "A": 0.7692307692307692,
+      "s_from_field_equations": -6.217248937900877e-15,
+      "s_closed_form": 0.0
+    },
+    "closed_form": "s = 4 - 2 A Addot/Adot^2 - (rho_m0 A + 4 rho_r0/3)/Adot^2   (static-frame time t)"
+  },
+  "W8_rx_vs_Rs": {
+    "alpha_from_alpha_sat": 0.6580106382118759,
+    "r_x_AU_M1.2": 2416.293266451484,
+    "R_s_AU": 2646.0,
+    "difference_in_total_sigma": -0.377186754595264,
+    "open": "which side of r_x carries the boost requires the nonlinear static solution; alpha ~ 0.66 here vs ambient bound 2.3e-4"
+  }
+}

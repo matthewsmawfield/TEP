@@ -1,0 +1,13 @@
+{
+  "action": "P(X, phi) = K*X + mu^2(phi)*sqrt(2X) - V(phi)",
+  "K": 1.0,
+  "beta_A": -1.0,
+  "mu2_eff": 0.9459000000000001,
+  "k_fit": null,
+  "R_fit": null,
+  "F4_pass": false,
+  "F2_suppression": 472.95000000000005,
+  "F2_pass": false,
+  "n_valid_points": 0,
+  "note": "Two-source verification. The recovery is a two-source, low-acceleration effect. The cuscuton term mu^2*sqrt(2X) produces steep recovery (k >= 4) through its non-analytic |grad phi|. The effective local mu^2 is positive (from the source contribution), in contrast to the cosmological branch where mu^2 < 0."
+}

@@ -123,6 +123,49 @@ def run_derivation():
     print(r"")
     print(r"This explicitly confirms the formula in the manuscript: \Xi(z) = A(z).")
 
+    # ---------------------------------------------------------
+    # 6. Symbolic Verification (machine-checked algebra)
+    # ---------------------------------------------------------
+    print(r"")
+    print(r"[6] Symbolic Verification")
+    print(r"-------------------------")
+    A_e, A_o, M_t, rr, f_t = sp.symbols('A_e A_o M_tilde r f_t', positive=True)
+    K, M_d, D_gw = sp.symbols('K M_d D_gw', positive=True)
+
+    # Emission: Einstein-frame chirp mass and coordinate-time chirp law
+    M_e = A_e * M_t
+    f_e = A_o * f_t  # f_o = f_e (static transport); f_o = A_o * f_tilde_o
+    fdot_e = K * M_e**sp.Rational(5, 3) * f_e**sp.Rational(11, 3)
+
+    # Detector readout: d f_tilde_o / d tau_tilde_o = (1/A_o^2) df_e/dt
+    fdot_t = sp.simplify(fdot_e / A_o**2)
+
+    # Template match: fdot_t = K * M_det^(5/3) * f_t^(11/3)  =>  M_det
+    M_det = sp.solve(
+        sp.Eq(fdot_t, K * M_d**sp.Rational(5, 3) * f_t**sp.Rational(11, 3)),
+        M_d)[0]
+    mass_ok = sp.simplify(M_det - A_e * A_o * M_t) == 0
+
+    # Amplitude match: M_det^(5/3) f_t^(2/3)/D_L^GW = M_e^(5/3) f_e^(2/3)/r
+    D_L_GW = sp.solve(
+        sp.Eq(M_det**sp.Rational(5, 3) * f_t**sp.Rational(2, 3) / D_gw,
+              M_e**sp.Rational(5, 3) * f_e**sp.Rational(2, 3) / rr),
+        D_gw)[0]
+    dist_ok = sp.simplify(D_L_GW - A_o * rr) == 0
+
+    # EM distance: D_A = A_e r; Etherington D_L^EM = (1+z)^2 D_A; 1+z = A_o/A_e
+    D_L_EM = sp.simplify((A_o / A_e)**2 * (A_e * rr))
+    em_ok = sp.simplify(D_L_EM - (A_o / A_e) * A_o * rr) == 0  # (1+z) A_o r
+
+    # Detector-level ratio
+    Xi = sp.simplify((A_o * rr) / D_L_EM)
+    xi_ok = sp.simplify(Xi - A_e / A_o) == 0  # = 1/(1+z) = A(z)
+
+    print(r"  M_det = A_o A_e M_tilde      :", mass_ok)
+    print(r"  D_L^GW = A_o r               :", dist_ok)
+    print(r"  D_L^EM = (1+z) A_o r         :", em_ok)
+    print(r"  Xi(z) = A_e/A_o = 1/(1+z)    :", xi_ok)
+
     # Write JSON output
     output = {
         "sourced_emission": {
@@ -147,6 +190,12 @@ def run_derivation():
             "Xi_z": "1 / (1+z)",
             "matches_manuscript": True,
             "refutes_cancellation_argument": True
+        },
+        "symbolic_verification": {
+            "chirp_mass_map_verified": bool(mass_ok),
+            "gw_distance_verified": bool(dist_ok),
+            "em_distance_verified": bool(em_ok),
+            "siren_ratio_verified": bool(xi_ok)
         }
     }
     

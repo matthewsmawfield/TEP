@@ -1,0 +1,27 @@
+{
+ "static": {
+  "eps": 0.0,
+  "r_min": 445.0388744387244,
+  "r_end": 3135.9504250864043,
+  "E_in": 1.0002041960242112,
+  "E_out": 1.0002041960242112,
+  "dE_over_E": 0.0,
+  "v_inf_in": 0.02020561789258902,
+  "v_inf_out": 0.02020561789258902,
+  "dv_inf_over_v": 0.0,
+  "deflection_deg": 0.6824223434576622
+ },
+ "time_dependent_control": {
+  "eps": 2e-06,
+  "r_min": 444.2981853064421,
+  "r_end": 3134.4976257573367,
+  "E_in": 1.0002041960242112,
+  "E_out": 1.0002036785144923,
+  "dE_over_E": -5.174040670024982e-07,
+  "v_inf_in": 0.02020561789258902,
+  "v_inf_out": 0.020180005152690233,
+  "dv_inf_over_v": -0.00126760488270839,
+  "deflection_deg": 0.8649390340937724
+ },
+ "statement": "Static TEP matter metric (conformal + disformal, non-spherical phi): Killing energy conserved, asymptotic speed unchanged. Time-dependent control changes it, so the check has power."
+}
