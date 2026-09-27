@@ -1,0 +1,151 @@
+{
+  "step": "step_29_landscape_evolution",
+  "gauge": "volume-static, lapse rebuilt to keep mean(N*f)=0",
+  "grid": {
+    "N": 16,
+    "L": 1.0,
+    "dt": 0.0002,
+    "nsteps_requested": 4000
+  },
+  "initial_constraint": {
+    "lambda_star": -25.377752767604903,
+    "Pi2": 3.3052360980280313,
+    "psi_range": [
+      0.7432138534959128,
+      1.9256409393753688
+    ],
+    "history": [
+      {
+        "Pi2": 3.3052360980280313,
+        "lambda": -25.377752767604903,
+        "rayleigh0": -4.957854147042047,
+        "converged": true,
+        "ham_max": 1.2654766123887384e-10
+      }
+    ],
+    "ham_rms_initial": 3.2843636666984005e-12
+  },
+  "stopped": "hamiltonian residual grew by more than 50 from the solved slice",
+  "final": {
+    "step": 160,
+    "t": 0.032,
+    "u_well": -0.39984003741471996,
+    "A_well": 1.49158608059126,
+    "z": -0.004032826262254208,
+    "H_T": 0.20355522957979355,
+    "lapse_sign_changing": false,
+    "lapse_min": 1.0,
+    "volume_drive": 33.62816333607723,
+    "ham_rms": 1.4970810652077968,
+    "pi_well": 0.20355522957979355,
+    "scalar_eom_rms": 95.09432500441399,
+    "r_coord": 0.032,
+    "dL_over_c": 0.0317424195572209
+  },
+  "n_records": 5,
+  "H_T_definition": "mean N*pi on matter wells; A=exp(-u); 1+z=A_now/A_em",
+  "comparisons": [
+    {
+      "z": 0.1,
+      "reached": false
+    },
+    {
+      "z": 0.5,
+      "reached": false
+    },
+    {
+      "z": 1.0,
+      "reached": false
+    }
+  ],
+  "exposure": {
+    "matter_frame_time": 0.04745783491306809,
+    "matter_frame_time_in_units_of_1_over_HT0": 0.12558319630762127,
+    "gate11_relaxation_times": 9.0,
+    "Y_eq_pure_well": 0.24833333333333332,
+    "Y_observed": 0.245,
+    "note": "Y_eq does not depend on H_T. The drift law can only test whether the exposure contains many star-formation times. Nine Gate-11 times inside one Hubble time would require a star-formation time shorter than ~0.1/H_T; this run reports the exposure it actually produced, not an assumed tau_star."
+  },
+  "trajectory_tail": [
+    {
+      "step": 0,
+      "t": 0.0,
+      "u_well": -0.3957990573794185,
+      "A_well": 1.4855707730730388,
+      "z": 0.0,
+      "H_T": 2.6462057642886783,
+      "lapse_sign_changing": true,
+      "lapse_min": 0.12845904968314925,
+      "volume_drive": 0.0,
+      "ham_rms": 3.2843636666984005e-12,
+      "pi_well": 1.818030829779306,
+      "scalar_eom_rms": 107.95465984728592,
+      "r_coord": 0.0,
+      "dL_over_c": 0.0
+    },
+    {
+      "step": 40,
+      "t": 0.008,
+      "u_well": -0.38462305268084385,
+      "A_well": 1.4690604586575875,
+      "z": 0.01123868954347751,
+      "H_T": 0.22962367467189151,
+      "lapse_sign_changing": true,
+      "lapse_min": 0.22020359048837407,
+      "volume_drive": -6.661338147750939e-16,
+      "ham_rms": 0.1759812230824759,
+      "pi_well": 1.396346393289546,
+      "scalar_eom_rms": 107.38992645105115,
+      "r_coord": 0.008,
+      "dL_over_c": 0.008180829497836876
+    },
+    {
+      "step": 80,
+      "t": 0.016,
+      "u_well": -0.39093825238464003,
+      "A_well": 1.478367224943987,
+      "z": 0.004872637872044727,
+      "H_T": -1.7659885189034585,
+      "lapse_sign_changing": true,
+      "lapse_min": 0.15684996090102582,
+      "volume_drive": -1.1102230246251565e-15,
+      "ham_rms": 0.4308771572778916,
+      "pi_well": 1.0155385618491024,
+      "scalar_eom_rms": 107.14015251498951,
+      "r_coord": 0.016,
+      "dL_over_c": 0.016156304293502746
+    },
+    {
+      "step": 120,
+      "t": 0.024,
+      "u_well": -0.40294410217457893,
+      "A_well": 1.496223253699788,
+      "z": -0.007119579648564023,
+      "H_T": -1.4733094562765223,
+      "lapse_sign_changing": true,
+      "lapse_min": 0.07481191024237485,
+      "volume_drive": -1.1102230246251565e-16,
+      "ham_rms": 0.5672197350441163,
+      "pi_well": 0.7526859857733615,
+      "scalar_eom_rms": 106.94703113466923,
+      "r_coord": 0.024,
+      "dL_over_c": 0.023659476698813863
+    },
+    {
+      "step": 160,
+      "t": 0.032,
+      "u_well": -0.39984003741471996,
+      "A_well": 1.49158608059126,
+      "z": -0.004032826262254208,
+      "H_T": 0.20355522957979355,
+      "lapse_sign_changing": false,
+      "lapse_min": 1.0,
+      "volume_drive": 33.62816333607723,
+      "ham_rms": 1.4970810652077968,
+      "pi_well": 0.20355522957979355,
+      "scalar_eom_rms": 95.09432500441399,
+      "r_coord": 0.032,
+      "dL_over_c": 0.0317424195572209
+    }
+  ]
+}

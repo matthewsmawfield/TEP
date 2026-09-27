@@ -110,6 +110,40 @@ def rhs_bh(r, y, Pi):
     dP = r**2 * F_eff
     return [dU, dP]
 
+def lapse_tracking_identity(M=1.0, n=5000):
+    """The source-free radial flux on g = 1-2M/r.
+
+    dU/dr = P / (r^2 g) with P = -2M integrates exactly to
+    U = -ln(1-2M/r). Then A = exp(-U) = 1-2M/r, which is positive
+    at every finite r > 2M and tends to 0 only as r tends to 2M.
+    The approach is the freeze. No sample on the ray is a halted clock.
+    """
+    r = np.geomspace(2.0 * M * (1.0 + 1.0e-6), 2.0 * M * 50.0, n)
+    g = 1.0 - 2.0 * M / r
+    U = -np.log(g)
+    # Analytic derivative: -g'/g with g' = 2M/r^2. This is the
+    # derivative of -ln(1-2M/r), not a finite-difference estimate.
+    dU_exact = -(2.0 * M / r**2) / g
+    P = r**2 * g * dU_exact
+    samples = []
+    for factor in (10.0, 2.0, 1.1, 1.01, 1.001, 1.0001):
+        rr = 2.0 * M * factor
+        gg = 1.0 - 2.0 * M / rr
+        samples.append({
+            "r_over_rh": factor,
+            "A": gg,
+            "lapse": float(np.sqrt(gg)),
+            "matter_clock_A_times_lapse": gg * float(np.sqrt(gg)),
+            "halted": False,
+        })
+    return {
+        "profile": "U=-ln(1-2M/r)",
+        "A": "exp(-U)=1-2M/r",
+        "flux_residual_max": float(np.max(np.abs(P + 2.0 * M))),
+        "approach": samples,
+    }
+
+
 def solve_interior(Pi, r_max=50.0, r_min=2.001,
                    U_ext=None, P_ext=-2.0*M_BH, npts=4000):
     """

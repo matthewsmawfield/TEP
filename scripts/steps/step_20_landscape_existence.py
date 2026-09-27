@@ -22,15 +22,19 @@ Integrability (Gauss) on the cell requires
 
     int psi^5 S dV + (1/2) int psi g dV = 0,
 
-so the total-energy density S MUST change sign across the landscape:
+so this periodic conformally flat ansatz needs a negative contribution to S:
 positive inside matter-hosting wells (rho_m + V > 0), negative in the
 void sector.  Since rho_m >= 0 and the kinetic/momentum terms are
 non-negative, only the scalar potential can carry the negative sector.
-This is a derived structural requirement of the non-compact eternal
-solution, not an assumption — and the corpus's own reconstructed
-potential supplies it: V_rec(u) = V_0 - (rho_bar/2) e^{-u} crosses zero
+This is a restriction of this ansatz, not a structural requirement of every
+non-compact eternal solution. The reconstructed
+potential V_rec(u) = V_0 - (rho_bar/2) e^{-u} crosses zero
 at u* = ln(rho_bar a^2 / (4 M_Pl^2)) < 0, so void field values u < u*
-(clocks faster than ambient, Rule 10) carry V < 0.
+(clocks faster than ambient, Rule 10) would carry V < 0. The actual baseline
+used below is positive and does not reach that branch; the solver's uniform
+lam offset supplies the negative contribution in this numerical benchmark.
+It must not be mistaken for a derived potential term or the localized
+positive-energy construction required by TEP Rule 23.
 
 Solver.  Newton iteration on F(psi, lam) = 0 with the void energy level
 lam as the free integrability parameter (bordered system, gauge
@@ -41,7 +45,7 @@ for the constraint to close — its sign and magnitude are the output.
 
 Flatness ledger.  On the solved slice we compute
   - the g-frame curvature  3R = -8 psi^{-5} lap(psi)  (= 2 rho_tot/M^2),
-  - the matter-frame curvature  3R_t = A^{-2}(3R - 4 lap lnA - 2|grad lnA|^2),
+  - the matter-frame curvature  3R_t = A^{-2}(3R - 4 D_h^2 lnA - 2|D_h lnA|^2),
   - the effective curvature parameter |Omega_k^eff| = |<3R_t>|/(6 H_drift^2),
 compared against the closed-static benchmark |Omega_k| >= 1/2.
 
@@ -80,6 +84,36 @@ def fd_laplacian(N, dx):
 # ----------------------------------------------------------------------
 # Landscape construction
 # ----------------------------------------------------------------------
+def landscape_potential(u, V0, rhob_half, u_s):
+    """Evaluate the same signed field convention in the solver and diagnostics."""
+    u = np.asarray(u, dtype=float)
+    eps = 1e-8
+    V_rec = V0 - rhob_half * np.exp(-u)
+    V = (V_rec * np.exp(-(u / u_s) ** 4)
+         + V0 * np.exp(-(u_s / np.where(np.abs(u) < eps, eps, u)) ** 4))
+    return np.where(np.abs(u) < eps, V_rec, V)
+
+
+def conformal_spatial_derivatives(psi, field, lap_flat, wavevectors):
+    """Scalar Laplacian and squared gradient for h_ij = psi^4 delta_ij.
+
+    D_h^2 f = psi^-4 [Delta_flat f + 2 grad(log psi).grad(f)].
+    Flat-grid derivatives cannot be inserted directly into the conformal
+    curvature formula once the gravitational conformal factor is nonconstant.
+    """
+    field_hat = fft.fftn(field)
+    psi_hat = fft.fftn(psi)
+    grad2_flat = np.zeros_like(field)
+    cross_flat = np.zeros_like(field)
+    for K in wavevectors:
+        df = np.real(fft.ifftn(1j * K * field_hat))
+        dpsi = np.real(fft.ifftn(1j * K * psi_hat))
+        grad2_flat += df**2
+        cross_flat += dpsi * df
+    return (psi**-4 * (lap_flat + 2.0 * cross_flat / psi),
+            psi**-4 * grad2_flat)
+
+
 def build_landscape(N, L, n_w, sigma, u_well, u_void, rho0, rho_ambient,
                     V0, rhob_half, u_s):
     """Return u(x), rho_m(x), S0(x) = rho_m + V(u), g(x) = |grad u|^2
@@ -108,11 +142,7 @@ def build_landscape(N, L, n_w, sigma, u_well, u_void, rho0, rho_ambient,
     # Potential: natural shallow master-family member
     #   V(u) = V_rec(u) exp(-(u/u_s)^4) + V0 exp(-(u_s/u)^4)
     #   V_rec(u) = V0 - (rho_bar/2) e^{-u}   (closed-branch reconstruction)
-    eps = 1e-8
-    V_rec = V0 - rhob_half * np.exp(-u)
-    V = (V_rec * np.exp(-(u / u_s) ** 4)
-         + V0 * np.exp(-(u_s / np.where(np.abs(u) < eps, eps, u)) ** 4))
-    V = np.where(np.abs(u) < eps, V_rec, V)  # u=0 gauge: V(0)=V_rec(0)
+    V = landscape_potential(u, V0, rhob_half, u_s)
 
     S0 = rho_m + V
 
@@ -209,7 +239,7 @@ def main():
     n_w = 4                   # wells per side (64 wells)
     sigma = L / 20.0          # well width
     u_well = 1.0              # well field value  (A = e^{-1} ~ 0.37)
-    u_void = 0.8              # nominal void depth (V_rec(-0.8) < 0 band)
+    u_void = 0.8              # actual baseline field; V_rec(+0.8) > 0
     rho0 = 2.0                # mean matter density scale
     rho_ambient = 0.05        # void-to-well matter floor ratio
     V0 = 2.0                  # deep-field floor (closed-branch value)
@@ -228,11 +258,9 @@ def main():
     # --- sign-structure check: does V(u) go negative on the void side? ---
     # V_rec(u*) = V0 - rhob_half e^{-u*} = 0  =>  u* = ln(rhob_half/V0) = -ln 2
     u_star = np.log(rhob_half / V0)
-    V_at_void = float((V0 - rhob_half * np.exp(u_void))
-                      * np.exp(-(-u_void / u_s) ** 4)
-                      + V0 * np.exp(-(u_s / u_void) ** 4))
+    V_at_void = float(landscape_potential(u_void, V0, rhob_half, u_s))
     print(f"  V_rec sign-crossing u* = {u_star:.4f};  "
-          f"V(u_void = -{u_void}) = {V_at_void:+.4f}")
+          f"V(u_void = {u_void:+.4f}) = {V_at_void:+.4f}")
 
     # --- solve ---
     sol = solve_landscape(S0, g, LAP)
@@ -260,14 +288,11 @@ def main():
     # matter-frame curvature, A = e^{-u} (conformal g~ = A^2 g):
     #  3R_t = A^{-2} ( 3R - 4 lap lnA - 2 |grad lnA|^2 )
     lnA = -u
-    lap_lnA = (LAP @ lnA.ravel()).reshape(u.shape)
+    lap_lnA_flat = (LAP @ lnA.ravel()).reshape(u.shape)
     k = 2.0 * np.pi * fft.fftfreq(N, d=dx)
     KX, KY, KZ = np.meshgrid(k, k, k, indexing='ij')
-    uh = fft.fftn(lnA)
-    glnA2 = np.zeros_like(u)
-    for K in (KX, KY, KZ):
-        du = np.real(fft.ifftn(1j * K * uh))
-        glnA2 += du ** 2
+    lap_lnA, glnA2 = conformal_spatial_derivatives(
+        psi, lnA, lap_lnA_flat, (KX, KY, KZ))
     A2 = np.exp(-2.0 * u)
     R3_t = (R3 - 4.0 * lap_lnA - 2.0 * glnA2) / A2
 
@@ -368,6 +393,9 @@ def main():
         "sign_structure": {
             "V_rec_sign_crossing_u_star": float(u_star),
             "V_at_nominal_void_depth": V_at_void,
+            "actual_V_min": float(V.min()),
+            "actual_V_max": float(V.max()),
+            "negative_potential_cells_before_shift": int(np.count_nonzero(V < 0)),
             "required_energy_offset_lambda": float(lam),
             "S_void_mean_after_shift": S_void_mean,
             "S_well_mean_after_shift": S_well_mean,
@@ -388,26 +416,22 @@ def main():
             "Omega_k_eff_H_drift_units": Omega_k_eff,
             "Omega_k_eff_coord": Omega_k_eff_coord,
             "smoothness_scan": scan,
-            "closed_static_benchmark_Omega_k": ">= 1/2 (excluded)",
+            "closed_static_benchmark_Omega_k": ">= 1/2 (homogeneous benchmark only)",
         },
         "interpretation": (
-            "Constraint-satisfying inhomogeneous initial data exists on the "
-            "non-compact covering slice: a positive smooth conformal factor "
-            "is found with the landscape carrying positive total energy in "
-            "matter-hosting wells and negative total energy in voids. The "
-            "integrability condition fixes the required void energy level "
-            "(lambda < 0 expected): the eternal non-expanding solution "
-            "requires the void sector to supply the negative-energy budget, "
-            "which the master-family potential supplies for u < u* "
-            "(V_rec sign crossing). The mean g-frame curvature is driven "
-            "to ~0 by construction; the matter-frame mean curvature is of "
-            "landscape-gradient order, |Omega_k^eff| ~ <|grad u|^2>/H_drift^2 "
-            "times a coefficient of order unity, so flatness is controlled "
-            "by the spatial contrast of the landscape. The redshift scatter "
-            "bounds the spatial contrast to << 1 per Hubble radius (the "
-            "large Du~ln(1+z) accumulates in TIME, not space), placing the "
-            "realized landscape in the |Omega_k| << 1 regime and evading "
-            "the closed branch's |Omega_k| >= 1/2 failure."
+            "This benchmark solves a periodic conformally flat Hamiltonian "
+            "constraint with an explicitly fitted uniform energy offset lam. "
+            "The unshifted field and potential have the sign reported in "
+            "sign_structure; any negative shifted density is not evidence "
+            "that the input field sampled the negative-potential branch. "
+            "The solved curvature ledger uses derivatives of h=psi^4 delta. "
+            "The separate smoothness_scan uses psi=1 and subtracts mean "
+            "source curvature; it is an approximate diagnostic, not another "
+            "constraint solution. The offset requirement is specific to "
+            "this periodic ansatz. A Rule-23 realization must accommodate "
+            "localized positive energy in the appropriate curved geometry "
+            "and match that geometry to its exterior without using this "
+            "offset as a cancellation mechanism."
         ),
         "remaining_open": [
             "evolution stability of the zero-expansion congruence "
@@ -417,6 +441,7 @@ def main():
             "matter-frame singular horizon on this slice (TEP-TH branch)",
         ],
         "verdict": verdict,
+        "verdict_scope": "Convergence and positivity of the shifted periodic benchmark only",
     }
 
     os.makedirs("results", exist_ok=True)

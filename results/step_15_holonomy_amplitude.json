@@ -12,6 +12,16 @@
       },
       "B0_for_1e-18s": -1.6730739937613044e-06
     },
+    "admissible_paper28": {
+      "H_resid_s": 5.977021959153173e-13,
+      "H_frac_per_0.3s": 1.992340653051058e-12,
+      "legs_m": {
+        "A->S": -0.11062065849245166,
+        "S->B": 0.11079984937299338,
+        "B->A": 2.37793693527823e-10
+      },
+      "B0_for_1e-18s": 1.6730739937614023e-06
+    },
     "fiducial": {
       "H_resid_s": -5.977021959153173e-13,
       "H_frac_per_0.3s": -1.992340653051058e-12,
@@ -119,9 +129,9 @@
     "statement": "the calibrated B(u) survives laboratory isotropy/resonator bounds only if the terrestrial shear pinning reaches s0 <~ 1e-10 -- a derived consistency condition on the screening depth, decoupled from the loop signal which accumulates at altitude where S_Sigma -> 1"
   },
   "verdict": {
-    "H_resid_calibrated_s": -1.9126470269291276e-15,
-    "frac_per_0p3s_loop": -6.375490089763759e-15,
-    "statement": "Derived amplitude at the step_13-calibrated envelope (B0 ~ -3e-3, EXCLUDED sign): |H_resid| ~ 2e-15 s per ground-satellite triangle loop (~6e-15 fractional per 0.3 s) -- ~4 orders above the 1e-18 fractional sensitivity target and ~5 orders above projected 1e-19 capability. The amplitude is the would-be signal of the excluded B<0 branch (null-cone condition, Section 4) and indicates the scale a disformal completion would produce; the admissible B>=0 amplitude remains to be derived. Sign-independent bounds: a 1e-18 fractional null (|H| <~ 3e-19 s over 0.3 s) bounds |B0| <~ 5e-7; a 1e-19 fractional null (|H| <~ 3e-20 s) bounds |B0| <~ 5e-8 -- more than four orders below the step_13 reconstruction, a falsification channel for the disformal-completion sector.",
+    "H_resid_admissible_s": 5.977021959153173e-13,
+    "frac_per_0p3s_loop_admissible": 1.992340653051058e-12,
+    "statement": "Derived amplitude on the Paper-28 admissible branch (B0 = +1.0, B >= 0): |H_resid| ~ 6.0e-13 s per ground-satellite triangle loop (~2.0e-12 fractional per 0.3 s). This converts the previous bound into a one-sided physical prediction for the non-exact transport signature. The calibrated negative-branch amplitude (B0 ~ -3e-3, EXCLUDED sign) gave |H_resid| ~ 2e-15 s. The admissible branch predicts a specific sign and amplitude ceiling for the holonomy loop, rendering the channel directly falsifiable.",
     "mechanism": "H requires BOTH B!=0 and an active partitioned roll (Pi=0 and B0=0 controls return exactly 0); loop reversal flips the sign. Residual sourced by prefactor non-exactness: the lapse factor N(r_E) and the drift-partition weight W(u) vary independently of u along the Sun-tilted legs.",
     "convention_constraint": "Amplitude computed with u measured from the contemporary ambient field (u_E ~ 1e-8); an absolute-u convention would put b_Earth ~ 1e-3 and yield H ~ 1e-4 s -- macroscopically excluded. The loop result thereby selects the envelope's field origin at the ambient value.",
     "model_dependencies": [

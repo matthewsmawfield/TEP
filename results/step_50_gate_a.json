@@ -1,0 +1,73 @@
+{
+  "step": "step_50_gate_a",
+  "one_profile": {
+    "configuration": "uniform sphere, 1e11 Msun, 30 kpc, Cepheid at 8 kpc",
+    "g_m_s2": 4.129998551763747e-12,
+    "g_over_g_t": 0.012145396495540986,
+    "u": 2.3026796147829145e-07,
+    "u_unscreened": 2.304158799370074e-07,
+    "S_Sigma": 0.9998525545836543,
+    "S_A": 0.9993580370469414,
+    "same_phi": true
+  },
+  "stellar_surface_same_law": {
+    "S_Sigma": 5.315428848428662e-07,
+    "S_A": 4.367344076071362e-06,
+    "u": 1.4535327884584361e-12
+  },
+  "kappa": {
+    "kappa_canonical": 960000.0,
+    "S_A_host": 0.9993580370469414,
+    "kappa_from_profile": 959383.7155650638,
+    "empirical_interval": [
+      326000.0,
+      452000.0
+    ],
+    "empirical_midpoint": 389000.0,
+    "canonical_over_empirical_mid": 2.467866323907455,
+    "canonical_over_profile": 1.000642375334225
+  },
+  "B_family": {
+    "form": "B(u)=B0*u^2/(1+u^2)*exp(-u^4/2), B0>=0",
+    "sigma_per_B0_peak": 1.287005038952484e-17,
+    "B0_max_from_GW170817": 77.69977348448595,
+    "holonomy_seconds_at_B0": {
+      "0": 0.0,
+      "B0_max": 4.644115461167725e-11,
+      "1_excluded_if_above_max": 5.977e-13
+    }
+  },
+  "P_of_X": {
+    "definition": "P=X+X*sqrt(X^2+eps)/Lambda^4",
+    "samples": [
+      {
+        "eps": 0.01,
+        "P_X_min_on_sample": 1.1,
+        "c_s2_min_on_sample": 0.3846160846061573,
+        "ghost_free": true,
+        "hyperbolic": true
+      },
+      {
+        "eps": 1e-06,
+        "P_X_min_on_sample": 1.001,
+        "c_s2_min_on_sample": 0.38461538461539163,
+        "ghost_free": true,
+        "hyperbolic": true
+      },
+      {
+        "eps": 1e-12,
+        "P_X_min_on_sample": 1.000001,
+        "c_s2_min_on_sample": 0.38461538461538464,
+        "ghost_free": true,
+        "hyperbolic": true
+      },
+      {
+        "eps": 0.0,
+        "P_X_min_on_sample": 1.0,
+        "c_s2_min_on_sample": 0.38461538461538464,
+        "ghost_free": true,
+        "hyperbolic": true
+      }
+    ]
+  }
+}

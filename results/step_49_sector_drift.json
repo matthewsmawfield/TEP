@@ -1,0 +1,68 @@
+{
+  "step": "step_49_sector_drift",
+  "why_not_homogeneous": "Homogeneous Pi^2 was only the lapse zero-mode closure. The source is rho_* A_phi, which is zero in the voids, so the normal momentum is zero there.",
+  "landscape": {
+    "rayleigh": 28.355483640526245,
+    "sigma": 0.125,
+    "u_void": -1.4,
+    "lambda_star": -38.569565576918656,
+    "lapse_preserves_mean_K": true,
+    "mean_Nf": 8.326672684688674e-17,
+    "constraint_converged": true,
+    "ham_max": 1.147489381292388e-09,
+    "pi_cap": 0.8782888542719719,
+    "pi_energy_over_lambda": 0.009999999999999998
+  },
+  "rates": {
+    "H_drift_matter": 4.169411073739547,
+    "H_drift_void": 0.0,
+    "void_initial_spatial_band": 0.34987040307633943,
+    "band_limit": 0.01
+  },
+  "z_of_L": [
+    {
+      "tau": 0.0,
+      "L": 0.0,
+      "z": 0.0,
+      "A_clock_emitter": 0.7353794967990681,
+      "A_clock_observer": 0.7353794967990681,
+      "H_drift": 4.169411073739547,
+      "delta_u_matter": 0.0,
+      "void_secular": 0.0,
+      "void_in_band": true
+    },
+    {
+      "tau": 0.08000000000000006,
+      "L": 0.08000000000000006,
+      "z": 0.39591886901396656,
+      "A_clock_emitter": 0.5268067601367958,
+      "A_clock_observer": 0.7353794967990681,
+      "H_drift": 4.169411073739547,
+      "delta_u_matter": 0.33355288589916393,
+      "void_secular": 0.0,
+      "void_in_band": true
+    },
+    {
+      "tau": 0.16000000000000011,
+      "L": 0.16000000000000011,
+      "z": 0.9485894888692323,
+      "A_clock_emitter": 0.37739067207316673,
+      "A_clock_observer": 0.7353794967990681,
+      "H_drift": 4.169411073739547,
+      "delta_u_matter": 0.6671057717983282,
+      "void_secular": 0.0,
+      "void_in_band": true
+    },
+    {
+      "tau": 0.24000000000000019,
+      "L": 0.24000000000000019,
+      "z": 1.7200728354748422,
+      "A_clock_emitter": 0.2703528696762611,
+      "A_clock_observer": 0.7353794967990681,
+      "H_drift": 4.169411073739547,
+      "delta_u_matter": 1.0006586576974923,
+      "void_secular": 0.0,
+      "void_in_band": true
+    }
+  ]
+}

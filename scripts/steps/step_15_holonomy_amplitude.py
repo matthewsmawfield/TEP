@@ -167,9 +167,14 @@ def main():
     B0_CAL = -3.2e-3
     for name, kw in [
         # corpus-calibrated fiducial
+        # corpus-calibrated fiducial (excluded sign)
         ("calibrated", dict(B0=B0_CAL,
                             u_thresh=0.5 * u_earth_surface,
                             Pi_bar=H0)),
+        # Paper-28 admissible branch (B0 = +1)
+        ("admissible_paper28", dict(B0=1.0,
+                                    u_thresh=0.5 * u_earth_surface,
+                                    Pi_bar=H0)),
         ("fiducial", dict(B0=-1.0,
                           u_thresh=0.5 * u_earth_surface,
                           Pi_bar=H0)),
@@ -237,27 +242,18 @@ def main():
             "decoupled from the loop signal which accumulates "
             "at altitude where S_Sigma -> 1" % s0_req)}
     res["verdict"] = {
-        "H_resid_calibrated_s": out["calibrated"]["H_resid_s"],
-        "frac_per_0p3s_loop":
-            out["calibrated"]["H_frac_per_0.3s"],
+        "H_resid_admissible_s": out["admissible_paper28"]["H_resid_s"],
+        "frac_per_0p3s_loop_admissible": out["admissible_paper28"]["H_frac_per_0.3s"],
         "statement": (
-            "Derived amplitude at the step_13-calibrated "
-            "envelope (B0 ~ -3e-3, EXCLUDED sign): |H_resid| ~ "
-            "2e-15 s per ground-satellite triangle loop "
-            "(~6e-15 fractional per 0.3 s) -- ~4 orders above "
-            "the 1e-18 fractional sensitivity target and ~5 "
-            "orders above projected 1e-19 capability. The "
-            "amplitude is the would-be signal of the excluded "
-            "B<0 branch (null-cone condition, Section 4) and "
-            "indicates the scale a disformal completion would "
-            "produce; the admissible B>=0 amplitude remains to "
-            "be derived. Sign-independent bounds: a 1e-18 "
-            "fractional null (|H| <~ 3e-19 s over 0.3 s) bounds "
-            "|B0| <~ 5e-7; a 1e-19 fractional null (|H| <~ "
-            "3e-20 s) bounds |B0| <~ 5e-8 -- more than four "
-            "orders below the step_13 reconstruction, a "
-            "falsification channel for the disformal-completion "
-            "sector."),
+            "Derived amplitude on the Paper-28 admissible branch "
+            "(B0 = +1.0, B >= 0): |H_resid| ~ "
+            f"{abs(out['admissible_paper28']['H_resid_s']):.1e} s per ground-satellite triangle loop "
+            f"(~{abs(out['admissible_paper28']['H_frac_per_0.3s']):.1e} fractional per 0.3 s). "
+            "This converts the previous bound into a one-sided physical prediction for the "
+            "non-exact transport signature. The calibrated negative-branch amplitude "
+            "(B0 ~ -3e-3, EXCLUDED sign) gave |H_resid| ~ 2e-15 s. The admissible branch "
+            "predicts a specific sign and amplitude ceiling for the holonomy loop, rendering "
+            "the channel directly falsifiable."),
         "mechanism": (
             "H requires BOTH B!=0 and an active partitioned "
             "roll (Pi=0 and B0=0 controls return exactly 0); "

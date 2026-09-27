@@ -1,0 +1,49 @@
+{
+  "profile": "U=-ln(1-2M/r)",
+  "A": "exp(-U)=1-2M/r",
+  "flux_residual_max": 4.440892098500626e-16,
+  "approach": [
+    {
+      "r_over_rh": 10.0,
+      "A": 0.9,
+      "lapse": 0.9486832980505138,
+      "matter_clock_A_times_lapse": 0.8538149682454624,
+      "halted": false
+    },
+    {
+      "r_over_rh": 2.0,
+      "A": 0.5,
+      "lapse": 0.7071067811865476,
+      "matter_clock_A_times_lapse": 0.3535533905932738,
+      "halted": false
+    },
+    {
+      "r_over_rh": 1.1,
+      "A": 0.09090909090909094,
+      "lapse": 0.3015113445777637,
+      "matter_clock_A_times_lapse": 0.027410122234342162,
+      "halted": false
+    },
+    {
+      "r_over_rh": 1.01,
+      "A": 0.00990099009900991,
+      "lapse": 0.09950371902099896,
+      "matter_clock_A_times_lapse": 0.0009851853368415748,
+      "halted": false
+    },
+    {
+      "r_over_rh": 1.001,
+      "A": 0.0009990009990008542,
+      "lapse": 0.03160697706204841,
+      "matter_clock_A_times_lapse": 3.157540166038344e-05,
+      "halted": false
+    },
+    {
+      "r_over_rh": 1.0001,
+      "A": 9.999000099991662e-05,
+      "lapse": 0.009999500037497706,
+      "matter_clock_A_times_lapse": 9.99850018748062e-07,
+      "halted": false
+    }
+  ]
+}

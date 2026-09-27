@@ -55,9 +55,9 @@
       -0.15405465687148268,
       -0.25815302383584415,
       -0.43572834722361153,
-      NaN,
-      NaN,
-      NaN
+      null,
+      null,
+      null
     ],
     "note": "conformal drift redshift vs converging-flow Doppler: first-order cancellation is the <H>=theta/3 statement"
   },

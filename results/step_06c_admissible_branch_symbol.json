@@ -1,0 +1,20 @@
+{
+  "step": "step_06c_admissible_branch_symbol",
+  "branch": "B >= 0",
+  "worst_Z_t": 1.0,
+  "worst_Z_s": 1.0,
+  "n_samples": 270,
+  "excluded_branch_example": {
+    "B": -5.0,
+    "w": 0.0,
+    "rho": 1.0,
+    "Z_t": -4.0,
+    "Z_s": -0.6666666666666667
+  },
+  "cone_nondegeneracy": "1 + (B/A^2) X stays positive when |(B/A^2) X| is bounded by the late-time cone split ~1e-15",
+  "not_claimed": [
+    "noncanonical P(X) characteristic speeds",
+    "black-hole interior where |(B/A^2) X| is not small"
+  ],
+  "statement": "On B>=0, -1<=w<=1, rho>=0 the disformal perfect-fluid principal coefficients satisfy Z_t>=1 and Z_s>=1. The elliptic examples sit on B<0."
+}

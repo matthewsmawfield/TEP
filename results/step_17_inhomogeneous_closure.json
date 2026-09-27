@@ -11,7 +11,7 @@
       "V": 0.0,
       "dV": 0.0,
       "required_R3": 0.0,
-      "required_LR_LPl": Infinity
+      "required_LR_LPl": null
     },
     "z=1.0": {
       "u": 0.6931471805599453,

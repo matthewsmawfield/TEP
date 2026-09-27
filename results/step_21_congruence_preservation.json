@@ -121,7 +121,7 @@
     "f_min": -30.135926405268076,
     "f_max": 137.72071086562815,
     "f_well_mean": 14.233427085809918,
-    "f_void_mean": NaN,
+    "f_void_mean": null,
     "sign_changing": true,
     "interpretation": "f < 0 in potential-dominated wells (local expansion), f > 0 in negative-V voids (local contraction): the eternal slice is a steady-state circulation, not a pointwise-static geometry"
   },

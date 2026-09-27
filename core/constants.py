@@ -117,11 +117,36 @@ BETA_GEOM = 1.50e-4              # Mass-sector geometric coupling
 # =============================================================================
 
 # Canonical galaxy-scale observable response coefficient (Paper 11).
+# Declared channel-response benchmark (kappa_canonical in
+# core/parameter_registry.yaml), applied corpus-wide without domain-specific
+# refitting. It is NOT the raw clock ratio: the nested
+# spectroscopic-to-Cepheid computation (TEP-H0 step_61) shows the clock
+# channel contributes |kappa| of order unity at most (KAPPA_NESTED below),
+# so the measured response is carried by the transfer/screening sector.
 KAPPA_GAL = 9.6e5                # mag
 KAPPA_GAL_UNCERTAINTY = 4.0e5    # mag
 
+# Null-channel bound on the raw conformal clock ratio (TEP-H0 step_61). The
+# spectroscopic and Cepheid clocks share each galactic potential, so the
+# common rate cancels; the residual core-to-disk contrast difference gives
+# kappa_nested = -7.5e-4 mag (delta_mu ~ 3e-10 mag). Alternative
+# reference-clock conventions move the sign but leave |kappa| of order
+# unity at most -- the raw clock channel cannot supply the measured
+# kappa_Cep and the observed response is not a clock-ratio artifact.
+KAPPA_NESTED = -7.5e-4           # mag
+
 # Stellar evolution index (M/L ~ t^n from stellar isochrones)
 ALPHA_NUCLEAR = 0.7
+
+# Fixed response-transfer exponent (Paper 12). The magnitude-to-kernel
+# transfer K_gal = kappa * ln(10) / (2.5 * n_ref) uses this fixed
+# convention at every redshift; it is NOT the stellar-population
+# exponent and must not be renormalised by population-dependent n_SPS.
+RESPONSE_KERNEL_N_REF = 0.7
+
+# Default stellar-population-synthesis M/L evolution index, applied only
+# when the response is propagated into a stellar-mass correction.
+SPS_ML_EXPONENT_DEFAULT = ALPHA_NUCLEAR
 
 # Reference halo mass for potential calculations
 LOG_MH_REF = 12.0
