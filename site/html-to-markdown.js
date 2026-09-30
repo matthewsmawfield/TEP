@@ -94,7 +94,7 @@ class HTMLToMarkdownConverter {
         // that would otherwise be misread as markup or table separators.
         // Display blocks are normalised to a single line.
         const mathBlocks = [];
-        html = html.replace(/\$\$[\s\S]*?\$\$|\$[^$\n]+?\$/g, (match) => {
+        html = html.replace(/(?<!\\)\$\$[\s\S]*?\$\$|(?<!\\)\$[^$\n]+?\$/g, (match) => {
             let math = match;
             if (math.startsWith('$$')) {
                 const inner = math.slice(2, -2).replace(/\s+/g, ' ').trim();
@@ -136,7 +136,7 @@ class HTMLToMarkdownConverter {
         });
 
         html = html.replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, '\n> $1\n\n');
-        html = html.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, (match, content) => {
+        html = html.replace(/<p\b[^>]*>([\s\S]*?)<\/p>/gi, (match, content) => {
             const stripped = content.split('\n').map((line) => line.trim()).filter((line) => line.length > 0).join(' ').replace(/ {2,}/g, ' ').trim();
             return `\n\n${stripped}\n\n`;
         });
@@ -164,7 +164,11 @@ class HTMLToMarkdownConverter {
         html = html.replace(/@@MATH_(\d+)@@/g, (match, idx) => this.decodeEntities(mathBlocks[Number(idx)]));
 
         // Final cleanup: strip leading spaces, collapse blank lines
-        html = html.split('\n').map((line) => line.replace(/^\s+/, '')).join('\n');
+        let inFence = false;
+        html = html.split('\n').map((line) => {
+            if (line.trimStart().startsWith('```')) inFence = !inFence;
+            return inFence ? line : line.replace(/^\s+/, '');
+        }).join('\n');
         return html.replace(/\n{3,}/g, '\n\n').trim();
     }
 

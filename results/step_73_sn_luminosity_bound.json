@@ -1,0 +1,42 @@
+{
+  "signature": "dm(z) = -7.5 eps log10(1+z); unabsorbable by ladder normalization (z-shape, not offset)",
+  "residual_floors_mag": [
+    0.1,
+    0.15
+  ],
+  "eps_bounds": {
+    "z05": {
+      "floor_0.10": 0.07571831449690097,
+      "floor_0.15": 0.11357747174535146
+    },
+    "z1": {
+      "floor_0.10": 0.04429237459849817,
+      "floor_0.15": 0.06643856189774724
+    }
+  },
+  "eps_allowed_range": "eps <= ~0.05-0.10: the binding point is the high-z end of the calibrated SN baseline (eps <= 0.04-0.07 at z=1; 0.08-0.11 at z=0.5)",
+  "eps_full_tracking": 1.0,
+  "eps_critical": 0.6666666666666666,
+  "eps_excluded_by_SN": "eps = 1 predicts -2.26 mag at z=1, ~15-23x the residual floor: full k-mouflage interior tracking is falsified by the SN ladder",
+  "discriminant_at_bound": [
+    {
+      "eps": 0.04,
+      "M_det_exponent": -0.88,
+      "separation_vs_GR_exponent": 1.88,
+      "dSN_mag_at_z1": -0.09030899869919436
+    },
+    {
+      "eps": 0.07,
+      "M_det_exponent": -0.79,
+      "separation_vs_GR_exponent": 1.79,
+      "dSN_mag_at_z1": -0.15804074772359014
+    },
+    {
+      "eps": 0.1,
+      "M_det_exponent": -0.7,
+      "separation_vs_GR_exponent": 1.7,
+      "dSN_mag_at_z1": -0.22577249674798588
+    }
+  ],
+  "verdict": "SN residuals bound the interior tracking fraction to eps <= ~0.05-0.10 \u2014 far below the eps=2/3 neutralization and the eps=1 flip. The siren discriminant survives at near-naive strength: M_det ~ (1+z)^{-0.70..-0.85} vs GR's (1+z), separation ~(1+z)^{1.7-1.85}. Interiors are effectively pinned against the ambient drift over the SN baseline; deriving the small residual eps from the interior solution (local well depth vs ambient drift, plus shallower early wells) is the remaining item, shared with the compact-star solver."
+}

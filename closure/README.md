@@ -8,15 +8,26 @@ project so that the definitive closure work lives with the foundational paper.
 - `CORPUS_DERIVATION_GR.md` — the corpus-level derivation skeleton
   (two-metric structure, field equations, Theorems 1–2, holonomy gauge
   invariance, redshift endpoint identity, PPN screening map, EFT closure).
-- `closure_status.yaml` — the closure status registry.
-- **Definitive screening closure**: `../scripts/steps/step_27_master_action_screening_closure.py`
-  → `../results/step_27_master_action_screening_closure.json`, cited as
-  Appendix E R11 and presented in §2.2(ii). The kinetic completion
-  `P(X,phi) = X - V(phi) + X|X|/Lambda^4` with `Lambda^4 = M_Pl^2 H_0^2`
-  derives `S_Sigma = [1 + (g/g_t)^2]^-1`, `g_t = cH_0/(2 beta_A^2)`, and the
-  pairwise projection `[1 + (R_s/s)^4]^-1`, `R_s = sqrt(GM/g_t)`, at zero free
-  parameters; the quartic `V = lambda phi^4/4` carries the clock-amplitude
-  sector `S_A = min[1, (rho_bar/rho_T)^{1/3}]`.
+- `closure_status.yaml` — historical registry with a current reconciliation header.
+  The older cuscuton/inverse-power entries and their completion labels are not
+  the current completion authority. Existing derivations must be located before
+  an old open-task flag is treated as a request to derive them again.
+- **Kinetic realization and benchmarks**:
+  `../scripts/steps/step_27_master_action_screening_closure.py` →
+  `../results/step_27_master_action_screening_closure.json`, cited as Appendix E R11.
+  The manuscript adopts `P = X - V + X|X|/Lambda^4`; nested pair projections,
+  canonical-only controls and alternative low-gradient branches retain their
+  explicit assumptions. A single-source gradient, finite-pair response and
+  fitted lens-aperture mass are not interchangeable screening quantities.
+- **Static field and boundary response**: steps 53 and 76 now use validated
+  finite-volume profiles and distinguish infinitesimal response from nonlinear
+  finite excursions. Their outputs supersede the old shooting-based values;
+  static depth `S_A`, fluctuation covariance and dynamical transmission are
+  distinct. Appendix E R17 gives the manuscript scope.
+- **Existing radiative and siren calculations**: steps 69–71 retain their
+  explicit source, propagation and population assumptions. Step 78 contains an
+  existing landscape-transport diagnostic; its expected result artifact was not
+  located during reconciliation, so it is not represented as a verified output.
 
 ## Supporting analyses
 

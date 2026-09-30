@@ -44,69 +44,71 @@ def run():
             "kinetic": "canonical",
             "potential": "unified_quartic_plus_plateau",
             "lambda": LAMBDA_REFERENCE,
-            "beta_A": -1.0
+            "beta_A": -1.0,
+            "lambda_branch_note": (
+                "charges evaluated at the fiducial lambda_ref = 7.526e-71; "
+                "at the operative Cassini branch lambda_Cassini = 1e5*lambda_ref "
+                "the embedded charge response is ~10-300x smaller (step_67), so "
+                "the reference-branch charges quoted here are conservative upper "
+                "bounds on the compact-body scalar charges"
+            )
         },
         "bodies": {}
     }
 
     print("\n[B] Solving Static Profiles and Extracting Charges")
-    
-    # 1. Solve Neutron Star
-    print(f"Solving Neutron Star (M={M_NS/M_SUN:.2f} M_sun, R={R_NS/1000:.1f} km)...")
-    try:
-        sol_ns = solve_sphere(M_NS, R_NS, LAMBDA_REFERENCE, x_max=1e6)
-        diag_ns = diagnostics(sol_ns, 1e5) # far field charge
-        alpha_ns = diag_ns['source_charge_ratio'] * (-1.0) # alpha = beta_A * S = -1 * S
-        print(f"  -> Converged! Effective charge \alpha_NS = {alpha_ns:.4e}")
-        results["bodies"]["NS"] = {
-            "mass_Msun": M_NS/M_SUN,
-            "radius_m": R_NS,
-            "S_charge_ratio": diag_ns['source_charge_ratio'],
-            "alpha_eff": alpha_ns
-        }
-    except Exception as e:
-        print(f"  -> Solver failed for NS: {e}")
-        results["bodies"]["NS"] = {"error": str(e)}
-        alpha_ns = None
 
-    # 2. Solve White Dwarf
-    print(f"Solving White Dwarf (M={M_WD/M_SUN:.3f} M_sun, R={R_WD/1000:.1f} km)...")
-    try:
-        sol_wd = solve_sphere(M_WD, R_WD, LAMBDA_REFERENCE, x_max=1e6)
-        diag_wd = diagnostics(sol_wd, 1e5)
-        alpha_wd = diag_wd['source_charge_ratio'] * (-1.0)
-        print(f"  -> Converged! Effective charge \alpha_WD = {alpha_wd:.4e}")
-        results["bodies"]["WD"] = {
-            "mass_Msun": M_WD/M_SUN,
-            "radius_m": R_WD,
-            "S_charge_ratio": diag_wd['source_charge_ratio'],
-            "alpha_eff": alpha_wd
-        }
-    except Exception as e:
-        print(f"  -> Solver failed for WD: {e}")
-        results["bodies"]["WD"] = {"error": str(e)}
-        alpha_wd = None
+    LAMBDAS = {
+        "lambda_ref": LAMBDA_REFERENCE,
+        "lambda_cassini": LAMBDA_REFERENCE * 1e5,
+    }
+    branches = {}
+
+    for tag, lam in LAMBDAS.items():
+        print(f"\n  -- {tag} (lam = {lam:.3e}) --")
+        branch = {}
+        for name, M, R in (("NS", M_NS, R_NS), ("WD", M_WD, R_WD)):
+            print(f"Solving {name} (M={M/M_SUN:.3f} M_sun, R={R/1000:.1f} km)...")
+            try:
+                sol = solve_sphere(M, R, lam, x_max=1e6)
+                s_ratio = diagnostics(sol, 1e5)['source_charge_ratio']
+                alpha = s_ratio * (-1.0) # alpha = beta_A * S = -1 * S
+                print(f"  -> Converged! Effective charge \\alpha_{name} = {alpha:.4e}")
+                branch[name] = {
+                    "mass_Msun": M/M_SUN,
+                    "radius_m": R,
+                    "S_charge_ratio": s_ratio,
+                    "alpha_eff": alpha
+                }
+            except Exception as e:
+                print(f"  -> Solver failed for {name}: {e}")
+                branch[name] = {"error": str(e)}
+        results["bodies"][tag] = branch
+        branches[tag] = branch
 
     print("\n[C] Pulsar Measurement Requirement")
-    if alpha_ns is not None and alpha_wd is not None:
-        diff = abs(alpha_ns - alpha_wd)
-        print(f"Predicted absolute charge difference: |\alpha_NS - \alpha_WD| = {diff:.4e}")
-        print(f"Observational strict bound limit: < {CHARGE_DIFF_BOUND:.1e}")
-        
+    results["constraint"] = {}
+    for tag, branch in branches.items():
+        a_ns = branch.get("NS", {}).get("alpha_eff")
+        a_wd = branch.get("WD", {}).get("alpha_eff")
+        if a_ns is None or a_wd is None:
+            results["constraint"][tag] = {"error": "Missing charge data"}
+            continue
+        diff = abs(a_ns - a_wd)
         passes = diff < CHARGE_DIFF_BOUND
-        results["constraint"] = {
+        print(f"[{tag}] |\\alpha_NS - \\alpha_WD| = {diff:.4e} vs bound {CHARGE_DIFF_BOUND:.1e} -> {'PASS' if passes else 'EXCEEDS'}")
+        results["constraint"][tag] = {
             "predicted_diff": diff,
             "observational_bound": CHARGE_DIFF_BOUND,
-            "passes_without_refitting": passes
+            "passes_without_refitting": passes,
+            "margin_over_bound": CHARGE_DIFF_BOUND / diff if diff > 0 else None,
         }
-        
-        if passes:
-            print("=> RESULT: The frozen TEP screening architecture NATURALLY SUPPRESSES differential charges below the pulsar constraint.")
-        else:
-            print("=> RESULT: The predicted differential charge EXCEEDS the pulsar constraint. The screening mechanism is insufficient without modification.")
+    results["constraint"]["operative_branch"] = "lambda_cassini"
+    op = results["constraint"].get("lambda_cassini", {})
+    if op.get("passes_without_refitting"):
+        print("=> RESULT: At the operative Cassini coupling the frozen TEP screening architecture naturally suppresses differential charges below the pulsar constraint.")
     else:
-        print("=> RESULT: Could not compute differential charge due to solver failure. This indicates the strong-field profiles require a modified solution method or the unified potential breaks down for these compactnesses.")
-        results["constraint"] = {"error": "Missing charge data"}
+        print("=> RESULT: The operative-branch differential charge EXCEEDS the pulsar constraint. The screening mechanism is insufficient without modification.")
 
     # Save output
     outdir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")

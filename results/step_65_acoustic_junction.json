@@ -1,0 +1,211 @@
+{
+  "question": "does the acoustic sector bound z_j from below?",
+  "sector": "two_branch",
+  "k": 16.03,
+  "deep_ambient_scan_R=2.00": {
+    "rows": [
+      {
+        "u_amb": 0.0,
+        "u_c": 0.7701535722060409,
+        "u_loc": 0.7701535722060409,
+        "iters": 22
+      },
+      {
+        "u_amb": 1.0,
+        "u_c": 1.5221417123756074,
+        "u_loc": 0.5221417123756074,
+        "iters": 16
+      },
+      {
+        "u_amb": 2.0,
+        "u_c": 2.3431596063203166,
+        "u_loc": 0.3431596063203166,
+        "iters": 12
+      },
+      {
+        "u_amb": 3.0,
+        "u_c": 3.219948702904885,
+        "u_loc": 0.219948702904885,
+        "iters": 10
+      },
+      {
+        "u_amb": 4.0,
+        "u_c": 4.1383684168078485,
+        "u_loc": 0.1383684168078485,
+        "iters": 8
+      },
+      {
+        "u_amb": 5.0,
+        "u_c": 5.08591801423465,
+        "u_loc": 0.08591801423465029,
+        "iters": 7
+      },
+      {
+        "u_amb": 6.0,
+        "u_c": 6.0528877650518265,
+        "u_loc": 0.05288776505182646,
+        "iters": 6
+      },
+      {
+        "u_amb": 7.0,
+        "u_c": 7.032373783674189,
+        "u_loc": 0.032373783674189305,
+        "iters": 5
+      }
+    ],
+    "starvation_exponent": -0.4650649409773026
+  },
+  "deep_ambient_scan_R=0.50": {
+    "rows": [
+      {
+        "u_amb": 0.0,
+        "u_c": 0.9590283614690558,
+        "u_loc": 0.9590283614690558,
+        "iters": 29
+      },
+      {
+        "u_amb": 1.0,
+        "u_c": 1.6665192614151147,
+        "u_loc": 0.6665192614151147,
+        "iters": 20
+      },
+      {
+        "u_amb": 2.0,
+        "u_c": 2.4475895038427726,
+        "u_loc": 0.44758950384277263,
+        "iters": 15
+      },
+      {
+        "u_amb": 3.0,
+        "u_c": 3.291852353071002,
+        "u_loc": 0.2918523530710022,
+        "iters": 11
+      },
+      {
+        "u_amb": 4.0,
+        "u_c": 4.185943014144175,
+        "u_loc": 0.1859430141441747,
+        "iters": 9
+      },
+      {
+        "u_amb": 5.0,
+        "u_c": 5.1164770963947,
+        "u_loc": 0.11647709639469994,
+        "iters": 8
+      },
+      {
+        "u_amb": 6.0,
+        "u_c": 6.072116834623668,
+        "u_loc": 0.07211683462366825,
+        "iters": 6
+      },
+      {
+        "u_amb": 7.0,
+        "u_c": 7.044309295265965,
+        "u_loc": 0.04430929526596472,
+        "iters": 6
+      }
+    ],
+    "starvation_exponent": -0.45365553896315375
+  },
+  "deep_ambient_scan_R=0.05": {
+    "rows": [
+      {
+        "u_amb": 0.0,
+        "u_c": 1.205365465986425,
+        "u_loc": 1.205365465986425,
+        "iters": 41
+      },
+      {
+        "u_amb": 1.0,
+        "u_c": 1.8648386927522713,
+        "u_loc": 0.8648386927522713,
+        "iters": 26
+      },
+      {
+        "u_amb": 2.0,
+        "u_c": 2.5983356571055207,
+        "u_loc": 0.5983356571055207,
+        "iters": 18
+      },
+      {
+        "u_amb": 3.0,
+        "u_c": 3.400240579964068,
+        "u_loc": 0.40024057996406803,
+        "iters": 14
+      },
+      {
+        "u_amb": 4.0,
+        "u_c": 4.260173994786849,
+        "u_loc": 0.2601739947868493,
+        "iters": 11
+      },
+      {
+        "u_amb": 5.0,
+        "u_c": 5.165383585651336,
+        "u_loc": 0.1653835856513357,
+        "iters": 9
+      },
+      {
+        "u_amb": 6.0,
+        "u_c": 6.1034349348637615,
+        "u_loc": 0.10343493486376154,
+        "iters": 7
+      },
+      {
+        "u_amb": 7.0,
+        "u_c": 7.063974735751933,
+        "u_loc": 0.06397473575193313,
+        "iters": 6
+      }
+    ],
+    "starvation_exponent": -0.4359421716072529
+  },
+  "depth_decomposition": {
+    "z=1100": {
+      "u_total": 7.00397413672268,
+      "u_amb_inferred": 6.95701772584381,
+      "u_loc_inferred": 0.04695641087886911,
+      "ambient_fraction": 0.993295747533865,
+      "note": "well reference R=0.5 r* (galactic-scale); starvation law u_loc = 1.102 exp(-0.454 u_amb)"
+    },
+    "z=100": {
+      "u_total": 4.61512051684126,
+      "u_amb_inferred": 4.470014825230935,
+      "u_loc_inferred": 0.1451056916103242,
+      "ambient_fraction": 0.968558634367009,
+      "note": "well reference R=0.5 r* (galactic-scale); starvation law u_loc = 1.102 exp(-0.454 u_amb)"
+    },
+    "z=10": {
+      "u_total": 2.3978952727983707,
+      "u_amb_inferred": 1.9408214196478921,
+      "u_loc_inferred": 0.45707385315047827,
+      "ambient_fraction": 0.8093853979631611,
+      "note": "well reference R=0.5 r* (galactic-scale); starvation law u_loc = 1.102 exp(-0.454 u_amb)"
+    },
+    "z=1": {
+      "u_total": 0.6931471805599453,
+      "u_amb_inferred": 2.866789547024898e-25,
+      "u_loc_inferred": 1.1024710729252298,
+      "ambient_fraction": 4.1359030627651384e-25,
+      "note": "well reference R=0.5 r* (galactic-scale); starvation law u_loc = 1.102 exp(-0.454 u_amb)"
+    }
+  },
+  "starvation_law_fit": {
+    "u_loc0": 1.1024710729252298,
+    "decay_per_u_amb": -0.45365553896315375,
+    "reference": "R=0.50"
+  },
+  "acoustic_bound": {
+    "verdict": "no lower bound on z_j from the acoustic sector",
+    "reasoning": [
+      "observed redshift = endpoint clock ratio (Rule 9): u_emit = ln(1+z) independent of the ambient map shape",
+      "r_s in matter units is relational inside the emitter environment; a uniform clock shift rescales all rates equally and leaves r_s invariant",
+      "the tail's eta_lb(z) divergence (step_64: 3.6e5x at z=1100) is a bookkeeping map, not the observed distance-redshift relation; distances are set by the constraint-slice geometry, not the ambient image",
+      "ambient level DOES modulate well interiors via starvation (u_loc ~ e^{-0.45 u_amb}) -- sources on deep ambient are ~99% ambient-depth -- but that is a transport/structure effect, not an r_s shift"
+    ],
+    "flrw_image_reading": "would fail catastrophically (eta_lb ratio 1.7x at z=2 growing to 3.6e5x at z=1100) -- that reading is the pre-derivation ansatz the Projection Dictionary retires",
+    "binding_constraint": "regularity only: z_j <= 0.687 (step_64); physical z_j is where the well network hands the ambient its drift",
+    "remaining_dependency": "well-frame r_s and peak morphology under deep-ambient nesting = AUD-6 / T6.3 (constraint-slice machinery); this step establishes only that the ambient MAP does not supply the bound"
+  }
+}

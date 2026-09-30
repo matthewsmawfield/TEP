@@ -3,25 +3,52 @@
     "kinetic": "canonical",
     "potential": "unified_quartic_plus_plateau",
     "lambda": 7.526e-71,
-    "beta_A": -1.0
+    "beta_A": -1.0,
+    "lambda_branch_note": "charges evaluated at the fiducial lambda_ref = 7.526e-71; at the operative Cassini branch lambda_Cassini = 1e5*lambda_ref the embedded charge response is ~10-300x smaller (step_67), so the reference-branch charges quoted here are conservative upper bounds on the compact-body scalar charges"
   },
   "bodies": {
-    "NS": {
-      "mass_Msun": 1.46,
-      "radius_m": 12000.0,
-      "S_charge_ratio": 0.0006555064727652347,
-      "alpha_eff": -0.0006555064727652347
+    "lambda_ref": {
+      "NS": {
+        "mass_Msun": 1.46,
+        "radius_m": 12000.0,
+        "S_charge_ratio": 0.0006555064727652347,
+        "alpha_eff": -0.0006555064727652347
+      },
+      "WD": {
+        "mass_Msun": 0.18100000000000002,
+        "radius_m": 10000000.0,
+        "S_charge_ratio": 0.004962074426243104,
+        "alpha_eff": -0.004962074426243104
+      }
     },
-    "WD": {
-      "mass_Msun": 0.18100000000000002,
-      "radius_m": 10000000.0,
-      "S_charge_ratio": 0.004962074426243104,
-      "alpha_eff": -0.004962074426243104
+    "lambda_cassini": {
+      "NS": {
+        "mass_Msun": 1.46,
+        "radius_m": 12000.0,
+        "S_charge_ratio": 3.675768731727087e-06,
+        "alpha_eff": -3.675768731727087e-06
+      },
+      "WD": {
+        "mass_Msun": 0.18100000000000002,
+        "radius_m": 10000000.0,
+        "S_charge_ratio": 2.6847526558800376e-05,
+        "alpha_eff": -2.6847526558800376e-05
+      }
     }
   },
   "constraint": {
-    "predicted_diff": 0.004306567953477869,
-    "observational_bound": 0.002,
-    "passes_without_refitting": false
+    "lambda_ref": {
+      "predicted_diff": 0.004306567953477869,
+      "observational_bound": 0.002,
+      "passes_without_refitting": false,
+      "margin_over_bound": 0.4644069295098093
+    },
+    "lambda_cassini": {
+      "predicted_diff": 2.317175782707329e-05,
+      "observational_bound": 0.002,
+      "passes_without_refitting": true,
+      "margin_over_bound": 86.3119671336825
+    },
+    "operative_branch": "lambda_cassini"
   }
 }

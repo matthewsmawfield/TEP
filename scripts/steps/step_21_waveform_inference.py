@@ -64,29 +64,39 @@ def run_derivation():
     print(r"  Fractional strain: \tilde{h} = h")
     print(r"")
     print(r"The GR template matches the phase evolution:")
-    print(r"  d\tilde{f}_o / d\tilde{\tau}_o \propto \mathcal{M}_{\rm det}^{5/3} \tilde{f}_o^{11/3}")
+    print(r"  d\tilde{f}_o / d\tilde{\tau}_o \propto (G_{\rm loc,o} \mathcal{M}_{\rm det})^{5/3} \tilde{f}_o^{11/3}")
+    print(r"where G_{\rm loc,o} = G_* A_o^2 (1+\alpha_o^2) is the locally measured Cavendish")
+    print(r"constant: what a waveform pipeline reports as 'mass' is the dimensionless")
+    print(r"combination (G M)^{5/3}, and the G inserted is the lab-measured one.")
     print(r"")
     print(r"Deriving this from the TEP source dynamics:")
     print(r"  d\tilde{f}_o / d\tilde{\tau}_o = (1 / A_o) d(f_o / A_o) / dt = (1 / A_o^2) df_e / dt")
-    print(r"We know the Einstein-frame phase evolution is: df_e / dt \propto M_e^{5/3} f_e^{11/3}")
-    print(r"Substituting this in:")
-    print(r"  d\tilde{f}_o / d\tilde{\tau}_o \propto (1 / A_o^2) M_e^{5/3} f_e^{11/3}")
-    print(r"  = (1 / A_o^2) M_e^{5/3} (A_o \tilde{f}_o)^{11/3} = M_e^{5/3} A_o^{5/3} \tilde{f}_o^{11/3}")
+    print(r"The Einstein-frame phase evolution is df_e / dt \propto (G_{\rm dyn} M_e)^{5/3} f_e^{11/3},")
+    print(r"with G_{\rm dyn} = G_*(1+\alpha_A\alpha_B) carrying the pair scalar exchange. Substituting:")
+    print(r"  (G_{\rm loc,o} \mathcal{M}_{\rm det})^{5/3} \tilde{f}_o^{11/3}")
+    print(r"  = (1 / A_o^2) (G_{\rm dyn} M_e)^{5/3} (A_o \tilde{f}_o)^{11/3}")
+    print(r"  = (G_{\rm dyn} M_e)^{5/3} A_o^{5/3} \tilde{f}_o^{11/3}")
     print(r"")
-    print(r"Equating this to the GR template gives the inferred chirp mass:")
-    print(r"  \mathcal{M}_{\rm det}^{5/3} = M_e^{5/3} A_o^{5/3}  =>  \mathcal{M}_{\rm det} = M_e A_o")
-    print(r"Since M_e = A_e \widetilde{\mathcal{M}}, we get:")
-    print(r"  \mathcal{M}_{\rm det} = A_o A_e \widetilde{\mathcal{M}} = A_o^2 \widetilde{\mathcal{M}} / (1+z)")
-    print(r"For A_o = 1 (today), \mathcal{M}_{\rm det} = \widetilde{\mathcal{M}} / (1+z).")
+    print(r"Equating gives the frame-consistent inferred chirp mass:")
+    print(r"  G_{\rm loc,o} \mathcal{M}_{\rm det} = A_o G_{\rm dyn} M_e")
+    print(r"  \mathcal{M}_{\rm det} = (A_e / A_o) [(1+\alpha_A\alpha_B)/(1+\alpha_o^2)] \widetilde{\mathcal{M}}")
+    print(r"Consistency check: at A_o = A_e a co-located observer recovers")
+    print(r"  \mathcal{M}_{\rm loc} = [(1+\alpha_A\alpha_B)/(1+\alpha_e^2)] \widetilde{\mathcal{M}},")
+    print(r"the source's own local mass (step_70) -- the earlier bare-G form")
+    print(r"M_det = A_o A_e \tilde M would have violated this. For A_o = 1 (today) and")
+    print(r"screened couplings, \mathcal{M}_{\rm det} = \widetilde{\mathcal{M}} / (1+z): the")
+    print(r"headline mapping is unchanged, but now holds in a locally consistent frame.")
     print(r"")
     print(r"Now for the amplitude matching to extract inferred distance:")
-    print(r"  \tilde{h} \propto \mathcal{M}_{\rm det}^{5/3} \tilde{f}_o^{2/3} / D_L^{GW}")
-    print(r"  h \propto M_e^{5/3} f_e^{2/3} / r")
-    print(r"Equating \tilde{h} = h:")
-    print(r"  \mathcal{M}_{\rm det}^{5/3} (f_e / A_o)^{2/3} / D_L^{GW} = M_e^{5/3} f_e^{2/3} / r")
-    print(r"  (M_e A_o)^{5/3} A_o^{-2/3} / D_L^{GW} = M_e^{5/3} / r")
-    print(r"  M_e^{5/3} A_o / D_L^{GW} = M_e^{5/3} / r")
+    print(r"  \tilde{h} \propto (G_{\rm loc,o} \mathcal{M}_{\rm det})^{5/3} \tilde{f}_o^{2/3} / D_L^{GW}")
+    print(r"  h \propto (G_{\rm dyn} M_e)^{5/3} f_e^{2/3} / r")
+    print(r"Equating \tilde{h} = h with G_{\rm loc,o} M_det = A_o G_{\rm dyn} M_e:")
+    print(r"  (A_o G_{\rm dyn} M_e)^{5/3} (f_e / A_o)^{2/3} / D_L^{GW} = (G_{\rm dyn} M_e)^{5/3} f_e^{2/3} / r")
+    print(r"  A_o^{5/3} A_o^{-2/3} / D_L^{GW} = 1 / r")
     print(r"  D_L^{GW} = A_o r")
+    print(r"")
+    print(r"The distance map is unchanged: the chirp combination G*M is conserved under the")
+    print(r"frame conversion, so the amplitude inference tracks M_e through the same factor.")
 
     # ---------------------------------------------------------
     # 4. Independent EM Distance (Sachs Equation)
@@ -131,25 +141,34 @@ def run_derivation():
     print(r"-------------------------")
     A_e, A_o, M_t, rr, f_t = sp.symbols('A_e A_o M_tilde r f_t', positive=True)
     K, M_d, D_gw = sp.symbols('K M_d D_gw', positive=True)
+    aA, aB, a_o = sp.symbols('a_A a_B a_o', positive=True)
 
-    # Emission: Einstein-frame chirp mass and coordinate-time chirp law
+    # Emission: Einstein-frame chirp mass; G_dyn carries the pair scalar exchange
     M_e = A_e * M_t
+    G_dyn_over_G = 1 + aA * aB
+    G_loc_o_over_G = A_o**2 * (1 + a_o**2)
     f_e = A_o * f_t  # f_o = f_e (static transport); f_o = A_o * f_tilde_o
-    fdot_e = K * M_e**sp.Rational(5, 3) * f_e**sp.Rational(11, 3)
+    fdot_e = K * (G_dyn_over_G * M_e)**sp.Rational(5, 3) * f_e**sp.Rational(11, 3)
 
     # Detector readout: d f_tilde_o / d tau_tilde_o = (1/A_o^2) df_e/dt
     fdot_t = sp.simplify(fdot_e / A_o**2)
 
-    # Template match: fdot_t = K * M_det^(5/3) * f_t^(11/3)  =>  M_det
+    # Template match in units of the locally measured G:
+    # fdot_t = K * (G_loc,o M_det)^(5/3) * f_t^(11/3)  =>  G_loc,o M_det = A_o G_dyn M_e
     M_det = sp.solve(
-        sp.Eq(fdot_t, K * M_d**sp.Rational(5, 3) * f_t**sp.Rational(11, 3)),
+        sp.Eq(fdot_t, K * (G_loc_o_over_G * M_d)**sp.Rational(5, 3) * f_t**sp.Rational(11, 3)),
         M_d)[0]
-    mass_ok = sp.simplify(M_det - A_e * A_o * M_t) == 0
+    M_det_expected = (A_e / A_o) * ((1 + aA * aB) / (1 + a_o**2)) * M_t
+    mass_ok = sp.simplify(M_det - M_det_expected) == 0
+    # Screened today-limit: A_o=1, alphas -> 0 gives M_tilde/(1+z) = A_e M_tilde
+    mass_today_ok = sp.simplify(
+        M_det.subs({A_o: 1, aA: 0, aB: 0, a_o: 0}) - A_e * M_t) == 0
 
-    # Amplitude match: M_det^(5/3) f_t^(2/3)/D_L^GW = M_e^(5/3) f_e^(2/3)/r
+    # Amplitude match: (G_loc,o M_det)^(5/3) f_t^(2/3)/D_L^GW
+    #                  = (G_dyn M_e)^(5/3) f_e^(2/3)/r
     D_L_GW = sp.solve(
-        sp.Eq(M_det**sp.Rational(5, 3) * f_t**sp.Rational(2, 3) / D_gw,
-              M_e**sp.Rational(5, 3) * f_e**sp.Rational(2, 3) / rr),
+        sp.Eq((G_loc_o_over_G * M_det)**sp.Rational(5, 3) * f_t**sp.Rational(2, 3) / D_gw,
+              (G_dyn_over_G * M_e)**sp.Rational(5, 3) * f_e**sp.Rational(2, 3) / rr),
         D_gw)[0]
     dist_ok = sp.simplify(D_L_GW - A_o * rr) == 0
 
@@ -161,7 +180,8 @@ def run_derivation():
     Xi = sp.simplify((A_o * rr) / D_L_EM)
     xi_ok = sp.simplify(Xi - A_e / A_o) == 0  # = 1/(1+z) = A(z)
 
-    print(r"  M_det = A_o A_e M_tilde      :", mass_ok)
+    print(r"  G_loc,o M_det = A_o G_dyn M_e :", mass_ok)
+    print(r"  M_det -> M_tilde/(1+z) today  :", mass_today_ok)
     print(r"  D_L^GW = A_o r               :", dist_ok)
     print(r"  D_L^EM = (1+z) A_o r         :", em_ok)
     print(r"  Xi(z) = A_e/A_o = 1/(1+z)    :", xi_ok)
@@ -179,7 +199,11 @@ def run_derivation():
         "detector_inference": {
             "matter_proper_time": "d_tau_tilde_o = A_o dt",
             "matter_frequency": "f_tilde_o = f_o / A_o",
-            "detector_frame_chirp_mass": "M_det = A_o A_e M_tilde = M_tilde / (1+z) (for A_o=1)",
+            "chirp_combination": "G_loc,o M_det = A_o G_dyn M_e",
+            "detector_frame_chirp_mass":
+                "M_det = (A_e/A_o)(1+alpha_A alpha_B)/(1+alpha_o^2) M_tilde "
+                "= M_tilde/(1+z) for A_o=1, screened",
+            "local_consistency": "at A_o=A_e reduces to M_loc (step_70)",
             "inferred_gw_distance": "D_L_GW = A_o r"
         },
         "electromagnetic_distance": {
@@ -193,15 +217,21 @@ def run_derivation():
         },
         "symbolic_verification": {
             "chirp_mass_map_verified": bool(mass_ok),
+            "chirp_mass_today_limit": bool(mass_today_ok),
             "gw_distance_verified": bool(dist_ok),
             "em_distance_verified": bool(em_ok),
             "siren_ratio_verified": bool(xi_ok)
         }
     }
     
-    with open("scripts/results/step_21_waveform_inference.json", "w") as f:
+    import os
+    outdir = os.path.join(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.abspath(__file__)))), "results")
+    os.makedirs(outdir, exist_ok=True)
+    path = os.path.join(outdir, "step_21_waveform_inference.json")
+    with open(path, "w") as f:
         json.dump(output, f, indent=2)
-    print("\n[SUCCESS] Wrote JSON output to scripts/results/step_21_waveform_inference.json")
+    print("\n[SUCCESS] Wrote JSON output to", path)
 
 if __name__ == "__main__":
     run_derivation()

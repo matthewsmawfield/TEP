@@ -3,5 +3,7 @@
   "codename": "Jakarta",
   "description": "Paper 0: Temporal Equivalence Principle: Dynamic Time & Emergent Light Speed",
   "date": "2026-09-25",
-  "previous_version": "0.14"
+  "previous_version": "0.14",
+  "paper": "0",
+  "doi": "10.5281/zenodo.16921911"
 }

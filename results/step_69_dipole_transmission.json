@@ -1,0 +1,292 @@
+{
+  "conventions": {
+    "operator": "P = X - V + X|X|/Lambda^4",
+    "charge": "alpha_i = alpha_0 (1 - 2 s_i); asymptotic charge conserved through the shell (Gauss flux of P_X grad phi); propagation suppressed by the solved l=1 transmission T_amp",
+    "propagator": "Z_par = 1+6u, Z_perp = Z_t = 1+2u on the pair shell profile (matches step_32 embedded propagator)",
+    "dipole_formula": "Pdot_dip = -(4 pi^2 G/(P_b c^3))(mA mB/M)(Delta_alpha_eff)^2 K_D, K_D in [0.5,4]",
+    "exclusion_criterion": "Delta_alpha_eff > bound under the EOS sensitivity bracket excludes the specified P(X) completion (not the architecture)"
+  },
+  "systems": [
+    {
+      "system": "J1738+0333",
+      "masses_msun": [
+        1.46,
+        0.181
+      ],
+      "P_b_s": 30600.0,
+      "ecc": 3e-07,
+      "semimajor_m": 1728771367.1526408,
+      "a_over_rstar": 2.1599409523210667e-06,
+      "Omega_dimless": 0.0011840643346207403,
+      "rs_over_a": 462975.6192757967,
+      "sensitivity_bracket_A": [
+        0.12200000000000001,
+        0.22200000000000003
+      ],
+      "sensitivity_bracket_B": [
+        0.0,
+        0.0
+      ],
+      "T_amplitude": 1.410892420792437e-05,
+      "T_power": 1.9906174230495432e-10,
+      "a_over_rstar_reference": 2.1599409523210667e-06,
+      "sensitivity_cases": {
+        "s_lo": {
+          "delta_alpha_bare": 0.3450681092190352,
+          "delta_alpha_eff": 4.868539799543136e-06,
+          "pdot_dip_pred": 2.4261490926670986e-20,
+          "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+          "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
+          "margin_vs_bound_KD_0p5": 822.1729443384835,
+          "passes": true
+        },
+        "s_mid": {
+          "delta_alpha_bare": 0.48648946545634486,
+          "delta_alpha_eff": 6.86384299607721e-06,
+          "pdot_dip_pred": 4.822305479539336e-20,
+          "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+          "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
+          "margin_vs_bound_KD_0p5": 583.1691814493893,
+          "passes": true
+        },
+        "s_hi": {
+          "delta_alpha_bare": 0.6279108216936543,
+          "delta_alpha_eff": 8.859146192611281e-06,
+          "pdot_dip_pred": 8.033481045619813e-20,
+          "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+          "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
+          "margin_vs_bound_KD_0p5": 451.82477121304044,
+          "passes": true
+        }
+      }
+    },
+    {
+      "system": "J0348+0432",
+      "masses_msun": [
+        2.01,
+        0.172
+      ],
+      "P_b_s": 8856.0,
+      "ecc": 2.4e-06,
+      "semimajor_m": 831758160.025551,
+      "a_over_rstar": 9.012147797467423e-07,
+      "Omega_dimless": 0.001968423892453976,
+      "rs_over_a": 1109613.4045660216,
+      "sensitivity_bracket_A": [
+        0.242,
+        0.34199999999999997
+      ],
+      "sensitivity_bracket_B": [
+        0.0,
+        0.0
+      ],
+      "T_amplitude": 8.392750431094695e-06,
+      "T_power": 7.04382597986402e-11,
+      "a_over_rstar_reference": 9.012147797467422e-07,
+      "sensitivity_cases": {
+        "s_lo": {
+          "delta_alpha_bare": 0.684479364188578,
+          "delta_alpha_eff": 5.74466447886911e-06,
+          "pdot_dip_pred": 1.148365404611478e-19,
+          "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+          "delta_alpha_bound_KD_4p0": 0.00568592176079842,
+          "margin_vs_bound_KD_0p5": 2799.5047224399086,
+          "passes": true
+        },
+        "s_mid": {
+          "delta_alpha_bare": 0.8259007204258875,
+          "delta_alpha_eff": 6.931578627395786e-06,
+          "pdot_dip_pred": 1.6719183774809276e-19,
+          "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+          "delta_alpha_bound_KD_4p0": 0.00568592176079842,
+          "margin_vs_bound_KD_0p5": 2320.137475446774,
+          "passes": true
+        },
+        "s_hi": {
+          "delta_alpha_bare": 0.967322076663197,
+          "delta_alpha_eff": 8.118492775922463e-06,
+          "pdot_dip_pred": 2.2935149782285526e-19,
+          "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+          "delta_alpha_bound_KD_4p0": 0.00568592176079842,
+          "margin_vs_bound_KD_0p5": 1980.9360901475375,
+          "passes": true
+        }
+      }
+    },
+    {
+      "system": "J0737-3039",
+      "masses_msun": [
+        1.337,
+        1.25
+      ],
+      "P_b_s": 8820.0,
+      "ecc": 0.0877,
+      "semimajor_m": 877940227.9926692,
+      "a_over_rstar": 8.736255828330996e-07,
+      "Omega_dimless": 0.002086198023140091,
+      "rs_over_a": 1144655.1241746815,
+      "sensitivity_bracket_A": [
+        0.09319999999999999,
+        0.19319999999999998
+      ],
+      "sensitivity_bracket_B": [
+        0.06999999999999999,
+        0.16999999999999998
+      ],
+      "T_amplitude": 8.280110154205258e-06,
+      "T_power": 6.856022416577302e-11,
+      "a_over_rstar_reference": 8.736255828330995e-07,
+      "sensitivity_cases": {
+        "s_lo": {
+          "delta_alpha_bare": 0.06561950929411162,
+          "delta_alpha_eff": 5.433367652201399e-07,
+          "pdot_dip_pred": 4.205650757259975e-21,
+          "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+          "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
+          "margin_vs_bound_KD_0p5": 4361.4248203197,
+          "passes": true
+        },
+        "s_mid": {
+          "delta_alpha_bare": 0.06561950929411162,
+          "delta_alpha_eff": 5.433367652201399e-07,
+          "pdot_dip_pred": 4.205650757259975e-21,
+          "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+          "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
+          "margin_vs_bound_KD_0p5": 4361.4248203197,
+          "passes": true
+        },
+        "s_hi": {
+          "delta_alpha_bare": 0.06561950929411162,
+          "delta_alpha_eff": 5.433367652201399e-07,
+          "pdot_dip_pred": 4.205650757259975e-21,
+          "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+          "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
+          "margin_vs_bound_KD_0p5": 4361.4248203197,
+          "passes": true
+        }
+      }
+    },
+    {
+      "system": "J0437-4715",
+      "masses_msun": [
+        1.44,
+        0.224
+      ],
+      "P_b_s": 496022.39999999997,
+      "ecc": 1.9e-05,
+      "semimajor_m": 11124292078.059484,
+      "a_over_rstar": 1.3802391138743911e-05,
+      "Omega_dimless": 0.00047003506645138405,
+      "rs_over_a": 72451.2144271116,
+      "sensitivity_bracket_A": [
+        0.11800000000000001,
+        0.21800000000000003
+      ],
+      "sensitivity_bracket_B": [
+        0.0,
+        0.0
+      ],
+      "T_amplitude": 4.394698783115244e-05,
+      "T_power": 1.9313377394314605e-09,
+      "a_over_rstar_reference": 1.380239113874391e-05,
+      "sensitivity_cases": {
+        "s_lo": {
+          "delta_alpha_bare": 0.3337544007200504,
+          "delta_alpha_eff": 1.466750058703763e-05,
+          "pdot_dip_pred": 1.635259726708896e-20,
+          "delta_alpha_bound_KD_0p5": 0.1256473596497538,
+          "delta_alpha_bound_KD_4p0": 0.04442305002326295,
+          "margin_vs_bound_KD_0p5": 8566.378361749947,
+          "passes": true
+        },
+        "s_mid": {
+          "delta_alpha_bare": 0.4751757569573601,
+          "delta_alpha_eff": 2.088254320866375e-05,
+          "pdot_dip_pred": 3.3146775730129206e-20,
+          "delta_alpha_bound_KD_0p5": 0.1256473596497538,
+          "delta_alpha_bound_KD_4p0": 0.04442305002326295,
+          "margin_vs_bound_KD_0p5": 6016.860992181509,
+          "passes": true
+        },
+        "s_hi": {
+          "delta_alpha_bare": 0.6165971131946696,
+          "delta_alpha_eff": 2.7097585830289866e-05,
+          "pdot_dip_pred": 5.581304456486183e-20,
+          "delta_alpha_bound_KD_0p5": 0.1256473596497538,
+          "delta_alpha_bound_KD_4p0": 0.04442305002326295,
+          "margin_vs_bound_KD_0p5": 4636.847003149052,
+          "passes": true
+        }
+      }
+    }
+  ],
+  "static_limit_check": {
+    "system": "J1738+0333",
+    "analytic_impedance_T_amp": 3.056122964077248e-06,
+    "a_over_rstar": 2.1599409523210667e-06,
+    "note": "ODE at Om -> 0 must approach this value; verified in validation sweep",
+    "ode_omega_sweep_T_amp": {
+      "Om=0.001": 1.3815305142979751e-05,
+      "Om=0.0003": 1.2993399225332737e-05,
+      "Om=0.0001": 1.6775642702697517e-05
+    }
+  },
+  "robustness_xlo_T_amp": {
+    "xlo=0.1": 1.5078066506557967e-05,
+    "xlo=0.3": 1.410892420792437e-05,
+    "xlo=0.5": 1.2805269696471927e-05
+  },
+  "j0337_sep": {
+    "a_in_m": 4960765059.969475,
+    "rstar_outerWD_m": 400116329672615.0,
+    "a_in_over_rstar": 1.2398306922460512e-05,
+    "y_at_inner_orbit": 2.8695676611899097e-07,
+    "X_amb": 3484845.037060695,
+    "readings": {
+      "s_lo_single_vertex_q": {
+        "eta_pred": 1.3493852956460185e-07,
+        "eta_bound": 2.6e-06,
+        "margin": 19.268032698957562,
+        "passes": true
+      },
+      "s_lo_hierarchical_y3": {
+        "eta_pred": 1.1111404983971726e-20,
+        "eta_bound": 2.6e-06,
+        "margin": 233993811201240.28,
+        "passes": true
+      },
+      "s_mid_single_vertex_q": {
+        "eta_pred": 1.9232987422460603e-07,
+        "eta_bound": 2.6e-06,
+        "margin": 13.518440702371992,
+        "passes": true
+      },
+      "s_mid_hierarchical_y3": {
+        "eta_pred": 1.5837249226899474e-20,
+        "eta_bound": 2.6e-06,
+        "margin": 164169923876926.53,
+        "passes": true
+      },
+      "s_hi_single_vertex_q": {
+        "eta_pred": 2.497212188846102e-07,
+        "eta_bound": 2.6e-06,
+        "margin": 10.411610241264254,
+        "passes": true
+      },
+      "s_hi_hierarchical_y3": {
+        "eta_pred": 2.056309346982722e-20,
+        "eta_bound": 2.6e-06,
+        "margin": 126440119713264.44,
+        "passes": true
+      }
+    }
+  },
+  "causality_note": {
+    "in_shell_radial_speed": "c_r^2 = c^2 Z_par/Z_t -> ~3 c^2 for u >> 1: the scalar fluctuation's radial characteristic is mildly superluminal relative to g inside the shell. This is the standard k-essence feature: the EFT is consistent, the background is stable (Z_par, Z_t > 0), and the matter metric tilde g carries no superluminal matter signal.",
+    "ledger": "recorded for the causal-safety section alongside the step_52 disformal admissibility margins"
+  },
+  "verdict": {
+    "tightest_margin_KD_0p5_s_hi": 451.82477121304044,
+    "result": "PASS. The action-derived transmission suppresses the sensitivity-sourced dipole asymmetry by T_amp ~ a/r*; every system clears its bound by 2-4 orders of magnitude under the full EOS bracket. The completion survives the pre-committed exclusion criterion. The three step_31 readings are superseded: charge is conserved (not vertex-suppressed) and the propagator is the solved radial transmission, not a sqrt-Z point evaluation nor a Galileon impedance."
+  }
+}

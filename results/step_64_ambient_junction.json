@@ -1,0 +1,94 @@
+{
+  "note": "single piecewise ambient A(eta): LambdaCDM conformal image for eta <= eta_j, power law C eta^{-p} beyond; C^1 matching fixes p = p_eff(z_j); Proposition-1 regularity requires p <= 1/2",
+  "junction": {
+    "z_j_max": 0.6874363632129046,
+    "p_eff_at_zj": 0.49999999999992306,
+    "chi_j_H0inv": 0.5764586368689186,
+    "note": "latest admissible C^1 junction: at z_j = 0.687 the local slope of the conformal image is exactly p = 1/2 \u2014 the boundary of the curvature-regular window.  Earlier junctions give p < 1/2 (more regularity headroom, earlier departure from the LambdaCDM image); later junctions are irregular at T^-."
+  },
+  "p_eff_sweep": {
+    "z=0.1": 0.09313101423114732,
+    "z=0.3": 0.2501035646360371,
+    "z=0.5": 0.3847407707245258,
+    "z=0.687": 0.4997400925818836,
+    "z=1.0": 0.6791911547795949,
+    "z=2.0": 1.196219116508024,
+    "z=5.0": 2.450238728987653,
+    "z=30.0": 8.109866898459687,
+    "z=1100.0": 66.63524900393807
+  },
+  "legacy_conventions": {
+    "paper18_full_lcdm": "A_clock = a(t) to the boundary: p_eff climbs to ~67 at recombination and diverges \u2014 irregular at T^- under Proposition 1",
+    "power_law_p1_benchmark": "A ~ eta^{-1} (ln(1+z) ~ 0.96 ln eta correlation): p = 1 sits outside the regularity window p <= 1/2",
+    "resolution": "the piecewise A(eta) with z_j <= 0.687 and tail p = p_eff(z_j) is the unique construction satisfying both the observed map and temporal-horizon regularity"
+  },
+  "reference_junction": {
+    "z_j": 0.6,
+    "p": 0.4472037253338982,
+    "eta_j_H0inv": 0.5151282926715325,
+    "A_j": 0.625,
+    "C_tail": 0.46456609680173533,
+    "note": "for eta <= eta_j: A(eta) = a_lcdm(eta); for eta > eta_j: A(eta) = C_tail * eta^{-p}"
+  },
+  "tail_redshift_map": {
+    "z=1": {
+      "eta_over_eta_j_tail": 1.647032464083912,
+      "eta_tail_H0inv": 0.8484330211981328,
+      "eta_lcdm_H0inv": 0.7713301812904054,
+      "ratio_tail_over_lcdm": 1.0999608750933838
+    },
+    "z=2": {
+      "eta_over_eta_j_tail": 4.0781469925489064,
+      "eta_tail_H0inv": 2.100768897535263,
+      "eta_lcdm_H0inv": 1.2092353786365957,
+      "ratio_tail_over_lcdm": 1.7372704559007073
+    },
+    "z=10": {
+      "eta_over_eta_j_tail": 74.51436409095479,
+      "eta_tail_H0inv": 38.38445715367849,
+      "eta_lcdm_H0inv": 2.20316984742634,
+      "ratio_tail_over_lcdm": 17.422377670299802
+    },
+    "z=100": {
+      "eta_over_eta_j_tail": 10603.7999830037,
+      "eta_tail_H0inv": 5462.317381075121,
+      "eta_lcdm_H0inv": 2.93701226910314,
+      "ratio_tail_over_lcdm": 1859.821097289158
+    },
+    "z=1100": {
+      "eta_over_eta_j_tail": 2214915.2119155945,
+      "eta_tail_H0inv": 1140965.491526286,
+      "eta_lcdm_H0inv": 3.1788859163864176,
+      "ratio_tail_over_lcdm": 358919.9240038386
+    },
+    "z=1e+09": {
+      "eta_over_eta_j_tail": 4.662509559495545e+19,
+      "eta_tail_H0inv": 2.401790588947639e+19,
+      "eta_lcdm_H0inv": -1.056801640882983e-07,
+      "ratio_tail_over_lcdm": -2.2726976340998917e+26
+    }
+  },
+  "junction_curvature": {
+    "A2_image": 0.4917968750309857,
+    "A2_tail": 1.5243485948856597,
+    "jump_Delta_A2": 1.0325517198546739,
+    "note": "the C^1 junction carries a curvature kink \u2014 a localized pulse at eta_j (finite eta), not a tail contribution; Proposition-1's asymptotic s >= 2p condition is unaffected.  Physical reading: the junction epoch is where the well network hands the ambient its drift \u2014 the kink is the transfer signature",
+    "tail_s_parameter": {
+      "s": 2.0,
+      "condition": "s >= 2p",
+      "p": 0.4472037253338982,
+      "satisfied": true
+    }
+  },
+  "asymptote": {
+    "A_tail_form": "C eta^{-p}, p = 0.5",
+    "eta_to_T_minus": "infinite (A -> 0 only as eta -> inf)",
+    "V0_floor_reconciliation": "the AUD-0 master family supplies V_0 as the u -> inf floor: the ambient's eta^{-1/2} roll is the approach to the floor domain, not a completed halt \u2014 consistent with the T-B1 asymptotic reading of Rule 20"
+  },
+  "verdict": {
+    "junction_window": "z_j <= 0.687 for C^1 + Proposition-1",
+    "reference_choice": "z_j = 0.6, p = 0.46",
+    "resolves": "the Papers-18/27 A(eta) incompatibility: both legacy conventions sit outside the regularity window; the piecewise construction is the unique reconciler",
+    "open": "T4.2: r_s / peak-morphology tolerance sets the minimum z_j from the acoustic side (Paper 18 machinery); well-network radiation era (AUD-6)"
+  }
+}

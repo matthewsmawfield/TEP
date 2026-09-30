@@ -9,3 +9,7 @@ v0.15 (Jakarta) — 2026-09-25 — Kinetic-sector screening closure: microscopic
 - Added explicit numerical bounds for the triangle synchronization experiment
 - Corrected the post-Newtonian mapping to be bilinear in probe and source charges
 - Updated early-universe closure to rely on a steady-state fixed point
+- Displayed action now uses the noncanonical P(X,phi) kinetic sector, with P -> X-V stated as the canonical limit
+- Separated S_A (static conformal depth) from C_A (time-dependent covariance)
+- Scoped the phantom-mass equation to the equal-response two-body case via R_dyn
+- Reconciled the closure registry; updated solver and benchmark steps

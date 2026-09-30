@@ -2,6 +2,39 @@
   "density_model": "Smoothed two-layer shape (11:4.5 core:mantle), normalized to Earth excess mass; not full PREM.",
   "equation": "Same exact quartic and homogeneous equilibrium subtraction as step 01",
   "classification": "Mean-profile geometry. A profile maximum is not a two-point correlation length.",
+  "kinetic_multipole_diagnostic": {
+    "branch": "deep kinetic shell, mass term and boundary matching omitted",
+    "r_star_km": 1082737809.7701595,
+    "surface_gradient_ratio": 1.0622964279044767e-07,
+    "surface_transverse_stiffness": 9413568.319839267,
+    "surface_radial_to_transverse_stiffness": 2.9999997875407143,
+    "mode_equation": "3p(p-1/3)=ell(ell+1) for exterior perturbations f_ell proportional to r^p",
+    "multipoles": {
+      "1": {
+        "decaying_power": -0.6666666666666667
+      },
+      "2": {
+        "decaying_power": -1.2573339575529217
+      },
+      "3": {
+        "decaying_power": -1.840265763132049
+      },
+      "4": {
+        "decaying_power": -2.420695782710004
+      }
+    },
+    "classification": "Conditional exterior radial-response asymptote, not a clock covariance or an exponential correlation length."
+  },
+  "angular_source_diagnostic": {
+    "single_mode_first_1e_crossing_km": {
+      "1": 7607.412444169831,
+      "2": 4501.013787417222,
+      "4": 2486.654759680108,
+      "10": 1063.5299435449222
+    },
+    "geometry": "Single statistically isotropic angular multipole: C(theta)/C(0)=P_ell(cos theta)",
+    "classification": "Conditional source spectra, not independent predictions. The response operator alone cannot fix the angular covariance length or its amplitude."
+  },
   "scan": [
     {
       "lambda": 7.526e-73,

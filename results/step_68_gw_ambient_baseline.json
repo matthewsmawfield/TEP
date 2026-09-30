@@ -1,0 +1,57 @@
+{
+  "step": "step_68_gw_ambient_baseline",
+  "gw170817": {
+    "z_source": 0.0098,
+    "u_bar_source": 0.009752291442678272,
+    "drift_over_H0_at_source": 1.004443486890925,
+    "z_j": 0.6,
+    "statement": "z_src = 0.0098 << z_j = 0.6: the multimessenger path samples only the LCDM-image segment of the corrected ambient.  The local disformal path integral (host-well exit + ambient transit + MW entry) is unchanged by the junction: step_52 ledger stands, B0 transferred cap ~77.7; ambient segment suppressed by B(u_bar~0)->0 and the ambient-consistent drift term (du_bar/dx R_H)^2 ~ 1 yields the recorded ~3e-11 uniform-B0 bound."
+  },
+  "transit_wall_corrected": {
+    "cap_z_all": 0.7440501972798249,
+    "z_at_cap_min": 1.2340811734311192,
+    "u_at_cap_min": 0.8038300354529255,
+    "cap_image_segment_only": 1.1492432185861503,
+    "z_at_cap_min_image": 0.5995574631219268,
+    "B0_GW_saturated": 77.7,
+    "B0_LENS_required": 422.0,
+    "margin_GW_over_cap": 104.42843814041531,
+    "margin_LENS_over_cap": 567.1660346879698
+  },
+  "drift_profile_samples": {
+    "z": [
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      10.0
+    ],
+    "udot_over_H0_lcdm_image": [
+      1.7606816861659007,
+      2.966479394838265,
+      4.460941604639093,
+      8.093207028119323,
+      20.0
+    ],
+    "udot_over_H0_corrected": [
+      1.054187458904817,
+      0.638628636198749,
+      0.44751691071454186,
+      0.2711065398770884,
+      0.1281571068981877
+    ]
+  },
+  "bbn_probe": {
+    "note": "AUD-6 constraint-slice inputs under the corrected tail: ambient field amplitude and drift rate at BBN (z ~ 1e9) and recombination (z ~ 1100)",
+    "z_bbn": 1000000000.0,
+    "u_bar_bbn": 20.72326583794641,
+    "eta_bbn_H0inv": 2.401790588947639e+19,
+    "udot_over_H0_bbn": 1.861959688904632e-11,
+    "envelope_shape_at_u_bbn": 0.0,
+    "z_cmb": 1100.0,
+    "u_bar_cmb": 7.00397413672268,
+    "udot_over_H0_cmb": 0.00043153917033368795,
+    "reading": "the tail stretch makes the ambient drift asymptotically static: u_dot ~ p(1+z)/eta ~ 10^-11 H0 at BBN.  The disformal envelope shape(u_bar) is identically zero at these amplitudes (u ~ 21 -> exp(-u^4/2) ~ 0), so the BBN ambient sits in the gate-closed regime -- consistent with the well-BBN constraint slice (TEP-BBN gate10b saturating gate).  In-well proto-structures at delta ~ 1e-5 are shallow: the BBN-era vertex is ambient-dominated."
+  },
+  "verdict": "AUD-5 closed.  GW170817 lies below the junction, so the GW-sector baseline is unchanged pointwise.  The transit wall under the corrected ambient: the tail drift u_dot = p(1+z)/eta slows by ~10x at z~3 vs the image, raising the realized lapse cap from 1.149 (image) to 0.744 at z = 1.23 \u2014 the exclusion margins narrow but remain excluding: B0_GW = 77.7 exceeds the cap 104x, B0_LENS = 422 exceeds it 567x.  The ambient-gate resolution (B_eff = B(phi) G(X_local), closed on the low-X ambient) remains mandatory exactly as under the uncorrected sequence."
+}

@@ -1,3 +1,52 @@
+record_scope: historical_registry_not_current_completion_authority
+reconciliation:
+  authority: >-
+    The legacy entries and revision comments below are retained for provenance.
+    Their RESOLVED, PASS and open-task labels do not override the current
+    manuscript, the specified action branch or the cited numerical artifacts.
+  current_manuscript_sources:
+    - site/components/3_axioms.html
+    - site/components/8_screening_ppn.html
+    - site/components/20_appendix_e.html
+  existing_work_not_to_rederive_from_legacy_flags:
+    kinetic_realization: scripts/steps/step_27_master_action_screening_closure.py
+    nested_pair_benchmark: scripts/steps/step_30_nested_two_body_operator.py
+    embedded_propagator: scripts/steps/step_32_embedded_propagator.py
+    radiative_transmission: scripts/steps/step_69_dipole_transmission.py
+    siren_invariant: scripts/steps/step_70_siren_invariant.py
+  static_boundary_response:
+    source: scripts/steps/step_76_ambient_transmission.py
+    output: results/step_76_ambient_transmission.json
+    status: static_linear_and_finite_excursion_responses_available
+    scope: >-
+      Corrected boundary-value profiles; body-dependent outer radii are recorded.
+      This is not a universal transmission, a monthly lunar range transfer,
+      or a cosmological host-evolution calculation. Earlier shooting-based
+      transmission numbers and their downstream applications are superseded.
+  landscape_transport:
+    source: scripts/steps/step_78_landscape_transport.py
+    expected_output: results/step_78_landscape_transport.json
+    status: implementation_present_expected_output_not_located_in_reconciliation
+    scope: Existing toy landscape diagnostic; do not classify as absent derivation.
+  retained_verification_items:
+    force_normalization: >-
+      Reconcile the source-gradient test-probe limit with the finite-pair
+      benchmark before applying either to a lens aperture; no replacement
+      screening power is selected by this reconciliation.
+    efa_scores: >-
+      Archived template scores retain their fitting convention. Verification
+      of the full prediction-dependent-variance likelihood optimum and nuisance
+      accounting is separate from the coherent-link cancellation result.
+    lens_scores: >-
+      Step 60 diagonal pooling is descriptive; shared-image covariance and
+      joint ratio uncertainty are required for calibrated combined evidence.
+    llr_transfer: >-
+      The measured synodic residual remains distinct from a direct-fit SEP
+      parameter and from a derived station/reflector field-to-range prediction.
+    cosmological_tracking: >-
+      The Pantheon luminosity-drift limit is conditional on the fitted distance
+      model and source-luminosity prescription, not proof of universal pinning.
+
 # ===========================================================================
 # v5.0 (2026-09-12) -- SUPERSEDES EVERY STATUS BELOW
 # The inverse-power potential V = L^4(1+L/phi) has no screening minimum for
@@ -168,7 +217,7 @@ screening_sector:
   question: >
     Can a single V(phi) reproduce all six quoted screening factors as
     projections of one solution?
-  selected_completion: "v6.0 (Paper 0 SS2.2ii, Appendix E R11): P(X,phi) = X - V(phi) + X|X|/Lambda^4, V = lambda phi^4/4, Lambda^4 = M_Pl^2 H_0^2. S_Sigma = P_,X^-1 = [1 + (g/g_t)^2]^-1, g_t = cH_0/(2 beta_A^2) = 3.4e-10 m/s^2; pairwise projection S_eff = [1 + (R_s/s)^4]^-1 with R_s = sqrt(GM/g_t) propto M^{1/2}. Benchmarks at zero free parameters: Cassini conjunction 1.0e-23, Earth-Moon 1.6e-14, Saturn 2.7e-11, terrestrial shear 1.2e-21. Script: TEP/scripts/steps/step_27_master_action_screening_closure.py -> TEP/results/step_27_master_action_screening_closure.json. Canonical location: TEP/closure/ (root closure/ retired 2026-09-25)."
+  selected_completion: "v6.0 (Paper 0 SS2.2ii, Appendix E R11): P(X,phi) = X - V(phi) + X|X|/Lambda^4, V = lambda phi^4/4, Lambda^4 = M_Pl^2 H_0^2. S_Sigma = P_,X^-1 = [1 + (g/g_t)^2]^-1, g_t = cH_0/(2|beta_A|) = 3.4e-10 m/s^2; pairwise projection S_eff = [1 + (R_s/s)^4]^-1 with R_s = sqrt(GM/g_t) propto M^{1/2}. Benchmarks at zero free parameters: Cassini conjunction 1.0e-23, Earth-Moon 1.6e-14, Saturn 2.7e-11, terrestrial shear 1.2e-21. Script: TEP/scripts/steps/step_27_master_action_screening_closure.py -> TEP/results/step_27_master_action_screening_closure.json. Canonical location: TEP/closure/ (root closure/ retired 2026-09-25)."
   candidate_V: "WITHDRAWN (no minimum for beta_A=-1). Superseded by v6.0: shear screening carried by the kinetic sector; V = lambda phi^4/4 carries only the amplitude sector (S_A = min[1,(rho_bar/rho_T)^{1/3}], m_eff propto rho^{1/3}). Earlier cuscuton candidate P = KX + mu^2 sqrt(2X) - V remains an allowed member of the wider K(X) class (uniqueness open)."
   candidate_scale: "Lambda = sqrt(M_Pl * H_0) ~ 1.87e-12 GeV ~ 1.87 meV (dark energy scale)"
   candidate_mass: "m = Lambda ~ 1.87e-12 GeV, Compton wavelength ~ 0.11 mm"

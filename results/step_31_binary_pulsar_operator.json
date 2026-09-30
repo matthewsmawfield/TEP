@@ -1,0 +1,219 @@
+{
+  "conventions": {
+    "operator": "P = X - V + X|X|/Lambda^4; r* = sqrt(GM/g_t); y(1+y^2(r*/r)^4)=1; X_amb=(1-y)/y+X_GAL",
+    "g_t": 3.400464162104563e-10,
+    "X_gal": 0.52,
+    "alpha_0_DEF": 1.4142135623730951,
+    "bare_charge_asymmetry": "superseded",
+    "bare_charge_note": "beta_0 = 0 removes spontaneous scalarization only; sensitivities s_A (strong-EP binding response) still make NS and WD charges differ. The resolved radiation calculation is step_69, which conserves the charge and suppresses the l=1 mode through the shell impedance.",
+    "charge_vertex": "emitted flux conserved through the shell (step_30 resolution); propagator solved in step_69 (Z_par = 1+6u, Z_perp = 1+2u; T_amp ~ a/r*)",
+    "dipole_formula": "Pdot_dip = -(4 pi^2 G/(P_b c^3))(mA mB/M)(Delta_alpha)^2 K_D, K_D scanned on [0.5,4]"
+  },
+  "systems": [
+    {
+      "system": "J1738+0333",
+      "masses_msun": [
+        1.46,
+        0.181
+      ],
+      "P_b_s": 30600.0,
+      "ecc": 3e-07,
+      "semimajor_m": 1728771367.1526408,
+      "v_over_c": 0.0011840643346207403,
+      "pair_shell_radius_m": 800378994293759.6,
+      "a_over_rstar": 2.1599409523210667e-06,
+      "ambient_X_at_A": 8237412.452554976,
+      "ambient_X_at_B": 33131443.624047805,
+      "vertex_qA": 1.2139733009150255e-07,
+      "vertex_qB": 3.0182807038669537e-08,
+      "pdot_gr_s_per_s": -2.7553188599056488e-14,
+      "readings": {
+        "static_vertex": {
+          "alpha_A": 1.7168175065128637e-07,
+          "alpha_B": 4.268493506457658e-08,
+          "delta_alpha_pred": 1.289968155867098e-07,
+          "pdot_dip_pred_s_per_s": 1.70324850095414e-23,
+          "pdot_dip_over_gr": 6.181674744579163e-10,
+          "allowed_residual_s_per_s_2sigma": 8.199999999999999e-15,
+          "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+          "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
+          "margin_vs_bound_KD_0p5": 31030.08150560785,
+          "passes": true
+        },
+        "canonical_sqrtZ": {
+          "alpha_A": 0.00028448472708434086,
+          "alpha_B": 0.0001418515835794678,
+          "delta_alpha_pred": 0.00014263314350487305,
+          "pdot_dip_pred_s_per_s": 2.0823846032861734e-17,
+          "pdot_dip_over_gr": 0.0007557690086574885,
+          "allowed_residual_s_per_s_2sigma": 8.199999999999999e-15,
+          "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+          "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
+          "margin_vs_bound_KD_0p5": 28.063475313384757,
+          "passes": true
+        },
+        "vainshtein_emission": {
+          "alpha_A": 1.4142135623730951,
+          "alpha_B": 1.4142135623730951,
+          "delta_alpha_pred": 1.4142135623730951,
+          "pdot_dip_pred_s_per_s": 6.548449556474706e-35,
+          "pdot_dip_over_gr": 2.3766576172962233e-21,
+          "allowed_residual_s_per_s_2sigma": 8.199999999999999e-15,
+          "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+          "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
+          "margin_vs_bound_KD_0p5": 0.002830394084824555,
+          "passes": true
+        }
+      }
+    },
+    {
+      "system": "J0348+0432",
+      "masses_msun": [
+        2.01,
+        0.172
+      ],
+      "P_b_s": 8856.0,
+      "ecc": 2.4e-06,
+      "semimajor_m": 831758160.025551,
+      "v_over_c": 0.001968423892453976,
+      "pair_shell_radius_m": 922930003721521.4,
+      "a_over_rstar": 9.012147797467423e-07,
+      "ambient_X_at_A": 21119228.65873727,
+      "ambient_X_at_B": 108756820.51429318,
+      "vertex_qA": 4.735021192339222e-08,
+      "vertex_qB": 9.194825538999195e-09,
+      "pdot_gr_s_per_s": -2.588744849850604e-13,
+      "readings": {
+        "static_vertex": {
+          "alpha_A": 6.696331188330151e-08,
+          "alpha_B": 1.3003446980907165e-08,
+          "delta_alpha_pred": 5.395986490239435e-08,
+          "pdot_dip_pred_s_per_s": 1.0131936771933544e-23,
+          "pdot_dip_over_gr": 3.913841401758175e-11,
+          "allowed_residual_s_per_s_2sigma": 4.5e-13,
+          "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+          "delta_alpha_bound_KD_4p0": 0.00568592176079842,
+          "margin_vs_bound_KD_0p5": 298040.31879096234,
+          "passes": true
+        },
+        "canonical_sqrtZ": {
+          "alpha_A": 0.00017767050668411892,
+          "alpha_B": 7.829357400350047e-05,
+          "delta_alpha_pred": 9.937693268061845e-05,
+          "pdot_dip_pred_s_per_s": 3.436544241965777e-17,
+          "pdot_dip_over_gr": 0.00013274943809792993,
+          "allowed_residual_s_per_s_2sigma": 4.5e-13,
+          "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+          "delta_alpha_bound_KD_4p0": 0.00568592176079842,
+          "margin_vs_bound_KD_0p5": 161.83046612147444,
+          "passes": true
+        },
+        "vainshtein_emission": {
+          "alpha_A": 1.4142135623730951,
+          "alpha_B": 1.4142135623730951,
+          "delta_alpha_pred": 1.4142135623730951,
+          "pdot_dip_pred_s_per_s": 4.358209808661508e-36,
+          "pdot_dip_over_gr": 1.6835223482580835e-23,
+          "allowed_residual_s_per_s_2sigma": 4.5e-13,
+          "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+          "delta_alpha_bound_KD_4p0": 0.00568592176079842,
+          "margin_vs_bound_KD_0p5": 0.01137184352159684,
+          "passes": true
+        }
+      }
+    },
+    {
+      "system": "J0737-3039",
+      "masses_msun": [
+        1.337,
+        1.25
+      ],
+      "P_b_s": 8820.0,
+      "ecc": 0.0877,
+      "semimajor_m": 877940227.9926692,
+      "v_over_c": 0.002086198023140091,
+      "pair_shell_radius_m": 1004938780690896.9,
+      "a_over_rstar": 8.736255828330996e-07,
+      "ambient_X_at_A": 73729609.04422492,
+      "ambient_X_at_B": 77112158.5668493,
+      "vertex_qA": 1.3563071870313355e-08,
+      "vertex_qB": 1.2968123388284696e-08,
+      "pdot_gr_s_per_s": -1.2516882687802045e-12,
+      "readings": {
+        "static_vertex": {
+          "alpha_A": 1.918108018643817e-08,
+          "alpha_B": 1.8339695974239954e-08,
+          "delta_alpha_pred": 8.413842121982149e-10,
+          "pdot_dip_pred_s_per_s": 1.0085181930791523e-26,
+          "pdot_dip_over_gr": 8.057263283788492e-15,
+          "allowed_residual_s_per_s_2sigma": 4e-14,
+          "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+          "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
+          "margin_vs_bound_KD_0p5": 2816456.9993917025,
+          "passes": true
+        },
+        "canonical_sqrtZ": {
+          "alpha_A": 9.508968395836043e-05,
+          "alpha_B": 9.298072739515975e-05,
+          "delta_alpha_pred": 2.1089565632006796e-06,
+          "pdot_dip_pred_s_per_s": 6.336220608571583e-20,
+          "pdot_dip_over_gr": 5.062139485214124e-08,
+          "allowed_residual_s_per_s_2sigma": 4e-14,
+          "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+          "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
+          "margin_vs_bound_KD_0p5": 1123.646875887715,
+          "passes": true
+        },
+        "vainshtein_emission": {
+          "alpha_A": 1.4142135623730951,
+          "alpha_B": 1.4142135623730951,
+          "delta_alpha_pred": 1.4142135623730951,
+          "pdot_dip_pred_s_per_s": 1.5512759515254872e-35,
+          "pdot_dip_over_gr": 1.2393468807031618e-23,
+          "allowed_residual_s_per_s_2sigma": 4e-14,
+          "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+          "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
+          "margin_vs_bound_KD_0p5": 0.0016756468164870846,
+          "passes": true
+        }
+      }
+    }
+  ],
+  "stellar_fifth_force": {
+    "rule": "hierarchical interior reading: R_local ~ y^3 with y the star's own flux-conserving profile at the element radius",
+    "rgb_tip_bound_G_eff_over_G_minus_1": 0.02,
+    "points": [
+      {
+        "location": "solar_core",
+        "x_over_rstar": 2.7848887875035547e-07,
+        "y": 1.8186274283134574e-09,
+        "G_eff_over_G_minus_1": 1.2029877528868395e-26
+      },
+      {
+        "location": "solar_surface",
+        "x_over_rstar": 1.1139555150014219e-06,
+        "y": 1.1547566523264788e-08,
+        "G_eff_over_G_minus_1": 3.0796503690715295e-24
+      },
+      {
+        "location": "rgb_core_0p5Msun_12Rsun_envelope",
+        "x_over_rstar": 1.89044519663438e-08,
+        "y": 5.035997012390071e-11,
+        "G_eff_over_G_minus_1": 2.554385186943113e-31
+      },
+      {
+        "location": "rgb_envelope_midpoint",
+        "x_over_rstar": 9.4522259831719e-06,
+        "y": 1.9985365722897448e-07,
+        "G_eff_over_G_minus_1": 1.596490342813362e-20
+      }
+    ],
+    "verdict": "passes by ~20+ orders of magnitude at every interior point; no stellar-structure constraint is active"
+  },
+  "verdict": {
+    "tightest_margin": 28.063475313384757,
+    "tightest_reading": "canonical_sqrtZ",
+    "superseded_by": "step_69_dipole_transmission",
+    "result": "Historical bracket retained for comparison. The resolved calculation is step_69: charge conserved through the shell, asymmetry sourced by sensitivities alpha_i = alpha_0(1-2s_i), emission suppressed by the solved l=1 transmission T_amp ~ a/r*; all systems pass by 2-4 orders of magnitude. The beta_0 = 0 'identical charges' premise is removed: it confused the absence of scalarization with the absence of sensitivities."
+  }
+}

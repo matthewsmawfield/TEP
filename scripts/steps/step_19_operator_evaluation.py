@@ -17,6 +17,17 @@ g_t = c * H0 / (2 * BETA_A ** 2)   # canonical transition acceleration 3.4e-10
 
 # Galactic embedding ambient (calibrated to the wide-binary plateau:
 # observed plateau -> q_env^2 ~ 0.43 -> q_env ~ 0.66 -> X_gal ~ 0.52)
+# PROVENANCE: this value was reverse-fit to the WB plateau under
+# pre-propagator bookkeeping (vertices only). The data-derived
+# alternative is the direct solar-circle estimate u_sun = a_sun/g_t =
+# 0.570 -> X_sun = 0.32 (v_c=220 km/s, R_0=8.1 kpc; step_32
+# direct_solar_circle_ambient), under which the fully-coupled
+# propagator+vertex reading reproduces the plateau at ~3% without
+# calibration (TEP-WB step_017 consistent_vertex_sweep). The ambient
+# is a solved quantity in the theory; the physical value lies in the
+# bracket u0 ~ 0.55-0.72. Keep X_GAL=0.52 for continuity with the
+# published benchmark chain; the direct value is the canonical
+# data-derived estimate going forward (issues 0-2, 13-4).
 X_GAL = 0.52
 
 

@@ -1,0 +1,18 @@
+{
+  "invariant": "I = G_loc M_chirp f / c^3",
+  "source_local_mass_ratio": "(a_A*a_B + 1)/(a_e**2 + 1)",
+  "I_det_over_I_src": "A_o**2*(a_o**2 + 1)/(a_A*a_B + 1)",
+  "screened_limit": "A_o**2",
+  "source_is_locally_standard": "M_loc = M_tilde (1+a_A a_B)/(1+a_e^2) -> M_tilde for screened systems: the source IS standard in local units",
+  "mapping_status": "M_det = M_tilde/(1+z) survives the invariant check \u2014 the nonstandard link is transport (f conserved on the static background), not local physics",
+  "exposed_constraint": {
+    "G_local": "G_loc = G_* A^2(1+alpha_amb^2) -> Gdot/G ~= 2 (A-dot/A); the A^2 factor dominates, the screened shear charge enters only its own term",
+    "excursion_transmission": 0.99685,
+    "gdot_over_G_per_yr_at_hubble_drift": 1.431797031291974e-10,
+    "llr_bound_per_yr": 4e-13,
+    "adot_bound_per_yr": 2e-13,
+    "ambient_drift_bound_per_yr": 2.0063199077092843e-13,
+    "local_drift_fraction_of_H0": 0.002802519999498662,
+    "note": "the LLR bound pins the ambient drift at the Earth--Moon location to ~0.3% of the Hubble rate; the epoch-dependence of G_loc at the source end is the physical content of the siren mapping \u2014 confronting it in the LVK mass-spectrum channel is the remaining item"
+  }
+}

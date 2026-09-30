@@ -23,7 +23,7 @@ Derivation chain implemented here:
   3. The single scale.  The kinetic scale is fixed by the cosmological shear
      floor: the only shear scale in a static eternal background is the cosmic
      shear Sigma_bg = H0/c, so the transition shear g_t in acceleration units
-     is g_t = c H0 / (2 beta_A^2) and the corresponding kinetic scale is
+     is g_t = c H0 / (2 |beta_A|) and the corresponding kinetic scale is
          Lambda^4 = M_Pl^2 H0^2 ,   Lambda = sqrt(M_Pl H0) ~ 1.87 meV
      (the dark-energy scale; zero free parameters in the kinetic sector).
 
@@ -96,12 +96,12 @@ print("=" * 78)
 # ----------------------------------------------------------------------------
 Lam_GeV = np.sqrt(M_Pl * (H0 * hbar))          # Lambda = sqrt(M_Pl H0) in GeV
 Lam4_GeV4 = Lam_GeV**4
-g_t = c * H0 / (2.0 * beta_A**2)               # shear threshold, m/s^2
+g_t = c * H0 / (2.0 * abs(beta_A))          # shear threshold, m/s^2
 Sigma_bg = H0 / c                              # cosmic shear floor, m^-1
 
 print("\n[1] SINGLE SCALE")
 print(f"  Lambda = sqrt(M_Pl H0) = {Lam_GeV*1e12:.3f} meV")
-print(f"  g_t = c H0/(2 beta_A^2) = {g_t:.3e} m/s^2")
+print(f"  g_t = c H0/(2 |beta_A|) = {g_t:.3e} m/s^2")
 print(f"  corpus-adopted values:  C0 fitted 3.4e-10 ; SPARC g_TEP ~5e-10 ; "
       f"MOND a0 1.2e-10")
 print(f"  Sigma_bg = H0/c = {Sigma_bg:.3e} m^-1")

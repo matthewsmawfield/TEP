@@ -3,14 +3,17 @@
     "canonical_length_km": 4200,
     "mgex_length_km": 1862,
     "mgex_length_err_km": 112,
-    "axis_offset_from_cmb_deg": 21.4,
-    "tep_interpretation": "Nested hierarchy: 4200 km = R_T (outer structure), 1862 km lies between inner-core and outer-core R_T; axis remains CMB-consistent",
+    "nominal_axis_offset_from_cmb_deg": 82.7,
+    "grid_directions_ge_direct_cmb": 61,
+    "grid_directions_total": 703,
+    "cmb_frame_detected": false,
+    "tep_interpretation": "Nested hierarchy: 4200 km = R_T (outer structure), 1862 km lies between inner-core and outer-core R_T; annual-direction scan is projection-degenerate",
     "R_T_inner_core_km": 1254.4502648018226,
     "R_T_outer_core_km": 3497.1759370900636,
     "inner_core_match_percent": 32.62887944136291,
     "outer_core_match_percent": 87.81825655693144,
-    "axis_interpretation": "Recovered axis within 21.4\u00b0 of the CMB dipole: same preferred direction as the canonical product; the discrepancy is in scale, not orientation",
-    "classification": "UNRESOLVED \u2014 product-dependent replication difference in scale; axis consistent with canonical direction; inner-core identification is a hypothesis requiring a prespecified prediction",
+    "axis_interpretation": "Nominal maximum is 82.7\u00b0 from the CMB dipole, but 61/703 directions perform at least as well as the CMB template; no unique axis or CMB frame is identified",
+    "classification": "UNRESOLVED \u2014 product-dependent replication difference in scale; directional scan projection-degenerate; inner-core identification is a hypothesis requiring a prespecified prediction",
     "resolution_test": "Product-level transfer model: freeze observation operator for each product, predict both length and axis from TEP hierarchy"
   },
   "jwst": {
@@ -47,9 +50,9 @@
     "resolution_test": "Forward-dynamics integration: integrate TEP force model through LLR observation times, construct variational/design matrices, refit nuisance parameters, evaluate retained signal. For flyby: include disformal coupling in the trajectory model."
   },
   "summary": {
-    "mgex": "UNRESOLVED \u2014 1862 km lies between inner-core and outer-core R_T; axis consistent with CMB direction (21.4\u00b0)",
+    "mgex": "UNRESOLVED \u2014 1862 km lies between inner-core and outer-core R_T; annual-direction scan projection-degenerate; no CMB-frame localization",
     "jwst": "MIXED \u2014 primary covariance-corrected evidence favors TEP (ln BF = +64.5); conventional residual space favors the null",
     "llr": "SCREENED to ~1.6e-14 at lunar distance; flyby NOT EXPLAINED by conformal coupling alone",
-    "overall": "MGEX scale unresolved between hierarchy levels; axis consistent. JWST evidence mixed across comparison spaces. LLR conformal channel screened to ~1.6e-14 (corpus operator). Flyby requires disformal coupling."
+    "overall": "MGEX scale unresolved between hierarchy levels; directional scan projection-degenerate. JWST evidence mixed across comparison spaces. LLR conformal channel screened to ~1.6e-14 (corpus operator). Flyby requires disformal coupling."
   }
 }

@@ -26,6 +26,11 @@ BETA = -1.0
 # Density conversion derived from the same mass and length units.
 G_CM3_GEV4 = 1000 * KG_GEV * HBAR_C**3
 LAMBDA_REFERENCE = 7.526e-71
+# The corrected linear-in-S_Sigma Cassini evaluation fails at
+# LAMBDA_REFERENCE by ~250x (step_03); the corpus adopts
+# LAMBDA_CASSINI = 1e5*LAMBDA_REFERENCE as the operative weak-field
+# coupling wherever the quartic normalization enters.
+LAMBDA_CASSINI = LAMBDA_REFERENCE * 1e5
 # Unified master potential (cross-scale closure; the step_33 'uni' gate
 # integrates the same function):
 #   V(varphi) = (lam/4) varphi^4 exp(-(varphi/VARPHI_S)^4)
@@ -158,7 +163,7 @@ def potential_increment(background, perturbation, lam):
             - _scalar_drive(background, lam))
 
 
-def solve_sphere(mass_kg, radius_m, lam=LAMBDA_REFERENCE, rho_bg=1e-24,
+def solve_sphere(mass_kg, radius_m, lam=LAMBDA_CASSINI, rho_bg=1e-24,
                  x_max=1e5, tol=2e-5, surface_width=.01, density_shape=None,
                  phi_env=0.0, guess=None):
     """Solve a finite-mass overdensity on the quartic equilibrium background.

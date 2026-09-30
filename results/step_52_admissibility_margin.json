@@ -1,0 +1,394 @@
+{
+  "step": "step_52_admissibility_margin",
+  "deformation": "D = B0 * u^2/(1+u^2) * exp(-u^4/2) * (du/dl R_H)^2",
+  "convention_note": "corpus convention bounds |D| < 1e-15 directly; the strict photon mapping is |dc/c| = |(1+D)^(-1/2) - 1| ~ D/2, so the transferred B0 bound is conservative by a factor ~2 (v_par = c/sqrt(1+D), null condition on the inverse metric)",
+  "total_field_convention_note": "the environment ledgers evaluate B(u) on the local halo/profile field with u_amb = 0 (Rule 4 convention, consistent with step_50's galactic-profile bound B0 <~ 78). Under the total-field reading u = u_bar(z) + u_halo the multimessenger path picks up the cosmic-drift term (du_bar/dx)*R_H = 1, which tightens the uniform-B0 bound to ~3e-11 (Paper 19 step_063 ambient-consistent variant); this reinforces the same conclusion as the realized lapse ledger \u2014 a uniform positive B0 has no phenomenological window, and the ambient-closed gate is mandatory.",
+  "walls": {
+    "signature": "1 + D > 0 pointwise (spacelike grad phi)",
+    "fluid": "Z_t = 1 + D(1+w)R > 0, Z_s > 0; R = rho/(dphi)^2",
+    "causality": "v_par = c/sqrt(1+D) <= c requires D >= 0"
+  },
+  "environments": {
+    "gw170817_host": {
+      "mass_msun": 100000000000.0,
+      "radius_m": 9.257032743e+20,
+      "u_surface": 1.5626260930669053e-07,
+      "u_max": 2.359394819361753e-07,
+      "Dbar_peak": 1.2612980109375954e-17,
+      "peak_r_over_R": 0.992832576760918,
+      "walls_negative_B0": {
+        "signature": 7.92834041858706e+16,
+        "fluid_stiff": 275488056.3845252,
+        "fluid_binding_r_over_R": 0.001,
+        "rho_g_cm3_at_binding": 9.999999999999999e-26,
+        "combined": 275488056.3845252,
+        "binding_wall": "fluid",
+        "note": "fluid wall is gradient-independent: |B0| < (M_Pl hbar c)^2 / (2 rho shape R_H^2)"
+      },
+      "observational_caps_B0": {
+        "same_path_1e-15": 79.2834041858706,
+        "terrestrial_resonator_1e-18": null
+      },
+      "walls_over_gw_bound_orders": {
+        "signature": 15.008761270347838,
+        "fluid_stiff": 6.549681756224517
+      },
+      "positive_branch_at_phenom_B0": {
+        "benchmark_1": {
+          "D_peak": 1.2612980109375954e-17,
+          "signature_margin_orders": 16.89918228914875,
+          "v_par_over_c": 1.0
+        },
+        "gw_saturated_77.7": {
+          "D_peak": 9.800285544985116e-16,
+          "signature_margin_orders": 15.008761270347838,
+          "v_par_over_c": 0.9999999999999996
+        },
+        "lens_required_52": {
+          "D_peak": 6.558749656875496e-16,
+          "signature_margin_orders": 15.183178945513953,
+          "v_par_over_c": 0.9999999999999998
+        }
+      },
+      "negative_branch_spot_checks": {
+        "neg_1": {
+          "D_peak": -1.2612980109375954e-17,
+          "v_par_over_c": 1.0,
+          "signature_ok": true,
+          "fluid_ok": true
+        },
+        "neg_gw": {
+          "D_peak": -9.800285544985116e-16,
+          "v_par_over_c": 1.0000000000000007,
+          "signature_ok": true,
+          "fluid_ok": true
+        }
+      }
+    },
+    "solar": {
+      "mass_msun": 1.0,
+      "radius_m": 696000000.0,
+      "u_surface": 1.9730483344914505e-13,
+      "u_max": 2.1568064504171057e-13,
+      "Dbar_peak": 8.426482367420389e-19,
+      "peak_r_over_R": 1.00002115552925,
+      "walls_negative_B0": {
+        "signature": 1.1867348157830792e+18,
+        "fluid_stiff": 2.3414183397556e-05,
+        "fluid_binding_r_over_R": 0.001,
+        "rho_g_cm3_at_binding": 1.408,
+        "combined": 2.3414183397556e-05,
+        "binding_wall": "fluid",
+        "note": "fluid wall is gradient-independent: |B0| < (M_Pl hbar c)^2 / (2 rho shape R_H^2)"
+      },
+      "observational_caps_B0": {
+        "same_path_1e-15": 1186.7348157830793,
+        "terrestrial_resonator_1e-18": null
+      },
+      "walls_over_gw_bound_orders": {
+        "signature": 16.18393266484728,
+        "fluid_stiff": -6.5209420030470975
+      },
+      "positive_branch_at_phenom_B0": {
+        "benchmark_1": {
+          "D_peak": 8.426482367420389e-19,
+          "signature_margin_orders": 18.074353683648194,
+          "v_par_over_c": 1.0
+        },
+        "gw_saturated_77.7": {
+          "D_peak": 6.547376799485643e-17,
+          "signature_margin_orders": 16.18393266484728,
+          "v_par_over_c": 1.0
+        },
+        "lens_required_52": {
+          "D_peak": 4.3817708310586026e-17,
+          "signature_margin_orders": 16.358350340013395,
+          "v_par_over_c": 1.0
+        }
+      },
+      "negative_branch_spot_checks": {
+        "neg_1": {
+          "D_peak": -8.426482367420389e-19,
+          "v_par_over_c": 1.0,
+          "signature_ok": true,
+          "fluid_ok": false
+        },
+        "neg_gw": {
+          "D_peak": -6.547376799485643e-17,
+          "v_par_over_c": 1.0000000000000002,
+          "signature_ok": true,
+          "fluid_ok": false
+        }
+      }
+    },
+    "earth": {
+      "mass_msun": 3.0033141058200528e-06,
+      "radius_m": 6371000.0,
+      "u_surface": 5.954842807989673e-16,
+      "u_max": 6.509442430673025e-16,
+      "Dbar_peak": 8.344125373431976e-25,
+      "peak_r_over_R": 1.00002115552925,
+      "walls_negative_B0": {
+        "signature": 1.1984479561920766e+24,
+        "fluid_stiff": 0.6562524235603235,
+        "fluid_binding_r_over_R": 0.001,
+        "rho_g_cm3_at_binding": 5.515,
+        "combined": 0.6562524235603235,
+        "binding_wall": "fluid",
+        "note": "fluid wall is gradient-independent: |B0| < (M_Pl hbar c)^2 / (2 rho shape R_H^2)"
+      },
+      "observational_caps_B0": {
+        "same_path_1e-15": 1198447956.1920767,
+        "terrestrial_resonator_1e-18": 1198457.9799826837
+      },
+      "walls_over_gw_bound_orders": {
+        "signature": 22.188198160303546,
+        "fluid_stiff": -2.0733500985211006
+      },
+      "positive_branch_at_phenom_B0": {
+        "benchmark_1": {
+          "D_peak": 8.344125373431976e-25,
+          "signature_margin_orders": 24.07861917910446,
+          "v_par_over_c": 1.0
+        },
+        "gw_saturated_77.7": {
+          "D_peak": 6.483385415156646e-23,
+          "signature_margin_orders": 22.188198160303546,
+          "v_par_over_c": 1.0
+        },
+        "lens_required_52": {
+          "D_peak": 4.3389451941846275e-23,
+          "signature_margin_orders": 22.36261583546966,
+          "v_par_over_c": 1.0
+        }
+      },
+      "negative_branch_spot_checks": {
+        "neg_1": {
+          "D_peak": -8.344125373431976e-25,
+          "v_par_over_c": 1.0,
+          "signature_ok": true,
+          "fluid_ok": false
+        },
+        "neg_gw": {
+          "D_peak": -6.483385415156646e-23,
+          "v_par_over_c": 1.0,
+          "signature_ok": true,
+          "fluid_ok": false
+        }
+      }
+    },
+    "neutron_star": {
+      "mass_msun": 1.4,
+      "radius_m": 12000.0,
+      "u_surface": 5.7021381947984866e-15,
+      "u_max": 6.23320180490204e-15,
+      "Dbar_peak": 1.977435650483845e-15,
+      "peak_r_over_R": 1.0000211555292509,
+      "walls_negative_B0": {
+        "signature": 505705457345889.8,
+        "fluid_stiff": 1.7161443168747564e-16,
+        "fluid_binding_r_over_R": 0.001,
+        "rho_g_cm3_at_binding": 230000000000000.0,
+        "combined": 1.7161443168747564e-16,
+        "binding_wall": "fluid",
+        "note": "fluid wall is gradient-independent: |B0| < (M_Pl hbar c)^2 / (2 rho shape R_H^2)"
+      },
+      "observational_caps_B0": {
+        "same_path_1e-15": 0.5057054573458899,
+        "terrestrial_resonator_1e-18": null
+      },
+      "walls_over_gw_bound_orders": {
+        "signature": 12.813476621567673,
+        "fluid_stiff": -17.65586721233546
+      },
+      "positive_branch_at_phenom_B0": {
+        "benchmark_1": {
+          "D_peak": 1.977435650483845e-15,
+          "signature_margin_orders": 14.703897640368588,
+          "v_par_over_c": 0.9999999999999991
+        },
+        "gw_saturated_77.7": {
+          "D_peak": 1.5364675004259478e-13,
+          "signature_margin_orders": 12.813476621567673,
+          "v_par_over_c": 0.9999999999999232
+        },
+        "lens_required_52": {
+          "D_peak": 1.0282665382515995e-13,
+          "signature_margin_orders": 12.987894296733788,
+          "v_par_over_c": 0.9999999999999487
+        }
+      },
+      "negative_branch_spot_checks": {
+        "neg_1": {
+          "D_peak": -1.977435650483845e-15,
+          "v_par_over_c": 1.000000000000001,
+          "signature_ok": true,
+          "fluid_ok": false
+        },
+        "neg_gw": {
+          "D_peak": -1.5364675004259478e-13,
+          "v_par_over_c": 1.0000000000000768,
+          "signature_ok": true,
+          "fluid_ok": false
+        }
+      }
+    },
+    "cluster_halo": {
+      "mass_msun": 200000000000000.0,
+      "radius_m": 4.6285163715e+22,
+      "u_surface": 6.251452011337995e-06,
+      "u_max": 9.43971011724223e-06,
+      "Dbar_peak": 1.2938593576792942e-14,
+      "peak_r_over_R": 0.9928325767609179,
+      "walls_negative_B0": {
+        "signature": 77288153002473.98,
+        "fluid_stiff": 86051155.5592487,
+        "fluid_binding_r_over_R": 0.001,
+        "rho_g_cm3_at_binding": 2e-28,
+        "combined": 86051155.5592487,
+        "binding_wall": "fluid",
+        "note": "fluid wall is gradient-independent: |B0| < (M_Pl hbar c)^2 / (2 rho shape R_H^2)"
+      },
+      "observational_caps_B0": {
+        "same_path_1e-15": 0.07728815300247399,
+        "terrestrial_resonator_1e-18": null
+      },
+      "walls_over_gw_bound_orders": {
+        "signature": 11.997691910046766,
+        "fluid_stiff": 6.044335687932805
+      },
+      "positive_branch_at_phenom_B0": {
+        "benchmark_1": {
+          "D_peak": 1.2938593576792942e-14,
+          "signature_margin_orders": 13.88811292884768,
+          "v_par_over_c": 0.9999999999999936
+        },
+        "gw_saturated_77.7": {
+          "D_peak": 1.0053287209168115e-12,
+          "signature_margin_orders": 11.997691910046766,
+          "v_par_over_c": 0.9999999999994973
+        },
+        "lens_required_52": {
+          "D_peak": 6.728068659932329e-13,
+          "signature_margin_orders": 12.172109585212882,
+          "v_par_over_c": 0.9999999999996636
+        }
+      },
+      "negative_branch_spot_checks": {
+        "neg_1": {
+          "D_peak": -1.2938593576792942e-14,
+          "v_par_over_c": 1.0000000000000067,
+          "signature_ok": true,
+          "fluid_ok": true
+        },
+        "neg_gw": {
+          "D_peak": -1.0053287209168115e-12,
+          "v_par_over_c": 1.0000000000005027,
+          "signature_ok": true,
+          "fluid_ok": true
+        }
+      }
+    }
+  },
+  "drift_channel": {
+    "u_dot_over_H0": 1.0,
+    "gradphi2_t_GeV4": 1.321978692919686e-47,
+    "rho_crit_GeV4": 3.9669899724649354e-47,
+    "R_t": 3.000797209298094,
+    "per_field_value": {
+      "u_0.3": {
+        "shape": 0.08223507992390477,
+        "lapse_wall_B0_positive": 12.160260571587427,
+        "fluid_wall_B0_magnitude": 2.0261716676335806
+      },
+      "u_0.5": {
+        "shape": 0.19384664689526884,
+        "lapse_wall_B0_positive": 5.158717037495513,
+        "fluid_wall_B0_magnitude": 0.8595577571038481
+      },
+      "u_1.0": {
+        "shape": 0.3032653298563167,
+        "lapse_wall_B0_positive": 3.2974425414002564,
+        "fluid_wall_B0_magnitude": 0.5494277539286885
+      },
+      "u_2.0": {
+        "shape": 0.0002683701023220095,
+        "lapse_wall_B0_positive": 3726.1974838021597,
+        "fluid_wall_B0_magnitude": 620.8679267389983
+      },
+      "u_5.0": {
+        "shape": 1.8447650662834473e-136,
+        "lapse_wall_B0_positive": 5.420744452921847e+135,
+        "fluid_wall_B0_magnitude": 9.032173910528585e+134
+      }
+    },
+    "realized_absorber_epochs": {
+      "source": "gate10 backgrounds (phi_bar=ln(1+z), A=e^-phi_bar, d0 phi_bar = M_Pl H_T); cross-checked by Paper 29 step_10c_ambient_lapse_margin",
+      "sightlines": [
+        {
+          "id": "Q1009+2956",
+          "z_abs": 2.5042,
+          "u_ambient": 1.2539622490708502,
+          "A2": 0.08143708678353902,
+          "H_T_over_H0": 3.6890189194725473,
+          "shape": 0.1775531396731555,
+          "lapse_wall_B0_positive": 0.033703275309630146,
+          "fluid_wall_B0_magnitude_w1": 0.005920240088595166,
+          "rho_m_GeV4": 5.120932050944194e-46
+        },
+        {
+          "id": "PKS1937-101",
+          "z_abs": 3.572,
+          "u_ambient": 1.5199507459325643,
+          "A2": 0.0478396018520432,
+          "H_T_over_H0": 5.419484032119663,
+          "shape": 0.04839803373975344,
+          "lapse_wall_B0_positive": 0.033654563065441595,
+          "fluid_wall_B0_magnitude_w1": 0.005744513780066713,
+          "rho_m_GeV4": 1.1373680456332053e-45
+        },
+        {
+          "id": "J1332+0052",
+          "z_abs": 3.421,
+          "u_ambient": 1.486365914844106,
+          "A2": 0.0511633496870159,
+          "H_T_over_H0": 5.15973382436536,
+          "shape": 0.05997385779897515,
+          "lapse_wall_B0_positive": 0.03204368015513213,
+          "fluid_wall_B0_magnitude_w1": 0.0054833698787507155,
+          "rho_m_GeV4": 1.0283569845731724e-45
+        }
+      ],
+      "tightest_lapse_cap": 0.03204368015513213,
+      "tightest_fluid_cap": 0.0054833698787507155,
+      "verdict": "on the realized absorber-epoch ambients the ungated canonical envelope is ambient-lapse-supercritical for phenomenological B0 ~ 52-78 by ~10^3 (cap ~0.03), and the negative branch is capped at |B0| ~ 10^-2 by the ambient fluid wall: neither sign can carry the phenomenological amplitude ungated. Ambient closure of the environmental gate is therefore lapse-mandated \u2014 independently of, and consistent with, the absorber-amplitude requirement of Paper 29 gate10b (required ambient suppression G_ambient <~ 4e-4 at B0 = 78 vs the in-well saturation G ~ 1e-3-3e-3)."
+    },
+    "transit": {
+      "clock_map": "phi_bar/M_Pl = ln(1+z) (A_clock=(1+z)^-1, beta_A=-1, ambient phi=0 today)",
+      "u_star_shape_peak": 0.8694298574643662,
+      "lapse_cap_at_peak_fiducial": 3.0910788064995547,
+      "realized_lapse_cap_min": 0.03026266822258005,
+      "realized_cap_min_redshift": 3.0203175793948485,
+      "binding_wall_positive_branch": "lapse (B > 0; the fluid wall Z_t = 1 + B(1+w)rho/A^2 binds only B < 0)",
+      "transit_unavoidable": true,
+      "verdict": "a uniform positive B0 >~ 0.030 violates the ambient lapse during the realized transit (cap minimum at z ~ 3.0, u ~ 1.39, where A^2 suppression and the H_T ~ 4-5 H0 drift rate coincide with a still-appreciable envelope shape) \u2014 forced by the clock map, not a choice. The GW-saturated B0 = 77.7 exceeds it ~2568x and the LENS requirement ~420 ~13945x. The wall is evaded exactly by the absorber-sector structure: the cosmological ambient sits at low X, where the B_eff = B(phi)*G(X_local) gate is closed \u2014 so the modulation Paper 29 requires on independent grounds is also the one this wall selects. Uniform-B0 phenomenology (LENS, GW transfers) remains excluded at these epochs"
+    }
+  },
+  "step_13_cross_reference": {
+    "Q_min_universal_scan": -0.9973465729584603,
+    "physical_status": "no-go: a formal single-valued b_req exists, but b<0 implies superluminal longitudinal photons (v_par = c/sqrt(1+(B/A^2)|grad phi|^2) > c) inside structure and a universal roll drives Q -> -1 (matter-metric degeneracy); excluded as a physical carrier \u2014 balance saturates via the A^-1-weighted flow term behind the temporal horizon (step_14)"
+  },
+  "headline": {
+    "signature_wall_over_GW_bound_galactic": 15.008761270347838,
+    "fluid_wall_over_GW_bound_galactic": 6.549681756224517,
+    "negative_B0_max_galactic": 275488056.3845252,
+    "negative_B0_max_terrestrial": 0.6562524235603235,
+    "negative_B0_max_neutron_star": 1.7161443168747564e-16,
+    "negative_B0_binding_wall_terrestrial": "fluid",
+    "lapse_wall_cosmological_u1": 3.2974425414002564,
+    "fluid_wall_cosmological_u1": 0.5494277539286885,
+    "lapse_wall_realized_absorber_epochs": 0.03204368015513213,
+    "fluid_wall_realized_absorber_epochs": 0.0054833698787507155,
+    "note": "on the realized absorber-epoch ambients (phi_bar=ln(1+z)~1.25-1.5, du/dt=H_T~4-5 H0, A~0.22-0.29) the positive branch's lapse cap is B0<~0.03 and the negative branch's ambient fluid cap |B0|<~10^-2: both sit ~10^3 below the phenomenological B0~52-78, so ambient closure of the environment gate G(X_local) is lapse-mandated independently of the absorber-amplitude argument (Paper 29 gates 10b/10c). In dense bodies the |B|rho fluid wall binds the negative branch (|B0|<~0.7 in Earth, <~2e-16 in a neutron star); neither wall is a theorem, both are computed margins on realized profiles"
+  }
+}

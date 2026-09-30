@@ -1,0 +1,34 @@
+{
+  "scope": "dimensionless, unequal two-centre diagnostic; not an Earth-Moon or flyby prediction",
+  "charge_ratio": 0.012345679012345678,
+  "separation_over_rstar": 3.0,
+  "ambient_gradient_over_gt": 0.15,
+  "source_width_over_rstar": 0.15,
+  "grid": [
+    110,
+    220
+  ],
+  "kinetic_sectors": {
+    "baseline": {
+      "residual_l2": 3.1476601266229647e-10,
+      "bridge_axis_min_gradient_over_gt": 0.2551827570088926,
+      "bridge_axis_min_z_over_rstar": 1.045454545454545,
+      "bridge_axis_kinetic_coefficient": 1.0651182394746594,
+      "ambient_kinetic_coefficient": 1.0225,
+      "max_abs_curl_dphi_source_free": 5.551115123125783e-16,
+      "max_abs_curl_kinetic_flux_source_free": 0.23325185139728022,
+      "max_curl_identity_difference_source_free": 0.02872816033436798
+    },
+    "two_branch": {
+      "residual_l2": 6.318114872941113e-09,
+      "bridge_axis_min_gradient_over_gt": 0.20302473160257045,
+      "bridge_axis_min_z_over_rstar": 1.045454545454545,
+      "bridge_axis_kinetic_coefficient": 2.3424884880123393,
+      "ambient_kinetic_coefficient": 1.7227382653630534,
+      "max_abs_curl_dphi_source_free": 3.3306690738754696e-16,
+      "max_abs_curl_kinetic_flux_source_free": 0.534155491938996,
+      "max_curl_identity_difference_source_free": 0.026829683442486374
+    }
+  },
+  "interpretation": "A curl of the kinetic flux is not a curl of the conformal force or of the disformal synchronization connection. Low local P_X does not establish an unscreened integrated force; the physical Earth-Moon-Sun boundary value problem, source charges, clock links, and LLR fit are not solved here. The finite-difference curl comparison is grid-limited and is qualitative only."
+}

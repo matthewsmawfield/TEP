@@ -1,0 +1,219 @@
+{
+  "premise": "G_loc \u221d A^2 inside source interiors tracks the ambient drift (k-mouflage additive field profile); characteristic mass scales \u221d G^{-3/2}",
+  "eps_definition": "interior tracking fraction of the ambient cosmological drift; 1 = full additive tracking (k-mouflage), 0 = pinned (chameleon-style, NOT the specified P(X))",
+  "eps_critical": 0.6666666666666666,
+  "eps_critical_meaning": "at eps = 2/3 the TEP and GR detector-mass trends coincide exactly; the discriminant vanishes",
+  "eps_1_verdict": "M_det \u221d (1+z)^2 vs GR (1+z): the discriminant survives but flips direction \u2014 TEP predicts faster-growing detector masses; high-z 'too-massive' BH population is a natural signature",
+  "binding_constraint": "SN Ia intrinsic luminosity L \u221d (1+z)^{3eps}; at eps=1, -1.3 mag at z=0.5 and -2.3 mag at z=1 \u2014 runs against observed dimness unless the distance bookkeeping overcompensates; requires a TEP-H0 re-analysis with intrinsic drift before the eps=1 endpoint is claimed",
+  "shallower_wells_caveat": "galactic wells at z were shallower; A_gal,e/A_gal,o > 1 partially counteracts tracking (pushes eps below 1, never above)",
+  "table": {
+    "eps_1_kmouflage_additive": {
+      "eps": 1.0,
+      "z": [
+        0.1,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "G_loc_ratio": [
+        0.8264462809917354,
+        0.5917159763313609,
+        0.4444444444444444,
+        0.25,
+        0.1111111111111111
+      ],
+      "Mstar_over_M0": [
+        1.3310000000000004,
+        2.197,
+        3.375,
+        8.0,
+        27.0
+      ],
+      "M_det_TEP_over_M0": [
+        1.2100000000000002,
+        1.6900000000000002,
+        2.25,
+        4.0,
+        9.0
+      ],
+      "M_det_GR_over_M0": [
+        1.1,
+        1.3,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "TEP_over_GR_separation": [
+        1.1,
+        1.3,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "delta_SN_mag_intrinsic": [
+        -0.3104451386866881,
+        -0.854575142301276,
+        -1.3206844429176092,
+        -2.257724967479859,
+        -3.578409410397468
+      ]
+    },
+    "eps_critical": {
+      "eps": 0.6666666666666666,
+      "z": [
+        0.1,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "G_loc_ratio": [
+        0.8806630055922402,
+        0.7048156362109069,
+        0.5823869764908659,
+        0.3968502629920499,
+        0.23112042478354491
+      ],
+      "Mstar_over_M0": [
+        1.2100000000000002,
+        1.6900000000000002,
+        2.25,
+        4.0,
+        9.0
+      ],
+      "M_det_TEP_over_M0": [
+        1.1,
+        1.3,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "M_det_GR_over_M0": [
+        1.1,
+        1.3,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "TEP_over_GR_separation": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "delta_SN_mag_intrinsic": [
+        -0.2069634257911254,
+        -0.5697167615341839,
+        -0.8804562952784062,
+        -1.505149978319906,
+        -2.385606273598312
+      ]
+    },
+    "eps_half": {
+      "eps": 0.5,
+      "z": [
+        0.1,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "G_loc_ratio": [
+        0.9090909090909091,
+        0.7692307692307692,
+        0.6666666666666666,
+        0.5,
+        0.3333333333333333
+      ],
+      "Mstar_over_M0": [
+        1.153689732987167,
+        1.4822280526288794,
+        1.8371173070873836,
+        2.8284271247461903,
+        5.196152422706632
+      ],
+      "M_det_TEP_over_M0": [
+        1.0488088481701516,
+        1.140175425099138,
+        1.224744871391589,
+        1.4142135623730951,
+        1.7320508075688772
+      ],
+      "M_det_GR_over_M0": [
+        1.1,
+        1.3,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "TEP_over_GR_separation": [
+        0.9534625892455924,
+        0.8770580193070292,
+        0.8164965809277259,
+        0.7071067811865476,
+        0.5773502691896257
+      ],
+      "delta_SN_mag_intrinsic": [
+        -0.15522256934334405,
+        -0.427287571150638,
+        -0.6603422214588046,
+        -1.1288624837399295,
+        -1.789204705198734
+      ]
+    },
+    "eps_0_pinned": {
+      "eps": 0.0,
+      "z": [
+        0.1,
+        0.3,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "G_loc_ratio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "Mstar_over_M0": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "M_det_TEP_over_M0": [
+        0.9090909090909091,
+        0.7692307692307692,
+        0.6666666666666666,
+        0.5,
+        0.3333333333333333
+      ],
+      "M_det_GR_over_M0": [
+        1.1,
+        1.3,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "TEP_over_GR_separation": [
+        0.8264462809917354,
+        0.5917159763313609,
+        0.4444444444444444,
+        0.25,
+        0.1111111111111111
+      ],
+      "delta_SN_mag_intrinsic": [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    }
+  }
+}

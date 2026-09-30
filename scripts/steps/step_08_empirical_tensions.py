@@ -19,11 +19,12 @@ from tep_model import (M_EARTH, R_EARTH, M_SUN, AU, PC, M_PL, G, C, HBAR_C,
 def run():
     # === 1. MGEX: 1862 km vs 4200 km ===
     # The canonical GNSS correlation length is λ_T ≈ 4200 km (CODE, 25-year).
-    # The MGEX held-out replication (Paper 14, v0.2) returns λ = 1862 ± 112 km
-    # on the combined multi-GNSS product, and recovers an anisotropy axis at
-    # RA = 180°, Dec = 10°, i.e. within 21.4° of the CMB dipole (exploratory,
-    # full-grid permutation p = 0.025). The scale differs by a factor ~2.3;
-    # the preferred axis remains CMB-consistent.
+    # The MGEX held-out replication (Paper 14, v0.3) returns λ = 1862 ± 112 km
+    # on the combined multi-GNSS product. Its annual-direction scan has a
+    # nominal maximum at RA = 230°, Dec = +60°, 82.7° from the CMB dipole,
+    # but is projection-degenerate: 61/703 grid directions meet or exceed the
+    # direct CMB-template |r|. The scale differs by a factor ~2.3; no unique
+    # three-dimensional axis or CMB frame is identified.
 
     # TEP interpretation: the nested hierarchy
     #   galactic → solar → terrestrial → internal Earth structures
@@ -53,28 +54,29 @@ def run():
     mgex_match_inner = 100 * abs(R_T_inner - 1862e3) / 1862e3
     mgex_match_outer = 100 * abs(R_T_outer - 1862e3) / 1862e3
 
-    # The recovered axis lies 21.4° from the CMB dipole: the same preferred
-    # direction as the canonical analysis. The product-dependent quantity is
-    # the length scale, not the axis — consistent with a hierarchy-level
-    # sensitivity difference rather than a distinct physical component.
+    # The directional result cannot decide whether the scale difference reflects
+    # a hierarchy-level sensitivity difference or a distinct product response.
 
     mgex = {
         'canonical_length_km': 4200,
         'mgex_length_km': 1862,
         'mgex_length_err_km': 112,
-        'axis_offset_from_cmb_deg': 21.4,
+        'nominal_axis_offset_from_cmb_deg': 82.7,
+        'grid_directions_ge_direct_cmb': 61,
+        'grid_directions_total': 703,
+        'cmb_frame_detected': False,
         'tep_interpretation': 'Nested hierarchy: 4200 km = R_T (outer structure), '
                               '1862 km lies between inner-core and outer-core R_T; '
-                              'axis remains CMB-consistent',
+                              'annual-direction scan is projection-degenerate',
         'R_T_inner_core_km': R_T_inner / 1000,
         'R_T_outer_core_km': R_T_outer / 1000,
         'inner_core_match_percent': mgex_match_inner,
         'outer_core_match_percent': mgex_match_outer,
-        'axis_interpretation': 'Recovered axis within 21.4° of the CMB dipole: '
-                               'same preferred direction as the canonical product; '
-                               'the discrepancy is in scale, not orientation',
+        'axis_interpretation': 'Nominal maximum is 82.7° from the CMB dipole, but '
+                               '61/703 directions perform at least as well as the '
+                               'CMB template; no unique axis or CMB frame is identified',
         'classification': 'UNRESOLVED — product-dependent replication difference in scale; '
-                        'axis consistent with canonical direction; inner-core '
+                        'directional scan projection-degenerate; inner-core '
                         'identification is a hypothesis requiring a prespecified prediction',
         'resolution_test': 'Product-level transfer model: freeze observation operator for '
                           'each product, predict both length and axis from TEP hierarchy'
@@ -139,7 +141,7 @@ def run():
 
     # The TEP perturbation is the screened shear response: the corpus
     # operator derived from the master action (step_27 / Appendix E R11)
-    #   S_Σ(g) = [1 + (g/g_t)²]⁻¹,  g_t = cH_0/(2β_A²) ≈ 3.4e-10 m/s²,
+    #   S_Σ(g) = [1 + (g/g_t)²]⁻¹,  g_t = cH_0/(2|β_A|) ≈ 3.4e-10 m/s²,
     # evaluated at the local Newtonian field g. Equivalently, for a
     # two-body separation s: S_eff = [1 + (R_s/s)⁴]⁻¹, R_s = √(GM/g_t).
     # At the lunar distance (g_lunar = GM_Earth/r² ≈ 2.7e-3 m/s²):
@@ -176,7 +178,7 @@ def run():
 
     r_llr = 384400e3  # lunar distance
     H0 = 70.0e3 / 3.086e22  # s^-1
-    g_t = C * H0 / (2.0 * BETA**2)  # derived shear threshold (R11/step_27)
+    g_t = C * H0 / (2.0 * abs(BETA))  # derived shear threshold (R11/step_27)
     g_lunar = G * M_EARTH / r_llr**2
     s_sigma_lunar = float(1.0 / (1.0 + (g_lunar / g_t)**2))
 
@@ -219,11 +221,11 @@ def run():
         'llr_flyby': llr,
         'summary': {
             'mgex': 'UNRESOLVED — 1862 km lies between inner-core and outer-core R_T; '
-                    'axis consistent with CMB direction (21.4°)',
+                    'annual-direction scan projection-degenerate; no CMB-frame localization',
             'jwst': 'MIXED — primary covariance-corrected evidence favors TEP '
                     '(ln BF = +64.5); conventional residual space favors the null',
             'llr': 'SCREENED to ~1.6e-14 at lunar distance; flyby NOT EXPLAINED by conformal coupling alone',
-            'overall': 'MGEX scale unresolved between hierarchy levels; axis consistent. '
+            'overall': 'MGEX scale unresolved between hierarchy levels; directional scan projection-degenerate. '
                       'JWST evidence mixed across comparison spaces. '
                       'LLR conformal channel screened to ~1.6e-14 (corpus operator). Flyby requires disformal coupling.'
         }

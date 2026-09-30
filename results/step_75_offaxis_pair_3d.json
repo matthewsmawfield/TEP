@@ -1,0 +1,248 @@
+{
+  "step": "step_75_offaxis_pair_3d",
+  "note": "3D Cartesian solve of div J = rho for a pair at angle theta to the ambient gradient u0 z; dimensionless g_t = d = 1; parameters matched to step_59 (sigma=0.15, u0=0.15, Q=4pi)",
+  "grid": {
+    "N": 64,
+    "LBOX_over_d": 4.0,
+    "dx": 0.125
+  },
+  "u0_over_gt": 0.15,
+  "sigma_src_over_d": 0.15,
+  "R_cap_over_d": 0.6,
+  "step59_reference_y_pair_theta0": 0.1524,
+  "sectors": {
+    "linear": {
+      "0": {
+        "theta_deg": 0.0,
+        "F_pair_along_n": 14.202599834797523,
+        "F_vec": [
+          -0.1704194651719453,
+          0.004285598229796359,
+          14.202599834797523
+        ],
+        "resid_AB": 1.153024061990917e-08,
+        "resid_B": 1.600861590990615e-08,
+        "bridge_min_abs_a_over_gt": 2.1565293300597883,
+        "bridge_min_t_over_d": 0.06000000000000005,
+        "bridge_min_P_X": 1.0
+      },
+      "30": {
+        "theta_deg": 30.0,
+        "F_pair_along_n": 13.868428740189174,
+        "F_vec": [
+          5.968062210088039,
+          0.0034582928944106124,
+          12.568219809235961
+        ],
+        "resid_AB": 5.8853001603360246e-09,
+        "resid_B": 1.8683483575180933e-08,
+        "bridge_min_abs_a_over_gt": 2.1730339574738333,
+        "bridge_min_t_over_d": 0.010000000000000009,
+        "bridge_min_P_X": 1.0
+      },
+      "45": {
+        "theta_deg": 45.0,
+        "F_pair_along_n": 13.5139073224775,
+        "F_vec": [
+          8.554077176126755,
+          0.0032846473437289155,
+          10.557473839974005
+        ],
+        "resid_AB": 7.367940351406818e-09,
+        "resid_B": 1.9068929392869588e-08,
+        "bridge_min_abs_a_over_gt": 2.1442489124461726,
+        "bridge_min_t_over_d": 0.010000000000000009,
+        "bridge_min_P_X": 1.0
+      },
+      "60": {
+        "theta_deg": 60.0,
+        "F_pair_along_n": 13.161206122179722,
+        "F_vec": [
+          10.583380831977617,
+          0.003292788626565071,
+          7.991458927523635
+        ],
+        "resid_AB": 7.3802534504799206e-09,
+        "resid_B": 1.8683542439274757e-08,
+        "bridge_min_abs_a_over_gt": 2.1775012530184723,
+        "bridge_min_t_over_d": 0.010000000000000009,
+        "bridge_min_P_X": 1.0
+      },
+      "90": {
+        "theta_deg": 90.0,
+        "F_pair_along_n": 12.297932716142416,
+        "F_vec": [
+          12.297932716142416,
+          0.003181211927931763,
+          1.8607766133705719
+        ],
+        "resid_AB": 5.888324996078392e-09,
+        "resid_B": 1.6000483332393413e-08,
+        "bridge_min_abs_a_over_gt": 2.272043002594781,
+        "bridge_min_t_over_d": -0.06,
+        "bridge_min_P_X": 1.0
+      }
+    },
+    "baseline": {
+      "0": {
+        "theta_deg": 0.0,
+        "F_pair_along_n": 6.533333956708655,
+        "F_vec": [
+          -0.07846064594669194,
+          0.002096466210815466,
+          6.533333956708655
+        ],
+        "resid_AB": 1.18533344984417e-08,
+        "resid_B": 5.841589839564283e-12,
+        "bridge_min_abs_a_over_gt": 0.5527012659366655,
+        "bridge_min_t_over_d": 0.06000000000000005,
+        "bridge_min_P_X": 1.3054786893679926
+      },
+      "30": {
+        "theta_deg": 30.0,
+        "F_pair_along_n": 6.24496162857315,
+        "F_vec": [
+          2.237945682375029,
+          0.0019625485091447586,
+          5.9189820125202
+        ],
+        "resid_AB": 3.170087088669786e-07,
+        "resid_B": 2.173970977309139e-12,
+        "bridge_min_abs_a_over_gt": 0.6245836978552795,
+        "bridge_min_t_over_d": 0.07000000000000006,
+        "bridge_min_P_X": 1.390104795626575
+      },
+      "45": {
+        "theta_deg": 45.0,
+        "F_pair_along_n": 5.928171157781982,
+        "F_vec": [
+          3.229262524971026,
+          0.001944841669158704,
+          5.1544375264332665
+        ],
+        "resid_AB": 3.1851664005555703e-12,
+        "resid_B": 2.071450871050432e-12,
+        "bridge_min_abs_a_over_gt": 0.6518251329997243,
+        "bridge_min_t_over_d": 0.050000000000000044,
+        "bridge_min_P_X": 1.4248760040101083
+      },
+      "60": {
+        "theta_deg": 60.0,
+        "F_pair_along_n": 5.540648625872478,
+        "F_vec": [
+          3.991555623958672,
+          0.0019724413997843767,
+          4.167720109811245
+        ],
+        "resid_AB": 2.779590257245724e-11,
+        "resid_B": 1.1908446494934174e-12,
+        "bridge_min_abs_a_over_gt": 0.6647394795440529,
+        "bridge_min_t_over_d": 0.040000000000000036,
+        "bridge_min_P_X": 1.4418785756644983
+      },
+      "90": {
+        "theta_deg": 90.0,
+        "F_pair_along_n": 4.62805759181156,
+        "F_vec": [
+          4.62805759181156,
+          0.001958550265554875,
+          1.8786210957779599
+        ],
+        "resid_AB": 2.4748276059525416e-10,
+        "resid_B": 5.876062137684403e-12,
+        "bridge_min_abs_a_over_gt": 0.6811374396666614,
+        "bridge_min_t_over_d": 0.06000000000000005,
+        "bridge_min_P_X": 1.4639482117156548
+      }
+    },
+    "two_branch": {
+      "0": {
+        "theta_deg": 0.0,
+        "F_pair_along_n": 3.8383070667118164,
+        "F_vec": [
+          -0.031478016355488136,
+          0.0008327052383594077,
+          3.8383070667118164
+        ],
+        "resid_AB": 1.4473959871240495e-08,
+        "resid_B": 5.135628051334003e-10,
+        "bridge_min_abs_a_over_gt": 0.20742983228241435,
+        "bridge_min_t_over_d": 0.06000000000000005,
+        "bridge_min_P_X": 2.3942280529880637
+      },
+      "30": {
+        "theta_deg": 30.0,
+        "F_pair_along_n": 3.575641663994286,
+        "F_vec": [
+          0.9629199637765735,
+          0.000775551607693313,
+          3.572853254171015
+        ],
+        "resid_AB": 3.559607370500899e-10,
+        "resid_B": 3.677969137385465e-10,
+        "bridge_min_abs_a_over_gt": 0.22597130310099545,
+        "bridge_min_t_over_d": 0.07000000000000006,
+        "bridge_min_P_X": 2.6124300674688437
+      },
+      "45": {
+        "theta_deg": 45.0,
+        "F_pair_along_n": 3.2697618922176366,
+        "F_vec": [
+          1.373072845171902,
+          0.0007715492137836031,
+          3.2510687685329938
+        ],
+        "resid_AB": 6.147063520685466e-08,
+        "resid_B": 1.1831937537013339e-09,
+        "bridge_min_abs_a_over_gt": 0.25886645482238174,
+        "bridge_min_t_over_d": 0.08000000000000007,
+        "bridge_min_P_X": 3.0012428482271414
+      },
+      "60": {
+        "theta_deg": 60.0,
+        "F_pair_along_n": 2.8834417488205477,
+        "F_vec": [
+          1.6828503430407389,
+          0.0007869903747370557,
+          2.852101201959821
+        ],
+        "resid_AB": 1.0009844026179142e-07,
+        "resid_B": 9.98215779204607e-10,
+        "bridge_min_abs_a_over_gt": 0.2869809791180411,
+        "bridge_min_t_over_d": 0.07000000000000006,
+        "bridge_min_P_X": 3.335265020762477
+      },
+      "90": {
+        "theta_deg": 90.0,
+        "F_pair_along_n": 1.943031546938017,
+        "F_vec": [
+          1.9430315469380168,
+          0.0007881936567196772,
+          1.962248862893531
+        ],
+        "resid_AB": 3.5057962924704295e-11,
+        "resid_B": 4.678838493288128e-10,
+        "bridge_min_abs_a_over_gt": 0.32399623288799223,
+        "bridge_min_t_over_d": 0.06000000000000005,
+        "bridge_min_P_X": 3.777445500590153
+      }
+    }
+  },
+  "y_pair": {
+    "baseline": {
+      "0": 0.4600097188334108,
+      "30": 0.45030058888184943,
+      "45": 0.4386718819598337,
+      "60": 0.42098334867160725,
+      "90": 0.3763280950250049
+    },
+    "two_branch": {
+      "0": 0.2702538346048202,
+      "30": 0.2578260112216225,
+      "45": 0.24195532899497435,
+      "60": 0.219086436459746,
+      "90": 0.15799659924855258
+    }
+  },
+  "interpretation": "Orientation-dependence of the pair response: y_pair(theta) is the mutual force along the pair axis normalised to the linear solve at the same orientation.  theta=0 reproduces the step_59 axisymmetric geometry (reference y_pair = 0.1524 at u0=0.15, d=1); theta=90 is the first perpendicular solve.  Coarse grid (sigma_src ~ 1.2 cells): angular trend, not the converged asymptote."
+}

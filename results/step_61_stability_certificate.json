@@ -1,0 +1,153 @@
+{
+  "note": "T1.4 certificate: Z_perp = P_X, Z_par = P_X + 2 xi P_XX; c_s^2 = P_X/Z_par; k = 16.03 (derived, step_54)",
+  "static_branch": {
+    "branch": "xi = q^2/2 (spacelike)",
+    "baseline": {
+      "min_P_X": 1.000000000002,
+      "min_Z_perp": 1.000000000002,
+      "min_Z_par": 1.0000000000059999,
+      "max_c_s2": 0.9999999999960001,
+      "min_c_s2": 0.3333334444444259,
+      "strictly_elliptic": true
+    },
+    "two_branch": {
+      "min_P_X": 1.6030002e-05,
+      "min_Z_perp": 1.6030002e-05,
+      "min_Z_par": 3.2060006000000004e-05,
+      "max_c_s2": 0.49999996880848985,
+      "min_c_s2": 0.33421915564500354,
+      "strictly_elliptic": true
+    },
+    "exp_interp": {
+      "min_P_X": 1.6029873520273352e-05,
+      "min_Z_perp": 1.6029873520273352e-05,
+      "min_Z_par": 3.205962060872048e-05,
+      "max_c_s2": 0.7826669918184467,
+      "min_c_s2": 0.3333334444444259,
+      "strictly_elliptic": true
+    }
+  },
+  "vacuum_limits": {
+    "two_branch": {
+      "P_X_asymptote": "k sqrt(xi) -> 0 (marginal)",
+      "Z_par_asymptote": "(3k/2) sqrt(xi) -> 0",
+      "c_s2_limit": 0.5
+    },
+    "baseline": {
+      "P_X_asymptote": "1",
+      "c_s2_limit": 1.0
+    },
+    "exp_interp": {
+      "P_X_asymptote": "1 - 1 = 0? see min_P_X",
+      "c_s2_limit": "see scan"
+    },
+    "note": "the sqrt branch degenerates the elliptic operator at exactly xi = 0 but keeps c_s^2 = 1/2 < 1 \u2014 hyperbolic and subluminal; the degenerate point is the vacuum measure-zero locus, excised by eps_reg in the solver"
+  },
+  "cosmological_branch": {
+    "branch": "xi = H^2/(2 H0^2) (timelike)",
+    "baseline": {
+      "min_P_X": 2.0,
+      "min_Z_perp": 2.0,
+      "min_Z_par": 4.0,
+      "max_c_s2": 0.5,
+      "min_c_s2": 0.3333340522865949,
+      "strictly_elliptic": true,
+      "min_Z_t": 4.0
+    },
+    "two_branch": {
+      "min_P_X": 12.334921702420358,
+      "min_Z_perp": 12.334921702420358,
+      "min_Z_par": 25.669843404840712,
+      "max_c_s2": 0.4805218913059006,
+      "min_c_s2": 0.3355682928017748,
+      "strictly_elliptic": true,
+      "min_Z_t": 25.669843404840712
+    },
+    "exp_interp": {
+      "min_P_X": 1.9999880517018318,
+      "min_Z_perp": 1.9999880517018318,
+      "min_Z_par": 4.000123484757493,
+      "max_c_s2": 0.49998157789948344,
+      "min_c_s2": 0.33333405228457547,
+      "strictly_elliptic": true,
+      "min_Z_t": 4.000123484757493
+    },
+    "redshift_grid": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      10.0,
+      100.0
+    ],
+    "xi_values": [
+      0.5,
+      0.85625,
+      1.5499999999999998,
+      4.3999999999999995,
+      9.95,
+      200.0,
+      154545.5
+    ]
+  },
+  "benchmark_points": {
+    "solar_circle_u0sq_over2": {
+      "baseline": {
+        "P_X": 1.3249,
+        "Z_par": 1.9747,
+        "c_s2": 0.6709373575733023
+      },
+      "two_branch": {
+        "P_X": 6.785805370379602,
+        "Z_par": 13.896510740759208,
+        "c_s2": 0.4883100151519671
+      },
+      "exp_interp": {
+        "P_X": 1.3233366203681576,
+        "Z_par": 1.9832374681118572,
+        "c_s2": 0.6672608004063383
+      }
+    },
+    "X_GAL_over2": {
+      "baseline": {
+        "P_X": 1.52,
+        "Z_par": 2.56,
+        "c_s2": 0.59375
+      },
+      "two_branch": {
+        "P_X": 8.693728280289235,
+        "Z_par": 17.90745656057847,
+        "c_s2": 0.48548090851872483
+      },
+      "exp_interp": {
+        "P_X": 1.5197180351895043,
+        "Z_par": 2.5620227388473524,
+        "c_s2": 0.5931711737551641
+      }
+    },
+    "weak_ambient_0.15": {
+      "baseline": {
+        "P_X": 1.0225,
+        "Z_par": 1.0675,
+        "c_s2": 0.9578454332552694
+      },
+      "two_branch": {
+        "P_X": 1.7227382553630537,
+        "Z_par": 3.4679765107261074,
+        "c_s2": 0.496756033391459
+      },
+      "exp_interp": {
+        "P_X": 0.8398599960919526,
+        "Z_par": 1.195391517759404,
+        "c_s2": 0.7025815254789107
+      }
+    }
+  },
+  "verdict": {
+    "all_sectors_elliptic_and_hyperbolic": true,
+    "two_branch_c_s2_vacuum_limit": 0.5,
+    "two_branch_vacuum_limit_note": "c_s^2 -> 1/2 as xi -> 0: subluminal, hyperbolic, no superluminality; P_X -> 0 is the marginal ellipticity point at the measure-zero vacuum locus",
+    "note": "PASS: all three candidate sectors have P_X > 0 and Z > 0 on both branches over xi in [1e-12, 1e6]; the no-ghost coefficient Z_t > 0 on the cosmological branch.  The two-branch sector's only marginal point is xi = 0 (measure-zero vacuum)."
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "step": "master_sector_admissibility",
+  "constants": {
+    "H0_s-1": 2.268308489954634e-18,
+    "g_t": 3.4001944264419963e-10,
+    "beta_A": -1.0,
+    "Lambda4": "M_Pl^2 H0^2",
+    "a0_empirical": 1.2e-10
+  },
+  "kinetic_sector": {
+    "k_star_from_a0": 16.02867024193226,
+    "a_eff_formula": "a_eff = 4 sqrt(2) |beta_A| g_t / k",
+    "deep_tail_exponent_rule": "a_phi ~ r^{-2/(2p+1)}; flat tail requires p = 1/2 uniquely",
+    "candidates": {
+      "baseline": {
+        "P_X_positive": true,
+        "legendre_positive": true,
+        "c_s2_range": [
+          0.333333333333458,
+          0.9999999999960032
+        ],
+        "tail_slope_phi": -1.9999999998257916,
+        "flat_tail": false
+      },
+      "two_branch": {
+        "P_X_positive": true,
+        "legendre_positive": true,
+        "c_s2_range": [
+          0.333334223810165,
+          0.49999993755591793
+        ],
+        "tail_slope_phi": -0.9999926919118858,
+        "flat_tail": true
+      },
+      "twobranch_u": {
+        "P_X_positive": true,
+        "legendre_positive": true,
+        "c_s2_range": [
+          0.3333342238102761,
+          0.9999839718374343
+        ],
+        "tail_slope_phi": -1.9999636438642765,
+        "flat_tail": false
+      },
+      "exp_interp": {
+        "P_X_positive": true,
+        "legendre_positive": true,
+        "c_s2_range": [
+          0.333333333333458,
+          0.7822240187743116
+        ],
+        "tail_slope_phi": -1.0004635371390438,
+        "flat_tail": true
+      },
+      "aqual_only": {
+        "P_X_positive": true,
+        "legendre_positive": true,
+        "c_s2_range": [
+          0.4999999687499326,
+          0.4999999687500748
+        ],
+        "tail_slope_phi": -0.9999999999999994,
+        "flat_tail": true
+      }
+    },
+    "power_law_scan": {
+      "p=0.3333": {
+        "analytic_tail": -1.2000000000000002,
+        "numeric_tail": -1.1999998493134614,
+        "flat": false
+      },
+      "p=0.5000": {
+        "analytic_tail": -1.0,
+        "numeric_tail": -0.9999926919118858,
+        "flat": true
+      },
+      "p=0.6667": {
+        "analytic_tail": -0.8571428571428572,
+        "numeric_tail": -0.8570202541217945,
+        "flat": false
+      },
+      "p=1.0000": {
+        "analytic_tail": -0.6666666666666666,
+        "numeric_tail": -0.6666666666666657,
+        "flat": false
+      }
+    },
+    "branch_crossover_xi": 64.2295674311512,
+    "environment_branches": {
+      "Sun conjunction limb 1.6 Rsun": {
+        "g": 107.0,
+        "xi": 9.90284663270315e+22,
+        "P_X_baseline": 1.98056932654063e+23,
+        "P_X_two_branch": 1.9805693265910705e+23,
+        "S_Sigma_baseline": 5.0490532525142874e-24,
+        "S_Sigma_two_branch": 5.0490532523857e-24,
+        "benchmark_shift": 1.0000000000254676,
+        "branch": "large-X"
+      },
+      "Earth surface": {
+        "g": 9.82,
+        "xi": 8.340949145108597e+20,
+        "P_X_baseline": 1.6681898290217193e+21,
+        "P_X_two_branch": 1.6681898294846386e+21,
+        "S_Sigma_baseline": 5.994521622197112e-22,
+        "S_Sigma_two_branch": 5.994521620533645e-22,
+        "benchmark_shift": 1.000000000277498,
+        "branch": "large-X"
+      },
+      "Sun field at Saturn 9.5 AU": {
+        "g": 6.57e-05,
+        "xi": 37335608753.25077,
+        "P_X_baseline": 74671217507.50154,
+        "P_X_two_branch": 74674314634.20314,
+        "S_Sigma_baseline": 1.339204091455371e-11,
+        "S_Sigma_two_branch": 1.3391485477952672e-11,
+        "benchmark_shift": 1.0000414768475054,
+        "branch": "large-X"
+      },
+      "Earth-Moon (LLR)": {
+        "g": 0.0027,
+        "xi": 63055072017124.61,
+        "P_X_baseline": 126110144034250.22,
+        "P_X_two_branch": 126110271313469.83,
+        "S_Sigma_baseline": 7.929576226067986e-15,
+        "S_Sigma_two_branch": 7.929568222990494e-15,
+        "benchmark_shift": 1.0000010092702738,
+        "branch": "large-X"
+      },
+      "Sun field at 1 AU": {
+        "g": 0.00593,
+        "xi": 304159849379284.7,
+        "P_X_baseline": 608319698758570.4,
+        "P_X_two_branch": 608319978301450.2,
+        "S_Sigma_baseline": 1.643872460551174e-15,
+        "S_Sigma_two_branch": 1.6438717051381377e-15,
+        "benchmark_shift": 1.0000004595328418,
+        "branch": "large-X"
+      },
+      "Wide binary 2646 AU": {
+        "g": 1.05e-09,
+        "xi": 9.536106570491068,
+        "P_X_baseline": 20.072213140982136,
+        "P_X_two_branch": 68.56968782404047,
+        "S_Sigma_baseline": 0.04982011664464967,
+        "S_Sigma_two_branch": 0.014583703553764772,
+        "benchmark_shift": 3.4161498456809105,
+        "branch": "small-X"
+      },
+      "MW solar circle (ambient)": {
+        "g": 2e-10,
+        "xi": 0.34598119076611583,
+        "P_X_baseline": 1.6919623815322318,
+        "P_X_two_branch": 10.120052797352866,
+        "S_Sigma_baseline": 0.591029688907389,
+        "S_Sigma_two_branch": 0.09881371372504827,
+        "benchmark_shift": 5.981251656545816,
+        "branch": "small-X"
+      },
+      "GC core": {
+        "g": 7e-08,
+        "xi": 42382.69586884919,
+        "P_X_baseline": 84766.39173769837,
+        "P_X_two_branch": 88065.2233832356,
+        "S_Sigma_baseline": 1.1797128313476005e-05,
+        "S_Sigma_two_branch": 1.1355220160497128e-05,
+        "benchmark_shift": 1.038916740206958,
+        "branch": "large-X"
+      },
+      "Void / cosmic web": {
+        "g": 1e-12,
+        "xi": 8.649529769152894e-06,
+        "P_X_baseline": 1.0000172990595384,
+        "P_X_two_branch": 0.04715775113864147,
+        "S_Sigma_baseline": 0.9999827012397139,
+        "S_Sigma_two_branch": 21.205421714450488,
+        "benchmark_shift": 0.04715693536800889,
+        "branch": "small-X"
+      }
+    }
+  },
+  "potential_sector": {
+    "candidates": {
+      "quadratic m^2 u^2/2": {
+        "note": "fixed mass -> density-independent lambda_C; kills environmental screening",
+        "minimum_at_rho_1e-80": {
+          "u_min": 7.231847342643238,
+          "status": "interior"
+        },
+        "m_eff_density_exponent": 0.014963831379468178,
+        "du_min_drho_sign": 1.0,
+        "density_fraction_with_minima": 1.0,
+        "minimum_statuses": [
+          "interior",
+          "interior",
+          "interior",
+          "interior"
+        ],
+        "deep_u_flatness_dV_over_V": 0.0075
+      },
+      "inverse_power L^4(1+1/u)": {
+        "note": "beta_A=-1 branch: V' < 0 and source < 0 -> no admissible minimum (F1)",
+        "minimum_at_rho_1e-80": {
+          "u_min": 1096.6265843639726,
+          "status": "runaway"
+        },
+        "m_eff_density_exponent": "no density range admits interior minima",
+        "du_min_drho_sign": null,
+        "density_fraction_with_minima": 0.0,
+        "minimum_statuses": [
+          "runaway",
+          "runaway",
+          "runaway",
+          "runaway"
+        ],
+        "deep_u_flatness_dV_over_V": 4.975124378109654e-05
+      },
+      "quartic lam u^4/4": {
+        "note": "reference amplitude-sector form (v6.0)",
+        "minimum_at_rho_1e-80": {
+          "u_min": 0.0005107860558899401,
+          "status": "interior"
+        },
+        "m_eff_density_exponent": 0.4455803068676203,
+        "du_min_drho_sign": 1.0,
+        "density_fraction_with_minima": 1.0,
+        "minimum_statuses": [
+          "interior",
+          "interior",
+          "interior",
+          "interior"
+        ],
+        "deep_u_flatness_dV_over_V": 0.009375
+      },
+      "exponential L_V^4 e^u": {
+        "note": "runaway + coupling; min exists at e^{2u} = rho/L_V^4",
+        "minimum_at_rho_1e-80": {
+          "u_min": 4.605170854005151,
+          "status": "interior"
+        },
+        "m_eff_density_exponent": 0.4084791215228819,
+        "du_min_drho_sign": 1.0,
+        "density_fraction_with_minima": 1.0,
+        "minimum_statuses": [
+          "interior",
+          "interior",
+          "interior",
+          "interior"
+        ],
+        "deep_u_flatness_dV_over_V": 0.01
+      },
+      "symmetron -mu^2 u^2/2 + lam u^4/4": {
+        "note": "wrong environmental direction: symmetric phase in dense media",
+        "minimum_at_rho_1e-80": {
+          "u_min": 0.0005107860639657337,
+          "status": "interior"
+        },
+        "m_eff_density_exponent": 0.14584504989232602,
+        "du_min_drho_sign": 1.0,
+        "density_fraction_with_minima": 1.0,
+        "minimum_statuses": [
+          "interior",
+          "interior",
+          "interior",
+          "interior"
+        ],
+        "deep_u_flatness_dV_over_V": 0.009375
+      },
+      "master_family quartic+floor": {
+        "note": "V = lam u^4/4 e^{-(u/u_s)^4} + V0 e^{-(u_s/u)^4}; u_s ~ 9-10 (R3)",
+        "minimum_at_rho_1e-80": {
+          "u_min": 0.0005107860558899401,
+          "status": "interior"
+        },
+        "m_eff_density_exponent": 0.5022438328387959,
+        "du_min_drho_sign": 1.0,
+        "density_fraction_with_minima": 1.0,
+        "minimum_statuses": [
+          "interior",
+          "interior",
+          "interior",
+          "interior"
+        ],
+        "deep_u_flatness_dV_over_V": 9.374560560603696e-07
+      },
+      "constant floor V0": {
+        "note": "u->inf limit of the master family; no matter-domain minimum alone",
+        "minimum_at_rho_1e-80": {
+          "u_min": 1096.6291148569317,
+          "status": "runaway"
+        },
+        "m_eff_density_exponent": "no density range admits interior minima",
+        "du_min_drho_sign": null,
+        "density_fraction_with_minima": 0.0,
+        "minimum_statuses": [
+          "runaway",
+          "runaway",
+          "runaway",
+          "runaway"
+        ],
+        "deep_u_flatness_dV_over_V": 0.0
+      }
+    },
+    "master_family": {
+      "u_crossover_V0_eq_1": 2.8173671027179954,
+      "u_crossover_V0_eq_1e-30": 3.255142347431505,
+      "matter_domain": "u << u_c: quartic minima (u_min ~ 5e-4 at Earth density) sit deep inside the quartic regime",
+      "floor_domain": "u > u_c: V -> V0, locally flat (R3 rolling-floor condition); well interiors land here",
+      "V_at_u_100_over_V0": 0.9999000049998333,
+      "V_at_u_200_over_V0": 0.9999937500195312,
+      "u_transition_R3": "u ~ 9-10 at 1.01 r_h (step_16_interior_roll)",
+      "V0_from_closed_static": "V_0 = 2 M_Pl^2 / a^2 (step_12, R4)",
+      "source_starvation_note": "matter coupling rho A_,phi ~ -rho e^{-u} -> 0 at u >> 1: the deep-well field self-pins; candidate mechanism for N_min > 0 (Rule 20), to be verified by the T-B1 well-family solve"
+    },
+    "global_floor_question": "In the master family the floor V(u -> inf) = V0 is the SAME limit the ambient power-law branch approaches (A_clock -> 0 <-> u -> inf): the floor is global, not merely effective.  On a flat floor V_,u -> 0 the roll asymptotes -- A -> 0 is approached over infinite coordinate time and never completed, while well cores pin at finite u through source starvation.  Whether this satisfies Rule 20's stated N_min > 0 verbatim (finite minimum rather than asymptotic approach) is the open structural question for T0.2/T-B1."
+  },
+  "disformal_sector": {
+    "candidates": {
+      "B ~ phi^2 (pure)": {
+        "B(0)=0": true,
+        "verdict": "REJECTED",
+        "failure": "nonzero wherever phi != 0; fails the Solar-System cone-tightness requirement (Paper 29 exclusion)"
+      },
+      "B ~ phi^5": {
+        "B(0)=0": true,
+        "verdict": "REJECTED",
+        "failure": "Lorentzian signature of the matter metric lost along high-z propagation paths (z >~ 3.4); fails GW170817 window (Paper 29 exclusion)"
+      },
+      "bump B0 phi^2 exp(-phi^2/phi_c^2)": {
+        "B(0)=0": true,
+        "B_galactic_nonzero": true,
+        "signature": "margins: GW-host wall 1e15 above multimessenger bound (step_52)",
+        "verdict": "ADMISSIBLE_CANDIDATE",
+        "open": "B0 window [2.1e21, 6.1e164] dimensionless; fixed-action normalisation unresolved (R6)"
+      },
+      "Paper-28 envelope B0 u^2/(1+u^2) exp(-u^4/2 sigma_B^4)": {
+        "B(0)=0": true,
+        "verdict": "ADMISSIBLE_CANDIDATE",
+        "open": "prescribed strong-field form; weak-field limit ~ B0 u^2; unique normalisation part of the closure problem (Sec. 2.2)"
+      },
+      "B < 0 branch": {
+        "verdict": "CONDITIONALLY_EXCLUDED",
+        "failure": "pointwise admissibility fails on every realized reconstruction to date (volume-balance b<0 drives Q -> -1: degenerate matter cone, superluminal longitudinal photons; R5, step_52)"
+      }
+    },
+    "structural_conditions": {
+      "signature": "B (dphi)^2 > -A^2",
+      "hyperbolicity": "Z_t = 1 + B(1+w) rho/A^2 > 0; Z_s = 1 + B(1-w) rho/(3 A^2) > 0",
+      "causality": "matter cone inside gravitational cone on the realized deformation",
+      "holonomy_kernel": "d(delta sigma) = -(B/A^2) d(phi_dot/N^2) ^ d phi"
+    },
+    "note": "B(0) = 0 and a mid-field bump are both enforced by data: GW170817 ties the cosmological ambient to the conformal limit while Rule 13 requires non-exact transport to remain possible somewhere.  The surviving forms are precisely the bump/envelope family -- constrained, not free."
+  },
+  "cosmological_branch": {
+    "xi_cosmo": "H^2(z) / (2 H0^2)",
+    "sequence": {
+      "z=0.0": {
+        "xi": 0.5,
+        "S_Sigma_baseline": 0.5,
+        "G_eff_over_G_baseline": 2.0,
+        "S_Sigma_two_branch": 0.08107682068168283,
+        "G_eff_over_G_two_branch": 1.1621536413633657,
+        "S_Sigma_exp_interp": 0.5000029899024312,
+        "G_eff_over_G_exp_interp": 2.0000059798048624
+      },
+      "z=0.5": {
+        "xi": 0.85625,
+        "S_Sigma_baseline": 0.3686635944700461,
+        "G_eff_over_G_baseline": 1.737327188940092,
+        "S_Sigma_two_branch": 0.06044328838157349,
+        "G_eff_over_G_two_branch": 1.120886576763147,
+        "S_Sigma_exp_interp": 0.3686636436551325,
+        "G_eff_over_G_exp_interp": 1.737327287310265
+      },
+      "z=1.0": {
+        "xi": 1.5499999999999998,
+        "S_Sigma_baseline": 0.24390243902439027,
+        "G_eff_over_G_baseline": 1.4878048780487805,
+        "S_Sigma_two_branch": 0.0433735354303025,
+        "G_eff_over_G_two_branch": 1.086747070860605,
+        "S_Sigma_exp_interp": 0.2439024391525803,
+        "G_eff_over_G_exp_interp": 1.4878048783051607
+      },
+      "z=2.0": {
+        "xi": 4.3999999999999995,
+        "S_Sigma_baseline": 0.10204081632653063,
+        "G_eff_over_G_baseline": 1.2040816326530612,
+        "S_Sigma_two_branch": 0.02357266213737068,
+        "G_eff_over_G_two_branch": 1.0471453242747413,
+        "S_Sigma_exp_interp": 0.10204081632653064,
+        "G_eff_over_G_exp_interp": 1.2040816326530612
+      },
+      "z=3.0": {
+        "xi": 9.95,
+        "S_Sigma_baseline": 0.04784688995215311,
+        "G_eff_over_G_baseline": 1.0956937799043063,
+        "S_Sigma_two_branch": 0.014192403436250516,
+        "G_eff_over_G_two_branch": 1.028384806872501,
+        "S_Sigma_exp_interp": 0.04784688995215311,
+        "G_eff_over_G_exp_interp": 1.0956937799043063
+      },
+      "z=10.0": {
+        "xi": 200.0,
+        "S_Sigma_baseline": 0.0024937655860349127,
+        "G_eff_over_G_baseline": 1.0049875311720697,
+        "S_Sigma_two_branch": 0.0015957116756868557,
+        "G_eff_over_G_two_branch": 1.0031914233513737,
+        "S_Sigma_exp_interp": 0.0024937655860349127,
+        "G_eff_over_G_exp_interp": 1.0049875311720697
+      },
+      "z=100.0": {
+        "xi": 154545.5,
+        "S_Sigma_baseline": 3.235282699002239e-06,
+        "G_eff_over_G_baseline": 1.000006470565398,
+        "S_Sigma_two_branch": 3.170655105120102e-06,
+        "G_eff_over_G_two_branch": 1.0000063413102103,
+        "S_Sigma_exp_interp": 3.235282699002239e-06,
+        "G_eff_over_G_exp_interp": 1.000006470565398
+      }
+    },
+    "note": "Under the two-branch completion the late-time boost is much weaker than the incumbent's G_eff ~ 2G at z=0 -- the small-X branch makes the cosmological branch stiffer (P_X ~ 12.3 vs 2).  The sign of the corrected growth prediction relative to the below-LCDM clustering data is the AUD-3 discriminant; X_env on linear scales must come from the constraint-slice landscape, not from H(z) alone (plan R3.2)."
+  },
+  "verdicts": {
+    "P_X": "two-branch  k sqrt(xi) + 2 xi  is the unique minimal completion satisfying: flat-tail rotation asymptote (p=1/2 unique among power laws), large-X screening unchanged (benchmarks pass identically), stability P_X>0 and Legendre>0 on both branches, and the WB/Solar-System crossover placed correctly.  Unit-term variants fail the RAR (linear small-xi limit).  k = 4 sqrt(2) g_t/a0 ~ 16.0 (supersedes the plan's k^2~11 estimate).",
+    "V": "master family V = lam u^4/4 e^{-(u/u_s)^4} + V0 e^{-(u_s/u)^4} remains the only candidate meeting V-1..V-8 jointly; exponential V passes the amplitude-sector gates and is the runner-up family to test for the ambient drift; quadratic and inverse-power fail F-adjacent/F1; symmetron runs the wrong direction.",
+    "B": "bump/envelope family (B(0)=0, mid-field support, large-field damping) is the surviving class; pure powers are excluded; B<0 is conditionally excluded by its own null cone.",
+    "open": "global-floor question (V0 global vs effective) and the N_min mechanism (source starvation) go to T0.2/T-B1; hyperbolicity extension to the noncanonical branch is T1.4; uniqueness across the wider K(X) class remains open beyond the power-law result."
+  }
+}
