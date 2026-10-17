@@ -1,25 +1,116 @@
 {
- "step": 21,
- "name": "lapse_solvability_on_R8_landscape",
- "constraint": {
-  "psi_min": 0.9994132666721861,
-  "psi_max": 1.0012214887706348,
-  "lam_star": -2.4187832804655494,
-  "converged": true
- },
- "lapse_source": {
-  "form": "q = rho_m - |grad u|^2/2 - 2(V + lam*)",
-  "q_min": -0.16252152717874369,
-  "q_max": 3.5733420018117696,
-  "q_mean": 1.5321193434778368
- },
- "principal_eigenpair": {
-  "mu_star": 1.5317862989297395,
-  "eig_residual": 1.295236487508511e-12,
-  "alpha_min": 0.0030033122653983745,
-  "alpha_max": 0.0030131222834452825,
-  "alpha_strictly_positive": true
- },
- "verdict": "PASS",
- "interpretation": "mu* is the constant lapse-sector offset at which the maximal-slicing lapse equation lap alpha = (q - mu*)alpha admits its positive zero mode on the solved landscape.  The scalar floor enters the lapse source with a different sign combination than the constraint, so mu* need not equal lam* = -2.4188; the ratio mu*/lam* = -0.633 quantifies how close the two conditions sit.  What remains unproven: stability of the zero-expansion congruence under time evolution (this solves the slice, not the dynamics) and the A_ij != 0 shear sector."
+  "step": 21,
+  "name": "canonical_lapse_admissibility_and_evolving_cmc_initial_slice",
+  "scope": "\nSTEP 21 \u2014 Canonical landscape lapse: admissibility and evolving CMC branch\n=======================================================================\n\nOn the step20 Hamiltonian slice (K_ij = 0, scalar momentum Pi = 0 and\npressureless matter at rest), the momentum constraint is identically zero.\nThe exact canonical source is q = (rho_m - 2 V_eff)/(2 M_Pl^2); spatial\nscalar gradients cancel in rho_phi + S_phi. The covariant Laplacian is\nD_h^2 N = psi^-6 div(psi^2 grad N).\n\nA positive q on a periodic cell obstructs a positive lapse solving\n(-D_h^2 + q) N = 0. Shifting the source to its principal eigenvalue is a\nnumerical diagnostic, not a physical completion: at fixed Hamiltonian\nbudget its required Pi^2 must be nonnegative.\n\nInstead solve (-D_h^2 + q) N = C with physical-volume mean(N) = 1.\nIn the ADM convention d_t K = -D_h^2 N + N q on this K_ij = 0 slice,\nC is a spatially constant initial Kdot. This is a positive lapse for an\nevolving constant-mean-curvature foliation, without changing the source\nor introducing negative kinetic energy. It establishes initial-slice\nlapse consistency, not an eternal non-expanding cosmos, a rolling\nnoncanonical branch or long-time evolution. The prescribed scalar profile\nis initial data; its subsequent acceleration is determined by evolution.\n",
+  "grids": [
+    {
+      "N": 16,
+      "hamiltonian_converged": true,
+      "hamiltonian_max_residual": 3.5818070883396336e-10,
+      "psi_range": [
+        0.9992749936489451,
+        1.001186688871153
+      ],
+      "lambda_star": -2.411814731892723,
+      "maximal_slice_diagnostic": {
+        "unadjusted_principal_eigenvalue": 1.018405589080919,
+        "source_shift_required": -1.018405589080919,
+        "required_Pi2": -0.6789370593872793,
+        "real_canonical_momentum": false,
+        "adjusted_operator_relative_residual": 1.3692356880848386e-12,
+        "canonical_closure_established": false
+      },
+      "evolving_cmc_initial_slice": {
+        "source_changed": false,
+        "scalar_Pi": 0.0,
+        "K_ij_initial": 0.0,
+        "matter_momentum": 0.0,
+        "momentum_constraint": "identically satisfied on this time-symmetric slice",
+        "q_base_range": [
+          0.9112291968527169,
+          1.7797264121641994
+        ],
+        "lapse_range": [
+          0.9989643284239836,
+          1.000468529939407
+        ],
+        "volume_mean_lapse": 1.0,
+        "Kdot_initial_code_units": 1.0184056552556096,
+        "lapse_equation_relative_residual": 8.837260394195152e-12,
+        "initial_slice_lapse_consistent": true
+      },
+      "noncanonical_khronon_static_slice": {
+        "operator_sector": "P_drift(X) = -mu_kh^2 sqrt(2X) (preferred-foliation khronon/cuscuton drift, 2X P_{,X} - P == 0)",
+        "hamiltonian_source_unchanged": true,
+        "Kdot_static_slice": 0.0,
+        "required_positive_khronon_drift_mu2_Pi": 0.6789370593872793,
+        "real_timelike_drift_admissible": true,
+        "static_lapse_range": [
+          0.9989605002914704,
+          1.0004713369966534
+        ],
+        "unshifted_static_lapse_relative_residual": 1.3692356880848386e-12,
+        "static_maximal_slice_established_on_khronon_branch": true,
+        "scope": "Lapse equation with imposed stress shift on one slice; scalar drift equation and time preservation not solved here.",
+        "full_drift_equations_solved": false,
+        "eternal_static_solution_established": false
+      }
+    },
+    {
+      "N": 48,
+      "hamiltonian_converged": true,
+      "hamiltonian_max_residual": 1.1323327263898855e-10,
+      "psi_range": [
+        0.9994132666721863,
+        1.001221488770635
+      ],
+      "lambda_star": -2.4187832804655307,
+      "maximal_slice_diagnostic": {
+        "unadjusted_principal_eigenvalue": 1.0260817154431348,
+        "source_shift_required": -1.0260817154431348,
+        "required_Pi2": -0.6840544769620899,
+        "real_canonical_momentum": false,
+        "adjusted_operator_relative_residual": 2.686463367704664e-11,
+        "canonical_closure_established": false
+      },
+      "evolving_cmc_initial_slice": {
+        "source_changed": false,
+        "scalar_Pi": 0.0,
+        "K_ij_initial": 0.0,
+        "matter_momentum": 0.0,
+        "momentum_constraint": "identically satisfied on this time-symmetric slice",
+        "q_base_range": [
+          0.9181977454255246,
+          1.786694960737007
+        ],
+        "lapse_range": [
+          0.9991810586886114,
+          1.0003669347409225
+        ],
+        "volume_mean_lapse": 0.9999999999999996,
+        "Kdot_initial_code_units": 1.0260817602396377,
+        "lapse_equation_relative_residual": 9.158409485939868e-12,
+        "initial_slice_lapse_consistent": true
+      },
+      "noncanonical_khronon_static_slice": {
+        "operator_sector": "P_drift(X) = -mu_kh^2 sqrt(2X) (preferred-foliation khronon/cuscuton drift, 2X P_{,X} - P == 0)",
+        "hamiltonian_source_unchanged": true,
+        "Kdot_static_slice": 0.0,
+        "required_positive_khronon_drift_mu2_Pi": 0.6840544769620899,
+        "real_timelike_drift_admissible": true,
+        "static_lapse_range": [
+          0.9991785616759051,
+          1.000368583610619
+        ],
+        "unshifted_static_lapse_relative_residual": 2.686463367704664e-11,
+        "static_maximal_slice_established_on_khronon_branch": true,
+        "scope": "Lapse equation with imposed stress shift on one slice; scalar drift equation and time preservation not solved here.",
+        "full_drift_equations_solved": false,
+        "eternal_static_solution_established": false
+      }
+    }
+  ],
+  "verdict": "PASS_EVOLVING_CMC_INITIAL_SLICE",
+  "maximal_static_canonical_closure": false,
+  "interpretation": "A positive lapse solves the unmodified canonical initial-slice CMC equation with a nonzero spatially uniform initial Kdot. The eigenvalue-shifted maximal diagnostic requires negative Pi squared on these backgrounds and is not a physical canonical completion. This result supports an evolving initial-data branch; it does not establish eternal zero expansion or the complete selected noncanonical action."
 }

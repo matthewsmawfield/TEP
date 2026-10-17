@@ -13,10 +13,21 @@
     "u_at_cap_min": 0.8038300354529255,
     "cap_image_segment_only": 1.1492432185861503,
     "z_at_cap_min_image": 0.5995574631219268,
-    "B0_GW_saturated": 77.7,
-    "B0_LENS_required": 422.0,
-    "margin_GW_over_cap": 104.42843814041531,
-    "margin_LENS_over_cap": 567.1660346879698
+    "B0_GW_bound_not_required": 77.7,
+    "B0_LENS_required_bracket": {
+      "g_scale_1.0": 8.84,
+      "deprojected": 51.5,
+      "g_scale_0.3": 138.0,
+      "g_scale_0.071": 422.0
+    },
+    "margin_GW_bound_over_cap": 104.42843814041531,
+    "margin_LENS_deprojected_over_cap": 69.21576015741812,
+    "margin_LENS_bracket_over_cap": {
+      "g_scale_1.0": 11.880918830904392,
+      "deprojected": 69.21576015741812,
+      "g_scale_0.3": 185.4713573150233,
+      "g_scale_0.071": 567.1660346879698
+    }
   },
   "drift_profile_samples": {
     "z": [
@@ -53,5 +64,5 @@
     "udot_over_H0_cmb": 0.00043153917033368795,
     "reading": "the tail stretch makes the ambient drift asymptotically static: u_dot ~ p(1+z)/eta ~ 10^-11 H0 at BBN.  The disformal envelope shape(u_bar) is identically zero at these amplitudes (u ~ 21 -> exp(-u^4/2) ~ 0), so the BBN ambient sits in the gate-closed regime -- consistent with the well-BBN constraint slice (TEP-BBN gate10b saturating gate).  In-well proto-structures at delta ~ 1e-5 are shallow: the BBN-era vertex is ambient-dominated."
   },
-  "verdict": "AUD-5 closed.  GW170817 lies below the junction, so the GW-sector baseline is unchanged pointwise.  The transit wall under the corrected ambient: the tail drift u_dot = p(1+z)/eta slows by ~10x at z~3 vs the image, raising the realized lapse cap from 1.149 (image) to 0.744 at z = 1.23 \u2014 the exclusion margins narrow but remain excluding: B0_GW = 77.7 exceeds the cap 104x, B0_LENS = 422 exceeds it 567x.  The ambient-gate resolution (B_eff = B(phi) G(X_local), closed on the low-X ambient) remains mandatory exactly as under the uncorrected sequence."
+  "verdict": "AUD-5 closed.  GW170817 lies below the junction, so the GW-sector baseline is unchanged pointwise.  The transit wall under the corrected ambient: the tail drift u_dot = p(1+z)/eta slows by ~10x at z~3 vs the image, raising the realized lapse cap from 1.149 (image) to 0.744 at z = 1.23.  The GW170817 B0 bound (77.7, an upper bound rather than a required amplitude) exceeds the cap 104x, so the admissible window is B0 < 0.744.  The Refsdal lensing requirement is environment-dependent (B0 = 8.8-422 across the step_062/063 deprojection bracket; deprojected central 51.5): the ungated envelope is lapse-supercritical by ~69x at the central value, ranging ~12x-567x across the bracket \u2014 and the margin narrows further under the TEP-native drift conventions (caps ~1.0-4.5, step_52).  The ambient-gate resolution (B_eff = B(phi) G(X_local), closed on the low-X ambient) remains mandatory exactly as under the uncorrected sequence."
 }

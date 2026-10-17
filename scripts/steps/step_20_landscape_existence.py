@@ -53,6 +53,7 @@ Outputs results/step_20_landscape_existence.json.
 """
 
 import json
+from pathlib import Path
 import os
 import numpy as np
 import scipy.sparse as sp
@@ -174,7 +175,13 @@ def make_laplacian(N, dx):
 def solve_landscape(S0, g, LAP, tol=1e-9, max_newton=30, verbose=True):
     N = S0.shape[0]
     shape = S0.shape
-    n = N ** 3
+    diag0 = float(LAP[0, 0]) if hasattr(LAP, "__getitem__") else -6.0 * (N ** 2)
+    dx = float(np.sqrt(-6.0 / diag0)) if diag0 < 0 else 1.0 / N
+    k = 2.0 * np.pi * fft.fftfreq(N, d=dx)
+    KX, KY, KZ = np.meshgrid(k, k, k, indexing='ij')
+    k2_grid = (2.0 * (1.0 - np.cos(KX * dx))
+               + 2.0 * (1.0 - np.cos(KY * dx))
+               + 2.0 * (1.0 - np.cos(KZ * dx))) / (dx ** 2)
 
     psi = np.ones(shape)
     lam = 0.0
@@ -201,17 +208,53 @@ def solve_landscape(S0, g, LAP, tol=1e-9, max_newton=30, verbose=True):
                + g / (8.0 * M_PL ** 2)
         q = (psi ** 5 / (4.0 * M_PL ** 2)).ravel()
 
-        L_mat = LAP + sp.diags(c_op.ravel(), format='csc')
-        lu = spla.splu(L_mat)
-        d1 = lu.solve(-r.ravel()).reshape(shape)
-        d2 = lu.solve(q).reshape(shape)
+        if N >= 32:
+            # Eliminate lambda using the mean of the bordered Newton equation.
+            # Inverting the unconstrained Jacobian twice is ill-conditioned near
+            # its constant mode; solve directly for the zero-mean update instead.
+            c_mean = float(c_op.mean())
+            denom = -k2_grid + c_mean
+            denom[np.abs(denom) < 1e-6] = -1e-6
+            denom[0, 0, 0] = 1.0
+            q_mean = float(q.mean())
+            if not np.isfinite(q_mean) or q_mean <= 0:
+                raise RuntimeError("Invalid positive-volume coefficient in bordered solve")
 
-        m1, m2 = d1.mean(), d2.mean()
-        if abs(m2) < 1e-14:
-            print("    [warn] bordered Schur denominator ~ 0")
-            break
-        dlam = m1 / m2
-        dpsi = d1 - dlam * d2
+            def projected_jacobian(v):
+                v_mean = float(v.mean())
+                v0 = v - v_mean
+                jv = LAP @ v0 + c_op.ravel() * v0
+                jv -= q * float(np.mean(c_op.ravel() * v0)) / q_mean
+                return jv - jv.mean() + v_mean
+
+            M_pre = spla.LinearOperator(
+                (N ** 3, N ** 3),
+                matvec=lambda v: np.real(fft.ifftn(fft.fftn(v.reshape(shape)) / denom)).ravel(),
+            )
+            L_op = spla.LinearOperator(
+                (N ** 3, N ** 3),
+                matvec=projected_jacobian,
+            )
+            rhs = -r.ravel() + q * float(r.mean()) / q_mean
+            rhs -= rhs.mean()
+            with np.errstate(divide="ignore", over="ignore", invalid="ignore"):
+                update, info = spla.gmres(L_op, rhs, M=M_pre, rtol=1e-11,
+                                           atol=1e-13, maxiter=200)
+            if info != 0 or not np.all(np.isfinite(update)):
+                raise RuntimeError(f"Bordered Newton linear solve failed: GMRES info={info}")
+            dpsi = (update - update.mean()).reshape(shape)
+            dlam = (-float(r.mean()) - float(np.mean(c_op * dpsi))) / q_mean
+        else:
+            L_mat = (LAP + sp.diags(c_op.ravel(), format='csc')).tocsc()
+            lu = spla.splu(L_mat)
+            d1 = lu.solve(-r.ravel()).reshape(shape)
+            d2 = lu.solve(q).reshape(shape)
+
+            m1, m2 = d1.mean(), d2.mean()
+            if abs(m2) < 1e-14:
+                raise RuntimeError("Bordered Schur denominator is numerically zero")
+            dlam = m1 / m2
+            dpsi = d1 - dlam * d2
 
         # Damped update if needed for positivity/convergence
         alpha = 1.0
@@ -219,9 +262,13 @@ def solve_landscape(S0, g, LAP, tol=1e-9, max_newton=30, verbose=True):
         for _ in range(12):
             psi_new = psi + alpha * dpsi
             lam_new = lam + alpha * dlam
-            if np.abs(F(psi_new, lam_new)).max() < res or alpha < 1e-4:
+            if (np.all(np.isfinite(psi_new)) and np.isfinite(lam_new)
+                    and np.all(psi_new > 0)
+                    and np.abs(F(psi_new, lam_new)).max() < res):
                 break
             alpha *= 0.5
+        else:
+            raise RuntimeError("Newton line search found no positive residual-reducing step")
         psi, lam = psi_new, lam_new
 
     return dict(psi=psi, lam=lam, converged=converged, history=hist)
@@ -371,6 +418,16 @@ def main():
 
     # implied void depth: V(u_d*) = lam-shifted void level (ambient V=0 ref)
     # interpret lam as the required uniform energy offset
+    # Also evaluate a native negative-V_rec void realization (u_void_neg = -0.85 < u* = -ln 2)
+    # where the unshifted potential V(u) is natively negative in the voids BEFORE any lam shift:
+    u_void_neg = -0.85
+    ld_neg = build_landscape(24, L, n_w, sigma, u_well, u_void_neg, rho0,
+                             rho_ambient, V0, rhob_half, u_s)
+    LAP24 = fd_laplacian(24, L / 24)
+    sol_neg = solve_landscape(ld_neg['S0'], ld_neg['g'], LAP24, verbose=False)
+    V_neg_min = float(ld_neg['V'].min())
+    V_neg_cells = int(np.count_nonzero(ld_neg['V'] < 0))
+
     verdict = ("PASS" if (sol['converged'] and psi_min > 0) else "FAIL")
 
     summary = {
@@ -400,6 +457,15 @@ def main():
             "S_void_mean_after_shift": S_void_mean,
             "S_well_mean_after_shift": S_well_mean,
             "rho_tot_mean": rho_tot_mean,
+            "native_negative_V_void_realization_u_void_m0p85": {
+                "u_void": u_void_neg,
+                "V_at_u_void": V_neg_min,
+                "negative_potential_cells_before_shift": V_neg_cells,
+                "constraint_converged": bool(sol_neg['converged']),
+                "psi_min": float(sol_neg['psi'].min()),
+                "psi_max": float(sol_neg['psi'].max()),
+                "residual_lambda_offset": float(sol_neg['lam']),
+            },
         },
         "solver": {
             "converged": bool(sol['converged']),
@@ -410,6 +476,12 @@ def main():
         },
         "flatness_ledger": {
             "mean_R3_g_frame": mean_R3,
+            "native_unstretched_space_matter_curvature": {
+                "metric_relation_at_fixed_epoch": "R3_matter(x) = A_sp(t_0)^-2 R3_g(x) = R3_g(x) at A_sp(t_0) = 1 (D_i ln A_sp = 0)",
+                "gauss_psi5_weighted_integral": float((-8.0 * (LAP @ psi.ravel())).sum() * dV_cell),
+                "physical_volume_weighted_mean_R3_native": float((R3 * (psi ** 6)).sum() / (psi ** 6).sum()),
+                "Omega_k_native_unstretched_H_drift_units": float(abs((R3 * (psi ** 6)).sum() / (psi ** 6).sum()) / (6.0 * H_drift ** 2)),
+            },
             "mean_R3_matter_frame_volume_weighted": mean_R3_t,
             "mean_R3_matter_frame_coord": mean_R3_t_coord,
             "matter_frame_ledger_decomposition": ledger_terms,
@@ -444,10 +516,11 @@ def main():
         "verdict_scope": "Convergence and positivity of the shifted periodic benchmark only",
     }
 
-    os.makedirs("results", exist_ok=True)
-    out = "results/step_20_landscape_existence.json"
+    results_dir = Path(__file__).resolve().parents[2] / "results"
+    results_dir.mkdir(exist_ok=True)
+    out = results_dir / "step_20_landscape_existence.json"
     with open(out, "w") as f:
-        json.dump(summary, f, indent=2)
+        json.dump(summary, f, indent=2, allow_nan=False)
 
     print("\n" + "=" * 78)
     print(f"VERDICT: {verdict}")

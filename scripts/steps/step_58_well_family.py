@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Temporal-well family solve (plan T-B1): settles Rule 20.
 
-Does the central clock rate A(u_c) = e^{-u_c} of a compact source reach
-a finite minimum N_min > 0 (floor-capped well) or fall asymptotically
-toward zero (approach, never a completed halt)?
+At fixed bare source and ambient boundary, the quartic kinetic branch
+has an integrable point-source gradient and a strictly positive lower
+bound on the central clock rate. Finite-radius trend fits do not establish
+a divergence in the compact limit.
 
-Family: fixed total scalar charge Q = 4 pi (same convention as
+Family: fixed bare-source integral Q = 4 pi (same convention as
 step_32/56), uniform-density sphere of radius R swept toward the
 compact limit R -> 0.  Static spherical field equation
 
@@ -36,6 +37,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.optimize import brentq
+from scipy.integrate import quad
 
 K = 16.03
 SQRT2 = np.sqrt(2.0)
@@ -89,7 +91,7 @@ def invert_flux(g, sector):
 
 
 def solve_well(R, sector, use_V, C_V, nr=4000, rmax=40.0, itmax=200):
-    """Fixed-charge source, radius R, r* units.  Returns central field.
+    """Fixed bare-source integral, radius R, r* units.  Returns central field.
     Log-spaced grid so the source interior is resolved at every R."""
     r = np.exp(np.linspace(np.log(R * 1e-4), np.log(rmax), nr))
     dr = np.diff(r)
@@ -126,9 +128,7 @@ def family(sector, use_V, C_V):
 
 
 def growth_law(rows):
-    """u_c vs ln(1/R) and vs ln ln(1/R): asymptotic-growth diagnostic.
-    Double-log slope ~const with stable fit = ln ln divergence
-    (approach, never a completed halt); saturating = finite floor."""
+    """Finite-range trend diagnostics; neither fit proves a divergence."""
     x = np.log([1.0 / r["R_over_rstar"] for r in rows])
     y = np.array([r["u_central"] for r in rows])
     b, a = np.polyfit(x, y, 1)
@@ -145,12 +145,38 @@ def growth_law(rows):
     return {"log_slope_full": float(b), "log_slope_compact4": float(bp),
             "loglog_slope": float(bl),
             "resid_lnln_fit": resid_ll, "resid_ln_fit": resid_lin,
-            "better": "lnln" if resid_ll < resid_lin else "ln"}
+            "better": "lnln" if resid_ll < resid_lin else "ln",
+            "scope": "finite-range fit only; compactness is bounded by compactness_certificate"}
+
+
+def compactness_certificate(sector, rmax=40.0):
+    """Continuum upper bound from the unsuppressed unit point source.
+
+    For the source-only branch, 0<=F<=1 because exp(-u)<=1. Therefore
+    u_center<=int_0^rmax finv(1/r^2) dr. Set r=t^3, q=v/t^2:
+    selected: v^3+(K/sqrt(2))*t^2*v^2=1; baseline: v^3+t^4*v=1.
+    The integration kernel is 3v and tends to 3 as t tends to zero.
+    """
+    if sector not in ('two_branch', 'baseline') or rmax <= 0:
+        raise ValueError('Invalid kinetic sector or ambient boundary radius')
+    def kernel(t):
+        if t == 0:
+            return 3.0
+        if sector == 'two_branch':
+            fun = lambda v: v**3+(K/SQRT2)*t*t*v*v-1.0
+        else:
+            fun = lambda v: v**3+t**4*v-1.0
+        return 3.0*brentq(fun, 0.0, 1.0, xtol=1e-14)
+    cap, error = quad(kernel, 0.0, rmax**(1.0/3.0), epsabs=1e-11, epsrel=1e-10)
+    return {'rmax': rmax, 'u_ambient': 0.0, 'upper_bound_u_center': cap,
+            'lower_bound_clock_ratio': float(np.exp(-cap)), 'quadrature_error': error,
+            'scope': 'Fixed unit bare-source integral and finite ambient boundary; not a global floor on unbounded space.',
+            'result': 'Finite central well and strictly positive clock ratio in the source-only compact limit.'}
 
 
 def main():
     out = {"k": K, "convention":
-           "fixed charge Q=4pi, uniform sphere radius R -> 0; "
+           "fixed bare-source integral 4pi, uniform sphere radius R -> 0; "
            "N_min = exp(-u_c); source starvation rho e^{-u}; "
            "units r_* = 1, g_t = 1"}
     for sector in ("two_branch", "baseline"):
@@ -161,6 +187,7 @@ def main():
             growth_law(out[sector]["source_only"])
         out[sector]["growth_master_V"] = \
             growth_law(out[sector]["master_V_CV_1e-3"])
+        out[sector]['compactness_certificate'] = compactness_certificate(sector)
     dest = Path(__file__).resolve().parents[2] / "results" / \
         "step_58_well_family.json"
     dest.write_text(json.dumps(out, indent=2))

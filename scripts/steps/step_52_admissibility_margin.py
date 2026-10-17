@@ -243,18 +243,39 @@ def drift_channel():
     # c)^2); identical numbers are computed independently in Paper 29
     # step_10c (results/gate10c_ambient_lapse_margin.json).
     OMEGA_M = 0.3
+
+    # TEP-native drift laws (Paper 29 step_10c): descent E^2 = 1/(1+z)
+    # and the selected tracking branch solved from its fixed-point map.
+    _k_kin = 16.03
+    _c3, _c4 = np.sqrt(2.0) * _k_kin / 3.0, 0.75
+
+    def _E2_tracking(z):
+        u = np.log1p(z)
+        e = np.exp(-u / 3.0)
+        for _ in range(60):
+            f = _c3 * e**3 + _c4 * e**4 - (_c3 + _c4) * np.exp(-u)
+            d = 3 * _c3 * e**2 + 4 * _c4 * e**3
+            e = e - f / d
+        return float(e * e)
+
     realized = []
     for sid, z in (("Q1009+2956", 2.5042), ("PKS1937-101", 3.572),
                    ("J1332+0052", 3.421)):
         u_amb = float(np.log(1.0 + z))
         A2 = float(np.exp(-2.0 * u_amb))
         E2 = OMEGA_M * (1.0 + z) ** 3 + (1.0 - OMEGA_M)
+        E2_desc = 1.0 / (1.0 + z)
+        E2_trk = _E2_tracking(z)
         sh = float(shape(u_amb))
         rho_m = OMEGA_M * (1.0 + z) ** 3 * rho_crit
         realized.append({
             "id": sid, "z_abs": z, "u_ambient": u_amb, "A2": A2,
             "H_T_over_H0": float(np.sqrt(E2)), "shape": sh,
             "lapse_wall_B0_positive": float(A2 / (sh * E2)),
+            "lapse_wall_B0_native_descent": float(A2 / (sh * E2_desc)),
+            "lapse_wall_B0_native_tracking": float(A2 / (sh * E2_trk)),
+            "H_T_over_H0_native_descent": float(np.sqrt(E2_desc)),
+            "H_T_over_H0_native_tracking": float(np.sqrt(E2_trk)),
             "fluid_wall_B0_magnitude_w1": float(
                 A2 * (M_PL_GEV * HBAR_C_GEV_M) ** 2 / (
                     2.0 * rho_m * sh * R_H ** 2)),
@@ -267,20 +288,28 @@ def drift_channel():
         "sightlines": realized,
         "tightest_lapse_cap": float(
             min(r["lapse_wall_B0_positive"] for r in realized)),
+        "tightest_lapse_cap_native_descent": float(
+            min(r["lapse_wall_B0_native_descent"] for r in realized)),
+        "tightest_lapse_cap_native_tracking": float(
+            min(r["lapse_wall_B0_native_tracking"] for r in realized)),
         "tightest_fluid_cap": float(
             min(r["fluid_wall_B0_magnitude_w1"] for r in realized)),
         "verdict": (
             "on the realized absorber-epoch ambients the ungated "
             "canonical envelope is ambient-lapse-supercritical for "
-            "phenomenological B0 ~ 52-78 by ~10^3 (cap ~0.03), and the "
-            "negative branch is capped at |B0| ~ 10^-2 by the ambient "
-            "fluid wall: neither sign can carry the phenomenological "
-            "amplitude ungated. Ambient closure of the environmental "
-            "gate is therefore lapse-mandated — independently of, and "
-            "consistent with, the absorber-amplitude requirement of "
-            "Paper 29 gate10b (required ambient suppression G_ambient "
-            "<~ 4e-4 at B0 = 78 vs the in-well saturation "
-            "G ~ 1e-3-3e-3)."),
+            "phenomenological B0 ~ 52-78 by ~10^3 under the imported "
+            "LCDM drift (cap ~0.03) and by ~30-50x under the "
+            "TEP-native drift (caps ~1.0-4.5 across descent and "
+            "selected tracking); the negative branch is capped at "
+            "|B0| ~ 10^-2 by the ambient fluid wall. Neither sign "
+            "can carry the phenomenological amplitude ungated on "
+            "either rate convention. Ambient closure of the "
+            "environmental gate is therefore lapse-mandated on "
+            "either drift — independently of, and consistent with, "
+            "the absorber-amplitude requirement of Paper 29 gate10b "
+            "(required ambient suppression G_ambient <~ 4e-4 "
+            "imported / ~0.01-0.06 native at B0 = 52-78 vs the "
+            "in-well saturation G ~ 1e-3-3e-3)."),
     }
     return out
 
@@ -407,21 +436,31 @@ def main():
                 drift["per_field_value"]["u_1.0"]["fluid_wall_B0_magnitude"],
             "lapse_wall_realized_absorber_epochs":
                 drift["realized_absorber_epochs"]["tightest_lapse_cap"],
+            "lapse_wall_realized_absorber_epochs_native_descent":
+                drift["realized_absorber_epochs"][
+                    "tightest_lapse_cap_native_descent"],
+            "lapse_wall_realized_absorber_epochs_native_tracking":
+                drift["realized_absorber_epochs"][
+                    "tightest_lapse_cap_native_tracking"],
             "fluid_wall_realized_absorber_epochs":
                 drift["realized_absorber_epochs"]["tightest_fluid_cap"],
             "note": ("on the realized absorber-epoch ambients "
-                     "(phi_bar=ln(1+z)~1.25-1.5, du/dt=H_T~4-5 H0, "
-                     "A~0.22-0.29) the positive branch's lapse cap is "
-                     "B0<~0.03 and the negative branch's ambient fluid "
-                     "cap |B0|<~10^-2: both sit ~10^3 below the "
-                     "phenomenological B0~52-78, so ambient closure of "
-                     "the environment gate G(X_local) is lapse-mandated "
-                     "independently of the absorber-amplitude argument "
-                     "(Paper 29 gates 10b/10c). In dense bodies the "
-                     "|B|rho fluid wall binds the negative branch "
-                     "(|B0|<~0.7 in Earth, <~2e-16 in a neutron star); "
-                     "neither wall is a theorem, both are computed "
-                     "margins on realized profiles"),
+                     "(phi_bar=ln(1+z)~1.25-1.5, A~0.22-0.29) the "
+                     "positive branch's lapse cap is B0<~0.03 under the "
+                     "imported LCDM drift (du/dt~4-5 H0) and B0<~1.0-4.5 "
+                     "under the TEP-native drift (descent/tracking, "
+                     "H_T^2/H0^2~0.22-0.44); the negative branch's "
+                     "ambient fluid cap |B0|<~10^-2 is rate-independent. "
+                     "Phenomenological B0~52-78 is supercritical on the "
+                     "bare ambient by ~10^3 imported / ~30-50x native, so "
+                     "ambient closure of the environment gate G(X_local) "
+                     "is lapse-mandated on either drift, independently "
+                     "of the absorber-amplitude argument (Paper 29 gates "
+                     "10b/10c). In dense bodies the |B|rho fluid wall "
+                     "binds the negative branch (|B0|<~0.7 in Earth, "
+                     "<~2e-16 in a neutron star); neither wall is a "
+                     "theorem, both are computed margins on realized "
+                     "profiles"),
         },
     }
     dest = Path(__file__).resolve().parents[2] / "results" / \

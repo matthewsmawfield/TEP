@@ -152,6 +152,68 @@ def main():
         out[sector]["chi2"] = {"fs8": chi2_fs8, "S8": chi2_s8,
                                "total": chi2_fs8 + chi2_s8}
 
+    # --- small-epsilon regulator scan -------------------------------
+    # The selected two-branch sector has P_X(0) = 0, which makes the
+    # field equation degenerate where |grad phi| -> 0 (zero-gradient
+    # loci between sources).  A canonical term eps regulates this; the
+    # data bound is quantified here because xi_cosmo = E^2/2 >= 0.5
+    # over the constrained redshift range, so eps enters the growth
+    # observable only through the ratio eps / P_X(xi_cosmo).
+    def PX_reg(xi, eps):
+        xi = np.maximum(np.asarray(xi, dtype=float), 0.0)
+        return eps + K * np.sqrt(xi) + 2.0 * xi
+
+    def growth_eps(eps):
+        ai = 1.0 / 201.0
+
+        def rhs(lna, y):
+            a = np.exp(lna)
+            z = 1.0 / a - 1.0
+            dlnH = -(1.5 * OM * (1.0 + z) ** 3) / Ez(z) ** 2
+            xi = Ez(z) ** 2 / 2.0
+            geff = 1.0 + 2.0 * BETA_A ** 2 / PX_reg(xi, eps)
+            src = 1.5 * OM * (1.0 + z) ** 3 / Ez(z) ** 2 * geff
+            return [y[1], src * y[0] - (2.0 + dlnH) * y[1]]
+
+        return solve_ivp(rhs, [np.log(ai), 0.0], [ai, ai],
+                         rtol=1e-10, atol=1e-14, dense_output=True)
+
+    reg_scan = []
+    for eps in (0.0, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0):
+        sol = growth_eps(eps)
+        D0 = sol.sol([0.0])[0][0]
+        s8_0 = S8_PLANCK * 1.0
+        fs8_pts = []
+        for p in rd["fs8_points"]:
+            a = 1.0 / (1.0 + p["z"])
+            D = float(sol.sol(np.log(a))[0])
+            Dp = float(sol.sol(np.log(a))[1])
+            fs8_pts.append((Dp / D) * (S8_PLANCK * D / D0))
+        chi2_fs8 = float(np.sum(
+            [(fi - p["fs8"]) ** 2 / p["err"] ** 2
+             for fi, p in zip(fs8_pts, rd["fs8_points"])]))
+        S8_0 = s8_0 * np.sqrt(OM / 0.3)
+        chi2_s8 = float(np.sum(
+            [(S8_0 - p["S8"]) ** 2 / p["err"] ** 2
+             for p in rd["S8_points"]]))
+        reg_scan.append({
+            "eps_unit_term": eps,
+            "chi2_total": chi2_fs8 + chi2_s8,
+            "G_eff_z0": float(1.0 + 2.0 / PX_reg(0.5, eps)),
+        })
+    out["regulator_scan"] = {
+        "family": "P_X = eps + k sqrt(xi) + 2 xi",
+        "scan": reg_scan,
+        "note": ("eps is the canonical unit term re-inserted as an X->0 "
+                 "regulator.  The SPARC/RAR and Solar-System channels "
+                 "are insensitive at eps << 1 because their operative "
+                 "xi sits far from zero; only the growth table can "
+                 "bound it (xi_cosmo >= 0.5 makes the shift enter via "
+                 "eps/P_X).  eps <= ~0.1-0.3 leaves the two-branch "
+                 "growth budget essentially unchanged, so the order-"
+                 "unity exclusions do not prohibit a small regulator."),
+    }
+
     # --- AUD-6 / AUD-3 remainder: in-well X_env regime map ---
     # xi = (grad phi)^2/(2 (H0/c)^2), grad phi ~ a_phi/c^2 (beta_A = -1).
     # Extended regimes sit BELOW the ambient temporal xi = 0.5; compact

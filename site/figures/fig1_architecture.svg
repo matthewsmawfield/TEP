@@ -39,16 +39,19 @@
             <text id="Path-dependent-observables" fill="#4a5568" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
                 <tspan x="597" y="234">Path-dependent observables</tspan>
             </text>
-            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="295" y="320" width="300" height="80" rx="4"></rect>
+            <rect id="Rectangle" stroke="#e2e8f0" fill="#f7fafc" fill-rule="nonzero" x="260" y="316" width="370" height="88" rx="4"></rect>
             <text id="Conformal-Disformal-Map" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">
-                <tspan x="370.5" y="350">Conformal-Disformal Map</tspan>
+                <tspan x="348" y="341">Conformal–Disformal Shorthand</tspan>
             </text>
-            <text id="g̃=-A(φ)²-g+-B(φ)-∇φ-∇φ" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="18" font-style="italic" font-weight="normal">
-                <tspan x="357" y="377">g̃= A(φ)² g+ B(φ) </tspan>
-                <tspan x="488.24707" y="377" font-family="AppleSymbols, Apple Symbols">∇</tspan>
-                <tspan x="499.382812" y="377">φ </tspan>
-                <tspan x="513.84082" y="377" font-family="AppleSymbols, Apple Symbols">∇</tspan>
-                <tspan x="524.976562" y="377">φ</tspan>
+            <text id="g̃=-A(φ)²-g+-B(φ)-∇φ-∇φ" fill="#2a2f35" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="17" font-style="italic" font-weight="normal">
+                <tspan x="357" y="366">g̃= A(φ)² g+ B(φ) </tspan>
+                <tspan x="488.24707" y="366" font-family="AppleSymbols, Apple Symbols">∇</tspan>
+                <tspan x="499.382812" y="366">φ </tspan>
+                <tspan x="513.84082" y="366" font-family="AppleSymbols, Apple Symbols">∇</tspan>
+                <tspan x="524.976562" y="366">φ</tspan>
+            </text>
+            <text id="Resolved-Metric" fill="#4a5568" fill-rule="nonzero" font-family="TimesNewRomanPS-ItalicMT, Times New Roman" font-size="12.5" font-style="italic" font-weight="normal">
+                <tspan x="282" y="390">Resolved: g̃ = −A</tspan><tspan dy="3" font-size="9" font-style="normal">loc</tspan><tspan dy="-3">² U⊗U + A</tspan><tspan dy="3" font-size="9" font-style="normal">sp</tspan><tspan dy="-3">² Π + B Π∇φ Π∇φ</tspan>
             </text>
             <rect id="Rectangle" stroke="#2d6a8a" stroke-width="1.5" fill="#f7fafc" fill-rule="nonzero" x="340" y="461" width="220" height="80" rx="4"></rect>
             <text id="Scalar-Time-Field" fill="#2a2f35" fill-rule="nonzero" font-family="Helvetica" font-size="13" font-weight="normal">

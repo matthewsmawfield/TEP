@@ -23,7 +23,13 @@ T = du_int/delta on both branches.  The outcome sets the admissible
 clock-channel excursion factor and the secular-drift (G-dot/G)
 projection through one number.
 
-Outputs: results/step_76_ambient_transmission.json
+The executable explicitly selects the kinetic operator: the selected
+two-branch sector is the default; --operator baseline preserves the
+former unit-term control. Response is calculated separately in each,
+without identifying the static tangent with a finite-frequency transfer.
+
+Outputs: results/step_76_ambient_transmission_two_branch.json (selected)
+         results/step_76_ambient_transmission.json (--operator baseline)
 """
 
 import json
@@ -33,6 +39,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import step_53_unified_profile as profile_sector
 from step_53_unified_profile import (  # noqa: E402
     solve_body, u_eq, rho_to_m2, G_CM3_TO_GEV4, RHO_T, LAM_M2,
     G, G_T, C, MSUN, MEARTH, REARTH, RSUN, RHO_M2_PER_GCM3,
@@ -106,14 +113,38 @@ def earth_boundary_branch_sweep():
             _, shifted, _, shifted_residual, _ = solve_body(
                 MEARTH, REARTH, prof, rho_amb, ambient+delta,
                 n=2400, r_out_fac=outer, lam_m2=lam_m2)
+            shifted_inner = float(np.median(shifted[inner]))
+            field_floor = 1e-8*max(abs(baseline),abs(shifted_inner),np.finfo(float).tiny)
+            resolved = abs(shifted_inner-baseline)>field_floor
+            secant = float((shifted_inner-baseline)/delta)
             rows.append({"outer_radius_over_R_earth":outer,
                          "interior_field":baseline,
                          "static_tangent":tangent,
-                         "finite_secant":float((np.median(shifted[inner])-baseline)/delta),
+                         "finite_secant":secant if resolved else None,
+                         "raw_secant_diagnostic":secant,
+                         "secant_status":"resolved" if resolved else "below_reporting_resolution",
+                         "field_reporting_floor":field_floor,
                          "baseline_residual":residual,
                          "shifted_residual":shifted_residual,
                          "outer_boundary_error":float(u[-1]-ambient)})
         cases[branch] = {"quartic_factor_over_reference":factor,"rows":rows}
+    # Mesh-refinement audit of the reference-branch Earth tangent at the
+    # measurable 1e8 R_Earth boundary, so the manuscript's refinement values
+    # trace to stored outputs rather than an unstored run.
+    refinement_rows = []
+    for n_mesh in (1200, 2400, 4800):
+        r_m, u_m, _, res_m, _ = solve_body(
+            MEARTH, REARTH, prof, rho_amb, u_eq(rho_amb, LAM_M2),
+            n=n_mesh, r_out_fac=1e8, lam_m2=LAM_M2)
+        inner_m = r_m < 0.35*REARTH
+        refinement_rows.append({
+            "n_mesh": n_mesh,
+            "static_tangent": float(np.median(static_boundary_response(
+                r_m, u_m, prof, rho_amb, lam_m2=LAM_M2)[inner_m])),
+            "baseline_residual": res_m})
+    refinement = {"branch": "reference",
+                  "outer_radius_over_R_earth": 1e8,
+                  "rows": refinement_rows}
     vacuum_profile = lambda radius: smooth_density(radius, REARTH, 5.51, 0.0)
     r, u, _, residual, _ = solve_body(
         MEARTH, REARTH, vacuum_profile, 0.0, 0.0,
@@ -127,6 +158,7 @@ def earth_boundary_branch_sweep():
     return {"earth_ambient_density_g_cm3":rho_amb,
             "imposed_outer_field_delta":delta,
             "cases":cases,
+            "refinement_audit":refinement,
             "massless_vacuum_control":{
                 "outer_radius_over_R_earth":1e10,
                 "static_tangent":tangent,
@@ -155,10 +187,11 @@ def earth_solar_local_stiffness():
     q_sun = float(C*C*finv(solar_flux)/G_T)
     point_source_q = float(C*C*finv(2*G*MSUN/(C*C*au**2))/G_T)
     single_GM_q = float(C*C*finv(G*MSUN/(C*C*au**2))/G_T)
-    earth_only = 1+q_earth**2
-    alignment = {str(mu):float(1+q_earth**2+q_sun**2+2*mu*q_earth*q_sun)
+    earth_only = float(profile_sector.P_X(q_earth*G_T/(C*C)))
+    alignment = {str(mu):float(profile_sector.P_X(
+        np.sqrt(max(0.0,q_earth**2+q_sun**2+2*mu*q_earth*q_sun))*G_T/(C*C)))
                  for mu in (-1,0,1)}
-    return {"kinetic_branch":"P_X=1+q^2, q=c^2 |grad u|/g_t",
+    return {"kinetic_branch":profile_sector.OPERATOR,
             "earth_boundary_over_R_earth":outer,
             "earth_quartic_factor_over_reference":1e5,
             "earth_surface_gradient_over_g_t":q_earth,
@@ -166,7 +199,15 @@ def earth_solar_local_stiffness():
             "solar_point_source_q_control":point_source_q,
             "single_GM_flux_q_comparator":single_GM_q,
             "two_GM_over_single_GM_q_ratio":point_source_q/single_GM_q,
-            "normalization_audit":"This step_53 scalar flux has q(1+q^2)=2GM/(r^2 g_t); Paper-17 step_086 defines q(1+q^2)=GM/(r^2 g_t) on its baseline. Relabelling q_086=q_53/2 alone would require the kinetic factor 1+4q_086^2, not 1+q_086^2. The PDE source and kinetic-scale conventions must be reconciled before importing its coupled solution as the same-action GNSS field.",
+            "normalization_audit":(
+                "With Lambda_X^2=M_Pl H0, q_kin=c|u_prime|/H0=q_gt/2. "
+                "The selected point-source flux obeys q_kin^2(KP+q_kin)=GM/(r^2 g_t), "
+                "matching the Paper-17 step_086 source and kinetic convention apart from its declared regularizer and rounded k. "
+                "This normalization agreement alone does not identify isolated-body and coupled-body solutions."
+                if profile_sector.OPERATOR == 'two_branch' else
+                "With Lambda_X^2=M_Pl H0, q_kin=c|u_prime|/H0=q_gt/2. "
+                "The baseline point-source flux obeys q_kin(1+q_kin^2)=GM/(r^2 g_t), "
+                "matching the Paper-17 step_086 baseline convention. The reported gradient_over_g_t fields use q_gt=2q_kin."),
             "solar_boundary_at_AU":2.0,
             "solar_profile_residual":sun_residual,
             "solar_to_earth_gradient_ratio":q_sun/q_earth,
@@ -179,6 +220,10 @@ def earth_solar_local_stiffness():
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--operator', choices=['baseline','two_branch'], default='two_branch')
+    profile_sector.OPERATOR = parser.parse_args().operator
     rho_amb = 1e-30
     bodies = [
         ("Moon", 7.34767309e22, 1.7374e6, 3.34),
@@ -192,6 +237,8 @@ def main():
     deltas = [1e-20, 1e-19, 1e-18, 1e-13, 2.5e-11, 1e-9]
 
     out = {"step": "step_76_ambient_transmission",
+           "operator": profile_sector.OPERATOR,
+           "kinetic_coefficients": {"k": profile_sector.K2, "KP": profile_sector.KP, "H0_s_inverse":profile_sector.H0, "gradient_unit_m_inverse":profile_sector.H0/C, "xi_mapping":"xi=(c u_prime/H0)^2/2; Lambda_X^2=M_Pl H0"},
            "question": ("transmission T = du_int/du_amb of an ambient "
                         "field-value excursion into interior clocks, on "
                         "the solved unified-profile branch"),
@@ -225,8 +272,9 @@ def main():
         "amplitude; neither a universal unity transmission nor the static depth ratio "
         "S_A may be substituted for the dynamical clock transfer.")
 
-    dest = Path(__file__).resolve().parents[2] / "results" / \
-        "step_76_ambient_transmission.json"
+    filename = ('step_76_ambient_transmission.json' if profile_sector.OPERATOR == 'baseline'
+                else 'step_76_ambient_transmission_two_branch.json')
+    dest = Path(__file__).resolve().parents[2] / "results" / filename
     dest.write_text(json.dumps(out, indent=2))
     print("wrote", dest)
 

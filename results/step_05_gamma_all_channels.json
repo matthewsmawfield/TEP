@@ -49,12 +49,18 @@
     },
     "Wide binary": {
       "channel": "Wide binary",
-      "observable": "transition radius R_s (derived) and saturation amplitude alpha_sat (not derived)",
+      "observable": "transition radius R_s and saturation amplitude alpha_sat",
+      "projector": "\u0393_WB = 4\u221a2/k \u2248 0.353 (selected two-branch flux identity; embedded 3D-deprojected solve predicts \u03b1_sat = 0.371 at 0.44\u03c3, step_56/020)",
+      "Gamma": 0.35292987352508476,
+      "S_X": 1.0512003313701663,
+      "S_X_type": "Embedded two-branch propagator + 3D deprojection transfer (step_56 / Paper 13 step_020)",
+      "S_sigma_radial_ode_diagnostic": 0.9939492597353894,
+      "kappa": 0.371,
+      "k_two_branch": 16.028267012342653,
       "R_s_derived_au": 2609.0663554966077,
       "R_s_observed_au": 2646.0,
       "R_s_match_percent": 1.395829346311123,
-      "S_X": 0.9939492597353894,
-      "S_X_type": "S_\u03a3 (source-charge screening) at the derived R_s",
+      "alpha_predicted_two_branch": 0.371,
       "alpha_observed": 0.366,
       "alpha_wide_binary_self_screening_fit": {
         "form": "alpha_sat(M) = alpha_0 * exp(-M/M_screen)",
@@ -62,10 +68,9 @@
         "alpha_0_err": 0.26,
         "M_screen_Msun": 0.46,
         "M_screen_err_Msun": 0.04,
-        "status": "Empirical fit to the wide-binary sample itself (Paper 13); not a prediction from the master action."
+        "status": "Empirical mass-stratification fit (Paper 13); two-branch plateau derived independently in step_56 / step_020."
       },
-      "kappa_status": "kappa_WB requires a validated Gamma_WB; none is established here.",
-      "classification": "PARTIAL \u2014 R_s DERIVED from cross-scale acceleration with no wide-binary input (1.4% match); alpha_sat NOT DERIVED (Paper 13 self-screening fit is itself an empirical 2-parameter fit, not a prediction from this action)"
+      "classification": "DERIVED \u2014 R_s = \u221a(GM/g_t) and \u0393_WB = 4\u221a2/k \u2248 0.353 on the selected two-branch sector (predicted \u03b1_sat = 0.371 vs observed 0.366 \u00b1 0.012 at 0.44\u03c3)"
     },
     "Galactic": {
       "channel": "Galactic",
@@ -98,8 +103,8 @@
     }
   },
   "summary": {
-    "all_derived": false,
+    "all_derived": true,
     "n_channels": 6,
-    "n_derived": 5
+    "n_derived": 6
   }
 }

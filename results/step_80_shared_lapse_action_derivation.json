@@ -1,0 +1,232 @@
+{
+  "step": "step_80_shared_lapse_action_derivation",
+  "description": "Symbolic derivation of the single unified matter metric, spatially covariant ADM/DHOST gravitational action on static space, shared GW/EM wave operator Box_TEP across both N_TEP and A_sp (GW170817 offset == 0.0 s), WKB Hubble-friction absence preserving Xi(z) = d_L^GW / d_L^EM = 1/(1+z), and PPN gravitational slip gamma_PPN.",
+  "unified_metric_verification": {
+    "covariant_formula": "g_tilde_munu = -A_loc^2(u_grav(x)) U_mu U_nu + A_sp^2(u_drift(t, x)) Pi_munu + B(phi) Pi_mu^a Pi_nu^b d_a phi d_b phi",
+    "line_element_adm": "d s_tilde^2 = -N_TEP^2(x) c^2 dt^2 + A_sp^2(t, x) gamma_{ij}(x) dx^i dx^j",
+    "U_norm_in_g": "-1",
+    "sqrt_det_ratio_general": "A_loc*A_sp**3",
+    "homogeneous_igm_limit_u_grav_eq_0": {
+      "g_tilde_00": "-N_GR**2*c**2",
+      "g_tilde_ij": "A_sp**2*gamma_s",
+      "sqrt_det_ratio": "A_sp**3",
+      "spatial_metric": "A_sp^2(t) gamma_{ij}"
+    },
+    "inhomogeneous_static_limit_A_sp_eq_1": {
+      "g_tilde_00": "-A_loc**2*N_GR**2*c**2",
+      "g_tilde_ij": "gamma_s",
+      "sqrt_det_ratio": "A_loc",
+      "N_TEP": "A_loc(u_grav) * N_GR = exp(beta_A u_grav) * N_GR",
+      "spatial_metric_unstretched": true
+    }
+  },
+  "action_variation_results": {
+    "gravitational_action_ADM_DHOST": "S_grav = (M_Pl^2 / 2) int d^3x dt sqrt(gamma) N_GR [ R_scalar^{(3)}(gamma) + A_sp^{-1}(t,x) R_TT^{(3)}(gamma) + (A_sp(t,x) / A_loc^2(u_grav)) (K_{ij} K^{ij} - K^2) ] == (M_Pl^2 / 2) int d^3x dt sqrt(gamma) N_GR [ R_scalar^{(3)}(gamma) + A_sp^{-1}(t,x) R_TT^{(3)}(gamma) + K_tilde_{ij} K_tilde^{ij} - K_tilde^2 ]",
+    "quadratic_svt_curvature_definitions": {
+      "spatial_metric_expansion": "gamma_{ij} = (1 - 2 Phi_N / c^2) delta_{ij} + h_{ij}^{TT}",
+      "R_scalar_3_definition": "R_scalar^{(3)}(gamma) = (4/c^2) nabla^2 Phi_N - (2/c^4)(nabla Phi_N)^2 (integrating sqrt(gamma) N_GR R_scalar^{(3)} by parts yields -2 (nabla Phi_N / c^2)^2)",
+      "R_TT_3_definition": "R_TT^{(3)}(gamma) = -(1/4) gamma^{kl} d_k h_{ij}^{TT} d_l h_{ij}^{TT}",
+      "local_khronon_covariant_formulation": "In the covariant khronon / preferred-foliation framework (Blas, Pujolas & Sibiryakov 2010) defined by the unit timelike gradient U_mu = -d_mu phi / sqrt(2 X) and spatial acceleration 3-vector a_i = U^nu nabla_nu U_i = D_i ln N_GR = d_i Phi_N / c^2, the longitudinal potential piece is represented by the strictly LOCAL operator a_i a^i = gamma^{ij} D_i ln N_GR D_j ln N_GR: S_grav^{khronon} = (M_Pl^2/2) int d^3x dt sqrt(gamma) N_GR [ A_sp^{-1} R^{(3)}(gamma) + 2 (A_sp^{-1} - 1) gamma^{ij} D_i ln N_GR D_j ln N_GR + K_tilde_{ij} K_tilde^{ij} - K_tilde^2 ], which is 100% local (requiring no inverse Laplacian) and reproduces R_scalar^{(3)} + A_sp^{-1} R_TT^{(3)} identically at quadratic order.",
+      "local_khronon_minus_svt_residual": 0.0
+    },
+    "static_limit_dL_grav_du": 0.0,
+    "static_limit_dL_grav_dAsp": 0.0,
+    "poisson_and_scalar_source_unmodified_in_static_limit": true,
+    "naive_jordan_frame_dL_du_nonzero": "M_Pl**2*N_GR*R3*gamma_s**(3/2)/2",
+    "quadratic_TT_lagrangian": "M_Pl**2*N_GR*gamma_s**(3/2)*(-Derivative(h_TT(t, z), z)**2/(A_sp*gamma_s) + A_sp*Derivative(h_TT(t, z), t)**2/(A_loc**2*N_GR**2*c**2))/8",
+    "quadratic_EM_lagrangian": "-A_loc*N_GR*Derivative(A_T(t, z), z)**2/(2*A_sp*sqrt(gamma_s)) + A_sp*sqrt(gamma_s)*Derivative(A_T(t, z), t)**2/(2*A_loc*N_GR*c**2)",
+    "normalized_GW_wave_equation": "Derivative(h_TT(t, z), (z, 2))/(A_sp**2*gamma_s) - Derivative(h_TT(t, z), (t, 2))/(A_loc**2*N_GR**2*c**2) = 0",
+    "normalized_EM_wave_equation": "Derivative(A_T(t, z), (z, 2))/(A_sp**2*gamma_s) - Derivative(A_T(t, z), (t, 2))/(A_loc**2*N_GR**2*c**2) = 0",
+    "principal_operator_tt_coeff_diff": 0.0,
+    "principal_operator_zz_coeff_diff": 0.0,
+    "operators_identically_equal": true,
+    "wkb_geometric_mean_weight_TT": "0",
+    "d_wkb_weight_dAsp": 0.0,
+    "zero_wkb_hubble_friction_on_static_space": true
+  },
+  "dispersion_and_refraction": {
+    "coordinate_speed_GW": "A_loc*N_GR*c/(A_sp*sqrt(gamma_s))",
+    "coordinate_speed_EM": "A_loc*N_GR*c/(A_sp*sqrt(gamma_s))",
+    "c_GW_over_c_EM": 1.0,
+    "delta_t_gamma_minus_GW": 0.0,
+    "gw170817_z0p0098_shared_cone_offset_s": 0.0,
+    "gw170817_z0p0098_unshared_control_offset_yr": 692074.8916277408,
+    "shared_refractive_index_first_order": "-2*Phi_N/c**2 - beta_A*u + 1",
+    "photon_only_disformal_split_if_unshared": "-beta_A*u"
+  },
+  "ppn_and_matter_sector": {
+    "low_velocity_lagrangian": "-c**2*m*(Phi_N/c**2 + beta_A*u - v**2/(2*c**2)) - c**2*m",
+    "dynamical_potential_Phi_dyn": "Phi_N + beta_A*c**2*u",
+    "lensing_potential_Phi_lens": "Phi_N + beta_A*c**2*u/2",
+    "spatial_curvature_potential_Psi": "Phi_N",
+    "matter_acceleration": "a = -grad(Phi_N) - c^2 * beta_A * grad(u)",
+    "optical_and_gw_deflection_gradient": "grad_perp(n) = -(2/c^2)*grad_perp(Phi_N) - beta_A*grad_perp(u)",
+    "gamma_PPN_unstretched": "1/(2*S_Sigma*beta_A**2 + 1)",
+    "gamma_PPN_minus_1_unstretched": "-2*S_Sigma*beta_A**2/(2*S_Sigma*beta_A**2 + 1)",
+    "gamma_PPN_minus_1_isotropic_benchmark": "-4*S_Sigma*beta_A**2/(2*S_Sigma*beta_A**2 + 1)",
+    "cassini_bound_abs_gamma_minus_1": 2.3e-05,
+    "S_Sigma_sun_bound_unstretched": 1.15e-05,
+    "S_Sigma_sun_bound_isotropic_benchmark": 5.75e-06,
+    "two_branch_conjunction_1p6_Rsun": {
+      "g_N_m_s2": 107.11265759353142,
+      "q_over_g_t": 314994225800.9143,
+      "y_tb": 2.1588568258391576e-08,
+      "gamma_PPN_minus_1_pred": -4.317713465251812e-08,
+      "passes_cassini": true,
+      "margin_factor": 532.6893547962342
+    },
+    "ray_integrated_cassini_shapiro_and_doppler": {
+      "zero_gradient_regulator_eps_reg": 0.001,
+      "P_X_at_X_eq_0": 0.001,
+      "Z_at_X_eq_0": 0.001,
+      "earth_leg_AU": 1.0,
+      "saturn_leg_AU": 9.5,
+      "impact_parameter_Rsun": 1.6,
+      "ray_integrated_doppler_y_eff_unregulated": 4.506363570269805e-08,
+      "ray_integrated_doppler_y_eff_regulated": 4.5063635676236845e-08,
+      "gamma_PPN_minus_1_ray_doppler_observable": -9.012727135247369e-08,
+      "roundtrip_shapiro_delay_diff_1p6_to_10_Rsun_GR_s": 7.220260464709712e-05,
+      "roundtrip_shapiro_delay_diff_1p6_to_10_Rsun_scalar_s": 1.3503069598665441e-11,
+      "gamma_PPN_minus_1_ray_shapiro_observable": -3.740327558725633e-07,
+      "passes_cassini_ray_doppler": true,
+      "passes_cassini_ray_shapiro": true
+    },
+    "preferred_frame_ppn_parameters": {
+      "foliation_vector_status": "Covariant dynamical unit normal U_mu = -d_mu bar_phi / sqrt(2 bar_X) of the time-field gradient (not a fixed prior-geometry background vector); matching the boosted metric g_tilde_0i = -2 beta_A u(r) w_i/c and g_tilde_00 to Will (2014) PPN potentials separates the intrinsic screened coefficients alpha_1^intrinsic(r), alpha_2^intrinsic(r) from the (w_CMB/c)^2 frame-projected observables.",
+      "y_tb_1AU": 1.4656425110773057e-05,
+      "alpha_1_intrinsic_1p6_Rsun": -8.63542730335663e-08,
+      "alpha_2_intrinsic_1p6_Rsun": -2.1588568258391576e-08,
+      "alpha_1_intrinsic_1AU": -5.862570044309223e-05,
+      "alpha_2_intrinsic_1AU": -1.4656425110773057e-05,
+      "alpha_1_ppn_1p6_Rsun": -1.3140842652617463e-13,
+      "alpha_2_ppn_1p6_Rsun": -3.2852106631543657e-14,
+      "alpha_2_ppn_1AU_wCMB_projected": -2.2303213201236328e-11,
+      "alpha_2_solar_spin_bound": 4e-09,
+      "passes_alpha_2_bound": true
+    },
+    "galaxy_scale_lensing_dynamics_consistency": {
+      "eso325_g004_R_ein_g_N_m_s2": 1.2383188232297942e-09,
+      "eso325_g004_q_gal": 3.6416170393061407,
+      "eso325_g004_y_tb_isolated": 0.15198202929166607,
+      "eso325_g004_gamma_pred_isolated": 0.7668923030642667,
+      "eso325_g004_isolated_sigma_vs_collett": 2.256752188174814,
+      "eso325_g004_X_self_ambient": 5.579725278446687,
+      "eso325_g004_group_halo_ambient_scan": [
+        {
+          "M_halo_Msun": 30000000000000.0,
+          "halo_shell_radius_rstar_kpc": 110.89280386831702,
+          "y_halo_at_lens_offset": 0.0075652389486293185,
+          "X_group_ambient": 131.18353138484562,
+          "y_eff_nested": 0.007258829561819257,
+          "gamma_pred": 0.9856900873108714,
+          "sigma_vs_collett": 0.1743343034541267
+        },
+        {
+          "M_halo_Msun": 100000000000000.0,
+          "halo_shell_radius_rstar_kpc": 202.46163381224457,
+          "y_halo_at_lens_offset": 0.0033950317991640346,
+          "X_group_ambient": 293.5480511393831,
+          "y_eff_nested": 0.003331914199796779,
+          "gamma_pred": 0.9933802842502172,
+          "sigma_vs_collett": 0.25978093611352454
+        },
+        {
+          "M_halo_Msun": 300000000000000.0,
+          "halo_shell_radius_rstar_kpc": 350.67383634621257,
+          "y_halo_at_lens_offset": 0.001633122323729357,
+          "X_group_ambient": 611.3240038238074,
+          "y_eff_nested": 0.0016183750848257376,
+          "gamma_pred": 0.9967736925814329,
+          "sigma_vs_collett": 0.29748547312703244
+        }
+      ],
+      "eso325_g004_effective_ambient_scan": [
+        {
+          "X_group_ambient": 3.0,
+          "y_eff_nested": 0.10438712707658625,
+          "gamma_pred": 0.8272843308534621,
+          "sigma_vs_collett": 1.5857296571837542
+        },
+        {
+          "X_group_ambient": 10.0,
+          "y_eff_nested": 0.06031463026109245,
+          "gamma_pred": 0.892355781905985,
+          "sigma_vs_collett": 0.8627135343779445
+        },
+        {
+          "X_group_ambient": 30.0,
+          "y_eff_nested": 0.027337548119564875,
+          "gamma_pred": 0.9481592990731497,
+          "sigma_vs_collett": 0.24267445474278124
+        },
+        {
+          "X_group_ambient": 100.0,
+          "y_eff_nested": 0.009382647566293053,
+          "gamma_pred": 0.9815803549431433,
+          "sigma_vs_collett": 0.12867061047937062
+        }
+      ],
+      "eso325_g004_X_group_required_1sigma": 8.08694138821997,
+      "collett_2018_gamma_SMP_obs": "0.97 +/- 0.09",
+      "slacs_ensemble_obs_cao2017_shajib2021": "0.98 +/- 0.07",
+      "slacs_ensemble_predictions": [
+        {
+          "label": "SLACS_low_sigma_ETG",
+          "sigma_v_km_s": 220.0,
+          "R_ein_kpc": 3.5,
+          "g_N_R_ein_m_s2": 4.4815347888316363e-10,
+          "q_gal": 1.3179185475584128,
+          "y_tb_isolated": 0.2549782571213906,
+          "gamma_SMP_zero_ambient_vacuum_baseline": 0.6622707280424456,
+          "gamma_SMP_group_halo_3e13Msun_pred": 0.9810450128879806,
+          "sigma_group_vs_SLACS_obs_0p98_pm_0p07": 0.014928755542580645
+        },
+        {
+          "label": "SLACS_median_ETG",
+          "sigma_v_km_s": 260.0,
+          "R_ein_kpc": 4.2,
+          "g_N_R_ein_m_s2": 5.216111427772359e-10,
+          "q_gal": 1.5339410092105492,
+          "y_tb_isolated": 0.2360794550153005,
+          "gamma_SMP_zero_ambient_vacuum_baseline": 0.6792744948839888,
+          "gamma_SMP_group_halo_3e13Msun_pred": 0.9762446748678609,
+          "sigma_group_vs_SLACS_obs_0p98_pm_0p07": 0.05364750188770076
+        },
+        {
+          "label": "SLACS_high_sigma_ETG",
+          "sigma_v_km_s": 300.0,
+          "R_ein_kpc": 4.8,
+          "g_N_R_ein_m_s2": 6.076461167708185e-10,
+          "q_gal": 1.7869505099901002,
+          "y_tb_isolated": 0.21846524933183292,
+          "gamma_SMP_zero_ambient_vacuum_baseline": 0.6959278830326118,
+          "gamma_SMP_group_halo_3e13Msun_pred": 0.972110253197276,
+          "sigma_group_vs_SLACS_obs_0p98_pm_0p07": 0.11271066861034326
+        }
+      ],
+      "outskirt_weak_lensing_mistele_2024_consistency": "The unstretched-space temporal metric at fixed epoch (A_sp = 1) fixes distinct direct weights: the local temporal-depth perturbation u_grav enters slow-matter dynamics at full strength (Phi_dyn = Phi_N + beta_A c^2 u) and direct ray refraction n(x) = 1 - 2 Phi_N/c^2 - beta_A u at half the GR potential weight (Phi_lens = Phi_N + beta_A c^2 u/2, the 1x pure temporal-lapse benchmark, giving M_lens^GR/M_dyn = (1 + x)/(1 + 2x) with x = beta_A^2 y_eff and gamma_SMP = 1/(1 + 2 beta_A^2 y_eff) < 1 wherever the local scalar is unscreened), while dynamical/virial-calibrated lens reconstructions and chronometric mass-sheet mappings read the 2x dynamical-equivalent normalization (Papers 4, 18, 19). For ESO 325-G004 the isolated branch gives gamma = 0.767 (2.26 sigma below Collett's 0.97 +/- 0.09) - the correct isolated-environment prediction and a falsifiable discriminator for isolated field lenses - but E325 is group-central: under the nested two-body operator (step_30) the group-halo ambient kinetic value suppresses the incremental local response to y_eff ~ 7.3e-03-1.6e-03 (halo-profile ambient X_group ~ 1e2) giving gamma ~ 0.99, or gamma ~ 0.83-0.98 under the effective-ambient convention X_group ~ 3-100; the 1-sigma floor requires only X_group >= 8.1."
+    }
+  },
+  "standard_siren_homogeneous_consistency": {
+    "homogeneous_metric": "d s_tilde^2 = -c^2 dt^2 + A_sp^2(t) gamma_{ij} dx^i dx^j (for u_grav = 0)",
+    "cosmological_redshift": "1 + z = A_sp(t_o) / A_sp(t_e) = A_o / A_e",
+    "conformal_time_null_cone": "d eta = dt / A_sp(t) => dx / d eta = c for both EM and GW (Delta t_{gamma-GW} == 0)",
+    "wkb_tensor_measure_on_static_space": "sqrt(A_sp^{+1} * A_sp^{-1}) == 1 (zero Hubble friction vs FLRW a^2(eta) measure)",
+    "conformal_time_first_deriv_friction_coeff": 0.0,
+    "detector_chirp_mass": "(A_e**(5/3)*M_tilde**(5/3)*a_A*a_B*(a_A*a_B + 1)**(2/3) + A_e**(5/3)*M_tilde**(5/3)*(a_A*a_B + 1)**(2/3))**(3/5)/(A_o**(5/3)*a_o**2*(a_o**2 + 1)**(2/3) + A_o**(5/3)*(a_o**2 + 1)**(2/3))**(3/5)",
+    "inferred_GW_distance": "A_o*r",
+    "EM_angular_diameter_distance": "A_e*r",
+    "EM_luminosity_distance": "A_o**2*r/A_e",
+    "siren_ratio_Xi_z": "A_e/A_o",
+    "matches_one_over_one_plus_z": true
+  },
+  "verdict": {
+    "unified_metric_and_action_consistent": true,
+    "c_GW_equals_c_gamma_exact": true,
+    "gw170817_arrival_offset_zero": true,
+    "zero_wkb_hubble_friction_static_space": true,
+    "poisson_and_scalar_source_preserved": true,
+    "ppn_and_sirens_verified": true,
+    "summary": "The single unified matter metric g_tilde_munu = -A_loc^2(u_grav) U_mu U_nu + A_sp^2(u_drift) Pi_munu + B(phi) Pi_mu^a Pi_nu^b d_a phi d_b phi (d s_tilde^2 = -N_TEP^2(x) c^2 dt^2 + A_sp^2(t,x) gamma_{ij}(x) dx^i dx^j) and spatially covariant ADM/DHOST gravitational action S_grav = (M_Pl^2/2) int d^3x dt sqrt(gamma) N_GR [R_scalar^{(3)}(gamma) + A_sp^{-1} R_TT^{(3)}(gamma) + (A_sp/A_loc^2)(K_{ij}K^{ij} - K^2)] simultaneously (1) preserve the quasistatic Poisson equation and scalar source equation without Jordan-frame degeneracy (dL_grav/du == 0, dL_grav/dA_sp == 0 at K_{ij} -> 0), (2) yield identical GW and EM wave operators Box_TEP = -(N_TEP c)^{-2} d_t^2 + A_sp^{-2} gamma^{kl} d_k d_l with c_GW(t,x) = c_gamma(t,x) = c N_TEP / A_sp everywhere (Delta t_{gamma-GW} == 0.0 s for GW170817) and shared refractive index n(x) = 1 - 2 Phi_N/c^2 - beta_A u_grav(x) at A_sp = 1, (3) give the PPN slip gamma_PPN - 1 = -2 beta_A^2 S_Sigma / (1 + 2 beta_A^2 S_Sigma) < 0 (|gamma_PPN - 1| ~= 4.32e-08 << 2.3e-5 at 1.6 R_sun on the selected two-branch sector), and (4) keep the WKB tensor measure sqrt(A_sp^{+1} * A_sp^{-1}) == 1 constant on static space (sqrt(gamma) = 1), eliminating FLRW Hubble friction and preserving Xi(z) = d_L^GW / d_L^EM = 1 / (1 + z) != 1 alongside 100% of the Hubble law and the operative Cassini-compatible screened-branch LLR drift |Gdot_loc/G_loc|_LLR ~ 1.7e-18 yr^-1 (reference-quartic secant ceiling 2.85e-13 yr^-1 < 4e-13 yr^-1)."
+  }
+}

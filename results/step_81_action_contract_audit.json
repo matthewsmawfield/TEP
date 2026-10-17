@@ -1,0 +1,64 @@
+{
+  "status": "identities_verified_with_stated_scope",
+  "scope": "Separates (1) single-invariant homogeneous timelike P(X) principal coefficients at bar_xi = 1 from (2) the (3+1) U_mu / Pi_{mu nu} native shell secant 1/y_s and longitudinal flux derivative, separately from the BBN rescaled prescription sqrt(2)/y_s, and (3) the constant-Mpl static gravitational-background tensor action.",
+  "scalar": {
+    "P_X": "k*sqrt(xi) + 2*xi",
+    "K_t": "2*k*sqrt(xi) + 6*xi",
+    "sound_speed_squared": "(k*sqrt(xi)/2 + xi)/(k*sqrt(xi) + 3*xi)",
+    "K_t_xi1_k16p03": 38.06,
+    "K_sp_native_xi1_k16p03": 18.03,
+    "sound_speed_squared_xi1_k16p03": 0.47372569626904887,
+    "timelike_small_xi_limit": 0.5,
+    "directional_increment_2xi_dPX_dxi": "k*sqrt(xi) + 4*xi"
+  },
+  "acoustic_shell_reduction": {
+    "two_branch_flux_law": "sqrt(2)*k*q_s*y_s**2/2 + q_s**2*y_s**3 = 1",
+    "native_secant_from_flux": "q_s*y_s*(sqrt(2)*k + 2*q_s*y_s)/2",
+    "native_secant_on_shell": "1/y_s",
+    "native_secant_value": 0.1355557227784024,
+    "native_longitudinal_expression": "sqrt(2)*k*q_s*y_s/2 + q_s**2*y_s**2 + q_s*y_s*(sqrt(2)*k/2 + 2*q_s*y_s)",
+    "native_longitudinal_value": 0.27125416518008977,
+    "spherical_trace_average_on_shell": "(q_s**2*y_s**3 + 4)/(3*y_s)",
+    "spherical_trace_average_value": 0.18078853691229813,
+    "spherical_frobenius_rms_on_shell": "sqrt(3*(q_s**2*y_s**3 + 2)**2 + 6)/(3*y_s)",
+    "spherical_frobenius_rms_value": 0.19177202618690897,
+    "spherical_frobenius_rms_deep_ir_limit": "sqrt(2)/y_s",
+    "spherical_rms_ir_limit_equals_sqrt2_over_ys": true,
+    "native_secant_identity_verified": true,
+    "normalization_ratio_BBN_over_native": 1.4142135623730951,
+    "quadratic_perturbation_mapping_established": false,
+    "interpretation": "On the 3D sound-horizon sphere S^2, the spatial flux Hessian is anisotropic with transverse eigenvalue K_perp = 1/y_s (multiplicity 2) and longitudinal eigenvalue K_parallel = dJ/dp = 2/y_s + (q_s*y_s)^2 (multiplicity 1). Its 3D rotational Frobenius/RMS invariant sqrt((2 K_perp^2 + K_parallel^2)/3) equals 0.191772 at the sound horizon and converges identically to sqrt(2)/y_s = 0.191705 in the deep two-branch limit (q_s -> 0), matching the BBN effective spatial stiffness to 0.035% while remaining distinct from an isotropic single-scalar quadratic action.",
+    "shell_secant_stiffness_from_flux": "sqrt(2)*q_s*y_s*(sqrt(2)*k + 2*q_s*y_s)/2",
+    "shell_secant_stiffness_on_shell": "sqrt(2)/y_s",
+    "q_s_sound_horizon": 0.001619420759859897,
+    "y_s_sound_horizon": 7.377040079928863,
+    "flux_law_lhs_evaluated": 1.0,
+    "flux_law_residual": 0.0,
+    "K_t_timelike_rolling_background": 38.06,
+    "K_sp_spatial_sound_shell_derived": 0.1917047416105041,
+    "c_p_eff_squared_derived": 0.00503690860773789,
+    "matches_bbn_step20_within_1e12": true
+  },
+  "effective_acoustic_prescription": {
+    "K_t_timelike_rolling_background": 38.06,
+    "K_sp_spatial_sound_shell": 0.1917047416105041,
+    "c_p_eff_squared_derived": 0.00503690860773789,
+    "c_p_perp_squared_native": 0.003561632232748354,
+    "c_p_iso_squared_native": 0.00475009292990799,
+    "c_p_rms_squared_native": 0.00503867646313476,
+    "c_p_para_squared_native": 0.007127014324227265
+  },
+  "mapping_status": "Native shell flux identity verified: K_perp=1/y_s, K_parallel=dJ/dp=2/y_s+(q_s*y_s)^2 on shell. BBN uses the explicitly rescaled prescription sqrt(2)/y_s. Its equality to a physical acoustic quadratic coefficient with the separately evaluated timelike K_t is not established by these identities.",
+  "tensor": {
+    "matter_frame_F": "M**2/A(eta)**2",
+    "z_T": "M",
+    "z_T_second_derivative_over_z_T": "0",
+    "assigned_benchmark_pump": "Derivative(A(eta), (eta, 2))/A(eta)",
+    "physical_implication": "No pump-driven vacuum amplification on this static, constant-Mpl branch. This does not forbid tensor sources, classical initial tensors or other action/background branches."
+  },
+  "direct_ADM_prefactor_momentum": "0",
+  "provenance": {
+    "script_sha256": "9a2c2350edfa1fe4b2ae2b746ead7373851acbf6d5dc5b02d9902bb13835308e",
+    "bbn_results_sha256": "88bf3d6c170f1e1208b9a4fd1585c828c36e0a576a8c9a9f15642b8d911711bc"
+  }
+}

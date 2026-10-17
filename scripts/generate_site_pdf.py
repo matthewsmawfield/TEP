@@ -129,8 +129,48 @@ def process_pdf_with_metadata(pdf_path: Path):
         print(f"⚠️  PDF processing failed: {e}")
 
 
-async def generate_pdf(quality: str = 'high', wait_time: float = 5.0):
+def sync_pdf_archive_and_dist(processed_pdf: Path, base_dir: Path):
+    """Keep root, site/public/docs, site/dist/public/docs, and ../manuscripts/pdfs in sync."""
+    import shutil
+    if not processed_pdf.exists():
+        return
+    target_name = processed_pdf.name
+    for dest in [
+        base_dir / target_name,
+        base_dir / 'site' / 'public' / 'docs' / target_name,
+        base_dir / 'site' / 'dist' / 'public' / 'docs' / target_name,
+        base_dir / 'site' / 'dist' / target_name,
+    ]:
+        if dest.parent.exists() and dest.resolve() != processed_pdf.resolve():
+            shutil.copy2(processed_pdf, dest)
+    shared_pdfs_dir = base_dir.parent / 'manuscripts' / 'pdfs'
+    if shared_pdfs_dir.exists():
+        prefix = target_name.split('-')[0]
+        for stale in shared_pdfs_dir.glob(f'{prefix}-TEP*.pdf'):
+            if stale.name != target_name:
+                stale.unlink(missing_ok=True)
+        shutil.copy2(processed_pdf, shared_pdfs_dir / target_name)
+        print(f"📄 Copied to shared archive: manuscripts/pdfs/{target_name}")
+
+
+def build_static_site() -> bool:
+    """Build the static site first."""
+    base_dir = Path(__file__).parent.parent
+    site_dir = base_dir / 'site'
+    print("🔨 Building static site...")
+    try:
+        subprocess.run(['npm', 'run', 'build'], cwd=str(site_dir), check=True)
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Site build failed: {e}")
+        return False
+
+
+async def generate_pdf(quality: str = 'high', wait_time: float = 5.0, skip_build: bool = False):
     """Generate PDF from the main TEP paper."""
+    if not skip_build:
+        if not build_static_site():
+            return False
     
     # Paths — the built static site is the authoritative rendering
     base_dir = Path(__file__).parent.parent
@@ -144,7 +184,7 @@ async def generate_pdf(quality: str = 'high', wait_time: float = 5.0):
     # Load metadata for filename
     metadata = load_citation_metadata()
     version_str = f"v{metadata['version']}-{metadata['codename']}"
-    output_name = f"0-TEP-{version_str}.pdf"
+    output_name = f"A0-TEP-{version_str}.pdf"
     output_pdf = base_dir / output_name
     
     # Select preset based on quality
@@ -226,6 +266,9 @@ async def generate_pdf(quality: str = 'high', wait_time: float = 5.0):
         # Process with metadata
         process_pdf_with_metadata(output_pdf)
         
+        # Sync to site/public/docs/, site/dist/, and ../manuscripts/pdfs/
+        sync_pdf_archive_and_dist(output_pdf, base_dir)
+        
         print(f"\n✅ Complete! PDF available at: {output_pdf}")
         
         return True
@@ -260,13 +303,19 @@ Examples:
         default=5.0,
         help='Seconds to wait for dynamic content (MathJax) to render'
     )
+    parser.add_argument(
+        '--skip-build',
+        action='store_true',
+        help='Skip building static site (use existing dist/)'
+    )
     
     args = parser.parse_args()
     
     try:
         success = asyncio.run(generate_pdf(
             quality=args.quality,
-            wait_time=args.wait_time
+            wait_time=args.wait_time,
+            skip_build=args.skip_build
         ))
         sys.exit(0 if success else 1)
     except KeyboardInterrupt:

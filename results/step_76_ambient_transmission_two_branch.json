@@ -1,0 +1,522 @@
+{
+  "step": "step_76_ambient_transmission",
+  "operator": "two_branch",
+  "kinetic_coefficients": {
+    "k": 16.029941788039785,
+    "KP": 11.334880540348543,
+    "H0_s_inverse": 2.2685455029723016e-18,
+    "gradient_unit_m_inverse": 7.567053281147925e-27,
+    "xi_mapping": "xi=(c u_prime/H0)^2/2; Lambda_X^2=M_Pl H0"
+  },
+  "question": "transmission T = du_int/du_amb of an ambient field-value excursion into interior clocks, on the solved unified-profile branch",
+  "ambient": {
+    "rho_amb": 1e-30
+  },
+  "body_profile_quartic_factor_over_reference": 1.0,
+  "bodies": {
+    "Moon": {
+      "u_amb": 1.176354627384841e-17,
+      "u_int": 4.11888131844752e-15,
+      "baseline_res": 2.3208242021937926e-14,
+      "residual_definition": "roundoff-adjusted finite-volume equation balance",
+      "outer_radius_m": 1.7374e+16,
+      "outer_boundary_error": 0.0,
+      "static_linear_boundary_transmission": 0.0,
+      "rows": [
+        {
+          "delta": 1e-20,
+          "u_int_shifted": 4.1188813193456566e-15,
+          "T": null,
+          "raw_secant_diagnostic": 8.981362843949421e-05,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 4.1188813193456565e-23,
+          "final_res": 2.320746110854272e-14
+        },
+        {
+          "delta": 1e-19,
+          "u_int_shifted": 4.118881318670936e-15,
+          "T": null,
+          "raw_secant_diagnostic": 2.234156635503584e-06,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 4.118881318670936e-23,
+          "final_res": 2.6800667164353946e-12
+        },
+        {
+          "delta": 1e-18,
+          "u_int_shifted": 4.1188813202538966e-15,
+          "T": null,
+          "raw_secant_diagnostic": 1.8063762992639546e-06,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 4.118881320253897e-23,
+          "final_res": 5.0702018906579426e-17
+        },
+        {
+          "delta": 1e-13,
+          "u_int_shifted": 4.1188815828189425e-15,
+          "T": 2.6437142217237356e-09,
+          "raw_secant_diagnostic": 2.6437142217237356e-09,
+          "secant_status": "resolved",
+          "field_reporting_floor": 4.1188815828189426e-23,
+          "final_res": 9.346268385511115e-13
+        },
+        {
+          "delta": 2.5e-11,
+          "u_int_shifted": 4.118881959373203e-15,
+          "T": 2.5637027296124718e-11,
+          "raw_secant_diagnostic": 2.5637027296124718e-11,
+          "secant_status": "resolved",
+          "field_reporting_floor": 4.118881959373203e-23,
+          "final_res": 0.0
+        },
+        {
+          "delta": 1e-09,
+          "u_int_shifted": 4.118882247322437e-15,
+          "T": 9.288749169432046e-13,
+          "raw_secant_diagnostic": 9.288749169432046e-13,
+          "secant_status": "resolved",
+          "field_reporting_floor": 4.118882247322437e-23,
+          "final_res": 8.383145438711625e-12
+        }
+      ]
+    },
+    "Earth": {
+      "u_amb": 1.176354627384841e-17,
+      "u_int": 3.009984534423435e-14,
+      "baseline_res": 7.916245799216364e-13,
+      "residual_definition": "roundoff-adjusted finite-volume equation balance",
+      "outer_radius_m": 6.371e+16,
+      "outer_boundary_error": 0.0,
+      "static_linear_boundary_transmission": 0.0,
+      "rows": [
+        {
+          "delta": 1e-20,
+          "u_int_shifted": 3.009984534423435e-14,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 3.009984534423435e-22,
+          "final_res": 7.916245799216364e-13
+        },
+        {
+          "delta": 1e-19,
+          "u_int_shifted": 3.009984534423435e-14,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 3.009984534423435e-22,
+          "final_res": 7.916245799216364e-13
+        },
+        {
+          "delta": 1e-18,
+          "u_int_shifted": 3.009984534423435e-14,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 3.009984534423435e-22,
+          "final_res": 7.916245799216364e-13
+        },
+        {
+          "delta": 1e-13,
+          "u_int_shifted": 3.009984534565416e-14,
+          "T": null,
+          "raw_secant_diagnostic": 1.4198107898785024e-11,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 3.0099845345654164e-22,
+          "final_res": 9.056328311972385e-17
+        },
+        {
+          "delta": 2.5e-11,
+          "u_int_shifted": 3.0099845332896237e-14,
+          "T": null,
+          "raw_secant_diagnostic": -4.5352459100046366e-13,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 3.009984534423435e-22,
+          "final_res": 2.49412953603537e-11
+        },
+        {
+          "delta": 1e-09,
+          "u_int_shifted": 3.009984533715003e-14,
+          "T": null,
+          "raw_secant_diagnostic": -7.084324338570224e-15,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 3.009984534423435e-22,
+          "final_res": 6.633637886548115e-13
+        }
+      ]
+    },
+    "Sun": {
+      "u_amb": 1.176354627384841e-17,
+      "u_int": 5.850282552941942e-12,
+      "baseline_res": 8.256680098222752e-13,
+      "residual_definition": "roundoff-adjusted finite-volume equation balance",
+      "outer_radius_m": 6.957e+18,
+      "outer_boundary_error": 0.0,
+      "static_linear_boundary_transmission": 0.0,
+      "rows": [
+        {
+          "delta": 1e-20,
+          "u_int_shifted": 5.850282552941942e-12,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 5.850282552941942e-20,
+          "final_res": 8.256680098222752e-13
+        },
+        {
+          "delta": 1e-19,
+          "u_int_shifted": 5.850282552941942e-12,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 5.850282552941942e-20,
+          "final_res": 8.256680098222752e-13
+        },
+        {
+          "delta": 1e-18,
+          "u_int_shifted": 5.850282552941942e-12,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 5.850282552941942e-20,
+          "final_res": 8.256680098222752e-13
+        },
+        {
+          "delta": 1e-13,
+          "u_int_shifted": 5.850282552941942e-12,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 5.850282552941942e-20,
+          "final_res": 1.9411554869014593e-12
+        },
+        {
+          "delta": 2.5e-11,
+          "u_int_shifted": 5.850282552941942e-12,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 5.850282552941942e-20,
+          "final_res": 8.670277380103483e-17
+        },
+        {
+          "delta": 1e-09,
+          "u_int_shifted": 5.850282552941942e-12,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 5.850282552941942e-20,
+          "final_res": 9.815703005025806e-17
+        }
+      ]
+    },
+    "Cepheid envelope (8 Msun, 50 Rsun)": {
+      "u_amb": 1.176354627384841e-17,
+      "u_int": 1.183490287328939e-11,
+      "baseline_res": 2.571130578781815e-13,
+      "residual_definition": "roundoff-adjusted finite-volume equation balance",
+      "outer_radius_m": 3.4785e+20,
+      "outer_boundary_error": 0.0,
+      "static_linear_boundary_transmission": 0.0,
+      "rows": [
+        {
+          "delta": 1e-20,
+          "u_int_shifted": 1.183490287328939e-11,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.1834902873289391e-19,
+          "final_res": 2.571130578781815e-13
+        },
+        {
+          "delta": 1e-19,
+          "u_int_shifted": 1.183490287328939e-11,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.1834902873289391e-19,
+          "final_res": 2.571130578781815e-13
+        },
+        {
+          "delta": 1e-18,
+          "u_int_shifted": 1.183490287328939e-11,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.1834902873289391e-19,
+          "final_res": 2.571130578781815e-13
+        },
+        {
+          "delta": 1e-13,
+          "u_int_shifted": 1.183490287328939e-11,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.1834902873289391e-19,
+          "final_res": 8.47271298846996e-17
+        },
+        {
+          "delta": 2.5e-11,
+          "u_int_shifted": 1.183490287328939e-11,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.1834902873289391e-19,
+          "final_res": 4.835143283162637e-16
+        },
+        {
+          "delta": 1e-09,
+          "u_int_shifted": 1.183490287328939e-11,
+          "T": null,
+          "raw_secant_diagnostic": 0.0,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.1834902873289391e-19,
+          "final_res": 5.5782183941165425e-15
+        }
+      ]
+    }
+  },
+  "retained_control": {
+    "u_amb": 1.176354627384841e-17,
+    "u_int": 3.1931173840697034e-07,
+    "baseline_res": 1.1718446522586835e-13,
+    "residual_definition": "roundoff-adjusted finite-volume equation balance",
+    "outer_radius_m": 3e+21,
+    "outer_boundary_error": 0.0,
+    "static_linear_boundary_transmission": 0.0,
+    "rows": [
+      {
+        "delta": 1e-09,
+        "u_int_shifted": 3.1931173840697034e-07,
+        "T": null,
+        "raw_secant_diagnostic": 0.0,
+        "secant_status": "below_reporting_resolution",
+        "field_reporting_floor": 3.1931173840697036e-15,
+        "final_res": 5.684646276653332e-15
+      },
+      {
+        "delta": 1e-06,
+        "u_int_shifted": 3.1931173840697034e-07,
+        "T": null,
+        "raw_secant_diagnostic": 0.0,
+        "secant_status": "below_reporting_resolution",
+        "field_reporting_floor": 3.1931173840697036e-15,
+        "final_res": 1.2799925384763417e-14
+      }
+    ]
+  },
+  "earth_boundary_branch_sweep": {
+    "earth_ambient_density_g_cm3": 1e-30,
+    "imposed_outer_field_delta": 2.5e-11,
+    "cases": {
+      "reference": {
+        "quartic_factor_over_reference": 1.0,
+        "rows": [
+          {
+            "outer_radius_over_R_earth": 60.0,
+            "interior_field": 1.4086443981418193e-15,
+            "static_tangent": 1.0000000000028946,
+            "finite_secant": 0.9999999998873068,
+            "raw_secant_diagnostic": 0.9999999998873068,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.5001408641580813e-19,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 235.0,
+            "interior_field": 2.381684775362701e-15,
+            "static_tangent": 0.999999999998141,
+            "finite_secant": 0.9999999997266811,
+            "raw_secant_diagnostic": 0.9999999997266811,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.500238167794239e-19,
+            "baseline_residual": 7.558865109983822e-13,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 23500.0,
+            "interior_field": 9.772116380619216e-15,
+            "static_tangent": 0.9999999999980701,
+            "finite_secant": 0.9997255645638558,
+            "raw_secant_diagnostic": 0.9997255645638558,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.500291123047701e-19,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 1000000.0,
+            "interior_field": 1.8733312869899557e-14,
+            "static_tangent": 0.9999994686513738,
+            "finite_secant": 0.9541408357611838,
+            "raw_secant_diagnostic": 0.9541408357611838,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.3872254206899496e-19,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 100000000.0,
+            "interior_field": 2.9527970557341786e-14,
+            "static_tangent": 0.6535664547056531,
+            "finite_secant": 0.001990622549453288,
+            "raw_secant_diagnostic": 0.001990622549453288,
+            "secant_status": "resolved",
+            "field_reporting_floor": 7.929353429367399e-22,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 10000000000.0,
+            "interior_field": 3.010098008092618e-14,
+            "static_tangent": 0.0,
+            "finite_secant": null,
+            "raw_secant_diagnostic": 5.422314318127147e-16,
+            "secant_status": "below_reporting_resolution",
+            "field_reporting_floor": 3.0100980080939736e-22,
+            "baseline_residual": 2.923514594457964e-17,
+            "shifted_residual": 9.467872215594926e-17,
+            "outer_boundary_error": 0.0
+          }
+        ]
+      },
+      "cassini": {
+        "quartic_factor_over_reference": 100000.0,
+        "rows": [
+          {
+            "outer_radius_over_R_earth": 60.0,
+            "interior_field": 1.3971342897890725e-15,
+            "static_tangent": 0.9999999999969266,
+            "finite_secant": 0.9999999127442991,
+            "raw_secant_diagnostic": 0.9999999127442991,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.5001394952897267e-19,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 235.0,
+            "interior_field": 2.3701746670104664e-15,
+            "static_tangent": 0.9999999999974364,
+            "finite_secant": 0.9999796511531337,
+            "raw_secant_diagnostic": 0.9999796511531337,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.5001861453495354e-19,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 23500.0,
+            "interior_field": 9.760605924862863e-15,
+            "static_tangent": 0.9999995965879134,
+            "finite_secant": 0.9833960715963627,
+            "raw_secant_diagnostic": 0.9833960715963627,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.459466239583393e-19,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 1000000.0,
+            "interior_field": 1.8667043947763417e-14,
+            "static_tangent": 0.9501594817217943,
+            "finite_secant": 0.13950208091731858,
+            "raw_secant_diagnostic": 0.13950208091731858,
+            "secant_status": "resolved",
+            "field_reporting_floor": 3.506219066880728e-20,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 100000000.0,
+            "interior_field": 2.073387926813688e-14,
+            "static_tangent": 1.1759771869857883e-08,
+            "finite_secant": null,
+            "raw_secant_diagnostic": 5.023933250103294e-14,
+            "secant_status": "below_reporting_resolution",
+            "field_reporting_floor": 2.0733879269392863e-22,
+            "baseline_residual": 0.0,
+            "shifted_residual": 2.7147187598100606e-11,
+            "outer_boundary_error": 0.0
+          },
+          {
+            "outer_radius_over_R_earth": 10000000000.0,
+            "interior_field": 2.0734144086649762e-14,
+            "static_tangent": 0.0,
+            "finite_secant": null,
+            "raw_secant_diagnostic": 2.384253199939986e-16,
+            "secant_status": "below_reporting_resolution",
+            "field_reporting_floor": 2.0734144086655724e-22,
+            "baseline_residual": 9.906779671976867e-17,
+            "shifted_residual": 1.0841254475749362e-16,
+            "outer_boundary_error": 0.0
+          }
+        ]
+      }
+    },
+    "refinement_audit": {
+      "branch": "reference",
+      "outer_radius_over_R_earth": 100000000.0,
+      "rows": [
+        {
+          "n_mesh": 1200,
+          "static_tangent": 0.6534638627242401,
+          "baseline_residual": 0.0
+        },
+        {
+          "n_mesh": 2400,
+          "static_tangent": 0.6535664547056531,
+          "baseline_residual": 0.0
+        },
+        {
+          "n_mesh": 4800,
+          "static_tangent": 0.6535920737938766,
+          "baseline_residual": 7.289570749533325e-11
+        }
+      ]
+    },
+    "massless_vacuum_control": {
+      "outer_radius_over_R_earth": 10000000000.0,
+      "static_tangent": 0.9999999999456259,
+      "finite_secant": 0.9999999998928929,
+      "baseline_residual": 0.0,
+      "shifted_residual": 0.0
+    },
+    "scope": "Static Earth-only Dirichlet boundary-radius bracket. The 60, 235 and 23500 Earth-radius entries are comparison interfaces, not solved Earth-Moon-Sun matching surfaces; no time-dependent or galactic boundary is inferred."
+  },
+  "earth_solar_local_stiffness": {
+    "kinetic_branch": "two_branch",
+    "earth_boundary_over_R_earth": 235.0,
+    "earth_quartic_factor_over_reference": 100000.0,
+    "earth_surface_gradient_over_g_t": 6026.480694453503,
+    "solar_gradient_at_1AU_over_g_t": 512.5102916867274,
+    "solar_point_source_q_control": 511.2034683824303,
+    "single_GM_flux_q_comparator": 404.2340229775663,
+    "two_GM_over_single_GM_q_ratio": 1.2646225684244308,
+    "normalization_audit": "With Lambda_X^2=M_Pl H0, q_kin=c|u_prime|/H0=q_gt/2. The selected point-source flux obeys q_kin^2(KP+q_kin)=GM/(r^2 g_t), matching the Paper-17 step_086 source and kinetic convention apart from its declared regularizer and rounded k. This normalization agreement alone does not identify isolated-body and coupled-body solutions.",
+    "solar_boundary_at_AU": 2.0,
+    "solar_profile_residual": 0.0,
+    "solar_to_earth_gradient_ratio": 0.08504304878275283,
+    "earth_only_stiffness": 9113772.109530365,
+    "stiffness_by_radial_alignment": {
+      "-1": 7632217.498556187,
+      "0": 9179562.095723957,
+      "1": 10726660.120046953
+    },
+    "aligned_minus_antialigned_over_earth_only": 0.3395347814605629,
+    "earth_profile_residual": 0.0,
+    "scope": "Local tensor-coefficient cross-term from separately solved Earth and isolated Sun fluxes at a declared interface; not a coupled Earth-Sun PDE, dynamic response, covariance, or EW/NS prediction."
+  },
+  "status": "validated_static_boundary_response",
+  "scope": "Static Dirichlet perturbations at the reported outer radius with density and potential held fixed. Linear tangent responses and finite-amplitude secants are distinct. No frequency-dependent or cosmological transmission is solved.",
+  "verdict": "The static boundary response is computed from converged finite-volume profiles and their linearized operator. It depends on body, outer radius and excursion amplitude; neither a universal unity transmission nor the static depth ratio S_A may be substituted for the dynamical clock transfer."
+}

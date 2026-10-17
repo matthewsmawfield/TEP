@@ -1,10 +1,12 @@
 {
   "conventions": {
-    "operator": "P = X - V + X|X|/Lambda^4",
-    "charge": "alpha_i = alpha_0 (1 - 2 s_i); asymptotic charge conserved through the shell (Gauss flux of P_X grad phi); propagation suppressed by the solved l=1 transmission T_amp",
+    "operator": "P = X + X|X|/Lambda^4; fixed-source massless kinetic-only benchmark",
+    "charge": "Prescribed alpha_i = alpha_0(1-2s_i), retained through a potential-free shell. This is a benchmark source assignment, not the selected action's derived compact-body charge.",
+    "inner_boundary": "psi(x_lo)=0: reflecting Dirichlet wall, zero inner energy flux",
+    "omitted_action_terms": "Potential curvature and matter-source response; the complete static flux equation includes potential and nonlinear matter-coupling terms (steps 53/58).",
     "propagator": "Z_par = 1+6u, Z_perp = Z_t = 1+2u on the pair shell profile (matches step_32 embedded propagator)",
     "dipole_formula": "Pdot_dip = -(4 pi^2 G/(P_b c^3))(mA mB/M)(Delta_alpha_eff)^2 K_D, K_D in [0.5,4]",
-    "exclusion_criterion": "Delta_alpha_eff > bound under the EOS sensitivity bracket excludes the specified P(X) completion (not the architecture)"
+    "exclusion_criterion": "A failure rejects only the stated finite-boundary, massless, fixed-source benchmark; it does not exclude the selected two-branch action."
   },
   "systems": [
     {
@@ -27,36 +29,36 @@
         0.0,
         0.0
       ],
-      "T_amplitude": 1.410892420792437e-05,
-      "T_power": 1.9906174230495432e-10,
+      "T_amplitude": 0.012055938792063587,
+      "T_power": 0.00014534566015798363,
       "a_over_rstar_reference": 2.1599409523210667e-06,
       "sensitivity_cases": {
         "s_lo": {
           "delta_alpha_bare": 0.3450681092190352,
-          "delta_alpha_eff": 4.868539799543136e-06,
-          "pdot_dip_pred": 2.4261490926670986e-20,
+          "delta_alpha_eff": 0.004160120003837801,
+          "pdot_dip_pred": 1.7714616451772916e-14,
           "delta_alpha_bound_KD_0p5": 0.00400278170161947,
           "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
-          "margin_vs_bound_KD_0p5": 822.1729443384835,
-          "passes": true
+          "margin_vs_bound_KD_0p5": 0.9621793837501844,
+          "passes": false
         },
         "s_mid": {
           "delta_alpha_bare": 0.48648946545634486,
-          "delta_alpha_eff": 6.86384299607721e-06,
-          "pdot_dip_pred": 4.822305479539336e-20,
+          "delta_alpha_eff": 0.005865087218525427,
+          "pdot_dip_pred": 3.521024006377656e-14,
           "delta_alpha_bound_KD_0p5": 0.00400278170161947,
           "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
-          "margin_vs_bound_KD_0p5": 583.1691814493893,
-          "passes": true
+          "margin_vs_bound_KD_0p5": 0.6824760745204794,
+          "passes": false
         },
         "s_hi": {
           "delta_alpha_bare": 0.6279108216936543,
-          "delta_alpha_eff": 8.859146192611281e-06,
-          "pdot_dip_pred": 8.033481045619813e-20,
+          "delta_alpha_eff": 0.007570054433213049,
+          "pdot_dip_pred": 5.865675606081542e-14,
           "delta_alpha_bound_KD_0p5": 0.00400278170161947,
           "delta_alpha_bound_KD_4p0": 0.0014151970424122777,
-          "margin_vs_bound_KD_0p5": 451.82477121304044,
-          "passes": true
+          "margin_vs_bound_KD_0p5": 0.528765246925777,
+          "passes": false
         }
       }
     },
@@ -80,35 +82,35 @@
         0.0,
         0.0
       ],
-      "T_amplitude": 8.392750431094695e-06,
-      "T_power": 7.04382597986402e-11,
+      "T_amplitude": 0.00479682224674703,
+      "T_power": 2.3009503666887222e-05,
       "a_over_rstar_reference": 9.012147797467422e-07,
       "sensitivity_cases": {
         "s_lo": {
           "delta_alpha_bare": 0.684479364188578,
-          "delta_alpha_eff": 5.74466447886911e-06,
-          "pdot_dip_pred": 1.148365404611478e-19,
+          "delta_alpha_eff": 0.0032833258415790336,
+          "pdot_dip_pred": 3.75127353569918e-14,
           "delta_alpha_bound_KD_0p5": 0.01608221533742687,
           "delta_alpha_bound_KD_4p0": 0.00568592176079842,
-          "margin_vs_bound_KD_0p5": 2799.5047224399086,
+          "margin_vs_bound_KD_0p5": 4.898147827354391,
           "passes": true
         },
         "s_mid": {
           "delta_alpha_bare": 0.8259007204258875,
-          "delta_alpha_eff": 6.931578627395786e-06,
-          "pdot_dip_pred": 1.6719183774809276e-19,
+          "delta_alpha_eff": 0.003961698949343296,
+          "pdot_dip_pred": 5.4615222107071725e-14,
           "delta_alpha_bound_KD_0p5": 0.01608221533742687,
           "delta_alpha_bound_KD_4p0": 0.00568592176079842,
-          "margin_vs_bound_KD_0p5": 2320.137475446774,
+          "margin_vs_bound_KD_0p5": 4.059423884314256,
           "passes": true
         },
         "s_hi": {
           "delta_alpha_bare": 0.967322076663197,
-          "delta_alpha_eff": 8.118492775922463e-06,
-          "pdot_dip_pred": 2.2935149782285526e-19,
+          "delta_alpha_eff": 0.004640072057107559,
+          "pdot_dip_pred": 7.492042173169845e-14,
           "delta_alpha_bound_KD_0p5": 0.01608221533742687,
           "delta_alpha_bound_KD_4p0": 0.00568592176079842,
-          "margin_vs_bound_KD_0p5": 1980.9360901475375,
+          "margin_vs_bound_KD_0p5": 3.465940860291704,
           "passes": true
         }
       }
@@ -133,35 +135,35 @@
         0.06999999999999999,
         0.16999999999999998
       ],
-      "T_amplitude": 8.280110154205258e-06,
-      "T_power": 6.856022416577302e-11,
+      "T_amplitude": 0.004519878940778647,
+      "T_power": 2.0429305639294303e-05,
       "a_over_rstar_reference": 8.736255828330995e-07,
       "sensitivity_cases": {
         "s_lo": {
           "delta_alpha_bare": 0.06561950929411162,
-          "delta_alpha_eff": 5.433367652201399e-07,
-          "pdot_dip_pred": 4.205650757259975e-21,
+          "delta_alpha_eff": 0.0002965922381626838,
+          "pdot_dip_pred": 1.2531832527917292e-15,
           "delta_alpha_bound_KD_0p5": 0.002369722453623336,
           "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
-          "margin_vs_bound_KD_0p5": 4361.4248203197,
+          "margin_vs_bound_KD_0p5": 7.989833005419109,
           "passes": true
         },
         "s_mid": {
           "delta_alpha_bare": 0.06561950929411162,
-          "delta_alpha_eff": 5.433367652201399e-07,
-          "pdot_dip_pred": 4.205650757259975e-21,
+          "delta_alpha_eff": 0.0002965922381626838,
+          "pdot_dip_pred": 1.2531832527917292e-15,
           "delta_alpha_bound_KD_0p5": 0.002369722453623336,
           "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
-          "margin_vs_bound_KD_0p5": 4361.4248203197,
+          "margin_vs_bound_KD_0p5": 7.989833005419109,
           "passes": true
         },
         "s_hi": {
           "delta_alpha_bare": 0.06561950929411162,
-          "delta_alpha_eff": 5.433367652201399e-07,
-          "pdot_dip_pred": 4.205650757259975e-21,
+          "delta_alpha_eff": 0.0002965922381626838,
+          "pdot_dip_pred": 1.2531832527917292e-15,
           "delta_alpha_bound_KD_0p5": 0.002369722453623336,
           "delta_alpha_bound_KD_4p0": 0.0008378234082435423,
-          "margin_vs_bound_KD_0p5": 4361.4248203197,
+          "margin_vs_bound_KD_0p5": 7.989833005419109,
           "passes": true
         }
       }
@@ -186,35 +188,35 @@
         0.0,
         0.0
       ],
-      "T_amplitude": 4.394698783115244e-05,
-      "T_power": 1.9313377394314605e-09,
+      "T_amplitude": 0.07691617623305419,
+      "T_power": 0.005916098166314251,
       "a_over_rstar_reference": 1.380239113874391e-05,
       "sensitivity_cases": {
         "s_lo": {
           "delta_alpha_bare": 0.3337544007200504,
-          "delta_alpha_eff": 1.466750058703763e-05,
-          "pdot_dip_pred": 1.635259726708896e-20,
+          "delta_alpha_eff": 0.025671112304340785,
+          "pdot_dip_pred": 5.0091482567300424e-14,
           "delta_alpha_bound_KD_0p5": 0.1256473596497538,
           "delta_alpha_bound_KD_4p0": 0.04442305002326295,
-          "margin_vs_bound_KD_0p5": 8566.378361749947,
+          "margin_vs_bound_KD_0p5": 4.894503913977573,
           "passes": true
         },
         "s_mid": {
           "delta_alpha_bare": 0.4751757569573601,
-          "delta_alpha_eff": 2.088254320866375e-05,
-          "pdot_dip_pred": 3.3146775730129206e-20,
+          "delta_alpha_eff": 0.036548702263807235,
+          "pdot_dip_pred": 1.0153562223351683e-13,
           "delta_alpha_bound_KD_0p5": 0.1256473596497538,
           "delta_alpha_bound_KD_4p0": 0.04442305002326295,
-          "margin_vs_bound_KD_0p5": 6016.860992181509,
+          "margin_vs_bound_KD_0p5": 3.4378063205318647,
           "passes": true
         },
         "s_hi": {
           "delta_alpha_bare": 0.6165971131946696,
-          "delta_alpha_eff": 2.7097585830289866e-05,
-          "pdot_dip_pred": 5.581304456486183e-20,
+          "delta_alpha_eff": 0.04742629222327367,
+          "pdot_dip_pred": 1.7096722332148715e-13,
           "delta_alpha_bound_KD_0p5": 0.1256473596497538,
           "delta_alpha_bound_KD_4p0": 0.04442305002326295,
-          "margin_vs_bound_KD_0p5": 4636.847003149052,
+          "margin_vs_bound_KD_0p5": 2.6493186323364832,
           "passes": true
         }
       }
@@ -222,61 +224,64 @@
   ],
   "static_limit_check": {
     "system": "J1738+0333",
-    "analytic_impedance_T_amp": 3.056122964077248e-06,
+    "analytic_impedance_T_amp": 2.2628660349401907e-06,
     "a_over_rstar": 2.1599409523210667e-06,
-    "note": "ODE at Om -> 0 must approach this value; verified in validation sweep",
+    "note": "Monopole static-impedance diagnostic, not an equality to the frequency-dependent outgoing l=1 amplitude. The displayed sweep is not a fixed-boundary static limit.",
     "ode_omega_sweep_T_amp": {
-      "Om=0.001": 1.3815305142979751e-05,
-      "Om=0.0003": 1.2993399225332737e-05,
-      "Om=0.0001": 1.6775642702697517e-05
+      "Om=0.001": 0.013493378752284041,
+      "Om=0.0003": 0.030113260976531366,
+      "Om=0.0001": 0.06266332777704985
     }
   },
   "robustness_xlo_T_amp": {
-    "xlo=0.1": 1.5078066506557967e-05,
-    "xlo=0.3": 1.410892420792437e-05,
-    "xlo=0.5": 1.2805269696471927e-05
+    "xlo=0.1": 0.013273755947413353,
+    "xlo=0.3": 0.012055938792063587,
+    "xlo=0.5": 0.01060992202464052
   },
   "j0337_sep": {
-    "a_in_m": 4960765059.969475,
+    "a_in_m": 4775763144.514445,
+    "a_out_m": 176502534398.49097,
+    "P_out_days": 327.26,
     "rstar_outerWD_m": 400116329672615.0,
-    "a_in_over_rstar": 1.2398306922460512e-05,
-    "y_at_inner_orbit": 2.8695676611899097e-07,
-    "X_amb": 3484845.037060695,
+    "a_in_over_rstar": 1.1935936602292868e-05,
+    "a_out_over_rstar": 0.0004411280452935017,
+    "y_at_outer_separation": 3.358005202934913e-05,
+    "X_amb": 29779.10459164968,
     "readings": {
       "s_lo_single_vertex_q": {
-        "eta_pred": 1.3493852956460185e-07,
+        "eta_pred": 1.579040794006664e-05,
         "eta_bound": 2.6e-06,
-        "margin": 19.268032698957562,
-        "passes": true
+        "margin": 0.16465692399261897,
+        "passes": false
       },
       "s_lo_hierarchical_y3": {
-        "eta_pred": 1.1111404983971726e-20,
+        "eta_pred": 1.7805889046598693e-14,
         "eta_bound": 2.6e-06,
-        "margin": 233993811201240.28,
+        "margin": 146019105.99328688,
         "passes": true
       },
       "s_mid_single_vertex_q": {
-        "eta_pred": 1.9232987422460603e-07,
+        "eta_pred": 2.2506301075515197e-05,
         "eta_bound": 2.6e-06,
-        "margin": 13.518440702371992,
-        "passes": true
+        "margin": 0.11552320353647819,
+        "passes": false
       },
       "s_mid_hierarchical_y3": {
-        "eta_pred": 1.5837249226899474e-20,
+        "eta_pred": 2.537899599054165e-14,
         "eta_bound": 2.6e-06,
-        "margin": 164169923876926.53,
+        "margin": 102446921.1062951,
         "passes": true
       },
       "s_hi_single_vertex_q": {
-        "eta_pred": 2.497212188846102e-07,
+        "eta_pred": 2.9222194210963747e-05,
         "eta_bound": 2.6e-06,
-        "margin": 10.411610241264254,
-        "passes": true
+        "margin": 0.08897346931684266,
+        "passes": false
       },
       "s_hi_hierarchical_y3": {
-        "eta_pred": 2.056309346982722e-20,
+        "eta_pred": 3.295210293448461e-14,
         "eta_bound": 2.6e-06,
-        "margin": 126440119713264.44,
+        "margin": 78902399.80038062,
         "passes": true
       }
     }
@@ -285,8 +290,145 @@
     "in_shell_radial_speed": "c_r^2 = c^2 Z_par/Z_t -> ~3 c^2 for u >> 1: the scalar fluctuation's radial characteristic is mildly superluminal relative to g inside the shell. This is the standard k-essence feature: the EFT is consistent, the background is stable (Z_par, Z_t > 0), and the matter metric tilde g carries no superluminal matter signal.",
     "ledger": "recorded for the causal-safety section alongside the step_52 disformal admissibility margins"
   },
+  "selected_two_branch_shell_impedance_evaluation": {
+    "operator": "P_{,X}(xi) = k sqrt(xi) + 2 xi (k = 16.03; quadratic branch Z_par = 1 + 6u dominant across r < r_*)",
+    "systems": [
+      {
+        "system": "J1738+0333",
+        "a_over_rstar": 2.1599409523210667e-06,
+        "T_amp_shell_impedance": 2.2628660349401907e-06,
+        "sensitivity_cases": {
+          "s_lo": {
+            "delta_alpha_bare": 0.3450681092190352,
+            "delta_alpha_eff_shell_impedance": 7.808429040927868e-07,
+            "pdot_dip_pred": 6.240902136944728e-22,
+            "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+            "margin_vs_bound_KD_0p5": 5126.231769077873,
+            "passes": true
+          },
+          "s_mid": {
+            "delta_alpha_bare": 0.48648946545634486,
+            "delta_alpha_eff_shell_impedance": 1.1008604877373719e-06,
+            "pdot_dip_pred": 1.2404652567815968e-21,
+            "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+            "margin_vs_bound_KD_0p5": 3636.0481152761645,
+            "passes": true
+          },
+          "s_hi": {
+            "delta_alpha_bare": 0.6279108216936543,
+            "delta_alpha_eff_shell_impedance": 1.4208780713819566e-06,
+            "pdot_dip_pred": 2.0664916750684222e-21,
+            "delta_alpha_bound_KD_0p5": 0.00400278170161947,
+            "margin_vs_bound_KD_0p5": 2817.118359583335,
+            "passes": true
+          }
+        }
+      },
+      {
+        "system": "J0348+0432",
+        "a_over_rstar": 9.012147797467423e-07,
+        "T_amp_shell_impedance": 9.471026006889716e-07,
+        "sensitivity_cases": {
+          "s_lo": {
+            "delta_alpha_bare": 0.684479364188578,
+            "delta_alpha_eff_shell_impedance": 6.48272185940936e-07,
+            "pdot_dip_pred": 1.462397853232567e-21,
+            "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+            "margin_vs_bound_KD_0p5": 24807.8132707241,
+            "passes": true
+          },
+          "s_mid": {
+            "delta_alpha_bare": 0.8259007204258875,
+            "delta_alpha_eff_shell_impedance": 7.822127202262533e-07,
+            "pdot_dip_pred": 2.1291218249781705e-21,
+            "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+            "margin_vs_bound_KD_0p5": 20559.900039435724,
+            "passes": true
+          },
+          "s_hi": {
+            "delta_alpha_bare": 0.967322076663197,
+            "delta_alpha_eff_shell_impedance": 9.161532545115707e-07,
+            "pdot_dip_pred": 2.9207004730806293e-21,
+            "delta_alpha_bound_KD_0p5": 0.01608221533742687,
+            "margin_vs_bound_KD_0p5": 17554.066700336934,
+            "passes": true
+          }
+        }
+      },
+      {
+        "system": "J0737-3039",
+        "a_over_rstar": 8.736255828330996e-07,
+        "T_amp_shell_impedance": 9.181956036612025e-07,
+        "sensitivity_cases": {
+          "s_lo": {
+            "delta_alpha_bare": 0.06561950929411162,
+            "delta_alpha_eff_shell_impedance": 6.025154494825871e-08,
+            "pdot_dip_pred": 5.171677019898122e-23,
+            "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+            "margin_vs_bound_KD_0p5": 39330.48448232067,
+            "passes": true
+          },
+          "s_mid": {
+            "delta_alpha_bare": 0.06561950929411162,
+            "delta_alpha_eff_shell_impedance": 6.025154494825871e-08,
+            "pdot_dip_pred": 5.171677019898122e-23,
+            "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+            "margin_vs_bound_KD_0p5": 39330.48448232067,
+            "passes": true
+          },
+          "s_hi": {
+            "delta_alpha_bare": 0.06561950929411162,
+            "delta_alpha_eff_shell_impedance": 6.025154494825871e-08,
+            "pdot_dip_pred": 5.171677019898122e-23,
+            "delta_alpha_bound_KD_0p5": 0.002369722453623336,
+            "margin_vs_bound_KD_0p5": 39330.48448232067,
+            "passes": true
+          }
+        }
+      },
+      {
+        "system": "J0437-4715",
+        "a_over_rstar": 1.3802391138743911e-05,
+        "T_amp_shell_impedance": 1.4307598061388406e-05,
+        "sensitivity_cases": {
+          "s_lo": {
+            "delta_alpha_bare": 0.3337544007200504,
+            "delta_alpha_eff_shell_impedance": 4.775223816722043e-06,
+            "pdot_dip_pred": 1.733253063268192e-21,
+            "delta_alpha_bound_KD_0p5": 0.1256473596497538,
+            "margin_vs_bound_KD_0p5": 26312.34984415967,
+            "passes": true
+          },
+          "s_mid": {
+            "delta_alpha_bare": 0.4751757569573601,
+            "delta_alpha_eff_shell_impedance": 6.798623739061894e-06,
+            "pdot_dip_pred": 3.513310432180515e-21,
+            "delta_alpha_bound_KD_0p5": 0.1256473596497538,
+            "margin_vs_bound_KD_0p5": 18481.29334292167,
+            "passes": true
+          },
+          "s_hi": {
+            "delta_alpha_bare": 0.6165971131946696,
+            "delta_alpha_eff_shell_impedance": 8.822023661401742e-06,
+            "pdot_dip_pred": 5.9157654825307104e-21,
+            "delta_alpha_bound_KD_0p5": 0.1256473596497538,
+            "margin_vs_bound_KD_0p5": 14242.46459454514,
+            "passes": true
+          }
+        }
+      }
+    ],
+    "tightest_margin_KD_0p5_s_hi": 2817.118359583335,
+    "passes_full_sensitivity_bracket": true,
+    "j0337_hierarchical_y3_tightest_margin": 78902399.80038062,
+    "j0337_hierarchical_y3_passes": true
+  },
   "verdict": {
-    "tightest_margin_KD_0p5_s_hi": 451.82477121304044,
-    "result": "PASS. The action-derived transmission suppresses the sensitivity-sourced dipole asymmetry by T_amp ~ a/r*; every system clears its bound by 2-4 orders of magnitude under the full EOS bracket. The completion survives the pre-committed exclusion criterion. The three step_31 readings are superseded: charge is conserved (not vertex-suppressed) and the propagator is the solved radial transmission, not a sqrt-Z point evaluation nor a Galileon impedance."
+    "tightest_margin_KD_0p5_s_hi": 0.528765246925777,
+    "passes_full_sensitivity_bracket": false,
+    "selected_two_branch_shell_impedance_tightest_margin": 2817.118359583335,
+    "selected_two_branch_passes_full_sensitivity_bracket": true,
+    "result": "FAIL: canonical/unit-term benchmark under the stated finite-radius outgoing condition and sensitivity bracket.",
+    "selected_action_scope": "This is P=X+X|X|/Lambda^4, not the selected no-unit-term two-branch action."
   }
 }

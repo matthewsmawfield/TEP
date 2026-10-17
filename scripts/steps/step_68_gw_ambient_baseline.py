@@ -87,7 +87,17 @@ def main():
     u_gw = float(np.log1p(z_gw))
     drift_gw = float(drift_over_H0(np.array(z_gw)))
 
-    B0_GW, B0_LENS = 77.7, 422.0
+    # B0_GW = 77.7 is the GW170817 *upper bound* transferred through the
+    # peak shape functional (step_50), not a required amplitude: the
+    # allowed window is B0 < min(77.7, cap).  B0_LENS is the amplitude
+    # required by the Refsdal residual under the LENS step_062/063
+    # deprojection scan: 8.84 at g_scale=1.0, 51.5 on the deprojected
+    # data (the central requirement), 138 at g_scale=0.3, rising to
+    # ~3297 at g_scale=0.1 and 422 at g_scale~0.071.  The margin is
+    # therefore environment-dependent, not a single number.
+    B0_GW, B0_LENS_DEPROJ = 77.7, 51.5
+    B0_LENS_BRACKET = {'g_scale_1.0': 8.84, 'deprojected': 51.5,
+                       'g_scale_0.3': 138.0, 'g_scale_0.071': 422.0}
 
     out = {
         'step': 'step_68_gw_ambient_baseline',
@@ -113,10 +123,13 @@ def main():
             'u_at_cap_min': float(np.log1p(z_cap)),
             'cap_image_segment_only': cap_min_img,
             'z_at_cap_min_image': z_cap_img,
-            'B0_GW_saturated': B0_GW,
-            'B0_LENS_required': B0_LENS,
-            'margin_GW_over_cap': float(B0_GW / cap_min),
-            'margin_LENS_over_cap': float(B0_LENS / cap_min),
+            'B0_GW_bound_not_required': B0_GW,
+            'B0_LENS_required_bracket': B0_LENS_BRACKET,
+            'margin_GW_bound_over_cap': float(B0_GW / cap_min),
+            'margin_LENS_deprojected_over_cap': float(
+                B0_LENS_DEPROJ / cap_min),
+            'margin_LENS_bracket_over_cap': {
+                k: float(v / cap_min) for k, v in B0_LENS_BRACKET.items()},
         },
         'drift_profile_samples': {
             'z': [1.0, 2.0, 3.0, 5.0, 10.0],
@@ -159,14 +172,24 @@ def main():
          'wall under the corrected ambient: the tail drift '
          'u_dot = p(1+z)/eta slows by ~10x at z~3 vs the image, '
          'raising the realized lapse cap from %.3f (image) to %.3f '
-         'at z = %.2f — the exclusion margins narrow but remain '
-         'excluding: B0_GW = 77.7 exceeds the cap %.0fx, '
-         'B0_LENS = 422 exceeds it %.0fx.  The ambient-gate '
-         'resolution (B_eff = B(phi) G(X_local), closed on the '
-         'low-X ambient) remains mandatory exactly as under the '
-         'uncorrected sequence.'
+         'at z = %.2f.  The GW170817 B0 bound (77.7, an upper bound '
+         'rather than a required amplitude) exceeds the cap %.0fx, '
+         'so the admissible window is B0 < %.3f.  The Refsdal '
+         'lensing requirement is environment-dependent '
+         '(B0 = 8.8-422 across the step_062/063 deprojection '
+         'bracket; deprojected central 51.5): the ungated envelope '
+         'is lapse-supercritical by ~%.0fx at the central value, '
+         'ranging ~%.0fx-%.0fx across the bracket — and the margin '
+         'narrows further under the TEP-native drift conventions '
+         '(caps ~1.0-4.5, step_52).  The ambient-gate resolution '
+         '(B_eff = B(phi) G(X_local), closed on the low-X ambient) '
+         'remains mandatory exactly as under the uncorrected '
+         'sequence.'
          % (cap_min_img, cap_min, z_cap,
-            B0_GW / cap_min, B0_LENS / cap_min))
+            B0_GW / cap_min, cap_min,
+            B0_LENS_DEPROJ / cap_min,
+            B0_LENS_BRACKET['g_scale_1.0'] / cap_min,
+            B0_LENS_BRACKET['g_scale_0.071'] / cap_min))
     out['verdict'] = v
 
     here = os.path.dirname(os.path.abspath(__file__))
@@ -176,7 +199,10 @@ def main():
         json.dump(out, fh, indent=2)
     print(f'cap_min corrected={cap_min:.3f} at z={z_cap:.2f} '
           f'(image-only {cap_min_img:.3f} at z={z_cap_img:.2f})')
-    print(f'margins: GW {B0_GW/cap_min:.0f}x, LENS {B0_LENS/cap_min:.0f}x')
+    print(f'margins: GW bound {B0_GW/cap_min:.0f}x, '
+          f'LENS deprojected {B0_LENS_DEPROJ/cap_min:.0f}x, '
+          f'bracket {B0_LENS_BRACKET["g_scale_1.0"]/cap_min:.0f}x-'
+          f'{B0_LENS_BRACKET["g_scale_0.071"]/cap_min:.0f}x')
     print('wrote', os.path.abspath(path))
 
 

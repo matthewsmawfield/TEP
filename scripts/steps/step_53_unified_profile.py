@@ -4,9 +4,12 @@
 Gate-A item (a1). The corpus handles the two screening channels as
 separate operators:
 
-    shear branch:    S_Sigma(g) = [1 + (g/g_t)^2]^-1
-                     (inverse kinetic stiffness P_,X = 1 + 2|X|/Lam^4,
-                      step_27, exact spherical flux form of step_19/32)
+    shear branch:    S_Sigma(g) = P_,X^-1 at the local gradient
+                     (two-branch sector P_,X = k sqrt(xi) + 2 xi,
+                      k = 4 sqrt(2) g_t/a_0 ~ 16.0 — promoted per
+                      MASTER_SECTOR_LEDGER step_54 / WB step_020 /
+                      growth step_62; former unit-term baseline
+                      P_,X = 1 + 2 xi retained via --operator baseline)
     amplitude branch: S_A(rho) = min[1, (rho_bar/rho_T)^{1/3}]
                      (quartic matter-coupled equilibrium u_min ∝ rho^{1/3},
                       step_27 sec.6 / equilibrium_u)
@@ -15,7 +18,9 @@ This step solves the ONE static spherical equation that carries both,
 
     (1/r^2) d/dr [ r^2 P_,X(u') u' ] = d V_eff / du ,
     V_eff(u; rho) = (lambda/4) M_Pl^4 u^4 + rho e^{-u},
-    P_,X(u') = 1 + (c^2 u'/g_t)^2 ,  u = phi/M_Pl,
+    P_,X(u') = (k/sqrt2)(c|u'|/H0) + (c u'/H0)^2   [two-branch]
+             or 1 + (c u'/H0)^2                     [--operator baseline],
+    u = phi/M_Pl,
 
 for a stratified body (density profile rho(r)) embedded in an ambient
 medium at u_amb = u_eq(rho_amb), and reads both channels off the same
@@ -26,20 +31,25 @@ solution u(r):
                      => S_A(rho_bar) = u_c/u_eq(rho_T) = (rho/rho_T)^{1/3}
     shear branch:    exterior flux response y(r) = a/a_lin, where
                      a = c^2|u'| and a_lin = Q/r^2 is the P_,X=1 gradient,
-                     reproducing y = [1+(a/g_t)^2]^{-1} = S_Sigma.
+                     giving y = P_,X(u')^{-1}. The unit-term baseline has
+                     y = [1+(a/(c H0))^2]^{-1}; the selected two-branch
+                     expression includes the linear-in-|gradient| term.
 
 Solver: integrating once, the equation is algebraic in u':
 
-    r^2 f(u') = -Q(r),   Q(r) = int_0^r [rho~(r') - lam~ u^3] r'^2 dr',
-    f(v) = v (1 + (c^2 v / g_t)^2),
+    r^2 f(u') = -Q(r),   Q(r) = int_0^r [rho~(r') exp(-u) - lam~ u^3] r'^2 dr',
+    f(v) = v P_X(v)  [two-branch: (H0/c) a^2 (k/sqrt2 + a),
+                      a = c |v| / H0 ; baseline: v(1 + (c v/H0)^2)],
 
 so u'(r) = -finv(Q/r^2) and the profile follows by quadrature,
 
     u(r) = u_amb + int_r^r_out finv(Q(s)/s^2) ds.
 
-The only nonlocality is Q's int lam u^3 r^2 dr self-charge, so the
-solution is the fixed point u = T(u); flux conservation is exact by
-construction at every iteration.  Two regimes:
+Both the matter coupling and potential contribute to Q; it is not a
+conserved bare source charge. The production solver uses conservative
+radial finite volumes and a damped Newton solve, with the full source
+derivative rho~ exp(-u) + 3 lam~ u^2 in the positive static Hessian.
+The shooting implementation remains an optional cross-check. Two regimes:
 
     leaking (flux-following): interior u << u_eq, Q(r) ~ rho~r^3/3,
         interior excess Delta u ~ sqrt(Q_bare g_t)/c set by matching
@@ -48,7 +58,7 @@ construction at every iteration.  Two regimes:
         Q stops growing; possible only for R >~ R_c with
         R_c^3 ~ c^2 u_eq(rho)^2/(rho~ g_t).
 
-Output: results/step_53_unified_profile.json
+Output: results/step_53_unified_profile_{operator}.json
 """
 import json
 from pathlib import Path
@@ -76,6 +86,17 @@ G_CM3_TO_GEV4 = 4.3070e-18              # 1 g/cm^3 in GeV^4
 LAMBDA = 7.526e-71                      # quartic coupling (corpus ref)
 RHO_T = 20.0                            # g/cm^3, corpus calibration
 
+# Kinetic-sector operator. The promoted corpus realization is the
+# two-branch sector P_,X = k sqrt(xi) + 2 xi with xi = |X|/Lam^4
+# (MASTER_SECTOR_LEDGER step_54, WB step_020, growth step_62/74); the
+# former unit-term baseline 1 + 2 xi is retained for comparison.
+# In gradient variable a = c |u'| / H0 the baseline maps xi = a^2/2,
+# so the two branches are P_,X = (k/sqrt2) a + a^2.
+A0 = 1.2e-10                            # m/s^2, corpus acceleration floor
+K2 = 4.0 * np.sqrt(2.0) * G_T / A0      # k ~= 16.0 (zero free parameters)
+KP = K2 / np.sqrt(2.0)                  # coefficient of the sqrt branch
+OPERATOR = "baseline"                   # set by --operator in main()
+
 LAM_M2 = LAMBDA * M_PL_GEV ** 2 * GEV2_TO_M2   # lambda M_Pl^2 in m^-2
 
 
@@ -100,26 +121,45 @@ def u_eq(rho_g_cm3, lam_m2=LAM_M2):
 
 def P_X(v):
     """Kinetic stiffness evaluated at gradient v = du/dr [m^-1]."""
-    a = C ** 2 * v / G_T
+    a = C * np.abs(v) / H0
+    if OPERATOR == "two_branch":
+        return KP * a + a ** 2
     return 1.0 + a ** 2
 
 
 def J_flux(v):
-    """d[v P_X]/dv = 1 + 3 (c^2 v/g_t)^2."""
-    a = C ** 2 * v / G_T
+    """d[v P_X]/dv (radial flux-map Jacobian)."""
+    a = C * np.abs(v) / H0
+    if OPERATOR == "two_branch":
+        return 2.0 * KP * a + 3.0 * a ** 2
     return 1.0 + 3.0 * a ** 2
 
 
 def finv(q):
-    """Positive root of v(1 + (c^2 v/g_t)^2) = q, vectorised.
+    """Root of v P_X(v) = q, vectorised, for the selected operator.
 
-    The true root satisfies v < min(q, (q/alpha)^{1/3}), so Newton
-    started at that upper bound descends monotonically on the convex
-    map — no divergence possible.
+    baseline:    v (1 + (c v/H0)^2) = q
+    two-branch:  in a = c|v|/H0, a^2 (KP + a) = |q| c/H0
+    Both maps are convex and increasing on the positive half-line, so
+    Newton from an upper bound descends monotonically — no divergence
+    possible.
     """
-    alpha = (C ** 2 / G_T) ** 2
     q = np.asarray(q, dtype=float)
     aq = np.abs(q)
+    if OPERATOR == "two_branch":
+        qq = aq * C / H0
+        a = np.maximum(np.sqrt(qq / KP), 1e-300) \
+            + np.maximum(qq, 1e-300) ** (1.0 / 3.0)
+        for _ in range(80):
+            with np.errstate(over="ignore", invalid="ignore"):
+                f = a * a * (a + KP) - qq
+                fp = 3.0 * a * a + 2.0 * KP * a
+                step = np.where(np.isfinite(f / fp), f / fp, 0.0)
+            a = np.maximum(a - step, 1e-300)
+            if np.max(np.abs(step / a)) < 1e-14:
+                break
+        return np.sign(q) * a * H0 / C
+    alpha = (C / H0) ** 2
     v = np.minimum(np.maximum(aq, 1e-300),
                    np.maximum((aq / alpha) ** (1.0 / 3.0), 1e-300))
     for _ in range(60):
@@ -166,15 +206,26 @@ def _radial_balance(r, u, rho, rho_amb, lam_m2):
     return residual, diagonal, conductance, flux, norm
 
 
+def _kinetic_density(v):
+    """G(v) = int_0^v w P_X(w) dw for the selected operator.
+
+    baseline:   v^2/2 + (c/H0)^2 v^4/4
+    two-branch: KP (c/H0) |v|^3/3 + (c/H0)^2 v^4/4
+    """
+    beta = C / H0
+    av = np.abs(v)
+    if OPERATOR == "two_branch":
+        return KP * beta * av ** 3 / 3.0 + beta ** 2 * v ** 4 / 4.0
+    return v ** 2 / 2.0 + beta ** 2 * v ** 4 / 4.0
+
+
 def _radial_energy_change(r, u, change, rho, lam_m2):
     dr = np.diff(r)
     faces = (r[1:] + r[:-1]) / 2
     volumes = np.diff(np.r_[0.0, faces**3]) / 3
     slope = np.diff(u) / dr
     dslope = np.diff(change) / dr
-    kinetic = dslope * (slope + dslope/2 + (C*C/G_T)**2
-                        * (slope**3 + 1.5*slope*slope*dslope
-                           + slope*dslope*dslope + dslope**3/4))
+    kinetic = _kinetic_density(slope + dslope) - _kinetic_density(slope)
     du, field = change[:-1], u[:-1]
     potential = (lam_m2*du*(field**3 + 1.5*field*field*du + field*du*du + du**3/4)
                  + rho[:-1]*np.exp(-field)*np.expm1(-du))
@@ -360,6 +411,22 @@ def verify_residual(r, u, Q, rho_src):
     return float(np.max(flux_err / qscale))
 
 
+def retention_radius(u_eq_in, rho_in_m2):
+    """Radius where R * v_surf(R) = u_eq, v_surf = finv(rho~ R/3).
+
+    Operator-generic form of the leakage -> retention criterion: the
+    interior drop u_eq fits inside the body only when the flux-limited
+    surface gradient sheds it over < R.
+    """
+    f = lambda R: R * float(finv(np.array(rho_in_m2 * R / 3.0))) - u_eq_in
+    lo, hi = 1e-3, 1e30
+    while f(lo) > 0:
+        lo /= 10.0
+    while f(hi) < 0:
+        hi *= 10.0
+    return float(brentq(f, lo, hi, rtol=1e-10))
+
+
 def diagnostics(r, u, R_m, rho_prof, rho_amb, M_kg):
     """Read the two screening branches off the solved profile.
 
@@ -395,21 +462,30 @@ def diagnostics(r, u, R_m, rho_prof, rho_amb, M_kg):
     Q_bare = rho_to_m2(rho_in) * R_m ** 3 / 3.0
     g_N = G * M_kg / R_m ** 2
     x_surf = g_N / G_T
-    # canonical shear response: y solves y (1 + y^2 x^2) = 1
-    y_op = brentq(lambda yy: yy * (1.0 + yy ** 2 * x_surf ** 2) - 1.0,
-                  1e-40, 1.0)
+    # shear response y = a_s/(2 g_N) solves the flux map at x = g_N/g_t:
+    #   baseline:   y (1 + y^2 x^2) = 1
+    #   two-branch: KP x y^2 + x^2 y^3 = 1
+    if OPERATOR == "two_branch":
+        y_op = brentq(lambda yy: KP * x_surf * yy ** 2
+                      + x_surf ** 2 * yy ** 3 - 1.0,
+                      1e-40, 1e6)
+    else:
+        y_op = brentq(lambda yy: yy * (1.0 + yy ** 2 * x_surf ** 2) - 1.0,
+                      1e-40, 1.0)
     a_surf = C ** 2 * abs(vf[iR - 1])
     # tail-matched plateau: in the leaking regime the interior excess
-    # is set by the exterior-tail integral, Delta u ~ 4 sqrt(Q g_t)/c
-    plateau_pred = 4.0 * np.sqrt(Q_bare * G_T) / C
+    # is set by the exterior-tail integral Delta u = int_R^inf finv(Q/r^2)dr
+    _rt = R_m * np.geomspace(1.0, 1e10, 4000)
+    _vt = finv(Q_bare / _rt ** 2)
+    plateau_pred = float(np.sum(0.5 * (_vt[1:] + _vt[:-1])
+                                * np.diff(_rt)))
     # the ACTUAL retention criterion for this equation: the u_eq -> tail
     # drop must fit inside R at the flux-limited surface gradient
-    v_surf = (Q_bare * G_T ** 2 / (C ** 4 * R_m ** 2)) ** (1.0 / 3.0)
+    v_surf = float(finv(np.array(Q_bare / R_m ** 2)))
     tail_len = u_eq_in / v_surf       # radial distance to shed u_eq
     retention_ratio = tail_len / R_m  # >>1 => leaking branch forced
-    # saturation radius: R_c^4 = 3 c^4 u_eq^3 / (rho~ g_t^2)
-    R_c = (3.0 * C ** 4 * u_eq_in ** 3
-           / (rho_to_m2(rho_in) * G_T ** 2)) ** 0.25
+    # saturation radius: solve R finv(rho~ R/3) = u_eq for R
+    R_c = retention_radius(u_eq_in, rho_to_m2(rho_in))
     return {
         "rho_in_g_cm3": rho_in,
         "u_eq_analytic": u_eq_in,
@@ -433,6 +509,15 @@ def diagnostics(r, u, R_m, rho_prof, rho_amb, M_kg):
 
 
 def main():
+    global OPERATOR
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--operator", choices=["baseline", "two_branch"],
+                    default="two_branch",
+                    help="kinetic-sector operator: promoted two-branch "
+                         "(default) or former unit-term baseline")
+    OPERATOR = ap.parse_args().operator
+
     rho_amb = 1e-30                      # nearly empty ambient: clean tail
     u_amb = u_eq(rho_amb)
     u_T = u_eq(RHO_T)
@@ -456,9 +541,16 @@ def main():
     # far smaller box suffices
     toy = ("Toy retained body R=3e15", 3.0e46, 3.0e15, RHO_T)
 
+    eq_px = ("(k/sqrt2)(c|u'|/H0)+(c u'/H0)^2"
+             if OPERATOR == "two_branch" else "1+(c u'/H0)^2")
     out = {"step": "step_53_unified_profile",
-           "equation": ("(1/r^2)d/dr[r^2 P_,X u'] = dV_eff/du; "
-                        "P_,X=1+(c^2u'/g_t)^2; V_eff=lambda u^4/4+rho e^-u"),
+           "operator": OPERATOR,
+           "kinetic_coefficients": {"k": float(K2), "KP": float(KP),
+                                    "a0": A0, "g_t": G_T, "H0_s_inverse": H0,
+                                    "gradient_unit_m_inverse": H0/C,
+                                    "xi_mapping": "xi=(c u_prime/H0)^2/2; Lambda_X^2=M_Pl H0"},
+           "equation": (f"(1/r^2)d/dr[r^2 P_,X u'] = dV_eff/du; "
+                        f"P_,X={eq_px}; V_eff=lambda u^4/4+rho e^-u"),
            "ambient": {"rho_amb": rho_amb, "u_amb": float(u_amb)},
            "solver": "conservative_radial_finite_volume_damped_newton",
            "potential_lambda": LAMBDA,
@@ -516,8 +608,7 @@ def main():
     # body's other parameters.
     rho_s = RHO_T
     u_eq_s = u_eq(rho_s)
-    R_c_s = (3.0 * C ** 4 * u_eq_s ** 3
-             / (rho_to_m2(rho_s) * G_T ** 2)) ** 0.25
+    R_c_s = retention_radius(u_eq_s, rho_to_m2(rho_s))
     print("\n" + "=" * 72)
     print(f"BRANCH SWEEP at rho={rho_s} g/cm3:  R_c={R_c_s:.3e} m")
     out["branch_sweep"] = {"rho_g_cm3": rho_s, "R_c_m": float(R_c_s),
@@ -556,7 +647,7 @@ def main():
         print(f"\ndensity branch: u_int ~ rho^{p[0]:.3f} (expect 1/3)")
 
     dest = Path(__file__).resolve().parents[2] / "results" / \
-        "step_53_unified_profile.json"
+        f"step_53_unified_profile_{OPERATOR}.json"
     dest.write_text(json.dumps(out, indent=2))
     print("wrote", dest)
 

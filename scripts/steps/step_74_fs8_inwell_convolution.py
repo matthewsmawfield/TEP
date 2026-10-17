@@ -6,8 +6,8 @@ Step_62 established that inside collapsed regions the nonlinear pair
 map x_env = (1-y)/y runs large (S_Sigma -> 0, G_eff -> 1): collapsed
 matter grows Newtonianly.  The residual f sigma8 excess is therefore
 carried only by the mode-weighted AMBIENT fraction of the perturbation
-support.  This step performs that remaining convolution and closes
-the scalar sector at coefficient level.
+support.  This step computes a collapsed-fraction growth benchmark and a separate
+environment-density response diagnostic.
 
 The weighting is derived, not fit.  The mode support of a linear
 perturbation at scale k is the full density field; the collapsed
@@ -22,10 +22,10 @@ on the threshold mass scale.  Two weightings are reported:
   (a) mass-weighted: collapsed fraction at the M ~ 10^12 M_sun
       nonlinearity boundary (sigma ~ 1 at z=0) — the conservative
       floor, since underdense regions also partially screen;
-  (b) field-weighted: environment-resolved response using the local
-      density contrast delta -> local kinetic variable
-      xi_spatial(delta) via the regime map, averaging S_Sigma over a
-      lognormal density PDF matched to sigma_8.
+  (b) a lower threshold M ~ 10^10 M_sun (legacy output label "field").
+      This is a collapsed-mass-threshold sensitivity calculation. The
+      separate lognormal environment average is reported as a diagnostic,
+      and is not substituted into the growth ODE.
 
 In both weightings the ambient-mode response retains the two-branch
 G_eff(z) while the collapsed fraction contributes G_eff = 1.  The
@@ -100,8 +100,7 @@ def f_collapsed(z, m_threshold):
     sig0 = sigma_m_z0(m_threshold)
     sig_z = sig0 * Dz
     nu = DELTA_C / sig_z
-    return 0.5 * np.vectorize(lambda v: norm.sf(v / np.sqrt(2)) * 2)(nu)
-    # note: 2*Phi(-nu/sqrt2) = erfc(nu/sqrt2)
+    return 2.0 * norm.sf(nu)  # erfc(nu/sqrt(2))
 
 
 # --- field-weighted environment averaging ---------------------------
@@ -109,6 +108,12 @@ def xi_spatial_from_g(g):
     """xi = (grad phi)^2/(2 (H0/c)^2), grad phi ~ g/c^2 (beta_A=-1)."""
     H0_SI, C_L = 2.27e-18, 3.0e8
     return (g / C_L**2 / (H0_SI / C_L)) ** 2 / 2.0
+
+
+def density_pdf(sigma_linear):
+    """Unit-mean density ratio with variance sigma_linear**2."""
+    variance_log = np.log1p(float(sigma_linear)**2)
+    return lognorm(np.sqrt(variance_log), scale=np.exp(-0.5 * variance_log))
 
 
 def env_weighted_S(z, sector):
@@ -121,9 +126,7 @@ def env_weighted_S(z, sector):
     if sig < 1e-3:
         sig = 1e-3
     # lognormal with <delta>=0, variance sig^2 -> ln delta field
-    mu = -0.5 * sig**2
-    s = sig
-    dist = lognorm(s, scale=np.exp(mu + 1.0))  # rho/mean = 1 + delta
+    dist = density_pdf(sig)  # rho/mean = 1 + delta
     # sample the PDF
     rv = dist.rvs(size=20000, random_state=7)
     delta = rv - 1.0
@@ -165,7 +168,7 @@ def growth_diluted(sector, weighting):
 
 def main():
     out = {"step": "step_74_fs8_inwell_convolution",
-           "purpose": ("close the residual identified in step_62: "
+           "purpose": ("evaluate the residual identified in step_62: "
                        "convolve the ambient X_env response over the "
                        "mode-weighted collapsed fraction; in-well "
                        "regions revert to G_eff = 1")}
@@ -179,17 +182,18 @@ def main():
         "z": zout.tolist(),
         "f_mass_above_1e12": f_collapsed(zout, 1e12).tolist(),
         "f_mass_above_1e10": f_collapsed(zout, 1e10).tolist(),
-        "reading": ("At z=0 roughly 30-50% of mass sits above the "
-                    "nonlinearity boundary for M ~ 1e10-1e12; at "
-                    "z > 1 it is a few percent.  The mode-weighted "
-                    "ambient fraction at the RSD redshifts is the "
-                    "operative input.")
+        "reading": ("The arrays are Press-Schechter collapsed mass fractions "
+                    "at two threshold masses; they approximate the "
+                    "screened fraction used by the growth benchmark.")
     }
 
     rd = json.load(open(os.path.join(os.path.dirname(
         os.path.abspath(__file__)), "..", "..", "results",
         "step_62_growth_fsigma8.json")))["reference_data"]
 
+    out["weighting_labels"] = {"mass": "collapsed mass above 1e12 Msun",
+                               "field": "legacy label: collapsed mass above 1e10 Msun"}
+    out["normalization"] = "Present-day sigma8 fixed to 0.834 for every sector; S8_0 is assigned, not independently predicted."
     for weighting in ("mass", "field"):
         res = {}
         for sector in ("baseline", "two_branch"):
@@ -219,7 +223,7 @@ def main():
 
     # environment-resolved ambient suppression at the data redshifts
     out["env_resolved_S_amb"] = {
-        "note": ("lognormal delta-PDF matched to sigma_lin(z); "
+        "note": ("Separate diagnostic, not an ODE input: unit-mean lognormal density ratio with variance sigma_lin(z)^2; "
                  "in-well deltas screen through xi_spatial, ambient "
                  "modes keep the temporal xi_cosmo"),
         "z": [0.0, 0.5, 1.0],
@@ -230,11 +234,11 @@ def main():
     }
 
     out["verdict"] = {
-        "reading": ("step_62's residual excess is diluted by the "
-                    "collapsed fraction: at RSD redshifts ~10-30% of "
-                    "mode support is already Newtonian, pulling the "
-                    "two-branch chi2 toward the LCDM floor."),
-        "status": "scalar sector closed at coefficient level",
+        "reading": ("The growth benchmark recomputes the response with two "
+                    "collapsed-mass thresholds. The environment-density "
+                    "average is reported separately. Compare computed "
+                    "chi2 values using the declared common normalization."),
+        "status": "collapsed-fraction growth benchmark computed",
     }
 
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)),

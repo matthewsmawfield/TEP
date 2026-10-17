@@ -6,7 +6,7 @@ const path = require('path');
 /**
  * HTML to Markdown Converter for the TEP theory site.
  * Reads manifest.json + components/*.html directly (no dist dependency)
- * and writes 0-TEP-v{version}-{codename}.md at the repo root.
+ * and writes A0-TEP-v{version}-{codename}.md at the repo root.
  */
 class HTMLToMarkdownConverter {
     decodeEntities(text) {
@@ -193,7 +193,7 @@ class HTMLToMarkdownConverter {
 
     generateMarkdownFilename() {
         const { version, codename } = this.getVersionInfo();
-        return `0-TEP-v${version}-${codename}.md`;
+        return `A0-TEP-v${version}-${codename}.md`;
     }
 
     async convertSiteToMarkdown() {

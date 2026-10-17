@@ -1,0 +1,100 @@
+{
+  "scope": "Conservative discrete positivity bound for the step79 ambient branch.\n\nFor weighted-zero-mean v, write v=v0+mean(v), mean(v0)=0.\nThen ||v||\u00b2 <= (1+Var(w)/mean(w)\u00b2)||v0||\u00b2, w=psi^6.\nUse the periodic lattice Poincare constant, minimum face stiffness,\nminimum potential, and a norm bound on the attractive Schur correction.\nThe nonnegative directional stiffness is discarded, making the bound weaker.\nThis certifies only the specified discretized operators/backgrounds, not the\ncontinuum limit or every action constraint. A nonpositive bound is inconclusive.\n",
+  "grids": [
+    {
+      "N": 24,
+      "constraint_converged": true,
+      "poincare_constant": 39.253448114993326,
+      "lpsi_zero_mean_lower_bound": 37.728592067475354,
+      "branches": {
+        "ambient": {
+          "gradient_lower_bound": 377.8434199905236,
+          "gradient_lower_bound_vertex_min": 377.8048551452649,
+          "face_stiffness_min": 9.696752333718912,
+          "potential_lower_bound": 0.3671653865470843,
+          "potential_lower_bound_unnormalized_rho": -0.4044208576193059,
+          "attractive_correction_upper_bound": 0.0002700849128586806,
+          "operator_lower_bound": 378.2103152921578,
+          "operator_lower_bound_vertex_unnormalized": 377.40016420273275,
+          "status": "positive_discrete_bound"
+        },
+        "pure_local": {
+          "gradient_lower_bound": 0.6831914372155878,
+          "gradient_lower_bound_vertex_min": 6.238412550666337e-13,
+          "face_stiffness_min": 0.01753302509108979,
+          "potential_lower_bound": 0.3671653865470843,
+          "potential_lower_bound_unnormalized_rho": -0.4044208576193059,
+          "attractive_correction_upper_bound": 0.0002700849128586806,
+          "operator_lower_bound": 1.0500867388498134,
+          "operator_lower_bound_vertex_unnormalized": -0.40469094253154075,
+          "status": "positive_discrete_bound"
+        }
+      }
+    },
+    {
+      "N": 32,
+      "constraint_converged": true,
+      "poincare_constant": 39.35174573418404,
+      "lpsi_zero_mean_lower_bound": 37.70743083535963,
+      "branches": {
+        "ambient": {
+          "gradient_lower_bound": 378.77263267215466,
+          "gradient_lower_bound_vertex_min": 378.7473778369051,
+          "face_stiffness_min": 9.696859357853528,
+          "potential_lower_bound": 0.3671653865470843,
+          "potential_lower_bound_unnormalized_rho": -0.40442628074949094,
+          "attractive_correction_upper_bound": 0.00027026131634581103,
+          "operator_lower_bound": 379.13952779738537,
+          "operator_lower_bound_vertex_unnormalized": 378.3426812948393,
+          "status": "positive_discrete_bound"
+        },
+        "pure_local": {
+          "gradient_lower_bound": 0.509960188812792,
+          "gradient_lower_bound_vertex_min": 6.2539757317868e-13,
+          "face_stiffness_min": 0.01305535775944566,
+          "potential_lower_bound": 0.3671653865470843,
+          "potential_lower_bound_unnormalized_rho": -0.40442628074949094,
+          "attractive_correction_upper_bound": 0.00027026131634581103,
+          "operator_lower_bound": 0.8768553140435306,
+          "operator_lower_bound_vertex_unnormalized": -0.4046965420652114,
+          "status": "positive_discrete_bound"
+        }
+      }
+    },
+    {
+      "N": 40,
+      "constraint_converged": true,
+      "poincare_constant": 39.39731009555926,
+      "lpsi_zero_mean_lower_bound": 37.76164564225828,
+      "branches": {
+        "ambient": {
+          "gradient_lower_bound": 379.23173753033217,
+          "gradient_lower_bound_vertex_min": 379.21571949090065,
+          "face_stiffness_min": 9.696839708687369,
+          "potential_lower_bound": 0.3671653865470843,
+          "potential_lower_bound_unnormalized_rho": -0.4046381182065554,
+          "attractive_correction_upper_bound": 0.0002698840395145905,
+          "operator_lower_bound": 379.5986330328397,
+          "operator_lower_bound_vertex_unnormalized": 378.81081148865456,
+          "status": "positive_discrete_bound"
+        },
+        "pure_local": {
+          "gradient_lower_bound": 0.4046789872358209,
+          "gradient_lower_bound_vertex_min": 6.261894895825418e-13,
+          "face_stiffness_min": 0.010347518111892821,
+          "potential_lower_bound": 0.3671653865470843,
+          "potential_lower_bound_unnormalized_rho": -0.4046381182065554,
+          "attractive_correction_upper_bound": 0.0002698840395145905,
+          "operator_lower_bound": 0.7715744897433907,
+          "operator_lower_bound_vertex_unnormalized": -0.4049080022454438,
+          "status": "positive_discrete_bound"
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "step_82_stability_lower_bound.py": "350b2b428f3b263ea040229e89f7c6aee48853b8a8a4c03298dfda6bc4ffce15",
+    "step_20_landscape_existence.py": "0d1ac4fb01db352008732a01eda7f320d014033fd5abbe0d6d912c35fdf76868",
+    "step_79_inhomogeneous_eigenmodes.py": "4b5a93f276f17c9fffc545f732eed23ca54f3dbb3ad814cbb3a5ef683edf948a"
+  }
+}

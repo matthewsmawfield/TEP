@@ -93,54 +93,59 @@
     "note": "Rule-23 deep-well regime (V0 = 60): the lapse source f changes sign only where wells are potential-dominated, and a bound state (mu_0 < 0 at Pi^2 = 0) requires |f_w| sigma^2 >~ pi^2.  The scan minimises the Rayleigh bound on mu_0."
   },
   "joint_solution": {
-    "lambda_star": -18.347222324896517,
-    "Pi_star2": -8.842770282966201,
-    "mu_0_final": 2.1671553440683056e-13,
+    "lambda_star": -18.347222324896446,
+    "Pi_star2": -8.842770282966097,
+    "real_canonical_momentum": false,
+    "mu_0_final": -2.1316282072803006e-14,
     "psi_range": [
-      0.7498683681336928,
-      1.814813559942025
+      0.7498683681336926,
+      1.8148135599420194
     ],
     "fixed_point_history": [
       {
         "Pi2": 0.0,
-        "lambda": -22.768607466379493,
-        "mu0": 13.264155424449086,
-        "f_min": -16.871770980819043,
-        "f_max": 150.98486629007718
+        "lambda": -22.76860746637953,
+        "mu0": 13.264155424449168,
+        "f_min": -16.871770980819004,
+        "f_max": 150.98486629007724
       },
       {
-        "Pi2": -8.842770282966057,
-        "lambda": -18.347222324896517,
-        "mu0": 2.1671553440683056e-13,
-        "f_min": -30.135926405268076,
-        "f_max": 137.72071086562815
+        "Pi2": -8.84277028296611,
+        "lambda": -18.347222324896446,
+        "mu0": -2.1316282072803006e-14,
+        "f_min": -30.1359264052682,
+        "f_max": 137.72071086562804
       }
     ]
   },
   "lapse_source_structure": {
-    "f_min": -30.135926405268076,
-    "f_max": 137.72071086562815,
-    "f_well_mean": 14.233427085809918,
+    "f_min": -30.1359264052682,
+    "f_max": 137.72071086562804,
+    "f_well_mean": 14.233427085809796,
     "f_void_mean": null,
+    "well_cells": 64000,
+    "void_cells": 0,
+    "empty_region_mean": "null means the selected region has no cells",
     "sign_changing": true,
-    "interpretation": "f < 0 in potential-dominated wells (local expansion), f > 0 in negative-V voids (local contraction): the eternal slice is a steady-state circulation, not a pointwise-static geometry"
+    "interpretation": "Source sign variation is a numerical diagnostic; it does not establish preservation of the congruence. Empty geometric regions have no estimated mean. Negative required Pi squared is inadmissible."
   },
   "mean_preservation": {
     "achieved": true,
-    "lapse_modulation_delta": 2.6592107435311836,
-    "int_Nf": 1.818989403545857e-15
+    "lapse_modulation_delta": 2.6592107435311374,
+    "int_Nf": 0.0
   },
   "exact_preservation": {
-    "mu_0": 2.1671553440683056e-13,
-    "required_Pi2": -8.842770282966201,
+    "mu_0": -2.1316282072803006e-14,
+    "required_Pi2": -8.842770282966097,
     "eigenfunction_positive": true,
-    "eigen_residual": 1.0885514711844735e-10,
-    "int_eigenfunction_f": 2.344222593819723e-13
+    "eigen_residual": 1.23463905765675e-10,
+    "int_eigenfunction_f": 9.98170435195789e-14
   },
   "remaining_open": [
+    "Negative required Pi squared is inadmissible for the canonical scalar; a small spectral residual alone does not establish a static solution. Step21 lapse_solvability supplies a separately scoped evolving CMC initial slice.",
     "linearized inhomogeneous-mode growth (the landscape analogue of the Eddington mode) \u2014 requires perturbation evolution, not the initial-data level shown here",
     "A_ij != 0 sector",
     "long-time stationarity of the landscape statistics"
   ],
-  "verdict": "PASS"
+  "verdict": "NOT_ESTABLISHED"
 }

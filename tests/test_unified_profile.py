@@ -50,9 +50,9 @@ class UnifiedProfileTests(unittest.TestCase):
             return source*radius**3*(np.sqrt(np.pi)*erf(x)/4 - x*np.exp(-x*x)/2)
         def gradient(r):
             target = charge(r)/r**2
-            q = target*model.C**2/model.G_T
+            q = target*model.C/model.H0
             root = 2/np.sqrt(3)*np.sinh(np.arcsinh(1.5*np.sqrt(3)*q)/3)
-            return root*model.G_T/model.C**2
+            return root*model.H0/model.C
         expected = quad(gradient, 2*radius, outer, epsabs=1e-30, epsrel=1e-10)[0]
         errors = []
         for n in (1000, 2000):
@@ -96,9 +96,9 @@ class UnifiedProfileTests(unittest.TestCase):
         def ode(tt, y):
             rr = radius*np.exp(tt)
             field, q = y[0]*field_scale, y[1]*charge_scale
-            target = q/rr**2 * model.C**2/model.G_T
+            target = q/rr**2 * model.C/model.H0
             root = 2/np.sqrt(3)*np.sinh(np.arcsinh(1.5*np.sqrt(3)*target)/3)
-            slope = root*model.G_T/model.C**2
+            slope = root*model.H0/model.C
             source = model.rho_to_m2(prof(rr))*np.exp(-field) - lam*field**3
             return np.array([-rr*slope/field_scale, rr**3*source/charge_scale])
         def bc(left, right):

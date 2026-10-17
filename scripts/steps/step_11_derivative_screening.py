@@ -50,7 +50,7 @@ def run():
         'R_WB_m': R_WB,
         'ratio_R': ratio_R,
         'screening_models': results,
-        'conclusion': 'Derivative screening of the form P_X = 1 + (\nabla\phi / \Lambda)^n naturally connects the required O(1) wide-binary screening with the < 10^-5 Cassini bound. Even n=1 and n=2 pass both limits easily, unlike potential-based screening which failed.'
+        'conclusion': r'Derivative screening of the form P_X = 1 + (\nabla\phi / \Lambda)^n naturally connects the required O(1) wide-binary screening with the < 10^-5 Cassini bound. Even n=1 and n=2 pass both limits easily, unlike potential-based screening which failed.'
     }
     
     save('step_11_derivative_screening.json', result)

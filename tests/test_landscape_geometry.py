@@ -13,6 +13,30 @@ spec.loader.exec_module(landscape)
 
 
 class LandscapeGeometryTests(unittest.TestCase):
+    def test_bordered_solver_recovers_manufactured_positive_geometry(self):
+        for L in (1.0, 2.5):
+            N = 32
+            dx = L / N
+            x = np.arange(N) * dx
+            X, Y, Z = np.meshgrid(x, x, x, indexing='ij')
+            expected = 1 + .002*np.cos(2*np.pi*X/L) + .001*np.sin(2*np.pi*Y/L)
+            lap = landscape.fd_laplacian(N, dx)
+            source = -4*landscape.M_PL**2*(lap @ expected.ravel()).reshape(expected.shape)/expected**5
+            solved = landscape.solve_landscape(source, np.zeros_like(source), lap, verbose=False)
+            self.assertTrue(solved['converged'])
+            np.testing.assert_allclose(solved['psi'], expected, atol=1e-10, rtol=0)
+            self.assertAlmostEqual(solved['lam'], 0., places=9)
+            self.assertGreater(solved['psi'].min(), 0.)
+
+    def test_bordered_solver_rejects_failed_inner_iteration(self):
+        from unittest.mock import patch
+        N = 32
+        source = np.ones((N, N, N))
+        lap = landscape.fd_laplacian(N, 1/N)
+        with patch.object(landscape.spla, 'gmres', return_value=(np.zeros(N**3), 1)):
+            with self.assertRaisesRegex(RuntimeError, 'linear solve failed'):
+                landscape.solve_landscape(source, np.zeros_like(source), lap, verbose=False)
+
     def test_conformal_factors_that_cancel_give_flat_matter_geometry(self):
         # h=psi^4 delta and A=psi^-2 give gtilde_spatial=delta identically.
         # This tests the complete conformal-derivative map against known flatness.

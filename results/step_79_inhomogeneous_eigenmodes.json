@@ -1,14 +1,15 @@
 {
   "step": "step_79_inhomogeneous_eigenmodes",
-  "description": "Linear fluctuation spectrum of the inhomogeneous static landscape solved in step_20/step_21. Evaluates scalar perturbations on the periodic Lichnerowicz cell.",
+  "description": "Linear fluctuation spectrum of the inhomogeneous static landscape solved in step_20/step_21, evaluated for (1) the reduced Euclidean scalar operator, (2) the covariant metric-weighted scalar operator on h_{ij} = psi_0^4 delta_{ij}, and (3) the full Lichnerowicz-constraint-reduced coupled Einstein-scalar operator on the selected two-branch kinetic sector P_,X = k sqrt(xi) + 2 xi.",
   "primary_run_N24": {
     "N": 24,
     "L": 1.0,
     "dx": 0.041666666666666664,
     "constraint_converged": true,
-    "lambda_offset": -2.4170370396429925,
-    "psi_min": 0.9987777539917203,
-    "psi_max": 1.0006286622151763,
+    "hamiltonian_max_residual": 1.358154814740803e-10,
+    "lambda_offset": -2.419020360701559,
+    "psi_min": 0.9993727527868564,
+    "psi_max": 1.0012247606002975,
     "mean_V_double_prime": -0.43885172630649166,
     "mode_0_analysis": {
       "lambda_0": -0.43885202833259285,
@@ -102,95 +103,555 @@
     "projected_physical_modes": [
       {
         "mode_index": 0,
-        "type": "homogeneous_gauge_secular_mode",
-        "lambda": 0.0,
-        "omega": 0.0,
-        "stable": true
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.814533556549975,
+        "stable": true,
+        "omega": 6.230131102677533,
+        "eigen_residual": 4.442777132870552e-12,
+        "constant_overlap": 3.0216443455789297e-17
       },
       {
         "mode_index": 1,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 38.81453355678658,
-        "omega": 6.230131102696522,
-        "stable": true
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.81455060966196,
+        "stable": true,
+        "omega": 6.230132471277153,
+        "eigen_residual": 1.2800004015178298e-10,
+        "constant_overlap": 6.043288691157859e-17
       },
       {
         "mode_index": 2,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 38.81455060965385,
-        "omega": 6.230132471276502,
-        "stable": true
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.814551255872274,
+        "stable": true,
+        "omega": 6.230132523138836,
+        "eigen_residual": 5.7823959767523447e-11,
+        "constant_overlap": 1.888527715986831e-16
       },
       {
         "mode_index": 3,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 38.814551255868885,
-        "omega": 6.230132523138564,
-        "stable": true
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.814646450391066,
+        "stable": true,
+        "omega": 6.230140162981172,
+        "eigen_residual": 9.931215326127653e-10,
+        "constant_overlap": 0.0
       },
       {
         "mode_index": 4,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 38.81464645038821,
-        "omega": 6.230140162980943,
-        "stable": true
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.81464698420391,
+        "stable": true,
+        "omega": 6.23014020582233,
+        "eigen_residual": 1.7419182018841788e-09,
+        "constant_overlap": 9.064933036736789e-17
       },
       {
         "mode_index": 5,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 38.81464698420323,
-        "omega": 6.230140205822276,
-        "stable": true
-      },
-      {
-        "mode_index": 6,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 38.81464749053479,
-        "omega": 6.230140246457923,
-        "stable": true
-      },
-      {
-        "mode_index": 7,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 78.06792372201596,
-        "omega": 8.835605453052777,
-        "stable": true
-      },
-      {
-        "mode_index": 8,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 78.06795233405289,
-        "omega": 8.835607072185413,
-        "stable": true
-      },
-      {
-        "mode_index": 9,
-        "type": "physical_inhomogeneous_mode",
-        "lambda": 78.06795307426475,
-        "omega": 8.835607114073415,
-        "stable": true
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.81464749053204,
+        "stable": true,
+        "omega": 6.230140246457702,
+        "eigen_residual": 4.476786877513445e-09,
+        "constant_overlap": 9.064933036736789e-17
       }
     ],
+    "zero_mean_coercivity_lower_bound": 38.80336370081029,
+    "lowest_projected_eigenvalue": 38.814533556549975,
     "lowest_inhomogeneous_eigenvalue": 38.81453355678658,
-    "lowest_inhomogeneous_frequency": 6.230131102696522
+    "lowest_inhomogeneous_frequency": 6.230131102696522,
+    "full_coupled_einstein_scalar_operator": {
+      "gauge_subspace": "imposed restriction int sqrt(h) delta_u d^3x = 0; full gauge identification not established",
+      "metric_weighted_canonical_lowest_evals": [
+        38.95679640102001,
+        38.95680064599678,
+        38.95680128397792,
+        38.95838050909889
+      ],
+      "lichnerowicz_coupled_canonical_lowest_evals": [
+        38.956935398657535,
+        38.956939654801616,
+        38.956940292817826,
+        38.95851860935852
+      ],
+      "lichnerowicz_coupled_two_branch_lowest_evals": [
+        555.3547851710739,
+        555.3596736790555,
+        555.3596743900695,
+        557.5870381678966
+      ],
+      "lowest_coupled_canonical_lambda": 38.956935398657535,
+      "lowest_coupled_two_branch_lambda": 555.3547851710739,
+      "lowest_coupled_two_branch_omega": 23.565966671687242,
+      "unclipped_lichnerowicz_zero_mean_min_eval": 39.772798358261504,
+      "tilted_gradient_stencil_verification_n_110": {
+        "longitudinal_stiffness_ratio": 1.0,
+        "transverse_stiffness_ratio": 8.55216451595587e-18
+      },
+      "bordered_subspace_inverse_verification": {
+        "relative_projected_residual": 4.854546792445087e-15,
+        "solution_mean_abs": 5.0194545022477054e-21
+      },
+      "unclipped_canonical_attractive_sign_lowest_evals": [
+        38.956657045210584,
+        38.95666127897048,
+        38.956661916916424,
+        38.95824205210619
+      ],
+      "unclipped_two_branch_aniso_attractive_sign_lowest_evals": [
+        752.6032172665821,
+        752.6032182572019,
+        755.6890751692918,
+        755.6890753079687
+      ],
+      "unclipped_two_branch_pure_local_aniso_attractive_sign_lowest_evals": [
+        100.78089051207905,
+        163.48132758864912,
+        163.48132758906328,
+        164.36140400542848
+      ],
+      "lowest_unclipped_canonical_lambda": 38.956657045210584,
+      "lowest_unclipped_two_branch_aniso_lambda": 752.6032172665821,
+      "lowest_unclipped_two_branch_pure_local_aniso_lambda": 100.78089051207905,
+      "pure_local_continuum_k1_rayleigh_quotient": 482.7665715791817,
+      "pure_local_lowest_mode_diagnostics": {
+        "inverse_participation_ratio": 0.9924730555021073,
+        "peak_vertex_flat_index": 0,
+        "grad_u0_at_peak_vertex": 1.1965648018613242e-15,
+        "n_vertices_xi_floored_at_1e-30": 4
+      },
+      "pure_local_scaling_explanation": "At xi_env = 0, the measured lowest-mode inverse participation ratio is 0.992 (unity for a pure single-vertex spike), peaked at a vertex with |grad u_0| = 1.197e-15; 4 grid vertices sit at the xi <= 1e-30 floor where nabla u_0 vanishes by lattice symmetry. The discrete spike-mode stiffness 3*f_iso(dx)/dx^2 grows with grid resolution rather than converging, so the resolved continuum k_1 = 2*pi/L Rayleigh quotient (482.77 at N=24) is the physically meaningful convergence check.",
+      "eigenpair_residual_norms": {
+        "canonical_coupled": 3.5750060078979946e-05,
+        "two_branch_coupled": 3.302011621288093e-05,
+        "unclipped_canonical_attractive": 3.57835100755187e-05,
+        "unclipped_two_branch_aniso_attractive": 1.1720618671814281e-06,
+        "unclipped_two_branch_pure_local_aniso_attractive": 3.350566821228419e-05
+      },
+      "strictly_positive_coupled_spectrum": true
+    }
+  },
+  "pure_local_resolution_scaling_audit": {
+    "discrete_lowest_lambda_N24": 100.78089051207905,
+    "discrete_lowest_lambda_N32": 142.40732979115185,
+    "observed_ratio_32_over_24": 1.4130390103477373,
+    "linear_ON_reference_ratio": 1.3333333333333333,
+    "k1_rayleigh_N24": 482.7665715791817,
+    "k1_rayleigh_N32": 491.5045231011937,
+    "k1_relative_change": 0.018099744341098845,
+    "interpretation": "The xi_env = 0 discrete lowest mode is a single-vertex Kronecker spike at a lattice symmetry point (nabla u_0 = 0), whose face stiffness grows with resolution rather than converging; the resolved continuum k_1 = 2*pi/L Rayleigh quotient is the physically relevant convergence diagnostic."
   },
   "convergence_check_N32": {
     "N": 32,
     "lambda_0": -0.4388129190251129,
     "spatial_relative_variation": 2.115360471800824e-05,
     "lowest_inhomogeneous_eigenvalue": 38.91288865972275,
-    "lowest_inhomogeneous_frequency": 6.238019610399021
+    "lowest_inhomogeneous_frequency": 6.238019610399021,
+    "lowest_projected_eigenvalue": 38.91288865973261,
+    "zero_mean_coercivity_lower_bound": 38.901661320001004,
+    "projected_modes": [
+      {
+        "mode_index": 0,
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.91288865973261,
+        "stable": true,
+        "omega": 6.238019610399811,
+        "eigen_residual": 3.70881719371842e-08,
+        "constant_overlap": 1.0254666370778405e-14
+      },
+      {
+        "mode_index": 1,
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.91288922527436,
+        "stable": true,
+        "omega": 6.238019655730043,
+        "eigen_residual": 1.9696638077402918e-08,
+        "constant_overlap": 5.554202072593854e-15
+      },
+      {
+        "mode_index": 2,
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.91290119371998,
+        "stable": true,
+        "omega": 6.238020615044485,
+        "eigen_residual": 1.5868007893881071e-09,
+        "constant_overlap": 1.9626155733547187e-16
+      },
+      {
+        "mode_index": 3,
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.912972371265326,
+        "stable": true,
+        "omega": 6.238026320180553,
+        "eigen_residual": 1.3851330176558357e-08,
+        "constant_overlap": 3.964483458176532e-15
+      },
+      {
+        "mode_index": 4,
+        "type": "zero_mean_scalar_mode",
+        "lambda": 38.91297272151407,
+        "stable": true,
+        "omega": 6.238026348254236,
+        "eigen_residual": 2.0720012788524762e-08,
+        "constant_overlap": 5.750463629929326e-15
+      }
+    ],
+    "full_coupled_einstein_scalar_operator": {
+      "gauge_subspace": "imposed restriction int sqrt(h) delta_u d^3x = 0; full gauge identification not established",
+      "metric_weighted_canonical_lowest_evals": [
+        39.05535081847462,
+        39.055351381480506,
+        39.05537580815576,
+        39.056809661972565
+      ],
+      "lichnerowicz_coupled_canonical_lowest_evals": [
+        39.055489201925205,
+        39.05548976493355,
+        39.055514182938374,
+        39.05694725484622
+      ],
+      "lichnerowicz_coupled_two_branch_lowest_evals": [
+        551.6606732777374,
+        551.6649364786895,
+        551.6649371082343,
+        554.0954762835244
+      ],
+      "lowest_coupled_canonical_lambda": 39.055489201925205,
+      "lowest_coupled_two_branch_lambda": 551.6606732777374,
+      "lowest_coupled_two_branch_omega": 23.48745778660895,
+      "unclipped_lichnerowicz_zero_mean_min_eval": 39.87081085531735,
+      "tilted_gradient_stencil_verification_n_110": {
+        "longitudinal_stiffness_ratio": 1.0000000000000007,
+        "transverse_stiffness_ratio": 6.82424381120138e-16
+      },
+      "bordered_subspace_inverse_verification": {
+        "relative_projected_residual": 1.0958365105998975e-14,
+        "solution_mean_abs": 2.964615315390051e-21
+      },
+      "unclipped_canonical_attractive_sign_lowest_evals": [
+        39.0552120722754,
+        39.05521263527893,
+        39.055237070664305,
+        39.05667170781655
+      ],
+      "unclipped_two_branch_aniso_attractive_sign_lowest_evals": [
+        750.9283644926619,
+        750.9283650995379,
+        753.6030942712994,
+        757.4029205251933
+      ],
+      "unclipped_two_branch_pure_local_aniso_attractive_sign_lowest_evals": [
+        142.40732979115185,
+        227.08700239163036,
+        227.0870023943657,
+        228.37514378245285
+      ],
+      "lowest_unclipped_canonical_lambda": 39.0552120722754,
+      "lowest_unclipped_two_branch_aniso_lambda": 750.9283644926619,
+      "lowest_unclipped_two_branch_pure_local_aniso_lambda": 142.40732979115185,
+      "pure_local_continuum_k1_rayleigh_quotient": 491.5045231011937,
+      "pure_local_lowest_mode_diagnostics": {
+        "inverse_participation_ratio": 0.983171266665469,
+        "peak_vertex_flat_index": 0,
+        "grad_u0_at_peak_vertex": 2.6690793206877107e-16,
+        "n_vertices_xi_floored_at_1e-30": 8
+      },
+      "pure_local_scaling_explanation": "At xi_env = 0, the measured lowest-mode inverse participation ratio is 0.983 (unity for a pure single-vertex spike), peaked at a vertex with |grad u_0| = 2.669e-16; 8 grid vertices sit at the xi <= 1e-30 floor where nabla u_0 vanishes by lattice symmetry. The discrete spike-mode stiffness 3*f_iso(dx)/dx^2 grows with grid resolution rather than converging, so the resolved continuum k_1 = 2*pi/L Rayleigh quotient (491.50 at N=32) is the physically meaningful convergence check.",
+      "eigenpair_residual_norms": {
+        "canonical_coupled": 4.0097037665223716e-05,
+        "two_branch_coupled": 2.9801927256626128e-05,
+        "unclipped_canonical_attractive": 4.010162291267966e-05,
+        "unclipped_two_branch_aniso_attractive": 4.412083860994351e-05,
+        "unclipped_two_branch_pure_local_aniso_attractive": 2.485259027501632e-05
+      },
+      "strictly_positive_coupled_spectrum": true
+    }
+  },
+  "supercell_bloch_and_gauge_reduction_audit": {
+    "scope": "Actual twisted-boundary spectrum of a conditional scalar operator.\n\nThis prescribed profile is not re-solved for the quartic potential and\nhas no metric Schur correction. It is not a same-background coupled\nstability certificate. D(theta)^* W D(theta) is positive semidefinite\nfor every twist, so min(mass2) is a rigorous bound for THIS operator,\nindependent of the sampled eigenvalues or domain size.\n",
+    "N": 12,
+    "operator": "sum D_theta^* diag(face_stiffness) D_theta + diag(mass2)",
+    "quartic_coefficient": "3 lambda_tilde = 0.5, conditional dimensionless benchmark",
+    "background_resolved_for_quartic": false,
+    "includes_metric_constraint_response": false,
+    "gauge_reduction_established": false,
+    "all_twist_scalar_lower_bound": 0.36517422211056216,
+    "lower_bound_proof": "stiffness > 0 implies D^* W D >= 0 for every twist",
+    "sampled_bloch_eigenpairs": [
+      {
+        "L_super": 1.0,
+        "q_x": 6.283185307179586,
+        "lowest_scalar_eigenvalue": 0.6733359824209229,
+        "eigenpair_absolute_residual": 1.6309689132884207e-10,
+        "hermitian_error": 2.322018576273631e-27
+      },
+      {
+        "L_super": 2.0,
+        "q_x": 3.141592653589793,
+        "lowest_scalar_eigenvalue": 266.0020782612298,
+        "eigenpair_absolute_residual": 1.1316335840137726e-08,
+        "hermitian_error": 1.1610092881368155e-27
+      },
+      {
+        "L_super": 5.0,
+        "q_x": 1.2566370614359172,
+        "lowest_scalar_eigenvalue": 43.92516986203698,
+        "eigenpair_absolute_residual": 1.3415783077237503e-08,
+        "hermitian_error": 6.425500088561126e-12
+      },
+      {
+        "L_super": 10.0,
+        "q_x": 0.6283185307179586,
+        "lowest_scalar_eigenvalue": 11.510392103154917,
+        "eigenpair_absolute_residual": 4.4862875395317525e-09,
+        "hermitian_error": 8.119572334976197e-12
+      },
+      {
+        "L_super": 20.0,
+        "q_x": 0.3141592653589793,
+        "lowest_scalar_eigenvalue": 3.384107342553553,
+        "eigenpair_absolute_residual": 1.8040049199650179e-09,
+        "hermitian_error": 6.396473894205933e-12
+      },
+      {
+        "L_super": 50.0,
+        "q_x": 0.12566370614359174,
+        "lowest_scalar_eigenvalue": 1.1071269425506844,
+        "eigenpair_absolute_residual": 6.258530928814956e-10,
+        "hermitian_error": 5.876050126881403e-12
+      },
+      {
+        "L_super": 100.0,
+        "q_x": 0.06283185307179587,
+        "lowest_scalar_eigenvalue": 0.7817861348058384,
+        "eigenpair_absolute_residual": 2.9615907041688826e-10,
+        "hermitian_error": 6.3008524517189746e-12
+      },
+      {
+        "L_super": null,
+        "q_x": 0.0,
+        "lowest_scalar_eigenvalue": 0.6733359824173535,
+        "eigenpair_absolute_residual": 1.6451428513094835e-10,
+        "hermitian_error": 0.0
+      }
+    ],
+    "conditional_scalar_operator_positive_for_all_twists": true,
+    "full_coupled_infinite_volume_stability_established": false
+  },
+  "resolved_quartic_two_branch_coupled_audit": {
+    "scope": "Conditional quartic benchmark with a re-solved Hamiltonian geometry.\n\nThe scalar profile is prescribed by build_landscape, not solved from its\nnonlinear scalar equation. The uniform lambda offset and fixed ambient\nstiffness are benchmark inputs. Scalar perturbations are unprojected;\nthe metric response obeys q_vol dot delta_psi=0 via an exact bordered\ninverse. The all-twist bound is for this explicitly constrained family,\nnot a full-action continuum stability theorem or a gauge classification.\n",
+    "background_resolved_for_quartic": true,
+    "scalar_background_equation_solved": false,
+    "full_action_stability_established": false,
+    "metric_response_constraint": "q_vol dot delta_psi = 0; exact bordered inverse",
+    "includes_metric_constraint_response": true,
+    "requires_homogeneous_mode_projection": false,
+    "grids": [
+      {
+        "N": 16,
+        "background_converged": true,
+        "hamiltonian_max_residual": 1.4283685345617414e-11,
+        "psi_range": [
+          0.99937541815708,
+          1.000898175317366
+        ],
+        "lambda_star_quartic": -0.6763485264201312,
+        "unprojected_coupled_lowest_evals": [
+          0.48330682154112,
+          809.2672350695381,
+          811.572194191382,
+          824.8198338967909
+        ],
+        "lowest_unprojected_coupled_lambda_0": 0.48330682154112,
+        "first_inhomogeneous_coupled_lambda_1": 809.2672350695381,
+        "eigenpair_residual_norms": {
+          "mode_0": 3.7036336679189355e-11,
+          "mode_1": 1.994637790853155e-06
+        },
+        "m_eff2_min": 0.36501811357071146,
+        "metric_schur_complement_norm_upper_bound": 0.002156958417373728,
+        "all_twist_coupled_lower_bound": 0.3628611551533377,
+        "strictly_positive_unprojected_coupled_spectrum": true
+      },
+      {
+        "N": 24,
+        "background_converged": true,
+        "hamiltonian_max_residual": 4.874656234221675e-12,
+        "psi_range": [
+          0.9994661478499999,
+          1.0009356367104065
+        ],
+        "lambda_star_quartic": -0.6830255826214363,
+        "unprojected_coupled_lowest_evals": [
+          0.4838627638247356,
+          805.4018486894056,
+          805.4018489097856,
+          810.6465942318501
+        ],
+        "lowest_unprojected_coupled_lambda_0": 0.4838627638247356,
+        "first_inhomogeneous_coupled_lambda_1": 805.4018486894056,
+        "eigenpair_residual_norms": {
+          "mode_0": 8.660285449685779e-11,
+          "mode_1": 2.590006008077238e-06
+        },
+        "m_eff2_min": 0.36501811357071146,
+        "metric_schur_complement_norm_upper_bound": 0.002196538482878184,
+        "all_twist_coupled_lower_bound": 0.36282157508783325,
+        "strictly_positive_unprojected_coupled_spectrum": true
+      }
+    ],
+    "all_grids_strictly_positive_unprojected": true
+  },
+  "joint_on_shell_quartic_two_branch_coupled_audit": {
+    "scope": "Jointly on-shell coupled Einstein-scalar background and unprojected\nLichnerowicz-coupled stability audit on the quartic + matter potential\nV_q(u) = (lambda_tilde/4) u^4 + rho_m(x) e^{-u} with two-branch face-flux\nkinetic operator P_{,X}(xi) = eps_reg + k sqrt(xi) + 2 xi (xi = |du|^2/2 + xi_env).\n\nSolves BOTH the nonlinear two-branch scalar Euler-Lagrange equation\n    R_u[u, psi] = -div(psi^2 P_{,X}(xi) grad u) + psi^6(lambda_tilde u^3 - rho_m e^{-u}) = 0\nAND the nonlinear Lichnerowicz Hamiltonian constraint\n    R_psi[u, psi, lambda_*] = Delta psi + psi^5(S_0(u) + lambda_*)/(4 M_Pl^2) + psi g(u)/(8 M_Pl^2) = 0\nsimultaneously on-shell via alternating Newton-CG, then evaluates the exact\nsecond-variation Hessian J_u[u_*, psi_*] coupled to the attractive metric\nSchur complement -B_q L_psi^{-1} B_q (with q_vol . delta_psi = 0 via exact\nbordered inverse) across the FULL UNPROJECTED scalar Hilbert space, plus the\nall-twist Bloch lower bound min(m_eff^2) - ||B_q L_psi^{-1} B_q|| > 0.\n",
+    "background_resolved_for_quartic": true,
+    "scalar_background_equation_solved": true,
+    "metric_response_constraint": "q_vol dot delta_psi = 0; exact bordered inverse",
+    "includes_metric_constraint_response": true,
+    "requires_homogeneous_mode_projection": false,
+    "grids": [
+      {
+        "N": 16,
+        "background_converged": true,
+        "scalar_euler_lagrange_max_residual": 1.2243817071322383e-12,
+        "hamiltonian_max_residual": 4.685041207214416e-13,
+        "u_range": [
+          0.9269089425329318,
+          0.9270438776688639
+        ],
+        "psi_range": [
+          0.9998974559505117,
+          1.0002250663727086
+        ],
+        "lambda_star_quartic": -0.16350072642963856,
+        "unprojected_coupled_lowest_evals": [
+          0.5623600890309226,
+          378.9533675693493,
+          378.95745198283396,
+          378.95756735415074
+        ],
+        "lowest_unprojected_coupled_lambda_0": 0.5623600890309226,
+        "first_inhomogeneous_coupled_lambda_1": 378.9533675693493,
+        "eigenpair_residual_norms": {
+          "mode_0": 1.1587933553513409e-11,
+          "mode_1": 2.8290789604769857e-09
+        },
+        "m_eff2_min": 0.46922139199957136,
+        "metric_schur_complement_norm_upper_bound": 0.00301081176387001,
+        "all_twist_coupled_lower_bound": 0.46621058023570133,
+        "strictly_positive_unprojected_coupled_spectrum": true
+      },
+      {
+        "N": 24,
+        "background_converged": true,
+        "scalar_euler_lagrange_max_residual": 3.026891237656315e-12,
+        "hamiltonian_max_residual": 1.04602280154055e-12,
+        "u_range": [
+          0.9275905569749731,
+          0.9277068460854526
+        ],
+        "psi_range": [
+          0.9999115339262931,
+          1.000193865665518
+        ],
+        "lambda_star_quartic": -0.1638819712283004,
+        "unprojected_coupled_lowest_evals": [
+          0.5632778891846741,
+          381.67107393446537,
+          381.6741132405107,
+          381.6741792924596
+        ],
+        "lowest_unprojected_coupled_lambda_0": 0.5632778891846741,
+        "first_inhomogeneous_coupled_lambda_1": 381.67107393446537,
+        "eigenpair_residual_norms": {
+          "mode_0": 3.8071112256949446e-11,
+          "mode_1": 5.618199307003152e-09
+        },
+        "m_eff2_min": 0.4698264079456259,
+        "metric_schur_complement_norm_upper_bound": 0.0029968196691288807,
+        "all_twist_coupled_lower_bound": 0.466829588276497,
+        "strictly_positive_unprojected_coupled_spectrum": true
+      }
+    ],
+    "all_grids_strictly_positive_unprojected": true
+  },
+  "completed_canonical_reconstructed_coupled_audit": {
+    "scope": "Complete second-variation audit of the canonical reconstructed potential\nV_rec(u) = V_0 - (rho_bar / 2) e^{-u} (rhob_half = rho_bar / 2 = 1.0 from\nstep_12_cosmology_solution.py) when the conformal matter coupling\nrho_E(u, x) = rho_*(x) A(u) = rho_*(x) e^{-u} (beta_A = -1) is retained in\nboth the total effective potential V_eff(u, x) = V_rec(u) + rho_*(x) e^{-u}\nand its second variation:\n    V_eff''(u, x) = V_rec''(u) + rho_*(x) d^2(e^{-u})/du^2\n                  = -(rho_bar / 2) e^{-u} + rho_*(x) e^{-u}\n                  = (rho_*(x) - rho_bar / 2) e^{-u}.\nIn solve_spectrum above, V_pp differentiated only the bare potential V_rec(u)\n(mean -0.4389 < 0) and omitted the +rho_*(x) e^{-u} matter second variation.\nRestoring +rho_*(x) e^{-u} with cell-mean conserved density <rho_*> = rho_bar =\n2 * rhob_half = 2.0 (matching step_12) flips the cell-mean effective mass\nsquared from -0.4389 to +0.4102 > 0 and renders the UNPROJECTED Euclidean and\nLichnerowicz-coupled two-branch operators strictly positive without projecting\nout the homogeneous mode.\n",
+    "includes_matter_coupling_second_variation": true,
+    "includes_metric_constraint_response": true,
+    "requires_homogeneous_mode_projection": false,
+    "grids": [
+      {
+        "N": 16,
+        "hamiltonian_max_residual": 4.817950608563144e-13,
+        "bare_V_rec_pp_mean": -0.438910897643946,
+        "matter_second_variation_mean": 0.8486165151141931,
+        "complete_V_eff_pp_mean": 0.4097056174702471,
+        "unprojected_euclidean_lowest_evals": [
+          0.40871505126392427,
+          39.37870441086687,
+          39.378706772167924,
+          39.37880226022175
+        ],
+        "lowest_unprojected_euclidean_lambda_0": 0.40871505126392427,
+        "unprojected_coupled_lowest_evals": [
+          0.41231419059800417,
+          367.02186064434386,
+          367.09674559969073,
+          367.09674822779886
+        ],
+        "lowest_unprojected_coupled_lambda_0": 0.41231419059800417,
+        "first_inhomogeneous_coupled_lambda_1": 367.02186064434386,
+        "eigenpair_residual_norms": {
+          "mode_0": 2.43146253995984e-11,
+          "mode_1": 3.13614971384551e-11
+        },
+        "strictly_positive_unprojected_coupled_spectrum": true
+      },
+      {
+        "N": 24,
+        "hamiltonian_max_residual": 1.0646622472521017e-12,
+        "bare_V_rec_pp_mean": -0.43885172630649166,
+        "matter_second_variation_mean": 0.8490151617540197,
+        "complete_V_eff_pp_mean": 0.41016343544752787,
+        "unprojected_euclidean_lowest_evals": [
+          0.40928773895029535,
+          39.65997998364926,
+          39.65998063189381,
+          39.66003277192523
+        ],
+        "lowest_unprojected_euclidean_lambda_0": 0.40928773895029535,
+        "unprojected_coupled_lowest_evals": [
+          0.4126611080173156,
+          350.97356333304776,
+          350.9932801623919,
+          350.9932809027217
+        ],
+        "lowest_unprojected_coupled_lambda_0": 0.4126611080173156,
+        "first_inhomogeneous_coupled_lambda_1": 350.97356333304776,
+        "eigenpair_residual_norms": {
+          "mode_0": 8.946447845928085e-11,
+          "mode_1": 1.054481869289508e-10
+        },
+        "strictly_positive_unprojected_coupled_spectrum": true
+      }
+    ],
+    "all_grids_strictly_positive_unprojected": true
   },
   "classification_verdict": {
-    "physical_inhomogeneous_stability": "STABLE",
-    "homogeneous_secular_mode": "PRESENT_SECULAR_ROLL",
-    "mode_0_spatial_nature": "HOMOGENEOUS",
-    "lowest_physical_lambda": 38.81453355678658,
-    "lowest_physical_omega": 6.230131102696522,
+    "physical_inhomogeneous_stability": "POSITIVE_ON_TESTED_WEIGHTED_ZERO_MEAN_SUBSPACE",
+    "full_constraint_reduced_stability": "POSITIVE_FOR_IMPLEMENTED_LICHNEROWICZ_REDUCTION",
+    "homogeneous_secular_mode": "NEARLY_HOMOGENEOUS_NEGATIVE_DIRECTION_GAUGE_STATUS_UNRESOLVED",
+    "mode_0_spatial_nature": "ALMOST_CONSTANT",
+    "lowest_physical_lambda_reduced": 38.814533556549975,
+    "lowest_physical_lambda_coupled_canonical": 38.956935398657535,
+    "lowest_physical_lambda_coupled_two_branch": 555.3547851710739,
+    "lowest_physical_omega_coupled_two_branch": 23.565966671687242,
     "secular_efold_time": 1.5095272072455117
   },
   "headline_interpretation": [
-    "Physical inhomogeneous modes are strictly stable: lowest physical eigenvalue lambda_1 = +38.8145 > 0 (omega_1 = 6.2301 > 0). Zero localized runaways.",
-    "The single unstable direction is purely homogeneous (relative spatial variation 2.19e-05 << 1): lambda_0 = -0.4389, corresponding to the secular roll along the cosmological potential gradient, not an inhomogeneous instability."
+    "Reduced Euclidean zero-mean scalar operator is strictly positive: lambda_1 = +38.8145 (omega_1 = 6.2301).",
+    "Full metric-weighted (sqrt(h)=psi^6) Lichnerowicz-constraint-reduced Einstein-scalar operator is strictly positive on both the canonical branch (lambda_1 = +38.9569 at N=24, +39.0555 at N=32) and the selected two-branch kinetic sector P_,X = k sqrt(xi) + 2 xi (lambda_1 = +555.3548, omega_1 = 23.5660 at N=24; +551.6607 at N=32).",
+    "The single unprojected negative direction (lambda_0 = -0.4389, spatial variation 2.19e-05 << 1) is the nearly homogeneous mode excluded by the imposed weighted-zero-mean restriction. Its gauge status is not established by this spectrum."
   ]
 }

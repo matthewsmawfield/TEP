@@ -5,9 +5,10 @@ shallow ambient rolls?
 
 Motivation
 ----------
-step_76 measured the clock-channel transmission T = du_int/du_amb ~ 1 on
-the leaking branch: interior field values ride ambient excursions
-additively.  step_53 places real bodies on that branch.  If the ambient
+The unit-term control in step_76 approaches an additive static response
+on sufficiently small matched domains; its selected two-branch runs
+show strong potential/domain dependence. Neither is a universal dynamic
+transmission. Step_53 places real bodies on the leaking profile branch.  If the ambient
 drift itself were coherent across the landscape -- every cell rolling at
 the same rate -- then interior clocks would track the cosmological roll,
 G_loc inside sources would drift as (1+z)^{-2}, and the SN Ia luminosity
@@ -258,16 +259,24 @@ def evolve(u0, rho0, psi, lam, V0, rhob_half, u_s, LAP, k2, axes_k,
         v = N / max(float(N[obs_mask].mean()), 1e-30)
         return v
 
+    u0_obs = float(u0[obs_mask].mean())
     for step in range(1, nsteps + 1):
+        if not np.isfinite(u).all() or float(np.abs(u).max()) > 12.0:
+            break
         if step % resolve_every == 0 or step == 1:
             V = landscape_potential(u, V0, rhob_half, u_s)
             gu2 = conformal_grad2(u, psi, k2, axes_k)
             S0 = rho + V + 0.5 * pi ** 2
-            sol = solve_landscape_warm(S0, gu2, LAP, psi0=psi, lam0=lam,
-                                       tol=1e-8, max_newton=8)
-            if sol["converged"]:
-                psi, lam = sol["psi"], sol["lam"]
-            Nlap, mu_star, _ = maximal_slice_lapse(rho, gu2, V, lam, LAP)
+            if not (np.isfinite(S0).all() and np.isfinite(gu2).all()):
+                break
+            try:
+                sol = solve_landscape_warm(S0, gu2, LAP, psi0=psi, lam0=lam,
+                                           tol=1e-8, max_newton=8)
+                if sol["converged"] and np.isfinite(sol["psi"]).all():
+                    psi, lam = sol["psi"], sol["lam"]
+                Nlap, mu_star, _ = maximal_slice_lapse(rho, gu2, V, lam, LAP)
+            except Exception:
+                break
 
         eom = screened_eom_residual(u, rho, V0, rhob_half, u_s, dx,
                                     branch, lam4)
@@ -276,6 +285,8 @@ def evolve(u0, rho0, psi, lam, V0, rhob_half, u_s, LAP, k2, axes_k,
         u2 = u + dt * du
         pi2 = pi + dt * dpi
         rho2 = np.maximum(rho + dt * (-rho * du), 0.0)
+        if not np.isfinite(u2).all() or float(np.abs(u2).max()) > 12.0:
+            break
         eom2 = screened_eom_residual(u2, rho2, V0, rhob_half, u_s, dx,
                                      branch, lam4)
         u = u + 0.5 * dt * (du + Nlap * pi2)
@@ -285,6 +296,8 @@ def evolve(u0, rho0, psi, lam, V0, rhob_half, u_s, LAP, k2, axes_k,
         t += dt
 
         if step % record_every == 0 or step == 1:
+            if not np.isfinite(u).all():
+                break
             Nn = N_norm(Nlap)
             dudt = Nlap * pi
             row = {"t": float(t), "mu_star": float(mu_star)}
@@ -301,10 +314,8 @@ def evolve(u0, rho0, psi, lam, V0, rhob_half, u_s, LAP, k2, axes_k,
                 (eom_r - eom_r.mean()) ** 2)))
             rows.append(row)
             fields.append((float(t), u.copy(), Nn.copy(), psi.copy()))
-            if not np.isfinite(u).all():
+            if float(u[obs_mask].mean()) < u0_obs - 2.2:
                 break
-            if abs(row["du_void"]) > 0 and len(rows) > 3:
-                pass
     return rows, fields
 
 
@@ -353,7 +364,7 @@ def transport_integral(fields, dx, n_rays=24):
 
 def main():
     L, n_w = 1.0, 4
-    N = 24
+    N = 16
     sigma = L / 8.0
     u_well_probe, u_void_probe = 0.4, -1.4
     rho0, rho_ambient = 0.5, 0.05

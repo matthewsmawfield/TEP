@@ -1,0 +1,52 @@
+{
+  "scope": "Fail on numerical or scope regressions in the selected consistency repairs.\nThis validates specified calculations, not the full TEP framework.\n",
+  "checks": {
+    "physical_CMC_initial_slices": true,
+    "khronon_imposed_stress_lapse_equation_solved": true,
+    "negative_kinetic_density_cannot_pass": true,
+    "homogeneous_gauge_status_not_overclaimed": true,
+    "saved_lowest_coupled_eigenpairs_resolved": true,
+    "actual_scalar_Bloch_eigenpairs_obey_bound": true,
+    "conditional_Bloch_scope_explicit": true,
+    "resolved_quartic_coupled_spectrum_positive_unprojected": true,
+    "quartic_benchmark_scope_and_residuals_verified": true,
+    "joint_on_shell_quartic_coupled_spectrum_positive_unprojected": true,
+    "completed_canonical_reconstructed_matter_second_variation_positive": true,
+    "ambient_discrete_bounds_positive": true,
+    "pure_local_discrete_bounds_positive": true,
+    "saved_spectrum_uses_physical_Hamiltonian_background": true,
+    "physical_Hamiltonian_sign_verified": true,
+    "specified_solar_ray_benchmarks_pass": true,
+    "acoustic_shell_flux_and_prescription_values_verified": true,
+    "native_shell_hessian_not_conflated_with_effective_prescription": true,
+    "spherical_shell_hessian_invariants_verified": true
+  },
+  "hamiltonian_max_residuals": {
+    "24": 1.358154814740803e-10,
+    "32": 1.2364011019432714e-10
+  },
+  "status": "PASS",
+  "provenance": {
+    "scripts/steps/step_21_congruence_preservation.py": "96c8295e1b1d48c961c187305074ca4f726f89b785fd3f8cb4d9226c9e3b661b",
+    "scripts/steps/step_21_waveform_inference.py": "30e82b2b05af87986fb335b2f41b8a1f9f77e745f52887b4e2bd7ce7d9e50482",
+    "scripts/steps/step_21_lapse_solvability.py": "31831f919944bb92111d3923c8e9ef1629c0db1717f2f94c5bbce143bb8284fb",
+    "scripts/steps/step_20_landscape_existence.py": "0d1ac4fb01db352008732a01eda7f320d014033fd5abbe0d6d912c35fdf76868",
+    "scripts/steps/step_79_inhomogeneous_eigenmodes.py": "4b5a93f276f17c9fffc545f732eed23ca54f3dbb3ad814cbb3a5ef683edf948a",
+    "scripts/steps/step_80_shared_lapse_action_derivation.py": "07ad97907b3e7c4f2fab1314722e94ef85e4aa3ab8eac2551cd0f66515ea7923",
+    "scripts/steps/step_81_action_contract_audit.py": "9a2c2350edfa1fe4b2ae2b746ead7373851acbf6d5dc5b02d9902bb13835308e",
+    "scripts/steps/step_82_stability_lower_bound.py": "350b2b428f3b263ea040229e89f7c6aee48853b8a8a4c03298dfda6bc4ffce15",
+    "scripts/steps/step_83_consistency_validation.py": "e5d16930e63c5f811669d7826ede66d50a21b6ddf55ba7f4ce3c37901bfbd978",
+    "results/step_21_lapse_solvability.json": "314d57d303c9d805f68ff4dcd73664aa840907153114710ae1d5fd2edab4612b",
+    "results/step_21_congruence_preservation.json": "41a320434109f01361b5f29189aee81e04de6e1452f38f906719907c2bdfdff0",
+    "results/step_79_inhomogeneous_eigenmodes.json": "a41b7c4f070c963919571e349d1cc9c0593ef06a32e541fff586bbbe269ff698",
+    "results/step_80_shared_lapse_action_derivation.json": "71ce30d022deacd5b86ff6fd190343e49f94ec7c7ffdc7007c8be726911e5655",
+    "results/step_81_action_contract_audit.json": "76b5f31d9209410eb4beeada8822df2711f4d93b06b1afc7a832d69cbb186672",
+    "results/step_82_stability_lower_bound.json": "141d9202da7e2c0b00fa057718d7593a3f34e82b810e8451b989bca8a5caac23"
+  },
+  "limitations": [
+    "Lowest-mode checks do not certify convergence of every higher eigenmode.",
+    "Positive finite-grid bounds do not establish a full continuum coupled theory.",
+    "CMC initial lapse consistency does not establish eternal zero expansion.",
+    "Shared-action observational transfer and absolute loop normalization retain their stated conditional scope."
+  ]
+}

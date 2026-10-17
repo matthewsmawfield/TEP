@@ -2,7 +2,7 @@
 """
 step_21_congruence_preservation.py
 ==================================
-Evolution-side completion of the inhomogeneous-slice construction
+Historical maximal-slicing diagnostic of the inhomogeneous-slice construction
 (issues 0-1, continuation of step_20): whether the zero-expansion
 congruence can be preserved on the constraint-satisfying landscape.
 
@@ -19,7 +19,7 @@ int N f = 0 with
 using rho + S = rho_m + 2 Pi^2 - 2 V for the canonical scalar sector
 (the |grad phi|^2 terms cancel between rho and S).
 
-Structural obstruction resolved here: the Hamiltonian integrability
+Structural obstruction tested here (negative Pi squared is inadmissible): the Hamiltonian integrability
 condition forces <V> ~ -<rho_m> (negative mean potential, step_20),
 while mean zero-acceleration wants <V> ~ +<rho_m>/2.  With uniform
 weighting these are incompatible; the compatible class is a landscape
@@ -47,6 +47,7 @@ Outputs results/step_21_congruence_preservation.json.
 """
 
 import json
+from pathlib import Path
 import os
 import sys
 import numpy as np
@@ -192,8 +193,10 @@ def main():
     # --- final diagnostics on the tuned slice ---
     f_min, f_max = float(f.min()), float(f.max())
     sign_changing = (f_min < 0) and (f_max > 0)
-    f_w = float(f[wells > 0.5].mean())
-    f_v = float(f[wells < 0.5].mean())
+    well_cells = int(np.count_nonzero(wells > 0.5))
+    void_cells = int(np.count_nonzero(wells < 0.5))
+    f_w = float(f[wells > 0.5].mean()) if well_cells else None
+    f_v = float(f[wells < 0.5].mean()) if void_cells else None
 
     # (i) mean-preserving lapse: enhance N where f < 0 (or vice versa)
     P = float(f[f > 0].sum()) if (f > 0).any() else 0.0
@@ -224,9 +227,12 @@ def main():
     int_eig_Nf = (float((Nvec * f).sum() * dVc) if Nvec is not None
                   else None)
 
-    verdict = "PASS" if (sol['converged'] and sign_changing
+    real_canonical_momentum = bool(Pi2 >= 0)
+    verdict = "PASS" if (real_canonical_momentum and sol['converged'] and sign_changing
                          and mean_preserved
-                         and (mu0 is None or abs(mu0) < 1e-3)) else "FAIL"
+                         and mu0 is not None and abs(mu0) < 1e-3
+                         and exact_lapse_positive is True
+                         and eig_resid is not None and eig_resid < 1e-6) else "NOT_ESTABLISHED"
 
     summary = {
         "step": "step_21_congruence_preservation",
@@ -247,6 +253,7 @@ def main():
         "joint_solution": {
             "lambda_star": float(lam),
             "Pi_star2": float(Pi2),
+            "real_canonical_momentum": real_canonical_momentum,
             "mu_0_final": mu0,
             "psi_range": [float(psi.min()), float(psi.max())],
             "fixed_point_history": hist,
@@ -254,14 +261,14 @@ def main():
         "lapse_source_structure": {
             "f_min": f_min, "f_max": f_max,
             "f_well_mean": f_w, "f_void_mean": f_v,
+            "well_cells": well_cells, "void_cells": void_cells,
+            "empty_region_mean": "null means the selected region has no cells",
             "sign_changing": sign_changing,
-            "interpretation": ("f < 0 in potential-dominated wells "
-                               "(local expansion), f > 0 in negative-V "
-                               "voids (local contraction): the eternal "
-                               "slice is a steady-state circulation, not "
-                               "a pointwise-static geometry") if sign_changing
-                              else "f single-signed: congruence cannot be "
-                                   "preserved on this landscape",
+            "interpretation": (
+                "Source sign variation is a numerical diagnostic; it does not "
+                "establish preservation of the congruence. Empty geometric regions "
+                "have no estimated mean. Negative required Pi squared is inadmissible."
+            ),
         },
         "mean_preservation": {
             "achieved": mean_preserved,
@@ -276,6 +283,9 @@ def main():
             "int_eigenfunction_f": int_eig_Nf,
         },
         "remaining_open": [
+            "Negative required Pi squared is inadmissible for the canonical scalar; "
+            "a small spectral residual alone does not establish a static solution. "
+            "Step21 lapse_solvability supplies a separately scoped evolving CMC initial slice.",
             "linearized inhomogeneous-mode growth (the landscape "
             "analogue of the Eddington mode) — requires perturbation "
             "evolution, not the initial-data level shown here",
@@ -285,15 +295,16 @@ def main():
         "verdict": verdict,
     }
 
-    os.makedirs("results", exist_ok=True)
-    out = "results/step_21_congruence_preservation.json"
+    results_dir = Path(__file__).resolve().parents[2] / "results"
+    results_dir.mkdir(exist_ok=True)
+    out = results_dir / "step_21_congruence_preservation.json"
     with open(out, "w") as fo:
-        json.dump(summary, fo, indent=2)
+        json.dump(summary, fo, indent=2, allow_nan=False)
 
     print("\n" + "=" * 78)
     print(f"VERDICT: {verdict}")
     print(f"  lambda* = {lam:+.4f}   Pi*^2 = {Pi2:.4f}   mu0 = {mu0:+.3e}")
-    print(f"  f: wells {f_w:+.3f} / voids {f_v:+.3f}  (sign-changing "
+    print(f"  f: wells {f_w} / voids {f_v}  (sign-changing "
           f"= {sign_changing})")
     print(f"  mean-preserved = {mean_preserved}  (int Nf = {int_Nf:.2e})")
     if Nvec is not None:

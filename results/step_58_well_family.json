@@ -1,6 +1,6 @@
 {
   "k": 16.03,
-  "convention": "fixed charge Q=4pi, uniform sphere radius R -> 0; N_min = exp(-u_c); source starvation rho e^{-u}; units r_* = 1, g_t = 1",
+  "convention": "fixed bare-source integral 4pi, uniform sphere radius R -> 0; N_min = exp(-u_c); source starvation rho e^{-u}; units r_* = 1, g_t = 1",
   "two_branch": {
     "source_only": [
       {
@@ -156,7 +156,8 @@
       "loglog_slope": 0.20673707779647835,
       "resid_lnln_fit": 0.03757448290791143,
       "resid_ln_fit": 0.05115806604187467,
-      "better": "lnln"
+      "better": "lnln",
+      "scope": "finite-range fit only; compactness is bounded by compactness_certificate"
     },
     "growth_master_V": {
       "log_slope_full": 0.0908534172010877,
@@ -164,7 +165,17 @@
       "loglog_slope": 0.20803550692066416,
       "resid_lnln_fit": 0.03768424164715212,
       "resid_ln_fit": 0.051643499457864284,
-      "better": "lnln"
+      "better": "lnln",
+      "scope": "finite-range fit only; compactness is bounded by compactness_certificate"
+    },
+    "compactness_certificate": {
+      "rmax": 40.0,
+      "u_ambient": 0.0,
+      "upper_bound_u_center": 2.886276006658859,
+      "lower_bound_clock_ratio": 0.055783563904961066,
+      "quadrature_error": 3.204370475919582e-14,
+      "scope": "Fixed unit bare-source integral and finite ambient boundary; not a global floor on unbounded space.",
+      "result": "Finite central well and strictly positive clock ratio in the source-only compact limit."
     }
   },
   "baseline": {
@@ -322,7 +333,8 @@
       "loglog_slope": 0.256804671633362,
       "resid_lnln_fit": 0.02361172871793249,
       "resid_ln_fit": 0.14211638591685904,
-      "better": "lnln"
+      "better": "lnln",
+      "scope": "finite-range fit only; compactness is bounded by compactness_certificate"
     },
     "growth_master_V": {
       "log_slope_full": 0.15003033253789586,
@@ -330,7 +342,17 @@
       "loglog_slope": 0.256834847815616,
       "resid_lnln_fit": 0.023618392653265374,
       "resid_ln_fit": 0.14214147192081927,
-      "better": "lnln"
+      "better": "lnln",
+      "scope": "finite-range fit only; compactness is bounded by compactness_certificate"
+    },
+    "compactness_certificate": {
+      "rmax": 40.0,
+      "u_ambient": 0.0,
+      "upper_bound_u_center": 3.6831493565558664,
+      "lower_bound_clock_ratio": 0.025143663649226867,
+      "quadrature_error": 1.8839198117887893e-13,
+      "scope": "Fixed unit bare-source integral and finite ambient boundary; not a global floor on unbounded space.",
+      "result": "Finite central well and strictly positive clock ratio in the source-only compact limit."
     }
   }
 }

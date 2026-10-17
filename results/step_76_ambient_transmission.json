@@ -1,5 +1,13 @@
 {
   "step": "step_76_ambient_transmission",
+  "operator": "baseline",
+  "kinetic_coefficients": {
+    "k": 16.029941788039785,
+    "KP": 11.334880540348543,
+    "H0_s_inverse": 2.2685455029723016e-18,
+    "gradient_unit_m_inverse": 7.567053281147925e-27,
+    "xi_mapping": "xi=(c u_prime/H0)^2/2; Lambda_X^2=M_Pl H0"
+  },
   "question": "transmission T = du_int/du_amb of an ambient field-value excursion into interior clocks, on the solved unified-profile branch",
   "ambient": {
     "rho_amb": 1e-30
@@ -8,261 +16,261 @@
   "bodies": {
     "Moon": {
       "u_amb": 1.176354627384841e-17,
-      "u_int": 2.3718738442853343e-15,
-      "baseline_res": 9.318280127082802e-11,
+      "u_int": 3.3440087694525947e-15,
+      "baseline_res": 0.0,
       "residual_definition": "roundoff-adjusted finite-volume equation balance",
       "outer_radius_m": 1.7374e+16,
       "outer_boundary_error": 0.0,
-      "static_linear_boundary_transmission": 0.9997601701265182,
+      "static_linear_boundary_transmission": 0.9997601698761867,
       "rows": [
         {
           "delta": 1e-20,
-          "u_int_shifted": 2.371883841956996e-15,
-          "T": 0.9997671661827193,
-          "raw_secant_diagnostic": 0.9997671661827193,
+          "u_int_shifted": 3.3440187675627492e-15,
+          "T": 0.9998110154500095,
+          "raw_secant_diagnostic": 0.9998110154500095,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.3718838419569962e-23,
-          "final_res": 2.143017778226284e-12
+          "field_reporting_floor": 3.344018767562749e-23,
+          "final_res": 1.0636234621249815e-11
         },
         {
           "delta": 1e-19,
-          "u_int_shifted": 2.3719738206754553e-15,
-          "T": 0.9997639012097059,
-          "raw_secant_diagnostic": 0.9997639012097059,
+          "u_int_shifted": 3.344108745412698e-15,
+          "T": 0.9997596010342483,
+          "raw_secant_diagnostic": 0.9997596010342483,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.3719738206754554e-23,
-          "final_res": 4.728760482132401e-13
+          "field_reporting_floor": 3.3441087454126983e-23,
+          "final_res": 0.0
         },
         {
           "delta": 1e-18,
-          "u_int_shifted": 2.3728735830348784e-15,
-          "T": 0.9997387495441016,
-          "raw_secant_diagnostic": 0.9997387495441016,
+          "u_int_shifted": 3.3450085087123508e-15,
+          "T": 0.9997392597560637,
+          "raw_secant_diagnostic": 0.9997392597560637,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.3728735830348786e-23,
+          "field_reporting_floor": 3.345008508712351e-23,
           "final_res": 0.0
         },
         {
           "delta": 1e-13,
-          "u_int_shifted": 3.737829372783434e-15,
-          "T": 0.013659555284980994,
-          "raw_secant_diagnostic": 0.013659555284980994,
+          "u_int_shifted": 4.709922653867792e-15,
+          "T": 0.013659138844151975,
+          "raw_secant_diagnostic": 0.013659138844151975,
           "secant_status": "resolved",
-          "field_reporting_floor": 3.737829372783434e-23,
-          "final_res": 3.846745374954505e-13
+          "field_reporting_floor": 4.7099226538677925e-23,
+          "final_res": 4.2162966704083594e-13
         },
         {
           "delta": 2.5e-11,
-          "u_int_shifted": 3.781845713648794e-15,
-          "T": 5.6398874774538374e-05,
-          "raw_secant_diagnostic": 5.6398874774538374e-05,
+          "u_int_shifted": 4.747545451403782e-15,
+          "T": 5.6141467278047504e-05,
+          "raw_secant_diagnostic": 5.6141467278047504e-05,
           "secant_status": "resolved",
-          "field_reporting_floor": 3.781845713648794e-23,
-          "final_res": 0.0
+          "field_reporting_floor": 4.7475454514037827e-23,
+          "final_res": 1.1715124335307182e-12
         },
         {
           "delta": 1e-09,
-          "u_int_shifted": 3.810272072231306e-15,
-          "T": 1.438398227945972e-06,
-          "raw_secant_diagnostic": 1.438398227945972e-06,
+          "u_int_shifted": 4.7703584455709514e-15,
+          "T": 1.4263496761183565e-06,
+          "raw_secant_diagnostic": 1.4263496761183565e-06,
           "secant_status": "resolved",
-          "field_reporting_floor": 3.8102720722313066e-23,
-          "final_res": 3.0212540994505774e-11
+          "field_reporting_floor": 4.7703584455709516e-23,
+          "final_res": 2.3293107267767475e-12
         }
       ]
     },
     "Earth": {
       "u_amb": 1.176354627384841e-17,
-      "u_int": 2.1371453004610253e-14,
-      "baseline_res": 4.786775338366479e-11,
+      "u_int": 3.018252078540502e-14,
+      "baseline_res": 0.0,
       "residual_definition": "roundoff-adjusted finite-volume equation balance",
       "outer_radius_m": 6.371e+16,
       "outer_boundary_error": 0.0,
-      "static_linear_boundary_transmission": 0.9966110892916634,
+      "static_linear_boundary_transmission": 0.9966101372625921,
       "rows": [
         {
           "delta": 1e-20,
-          "u_int_shifted": 2.1371462970696493e-14,
-          "T": 0.9966086239950857,
-          "raw_secant_diagnostic": 0.9966086239950857,
+          "u_int_shifted": 3.018253075116411e-14,
+          "T": 0.9965759093022574,
+          "raw_secant_diagnostic": 0.9965759093022574,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.1371462970696493e-22,
-          "final_res": 0.0
+          "field_reporting_floor": 3.018253075116411e-22,
+          "final_res": 3.908690779836783e-11
         },
         {
           "delta": 1e-19,
-          "u_int_shifted": 2.1371552665591266e-14,
-          "T": 0.9966098101263426,
-          "raw_secant_diagnostic": 0.9966098101263426,
+          "u_int_shifted": 3.018262044078816e-14,
+          "T": 0.9965538314205485,
+          "raw_secant_diagnostic": 0.9965538314205485,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.1371552665591267e-22,
-          "final_res": 7.088026075054361e-13
+          "field_reporting_floor": 3.018262044078816e-22,
+          "final_res": 0.0
         },
         {
           "delta": 1e-18,
-          "u_int_shifted": 2.137244933024533e-14,
-          "T": 0.9963256350768966,
-          "raw_secant_diagnostic": 0.9963256350768966,
+          "u_int_shifted": 3.0183517107228684e-14,
+          "T": 0.9963218236670341,
+          "raw_secant_diagnostic": 0.9963218236670341,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.137244933024533e-22,
-          "final_res": 0.0
+          "field_reporting_floor": 3.0183517107228685e-22,
+          "final_res": 3.886569263858233e-11
         },
         {
           "delta": 1e-13,
-          "u_int_shifted": 2.1738044862852874e-14,
-          "T": 0.003665918582426206,
-          "raw_secant_diagnostic": 0.003665918582426206,
+          "u_int_shifted": 3.054911116289404e-14,
+          "T": 0.003665903774890252,
+          "raw_secant_diagnostic": 0.003665903774890252,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.1738044862852874e-22,
-          "final_res": 2.0490554242343934e-12
+          "field_reporting_floor": 3.0549111162894043e-22,
+          "final_res": 4.719075726240991e-11
         },
         {
           "delta": 2.5e-11,
-          "u_int_shifted": 2.174414403541195e-14,
-          "T": 1.4907641232067856e-05,
-          "raw_secant_diagnostic": 1.4907641232067856e-05,
+          "u_int_shifted": 3.0554748824294874e-14,
+          "T": 1.488912155559428e-05,
+          "raw_secant_diagnostic": 1.488912155559428e-05,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.174414403541195e-22,
-          "final_res": 0.0
+          "field_reporting_floor": 3.0554748824294877e-22,
+          "final_res": 4.785405887241251e-12
         },
         {
           "delta": 1e-09,
-          "u_int_shifted": 2.17480803910498e-14,
-          "T": 3.7662738643954615e-07,
-          "raw_secant_diagnostic": 3.7662738643954615e-07,
+          "u_int_shifted": 3.0558232902395434e-14,
+          "T": 3.757121169904163e-07,
+          "raw_secant_diagnostic": 3.757121169904163e-07,
           "secant_status": "resolved",
-          "field_reporting_floor": 2.17480803910498e-22,
-          "final_res": 2.310759486389243e-12
+          "field_reporting_floor": 3.0558232902395435e-22,
+          "final_res": 8.212605353948189e-13
         }
       ]
     },
     "Sun": {
       "u_amb": 1.176354627384841e-17,
-      "u_int": 4.725069116179153e-12,
-      "baseline_res": 2.4207012456670648e-11,
+      "u_int": 6.670179623235829e-12,
+      "baseline_res": 3.2557591454193217e-13,
       "residual_definition": "roundoff-adjusted finite-volume equation balance",
       "outer_radius_m": 6.957e+18,
       "outer_boundary_error": 0.0,
-      "static_linear_boundary_transmission": 1.2993116475122585e-10,
+      "static_linear_boundary_transmission": 1.1945638930391244e-10,
       "rows": [
         {
           "delta": 1e-20,
-          "u_int_shifted": 4.725069117013882e-12,
+          "u_int_shifted": 6.670179623103286e-12,
           "T": null,
-          "raw_secant_diagnostic": 0.08347286356425741,
+          "raw_secant_diagnostic": -0.013254276846455155,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 4.725069117013882e-20,
-          "final_res": 3.3162708305609293e-13
+          "field_reporting_floor": 6.670179623235829e-20,
+          "final_res": 3.5971534867745285e-13
         },
         {
           "delta": 1e-19,
-          "u_int_shifted": 4.725069117351851e-12,
+          "u_int_shifted": 6.670179622069318e-12,
           "T": null,
-          "raw_secant_diagnostic": 0.011726981549429754,
+          "raw_secant_diagnostic": -0.011665112640137337,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 4.7250691173518516e-20,
-          "final_res": 0.0
+          "field_reporting_floor": 6.670179623235829e-20,
+          "final_res": 1.8004383202689447e-12
         },
         {
           "delta": 1e-18,
-          "u_int_shifted": 4.7250691167273955e-12,
+          "u_int_shifted": 6.670179622436491e-12,
           "T": null,
-          "raw_secant_diagnostic": 0.0005482422237443621,
+          "raw_secant_diagnostic": -0.000799337583887522,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 4.7250691167273953e-20,
-          "final_res": 0.0
+          "field_reporting_floor": 6.670179623235829e-20,
+          "final_res": 3.618133845694254e-13
         },
         {
           "delta": 1e-13,
-          "u_int_shifted": 4.725069116685546e-12,
+          "u_int_shifted": 6.6701796225886255e-12,
           "T": null,
-          "raw_secant_diagnostic": 5.063928624215744e-09,
+          "raw_secant_diagnostic": -6.472033980438215e-09,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 4.725069116685546e-20,
-          "final_res": 2.3419128892481897e-11
+          "field_reporting_floor": 6.670179623235829e-20,
+          "final_res": 2.3418777942751137e-11
         },
         {
           "delta": 2.5e-11,
-          "u_int_shifted": 4.725069116450253e-12,
+          "u_int_shifted": 6.670179623448741e-12,
           "T": null,
-          "raw_secant_diagnostic": 1.0843982401400736e-11,
+          "raw_secant_diagnostic": 8.516470641086977e-12,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 4.725069116450253e-20,
-          "final_res": 2.2333854063536445e-11
+          "field_reporting_floor": 6.670179623448741e-20,
+          "final_res": 2.3168518325667453e-11
         },
         {
           "delta": 1e-09,
-          "u_int_shifted": 4.725069116704305e-12,
+          "u_int_shifted": 6.6701796221033435e-12,
           "T": null,
-          "raw_secant_diagnostic": 5.251514446332018e-13,
+          "raw_secant_diagnostic": -1.1324853833868209e-12,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 4.7250691167043046e-20,
-          "final_res": 1.270320669104687e-14
+          "field_reporting_floor": 6.670179623235829e-20,
+          "final_res": 2.8630226845979e-12
         }
       ]
     },
     "Cepheid envelope (8 Msun, 50 Rsun)": {
       "u_amb": 1.176354627384841e-17,
-      "u_int": 9.098010475678332e-12,
-      "baseline_res": 1.6418910236775456e-11,
+      "u_int": 1.2777505828417471e-11,
+      "baseline_res": 3.6322875890063257e-13,
       "residual_definition": "roundoff-adjusted finite-volume equation balance",
       "outer_radius_m": 3.4785e+20,
       "outer_boundary_error": 0.0,
-      "static_linear_boundary_transmission": 6.866831996610196e-258,
+      "static_linear_boundary_transmission": 6.287348225463872e-258,
       "rows": [
         {
           "delta": 1e-20,
-          "u_int_shifted": 9.098010475678332e-12,
+          "u_int_shifted": 1.2777505828417471e-11,
           "T": null,
           "raw_secant_diagnostic": 0.0,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 9.098010475678332e-20,
-          "final_res": 1.6418910236775456e-11
+          "field_reporting_floor": 1.2777505828417471e-19,
+          "final_res": 3.6322875890063257e-13
         },
         {
           "delta": 1e-19,
-          "u_int_shifted": 9.098010475678332e-12,
+          "u_int_shifted": 1.2777505828417471e-11,
           "T": null,
           "raw_secant_diagnostic": 0.0,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 9.098010475678332e-20,
-          "final_res": 1.6418910236775456e-11
+          "field_reporting_floor": 1.2777505828417471e-19,
+          "final_res": 3.6322875890063257e-13
         },
         {
           "delta": 1e-18,
-          "u_int_shifted": 9.098010475578292e-12,
+          "u_int_shifted": 1.2777505828417471e-11,
           "T": null,
-          "raw_secant_diagnostic": -0.00010004038650489956,
+          "raw_secant_diagnostic": 0.0,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 9.098010475678332e-20,
-          "final_res": 3.4021773153206146e-13
-        },
-        {
-          "delta": 1e-13,
-          "u_int_shifted": 9.098010475578292e-12,
-          "T": null,
-          "raw_secant_diagnostic": -1.0004038650489957e-09,
-          "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 9.098010475678332e-20,
-          "final_res": 1.5043732931975063e-15
-        },
-        {
-          "delta": 2.5e-11,
-          "u_int_shifted": 9.098010475666745e-12,
-          "T": null,
-          "raw_secant_diagnostic": -4.634796369711183e-13,
-          "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 9.098010475678332e-20,
+          "field_reporting_floor": 1.2777505828417471e-19,
           "final_res": 0.0
         },
         {
-          "delta": 1e-09,
-          "u_int_shifted": 9.098010475681502e-12,
+          "delta": 1e-13,
+          "u_int_shifted": 1.2777505828417471e-11,
           "T": null,
-          "raw_secant_diagnostic": 3.169781956697344e-15,
+          "raw_secant_diagnostic": 0.0,
           "secant_status": "below_reporting_resolution",
-          "field_reporting_floor": 9.098010475681503e-20,
-          "final_res": 1.7139458503797891e-15
+          "field_reporting_floor": 1.2777505828417471e-19,
+          "final_res": 1.4573616277938856e-15
+        },
+        {
+          "delta": 2.5e-11,
+          "u_int_shifted": 1.277750582840211e-11,
+          "T": null,
+          "raw_secant_diagnostic": -6.144400987620459e-13,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.2777505828417471e-19,
+          "final_res": 9.094099266005405e-16
+        },
+        {
+          "delta": 1e-09,
+          "u_int_shifted": 1.277750582843831e-11,
+          "T": null,
+          "raw_secant_diagnostic": 2.083784285294717e-14,
+          "secant_status": "below_reporting_resolution",
+          "field_reporting_floor": 1.277750582843831e-19,
+          "final_res": 1.626308224354868e-15
         }
       ]
     }
@@ -270,7 +278,7 @@
   "retained_control": {
     "u_amb": 1.176354627384841e-17,
     "u_int": 3.1931173840697034e-07,
-    "baseline_res": 7.463009808645618e-14,
+    "baseline_res": 7.465279391078285e-14,
     "residual_definition": "roundoff-adjusted finite-volume equation balance",
     "outer_radius_m": 3e+21,
     "outer_boundary_error": 0.0,
@@ -283,7 +291,7 @@
         "raw_secant_diagnostic": 0.0,
         "secant_status": "below_reporting_resolution",
         "field_reporting_floor": 3.1931173840697036e-15,
-        "final_res": 1.2791632011691083e-15
+        "final_res": 1.4120673636354601e-15
       },
       {
         "delta": 1e-06,
@@ -292,7 +300,7 @@
         "raw_secant_diagnostic": 0.0,
         "secant_status": "below_reporting_resolution",
         "field_reporting_floor": 3.1931173840697036e-15,
-        "final_res": 2.762639651151145e-16
+        "final_res": 2.902601038363398e-15
       }
     ]
   },
@@ -305,56 +313,74 @@
         "rows": [
           {
             "outer_radius_over_R_earth": 60.0,
-            "interior_field": 8.985497976799644e-16,
-            "static_tangent": 1.0000000000034683,
-            "finite_secant": 0.9999999999846894,
-            "baseline_residual": 7.97400565619381e-13,
+            "interior_field": 1.4194479064363215e-15,
+            "static_tangent": 0.9999999999993465,
+            "finite_secant": 0.9999999998830967,
+            "raw_secant_diagnostic": 0.9999999998830967,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.5001419444983855e-19,
+            "baseline_residual": 0.0,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 235.0,
-            "interior_field": 1.5309348587718224e-15,
-            "static_tangent": 1.0000000000040004,
-            "finite_secant": 0.9999999998038754,
-            "baseline_residual": 9.316199413487274e-13,
+            "interior_field": 2.4232873055319215e-15,
+            "static_tangent": 0.9999999999970394,
+            "finite_secant": 0.9999999997244029,
+            "raw_secant_diagnostic": 0.9999999997244029,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.5002423280415603e-19,
+            "baseline_residual": 0.0,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 23500.0,
-            "interior_field": 7.805977601048329e-15,
-            "static_tangent": 1.000000000020613,
-            "finite_secant": 0.9997435469385428,
-            "baseline_residual": 2.6554701627148665e-12,
+            "interior_field": 1.2361950652082619e-14,
+            "static_tangent": 0.9999999999990052,
+            "finite_secant": 0.9995940901519826,
+            "raw_secant_diagnostic": 0.9995940901519826,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.500221420445165e-19,
+            "baseline_residual": 2.4420001871412387e-12,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 1000000.0,
-            "interior_field": 1.996904879722237e-14,
-            "static_tangent": 0.9999989480737309,
-            "finite_secant": 0.9666014033523711,
-            "baseline_residual": 8.283479021368179e-13,
+            "interior_field": 2.8779532052539374e-14,
+            "static_tangent": 0.9999983696226606,
+            "finite_secant": 0.9477672175210144,
+            "raw_secant_diagnostic": 0.9477672175210144,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.37229599700779e-19,
+            "baseline_residual": 7.659286680098416e-13,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 100000000.0,
-            "interior_field": 2.135815368118018e-14,
-            "static_tangent": 0.9999857970839906,
-            "finite_secant": 0.002625199978973238,
-            "baseline_residual": 5.862641857226766e-13,
-            "shifted_residual": 4.108579134972452e-11,
+            "interior_field": 3.016946805879811e-14,
+            "static_tangent": 0.9999848456756066,
+            "finite_secant": 0.002079256368584929,
+            "raw_secant_diagnostic": 0.002079256368584929,
+            "secant_status": "resolved",
+            "field_reporting_floor": 8.215087727342134e-22,
+            "baseline_residual": 5.314524494712335e-13,
+            "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 10000000000.0,
-            "interior_field": 2.137239535508696e-14,
-            "static_tangent": 0.9966110614728841,
-            "finite_secant": 1.5093496629508494e-05,
-            "baseline_residual": 3.4272950680627635e-13,
-            "shifted_residual": 4.067310748895574e-12,
+            "interior_field": 3.018385218808794e-14,
+            "static_tangent": 0.9966101089720067,
+            "finite_secant": 1.5067098113220761e-05,
+            "raw_secant_diagnostic": 1.5067098113220761e-05,
+            "secant_status": "resolved",
+            "field_reporting_floor": 3.056052964091846e-22,
+            "baseline_residual": 0.0,
+            "shifted_residual": 1.0823938122315643e-11,
             "outer_boundary_error": 0.0
           }
         ]
@@ -364,56 +390,74 @@
         "rows": [
           {
             "outer_radius_over_R_earth": 60.0,
-            "interior_field": 8.8703968932806955e-16,
-            "static_tangent": 1.0000000000032188,
-            "finite_secant": 0.9999999450721491,
-            "baseline_residual": 7.994372248162813e-13,
+            "interior_field": 1.4079377980840164e-15,
+            "static_tangent": 0.9999999999982034,
+            "finite_secant": 0.9999999127375145,
+            "raw_secant_diagnostic": 0.9999999127375145,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.500140575623595e-19,
+            "baseline_residual": 7.994372248295667e-13,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 235.0,
-            "interior_field": 1.5194247504227205e-15,
-            "static_tangent": 1.000000000002313,
-            "finite_secant": 0.9999866970159662,
+            "interior_field": 2.4117771971801157e-15,
+            "static_tangent": 0.9999999999997912,
+            "finite_secant": 0.9999788831766049,
+            "raw_secant_diagnostic": 0.9999788831766049,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.50018838566123e-19,
             "baseline_residual": 0.0,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 23500.0,
-            "interior_field": 7.79446721918338e-15,
-            "static_tangent": 0.9999996655649114,
-            "finite_secant": 0.9893284889494862,
-            "baseline_residual": 0.0,
+            "interior_field": 1.2350438823177007e-14,
+            "static_tangent": 0.9999986691687349,
+            "finite_secant": 0.9831274484716623,
+            "raw_secant_diagnostic": 0.9831274484716623,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.459053665061474e-19,
+            "baseline_residual": 2.4480951172099063e-12,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 1000000.0,
-            "interior_field": 1.981010310925214e-14,
-            "static_tangent": 0.9079853869167925,
-            "finite_secant": 0.264521968472114,
-            "baseline_residual": 8.156639345663159e-13,
+            "interior_field": 2.846997756787414e-14,
+            "static_tangent": 0.8659628484962121,
+            "finite_secant": 0.13612024820517268,
+            "raw_secant_diagnostic": 0.13612024820517268,
+            "secant_status": "resolved",
+            "field_reporting_floor": 3.4314761826971914e-20,
+            "baseline_residual": 0.0,
             "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 100000000.0,
-            "interior_field": 2.0824736019253948e-14,
-            "static_tangent": 0.4685212117913694,
-            "finite_secant": 2.063484436588388e-06,
-            "baseline_residual": 6.25826599225866e-13,
-            "shifted_residual": 3.813250635221579e-13,
+            "interior_field": 2.941610620013542e-14,
+            "static_tangent": 0.44891067516501937,
+            "finite_secant": 1.953060875588032e-06,
+            "raw_secant_diagnostic": 1.953060875588032e-06,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.946493272202512e-22,
+            "baseline_residual": 0.0,
+            "shifted_residual": 0.0,
             "outer_boundary_error": 0.0
           },
           {
             "outer_radius_over_R_earth": 10000000000.0,
-            "interior_field": 2.0829243356889646e-14,
-            "static_tangent": 0.21707043582203928,
-            "finite_secant": 9.617007908807929e-09,
-            "baseline_residual": 3.671490396852859e-13,
-            "shifted_residual": 3.552421032882216e-13,
+            "interior_field": 2.942051347274367e-14,
+            "static_tangent": 0.21040770072554538,
+            "finite_secant": 9.30414497556071e-09,
+            "raw_secant_diagnostic": 9.30414497556071e-09,
+            "secant_status": "resolved",
+            "field_reporting_floor": 2.942074607636806e-22,
+            "baseline_residual": 0.0,
+            "shifted_residual": 3.157851910367847e-13,
             "outer_boundary_error": 0.0
           }
         ]
@@ -421,33 +465,33 @@
     },
     "massless_vacuum_control": {
       "outer_radius_over_R_earth": 10000000000.0,
-      "static_tangent": 0.9999999999894856,
-      "finite_secant": 0.999999999718513,
-      "baseline_residual": 3.585975448267488e-13,
+      "static_tangent": 1.0000000000525147,
+      "finite_secant": 0.999999999895993,
+      "baseline_residual": 0.0,
       "shifted_residual": 0.0
     },
     "scope": "Static Earth-only Dirichlet boundary-radius bracket. The 60, 235 and 23500 Earth-radius entries are comparison interfaces, not solved Earth-Moon-Sun matching surfaces; no time-dependent or galactic boundary is inferred."
   },
   "earth_solar_local_stiffness": {
-    "kinetic_branch": "P_X=1+q^2, q=c^2 |grad u|/g_t",
+    "kinetic_branch": "baseline",
     "earth_boundary_over_R_earth": 235.0,
     "earth_quartic_factor_over_reference": 100000.0,
-    "earth_surface_gradient_over_g_t": 3801.1992491537517,
-    "solar_gradient_at_1AU_over_g_t": 327.5533589708628,
-    "solar_point_source_q_control": 326.7286532801508,
-    "single_GM_flux_q_comparator": 259.324228319045,
-    "two_GM_over_single_GM_q_ratio": 1.2599233607982767,
-    "normalization_audit": "This step_53 scalar flux has q(1+q^2)=2GM/(r^2 g_t); Paper-17 step_086 defines q(1+q^2)=GM/(r^2 g_t) on its baseline. Relabelling q_086=q_53/2 alone would require the kinetic factor 1+4q_086^2, not 1+q_086^2. The PDE source and kinetic-scale conventions must be reconciled before importing its coupled solution as the same-action GNSS field.",
+    "earth_surface_gradient_over_g_t": 6034.027605080822,
+    "solar_gradient_at_1AU_over_g_t": 519.9554233806355,
+    "solar_point_source_q_control": 518.64845663809,
+    "single_GM_flux_q_comparator": 411.65035428800985,
+    "two_GM_over_single_GM_q_ratio": 1.2599247182360476,
+    "normalization_audit": "With Lambda_X^2=M_Pl H0, q_kin=c|u_prime|/H0=q_gt/2. The baseline point-source flux obeys q_kin(1+q_kin^2)=GM/(r^2 g_t), matching the Paper-17 step_086 baseline convention. The reported gradient_over_g_t fields use q_gt=2q_kin.",
     "solar_boundary_at_AU": 2.0,
-    "solar_profile_residual": 1.34641219770807e-12,
-    "solar_to_earth_gradient_ratio": 0.08617105747450227,
-    "earth_only_stiffness": 14449116.731767045,
+    "solar_profile_residual": 1.0987214867563418e-12,
+    "solar_to_earth_gradient_ratio": 0.0861705410400871,
+    "earth_only_stiffness": 9102373.284719348,
     "stiffness_by_radial_alignment": {
-      "-1": 12066216.770384476,
-      "0": 14556407.934740141,
-      "1": 17046599.099095806
+      "-1": 7601249.006249961,
+      "0": 9169961.695295084,
+      "1": 10738674.3843402
     },
-    "aligned_minus_antialigned_over_earth_only": 0.3446842060429709,
+    "aligned_minus_antialigned_over_earth_only": 0.3446821262930632,
     "earth_profile_residual": 0.0,
     "scope": "Local tensor-coefficient cross-term from separately solved Earth and isolated Sun fluxes at a declared interface; not a coupled Earth-Sun PDE, dynamic response, covariance, or EW/NS prediction."
   },

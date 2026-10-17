@@ -29,3 +29,5 @@ dist-ssr
 .devin/
 argos*
 tep-rules.md
+# Editor workspace state
+*.code-workspace

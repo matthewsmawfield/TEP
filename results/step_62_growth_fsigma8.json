@@ -366,6 +366,47 @@
       }
     ]
   },
+  "regulator_scan": {
+    "family": "P_X = eps + k sqrt(xi) + 2 xi",
+    "scan": [
+      {
+        "eps_unit_term": 0.0,
+        "chi2_total": 27.927866601872076,
+        "G_eff_z0": 1.1621412805245095
+      },
+      {
+        "eps_unit_term": 0.003,
+        "chi2_total": 27.92757853318414,
+        "G_eff_z0": 1.1621018554208895
+      },
+      {
+        "eps_unit_term": 0.01,
+        "chi2_total": 27.92690670918896,
+        "G_eff_z0": 1.1620099380304598
+      },
+      {
+        "eps_unit_term": 0.03,
+        "chi2_total": 27.92498980249666,
+        "G_eff_z0": 1.1617478903735001
+      },
+      {
+        "eps_unit_term": 0.1,
+        "chi2_total": 27.91831071192877,
+        "G_eff_z0": 1.1608373617351138
+      },
+      {
+        "eps_unit_term": 0.3,
+        "chi2_total": 27.8994819357573,
+        "G_eff_z0": 1.1582914439126977
+      },
+      {
+        "eps_unit_term": 1.0,
+        "chi2_total": 27.836417241502758,
+        "G_eff_z0": 1.149982132976228
+      }
+    ],
+    "note": "eps is the canonical unit term re-inserted as an X->0 regulator.  The SPARC/RAR and Solar-System channels are insensitive at eps << 1 because their operative xi sits far from zero; only the growth table can bound it (xi_cosmo >= 0.5 makes the shift enter via eps/P_X).  eps <= ~0.1-0.3 leaves the two-branch growth budget essentially unchanged, so the order-unity exclusions do not prohibit a small regulator."
+  },
   "in_well_X_env_regime_map": {
     "spatial_xi_by_regime": {
       "cosmo_ambient_z0": {

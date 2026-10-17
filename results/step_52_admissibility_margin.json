@@ -333,6 +333,10 @@
           "H_T_over_H0": 3.6890189194725473,
           "shape": 0.1775531396731555,
           "lapse_wall_B0_positive": 0.033703275309630146,
+          "lapse_wall_B0_native_descent": 1.6072474980290263,
+          "lapse_wall_B0_native_tracking": 1.0367269781387178,
+          "H_T_over_H0_native_descent": 0.5342020586883557,
+          "H_T_over_H0_native_tracking": 0.6651425583082687,
           "fluid_wall_B0_magnitude_w1": 0.005920240088595166,
           "rho_m_GeV4": 5.120932050944194e-46
         },
@@ -344,6 +348,10 @@
           "H_T_over_H0": 5.419484032119663,
           "shape": 0.04839803373975344,
           "lapse_wall_B0_positive": 0.033654563065441595,
+          "lapse_wall_B0_native_descent": 4.519246811629992,
+          "lapse_wall_B0_native_tracking": 2.6585515288607278,
+          "H_T_over_H0_native_descent": 0.4676779443885948,
+          "H_T_over_H0_native_tracking": 0.6097578191021,
           "fluid_wall_B0_magnitude_w1": 0.005744513780066713,
           "rho_m_GeV4": 1.1373680456332053e-45
         },
@@ -355,13 +363,19 @@
           "H_T_over_H0": 5.15973382436536,
           "shape": 0.05997385779897515,
           "lapse_wall_B0_positive": 0.03204368015513213,
+          "lapse_wall_B0_native_descent": 3.771529417441653,
+          "lapse_wall_B0_native_tracking": 2.2446098318109224,
+          "H_T_over_H0_native_descent": 0.47559769655276635,
+          "H_T_over_H0_native_tracking": 0.6164928752515711,
           "fluid_wall_B0_magnitude_w1": 0.0054833698787507155,
           "rho_m_GeV4": 1.0283569845731724e-45
         }
       ],
       "tightest_lapse_cap": 0.03204368015513213,
+      "tightest_lapse_cap_native_descent": 1.6072474980290263,
+      "tightest_lapse_cap_native_tracking": 1.0367269781387178,
       "tightest_fluid_cap": 0.0054833698787507155,
-      "verdict": "on the realized absorber-epoch ambients the ungated canonical envelope is ambient-lapse-supercritical for phenomenological B0 ~ 52-78 by ~10^3 (cap ~0.03), and the negative branch is capped at |B0| ~ 10^-2 by the ambient fluid wall: neither sign can carry the phenomenological amplitude ungated. Ambient closure of the environmental gate is therefore lapse-mandated \u2014 independently of, and consistent with, the absorber-amplitude requirement of Paper 29 gate10b (required ambient suppression G_ambient <~ 4e-4 at B0 = 78 vs the in-well saturation G ~ 1e-3-3e-3)."
+      "verdict": "on the realized absorber-epoch ambients the ungated canonical envelope is ambient-lapse-supercritical for phenomenological B0 ~ 52-78 by ~10^3 under the imported LCDM drift (cap ~0.03) and by ~30-50x under the TEP-native drift (caps ~1.0-4.5 across descent and selected tracking); the negative branch is capped at |B0| ~ 10^-2 by the ambient fluid wall. Neither sign can carry the phenomenological amplitude ungated on either rate convention. Ambient closure of the environmental gate is therefore lapse-mandated on either drift \u2014 independently of, and consistent with, the absorber-amplitude requirement of Paper 29 gate10b (required ambient suppression G_ambient <~ 4e-4 imported / ~0.01-0.06 native at B0 = 52-78 vs the in-well saturation G ~ 1e-3-3e-3)."
     },
     "transit": {
       "clock_map": "phi_bar/M_Pl = ln(1+z) (A_clock=(1+z)^-1, beta_A=-1, ambient phi=0 today)",
@@ -388,7 +402,9 @@
     "lapse_wall_cosmological_u1": 3.2974425414002564,
     "fluid_wall_cosmological_u1": 0.5494277539286885,
     "lapse_wall_realized_absorber_epochs": 0.03204368015513213,
+    "lapse_wall_realized_absorber_epochs_native_descent": 1.6072474980290263,
+    "lapse_wall_realized_absorber_epochs_native_tracking": 1.0367269781387178,
     "fluid_wall_realized_absorber_epochs": 0.0054833698787507155,
-    "note": "on the realized absorber-epoch ambients (phi_bar=ln(1+z)~1.25-1.5, du/dt=H_T~4-5 H0, A~0.22-0.29) the positive branch's lapse cap is B0<~0.03 and the negative branch's ambient fluid cap |B0|<~10^-2: both sit ~10^3 below the phenomenological B0~52-78, so ambient closure of the environment gate G(X_local) is lapse-mandated independently of the absorber-amplitude argument (Paper 29 gates 10b/10c). In dense bodies the |B|rho fluid wall binds the negative branch (|B0|<~0.7 in Earth, <~2e-16 in a neutron star); neither wall is a theorem, both are computed margins on realized profiles"
+    "note": "on the realized absorber-epoch ambients (phi_bar=ln(1+z)~1.25-1.5, A~0.22-0.29) the positive branch's lapse cap is B0<~0.03 under the imported LCDM drift (du/dt~4-5 H0) and B0<~1.0-4.5 under the TEP-native drift (descent/tracking, H_T^2/H0^2~0.22-0.44); the negative branch's ambient fluid cap |B0|<~10^-2 is rate-independent. Phenomenological B0~52-78 is supercritical on the bare ambient by ~10^3 imported / ~30-50x native, so ambient closure of the environment gate G(X_local) is lapse-mandated on either drift, independently of the absorber-amplitude argument (Paper 29 gates 10b/10c). In dense bodies the |B|rho fluid wall binds the negative branch (|B0|<~0.7 in Earth, <~2e-16 in a neutron star); neither wall is a theorem, both are computed margins on realized profiles"
   }
 }

@@ -21,35 +21,53 @@
   },
   "sign_structure": {
     "V_rec_sign_crossing_u_star": -0.6931471805599453,
-    "V_at_nominal_void_depth": -0.22553910367882662,
-    "required_energy_offset_lambda": -2.4187832804655494,
-    "S_void_mean_after_shift": -0.5766035129819258,
-    "S_well_mean_after_shift": 0.6230966290133958,
-    "rho_tot_mean": -0.5203675688258951
+    "V_at_nominal_void_depth": 1.550658489664767,
+    "actual_V_min": 1.550666110561818,
+    "actual_V_max": 1.6320883197285236,
+    "negative_potential_cells_before_shift": 0,
+    "required_energy_offset_lambda": -2.4187832804655307,
+    "S_void_mean_after_shift": -0.5766035129819072,
+    "S_well_mean_after_shift": 0.6230966290134144,
+    "rho_tot_mean": -0.5203675688258764,
+    "native_negative_V_void_realization_u_void_m0p85": {
+      "u_void": -0.85,
+      "V_at_u_void": -0.33927627041585207,
+      "negative_potential_cells_before_shift": 8496,
+      "constraint_converged": true,
+      "psi_min": 0.9648303473373662,
+      "psi_max": 1.0657507343998331,
+      "residual_lambda_offset": -46.326102745186716
+    }
   },
   "solver": {
     "converged": true,
     "newton_history_max_res": [
       1.4809424283143275,
-      0.003709594140451217,
-      1.1152242329484988e-10
+      0.003709594153767411,
+      1.1323327263898855e-10
     ],
-    "psi_min": 0.9994132666721861,
-    "psi_max": 1.0012214887706348,
-    "integrability_residual": -2.3940294191504563e-12,
-    "R3_identity_residual": 8.867506728904573e-10
+    "psi_min": 0.9994132666721863,
+    "psi_max": 1.001221488770635,
+    "integrability_residual": -2.3893942380226463e-12,
+    "R3_identity_residual": 9.003535694773745e-10
   },
   "flatness_ledger": {
-    "mean_R3_g_frame": 0.0008419582408147071,
-    "mean_R3_matter_frame_volume_weighted": 8.285680226415227,
-    "mean_R3_matter_frame_coord": -57.86592747860413,
-    "matter_frame_ledger_decomposition": {
-      "A^-2_3R": -0.37023393395311766,
-      "A^-2_-4lap_lnA": 18.947513048548135,
-      "A^-2_-2grad_lnA2": -10.291598888179795
+    "mean_R3_g_frame": 0.0008419582408265002,
+    "native_unstretched_space_matter_curvature": {
+      "metric_relation_at_fixed_epoch": "R3_matter(x) = A_sp(t_0)^-2 R3_g(x) = R3_g(x) at A_sp(t_0) = 1 (D_i ln A_sp = 0)",
+      "gauss_psi5_weighted_integral": 2.0000462191765777e-14,
+      "physical_volume_weighted_mean_R3_native": 0.0008419582408265002,
+      "Omega_k_native_unstretched_H_drift_units": 0.00014032637347108338
     },
-    "Omega_k_eff_H_drift_units": 1.3809467044025379,
-    "Omega_k_eff_coord": 9.644321246434021,
+    "mean_R3_matter_frame_volume_weighted": 9.398614639694301,
+    "mean_R3_matter_frame_coord": -56.472612298994804,
+    "matter_frame_ledger_decomposition": {
+      "A^-2_3R": -0.37023393395304965,
+      "A^-2_-4lap_lnA": 20.037711902936113,
+      "A^-2_-2grad_lnA2": -10.268863329288761
+    },
+    "Omega_k_eff_H_drift_units": 1.5664357732823835,
+    "Omega_k_eff_coord": 9.412102049832468,
     "smoothness_scan": [
       {
         "Delta_u": 1.8,
@@ -87,14 +105,15 @@
         "Omega_k_eff": 0.0011138618717544833
       }
     ],
-    "closed_static_benchmark_Omega_k": ">= 1/2 (excluded)"
+    "closed_static_benchmark_Omega_k": ">= 1/2 (homogeneous benchmark only)"
   },
-  "interpretation": "Constraint-satisfying inhomogeneous initial data exists on the non-compact covering slice: a positive smooth conformal factor is found with the landscape carrying positive total energy in matter-hosting wells and negative total energy in voids. The integrability condition fixes the required void energy level (lambda < 0 expected): the eternal non-expanding solution requires the void sector to supply the negative-energy budget, which the master-family potential supplies for u < u* (V_rec sign crossing). The mean g-frame curvature is driven to ~0 by construction; the matter-frame mean curvature is of landscape-gradient order, |Omega_k^eff| ~ <|grad u|^2>/H_drift^2 times a coefficient of order unity, so flatness is controlled by the spatial contrast of the landscape. The redshift scatter bounds the spatial contrast to << 1 per Hubble radius (the large Du~ln(1+z) accumulates in TIME, not space), placing the realized landscape in the |Omega_k| << 1 regime and evading the closed branch's |Omega_k| >= 1/2 failure.",
+  "interpretation": "This benchmark solves a periodic conformally flat Hamiltonian constraint with an explicitly fitted uniform energy offset lam. The unshifted field and potential have the sign reported in sign_structure; any negative shifted density is not evidence that the input field sampled the negative-potential branch. The solved curvature ledger uses derivatives of h=psi^4 delta. The separate smoothness_scan uses psi=1 and subtracts mean source curvature; it is an approximate diagnostic, not another constraint solution. The offset requirement is specific to this periodic ansatz. A Rule-23 realization must accommodate localized positive energy in the appropriate curved geometry and match that geometry to its exterior without using this offset as a cancellation mechanism.",
   "remaining_open": [
     "evolution stability of the zero-expansion congruence (maximal-slicing lapse solvability on the solved landscape)",
     "A_ij != 0 volume-preserving shear sector",
     "realistic matter power spectrum / multi-scale landscape",
     "matter-frame singular horizon on this slice (TEP-TH branch)"
   ],
-  "verdict": "PASS"
+  "verdict": "PASS",
+  "verdict_scope": "Convergence and positivity of the shifted periodic benchmark only"
 }

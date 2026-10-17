@@ -26,10 +26,11 @@ BETA = -1.0
 # Density conversion derived from the same mass and length units.
 G_CM3_GEV4 = 1000 * KG_GEV * HBAR_C**3
 LAMBDA_REFERENCE = 7.526e-71
-# The corrected linear-in-S_Sigma Cassini evaluation fails at
-# LAMBDA_REFERENCE by ~250x (step_03); the corpus adopts
-# LAMBDA_CASSINI = 1e5*LAMBDA_REFERENCE as the operative weak-field
-# coupling wherever the quartic normalization enters.
+# The canonical-potential control's linear-in-S_Sigma diagnostic fails at
+# LAMBDA_REFERENCE by ~250x. LAMBDA_CASSINI is that control's normalization;
+# it is not a universal replacement for the selected kinetic-sector quartic
+# normalization (step_53 uses LAMBDA_REFERENCE). A complete Cassini verdict
+# requires the propagation and ephemeris observation operator.
 LAMBDA_CASSINI = LAMBDA_REFERENCE * 1e5
 # Unified master potential (cross-scale closure; the step_33 'uni' gate
 # integrates the same function):

@@ -101,6 +101,19 @@ class HTMLToPDFConverter:
                 margin: 1em 0 !important;
             }
             
+            table.ledger-table {
+                page-break-inside: auto !important;
+                break-inside: auto !important;
+            }
+            table.ledger-table tr {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .contact-section {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            
             /* Improve text rendering */
             body {
                 -webkit-font-smoothing: subpixel-antialiased !important;

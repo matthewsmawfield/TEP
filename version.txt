@@ -1,15 +1,6 @@
-v0.15 (Jakarta) — 2026-09-25 — Kinetic-sector screening closure: microscopic derivation of the covariant response operator and pairwise projection at the single cosmological scale
+v0.16 (Jakarta) — 17 October 2026 — Unified (3+1) ADM matter metric, shared GW/EM wave operator, and perturbation closure
 
-- Changed the screening model to a candidate two-body kinetic completion
-- Added the Earth flyby anomaly explanation as a clock-sector reduction artefact
-- Detailed the dual-frame volume resolution for cosmological expansion
-- Introduced a candidate master potential and rolling-floor ansatz
-- Clarified the closed-static cosmological branch is just an analytical benchmark
-- Added a limitation to standard sirens regarding waveform mapping
-- Added explicit numerical bounds for the triangle synchronization experiment
-- Corrected the post-Newtonian mapping to be bilinear in probe and source charges
-- Updated early-universe closure to rely on a steady-state fixed point
-- Displayed action now uses the noncanonical P(X,phi) kinetic sector, with P -> X-V stated as the canonical limit
-- Separated S_A (static conformal depth) from C_A (time-dependent covariance)
-- Scoped the phantom-mass equation to the equal-response two-body case via R_dyn
-- Reconciled the closure registry; updated solver and benchmark steps
+- Formulated the canonical (3+1) ADM matter metric g_tilde_munu = -A_loc^2(u_grav) U_mu U_nu + A_sp^2(u_drift) Pi_munu + B(phi) Pi_mu^a Pi_nu^b d_a phi d_b phi and local khronon gravitational action on static 3-space gamma_ij, proving identical GW and EM wave operators (c_GW = c_gamma, Delta t_{gamma-GW} = 0) and baryon-only temporal refraction n(x) = 1 - 2 Phi_N/c^2 - beta_A u_grav(x)
+- Promoted the selected two-branch kinetic completion P(X,phi) = -V + (2k/3 Lambda_X^2) X|X|^{1/2} + X|X|/Lambda_X^4 (k = 16.03, zero-gradient regulator eps_reg = 10^-3) across local PPN/Cassini screening (|gamma_PPN - 1| = 4.32 x 10^-8), wide binaries, and SPARC rotation curves
+- Established positive-definite Lichnerowicz-coupled 3D inhomogeneous fluctuation spectra (lambda_1 = +38.96 canonical, +555.35 two-branch) and all-supercell Bloch stability (q -> 0) on the operative quartic matter potential
+- Reconciled continuous-worldline Solar-System LLR bounds (|Gdot_loc/G_loc| ~ 1.7 x 10^-18 yr^-1 on the Cassini-compatible branch, two-branch force drift 2.10 x 10^-15 yr^-1) with 100% intergalactic Hubble-law recovery and the standard-siren invariant Xi(z) = 1/(1+z)
