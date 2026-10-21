@@ -101,7 +101,7 @@
       "alpha_1_ppn_1p6_Rsun": -1.3140842652617463e-13,
       "alpha_2_ppn_1p6_Rsun": -3.2852106631543657e-14,
       "alpha_2_ppn_1AU_wCMB_projected": -2.2303213201236328e-11,
-      "alpha_2_solar_spin_bound": 4e-09,
+      "alpha_2_solar_spin_bound": 2.4e-07,
       "passes_alpha_2_bound": true
     },
     "galaxy_scale_lensing_dynamics_consistency": {

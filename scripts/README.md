@@ -4,7 +4,7 @@ This directory contains the reproducible computational and symbolic verification
 
 ## Top-Level Utilities
 
-- `generate_site_pdf.py` — Renders the built HTML manuscript (`site/dist/index.html`) into the publication PDF (`A0-TEP-v0.16-Jakarta.pdf`) with embedded XMP/DOI metadata.
+- `generate_site_pdf.py` — Renders the built HTML manuscript (`site/dist/index.html`) into the publication PDF (`A0-TEP-v0.17-Jakarta.pdf`) with embedded XMP/DOI metadata.
 - `utils/` — PDF rendering, compression, and post-processing utilities (`html_to_pdf.py`, `process_pdf.py`, `compress_pdf.py`).
 
 ## Shared Pipeline Modules (`steps/`)
