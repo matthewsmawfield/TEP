@@ -1,5 +1,5 @@
-v0.17 (Jakarta) — 21 October 2026 — Preferred-frame PPN and gravitational Cherenkov bounds, host-assembly siren derivation, and cosmological closure synthesis
+v0.18 (Jakarta) — 24 October 2026 — Unified two-branch screening action, exact preferred-foliation metric, and classical cosmological closure
 
-- Derived the two-branch screened preferred-frame PPN parameters alpha_1^int(r) = -4 beta_A^2 y_tb(r) and alpha_2^int(r) = -beta_A^2 y_tb(r) (|alpha_2|(w_CMB/c)^2 = 2.23 x 10^-11 << 4 x 10^-9 at 1 AU; |alpha_1^int|(1 AU) = 5.86 x 10^-5) and demonstrated the absence of vacuum gravitational Cherenkov losses across Galactic and intergalactic propagation
-- Formulated the explicit ambient-plus-virial host-interior scalar slope d ln phi_int / d ln(1+z) = 1 - (2/3)(1-f_1)(1+z)/[1-(1-f_1)z], reproducing the contrast between early-assembling SN Ia hosts (eps_eff = 0.0042) and field-spiral/dwarf BBH hosts (eps_eff = 0.235-0.517) alongside the dark spectral-siren mass-map degeneracy
-- Consolidated the cosmological master-potential and early-universe closure synthesis across the companion transport, Boltzmann, and reaction-flow studies (Papers 18, 26, 27, 29, 30) and relocated the quadratic SVT/khronon tensor expansion to Appendix A5
+- Established the zero-free-parameter two-branch kinetic screening law directly in Axiom A4 across Solar-System, wide-binary, galactic, cluster, and cosmological scales
+- Included the mixed time–space disformal cross-term explicitly in the resolved preferred-foliation metric so the compact and expanded forms match identically
+- Added the classical cosmological observable closure on the static manifold, showing exact preservation of supernova time dilation, distance duality, Tolman surface brightness, and the CMB blackbody spectrum

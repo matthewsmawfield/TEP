@@ -35,9 +35,9 @@ def run():
     print(" Step 24: Compact-Body Charge Closure (PSR J1738+0333)")
     print("=========================================================")
     print("\n[A] Actual Microscopic Action")
-    print("Kinetic term: Canonical -1/2 (\nabla \phi)^2 (frozen)")
-    print(f"Potential: Unified Potential with \lambda={LAMBDA_REFERENCE} (frozen)")
-    print("Bare coupling: \beta_A = -1 (frozen)")
+    print(r"Kinetic term: Canonical -1/2 (\nabla \phi)^2 (frozen)")
+    print(f"Potential: Unified Potential with \\lambda={LAMBDA_REFERENCE} (frozen)")
+    print(r"Bare coupling: \beta_A = -1 (frozen)")
 
     results = {
         "action": {

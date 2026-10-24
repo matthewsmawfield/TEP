@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Step 25: Macroscopic Temporal Shear BVP Investigation.
+r"""Step 25: Macroscopic Temporal Shear BVP Investigation.
 
 This script tests whether an admissible non-linear operator class
 for the macroscopic Temporal Shear configuration can simultaneously satisfy:
@@ -42,7 +42,7 @@ WB_S_TARGET = 0.5 # 50% recovery
 
 # Evaluator for a given model D(\phi, s)
 def evaluate_model(phi_0, n, s_0, m, phi_gal=0.0):
-    """
+    r"""
     Evaluates D(\phi, s) = 1 + (\phi / \phi_0)^n + (s / s_0)^m
     using the exact 1D integral: \phi' * D = g_N.
     """
@@ -169,7 +169,7 @@ def run():
     # We tune \phi_0 such that D ~ 1 at wide binaries, but D >> 1 at Cassini.
     # At wide binaries, U = GM/R ~ 6.67e-11 * 2e30 / (2646 * 1.5e11) ~ 3.3e5
     # So phi ~ 3.3e5. Let's set \phi_0 = 1e6.
-    print("\n[Model A] Amplitude-dependent: D(\phi) = 1 + (\phi / 10^5)^4")
+    print(r"\n[Model A] Amplitude-dependent: D(\phi) = 1 + (\phi / 10^5)^4")
     res_A = evaluate_model(phi_0=1e5, n=4, s_0=1, m=0)
     out['Model_A'] = res_A
     print(json.dumps(res_A, indent=2))

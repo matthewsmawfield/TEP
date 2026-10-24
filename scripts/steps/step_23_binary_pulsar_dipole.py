@@ -84,7 +84,7 @@ def run():
             "dipole_radiation_present": True
         },
         "closure_status": "PENDING_ACTION_NORMALIZATION",
-        "conclusion": "The TEP action supports propagating scalar waves for this binary. Because the NS and WD have vastly different binding potentials, the nonlinear field profiles yield different effective scalar charges (thin-shell suppression). This sources scalar dipole radiation. However, calculating the precise P_b_dot requires the absolute dimensional normalization of the field \phi to evaluate the thin-shell factor. This is a recognized action-closure issue."
+        "conclusion": r"The TEP action supports propagating scalar waves for this binary. Because the NS and WD have vastly different binding potentials, the nonlinear field profiles yield different effective scalar charges (thin-shell suppression). This sources scalar dipole radiation. However, calculating the precise P_b_dot requires the absolute dimensional normalization of the field \phi to evaluate the thin-shell factor. This is a recognized action-closure issue."
     }
     
     outdir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
